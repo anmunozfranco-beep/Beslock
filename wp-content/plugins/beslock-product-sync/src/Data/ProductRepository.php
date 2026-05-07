@@ -19,7 +19,16 @@ final class ProductRepository
             return [];
         }
 
-        $decoded = json_decode((string) file_get_contents($this->productsJsonPath), true);
+        $raw = file_get_contents($this->productsJsonPath);
+        if ($raw === false) {
+            return [];
+        }
+
+        $decoded = json_decode($raw, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log(sprintf('BESLOCK product sync: invalid JSON in %s (%s)', $this->productsJsonPath, json_last_error_msg()));
+            return [];
+        }
 
         return is_array($decoded) ? $decoded : [];
     }

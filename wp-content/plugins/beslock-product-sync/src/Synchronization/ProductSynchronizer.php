@@ -44,8 +44,14 @@ final class ProductSynchronizer
                 continue;
             }
 
-            update_post_meta((int) $postId, '_regular_price', $mapped['price']);
-            update_post_meta((int) $postId, '_price', $mapped['price']);
+            $wcProduct = wc_get_product((int) $postId);
+            if (! $wcProduct) {
+                continue;
+            }
+
+            $wcProduct->set_regular_price($mapped['price']);
+            $wcProduct->set_price($mapped['price']);
+            $wcProduct->save();
         }
     }
 }
