@@ -7,8 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   <div class="mobile-drawer__panel" data-js="mobile-drawer-panel" role="document">
     <div class="drawer-header" data-js="mobile-drawer-header" role="banner">
       <button id="closeDrawer" class="mobile-drawer__close" data-js="drawer-close" aria-label="<?php esc_attr_e( 'Close menu', 'beslock' ); ?>">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-        <span class="screen-reader-text"><?php esc_html_e( 'Back', 'beslock' ); ?></span>
+        <span class="mobile-drawer__control-icon mobile-drawer__close-icon" aria-hidden="true"></span>
+        <span class="screen-reader-text"><?php esc_html_e( 'Close navigation', 'beslock' ); ?></span>
       </button>
 
       <a class="drawer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-js="drawer-logo" aria-label="<?php esc_attr_e( 'Home', 'beslock' ); ?>">
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <ul class="mobile-menu" data-js="mobile-drawer-menu" role="menu">
       <li class="mobile-menu__item" role="none">
         <button class="mobile-menu__link" id="productsToggle" data-js="drawer-products-toggle" aria-expanded="false" aria-controls="productsPanel" role="menuitem">
-          <?php esc_html_e( 'Products', 'beslock' ); ?> <span class="chev" aria-hidden="true">&#8250;</span>
+          <?php esc_html_e( 'Products', 'beslock' ); ?> <span class="products-chevron mobile-drawer__control-icon mobile-drawer__control-icon--forward" aria-hidden="true"></span>
         </button>
 
         <div id="productsPanel" class="mobile-products-panel models models--hidden" data-js="drawer-products-panel" role="region" aria-hidden="true" aria-labelledby="productsToggle">

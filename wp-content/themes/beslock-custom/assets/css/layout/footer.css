@@ -1,0 +1,32 @@
+/* Canonical footer surface for the active site-footer markup. */
+
+.site-footer {
+  background: transparent;
+  color: var(--beslock-text-main);
+  padding: 2rem 0;
+  text-align: center;
+  position: static;
+  top: auto;
+  z-index: auto;
+}
+
+.footer-logo {
+  display: inline-block;
+  height: calc(var(--site-logo-height, 32px) * 0.85);
+  width: auto;
+  max-width: 40vw;
+  vertical-align: middle;
+  -webkit-user-drag: none;
+  user-select: none;
+  object-fit: contain;
+}
+
+.site-footer .u-container {
+  padding: 2rem 0;
+}
+
+.site-footer .footer-copy {
+  margin-top: 0.6rem;
+  color: var(--beslock-text-sec);
+  font-size: 0.95rem;
+}

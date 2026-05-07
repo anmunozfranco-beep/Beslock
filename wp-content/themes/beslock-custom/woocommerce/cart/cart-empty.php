@@ -33,7 +33,7 @@ do_action( 'woocommerce_cart_is_empty' );
             Descubre nuestros productos y equipa tu espacio con Beslock
         </p>
 
-                <div class="beslock-cart__recommendations">
+                <div class="beslock-cart__recommendations recommendations-surface">
                     <?php
                     $args = [
                         'post_type' => 'product',
@@ -44,7 +44,7 @@ do_action( 'woocommerce_cart_is_empty' );
 
                     if ( $loop->have_posts() ) : ?>
 
-                        <div class="products-portfolio__grid">
+                        <div class="products-portfolio__grid recommendations-grid">
 
                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 

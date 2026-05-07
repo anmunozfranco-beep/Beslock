@@ -1,5 +1,11 @@
 /* product-rotator.js
-   Simple cross-fade rotator for product cards containing exactly two images.
+  Dormant legacy product-card rotator runtime.
+
+  The active rotator and hover media owner is assets/js/components/product-card.js.
+  Keep this file as a documented legacy asset until inactive enqueue paths are
+  removed with validated data coverage.
+
+  Simple cross-fade rotator for product cards containing exactly two images.
    - Toggles .visible every 5s
    - No inline styles, no transforms, no hover behavior
 */

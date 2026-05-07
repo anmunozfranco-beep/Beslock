@@ -1,3 +1,8 @@
+/* Dormant legacy alternate-image stylesheet.
+	The active alt-image bridge now lives in assets/css/components/product-card.css
+	and assets/js/components/product-card.js. Keep this file untouched until the
+	live dataset exposes `has-alt` cards broadly enough to prove deletion safe. */
+
 .products-portfolio .product-card__image{position:relative;overflow:hidden}
 .products-portfolio .product-card__image img{display:block;border-radius:inherit}
 

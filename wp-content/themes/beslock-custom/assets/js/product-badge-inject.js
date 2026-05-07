@@ -1,3 +1,8 @@
+/* Dormant legacy badge injector.
+  The active badge surface is server-rendered in template-parts/product-card.php.
+  Keep this file only as a documented fallback candidate until AJAX/product-loop
+  scenarios are audited and the injector is proven unnecessary everywhere. */
+
 (function(params){
   if (!params) return;
   try {

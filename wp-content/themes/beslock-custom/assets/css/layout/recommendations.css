@@ -1,0 +1,22 @@
+/* Reusable Woo recommendation layout ownership.
+   This separates recommendation wrappers from the canonical storefront while
+   preserving the shared product-card rendering surface. */
+
+.beslock-cart__recommendations,
+.recommendations-surface {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  align-items: stretch;
+  grid-auto-rows: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}

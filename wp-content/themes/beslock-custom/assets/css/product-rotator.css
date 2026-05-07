@@ -1,10 +1,20 @@
 /* product-rotator.css
-   Absolute stacked cross-fade rotator for front-page product cards.
+  Dormant legacy product-card rotator stylesheet.
+
+  Active product-card runtime now lives in:
+  - assets/css/components/product-card.css
+  - assets/js/components/product-card.js
+  - inc/core/enqueue.php
+
+  This file is retained as a future cleanup candidate while inactive enqueue
+  references and older rotator markup aliases are still documented.
+
+  Absolute stacked cross-fade rotator for front-page product cards.
 
    Implementation notes:
    - Container has fixed height (240px) to prevent reflow when images are absolute.
    - Only opacity is animated (0.6s). No transforms, no scaling, no hover.
-   - Images use absolute stacking with object-fit: contain to preserve composition.
+  - Images use absolute stacking with object-fit: contain to preserve composition.
 */
 
 .product-card__image-rotator,

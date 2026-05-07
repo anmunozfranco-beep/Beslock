@@ -40,17 +40,6 @@
   margin-bottom: 16px;
 }
 
-.beslock-cart__recommendations {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 100%;
-  align-items: stretch;
-  grid-auto-rows: auto;
-  margin: 0;
-  padding: 0;
-}
-
 .product-card {
   width: 100%;
   box-sizing: border-box;

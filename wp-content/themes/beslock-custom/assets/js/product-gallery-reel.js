@@ -1,6 +1,11 @@
 (function(){
   'use strict';
 
+  if (window.__beslockProductGalleryReelInit) {
+    return;
+  }
+  window.__beslockProductGalleryReelInit = true;
+
   function findGalleries(){
     return Array.from(document.querySelectorAll('.product-page__gallery'));
   }

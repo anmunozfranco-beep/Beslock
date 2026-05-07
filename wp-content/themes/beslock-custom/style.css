@@ -11,6 +11,10 @@ Template: kadence
 
 
 /* ========== PRODUCT CARD GLOBAL STYLES ========== */
+/* Legacy baseline compatibility.
+	Canonical runtime and presentation ownership now live in
+	assets/css/components/product-card.css; keep these defaults as low-risk
+	fallbacks while Woo/Kadence surfaces are still mixed. */
 .product-card {
 	display: flex;
 	flex-direction: column;

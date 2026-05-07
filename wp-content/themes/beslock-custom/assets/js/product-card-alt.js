@@ -1,3 +1,8 @@
+/* Dormant legacy alternate-image runtime.
+  The active alt-image owner is assets/js/components/product-card.js. This
+  file remains only as a reference bridge for older `.products-portfolio`
+  selectors until legacy enqueue paths are safely removed. */
+
 (function(){
   'use strict';
   if (typeof window === 'undefined') return;

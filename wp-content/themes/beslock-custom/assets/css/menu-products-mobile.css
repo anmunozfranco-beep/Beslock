@@ -64,7 +64,6 @@ nav#mobileDrawer .products-chevron {
   align-items: center;
   justify-content: center;
   margin-left: 0.45rem;
-  font-size: 1.05rem;
   color: var(--menu-link-color);
   line-height: 1;
 }

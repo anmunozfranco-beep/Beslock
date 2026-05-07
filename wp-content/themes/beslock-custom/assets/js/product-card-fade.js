@@ -1,5 +1,10 @@
 /* product-card-fade.js
-   Simple cross-fade for product cards with exactly two images.
+  Dormant legacy image-wrapper fade runtime.
+
+  Active media ownership is consolidated in assets/js/components/product-card.js.
+  Preserve this file until older `product-image-wrapper` surfaces are proven dead.
+
+  Simple cross-fade for product cards with exactly two images.
    - Toggles the `visible` class every 5 seconds
    - Leaves single-image cards untouched
    - No transforms, no scaling, no hover effects

@@ -1,6 +1,11 @@
 <?php
 /**
- * Enqueue theme assets and head helpers.
+ * Dormant legacy enqueue surface.
+ *
+ * This file is retained as a reference copy of the older asset pipeline but is
+ * not included from `functions.php` in the active theme bootstrap. Product-card
+ * legacy assets referenced here should be treated as non-active until a future
+ * cleanup pass proves otherwise.
  */
 
 add_action( 'wp_enqueue_scripts', function() {
