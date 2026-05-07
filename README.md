@@ -10,11 +10,14 @@ The repository ships with a minimal Docker Compose stack for local development:
 - phpMyAdmin: `http://localhost:8081`
 - MySQL: `localhost:3306`
 
+The bootstrap is designed for a production SQL dump stored locally at `database/andres38_wp718.sql`. That dump is intentionally kept out of Git.
+
 ### Services
 
 - `wordpress` using `wordpress:php8.2-apache`
 - `mysql` using `mysql:8.0`
 - `phpmyadmin` using `phpmyadmin/phpmyadmin`
+- `wpcli` using `wordpress:cli-php8.2` for post-import bootstrap tasks
 
 ### Files and directories
 
@@ -23,11 +26,16 @@ Beslock/
 ├── docker-compose.yml
 ├── .env
 ├── Makefile
+├── database/
 ├── wp-config-sample.php
 ├── wp-content/
 ├── data/
 ├── docker/
-│   └── uploads.ini
+│   ├── bootstrap-wordpress.sh
+│   ├── mysql-init/
+│   ├── uploads.ini
+│   ├── wp-config-docker.php
+│   └── wordpress-entrypoint.sh
 └── README.md
 ```
 
@@ -35,12 +43,28 @@ Beslock/
 
 - `wp-content/` is mounted directly from the repository, so theme and plugin development happens against the real codebase.
 - WordPress core and generated runtime files live in a named Docker volume for stable local persistence.
-- MySQL data lives in its own named volume so you can import production SQL and keep it across restarts.
+- MySQL data lives in its own named volume so the production SQL is imported only on first bootstrap and persists across restarts.
 - The default local table prefix is `wptq_`, matching the current site configuration and making production SQL imports safer.
+- A one-shot `wpcli` bootstrap runs `search-replace` from `https://beslock.com.co` to `http://localhost:8080` after the import.
 
 ## Quick start
 
-1. Start the environment:
+1. Put the production dump at `database/andres38_wp718.sql`.
+
+2. Bootstrap the environment from scratch:
+
+	```bash
+	make fresh
+	```
+
+	Equivalent manual commands:
+
+	```bash
+	docker compose down -v
+	docker compose up -d
+	```
+
+3. For subsequent starts, use:
 
 	```bash
 	docker compose up -d
@@ -52,10 +76,22 @@ Beslock/
 	make up
 	```
 
-2. Open WordPress at `http://localhost:8080`.
-3. Open phpMyAdmin at `http://localhost:8081`.
-4. Import the production SQL into the `beslock` database.
-5. Validate WooCommerce, Kadence, `beslock-custom`, and sync-related plugins.
+4. Open WordPress at `http://localhost:8080`.
+5. Open phpMyAdmin at `http://localhost:8081`.
+6. Validate WooCommerce, Kadence, `beslock-custom`, and sync-related plugins.
+
+## Automatic database bootstrap
+
+- The SQL dump is imported by MySQL automatically through `docker-entrypoint-initdb.d`.
+- The import runs only when `mysql_data` is empty.
+- If you need to re-import from scratch, run `make fresh` or `docker compose down -v` before `docker compose up -d`.
+- The local post-import bootstrap uses WP-CLI to run a safe serialized-data-aware search-replace:
+
+```text
+https://beslock.com.co -> http://localhost:8080
+```
+
+- It also updates `home` and `siteurl` to the local URL.
 
 ## Environment variables
 
@@ -68,7 +104,16 @@ WORDPRESS_DB_PASSWORD=beslock
 WORDPRESS_DB_HOST=mysql
 MYSQL_ROOT_PASSWORD=root
 WORDPRESS_TABLE_PREFIX=wptq_
+WORDPRESS_LOCAL_URL=http://localhost:8080
+WORDPRESS_PRODUCTION_URL=https://beslock.com.co
+WP_ENVIRONMENT_TYPE=local
 ```
+
+## Docker WordPress config
+
+- The running containers use `docker/wp-config-docker.php` instead of the local production `wp-config.php`.
+- The Docker config keeps the same table prefix (`wptq_`) but swaps DB access to container variables.
+- Local config disables the production secure-cookie assumptions that would break plain HTTP on `localhost`.
 
 ## Upload limits
 
@@ -86,6 +131,7 @@ max_execution_time = 300
 
 - `make up`
 - `make down`
+- `make fresh`
 - `make logs`
 - `make restart`
 
@@ -94,6 +140,13 @@ max_execution_time = 300
 - `wp-content/themes/beslock-custom`: Kadence child theme customizations.
 - `wp-content/plugins/beslock-product-sync`: Deterministic JSON-driven WooCommerce product sync.
 - `data/products.json`: filesystem source of product data consumed by sync.
+
+## Notes for new developers
+
+- Do not commit production SQL dumps. The `database/` directory is reserved for local bootstrap only.
+- If the site comes up on the WordPress installer, the dump was not imported or the MySQL volume was reused from an empty bootstrap. Run `make fresh`.
+- `beslock-product-sync` exists in the current filesystem and can be validated locally after import.
+- `short-des-exporter` and `beslock-portfolio-exporter` are not present in the current repository tree, so they cannot be validated until their plugin code is added to `wp-content/plugins`.
 
 ## Architecture conventions
 
