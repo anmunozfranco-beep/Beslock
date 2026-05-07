@@ -31,7 +31,7 @@ final class ProductSynchronizer
             $existing = get_page_by_path($mapped['slug'], OBJECT, 'product');
             $postId = $existing?->ID ? (int) $existing->ID : 0;
 
-            $postId = wp_insert_post([
+            $result = wp_insert_post([
                 'ID' => $postId,
                 'post_title' => $mapped['title'],
                 'post_name' => $mapped['slug'],
@@ -40,17 +40,17 @@ final class ProductSynchronizer
                 'post_type' => 'product',
             ]);
 
-            if (is_wp_error($postId) || $postId <= 0) {
+            if (is_wp_error($result) || $result <= 0) {
                 continue;
             }
+            $postId = (int) $result;
 
-            $wcProduct = wc_get_product((int) $postId);
+            $wcProduct = wc_get_product($postId);
             if (! $wcProduct) {
                 continue;
             }
 
             $wcProduct->set_regular_price($mapped['price']);
-            $wcProduct->set_price($mapped['price']);
             $wcProduct->save();
         }
     }

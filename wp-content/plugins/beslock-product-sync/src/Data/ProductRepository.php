@@ -26,7 +26,7 @@ final class ProductRepository
 
         $decoded = json_decode($raw, true);
         if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log(sprintf('BESLOCK product sync: invalid JSON in %s (%s)', $this->productsJsonPath, json_last_error_msg()));
+            error_log(sprintf('Beslock product sync: invalid JSON in %s (%s)', $this->productsJsonPath, json_last_error_msg()));
             return [];
         }
 
