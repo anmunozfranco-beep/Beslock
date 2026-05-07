@@ -1,0 +1,109 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: beslock-mysql
+    restart: unless-stopped
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
+      MYSQL_USER: ${WORDPRESS_DB_USER}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
+      - ./database:/docker-entrypoint-seed:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    networks:
+      - beslock
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: beslock-wordpress
+    restart: unless-stopped
+    entrypoint: ["/usr/local/bin/beslock-wordpress-entrypoint.sh"]
+    command: ["apache2-foreground"]
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptq_}
+      WORDPRESS_LOCAL_URL: ${WORDPRESS_LOCAL_URL}
+      WORDPRESS_PRODUCTION_URL: ${WORDPRESS_PRODUCTION_URL}
+      WP_ENVIRONMENT_TYPE: ${WP_ENVIRONMENT_TYPE:-local}
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./docker/wordpress-entrypoint.sh:/usr/local/bin/beslock-wordpress-entrypoint.sh:ro
+      - ./docker/wp-config-docker.php:/var/www/html/wp-config.php:ro
+    networks:
+      - beslock
+
+  wpcli:
+    image: wordpress:cli-php8.2
+    container_name: beslock-wpcli
+    restart: "no"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      wordpress:
+        condition: service_started
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX:-wptq_}
+      WORDPRESS_LOCAL_URL: ${WORDPRESS_LOCAL_URL}
+      WORDPRESS_PRODUCTION_URL: ${WORDPRESS_PRODUCTION_URL}
+      WP_ENVIRONMENT_TYPE: ${WP_ENVIRONMENT_TYPE:-local}
+    entrypoint: ["/bin/sh", "/usr/local/bin/bootstrap-wordpress.sh"]
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./docker/wp-config-docker.php:/var/www/html/wp-config.php:ro
+      - ./docker/bootstrap-wordpress.sh:/usr/local/bin/bootstrap-wordpress.sh:ro
+    networks:
+      - beslock
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: beslock-phpmyadmin
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      UPLOAD_LIMIT: 256M
+    networks:
+      - beslock
+
+volumes:
+  mysql_data:
+  wordpress_data:
+
+networks:
+  beslock:
+    name: beslock-network

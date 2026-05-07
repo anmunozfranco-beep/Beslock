@@ -1,0 +1,39 @@
+Import run: 2026-05-06 20:52:14
+[DEBUG_NORMALIZED]	source:products_json	slug:e-flex	title:e-Flex	price:689000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-flex	title:e-Flex
+[PRE_SAVE_DEBUG]	slug=e-flex	title=e-Flex	price=689000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-flex","title":"e-Flex","excerpt":"","content":"","price":"689000","thumbnail_id":"","gallery_ids":[],"badge":"Ideal para estancias cortas","features":[],"source":"products_json"}
+UPDATED	ID:197	slug:e-flex	title:e-Flex
+[DEBUG_NORMALIZED]	source:products_json	slug:e-nova	title:e-Nova	price:412000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-nova	title:e-Nova
+[PRE_SAVE_DEBUG]	slug=e-nova	title=e-Nova	price=412000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-nova","title":"e-Nova","excerpt":"","content":"","price":"412000","thumbnail_id":"","gallery_ids":[],"badge":"Privacidad sin complicaciones","features":[],"source":"products_json"}
+UPDATED	ID:191	slug:e-nova	title:e-Nova
+[DEBUG_NORMALIZED]	source:products_json	slug:e-orbit	title:e-Orbit	price:1734000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-orbit	title:e-Orbit
+[PRE_SAVE_DEBUG]	slug=e-orbit	title=e-Orbit	price=1734000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-orbit","title":"e-Orbit","excerpt":"","content":"","price":"1734000","thumbnail_id":"","gallery_ids":[],"badge":"Desde donde te encuentres","features":[],"source":"products_json"}
+UPDATED	ID:193	slug:e-orbit	title:e-Orbit
+[DEBUG_NORMALIZED]	source:products_json	slug:e-prime	title:e-Prime	price:941000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-prime	title:e-Prime
+[PRE_SAVE_DEBUG]	slug=e-prime	title=e-Prime	price=941000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-prime","title":"e-Prime","excerpt":"","content":"","price":"941000","thumbnail_id":"","gallery_ids":[],"badge":"Pensada para oficinas","features":[],"source":"products_json"}
+UPDATED	ID:201	slug:e-prime	title:e-Prime
+[DEBUG_NORMALIZED]	source:products_json	slug:e-shield	title:e-Shield	price:982000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-shield	title:e-Shield
+[PRE_SAVE_DEBUG]	slug=e-shield	title=e-Shield	price=982000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-shield","title":"e-Shield","excerpt":"","content":"","price":"982000","thumbnail_id":"","gallery_ids":[],"badge":"M\u00e1xima protecci\u00f3n en tu hogar","features":[],"source":"products_json"}
+UPDATED	ID:199	slug:e-shield	title:e-Shield
+[DEBUG_NORMALIZED]	source:products_json	slug:e-touch	title:e-Touch	price:435000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-touch	title:e-Touch
+[PRE_SAVE_DEBUG]	slug=e-touch	title=e-Touch	price=435000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-touch","title":"e-Touch","excerpt":"","content":"","price":"435000","thumbnail_id":"","gallery_ids":[],"badge":"Acceso para todos","features":[],"source":"products_json"}
+UPDATED	ID:195	slug:e-touch	title:e-Touch
+Ran wc_update_product_lookup_tables()
+LOOKUP_MISSING	slug:e-flex
+LOOKUP_MISSING	slug:e-nova
+LOOKUP_MISSING	slug:e-orbit
+LOOKUP_MISSING	slug:e-prime
+LOOKUP_MISSING	slug:e-shield
+LOOKUP_MISSING	slug:e-touch
+Summary: Created:0 Updated:6 Errors:0

@@ -1,0 +1,6 @@
+/* Deprecated legacy surface.
+   Header sticky-state ownership now lives in:
+   - assets/css/layout/header.css
+   - assets/css/components/header.css
+   Keep this file intentionally empty so a dormant include cannot reintroduce
+   duplicate header-state styling. */
