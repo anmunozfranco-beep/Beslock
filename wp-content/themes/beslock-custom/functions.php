@@ -788,29 +788,119 @@ add_action( 'wp_print_styles', function() {
  * Usage in content: [beslock_header_widget]
  * Usage in PHP templates: beslock_render_header_widget();
  */
+if ( ! function_exists( 'beslock_header_helper_audit_log' ) ) {
+  function beslock_header_helper_audit_log( $tag, $message, $context = array() ) {
+    $payload = '';
+    if ( ! empty( $context ) ) {
+      $encoded = wp_json_encode( $context );
+      $payload = $encoded ? ' ' . $encoded : '';
+    }
+    error_log( sprintf( '[%s] %s%s', $tag, $message, $payload ) );
+  }
+}
+
+beslock_header_helper_audit_log(
+  'HEADER_HELPER_AUDIT',
+  'functions.php helper layer loaded',
+  array(
+    'file' => __FILE__,
+    'shortcode_exists' => shortcode_exists( 'beslock_header_widget' ),
+  )
+);
+
 if ( ! function_exists( 'beslock_get_header_widget_html' ) ) {
+  beslock_header_helper_audit_log(
+    'HEADER_HELPER_AUDIT',
+    'registering beslock_get_header_widget_html from functions.php',
+    array( 'file' => __FILE__ )
+  );
   function beslock_get_header_widget_html() {
+    beslock_header_helper_audit_log(
+      'HEADER_HELPER_AUDIT',
+      'beslock_get_header_widget_html invoked',
+      array(
+        'declared_in' => __FILE__,
+        'caller' => function_exists( 'wp_debug_backtrace_summary' ) ? wp_debug_backtrace_summary( null, 0, false ) : 'unavailable',
+      )
+    );
     $tpl = get_stylesheet_directory() . '/template-parts/header/header-widget.php';
     if ( file_exists( $tpl ) ) {
       ob_start();
       include $tpl;
       return ob_get_clean();
     }
+    beslock_header_helper_audit_log(
+      'HEADER_HELPER_AUDIT',
+      'header widget template missing during helper render',
+      array( 'template' => $tpl )
+    );
     return '';
   }
+} else {
+  beslock_header_helper_audit_log(
+    'HEADER_HELPER_AUDIT',
+    'skipping beslock_get_header_widget_html registration in functions.php',
+    array( 'file' => __FILE__ )
+  );
 }
 
 if ( ! function_exists( 'beslock_header_widget_shortcode' ) ) {
+  beslock_header_helper_audit_log(
+    'HEADER_SHORTCODE_AUDIT',
+    'registering beslock_header_widget_shortcode from functions.php',
+    array( 'file' => __FILE__ )
+  );
   function beslock_header_widget_shortcode( $atts = array() ) {
+    beslock_header_helper_audit_log(
+      'HEADER_SHORTCODE_AUDIT',
+      'beslock_header_widget_shortcode invoked',
+      array(
+        'declared_in' => __FILE__,
+        'caller' => function_exists( 'wp_debug_backtrace_summary' ) ? wp_debug_backtrace_summary( null, 0, false ) : 'unavailable',
+      )
+    );
     return beslock_get_header_widget_html();
   }
   add_shortcode( 'beslock_header_widget', 'beslock_header_widget_shortcode' );
+  beslock_header_helper_audit_log(
+    'HEADER_SHORTCODE_AUDIT',
+    'add_shortcode executed in functions.php',
+    array(
+      'file' => __FILE__,
+      'shortcode_exists' => shortcode_exists( 'beslock_header_widget' ),
+    )
+  );
+} else {
+  beslock_header_helper_audit_log(
+    'HEADER_SHORTCODE_AUDIT',
+    'skipping beslock_header_widget_shortcode registration in functions.php',
+    array( 'file' => __FILE__ )
+  );
 }
 
 if ( ! function_exists( 'beslock_render_header_widget' ) ) {
+  beslock_header_helper_audit_log(
+    'HEADER_RENDER_AUDIT',
+    'registering beslock_render_header_widget from functions.php',
+    array( 'file' => __FILE__ )
+  );
   function beslock_render_header_widget() {
+    beslock_header_helper_audit_log(
+      'HEADER_RENDER_AUDIT',
+      'beslock_render_header_widget invoked',
+      array(
+        'declared_in' => __FILE__,
+        'caller' => function_exists( 'wp_debug_backtrace_summary' ) ? wp_debug_backtrace_summary( null, 0, false ) : 'unavailable',
+      )
+    );
     echo beslock_get_header_widget_html();
   }
+} else {
+  beslock_header_helper_audit_log(
+    'HEADER_RENDER_AUDIT',
+    'skipping beslock_render_header_widget registration in functions.php',
+    array( 'file' => __FILE__ )
+  );
 }
 
 /**
