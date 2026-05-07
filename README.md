@@ -92,6 +92,7 @@ https://beslock.com.co -> http://localhost:8080
 ```
 
 - It also updates `home` and `siteurl` to the local URL.
+- It reconciles the legacy `portfolio-product-sync` active-plugin slug from older dumps with the current `beslock-product-sync` plugin when that plugin exists on disk.
 
 ## Environment variables
 
@@ -145,8 +146,7 @@ max_execution_time = 300
 
 - Do not commit production SQL dumps. The `database/` directory is reserved for local bootstrap only.
 - If the site comes up on the WordPress installer, the dump was not imported or the MySQL volume was reused from an empty bootstrap. Run `make fresh`.
-- `beslock-product-sync` exists in the current filesystem and can be validated locally after import.
-- `short-des-exporter` and `beslock-portfolio-exporter` are not present in the current repository tree, so they cannot be validated until their plugin code is added to `wp-content/plugins`.
+- `beslock-product-sync` is the current local JSON sync plugin. Older SQL dumps may still reference the legacy `portfolio-product-sync` slug, and the local bootstrap normalizes that automatically.
 
 ## Architecture conventions
 

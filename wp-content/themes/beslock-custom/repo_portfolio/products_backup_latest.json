@@ -1,0 +1,548 @@
+{
+    "created_at": "2026-05-07 06:03:43",
+    "items": [
+        {
+            "slug": "e-flex",
+            "pre": {
+                "ID": 197,
+                "post_title": "e-Flex",
+                "post_name": "e-flex",
+                "post_content": "",
+                "post_excerpt": "Ideal para recibir y dar acceso sin estar presente. Códigos temporales, huella y control remoto para estancias cortas.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "689000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "689000"
+                ],
+                "_thumbnail_id": [
+                    "198"
+                ],
+                "_edit_lock": [
+                    "1777729727:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ]
+            }
+        },
+        {
+            "slug": "e-nova",
+            "pre": {
+                "ID": 191,
+                "post_title": "e-Nova",
+                "post_name": "e-nova",
+                "post_content": "",
+                "post_excerpt": "Acceso inteligente sin llaves para tu día a día. Huella y control simple para moverte con libertad y tranquilidad.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "412000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "412000"
+                ],
+                "_thumbnail_id": [
+                    "192"
+                ],
+                "_product_image_gallery": [
+                    "117"
+                ],
+                "_edit_lock": [
+                    "1777729620:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ]
+            }
+        },
+        {
+            "slug": "e-orbit",
+            "pre": {
+                "ID": 193,
+                "post_title": "e-Orbit",
+                "post_name": "e-orbit",
+                "post_content": "",
+                "post_excerpt": "Mira y controla quién llega a tu puerta, estés donde estés. Seguridad avanzada con video y acceso inteligente desde tu celular.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "1734000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "1734000"
+                ],
+                "_thumbnail_id": [
+                    "194"
+                ],
+                "_edit_lock": [
+                    "1777729620:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ]
+            }
+        },
+        {
+            "slug": "e-prime",
+            "pre": {
+                "ID": 201,
+                "post_title": "e-Prime",
+                "post_name": "e-prime",
+                "post_content": "",
+                "post_excerpt": "Control total para accesos exigentes. Gestión avanzada de usuarios para espacios de alto flujo.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "941000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "941000"
+                ],
+                "_thumbnail_id": [
+                    "202"
+                ],
+                "_product_image_gallery": [
+                    "119"
+                ],
+                "_edit_lock": [
+                    "1777729551:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ]
+            }
+        },
+        {
+            "slug": "e-shield",
+            "pre": {
+                "ID": 199,
+                "post_title": "e-Shield",
+                "post_name": "e-shield",
+                "post_content": "",
+                "post_excerpt": "Protección inteligente para tu hogar. Seguridad robusta con acceso electrónico y respaldo mecánico.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "982000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "982000"
+                ],
+                "_thumbnail_id": [
+                    "121"
+                ],
+                "_product_image_gallery": [
+                    "120"
+                ],
+                "_edit_lock": [
+                    "1778131738:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "a:1:{s:16:\"paragraph_length\";i:0;}"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ],
+                "_siteseo_score": [
+                    "49"
+                ],
+                "beslock_badge": [
+                    "no"
+                ]
+            }
+        },
+        {
+            "slug": "e-touch",
+            "pre": {
+                "ID": 195,
+                "post_title": "e-Touch",
+                "post_name": "e-touch",
+                "post_content": "",
+                "post_excerpt": "Acceso fácil para espacios compartidos. Clave y huella para que todos puedan entrar, sin complicaciones.",
+                "post_status": "publish"
+            },
+            "meta": {
+                "_regular_price": [
+                    "435000"
+                ],
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_price": [
+                    "435000"
+                ],
+                "_thumbnail_id": [
+                    "196"
+                ],
+                "_product_image_gallery": [
+                    "123"
+                ],
+                "_edit_lock": [
+                    "1777729664:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ]
+            }
+        }
+    ]
+}
