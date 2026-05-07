@@ -4290,10 +4290,6 @@ Definition:
 
 ### `TRACK_LATER_SURFACES`
 
-- helper-layer ownership around `beslock_get_header_widget_html()` / `beslock_render_header_widget()` / `beslock_header_widget_shortcode()` in:
-	`wp-content/themes/beslock-custom/functions.php`
-	`wp-content/themes/beslock-custom/inc/header-widget.php`
-	`wp-content/themes/beslock-custom/inc/features/header.php`
 - tracked-modified debt currently outside normalization commits:
 	`wp-content/themes/beslock-custom/assets/css/base/variables.css`
 	`wp-content/themes/beslock-custom/assets/css/pages/single-product.css`
@@ -4387,13 +4383,11 @@ already created.
 
 ### What remains deferred
 
-- duplicated helper ownership consolidation for header-widget loaders
 - tracked-modified debt in CSS/JS/header/debug files
 - any cleanup or archive retirement work for the legacy wrapper
 
 ### What remains future-cleanup-only
 
-- any loader consolidation in `functions.php`, `inc/header-widget.php`, or `inc/features/header.php`
 - any decision to archive or retire `templates/blocks/product-card.php`
 - any tooling/path-resolution implementation work beyond the current design/spec documentation
 
