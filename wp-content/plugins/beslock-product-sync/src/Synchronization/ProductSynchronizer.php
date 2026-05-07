@@ -15,6 +15,11 @@ final class ProductSynchronizer
     ) {
     }
 
+    /**
+     * Register the manual synchronization action.
+     *
+     * Trigger with do_action('beslock_sync_products') directly or from a scheduled job.
+     */
     public function register(): void
     {
         add_action('beslock_sync_products', [$this, 'sync']);
@@ -54,11 +59,17 @@ final class ProductSynchronizer
 
             $wcProduct = wc_get_product($postId);
             if (! $wcProduct) {
+                error_log(sprintf('Beslock product sync: unable to load WooCommerce product for post ID %d', $postId));
                 continue;
             }
 
-            $wcProduct->set_regular_price($mapped['price']);
-            $wcProduct->save();
+            if ($mapped['price'] !== '') {
+                $wcProduct->set_regular_price($mapped['price']);
+            }
+
+            if ($wcProduct->save() <= 0) {
+                error_log(sprintf('Beslock product sync: unable to persist WooCommerce product for post ID %d', $postId));
+            }
         }
     }
 }

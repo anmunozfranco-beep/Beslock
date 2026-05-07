@@ -12,11 +12,14 @@ final class ProductMapper
      */
     public function map(array $raw): array
     {
+        $price = trim((string) ($raw['price'] ?? ''));
+        $isValidPrice = $price !== '' && is_numeric($price) && (float) $price >= 0;
+
         return [
             'title' => (string) ($raw['title'] ?? ''),
             'slug' => sanitize_title((string) ($raw['slug'] ?? $raw['title'] ?? '')),
             'description' => (string) ($raw['description'] ?? ''),
-            'price' => (string) ($raw['price'] ?? ''),
+            'price' => $isValidPrice ? $price : '',
         ];
     }
 }
