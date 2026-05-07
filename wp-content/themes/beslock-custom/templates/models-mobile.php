@@ -41,7 +41,24 @@ $focal_overrides = array(
 
 // gather files (only files directly under assets/images/products/)
 $files = array();
-$glob = @glob( $images_dir_path . '*.{webp,png,jpg,jpeg}', GLOB_BRACE );
+
+// PORTABILITY FALLBACK: GLOB_BRACE is not available in some PHP builds,
+// including common musl/Alpine environments. Preserve the same effective scan
+// by falling back to one glob per extension when the constant is unavailable.
+$extensions = array( 'webp', 'png', 'jpg', 'jpeg' );
+$glob = array();
+
+if ( defined( 'GLOB_BRACE' ) ) {
+  $glob = @glob( $images_dir_path . '*.{webp,png,jpg,jpeg}', GLOB_BRACE );
+} else {
+  foreach ( $extensions as $extension ) {
+    $matches = @glob( $images_dir_path . '*.' . $extension );
+    if ( $matches && is_array( $matches ) ) {
+      $glob = array_merge( $glob, $matches );
+    }
+  }
+}
+
 if ( $glob && is_array( $glob ) ) {
   foreach ( $glob as $path ) {
     if ( ! is_file( $path ) ) {
@@ -75,17 +92,19 @@ if ( $files ) {
 
 // Helper: produce a human-readable title from the base name:
 // preserves hyphens and capitalizes parts (e.g. e-nova -> e-Nova)
-function beslock_title_from_base( $base ) {
-  $segments = explode( '-', $base );
-  foreach ( $segments as $i => $seg ) {
-    if ( $i === 0 && strlen( $seg ) === 1 ) {
-      // Keep single-letter prefix lowercase (e.g. 'e' -> e-Nova)
-      $segments[ $i ] = strtolower( $seg );
-    } else {
-      $segments[ $i ] = ucfirst( $seg );
+if ( ! function_exists( 'beslock_title_from_base' ) ) {
+  function beslock_title_from_base( $base ) {
+    $segments = explode( '-', $base );
+    foreach ( $segments as $i => $seg ) {
+      if ( $i === 0 && strlen( $seg ) === 1 ) {
+        // Keep single-letter prefix lowercase (e.g. 'e' -> e-Nova)
+        $segments[ $i ] = strtolower( $seg );
+      } else {
+        $segments[ $i ] = ucfirst( $seg );
+      }
     }
+    return implode( '-', $segments );
   }
-  return implode( '-', $segments );
 }
 ?>
 <section class="models__list" aria-hidden="false">
