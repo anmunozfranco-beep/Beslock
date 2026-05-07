@@ -3,7 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-// Move of previous enqueue logic. No functional change — only relocated.
+// Canonical active frontend runtime/bootstrap owner.
+// Base Beslock handles should be owned here; `functions.php` keeps only
+// compatibility bridges and guarded fallbacks for overlapping paths.
 add_action( 'wp_enqueue_scripts', function() {
 
   if ( function_exists( 'is_child_theme' ) && is_child_theme() ) {
@@ -23,6 +25,96 @@ add_action( 'wp_enqueue_scripts', function() {
     array( 'beslock-main-style' ),
     $ver_main_css
   );
+
+  $utilities_buttons_css = $theme_dir_path . '/assets/css/utilities/buttons.css';
+  if ( file_exists( $utilities_buttons_css ) ) {
+    wp_enqueue_style(
+      'beslock-utilities-buttons',
+      $theme_dir_uri . '/assets/css/utilities/buttons.css',
+      array( 'beslock-extra-style' ),
+      filemtime( $utilities_buttons_css )
+    );
+  }
+
+  $utilities_layout_css = $theme_dir_path . '/assets/css/utilities/layout-helpers.css';
+  if ( file_exists( $utilities_layout_css ) ) {
+    wp_enqueue_style(
+      'beslock-utilities-layout-helpers',
+      $theme_dir_uri . '/assets/css/utilities/layout-helpers.css',
+      array( 'beslock-extra-style' ),
+      filemtime( $utilities_layout_css )
+    );
+  }
+
+  $utilities_css = $theme_dir_path . '/assets/css/utilities/utilities.css';
+  if ( file_exists( $utilities_css ) ) {
+    wp_enqueue_style(
+      'beslock-utilities',
+      $theme_dir_uri . '/assets/css/utilities/utilities.css',
+      array( 'beslock-extra-style' ),
+      filemtime( $utilities_css )
+    );
+  }
+
+  $homepage_layout_css = $theme_dir_path . '/assets/css/layout/homepage.css';
+  if ( file_exists( $homepage_layout_css ) ) {
+    wp_enqueue_style(
+      'beslock-homepage-layout',
+      $theme_dir_uri . '/assets/css/layout/homepage.css',
+      array( 'beslock-extra-style', 'beslock-utilities-layout-helpers' ),
+      filemtime( $homepage_layout_css )
+    );
+  }
+
+  $storefront_layout_css = $theme_dir_path . '/assets/css/layout/storefront.css';
+  if ( file_exists( $storefront_layout_css ) ) {
+    wp_enqueue_style(
+      'beslock-storefront-layout',
+      $theme_dir_uri . '/assets/css/layout/storefront.css',
+      array( 'beslock-extra-style', 'beslock-utilities-layout-helpers' ),
+      filemtime( $storefront_layout_css )
+    );
+  }
+
+  $recommendations_layout_css = $theme_dir_path . '/assets/css/layout/recommendations.css';
+  if ( file_exists( $recommendations_layout_css ) ) {
+    wp_enqueue_style(
+      'beslock-recommendations-layout',
+      $theme_dir_uri . '/assets/css/layout/recommendations.css',
+      array( 'beslock-extra-style' ),
+      filemtime( $recommendations_layout_css )
+    );
+  }
+
+  $footer_layout_css = $theme_dir_path . '/assets/css/layout/footer.css';
+  if ( file_exists( $footer_layout_css ) ) {
+    wp_enqueue_style(
+      'beslock-footer-layout',
+      $theme_dir_uri . '/assets/css/layout/footer.css',
+      array( 'beslock-extra-style', 'beslock-utilities-layout-helpers' ),
+      filemtime( $footer_layout_css )
+    );
+  }
+
+  $hero_component_css = $theme_dir_path . '/assets/css/components/hero.css';
+  if ( file_exists( $hero_component_css ) ) {
+    wp_enqueue_style(
+      'beslock-hero-component',
+      $theme_dir_uri . '/assets/css/components/hero.css',
+      array( 'beslock-extra-style', 'beslock-homepage-layout' ),
+      filemtime( $hero_component_css )
+    );
+  }
+
+  $discover_component_css = $theme_dir_path . '/assets/css/components/discover.css';
+  if ( file_exists( $discover_component_css ) ) {
+    wp_enqueue_style(
+      'beslock-discover-component',
+      $theme_dir_uri . '/assets/css/components/discover.css',
+      array( 'beslock-extra-style', 'beslock-homepage-layout' ),
+      filemtime( $discover_component_css )
+    );
+  }
 
   $inline_header_fallback = "\n.header{position:fixed;top:0;left:0;right:0;z-index:var(--z-header);}\n";
   wp_add_inline_style( 'beslock-main-style', $inline_header_fallback );
@@ -198,6 +290,9 @@ add_action( 'wp_enqueue_scripts', function() {
     );
   }
 
+  // Canonical gallery reel enqueue owner.
+  // Keep this load path intact while the legacy compatibility bootstrap in
+  // functions.php remains available as a fallback-only path.
   $reel_css = $theme_dir_path . '/assets/css/product-gallery-reel.css';
   if ( file_exists( $reel_css ) ) {
     wp_enqueue_style( 'beslock-product-gallery-reel', $theme_dir_uri . '/assets/css/product-gallery-reel.css', [ 'beslock-main-style' ], filemtime( $reel_css ) );
@@ -347,6 +442,7 @@ add_action( 'wp_head', function(){
   <?php
 }, 1 );
 
+// Canonical late owner for the WooCommerce scope fix bridge.
 add_action( 'wp_enqueue_scripts', function() {
   $css_file = get_stylesheet_directory() . '/assets/css/wc-scope-fix.css';
   if ( file_exists( $css_file ) ) {
@@ -354,7 +450,7 @@ add_action( 'wp_enqueue_scripts', function() {
   }
 }, 20 );
 
-// Dequeue Kadence styles late to allow parent enqueues first
+// Canonical late owner for Kadence/frontend style cleanup.
 add_action( 'wp_enqueue_scripts', function() {
   if ( is_admin() ) { return; }
   global $wp_styles;
@@ -376,5 +472,7 @@ add_action( 'wp_enqueue_scripts', function() {
       wp_deregister_style( $h );
     }
   }
+
+  do_action( 'beslock_core_kadence_cleanup_complete' );
 
 }, 100 );

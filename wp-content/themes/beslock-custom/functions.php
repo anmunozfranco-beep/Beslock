@@ -47,8 +47,16 @@ if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/enqueue-assets.
 }
 
 /**
- * Enqueue main theme assets: `style.css` as the primary handle and optional
- * assets under `assets/css` and `assets/js` loaded after it.
+ * Compatibility bootstrap for base Beslock assets.
+ *
+ * Canonical modular ownership now lives in `inc/core/enqueue.php`, but this
+ * older bootstrap remains active to preserve the current runtime shape while
+ * legacy single-product and gallery dependencies are still being audited.
+ *
+ * Base handle ownership for `beslock-extra-style` and `beslock-main-js` is now
+ * canonical in `inc/core/enqueue.php`; keep this function as a fallback bridge.
+ *
+ * Do not expand this function with new product-card or storefront ownership.
  */
 function beslock_enqueue_assets() {
   // MAIN CSS (style.css)
@@ -63,7 +71,11 @@ function beslock_enqueue_assets() {
 
   // OPTIONAL extra CSS (assets/css/main.css)
   $extra_css = get_stylesheet_directory() . '/assets/css/main.css';
-  if ( file_exists( $extra_css ) ) {
+  if (
+    file_exists( $extra_css )
+    && ! wp_style_is( 'beslock-extra-style', 'enqueued' )
+    && ! wp_style_is( 'beslock-extra-style', 'done' )
+  ) {
     wp_enqueue_style(
       'beslock-extra-style',
       get_stylesheet_directory_uri() . '/assets/css/main.css',
@@ -74,13 +86,23 @@ function beslock_enqueue_assets() {
 
   // MAIN JS
   $main_js = get_stylesheet_directory() . '/assets/js/main.js';
-  if ( file_exists( $main_js ) ) {
+  if (
+    file_exists( $main_js )
+    && ! wp_script_is( 'beslock-main-js', 'enqueued' )
+    && ! wp_script_is( 'beslock-main-js', 'done' )
+  ) {
     wp_enqueue_script( 'beslock-main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), filemtime( $main_js ), true );
   }
 
-  // Product gallery reel (lightweight) — initialize only on single-product pages
+  // Legacy single-product gallery bridge.
+  // `inc/core/enqueue.php` is the canonical owner for this runtime. Only keep
+  // the compatibility bootstrap path if the canonical handle was not enqueued.
   $gallery_reel = get_stylesheet_directory() . '/assets/js/product-gallery-reel.js';
-  if ( file_exists( $gallery_reel ) ) {
+  if (
+    file_exists( $gallery_reel )
+    && ! wp_script_is( 'beslock-product-gallery-reel-js', 'enqueued' )
+    && ! wp_script_is( 'beslock-product-gallery-reel-js', 'done' )
+  ) {
     wp_enqueue_script( 'beslock-gallery-reel', get_stylesheet_directory_uri() . '/assets/js/product-gallery-reel.js', array(), filemtime( $gallery_reel ), true );
   }
 }
@@ -604,16 +626,16 @@ function beslock_fix_placeholders_page() {
     return array( 'assigned' => $assigned, 'skipped' => $skipped );
   }
 
-// Enqueue a minimal CSS reset for WooCommerce pages. The stylesheet is scoped
-// to `body.woocommerce` selectors so it's safe to include globally — this
-// ensures the shop/cart/checkout pages receive the intended header fixes.
+// Compatibility bridge for the WooCommerce scope fix stylesheet.
+// `inc/core/enqueue.php` is the canonical late enqueue owner; keep this path
+// only as a fallback if the canonical handle was not loaded.
 add_action( 'wp_enqueue_scripts', function() {
-  // Ensure the main theme stylesheet is registered/enqueued before dependents.
-  $main_css_path = get_stylesheet_directory() . '/assets/css/main.css';
+  // Ensure the base child-theme stylesheet handle exists before dependents.
+  $main_css_path = get_stylesheet_directory() . '/style.css';
   if ( file_exists( $main_css_path ) ) {
     $ver = filemtime( $main_css_path );
     if ( ! wp_style_is( 'beslock-main-style', 'registered' ) ) {
-      wp_register_style( 'beslock-main-style', get_stylesheet_directory_uri() . '/assets/css/main.css', array(), $ver );
+      wp_register_style( 'beslock-main-style', get_stylesheet_uri(), array(), $ver );
     }
     if ( ! wp_style_is( 'beslock-main-style', 'enqueued' ) ) {
       wp_enqueue_style( 'beslock-main-style' );
@@ -621,18 +643,26 @@ add_action( 'wp_enqueue_scripts', function() {
   }
 
   $css_file = get_stylesheet_directory() . '/assets/css/wc-scope-fix.css';
-  if ( file_exists( $css_file ) ) {
+  if (
+    file_exists( $css_file )
+    && ! wp_style_is( 'beslock-wc-scope-fix', 'enqueued' )
+    && ! wp_style_is( 'beslock-wc-scope-fix', 'done' )
+  ) {
     wp_enqueue_style( 'beslock-wc-scope-fix', get_stylesheet_directory_uri() . '/assets/css/wc-scope-fix.css', array( 'beslock-main-style' ), filemtime( $css_file ) );
   }
 }, 20 );
 
 /**
- * Optionally dequeue Kadence styles so the child theme has full visual control.
- * This removes styles whose handle begins with "kadence-" but leaves all scripts
- * and template functionality intact. Run late (priority 100) so it can catch
- * styles enqueued by the parent and other components.
+ * Compatibility bridge for late Kadence style cleanup.
+ *
+ * The canonical late cleanup now runs from `inc/core/enqueue.php`. Keep this
+ * bridge only for fallback behavior if the canonical cleanup hook does not run.
  */
 add_action( 'wp_enqueue_scripts', function() {
+  if ( did_action( 'beslock_core_kadence_cleanup_complete' ) ) {
+    return;
+  }
+
   // Only run on the front-end.
   if ( is_admin() ) {
     return;
