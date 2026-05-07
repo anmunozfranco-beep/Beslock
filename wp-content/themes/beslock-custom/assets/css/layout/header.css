@@ -1,0 +1,126 @@
+/* Additive header layout surface.
+    This file should only own layout-level header rules and runtime hook glue.
+    Legacy visual styling remains in main.css, wc-scope-fix.css and menu-products-mobile.css
+    until a later safe consolidation pass. */
+
+.header,
+[data-js="header"] {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: var(--z-header);
+}
+
+.header .header__bar,
+[data-js="header"] [data-js="header-bar"] {
+   position: relative;
+}
+
+.header [data-js="drawer-toggle"],
+.header [data-js="header-cart"],
+.header__icon--menu,
+.header__icon--cart {
+   position: relative;
+   z-index: 11;
+}
+
+nav#mobileDrawer.mobile-drawer,
+[data-js="mobile-drawer"] {
+   position: fixed;
+   inset: 0;
+   display: block;
+   z-index: 1200;
+   pointer-events: none;
+}
+
+nav#mobileDrawer .mobile-drawer__backdrop,
+#drawerBackdrop,
+[data-js="mobile-drawer"] [data-js="drawer-backdrop"] {
+   position: fixed !important;
+   inset: 0 !important;
+   z-index: 1220 !important;
+   pointer-events: none !important;
+}
+
+nav#mobileDrawer .mobile-drawer__panel,
+[data-js="mobile-drawer"] [data-js="mobile-drawer-panel"] {
+   position: fixed !important;
+   top: 0 !important;
+   left: 0 !important;
+   height: 100vh !important;
+   width: var(--drawer-width) !important;
+   max-width: 100vw !important;
+   z-index: 1301 !important;
+   overflow: hidden !important;
+   display: none !important;
+   box-sizing: border-box !important;
+   pointer-events: auto !important;
+}
+
+nav#mobileDrawer.is-open,
+[data-js="mobile-drawer"].is-open {
+   pointer-events: auto;
+}
+
+nav#mobileDrawer.is-open .mobile-drawer__panel,
+[data-js="mobile-drawer"].is-open [data-js="mobile-drawer-panel"] {
+   display: block !important;
+}
+
+nav#mobileDrawer.is-open .mobile-drawer__backdrop,
+#drawerBackdrop.backdrop-visible,
+[data-js="mobile-drawer"].is-open [data-js="drawer-backdrop"],
+[data-js="mobile-drawer"] [data-js="drawer-backdrop"].backdrop-visible {
+   pointer-events: auto !important;
+}
+
+nav#mobileDrawer .mobile-products-panel,
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"] {
+   position: absolute !important;
+   top: 0 !important;
+   right: 0 !important;
+   bottom: 0 !important;
+   width: var(--products-panel-width) !important;
+   height: 100vh !important;
+   z-index: 1310 !important;
+   box-sizing: border-box !important;
+   overflow-y: auto !important;
+   -webkit-overflow-scrolling: touch !important;
+}
+
+nav#mobileDrawer.products-open .mobile-menu,
+[data-js="mobile-drawer"].products-open [data-js="mobile-drawer-menu"] {
+   visibility: hidden !important;
+   pointer-events: none !important;
+}
+
+nav#mobileDrawer.products-open .mobile-drawer__close,
+[data-js="mobile-drawer"].products-open [data-js="drawer-close"] {
+   visibility: visible !important;
+   pointer-events: auto !important;
+}
+
+@media (min-width: 600px) {
+   nav#mobileDrawer.products-open .mobile-drawer__panel,
+   [data-js="mobile-drawer"].products-open [data-js="mobile-drawer-panel"] {
+      width: min(calc(var(--drawer-width) * 1.4), 90vw) !important;
+      max-width: min(calc(85vw * 1.4), 90vw) !important;
+   }
+}
+
+@media (max-width: 768px) {
+   nav#mobileDrawer .mobile-drawer__panel,
+   [data-js="mobile-drawer"] [data-js="mobile-drawer-panel"] {
+      left: 0 !important;
+      right: 0 !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+   }
+
+   nav#mobileDrawer .mobile-products-panel,
+   [data-js="mobile-drawer"] [data-js="drawer-products-panel"] {
+      width: 100% !important;
+      right: 0 !important;
+   }
+}

@@ -1,15 +1,25 @@
 <?php
+/**
+ * Override WooCommerce product loop item
+ */
 
-declare(strict_types=1);
+defined('ABSPATH') || exit;
 
-if (! defined('ABSPATH') || empty($product) || ! $product->is_visible()) {
+global $product;
+
+if (empty($product) || !$product->is_visible()) {
     return;
 }
+
+// Detect context
+$is_front = is_front_page();
+$is_cart_empty = is_cart() && WC()->cart && WC()->cart->is_empty();
+
+// Pass context as variable
+set_query_var('beslock_context', [
+    'show_description' => $is_front,
+]);
+
+get_template_part('template-parts/product-card');
+
 ?>
-<li <?php wc_product_class('beslock-product-card', $product); ?> data-beslock-product-card>
-    <a class="beslock-product-card__link" href="<?php the_permalink(); ?>">
-        <?php do_action('woocommerce_before_shop_loop_item_title'); ?>
-        <h2 class="beslock-product-card__title"><?php the_title(); ?></h2>
-        <p class="beslock-product-card__meta"><?php echo wp_kses_post($product->get_price_html()); ?></p>
-    </a>
-</li>
