@@ -3819,6 +3819,214 @@ before the future header commit is created.
 - readiness is high only if the future staged diff remains single-file, partial-only, helper-aware, and semantically focused on stable markup tracking
 - readiness becomes blocked immediately if the wording starts implying cleanup, duplicate removal, helper consolidation, or header behavior change
 
+## Header Helper-Layer Consolidation Planning
+
+This section is analysis-only. It does not consolidate the helper layer yet; it
+defines the safest future path for doing so.
+
+### Duplication assessment
+
+Duplicated helper contracts exist in three places:
+
+- `wp-content/themes/beslock-custom/functions.php`
+- `wp-content/themes/beslock-custom/inc/header-widget.php`
+- `wp-content/themes/beslock-custom/inc/features/header.php`
+
+Each location defines the same contract behind `function_exists()` guards:
+
+- `beslock_get_header_widget_html()`
+- `beslock_header_widget_shortcode()`
+- `beslock_render_header_widget()`
+
+### Include graph and execution graph
+
+- `functions.php` is part of the active theme bootstrap and is always loaded by WordPress for the child theme
+- the audited active bootstrap shows explicit includes from `functions.php` into `inc/core/enqueue.php` and Woo modules, but no confirmed active include edge into `inc/header-widget.php` or `inc/features/header.php`
+- because the duplicate helper definitions are wrapped in `function_exists()`, whichever file defines the helpers first wins ownership silently
+- `inc/features/header.php` also has an `error_log()` side effect, which makes accidental activation more observable but also more fragile
+
+### Render flow and shortcode flow
+
+- shortcode flow:
+	`[beslock_header_widget]` -> `beslock_header_widget_shortcode()` -> `beslock_get_header_widget_html()` -> `template-parts/header/header-widget.php`
+- PHP render flow:
+	`beslock_render_header_widget()` -> `beslock_get_header_widget_html()` -> `template-parts/header/header-widget.php`
+- template flow:
+	helper contract -> stable partial `template-parts/header/header-widget.php`
+- Woo flow:
+	the template itself conditionally reads `wc_get_cart_url()` and `WC()->cart->get_cart_contents_count()` during render; Woo coupling is in the template, not in helper registration
+
+### Canonical ownership recommendation
+
+- canonical helper owner: `functions.php`
+- canonical shortcode owner: `functions.php`
+- canonical render owner: `functions.php`
+
+Why:
+
+- it is the only audited file guaranteed to be part of the active child-theme bootstrap
+- it already contains the active contract used by the currently tracked stable partial
+- choosing `functions.php` avoids transferring ownership into an include path that is not clearly guaranteed by the audited bootstrap
+
+### Runtime instrumentation findings
+
+A runtime instrumentation pass was executed through WordPress via WP-CLI to
+confirm the real declaring file and execution flow.
+
+Observed runtime results:
+
+- `beslock_get_header_widget_html()` was declared from `functions.php`
+- `beslock_header_widget_shortcode()` was declared from `functions.php`
+- `beslock_render_header_widget()` was declared from `functions.php`
+- `shortcode_exists( 'beslock_header_widget' )` returned `yes`
+- helper, shortcode, and render invocation all executed successfully and returned/rendered the same output length
+
+Observed runtime implication:
+
+- in the audited runtime path, `functions.php` wins the helper contract
+- no runtime evidence was produced in this pass that `inc/header-widget.php` or `inc/features/header.php` were actively loaded before `functions.php`
+- the duplicate files remain architectural risk because their include path is still unresolved, not because they won in the observed runtime
+
+### Duplicated implementations and shadowing behavior
+
+- `functions.php` contains a full implementation of the contract
+- `inc/header-widget.php` contains the same implementation
+- `inc/features/header.php` contains the same implementation plus a debug side effect
+- the `function_exists()` guards create silent first-definition-wins shadowing, which masks load-order problems instead of resolving them
+
+### Fragility assessment
+
+- bootstrap-order fragility: HIGH
+- conditional loading fragility: HIGH
+- plugin/theme coupling: LOW
+- shortcode timing risk: MEDIUM
+- Woo timing risk: LOW to MEDIUM
+
+Notes:
+
+- shortcode timing risk exists because duplicate files may register the shortcode at different moments if they become included later through non-audited paths
+- Woo timing risk is lower because the helper layer only includes the template; the Woo-specific logic lives in the template and already degrades when Woo helpers are unavailable
+
+### Safest future consolidation strategy
+
+1. freeze ownership in `functions.php` as the canonical helper layer
+2. confirm no active bootstrap path still requires `inc/header-widget.php` or `inc/features/header.php` for header widget availability
+3. convert duplicate helper files into compatibility wrappers or no-op includes before any deletion
+4. remove debug side effects like the `error_log()` in `inc/features/header.php` only in a later functional slice with focused validation
+5. only after execution-graph confirmation, retire duplicate implementations one by one
+
+### Safest fallback strategy
+
+- preserve the public helper names unchanged
+- preserve the shortcode name unchanged
+- preserve the stable partial path unchanged
+- if duplicate files must remain temporarily, they should defer to the canonical owner rather than redefining the helpers
+
+### Rollback strategy
+
+- rollback should restore helper ownership in `functions.php` first
+- if a future consolidation breaks rendering, revert the consolidation slice without touching the tracked stable partial
+- never combine helper consolidation with header markup changes, Woo changes, or shortcode renaming
+
+### Compatibility preservation strategy
+
+- keep `beslock_get_header_widget_html()`, `beslock_render_header_widget()`, and `beslock_header_widget_shortcode()` stable
+- keep `template-parts/header/header-widget.php` as the render target
+- keep helper consolidation separate from any header/site-header bridge work
+
+### What must not be done
+
+- direct deletion of duplicate helper files without confirming active include paths
+- mass refactor of header rendering and helper ownership in one slice
+- loader merge without an execution-graph audit
+- runtime ownership transfer away from `functions.php` without evidence
+- shortcode renaming
+
+### Consolidation risk assessment
+
+- overall consolidation risk: HIGH
+
+Reason:
+
+- the duplicate code itself is simple, but the hidden risk is bootstrap-order ambiguity and silent shadowing created by `function_exists()` guards
+
+### Highest-risk cleanup mistake
+
+- deleting or rewriting duplicate helper files based only on textual duplication, without first proving which file actually wins in the active bootstrap and whether any non-audited include path still depends on the others
+
+### Safest first functional step
+
+- instrument and confirm the real active include order for `functions.php`, `inc/header-widget.php`, and `inc/features/header.php` in runtime before changing any helper definition
+
+## Header Helper Consolidation Result
+
+This slice performed the minimal functional consolidation of the duplicated
+header helper layer.
+
+### Canonical Ownership Confirmation
+
+- `functions.php` remains the only active owner of:
+	- `beslock_get_header_widget_html()`
+	- `beslock_header_widget_shortcode()`
+	- `beslock_render_header_widget()`
+- the duplicate active definitions were removed from:
+	- `wp-content/themes/beslock-custom/inc/header-widget.php`
+	- `wp-content/themes/beslock-custom/inc/features/header.php`
+- the shortcode name remains unchanged: `beslock_header_widget`
+- the render target remains unchanged: `template-parts/header/header-widget.php`
+
+### Compat Shim Preservation Notes
+
+- `inc/header-widget.php` now acts as a legacy compat shim only
+- `inc/features/header.php` now acts as a legacy compat shim only
+- both files remain present to preserve existing include paths
+- both files no longer redefine the helper contract, so silent `function_exists()` shadowing from those files is removed
+- both files retain lightweight audit logging only to confirm whether legacy include paths still execute after consolidation
+
+### Consolidation Safety Result
+
+- ownership preserved: yes
+- bootstrap-safe by design: yes, because the canonical owner remains in `functions.php`
+- public API preserved: yes
+- shortcode preserved: yes
+- Woo behavior touched: no
+- template ownership changed: no
+- rendering structure changed: no
+- dependency graph changed functionally: no
+
+## GLOB_BRACE Compatibility Fix
+
+This slice remediated a preexisting runtime portability failure in
+`templates/models-mobile.php`.
+
+### Compatibility issue root cause
+
+- the file used `glob( ... , GLOB_BRACE )` to scan product images across multiple extensions
+- the active validation environment does not expose the `GLOB_BRACE` constant
+- this creates a fatal error before the mobile models template can finish rendering
+- the issue is environment-specific and is consistent with PHP builds where brace glob support is unavailable
+
+### Environment Compatibility Notes
+
+- the previous implementation assumed `GLOB_BRACE` existed unconditionally
+- that assumption is not portable across all libc / PHP build combinations
+- the failure is independent from header helper ownership and independent from Woo behavior
+
+### Fallback strategy
+
+- preserve the same image extension set: `webp`, `png`, `jpg`, `jpeg`
+- use `GLOB_BRACE` only when the constant exists
+- otherwise, run one `glob()` per extension and merge the results
+- keep the rest of the grouping, underscore filtering, title generation, and rendering flow unchanged
+- guard the local title helper so repeated loads of `templates/models-mobile.php` in the same runtime do not trigger a redeclare fatal during validation or reuse
+
+### Runtime Validation Recovery
+
+- syntax remains valid after the compatibility fix
+- the fatal caused by `Undefined constant GLOB_BRACE` is removed from the `models-mobile.php` scan path
+- broader runtime validation now completes through `get_header()` and repeated `get_template_part( 'templates/models-mobile' )` execution in WP-CLI
+- helper-layer validation remained stable after the fix: shortcode registration still succeeds and helper / shortcode / render output stayed equivalent
+
 ## product-card Legacy Wrapper Slice
 
 This section defines the dedicated slice for
@@ -3972,6 +4180,66 @@ boundaries, and commit semantics for the future wrapper slice.
 - safest current posture remains: keep untracked temporarily until an explicit preserved-legacy decision is made
 - if tracked later, it must be described as preserved legacy wrapper only
 
+## Legacy Wrapper Disposition Analysis
+
+This section closes the current architectural disposition question for
+`templates/blocks/product-card.php`.
+
+### Caller review result
+
+- no direct caller to `templates/blocks/product-card.php` was found in the audited PHP codebase
+- no active include from the canonical Woo owner chain points to this wrapper
+- no `set_query_var( 'product', ... )` caller was found outside the wrapper itself in the audited theme code
+- no direct `get_template_part( 'templates/blocks/product-card' )` caller was found in the audited theme code
+
+### Plausible remaining value
+
+- runtime value: LOW
+- compatibility value: MEDIUM
+- migration value: LOW
+- debugging value: MEDIUM
+- rollback value: MEDIUM
+
+Reasoning:
+
+- the wrapper still documents how an older array-based product payload was adapted into the canonical `WC_Product` render path
+- the file still preserves a fallback shim if an older portfolio-style caller exists outside the currently audited call graph
+- however, the active runtime owner chain no longer depends on it
+
+### What would be lost if the file disappeared today
+
+- the explicit adapter from array-shaped product payloads to `WC_Product`
+- a debugging reference for legacy `product_id` / `show_desc` payload expectations
+- an immediate fallback surface for any un-audited or external legacy caller still invoking the wrapper path
+
+### What would not be lost based on current evidence
+
+- the canonical Woo product-card runtime owner chain
+- homepage/storefront product rendering through `woocommerce/content-product.php`
+- the active leaf card markup in `template-parts/cards/product-card.php`
+
+### Final disposition category
+
+- `SAFE_TO_ARCHIVE_LATER`
+
+Why this category fits best:
+
+- current evidence does not show active callers in the audited codebase
+- the file still has enough compatibility/debugging value that immediate removal would be a stronger claim than the current evidence supports
+- keeping it untracked temporarily remains safer than forcing a preservation commit without clear active value
+
+### Final recommendation
+
+- preserve semantically for now, but do not track immediately
+- keep the file untracked temporarily until an explicit archive or retirement decision is made
+- treat it as a future archive candidate with residual compatibility value, not as an active runtime dependency
+
+### Safest future action
+
+- leave `templates/blocks/product-card.php` untracked temporarily
+- if a future archive slice is opened, verify once more that no external caller or content-level include depends on the wrapper path
+- if future evidence of active callers appears, reclassify to preserved legacy wrapper and revisit tracking
+
 ## Final Ownership Classification
 
 This section consolidates the current normalization state using the terminology
@@ -4060,11 +4328,12 @@ This section aligns the summary with the tracking decisions already executed.
 - `c7bdf5cc` — `theme: track recovered runtime fallback blocks and product card partial`
 - `d404265a` — `theme: track preserved archive hero bridge override`
 - `43aafaf1` — `theme: track stable header widget partial`
+- `2c7efbad` — `theme: consolidate header helper ownership and preserve compat shims`
+- `e3ecc23a` — `theme: add portable models-mobile glob fallback`
 
 ### Current untracked authored source
 
 - `wp-content/themes/beslock-custom/templates/blocks/product-card.php`
-- `WORKTREE_NORMALIZATION_SUMMARY.md`
 
 ### Current tracked-modified debt outside normalization commits
 
@@ -4077,9 +4346,9 @@ This section aligns the summary with the tracking decisions already executed.
 
 ### Alignment check
 
-- the current summary remains aligned with the three tracking commits already created
+- the current summary remains aligned with the five normalization commits already created
 - the only remaining authored untracked runtime-related file is the preserved legacy wrapper `templates/blocks/product-card.php`
-- documentation remains intentionally untracked in this phase so it can be consolidated separately
+- documentation remains intentionally isolated into its own commit boundary so runtime and narrative history stay separate
 
 ## Deferred Cleanup Surfaces
 
@@ -4088,8 +4357,6 @@ normalization slices.
 
 ### Deferred because they are cleanup/consolidation work, not tracking work
 
-- duplicated header-widget helper ownership across:
-	`functions.php`, `inc/header-widget.php`, `inc/features/header.php`
 - tracked-modified CSS/JS/header/debug debt:
 	`variables.css`, `single-product.css`, `product-gallery-init.js`, `header.php`, `inc/debug/debug.php`
 - generated debug output:
