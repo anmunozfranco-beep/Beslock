@@ -67,7 +67,7 @@ final class ProductSynchronizer
                 $wcProduct->set_regular_price($mapped['price']);
             }
 
-            if ($wcProduct->save() <= 0) {
+            if ($wcProduct->save() === 0) {
                 error_log(sprintf('Beslock product sync: unable to persist WooCommerce product for post ID %d', $postId));
             }
         }
