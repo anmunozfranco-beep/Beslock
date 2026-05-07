@@ -28,8 +28,15 @@ final class ProductSynchronizer
                 continue;
             }
 
-            $existing = get_page_by_path($mapped['slug'], OBJECT, 'product');
-            $postId = $existing?->ID ? (int) $existing->ID : 0;
+            $existing = get_posts([
+                'name' => $mapped['slug'],
+                'post_type' => 'product',
+                'post_status' => 'any',
+                'posts_per_page' => 1,
+                'fields' => 'ids',
+                'no_found_rows' => true,
+            ]);
+            $postId = isset($existing[0]) ? (int) $existing[0] : 0;
 
             $result = wp_insert_post([
                 'ID' => $postId,

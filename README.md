@@ -5,7 +5,7 @@ Custom WooCommerce platform for BESLOCK, built on WordPress + Kadence with a mod
 ## Project structure
 
 - `/wp-content/themes/beslock-custom`: Kadence child theme customizations.
-- `/wp-content/plugins/beslock-product-sync`: deterministic JSON-driven WooCommerce product sync.
+- `/wp-content/plugins/beslock-product-sync`: Deterministic JSON-driven WooCommerce product sync.
 - `/data/products.json`: filesystem source of product data consumed by sync.
 
 ## Architecture conventions
