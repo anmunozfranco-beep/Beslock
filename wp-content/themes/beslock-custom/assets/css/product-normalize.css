@@ -1,0 +1,56 @@
+/* product-normalize.css
+   Layout-only normalization for single-product pages.
+   Loaded last on single-product to override fragile hacks safely.
+   Mobile-first, no colors, no fonts, no visual changes beyond layout.
+*/
+
+.single-product .product-page__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  min-height: auto;
+}
+
+.single-product .product-page__info {
+  margin-top: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 420px;
+}
+
+.single-product .product-page__title {
+  margin-top: 0 !important;
+}
+
+.single-product .product-page__media {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  justify-content: center;
+}
+
+.single-product .product-page__gallery,
+.single-product .product-page__gallery-reel,
+.single-product .woocommerce-product-gallery,
+.single-product .product-page__gallery-wrapper {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.single-product .product-page__hero > * {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .single-product .product-page__hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 40vh;
+  }
+  .single-product .product-page__media { order: 0; }
+  .single-product .product-page__info { order: 1; margin-top: 0; }
+}
