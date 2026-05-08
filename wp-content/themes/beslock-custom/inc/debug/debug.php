@@ -3,6 +3,9 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
+// DEBUG / RECOVERY SURFACE — no active include path was found in the current
+// canonical runtime. Preserve as a manual troubleshooting helper only.
+
 error_log( 'Loaded OK: inc/debug/debug.php' );
 
 if ( ! function_exists( 'beslock_log_enqueued_styles' ) ) {

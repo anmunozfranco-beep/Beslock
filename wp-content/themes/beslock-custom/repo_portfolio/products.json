@@ -1,27 +1,15 @@
 [
     {
-        "ID": 11,
+        "ID": 201,
         "slug": "e-prime",
         "title": "e-Prime",
         "excerpt": "Control total para accesos exigentes. Gestión avanzada de usuarios para espacios de alto flujo.",
         "content": "Control total para accesos exigentes.\r\nGestión avanzada de usuarios para espacios de alto flujo.",
-        "price": "941000",
+        "price": "914000",
         "badge": "Pensada para oficinas",
         "meta": {
             "_regular_price": [
                 "941000"
-            ],
-            "_price": [
-                "941000"
-            ],
-            "_thumbnail_id": [
-                "23"
-            ],
-            "_edit_lock": [
-                "1777726432:1"
-            ],
-            "_edit_last": [
-                "1"
             ],
             "total_sales": [
                 "0"
@@ -68,32 +56,55 @@
             "_product_version": [
                 "10.7.0"
             ],
-            "_kad_post_transparent": [
-                "default"
+            "_price": [
+                "941000"
             ],
-            "_kad_post_layout": [
-                "default"
+            "_thumbnail_id": [
+                "119"
             ],
-            "_kad_post_content_style": [
-                "default"
+            "_product_image_gallery": [
+                "119"
             ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_edit_lock": [
+                "1778135226:1"
+            ],
+            "_siteseo_readibility_data": [
+                "a:1:{s:16:\"paragraph_length\";i:0;}"
+            ],
+            "_edit_last": [
+                "1"
+            ],
+            "_siteseo_redirections_type": [
+                "301"
+            ],
+            "_siteseo_redirections_logged_status": [
+                "both"
+            ],
+            "cmplz_hide_cookiebanner": [
+                ""
+            ],
+            "_siteseo_score": [
+                "49"
+            ],
+            "_siteseo_robots_primary_cat": [
+                "15"
             ],
             "beslock_badge": [
                 "Pensada para oficinas"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}"
+                "s:125:\"a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}\";"
             ]
         },
-        "gallery_ids": [],
-        "thumbnail_id": "23",
+        "gallery_ids": [
+            "119"
+        ],
+        "thumbnail_id": "119",
         "permalink": "http:\/\/localhost:8080\/producto\/e-prime\/",
         "dom_description": ""
     },
     {
-        "ID": 10,
+        "ID": 240,
         "slug": "e-shield",
         "title": "e-Shield",
         "excerpt": "Protección inteligente para tu hogar. Seguridad robusta con acceso electrónico y respaldo mecánico.",
@@ -101,97 +112,49 @@
         "price": "982000",
         "badge": "Máxima protección en tu hogar",
         "meta": {
-            "_regular_price": [
-                "982000"
-            ],
             "_price": [
                 "982000"
             ],
-            "_thumbnail_id": [
-                "24"
-            ],
-            "_product_image_gallery": [
-                "25"
-            ],
-            "_edit_lock": [
-                "1777726413:1"
-            ],
-            "_edit_last": [
-                "1"
-            ],
-            "total_sales": [
-                "0"
-            ],
-            "_tax_status": [
-                "taxable"
-            ],
-            "_tax_class": [
-                ""
-            ],
-            "_manage_stock": [
-                "no"
-            ],
-            "_backorders": [
-                "no"
-            ],
-            "_sold_individually": [
-                "no"
-            ],
-            "_virtual": [
-                "no"
-            ],
-            "_downloadable": [
-                "no"
-            ],
-            "_download_limit": [
-                "-1"
-            ],
-            "_download_expiry": [
-                "-1"
-            ],
-            "_stock": [
-                null
+            "_regular_price": [
+                "982000"
             ],
             "_stock_status": [
                 "instock"
             ],
-            "_wc_average_rating": [
-                "0"
-            ],
-            "_wc_review_count": [
-                "0"
-            ],
-            "_product_version": [
-                "10.7.0"
-            ],
-            "_kad_post_transparent": [
-                "default"
-            ],
-            "_kad_post_layout": [
-                "default"
-            ],
-            "_kad_post_content_style": [
-                "default"
-            ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_manage_stock": [
+                "no"
             ],
             "beslock_badge": [
                 "Máxima protección en tu hogar"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:31:\"Total control — en el celular\";}"
+                "s:132:\"a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:31:\"Total control — en el celular\";}\";"
+            ],
+            "_thumbnail_id": [
+                "120"
+            ],
+            "_product_image_gallery": [
+                "121"
+            ],
+            "_edit_lock": [
+                "1778136177:1"
+            ],
+            "_siteseo_readibility_data": [
+                "a:1:{s:16:\"paragraph_length\";i:0;}"
+            ],
+            "_siteseo_score": [
+                "49"
             ]
         },
         "gallery_ids": [
-            "25"
+            "121"
         ],
-        "thumbnail_id": "24",
+        "thumbnail_id": "120",
         "permalink": "http:\/\/localhost:8080\/producto\/e-shield\/",
         "dom_description": ""
     },
     {
-        "ID": 9,
+        "ID": 197,
         "slug": "e-flex",
         "title": "e-Flex",
         "excerpt": "Ideal para recibir y dar acceso sin estar presente. Códigos temporales, huella y control remoto para estancias cortas.",
@@ -202,18 +165,6 @@
             "_regular_price": [
                 "689000"
             ],
-            "_price": [
-                "689000"
-            ],
-            "_thumbnail_id": [
-                "19"
-            ],
-            "_edit_lock": [
-                "1777726394:1"
-            ],
-            "_edit_last": [
-                "1"
-            ],
             "total_sales": [
                 "0"
             ],
@@ -259,32 +210,47 @@
             "_product_version": [
                 "10.7.0"
             ],
-            "_kad_post_transparent": [
-                "default"
+            "_price": [
+                "689000"
             ],
-            "_kad_post_layout": [
-                "default"
+            "_thumbnail_id": [
+                "66"
             ],
-            "_kad_post_content_style": [
-                "default"
+            "_edit_lock": [
+                "1777729727:1"
             ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_siteseo_readibility_data": [
+                "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+            ],
+            "_edit_last": [
+                "1"
+            ],
+            "_siteseo_redirections_type": [
+                "301"
+            ],
+            "_siteseo_redirections_logged_status": [
+                "both"
+            ],
+            "cmplz_hide_cookiebanner": [
+                ""
+            ],
+            "_siteseo_robots_primary_cat": [
+                "15"
             ],
             "beslock_badge": [
                 "Ideal para estancias cortas"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:33:\"Ideal para — visitas temporales\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}"
+                "s:135:\"a:3:{i:0;s:33:\"Ideal para — visitas temporales\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}\";"
             ]
         },
         "gallery_ids": [],
-        "thumbnail_id": "19",
+        "thumbnail_id": "66",
         "permalink": "http:\/\/localhost:8080\/producto\/e-flex\/",
         "dom_description": ""
     },
     {
-        "ID": 8,
+        "ID": 195,
         "slug": "e-touch",
         "title": "e-Touch",
         "excerpt": "Acceso fácil para espacios compartidos. Clave y huella para que todos puedan entrar, sin complicaciones.",
@@ -295,21 +261,6 @@
             "_regular_price": [
                 "435000"
             ],
-            "_price": [
-                "435000"
-            ],
-            "_thumbnail_id": [
-                "26"
-            ],
-            "_product_image_gallery": [
-                "27"
-            ],
-            "_edit_lock": [
-                "1777726372:1"
-            ],
-            "_edit_last": [
-                "1"
-            ],
             "total_sales": [
                 "0"
             ],
@@ -355,34 +306,52 @@
             "_product_version": [
                 "10.7.0"
             ],
-            "_kad_post_transparent": [
-                "default"
+            "_price": [
+                "435000"
             ],
-            "_kad_post_layout": [
-                "default"
+            "_thumbnail_id": [
+                "122"
             ],
-            "_kad_post_content_style": [
-                "default"
+            "_product_image_gallery": [
+                "123"
             ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_edit_lock": [
+                "1777729664:1"
+            ],
+            "_siteseo_readibility_data": [
+                "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+            ],
+            "_edit_last": [
+                "1"
+            ],
+            "_siteseo_redirections_type": [
+                "301"
+            ],
+            "_siteseo_redirections_logged_status": [
+                "both"
+            ],
+            "cmplz_hide_cookiebanner": [
+                ""
+            ],
+            "_siteseo_robots_primary_cat": [
+                "15"
             ],
             "beslock_badge": [
                 "Acceso para todos"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:30:\"Libérate — de cargar llaves\";}"
+                "s:124:\"a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:30:\"Libérate — de cargar llaves\";}\";"
             ]
         },
         "gallery_ids": [
-            "27"
+            "123"
         ],
-        "thumbnail_id": "26",
+        "thumbnail_id": "122",
         "permalink": "http:\/\/localhost:8080\/producto\/e-touch\/",
         "dom_description": ""
     },
     {
-        "ID": 7,
+        "ID": 193,
         "slug": "e-orbit",
         "title": "e-Orbit",
         "excerpt": "Mira y controla quién llega a tu puerta, estés donde estés. Seguridad avanzada con video y acceso inteligente desde tu celular.",
@@ -393,18 +362,6 @@
             "_regular_price": [
                 "1734000"
             ],
-            "_price": [
-                "1734000"
-            ],
-            "_edit_lock": [
-                "1777979937:1"
-            ],
-            "_thumbnail_id": [
-                "22"
-            ],
-            "_edit_last": [
-                "1"
-            ],
             "total_sales": [
                 "0"
             ],
@@ -450,32 +407,47 @@
             "_product_version": [
                 "10.7.0"
             ],
-            "_kad_post_transparent": [
-                "default"
+            "_price": [
+                "1734000"
             ],
-            "_kad_post_layout": [
-                "default"
+            "_thumbnail_id": [
+                "118"
             ],
-            "_kad_post_content_style": [
-                "default"
+            "_edit_lock": [
+                "1777729620:1"
             ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_siteseo_readibility_data": [
+                "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+            ],
+            "_edit_last": [
+                "1"
+            ],
+            "_siteseo_redirections_type": [
+                "301"
+            ],
+            "_siteseo_redirections_logged_status": [
+                "both"
+            ],
+            "cmplz_hide_cookiebanner": [
+                ""
+            ],
+            "_siteseo_robots_primary_cat": [
+                "15"
             ],
             "beslock_badge": [
                 "Desde donde te encuentres"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:31:\"Total control — en el celular\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:33:\"Ideal para — visitas temporales\";}"
+                "s:135:\"a:3:{i:0;s:31:\"Total control — en el celular\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:33:\"Ideal para — visitas temporales\";}\";"
             ]
         },
         "gallery_ids": [],
-        "thumbnail_id": "22",
+        "thumbnail_id": "118",
         "permalink": "http:\/\/localhost:8080\/producto\/e-orbit\/",
         "dom_description": ""
     },
     {
-        "ID": 6,
+        "ID": 191,
         "slug": "e-nova",
         "title": "e-Nova",
         "excerpt": "Acceso inteligente sin llaves para tu día a día. Huella y control simple para moverte con libertad y tranquilidad.",
@@ -486,21 +458,6 @@
             "_regular_price": [
                 "412000"
             ],
-            "_price": [
-                "412000"
-            ],
-            "_thumbnail_id": [
-                "20"
-            ],
-            "_product_image_gallery": [
-                "21"
-            ],
-            "_edit_lock": [
-                "1777726591:1"
-            ],
-            "_edit_last": [
-                "1"
-            ],
             "total_sales": [
                 "0"
             ],
@@ -546,29 +503,47 @@
             "_product_version": [
                 "10.7.0"
             ],
-            "_kad_post_transparent": [
-                "default"
+            "_price": [
+                "412000"
             ],
-            "_kad_post_layout": [
-                "default"
+            "_thumbnail_id": [
+                "116"
             ],
-            "_kad_post_content_style": [
-                "default"
+            "_product_image_gallery": [
+                "117"
             ],
-            "_kad_post_vertical_padding": [
-                "default"
+            "_edit_lock": [
+                "1777729620:1"
+            ],
+            "_siteseo_readibility_data": [
+                "s:34:\"a:1:{s:16:\"paragraph_length\";i:0;}\";"
+            ],
+            "_edit_last": [
+                "1"
+            ],
+            "_siteseo_redirections_type": [
+                "301"
+            ],
+            "_siteseo_redirections_logged_status": [
+                "both"
+            ],
+            "cmplz_hide_cookiebanner": [
+                ""
+            ],
+            "_siteseo_robots_primary_cat": [
+                "15"
             ],
             "beslock_badge": [
                 "Privacidad sin complicaciones"
             ],
             "beslock_features": [
-                "a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:23:\"Múltiples — usuarios\";}"
+                "s:124:\"a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:23:\"Múltiples — usuarios\";}\";"
             ]
         },
         "gallery_ids": [
-            "21"
+            "117"
         ],
-        "thumbnail_id": "20",
+        "thumbnail_id": "116",
         "permalink": "http:\/\/localhost:8080\/producto\/e-nova\/",
         "dom_description": ""
     }
