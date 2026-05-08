@@ -2603,6 +2603,24 @@ body .products-portfolio .product-card .product-card__content {
 
 /* Hidden by default (visibility controlled by JS via .feature--visible) */
 .feature { opacity: 0; transform: translateY(8px); transition: opacity 400ms cubic-bezier(.22,.9,.41,1), transform 400ms cubic-bezier(.22,.9,.41,1); }
+
+body .products-portfolio__grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 2rem !important;
+  align-items: stretch;
+  justify-items: center;
+}
+
+body .products-portfolio__grid > .product-card {
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+}
+
+body .products-portfolio__grid > .product-card .pc-actions {
+  margin-top: auto;
+}
 .feature--visible { opacity: 1 !important; transform: translateY(0) !important; }
 
 /* Fade-out state for all features (no vertical movement on exit) */
