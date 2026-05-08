@@ -52,7 +52,7 @@ services:
       - ./wp-content:/var/www/html/wp-content
       - ./docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
       - ./docker/wordpress-entrypoint.sh:/usr/local/bin/beslock-wordpress-entrypoint.sh:ro
-      - ./docker/wp-config-docker.php:/var/www/html/wp-config.php:ro
+      - ./docker/wp-config-docker.php:/var/www/html/wp-config-docker.php:ro
     networks:
       - beslock
 
@@ -78,7 +78,7 @@ services:
     volumes:
       - wordpress_data:/var/www/html
       - ./wp-content:/var/www/html/wp-content
-      - ./docker/wp-config-docker.php:/var/www/html/wp-config.php:ro
+      - ./docker/wp-config-docker.php:/var/www/html/wp-config-docker.php:ro
       - ./docker/bootstrap-wordpress.sh:/usr/local/bin/bootstrap-wordpress.sh:ro
     networks:
       - beslock

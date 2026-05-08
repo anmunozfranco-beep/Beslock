@@ -63,29 +63,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Primary style for product-card links; leverages theme variable for brand color. */
-.product-card__btn--link {
-  background: var(--beslock-green);
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid red; /* debug: confirm selector applies */
-  padding: 10px 16px;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  opacity: 0.95;
-  box-shadow: 0 6px 18px rgba(3,69,38,0.08);
-}
-.product-card__btn--link:hover {
-  transform: translateY(-2px);
-  opacity: 1;
-  box-shadow: 0 10px 28px rgba(3,69,38,0.12);
-}
-.product-card__btn--link:active { transform: translateY(0); }
-
-
 /* ========== CONTENEDOR UNIVERSAL ========== */
 .u-container {
   width: 100%;
@@ -259,146 +236,6 @@ body {
 /* Keep price text readable on small images: limit width and center */
 .product-card__price-overlay * { display: inline; }
   }
-}
-
-/* ==========================
-   Product card actions — precise centered layout (reset + enforce)
-   Scoping is strict to avoid affecting other links across the site.
-========================== */
-.product-card__actions {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  gap: 10px !important;
-  width: 100% !important;
-}
-
-.product-card__actions .btn-primary {
-  flex: 0 0 auto !important;
-  width: 200px !important;
-  height: 48px !important;
-  border-radius: 12px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-  flex: 0 0 52px !important;
-  width: 52px !important;
-  height: 48px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-  font-size: var(--cart-icon-size) !important;
-  color: var(--cart-icon-color) !important;
-  line-height: 1 !important;
-}
-
-/* Remove inheritance conflicts only inside product-card actions */
-.product-card__actions a {
-  text-decoration: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* ==========================
-   FORCE OVERRIDES: neutralize theme flex and enforce 75% centered block with 85/15 split
-   This is intentionally strict and scoped to `.product-card__actions` only.
-========================== */
-.product-card__actions {
-  width: 75% !important;
-  margin: 0 auto !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-  flex: 0 0 85% !important;   /* kills flex:1 from theme */
-  max-width: none !important; /* kills max-width:75% */
-  width: 85% !important;
-
-  height: 48px !important;
-  border-radius: 12px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-  flex: 0 0 15% !important;
-  width: 15% !important;
-
-  height: 48px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-  font-size: 34px !important;
-  color: #2f6b4f !important;
-}
-
-.product-card__actions a {
-  text-decoration: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* DEBUG (TEMPORAL): uncomment to visualize the actions container during QA */
-/* .product-card__actions { outline: 2px solid red !important; } */
-
-/* ==========================
-   Final: unify actions into a single centered flex group
-   Ensures btn-primary no longer centers independently and btn-cart stays in flow
-========================== */
-.product-card__actions {
-  width: 75% !important;
-  margin: 0 auto !important;
-
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-
-  gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-  margin: 0 !important; /* avoid auto margins that center it alone */
-  display: flex !important;
-
-  flex: 0 0 85% !important;   /* fixed proportion */
-  max-width: none !important; /* remove theme max-width */
-  width: 85% !important;
-
-  height: 48px !important;
-  border-radius: 12px !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-  margin: 0 !important;
-
-  flex: 0 0 15% !important;
-  width: 15% !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  height: 48px !important;
 }
 
 /* Product card image + badge — unified, non-intrusive overlay */
@@ -787,12 +624,6 @@ body { overflow-x: hidden; }
 
 /* Product card badge rules consolidated earlier in this file. */
 
-/* Enforce button typography inside product cards */
-.product-card .btn-primary {
-  font-size: 0.95rem !important;
-  font-weight: 600 !important;
-}
-
 /* Ensure WooCommerce-rendered product-cards match front-page sizing (cart, blocks) */
 .woocommerce .product-card {
   max-width: 320px;
@@ -815,31 +646,6 @@ body { overflow-x: hidden; }
   display: flex !important;
   align-items: center !important;
   gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-  flex: 0 0 85% !important;
-  height: 48px !important;
-  border-radius: 12px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-  flex: 0 0 15% !important;
-  height: 48px !important;
-  border-radius: 12px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-  font-size: 34px !important;
-  color: #2f6b4f !important;
-  line-height: 1 !important;
 }
 
 @media (max-width: 480px) {
@@ -1165,32 +971,6 @@ body {
   outline: none !important;
 }
 
-/* ========== Remove underline only for product-card cart button ========= */
-.product-card__actions .btn-cart,
-.product-card__actions .btn-cart:link,
-.product-card__actions .btn-cart:visited,
-.product-card__actions .btn-cart:hover,
-.product-card__actions .btn-cart:active,
-.product-card__actions .btn-cart:focus {
-  text-decoration: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-
-.product-card__actions .btn-cart::before,
-.product-card__actions .btn-cart::after {
-  content: none !important;
-  display: none !important;
-}
-
-.product-card__actions .btn-cart i {
-  text-decoration: none !important;
-  border: none !important;
-}
-
-.product-card__actions .btn-cart { display: flex; align-items: center; justify-content: center; }
-
 @media (min-width: 768px) {
   .header__cart-count { width: 20px; height: 20px; font-size: 0.75rem; top: 6px; right: 6px; }
 }
@@ -1262,32 +1042,7 @@ body {
 /* Product card action buttons: remove underline from 'Ver Producto' and
   place a compact add-to-cart button next to it. Matches screenshot: large
   pill primary button + small square cart button. */
-/* Scoped reset for product-card anchors: neutralize browser default link
-   styles (blue/underline) while allowing the component's own rules to
-   restore the intended design. Kept narrowly scoped to avoid global resets. */
-.product-card__btn,
-.product-card__btn--link {
-  text-decoration: none;
-  color: inherit;
-}
 .product-card__actions { position: absolute; left: 1.2rem; right: 1.2rem; bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; justify-content: center; z-index: 6; }
-.product-card__btn--link { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; padding: 0.6rem 1.1rem; border-radius: 10px; background: var(--beslock-green); color: #fff; border: none; font-weight: 700; opacity: 0.65; transition: opacity 280ms cubic-bezier(.16,.84,.29,1), transform 360ms cubic-bezier(.16,.84,.29,1), box-shadow 360ms cubic-bezier(.16,.84,.29,1); will-change: transform, opacity, box-shadow; backface-visibility: hidden; }
-.product-card__btn--link:hover { opacity: 1; transform: translateY(-2px) scale(1.01); box-shadow: 0 8px 24px rgba(3,69,38,0.10); }
-.product-card__btn--link:active { transform: translateY(0) scale(0.995); box-shadow: 0 4px 10px rgba(3,69,38,0.06); }
-.product-card__btn--link:focus { outline: 3px solid rgba(3,69,38,0.14); }
-.product-card__add-to-cart { display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:10px; background:var(--beslock-bg-2); color:#fff; text-decoration:none; transition: transform 360ms cubic-bezier(.16,.84,.29,1), background 240ms cubic-bezier(.16,.84,.29,1), box-shadow 360ms cubic-bezier(.16,.84,.29,1); will-change: transform, background, box-shadow; backface-visibility: hidden; }
-.product-card__add-to-cart .bi {
-  color: var(--beslock-green);
-  font-size: 2rem; /* match .header__icon */
-  line-height: 1;
-  font-weight: 400; /* remove bold visual weight */
-  text-shadow: none;
-  transition: color 180ms ease;
-}
-.product-card__add-to-cart:hover { background: var(--beslock-green); transform: translateY(-2px) scale(1.02); box-shadow: 0 7px 20px rgba(3,69,38,0.09); }
-.product-card__add-to-cart:active { transform: translateY(0) scale(0.995); box-shadow: 0 3px 8px rgba(3,69,38,0.06); }
-.product-card__add-to-cart:hover .bi { color: var(--beslock-bg-2); text-shadow: none; }
-.product-card__add-to-cart:focus { outline: 3px solid rgba(3,69,38,0.14); }
 .btn:hover,
 .beslock-btn:hover,
 .beslock-btn:active,
@@ -1762,10 +1517,8 @@ hero__title {
    Kadence or block styles may take precedence. We use highly-specific
    selectors and `!important` for background/color to guarantee the visual.
 */
-body.single-product .product-card__add-to-cart,
 body.single-product a.single_add_to_cart_button,
 body.single-product button.single_add_to_cart_button,
-.product-card .product-card__add-to-cart,
 .wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link,
 .wc-block-grid__product .wc-block-grid__product-add-to-cart a.wp-block-button__link {
   background: var(--beslock-green) !important;
@@ -1783,49 +1536,15 @@ body.single-product button.single_add_to_cart_button,
   transition: transform 220ms cubic-bezier(.16,.84,.29,1), box-shadow 220ms ease !important;
 }
 
-body.single-product .product-card__add-to-cart:hover,
 body.single-product a.single_add_to_cart_button:hover,
-.product-card .product-card__add-to-cart:hover,
 .wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:hover {
   transform: translateY(-2px) scale(1.02) !important;
   box-shadow: 0 14px 36px rgba(3,69,38,0.12) !important;
 }
 
 /* Ensure icon color inside btn follows text color */
-body.single-product .product-card__add-to-cart .bi,
-body.single-product a.single_add_to_cart_button .bi,
-.product-card .product-card__add-to-cart .bi {
+body.single-product a.single_add_to_cart_button .bi {
   color: #ffffff !important;
-}
-
-/* Specific product-card variant: default gray button with green cart icon;
-   on hover invert to green button and gray cart icon. Higher specificity
-   + !important ensures this wins in production where other styles override. */
-.product-card .product-card__add-to-cart {
-  background: var(--beslock-bg-2) !important;
-  color: var(--beslock-green) !important;
-  border: 2px solid rgba(0,0,0,0.06) !important;
-  padding: 0.5rem 0.75rem !important;
-  width: 48px !important;
-  height: 48px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 14px rgba(3,69,38,0.04) !important;
-  transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease !important;
-}
-.product-card .product-card__add-to-cart .bi {
-  color: var(--beslock-green) !important;
-  transition: color 160ms ease !important;
-}
-.product-card .product-card__add-to-cart:hover {
-  background: var(--beslock-green) !important;
-  transform: translateY(-2px) scale(1.02) !important;
-  box-shadow: 0 12px 30px rgba(3,69,38,0.12) !important;
-}
-.product-card .product-card__add-to-cart:hover .bi {
-  color: var(--beslock-bg-2) !important;
 }
 
 /* ========== DETALLE VISUAL SUAVE EN SECCIONES GRANDES ========== */
@@ -2269,24 +1988,6 @@ body.single-product a.single_add_to_cart_button .bi,
   margin-bottom: 6px;
 }
 
-.beslock-cart--empty .product-card__btn--link {
-  flex: 1;
-  max-width: 220px;
-  justify-content: center;
-  border-radius: 12px;
-  font-weight: 600;
-  padding: 10px 14px;
-  transition: all 0.25s ease;
-}
-
-.beslock-cart--empty .product-card__btn--link:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
-}
-.beslock-cart--empty .product-card__btn--link:active {
-  transform: scale(0.98);
-}
-
 .beslock-cart--empty .product-card__actions a:last-child {
   display: inline-flex;
   align-items: center;
@@ -2334,25 +2035,13 @@ body.single-product a.single_add_to_cart_button .bi,
   gap: 10px;
 }
 
-.products-portfolio .product-card__btn--link,
 .products-portfolio .product-card__actions a:last-child {
   height: 44px;
-}
-
-.products-portfolio .product-card__btn--link {
-  padding: 0 16px;
 }
 
 .products-portfolio .product-card__actions a:last-child {
   width: 44px;
   min-width: 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.products-portfolio .product-card__btn,
-.products-portfolio .product-card__btn--link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2369,11 +2058,9 @@ body.single-product a.single_add_to_cart_button .bi,
   letter-spacing: 0.2px;
 }
 
-.product-card__btn--link,
 .product-card__actions a:last-child {
   height: 44px;
 }
-.product-card__btn--link { padding: 0 16px; }
 .product-card__actions a:last-child { width: 44px; min-width: 44px; }
 
 .product-card__actions {
@@ -2381,13 +2068,6 @@ body.single-product a.single_add_to_cart_button .bi,
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-.product-card__btn,
-.product-card__btn--link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .product-card__title { margin-bottom: 6px; }
@@ -2400,7 +2080,6 @@ body.single-product a.single_add_to_cart_button .bi,
    These are intentionally specific and use !important where necessary
    to overcome third-party or theme rules. Place at file end.
 */
-.product-card .product-card__btn--link,
 .product-card .product-card__actions a:last-child {
   height: 44px !important;
   min-height: 44px !important;
@@ -2462,17 +2141,10 @@ body.single-product a.single_add_to_cart_button .bi,
   line-height: 1.55;
 }
 
-.product-card .product-card__btn--link {
-  height: 46px !important;
-  padding: 0 18px !important;
-  border-radius: 12px;
-  font-weight: 600;
-}
-
 .product-card .product-card__actions a:last-child {
-  height: 46px !important;
-  width: 46px !important;
-  min-width: 46px;
+  height: 48px !important;
+  width: 52px !important;
+  min-width: 52px;
 }
 
 .product-card .product-card__actions {
@@ -2506,32 +2178,31 @@ body .products-portfolio .product-card .product-card__desc {
   line-height: 1.55 !important;
 }
 
-body .products-portfolio .product-card .product-card__btn--link {
-  height: 46px !important;
-  padding: 0 18px !important;
-  border-radius: 12px !important;
-  font-weight: 600 !important;
-}
-
 body .products-portfolio .product-card .product-card__actions a:last-child {
-  height: 46px !important;
-  width: 46px !important;
-  min-width: 46px !important;
+  height: 48px !important;
+  width: 52px !important;
+  min-width: 52px !important;
 }
 
 body .products-portfolio .product-card .product-card__actions {
-  margin-top: 10px !important;
+  margin-top: 16px !important;
   gap: 10px !important;
 }
 
 body .products-portfolio .product-card .product-card__content {
-  padding-bottom: 1.8rem !important;
+  display: contents !important;
+  padding: 0 !important;
 }
 /* =========================
    PRODUCT-CARD: prevent description ↔ buttons overlap
    Scoped to `.product-card` and appended at file end. Uses conservative
    !important only where necessary to overcome legacy/plugin rules.
 */
+.product-card--with-description .product-card__description,
+.product-card--with-description .product-card__desc {
+  min-height: 85px !important;
+}
+
 .product-card .product-card__desc {
   margin-bottom: 16px !important;
   position: relative;
@@ -2556,9 +2227,8 @@ body .products-portfolio .product-card .product-card__content {
 /* CART-ONLY: fix overlapping buttons and enforce clean vertical flow
    Scoped to `.beslock-cart--empty` so homepage/global `.product-card` remains untouched. */
 .beslock-cart--empty .product-card__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: contents !important;
+  padding: 0 !important;
 }
 
 .beslock-cart--empty .product-card__title,
@@ -2574,13 +2244,6 @@ body .products-portfolio .product-card .product-card__content {
   gap: 10px;
   margin-top: 12px;
   position: static; /* ensure not absolute */
-}
-
-.beslock-cart--empty .product-card__btn,
-.beslock-cart--empty .product-card__btn--link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Prevent absolute/float rules from collapsing buttons inside cart */
@@ -2636,14 +2299,20 @@ body .products-portfolio__grid > .product-card .pc-actions {
      Use higher-specificity selectors to override desktop/legacy rules. */
   .hero-slide .slide-content {
     position: absolute !important;
-    top: 1.2rem !important;
+    top: auto !important;
+    bottom: 2.6rem !important;
     left: 50% !important;
-    /* preserve horizontal centering and add vertical offset to avoid header overlap */
-    transform: translateX(-50%) translateY(68px) !important;
+    /* preserve horizontal centering while anchoring the copy near the bottom like production */
+    transform: translateX(-50%) !important;
     width: calc(100% - 2rem) !important;
     text-align: center !important;
     margin: 0 !important;
     padding: 0 1rem !important;
+  }
+
+  /* Public mobile hero does not render the feature stack over the slide. */
+  .hero-slide .features-wrapper {
+    display: none !important;
   }
 
   /* Features block sits 30px below the subtitle (H2) */

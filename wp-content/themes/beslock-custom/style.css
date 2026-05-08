@@ -191,32 +191,6 @@ Template: kadence
 	outline: none !important;
 }
 
-/* ========== Remove underline only for product-card cart button ========= */
-.product-card__actions .btn-cart,
-.product-card__actions .btn-cart:link,
-.product-card__actions .btn-cart:visited,
-.product-card__actions .btn-cart:hover,
-.product-card__actions .btn-cart:active,
-.product-card__actions .btn-cart:focus {
-	text-decoration: none !important;
-	border: none !important;
-	box-shadow: none !important;
-	outline: none !important;
-}
-
-.product-card__actions .btn-cart::before,
-.product-card__actions .btn-cart::after {
-	content: none !important;
-	display: none !important;
-}
-
-.product-card__actions .btn-cart i {
-	text-decoration: none !important;
-	border: none !important;
-}
-
-.product-card__actions .btn-cart { display: flex; align-items: center; justify-content: center; }
-
 .header__logo,
 .header__icon {
   display: flex;
@@ -287,9 +261,7 @@ Template: kadence
 	right: 0 !important;
 }
 
-/* Ensure icon in actions matches header exactly */
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg,
+/* Ensure header cart icon sizing remains stable. */
 .header__icon--cart i,
 .header__icon--cart svg {
 	font-size: var(--cart-icon-size) !important;
@@ -300,8 +272,6 @@ Template: kadence
 /* Mobile tweaks */
 @media (max-width: 480px) {
 	.product-card__actions { gap: 8px; }
-	.product-card__actions .btn-primary { flex: 1; max-width: 75%; }
-	.product-card__actions .btn-cart { flex: 0 0 48px; }
 }
 
 /* ensure no third-party resets override icon color/line-height */
@@ -343,32 +313,6 @@ body { padding-top: var(--header-height); }
 	width: 100% !important;
 }
 
-.product-card__actions .btn-primary {
-	flex: 0 0 auto !important;
-	width: 200px !important;
-	height: 48px !important;
-	border-radius: 12px !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-	flex: 0 0 52px !important;
-	width: 52px !important;
-	height: 48px !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-	font-size: var(--cart-icon-size) !important;
-	color: var(--cart-icon-color) !important;
-	line-height: 1 !important;
-}
-
 .product-card__actions a {
 	text-decoration: none !important;
 	border: none !important;
@@ -387,36 +331,6 @@ body { padding-top: var(--header-height); }
 	align-items: center !important;
 	justify-content: center !important;
 	gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-	flex: 0 0 85% !important;   /* kills flex:1 from theme */
-	max-width: none !important; /* kills max-width:75% */
-	width: 85% !important;
-
-	height: 48px !important;
-	border-radius: 12px !important;
-
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-	flex: 0 0 15% !important;
-	width: 15% !important;
-
-	height: 48px !important;
-
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-	font-size: 34px !important;
-	color: #2f6b4f !important;
 }
 
 .product-card__actions a {
@@ -497,9 +411,6 @@ body { overflow-x: hidden; }
 .pc-badge, .pc-badge img, .product-card__badge img { width: auto !important; max-width: none !important; transform: none !important; }
 
 
-/* Enforce button typography inside product cards */
-.product-card .btn-primary { font-size: 0.95rem !important; font-weight: 600 !important; }
-
 /* Ensure WooCommerce product-cards match front-page sizing in cart/blocks */
 .woocommerce .product-card { max-width: 320px; margin: 0 auto; }
 
@@ -516,33 +427,6 @@ body { overflow-x: hidden; }
 	align-items: center !important;
 
 	gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-	margin: 0 !important; /* avoid auto margins that center it alone */
-	display: flex !important;
-
-	flex: 0 0 85% !important;   /* fixed proportion */
-	max-width: none !important; /* remove theme max-width */
-	width: 85% !important;
-
-	height: 48px !important;
-	border-radius: 12px !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-	margin: 0 !important;
-
-	flex: 0 0 15% !important;
-	width: 15% !important;
-
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-
-	height: 48px !important;
 }
 
 .product-card__actions a {
@@ -565,31 +449,6 @@ body { overflow-x: hidden; }
 	display: flex !important;
 	align-items: center !important;
 	gap: 8px !important;
-}
-
-.product-card__actions .btn-primary {
-	flex: 0 0 85% !important;
-	height: 48px !important;
-	border-radius: 12px !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart {
-	flex: 0 0 15% !important;
-	height: 48px !important;
-	border-radius: 12px !important;
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-}
-
-.product-card__actions .btn-cart i,
-.product-card__actions .btn-cart svg {
-	font-size: 34px !important;
-	color: #2f6b4f !important;
-	line-height: 1 !important;
 }
 
 @media (max-width: 480px) {
