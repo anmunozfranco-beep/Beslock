@@ -58,7 +58,7 @@ $images = array_values( array_unique( $normalized ) );
 /**
  * Wrapper that adapts an array-based $product used by the portfolio block
  * into a canonical WC_Product object and delegates rendering to the
- * template-parts/product-card component to avoid duplicate markup.
+ * canonical product-card component to avoid duplicate markup.
  */
 
 // Accept product from set_query_var('product') or local $product variable
@@ -86,7 +86,25 @@ if ( is_array( $p ) && ! empty( $p['product_id'] ) ) {
 }
 
 if ( $arg_product ) {
-  get_template_part( 'template-parts/product-card', null, array( 'product' => $arg_product, 'show_description' => $show_desc ) );
+  if ( file_exists( get_stylesheet_directory() . '/template-parts/cards/product-card.php' ) ) {
+    get_template_part(
+      'template-parts/cards/product-card',
+      null,
+      array(
+        'product'          => $arg_product,
+        'show_description' => $show_desc,
+      )
+    );
+  } else {
+    set_query_var(
+      'beslock_context',
+      array(
+        'show_description' => $show_desc,
+      )
+    );
+
+    get_template_part( 'template-parts/product-card', null, array( 'product' => $arg_product, 'show_description' => $show_desc ) );
+  }
 }
 ?>
 

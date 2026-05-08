@@ -3,13 +3,37 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
+$args = wp_parse_args(
+  isset( $args ) && is_array( $args ) ? $args : array(),
+  array(
+    'product'          => null,
+    'show_description' => null,
+  )
+);
+
 global $product;
 
+if ( $args['product'] instanceof WC_Product ) {
+  $product = $args['product'];
+}
+
 $context = get_query_var('beslock_context', []);
-$show_description = $context['show_description'] ?? false;
+$show_description = null !== $args['show_description']
+  ? (bool) $args['show_description']
+  : ( $context['show_description'] ?? false );
+
+$card_classes = array(
+  'product-card',
+  'pc-card',
+  'section-reveal',
+);
+
+if ( $show_description ) {
+  $card_classes[] = 'product-card--with-description';
+}
 ?>
 
-<div class="product-card pc-card section-reveal">
+<div class="<?php echo esc_attr( implode( ' ', $card_classes ) ); ?>">
 
   <div class="product-card__image">
     <?php echo $product->get_image( 'medium' ); ?>

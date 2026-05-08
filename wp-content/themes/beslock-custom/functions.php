@@ -23,15 +23,10 @@ function beslock_enqueue_main_style() {
 }
 add_action( 'wp_enqueue_scripts', 'beslock_enqueue_main_style', 1 );
 
-// Load theme `inc` modules (ensure enqueue handlers are registered)
-// We deliberately include `inc/core/enqueue.php` to guarantee the detailed
-// style/script enqueue logic is always available to the theme runtime.
+// Load theme `inc` modules. Keep a single enqueue owner in `inc/core/enqueue.php`
+// to avoid duplicate callbacks and unstable asset ordering.
 if ( file_exists( get_stylesheet_directory() . '/inc/core/enqueue.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/core/enqueue.php';
-}
-// Also include legacy / duplicate enqueue file if present to ensure no handlers are missed
-if ( file_exists( get_stylesheet_directory() . '/inc/enqueue-assets.php' ) ) {
-  require_once get_stylesheet_directory() . '/inc/enqueue-assets.php';
 }
 // Load WooCommerce logic modules (keep logic out of templates)
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/setup.php' ) ) {
@@ -49,46 +44,6 @@ if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/cart.php' ) ) {
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/enqueue-assets.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/enqueue-assets.php';
 }
-
-/**
- * Enqueue main theme assets: `style.css` as the primary handle and optional
- * assets under `assets/css` and `assets/js` loaded after it.
- */
-function beslock_enqueue_assets() {
-  // MAIN CSS (style.css)
-  $style_file = get_stylesheet_directory() . '/style.css';
-  $ver = file_exists( $style_file ) ? filemtime( $style_file ) : null;
-  if ( ! wp_style_is( 'beslock-main-style', 'registered' ) ) {
-    wp_register_style( 'beslock-main-style', get_stylesheet_uri(), array(), $ver );
-  }
-  if ( ! wp_style_is( 'beslock-main-style', 'enqueued' ) ) {
-    wp_enqueue_style( 'beslock-main-style' );
-  }
-
-  // OPTIONAL extra CSS (assets/css/main.css)
-  $extra_css = get_stylesheet_directory() . '/assets/css/main.css';
-  if ( file_exists( $extra_css ) ) {
-    wp_enqueue_style(
-      'beslock-extra-style',
-      get_stylesheet_directory_uri() . '/assets/css/main.css',
-      array( 'beslock-main-style' ),
-      filemtime( $extra_css )
-    );
-  }
-
-  // MAIN JS
-  $main_js = get_stylesheet_directory() . '/assets/js/main.js';
-  if ( file_exists( $main_js ) ) {
-    wp_enqueue_script( 'beslock-main-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), filemtime( $main_js ), true );
-  }
-
-  // Product gallery reel (lightweight) — initialize only on single-product pages
-  $gallery_reel = get_stylesheet_directory() . '/assets/js/product-gallery-reel.js';
-  if ( file_exists( $gallery_reel ) ) {
-    wp_enqueue_script( 'beslock-gallery-reel', get_stylesheet_directory_uri() . '/assets/js/product-gallery-reel.js', array(), filemtime( $gallery_reel ), true );
-  }
-}
-add_action( 'wp_enqueue_scripts', 'beslock_enqueue_assets' );
 
 /**
  * Declare WooCommerce support for the child theme if not already present.

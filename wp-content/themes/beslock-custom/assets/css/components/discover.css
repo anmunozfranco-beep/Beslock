@@ -1,0 +1,54 @@
+/* Canonical discover section surface for the homepage CTA block. */
+
+.discover {
+  background: var(--beslock-white);
+  color: var(--beslock-text-main);
+}
+.discover__block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: stretch;
+}
+.discover__text {
+  text-align: left;
+}
+.discover__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--beslock-text-main);
+  margin-bottom: 1rem;
+}
+.discover__title span {
+  color: var(--beslock-green);
+}
+.discover__desc {
+  color: var(--beslock-text-sec);
+  margin-bottom: 1.35rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+.discover__image {
+  text-align: center;
+  width: 100%;
+}
+.discover__image img {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 16px;
+  box-shadow: 0 6px 26px rgba(0,0,0,0.10);
+}
+@media (min-width: 768px) {
+  .discover__block {
+    flex-direction: row;
+    gap: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .discover__text {
+    flex: 1 1 330px;
+  }
+  .discover__image {
+    flex: 1 1 330px;
+  }
+}

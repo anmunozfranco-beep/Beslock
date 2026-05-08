@@ -26,6 +26,14 @@ add_action( 'wp_enqueue_scripts', function() {
     $ver_main_css
   );
 
+  $enqueue_optional_theme_style = static function( $handle, $relative_path, $deps = array( 'beslock-extra-style' ) ) use ( $theme_dir_path, $theme_dir_uri ) {
+    $absolute_path = $theme_dir_path . $relative_path;
+
+    if ( file_exists( $absolute_path ) ) {
+      wp_enqueue_style( $handle, $theme_dir_uri . $relative_path, $deps, filemtime( $absolute_path ) );
+    }
+  };
+
   $inline_header_fallback = "\n.header{position:fixed;top:0;left:0;right:0;z-index:var(--z-header);}\n";
   wp_add_inline_style( 'beslock-main-style', $inline_header_fallback );
 
@@ -68,6 +76,15 @@ add_action( 'wp_enqueue_scripts', function() {
     $ver_models_css
   );
 
+  $enqueue_optional_theme_style( 'beslock-layout-helpers', '/assets/css/utilities/layout-helpers.css' );
+  $enqueue_optional_theme_style( 'beslock-utilities', '/assets/css/utilities/utilities.css' );
+  $enqueue_optional_theme_style( 'beslock-button-utilities', '/assets/css/utilities/buttons.css' );
+  $enqueue_optional_theme_style( 'beslock-header-component', '/assets/css/components/header.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile' ] );
+  $enqueue_optional_theme_style( 'beslock-discover-component', '/assets/css/components/discover.css' );
+  $enqueue_optional_theme_style( 'beslock-homepage-layout', '/assets/css/layout/homepage.css' );
+  $enqueue_optional_theme_style( 'beslock-recommendations-layout', '/assets/css/layout/recommendations.css' );
+  $enqueue_optional_theme_style( 'beslock-storefront-layout', '/assets/css/layout/storefront.css' );
+
   wp_enqueue_script(
     'gsap',
     'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
@@ -94,9 +111,15 @@ add_action( 'wp_enqueue_scripts', function() {
     true
   );
 
-  // Debug helper: force a cache-busted load of main.js for troubleshooting.
-  if ( file_exists( $main_js_path ) ) {
-    wp_enqueue_script( 'beslock-debug', $theme_dir_uri . '/assets/js/main.js', array(), time(), true );
+  $product_card_component_js = $theme_dir_path . '/assets/js/components/product-card.js';
+  if ( file_exists( $product_card_component_js ) ) {
+    wp_enqueue_script(
+      'beslock-product-card-component',
+      $theme_dir_uri . '/assets/js/components/product-card.js',
+      [ 'beslock-main-js' ],
+      filemtime( $product_card_component_js ),
+      true
+    );
   }
 
   $fix_placeholder_js = $theme_dir_path . '/assets/js/fix-placeholder.js';
