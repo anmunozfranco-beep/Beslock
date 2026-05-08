@@ -1,0 +1,302 @@
+{
+    "created_at": "2026-05-06 18:32:14",
+    "items": [
+        {
+            "slug": "e-flex",
+            "pre": {
+                "ID": 14,
+                "post_title": "e-Flex",
+                "post_name": "e-flex",
+                "post_content": "Ideal para recibir y dar acceso sin estar presente.\r\nCódigos temporales, huella y control remoto para estancias cortas.",
+                "post_excerpt": "Ideal para recibir y dar acceso sin estar presente. Códigos temporales, huella y control remoto para estancias cortas.",
+                "post_status": "inherit"
+            },
+            "meta": {
+                "_wp_attached_file": [
+                    "2026\/05\/e-flex_.webp"
+                ],
+                "_wp_attachment_metadata": [
+                    "a:6:{s:5:\"width\";i:1100;s:6:\"height\";i:1100;s:4:\"file\";s:20:\"2026\/05\/e-flex_.webp\";s:8:\"filesize\";i:68184;s:5:\"sizes\";a:4:{s:6:\"medium\";a:5:{s:4:\"file\";s:20:\"e-flex_-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:5882;}s:5:\"large\";a:5:{s:4:\"file\";s:22:\"e-flex_-1024x1024.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:16410;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:20:\"e-flex_-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:4400;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:20:\"e-flex_-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:12404;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}"
+                ],
+                "_thumbnail_id": [
+                    "19"
+                ],
+                "beslock_badge": [
+                    "Ideal para estancias cortas"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:33:\"Ideal para — visitas temporales\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}"
+                ],
+                "_product_image_gallery": [
+                    "14,14"
+                ],
+                "_price": [
+                    "689000"
+                ],
+                "_regular_price": [
+                    "689000"
+                ]
+            }
+        },
+        {
+            "slug": "e-nova",
+            "pre": {
+                "ID": 70,
+                "post_title": "e-Nova",
+                "post_name": "e-nova",
+                "post_content": "",
+                "post_excerpt": "",
+                "post_status": "publish"
+            },
+            "meta": {
+                "total_sales": [
+                    "0"
+                ],
+                "_tax_status": [
+                    "taxable"
+                ],
+                "_tax_class": [
+                    ""
+                ],
+                "_manage_stock": [
+                    "no"
+                ],
+                "_backorders": [
+                    "no"
+                ],
+                "_sold_individually": [
+                    "no"
+                ],
+                "_virtual": [
+                    "no"
+                ],
+                "_downloadable": [
+                    "no"
+                ],
+                "_download_limit": [
+                    "-1"
+                ],
+                "_download_expiry": [
+                    "-1"
+                ],
+                "_stock": [
+                    null
+                ],
+                "_stock_status": [
+                    "instock"
+                ],
+                "_wc_average_rating": [
+                    "0"
+                ],
+                "_wc_review_count": [
+                    "0"
+                ],
+                "_product_version": [
+                    "10.7.0"
+                ],
+                "_edit_lock": [
+                    "1778073778:1"
+                ],
+                "_siteseo_readibility_data": [
+                    "a:1:{s:16:\"paragraph_length\";i:0;}"
+                ],
+                "_siteseo_score": [
+                    "49"
+                ],
+                "_edit_last": [
+                    "1"
+                ],
+                "_thumbnail_id": [
+                    "20"
+                ],
+                "_siteseo_robots_primary_cat": [
+                    "15"
+                ],
+                "_siteseo_redirections_type": [
+                    "301"
+                ],
+                "_siteseo_redirections_logged_status": [
+                    "both"
+                ],
+                "beslock_badge": [
+                    "Privacidad sin complicaciones"
+                ],
+                "cmplz_hide_cookiebanner": [
+                    ""
+                ],
+                "_kad_post_transparent": [
+                    "default"
+                ],
+                "_kad_post_layout": [
+                    "default"
+                ],
+                "_kad_post_content_style": [
+                    "default"
+                ],
+                "_kad_post_vertical_padding": [
+                    "default"
+                ],
+                "_regular_price": [
+                    "412000"
+                ],
+                "_price": [
+                    "412000"
+                ],
+                "_product_image_gallery": [
+                    "21"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:23:\"Múltiples — usuarios\";}"
+                ]
+            }
+        },
+        {
+            "slug": "e-orbit",
+            "pre": {
+                "ID": 17,
+                "post_title": "e-Orbit",
+                "post_name": "e-orbit",
+                "post_content": "Mira y controla quién llega a tu puerta, estés donde estés.\r\nSeguridad avanzada con video y acceso inteligente desde tu celular.",
+                "post_excerpt": "Mira y controla quién llega a tu puerta, estés donde estés. Seguridad avanzada con video y acceso inteligente desde tu celular.",
+                "post_status": "inherit"
+            },
+            "meta": {
+                "_wp_attached_file": [
+                    "2026\/05\/e-orbit_.webp"
+                ],
+                "_wp_attachment_metadata": [
+                    "a:6:{s:5:\"width\";i:1000;s:6:\"height\";i:1000;s:4:\"file\";s:21:\"2026\/05\/e-orbit_.webp\";s:8:\"filesize\";i:13382;s:5:\"sizes\";a:3:{s:6:\"medium\";a:5:{s:4:\"file\";s:21:\"e-orbit_-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:3286;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:21:\"e-orbit_-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:1480;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:21:\"e-orbit_-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:11676;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}"
+                ],
+                "_thumbnail_id": [
+                    "22"
+                ],
+                "beslock_badge": [
+                    "Desde donde te encuentres"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:31:\"Total control — en el celular\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:33:\"Ideal para — visitas temporales\";}"
+                ],
+                "_product_image_gallery": [
+                    "17,17,17"
+                ],
+                "_price": [
+                    "1734000"
+                ],
+                "_regular_price": [
+                    "1734000"
+                ]
+            }
+        },
+        {
+            "slug": "e-prime",
+            "pre": {
+                "ID": 18,
+                "post_title": "e-Prime",
+                "post_name": "e-prime",
+                "post_content": "Control total para accesos exigentes.\r\nGestión avanzada de usuarios para espacios de alto flujo.",
+                "post_excerpt": "Control total para accesos exigentes. Gestión avanzada de usuarios para espacios de alto flujo.",
+                "post_status": "inherit"
+            },
+            "meta": {
+                "_wp_attached_file": [
+                    "2026\/05\/e-prime_.webp"
+                ],
+                "_wp_attachment_metadata": [
+                    "a:6:{s:5:\"width\";i:700;s:6:\"height\";i:700;s:4:\"file\";s:21:\"2026\/05\/e-prime_.webp\";s:8:\"filesize\";i:20340;s:5:\"sizes\";a:2:{s:6:\"medium\";a:5:{s:4:\"file\";s:21:\"e-prime_-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:5534;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:21:\"e-prime_-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:4244;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}"
+                ],
+                "_thumbnail_id": [
+                    "23"
+                ],
+                "beslock_badge": [
+                    "Pensada para oficinas"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:31:\"Total control — en el celular\";i:2;s:29:\"Varias formas — de apertura\";}"
+                ],
+                "_product_image_gallery": [
+                    "18,18"
+                ],
+                "_price": [
+                    "941000"
+                ],
+                "_regular_price": [
+                    "941000"
+                ]
+            }
+        },
+        {
+            "slug": "e-shield",
+            "pre": {
+                "ID": 19,
+                "post_title": "e-Shield",
+                "post_name": "e-shield",
+                "post_content": "Protección inteligente para tu hogar.\r\nSeguridad robusta con acceso electrónico y respaldo mecánico.",
+                "post_excerpt": "Protección inteligente para tu hogar. Seguridad robusta con acceso electrónico y respaldo mecánico.",
+                "post_status": "inherit"
+            },
+            "meta": {
+                "_wp_attached_file": [
+                    "2026\/05\/e-shield_.webp"
+                ],
+                "_wp_attachment_metadata": [
+                    "a:6:{s:5:\"width\";i:800;s:6:\"height\";i:800;s:4:\"file\";s:22:\"2026\/05\/e-shield_.webp\";s:8:\"filesize\";i:52762;s:5:\"sizes\";a:3:{s:6:\"medium\";a:5:{s:4:\"file\";s:22:\"e-shield_-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:6402;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:22:\"e-shield_-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:4660;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:22:\"e-shield_-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:14470;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}"
+                ],
+                "_thumbnail_id": [
+                    "24"
+                ],
+                "beslock_badge": [
+                    "Máxima protección en tu hogar"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:30:\"Libérate — de cargar llaves\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:31:\"Total control — en el celular\";}"
+                ],
+                "_product_image_gallery": [
+                    "25"
+                ],
+                "_price": [
+                    "982000"
+                ],
+                "_regular_price": [
+                    "982000"
+                ]
+            }
+        },
+        {
+            "slug": "e-touch",
+            "pre": {
+                "ID": 21,
+                "post_title": "e-Touch",
+                "post_name": "e-touch",
+                "post_content": "Acceso fácil para espacios compartidos.\r\nClave y huella para que todos puedan entrar, sin complicaciones.",
+                "post_excerpt": "Acceso fácil para espacios compartidos. Clave y huella para que todos puedan entrar, sin complicaciones.",
+                "post_status": "inherit"
+            },
+            "meta": {
+                "_wp_attached_file": [
+                    "2026\/05\/e-touch_.webp"
+                ],
+                "_wp_attachment_metadata": [
+                    "a:6:{s:5:\"width\";i:1500;s:6:\"height\";i:1500;s:4:\"file\";s:21:\"2026\/05\/e-touch_.webp\";s:8:\"filesize\";i:66876;s:5:\"sizes\";a:4:{s:6:\"medium\";a:5:{s:4:\"file\";s:21:\"e-touch_-300x300.webp\";s:5:\"width\";i:300;s:6:\"height\";i:300;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:5624;}s:5:\"large\";a:5:{s:4:\"file\";s:23:\"e-touch_-1024x1024.webp\";s:5:\"width\";i:1024;s:6:\"height\";i:1024;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:14672;}s:9:\"thumbnail\";a:5:{s:4:\"file\";s:21:\"e-touch_-150x150.webp\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:4250;}s:12:\"medium_large\";a:5:{s:4:\"file\";s:21:\"e-touch_-768x768.webp\";s:5:\"width\";i:768;s:6:\"height\";i:768;s:9:\"mime-type\";s:10:\"image\/webp\";s:8:\"filesize\";i:11118;}}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}"
+                ],
+                "_thumbnail_id": [
+                    "26"
+                ],
+                "beslock_badge": [
+                    "Acceso para todos"
+                ],
+                "beslock_features": [
+                    "a:3:{i:0;s:23:\"Múltiples — usuarios\";i:1;s:29:\"Varias formas — de apertura\";i:2;s:30:\"Libérate — de cargar llaves\";}"
+                ],
+                "_product_image_gallery": [
+                    "27"
+                ],
+                "_price": [
+                    "435000"
+                ],
+                "_regular_price": [
+                    "435000"
+                ]
+            }
+        }
+    ]
+}

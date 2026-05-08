@@ -1,0 +1,380 @@
+# Translation of Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release) in Spanish (Mexico)
+# This file is distributed under the same license as the Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-15 13:15:01+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: es_MX\n"
+"Project-Id-Version: Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release)\n"
+
+#: includes/admin/pages/trait-wpcode-library-refresh-button.php:20
+msgid "Check for updates to your private library snippets."
+msgstr "Comprueba si hay actualizaciones en los fragmentos de tu biblioteca privada."
+
+#: includes/admin/pages/class-wpcode-code-snippets-table.php:1144
+msgid "Outdated"
+msgstr "Obsoleto"
+
+#: includes/admin/pages/class-wpcode-admin-page-tools.php:99
+msgid "Import failed. Please make sure you are uploading a valid WPCode export file."
+msgstr "Error de importación. Asegúrate de que estás cargando un archivo de exportación WPCode válido."
+
+#: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:2580
+msgid "Snippet successfully updated from library."
+msgstr "Fragmento actualizado correctamente desde la biblioteca."
+
+#: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:1257
+#: includes/admin/pages/class-wpcode-code-snippets-table.php:311
+msgid "Update Available"
+msgstr "Actualización disponible"
+
+#. translators: %1$s and %2$s are strong HTML tags, %3$s and %4$s are links.
+#: includes/admin/class-wpcode-features-notices.php:53
+msgid "%1$sPro Tip:%2$s Did you know all WPCode premium plans include access to a private snippet library? Moving snippets from one site to another has never been easier. %3$sUpgrade today with a special discount%4$s."
+msgstr "%1$sConsejo Pro:%2$s ¿Sabías que todos los planes Premium de WPCode incluyen acceso a una biblioteca privada de fragmentos? Mover fragmentos de código de un sitio a otro nunca ha sido tan fácil. %3$sActualízate hoy con un descuento especial%4$s."
+
+#: includes/admin/admin-scripts.php:94
+msgid "New version:"
+msgstr "Nueva versión:"
+
+#: includes/admin/admin-scripts.php:93
+msgid "Old version:"
+msgstr "Versión antigua:"
+
+#: includes/admin/admin-scripts.php:91
+msgid "Your version:"
+msgstr "Tu versión:"
+
+#: includes/admin/admin-scripts.php:92
+msgid "Library version:"
+msgstr "Versión de la librería:"
+
+#: includes/admin/admin-scripts.php:83
+#: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:1904
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: includes/admin/admin-scripts.php:82
+msgid "Yes, Update Now"
+msgstr "Si, actualizar ahora"
+
+#: includes/class-wpcode-smart-tags.php:537
+msgid "No smart tags found"
+msgstr "No se han encontrado etiquetas inteligentes"
+
+#: includes/class-wpcode-smart-tags.php:508
+msgid "Search smart tags"
+msgstr "Buscar etiquetas inteligentes"
+
+#: includes/class-wpcode-smart-tags.php:506
+msgid "Smart Tags"
+msgstr "Etiquetas inteligentes"
+
+#: includes/class-wpcode-smart-tags.php:365
+msgid "MemberPress"
+msgstr "MemberPress"
+
+#: includes/class-wpcode-smart-tags.php:359
+msgid "Membership Period"
+msgstr "Periodo de membresía"
+
+#: includes/class-wpcode-smart-tags.php:355
+msgid "Membership Period Type"
+msgstr "Tipo de periodo de membresía"
+
+#: includes/class-wpcode-smart-tags.php:351
+msgid "Membership Billing Type"
+msgstr "Tipo de facturación de membresía"
+
+#: includes/class-wpcode-smart-tags.php:347
+msgid "Membership URL"
+msgstr "URL de la membresía"
+
+#: includes/class-wpcode-smart-tags.php:343
+msgid "Membership Description"
+msgstr "Descripción de la membresía"
+
+#: includes/class-wpcode-smart-tags.php:339
+msgid "Membership Price"
+msgstr "Precio de la membresía"
+
+#: includes/class-wpcode-smart-tags.php:335
+msgid "Membership Name"
+msgstr "Nombre de la membresía"
+
+#: includes/class-wpcode-smart-tags.php:327
+msgid "MemberPress Courses"
+msgstr "Cursos de MemberPress"
+
+#: includes/class-wpcode-smart-tags.php:321
+msgid "Course Instructor"
+msgstr "Instructor del curso"
+
+#: includes/class-wpcode-smart-tags.php:317
+msgid "Course Availability"
+msgstr "Disponibilidad del curso"
+
+#: includes/class-wpcode-smart-tags.php:313
+msgid "Course Price"
+msgstr "Precio del curso"
+
+#: includes/class-wpcode-smart-tags.php:309
+msgid "Course Permalink"
+msgstr "Enlace permanente del curso"
+
+#: includes/class-wpcode-smart-tags.php:293
+msgid "All in One SEO"
+msgstr "All in One SEO"
+
+#: includes/class-wpcode-smart-tags.php:287
+msgid "AIOSEO Description"
+msgstr "Descripción de AIOSEO"
+
+#: includes/class-wpcode-smart-tags.php:283
+msgid "AIOSEO Title"
+msgstr "Título de AIOSEO"
+
+#: includes/class-wpcode-smart-tags.php:275
+msgid "Yoast SEO"
+msgstr "Yoast SEO"
+
+#: includes/class-wpcode-smart-tags.php:269
+msgid "Yoast SEO Description"
+msgstr "Descripción de Yoast SEO"
+
+#: includes/class-wpcode-smart-tags.php:265
+msgid "Yoast SEO Title"
+msgstr "Título de Yoast SEO"
+
+#: includes/class-wpcode-smart-tags.php:257
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
+
+#: includes/class-wpcode-smart-tags.php:251
+msgid "EDD File Notes"
+msgstr "Notas de archivo EDD"
+
+#: includes/class-wpcode-smart-tags.php:247
+msgid "EDD File Price"
+msgstr "EDD Precio del archivo"
+
+#: includes/class-wpcode-smart-tags.php:229
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:215
+msgid "WooCommerce Gallery image URLs"
+msgstr "URLs de imágenes de la galería de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:211
+msgid "WooCommerce Number of reviews"
+msgstr "Número de reseñas de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:207
+msgid "WooCommerce Average rating"
+msgstr "Valoración media de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:203
+msgid "WooCommerce Product tags"
+msgstr "Etiquetas de producto de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:199
+msgid "WooCommerce Product categories"
+msgstr "Categorías de productos de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:195
+msgid "WooCommerce Featured image URL"
+msgstr "URL de la imagen destacada de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:191
+msgid "WooCommerce Product Short Description"
+msgstr "Descripción corta de producto de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:187
+msgid "WooCommerce Product Description"
+msgstr "Descripción de producto de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:183
+msgid "WooCommerce Inventory count"
+msgstr "Recuento de inventario de WooCommerce"
+
+#: includes/class-wpcode-smart-tags.php:116
+msgid "The website's name"
+msgstr "El nombre del sitio web"
+
+#: includes/class-wpcode-smart-tags.php:67
+msgid "Categories"
+msgstr "Categorías"
+
+#: includes/generator/class-wpcode-generator-type.php:374
+msgid "Choose Image"
+msgstr "Elegir imagen"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:163
+msgid "The URL of the creator website or profile."
+msgstr "La URL del sitio web o perfil del creador."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:162
+msgid "Creator URL"
+msgstr "Creador de URL"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:158
+msgid "Enter creator name..."
+msgstr "Introduce el nombre del creador..."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:153
+msgid "The name of the video creator."
+msgstr "El nombre del creador del video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:152
+msgid "Creator Name"
+msgstr "Nombre del creador"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:146
+msgid "Creator Information"
+msgstr "Información del creador"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:137
+msgid "The date when the video was uploaded."
+msgstr "La fecha en que se subió el video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:136
+msgid "Upload Date"
+msgstr "Fecha de subida"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:128
+msgid "The duration of the video in ISO 8601 format (e.g., PT1H30M for 1 hour 30 minutes)."
+msgstr "La duración del video en formato ISO 8601 (por ejemplo, PT1H30M para 1 hora y 30 minutos)."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:127
+msgid "Video Duration"
+msgstr "Duración del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:115
+msgid "The URL of the video thumbnail image."
+msgstr "La URL de la imagen en miniatura del video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:114
+msgid "Video Thumbnail"
+msgstr "Miniatura del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:106
+msgid "The URL of the embedded video (e.g., YouTube embed URL)."
+msgstr "La URL del video incrustado (por ejemplo, la URL de incrustación de YouTube)."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:105
+msgid "Video Embed URL"
+msgstr "URL de incrustación de video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:94
+msgid "The URL of the video page."
+msgstr "La URL de la página de video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:93
+msgid "Video URL"
+msgstr "URL del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:87
+msgid "Describe the video..."
+msgstr "Describe el video..."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:84
+msgid "A detailed description of the video."
+msgstr "Una descripción detallada del video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:83
+msgid "Video Description"
+msgstr "Descripción del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:77
+msgid "Enter video title..."
+msgstr "Introduce el título del video..."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:74
+msgid "The title of the video."
+msgstr "El título del video."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:73
+msgid "Video Title"
+msgstr "Título del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:67
+msgid "Video Details"
+msgstr "Detalles del video"
+
+#: includes/generator/class-wpcode-generator-schema-video.php:43
+msgid "Generate schema markup for videos to enhance search results."
+msgstr "Genera el marcado schema de los videos para mejorar los resultados de búsqueda."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:61
+msgid "This generator creates Video schema.org markup for improved SEO and rich search results."
+msgstr "Este generador crea el marcado video schema.org para mejorar el SEO y enriquecer los resultados de búsqueda."
+
+#: includes/generator/class-wpcode-generator-schema-video.php:42
+msgid "Video Schema"
+msgstr "Schema de video"
+
+#: includes/generator/class-wpcode-generator-schema-software.php:219
+msgid "The availability status of the software."
+msgstr "El estado de disponibilidad del software."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:201
+msgid "The price of the software."
+msgstr "El precio del software."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:182
+msgid "The URL of the publisher logo."
+msgstr "La URL del logotipo del editor."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:172
+msgid "The URL of the publisher website."
+msgstr "La URL del sitio web del editor."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:165
+msgid "Enter publisher name..."
+msgstr "Introduce el nombre del editor..."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:162
+msgid "The name of the software publisher."
+msgstr "El nombre del editor del software."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:155
+msgid "Publisher Information"
+msgstr "Información sobre el editor"
+
+#: includes/generator/class-wpcode-generator-schema-software.php:146
+msgid "The date when the software was released."
+msgstr "La fecha de lanzamiento del software."
+
+#: includes/generator/class-wpcode-generator-schema-software.php:137
+msgid "The version number of the software."
+msgstr "Número de versión del software"
+
+#. translators: %s: The `</body>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:167
+msgid "These scripts will be printed above the closing %s tag."
+msgstr "Estos scripts se imprimirán encima de la etiqueta de cierre %s."
+
+#. translators: %s: The `<head>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:162
+msgid "These scripts will be printed just below the opening %s tag."
+msgstr "Estos scripts se imprimirán debajo de la etiqueta de apertura %s."
+
+#. translators: %s: The `<head>` tag
+#: includes/admin/pages/class-wpcode-admin-page-headers-footers.php:157
+msgid "These scripts will be printed in the %s section."
+msgstr "Estos scripts se imprimirán en la sección %s."
+
+#: includes/admin/class-wpcode-admin-page-loader.php:208
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:53
+#: includes/class-wpcode-admin-bar-info.php:408
+msgid "Settings"
+msgstr "Ajustes"
+
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:88
+msgid "Settings Saved."
+msgstr "Ajustes Guardados."
