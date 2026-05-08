@@ -71,12 +71,6 @@
   z-index: 100 !important;
 }
 
-/* Move WooCommerce product gallery block down on single product pages */
-.single-product .product-page__media,
-.single-product .woocommerce div.product div.images {
-	margin-top: 90px !important;
-}
-
 /* Align logo vertically with frontpage: move up 36px on single-product pages */
 .single-product .header__logo {
 	top: calc(50% - 36px) !important;
