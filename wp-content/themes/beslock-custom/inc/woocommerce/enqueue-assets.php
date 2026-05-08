@@ -3,13 +3,33 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
+error_log( 'Loaded OK: inc/woocommerce/enqueue-assets.php' );
+
 /**
- * Legacy bridge file.
- *
- * Product-card assets now load from the centralized frontend pipeline in
- * `inc/core/enqueue.php`. This file remains as a compatibility include so the
- * theme bootstrap does not change shape during the migration.
+ * Minimal WooCommerce-related asset registration. Keeps handles available
+ * for WooCommerce templates and product-card component.
  */
 add_action( 'wp_enqueue_scripts', function() {
-  return;
+  $theme_dir = get_stylesheet_directory_uri();
+  $theme_path = get_stylesheet_directory();
+
+  // Ensure product-card CSS is available (style.css already contains globals)
+  $pc_css = $theme_path . '/assets/css/product-card.css';
+  if ( file_exists( $pc_css ) ) {
+    wp_register_style( 'beslock-product-card', $theme_dir . '/assets/css/product-card.css', array( 'beslock-main-style' ), filemtime( $pc_css ) );
+    wp_enqueue_style( 'beslock-product-card' );
+  }
+
+  // Product page layout-only normalization (loaded only on single product pages).
+  $normalize_css = $theme_path . '/assets/css/product-normalize.css';
+  if ( file_exists( $normalize_css ) ) {
+    if ( ( function_exists( 'is_product' ) && is_product() ) || ( function_exists( 'is_singular' ) && is_singular( 'product' ) ) ) {
+      wp_enqueue_style(
+        'beslock-product-normalize',
+        $theme_dir . '/assets/css/product-normalize.css',
+        array( 'beslock-product-page' ),
+        filemtime( $normalize_css )
+      );
+    }
+  }
 }, 20 );

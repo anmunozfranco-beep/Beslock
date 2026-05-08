@@ -1,0 +1,12 @@
+[02-Apr-2026 14:53:17 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php:147
+Stack trace:
+#0 {main}
+  thrown in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php on line 147
+[01-May-2026 14:45:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php:147
+Stack trace:
+#0 {main}
+  thrown in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php on line 147
+[05-May-2026 21:43:52 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined function add_action() in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php:147
+Stack trace:
+#0 {main}
+  thrown in /home1/andres38/beslock.com.co/wp-content/themes/twentytwentyfour/functions.php on line 147

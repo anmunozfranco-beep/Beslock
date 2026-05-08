@@ -1,11 +1,6 @@
 (function(){
   'use strict';
 
-  if (window.__beslockProductGalleryReelInit) {
-    return;
-  }
-  window.__beslockProductGalleryReelInit = true;
-
   function findGalleries(){
     return Array.from(document.querySelectorAll('.product-page__gallery'));
   }
@@ -60,6 +55,32 @@
     return ui;
   }
 
+  function normalizeSlideImages(reel){
+    if(!reel) return;
+    var targetWidth = Math.max(reel.clientWidth || 0, 480);
+
+    Array.from(reel.querySelectorAll('img')).forEach(function(img){
+      try{
+        var highResSrc = img.getAttribute('data-large_image') || img.getAttribute('data-src') || img.getAttribute('src');
+        var largeWidth = img.getAttribute('data-large_image_width');
+        var largeHeight = img.getAttribute('data-large_image_height');
+
+        if(largeWidth) img.setAttribute('width', largeWidth);
+        if(largeHeight) img.setAttribute('height', largeHeight);
+
+        if(highResSrc){
+          img.setAttribute('src', highResSrc);
+        }
+
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+        img.setAttribute('sizes', targetWidth + 'px');
+        img.loading = 'eager';
+        img.decoding = 'async';
+      }catch(e){}
+    });
+  }
+
   function updateUI(root, reel, slides){
     const ui = root.querySelector('.product-gallery__ui');
     if(!ui) return;
@@ -74,6 +95,104 @@
     ui.style.display = (slides.length <= 1) ? 'none' : 'flex';
   }
 
+  function enableDrag(root, reel, slides){
+    if(!root || !reel || slides.length <= 1 || reel.dataset.beslockDrag === '1') return;
+
+    var pointerDown = false;
+    var dragging = false;
+    var startX = 0;
+    var startScroll = 0;
+    var dragThreshold = 6;
+
+    function setDragging(active){
+      dragging = active;
+      reel.classList.toggle('is-dragging', active);
+      if(active){
+        reel.style.setProperty('scroll-snap-type', 'none', 'important');
+        reel.style.setProperty('scroll-behavior', 'auto', 'important');
+      } else {
+        reel.style.removeProperty('scroll-snap-type');
+        reel.style.removeProperty('scroll-behavior');
+      }
+    }
+
+    function finishDrag(ev){
+      if(!pointerDown) return;
+      pointerDown = false;
+
+      if(dragging){
+        if(ev && typeof ev.preventDefault === 'function') ev.preventDefault();
+        var slideWidth = reel.clientWidth || 1;
+        var targetLeft = Math.round(reel.scrollLeft / slideWidth) * slideWidth;
+        setDragging(false);
+        root.dataset.beslockSuppressClick = '1';
+        window.setTimeout(function(){ delete root.dataset.beslockSuppressClick; }, 250);
+        reel.scrollTo({ left: targetLeft, behavior: 'smooth' });
+        window.requestAnimationFrame(function(){ updateUI(root, reel, slides); });
+      } else {
+        setDragging(false);
+      }
+    }
+
+    function startDrag(clientX){
+      pointerDown = true;
+      dragging = false;
+      startX = clientX;
+      startScroll = reel.scrollLeft;
+    }
+
+    function moveDrag(clientX, ev){
+      if(!pointerDown) return;
+
+      var deltaX = clientX - startX;
+
+      if(!dragging && Math.abs(deltaX) > dragThreshold){
+        setDragging(true);
+      }
+
+      if(!dragging) return;
+
+      if(ev && typeof ev.preventDefault === 'function') ev.preventDefault();
+      reel.scrollLeft = startScroll - deltaX;
+      updateUI(root, reel, slides);
+    }
+
+    reel.addEventListener('mousedown', function(ev){
+      if(ev.button !== 0) return;
+      startDrag(ev.clientX);
+    });
+
+    reel.addEventListener('touchstart', function(ev){
+      if(!ev.touches || !ev.touches.length) return;
+      startDrag(ev.touches[0].clientX);
+    }, { passive: true });
+
+    window.addEventListener('mousemove', function(ev){
+      moveDrag(ev.clientX, ev);
+    }, { passive: false });
+
+      reel.addEventListener('mouseup', finishDrag);
+      document.addEventListener('mouseup', finishDrag, true);
+      window.addEventListener('mouseup', finishDrag);
+
+    window.addEventListener('touchmove', function(ev){
+      if(!ev.touches || !ev.touches.length) return;
+      moveDrag(ev.touches[0].clientX, ev);
+    }, { passive: false });
+
+    window.addEventListener('touchend', finishDrag);
+    window.addEventListener('touchcancel', finishDrag);
+
+    reel.addEventListener('click', function(ev){
+      if(root.dataset.beslockSuppressClick === '1'){
+        ev.preventDefault();
+        ev.stopPropagation();
+      }
+    }, true);
+
+    reel.dataset.beslockDrag = '1';
+  }
+
   function initGallery(root){
     if(!root || root.dataset.beslockInit === '1') return;
     const reel = ensureReel(root);
@@ -81,18 +200,37 @@
     // ensure slides are direct children (in case some existed already)
     const slides = Array.from(reel.children).filter(c => c.matches && c.matches('.product-page__gallery-slide'));
     // ensure native touch-action and smooth scrolling (allow horizontal swipe)
-    try{ reel.style.touchAction = 'pan-x pan-y'; }catch(e){}
+    try{ reel.style.setProperty('touch-action', 'pan-y', 'important'); }catch(e){}
+    normalizeSlideImages(reel);
 
     // sanitize anchors/images to prevent fullscreen/lightbox and disable drag
+    // NOTE: preserve `href` as a functional fallback. Only prevent navigation
+    // when the link points to uploads and no lightbox is present.
     Array.from(reel.querySelectorAll('a')).forEach(a=>{
       try{
         if(a.hasAttribute('href')){
+          // store original href for debugging/fallback but keep the href intact
           a.setAttribute('data-beslock-href', a.getAttribute('href'));
-          a.removeAttribute('href');
         }
         // remove common lightbox attributes (non-destructive)
         ['data-fancybox','data-lightbox','data-mfp','data-pswp-uid','rel','data-gallery'].forEach(attr=> a.removeAttribute(attr));
-        a.addEventListener('click', function(ev){ ev.preventDefault(); ev.stopImmediatePropagation(); }, {passive:false});
+          a.draggable = false;
+          a.addEventListener('dragstart', function(ev){ ev.preventDefault(); }, {passive:false});
+        a.addEventListener('click', function(ev){
+          try{
+            var href = a.getAttribute('href') || '';
+            var isUpload = href.indexOf('/wp-content/uploads/') !== -1;
+            var lightboxPresent = (typeof window.PhotoSwipe !== 'undefined') ||
+                                   (typeof window.jsPhotoSwipe !== 'undefined') ||
+                                   (typeof window.beslockLightbox !== 'undefined') ||
+                                   (typeof jQuery !== 'undefined' && (jQuery.fn && (jQuery.fn.magnificPopup || jQuery.fn.fancybox || jQuery.fn.simpleLightbox)));
+            // Only prevent navigation when link points to uploads and there's no
+            // lightbox available to handle it. Otherwise allow default behavior.
+            if(isUpload && !lightboxPresent){
+              ev.preventDefault();
+            }
+          }catch(e){}
+        }, {passive:false});
         a.addEventListener('touchstart', function(ev){ /* noop to prioritize touch */ }, {passive:true});
       }catch(e){ /* ignore */ }
     });
@@ -110,6 +248,7 @@
     buildUI(root, reel, slides);
     // initial update
     updateUI(root, reel, slides);
+    enableDrag(root, reel, slides);
 
     // sync on scroll with rAF throttle
     let rafPending = false;

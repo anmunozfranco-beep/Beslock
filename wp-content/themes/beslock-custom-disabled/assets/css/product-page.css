@@ -1,0 +1,985 @@
+/* Product page — mobile-first, BEM
+   Base styles stack content vertically on small screens.
+   Larger screens use a two-column hero layout.
+*/
+
+.product-page{
+  padding: 1rem;
+  color: var(--text-color, #111);
+  background: var(--page-bg, #fff);
+}
+
+.product-page__hero{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-page__media{ order: 0; }
+.product-page__media img{ display:block; width:100%; height:auto; max-width:100%; object-fit:contain; }
+
+.product-page__info{ order: 1; margin-top: 30vh; }
+.product-page__title{ font-size: 1.25rem; margin: 0 0 .25rem; }
+
+/* Bring title up to sit flush with the gallery reel on mobile (0rem gap)
+  Counteracts the `.product-page__info { margin-top: 30vh }` spacing while
+  preserving the rest of the info block. Reset on larger screens. */
+.product-page__title { margin-top: -30vh !important; }
+.product-page__price{ font-size: 20px; font-weight:700; color: #000; margin-bottom: .5rem; text-align: center; }
+.product-page__excerpt{ color: #444; margin-bottom: .75rem }
+.product-page__buy{ margin-bottom: .75rem }
+
+/* Quantity controls: center group, enlarge input by ~6pt, add +/- buttons */
+.product-page__buy .quantity { display:flex; justify-content:center; }
+.beslock-qty { display:inline-flex; align-items:center; gap:8px; border-radius:8px; }
+.beslock-qty button { appearance:none; border:1px solid #e6e6e6; background:#fff; color:#333; padding:0 12px; font-size:calc(1rem + 3pt); cursor:pointer; border-radius:8px; height:47px; line-height:47px; }
+.beslock-qty input.qty { width:36px; box-sizing:border-box; text-align:center !important; font-size:20px !important; padding:0; height:47px; line-height:47px; border:1px solid #e6e6e6; border-radius:8px; -moz-appearance: textfield; }
+
+/* Specific override for inputs that use aria-label="Product Quantity" */
+.beslock-qty input[aria-label="Product Quantity"],
+.beslock-qty input.qty[aria-label="Product Quantity"] {
+  width: 36px !important;
+  box-sizing: border-box;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  height: auto !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  font-size: 20px !important;
+}
+
+/* More specific, case-insensitive-safe rules targeting quantity inputs generally */
+.quantity input.qty[aria-label],
+input.qty[aria-label],
+.quantity input.qty,
+input.qty {
+  width: 36px !important;
+  box-sizing: border-box !important;
+  padding: 10px 0 !important;
+  height: 47px !important;
+  line-height: 47px !important;
+  text-align: center !important;
+  font-size: 20px !important;
+}
+.beslock-qty button:active { transform:translateY(1px); }
+.beslock-qty button:focus { outline: none; box-shadow: 0 0 0 3px rgba(15,98,254,0.12); }
+
+/* Make sure group is responsive and centered */
+.product-page__buy { display:flex; flex-direction:column; align-items:center; width:100%; }
+.product-page__buy .beslock-qty { justify-content:center; }
+
+/* Center and enlarge Add to cart button */
+.product-page__buy .single_add_to_cart_button,
+.product-page__buy .button.add_to_cart_button,
+.product-page__buy .button {
+  display: inline-block;
+  margin: 16px auto 0;
+  font-size: calc(1rem + 3pt);
+  padding: 0.6rem 1.1rem; /* match product-card padding */
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  align-self: center;
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px; /* match product-card */
+  background: var(--beslock-green); /* primary green */
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  opacity: 0.65; /* match product-card subtle disabled look */
+  transition: opacity 280ms cubic-bezier(.16,.84,.29,1), transform 360ms cubic-bezier(.16,.84,.29,1), box-shadow 360ms cubic-bezier(.16,.84,.29,1);
+  will-change: transform, opacity, box-shadow;
+  backface-visibility: hidden;
+}
+
+/* Move quantity box and add-to-cart down 15px on product pages */
+.single-product .product-page__buy .beslock-buy-controls { margin-top: 15px !important; }
+.single-product .product-page__buy .single_add_to_cart_button { margin-top: 31px !important; }
+
+.product-page__buy .single_add_to_cart_button:hover,
+.product-page__buy .button.add_to_cart_button:hover,
+.product-page__buy .button:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(3,69,38,0.10);
+  /* On product page hover: swap to gray background and beslock green text */
+  background: var(--beslock-bg-2, #f2f2f2) !important;
+  color: var(--beslock-green, #06a37a) !important;
+}
+.product-page__buy .single_add_to_cart_button:active,
+.product-page__buy .button.add_to_cart_button:active,
+.product-page__buy .button:active {
+  transform: translateY(0) scale(0.995);
+  box-shadow: 0 4px 10px rgba(3,69,38,0.06);
+}
+.product-page__buy .single_add_to_cart_button:focus,
+.product-page__buy .button.add_to_cart_button:focus,
+.product-page__buy .button:focus {
+  outline: 3px solid rgba(3,69,38,0.14);
+}
+
+/* Ensure icon inside add-to-cart follows text color on hover */
+.product-page__buy .single_add_to_cart_button:hover .bi,
+.product-page__buy .button.add_to_cart_button:hover .bi {
+  color: var(--beslock-green, #06a37a) !important;
+}
+
+/* Group wrapper used to precisely center qty + button */
+.beslock-buy-controls { display:flex; flex-direction:column; align-items:center; gap:10px; width:100%; }
+.beslock-buy-controls .beslock-qty { order:0; }
+.beslock-buy-controls .single_add_to_cart_button { order:1; }
+
+
+/* remove native number input spinners for consistent centering */
+.beslock-qty input.qty::-webkit-outer-spin-button,
+.beslock-qty input.qty::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.beslock-qty input.qty[type=number] { -moz-appearance: textfield; }
+
+
+.product-page__section-title{ font-size:1rem; margin:0 0 .5rem; }
+
+/* Accessibility helper: keep logical reading order but visual two-column on >=768px */
+@media (min-width: 768px){
+  .product-page__hero{ display:grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items:start; }
+  .product-page__media{ order:0 }
+  .product-page__info{ order:1; margin-top: 0; }
+  .product-page__title{ font-size:1.6rem }
+}
+@media (min-width: 768px){
+  .product-page__title { margin-top: 0 !important; }
+}
+
+/* Constrain gallery thumbnails and images within the media area (BEM-only) */
+.product-page__media .product-page__gallery{ max-width:100%; }
+.product-page__media .product-page__gallery img{ width:100%; height:auto; object-fit:contain }
+
+/* Mobile-first: present product images in a horizontal reel (snap + swipe) */
+body.single-product .product-page__media .product-page__gallery-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+}
+
+/* Hide native scrollbars but keep scrolling (swipe) */
+body.single-product .product-page__media .product-page__gallery-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+body.single-product .product-page__media .product-page__gallery-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Ensure media area has room for outside numeric indicator */
+.product-page__media { position: relative; }
+
+/* Indicator wrapper positioned after the media area so it won't be overlapped */
+.product-page__gallery-indicator-wrap { text-align:center; margin-top:8px; z-index:100; position:relative; }
+
+/* Style numeric indicator centered below the gallery (black font) */
+.beslock-gallery-indicator {
+  display: inline-block !important;
+  background: transparent !important;
+  color: #000 !important;
+  padding: 2px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  z-index: 100 !important;
+  pointer-events: none !important;
+}
+
+/* Prevent product info (title/price/desc) overlapping the indicator */
+body.single-product .product-page__info {
+  margin-top: 0 !important;
+}
+
+/* Ensure there is 2rem spacing between the counter and the product info/title block */
+.product-page__gallery-counter {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Hide dot controls and nav buttons entirely */
+.beslock-gallery-dots, .beslock-gallery-bottom, .beslock-gallery-nav, .beslock-gallery-dot {
+  display: none !important;
+}
+
+body.single-product .product-page__media .product-page__gallery-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* Force Woo gallery containers to behave like our reel (clipped single-slide view) */
+.product-page__gallery-wrapper,
+.product-page__gallery,
+.woocommerce-product-gallery,
+
+/* Use native scroll-snap for galleries (mobile-first) */
+.product-page__gallery, .product-page__gallery-wrapper, .woocommerce-product-gallery, .woocommerce-product-gallery__wrapper {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  scroll-snap-type: x mandatory !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+/* Slides: occupy full viewport width and snap into place (one per view) */
+.product-page__gallery-slide,
+.woocommerce-product-gallery__image,
+.product-page__gallery-wrapper > div,
+.product-page__gallery-wrapper img {
+  scroll-snap-align: center !important;
+  display: block !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* If you previously created a canonical gallery, hide _that_ instead of the Woo gallery.
+   The Woo gallery is the source of slides; ensure it's visible. */
+
+/* Prevent any gallery children from triggering full-screen or lightbox via pointer events on anchors */
+.product-page__gallery a,
+.product-page__gallery img {
+  touch-action: pan-y pinch-zoom; /* allow vertical scroll and pinch */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Images fill the slide width while preserving aspect */
+.product-page__gallery-slide img,
+.woocommerce-product-gallery__image img,
+.product-page__gallery-wrapper img,
+.product-page__gallery img,
+.wp-post-image {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Ensure no duplicate canonical/reel or clone-specific styles apply */
+.product-page__gallery-canonical,
+.product-page__gallery-slide--clone {
+  display: none !important;
+}
+
+/* Neutralize additional flex/scroll containers so only the reel manages scrolling */
+.product-page__gallery,
+.product-page__gallery-wrapper,
+.woocommerce-product-gallery__wrapper {
+  display: block !important;
+  overflow: hidden !important;
+  flex: none !important;
+  width: 100% !important;
+  touch-action: pan-x pan-y !important;
+}
+
+/* Make `.product-page__gallery-reel` the single scroll track */
+.product-page__gallery-reel {
+  display: flex !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  flex-wrap: nowrap !important;
+  scroll-snap-type: x mandatory !important;
+  width: 100% !important;
+}
+
+.product-page__gallery-reel > * {
+  flex: 0 0 100% !important;
+  scroll-snap-align: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Counter positioned inside canonical viewport, bottom-centered relative to reel width */
+.product-page__gallery-counter {
+  /* Plain text: inherit surrounding typography and flow */
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  background: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  z-index: auto !important;
+  pointer-events: auto !important;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.product-page__gallery-counter-text { letter-spacing: 0; }
+
+/* Plain simple text counter: no overlay styling, inherit surrounding text */
+.product-page__gallery-canonical .product-page__gallery-counter {
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  transform: none !important;
+  background: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  z-index: auto !important;
+  pointer-events: auto !important;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+}
+.product-page__gallery-canonical .product-page__gallery-counter-text {
+  background: none !important;
+  color: #000 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+}
+
+body.single-product .product-page__media .product-page__gallery-slide img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+/* Hide default extra thumbnails that may appear under gallery on small screens */
+body.single-product .product-page__gallery .flex-control-thumbs {
+  display: none !important;
+}
+
+/* Improve scrollbar appearance (subtle) */
+body.single-product .product-page__media .woocommerce-product-gallery__wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+body.single-product .product-page__media .woocommerce-product-gallery__wrapper::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+}
+
+/* ==================================================
+   Scoped Reset & BEM Adapter (Phase 1 safe migration)
+   - Neutralize only visual/layout properties under single-product
+   - Do NOT change WooCommerce functional classes or HTML
+   - This block is intentionally conservative and non-layout (no grid/flex)
+   ==================================================*/
+
+body.single-product {
+  overflow-x: hidden;
+}
+
+body.single-product * {
+  box-sizing: border-box;
+}
+
+body.single-product h1,
+body.single-product h2,
+body.single-product h3,
+body.single-product p,
+body.single-product ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================================================
+   Final clean gallery styles (appended)
+   This block implements the requested final structure,
+   scroll-snap behavior, dots and counter UI.
+   ================================================== */
+
+body.single-product .product-page__gallery {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+body.single-product .product-page__gallery-reel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body.single-product .product-page__gallery-reel::-webkit-scrollbar { display: none; }
+
+body.single-product .product-page__gallery-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: center;
+}
+
+body.single-product .product-page__gallery-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Step 1: enable native touch scroll while allowing horizontal swipe */
+.product-page__gallery-reel {
+  touch-action: pan-x pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Step 2: ensure slides allow pointer events so native scrolling works
+  Images remain non-draggable and do not capture text selection */
+.product-page__gallery-slide { pointer-events: auto; }
+.product-page__gallery-slide img { pointer-events: auto; user-select: none; -webkit-user-drag: none; touch-action: manipulation; }
+
+body.single-product .product-gallery__ui {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+body.single-product .product-gallery__dots { display:flex; gap:8px; }
+
+body.single-product .product-gallery__dot { width:6px; height:6px; border-radius:50%; background:#ccc; transition:all .2s ease; cursor:pointer; }
+body.single-product .product-gallery__dot.is-active { background:#111; transform:scale(1.3); }
+
+body.single-product .product-gallery__counter { font-size:12px; color:#666; }
+
+/* non-destructive hiding of legacy wrappers to keep DOM clean visually */
+.product-page__gallery-canonical,
+.product-page__gallery-wrapper { display:none; }
+
+/* Mobile: hide description under the title; show on >=768px */
+/* Make this rule specific to single-product and force it when needed
+   to override `.single-product .product-page__excerpt` in other files. */
+@media (max-width: 767px) {
+  .single-product .product-page__excerpt { display: none !important; }
+}
+@media (min-width: 768px) {
+  .single-product .product-page__excerpt { display: block !important; }
+}
+
+/* Defensive: also hide common WooCommerce short description selectors on mobile */
+@media (max-width: 767px) {
+  .single-product .woocommerce-product-details__short-description,
+  .single-product .summary .woocommerce-product-details__short-description { display: none !important; }
+}
+@media (min-width: 768px) {
+  .single-product .woocommerce-product-details__short-description,
+  .single-product .summary .woocommerce-product-details__short-description { display: block !important; }
+}
+
+
+body.single-product ul {
+  list-style: none;
+}
+
+body.single-product img {
+  max-width: 100%;
+  display: block;
+}
+
+body.single-product a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Neutralize dangerous global offenders in-scope */
+body.single-product [style*="width: 100vw"],
+body.single-product .full-width {
+  max-width: 100% !important;
+}
+
+body.single-product nav#mobileDrawer .mobile-drawer__panel {
+  max-width: 100vw !important;
+  overflow: hidden !important;
+}
+
+body.single-product nav#mobileDrawer:not(.is-open) {
+  display: none !important;
+}
+
+/* BEM adapter layer: alias old `product-page__*` to new `.product__*`
+   These are non-layout aliases only — do not add grid/flex here. */
+.product {}
+
+.product-page { /* temporary base to allow coexistence */ }
+
+.product-page__hero,
+.product__hero {}
+
+.product-page__media,
+.product__media {}
+
+.product-page__info,
+.product__info {}
+
+.product-page__buy,
+.product__buy {}
+
+.product-page__tabs,
+.product__details {}
+
+/* End scoped reset & adapter */
+
+/* Force product price visual parity with front page (high specificity) */
+.single-product .summary .price,
+.single-product p.price,
+.single-product .product-page__price,
+.single-product .woocommerce-Price-amount,
+body.single-product .price {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+  text-align: center !important;
+}
+
+/* Ensure the exact markup used on front page (bdi + currency span) matches */
+.single-product .summary .price bdi,
+.single-product .summary .price bdi .woocommerce-Price-currencySymbol,
+.single-product .summary .price bdi .woocommerce-Price-amount {
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+  line-height: 1 !important;
+  display: inline-block !important;
+}
+
+/* ==================================================
+   Phase 2 — Layout structure (mobile-first, layout-only)
+   - Mobile-first stacking then desktop two-column at >=1024px
+   - Layout-only: no colors, shadows, fonts or animations
+   ==================================================*/
+
+.product,
+.product-page {
+  width: 100%;
+}
+
+.product__hero,
+.product-page__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.product__media,
+.product-page__media {
+  width: 80vw;
+  max-width: 480px;
+}
+
+.product__info,
+.product-page__info {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.product__buy,
+.product-page__gallery-counter { text-align:center; margin-top:8px; }
+.product-page__gallery-counter-text {
+  display:inline-block; color:inherit; background:transparent; font-weight:400; font-size:inherit; padding:0; border-radius:0; z-index:100; pointer-events:none;
+}
+
+/* Remove legacy control styles (if any remain) */
+.beslock-gallery-dots, .beslock-gallery-bottom, .beslock-gallery-nav, .beslock-gallery-dot, .beslock-gallery-indicator, .product-page__gallery-indicator-wrap { display:none !important; }
+.product-page__buy {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.product__details,
+.product-page__tabs {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+
+  .product__hero,
+  .product-page__hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 40vh;
+  }
+
+  .product__media,
+  .product-page__media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .product__info,
+  .product-page__info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+/* End Phase 2 layout rules */
+
+/* ==================================================
+   Phase 2B — Stabilization & Cleanup (layout-only)
+   - Remove horizontal scroll for gallery, prevent hero overlap
+   - Scoped strictly under body.single-product
+   ==================================================*/
+
+body.single-product .product-page__media {
+  overflow: hidden;
+}
+
+body.single-product .beslock-gallery-reel {
+  overflow: hidden;
+  display: flex;
+}
+
+body.single-product .beslock-gallery-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+body.single-product .beslock-gallery-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body.single-product .product-page__hero {
+  position: relative;
+  z-index: 1;
+}
+
+body.single-product .product-page__info {
+  position: relative;
+  z-index: 2;
+}
+
+/* Critical fix: allow flex/grid children to shrink properly */
+body.single-product .product-page__hero > * {
+  min-width: 0;
+}
+
+body.single-product {
+  overflow-x: hidden;
+}
+
+/* End Phase 2B */
+
+/* ==================================================
+   Phase 2 — REAL layout control (mobile-first, layout-only)
+   Implements grid hero container, gallery containment, info column, tabs layout
+   ==================================================*/
+
+body.single-product main.product-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body.single-product .product-page__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  min-height: 40vh;
+}
+
+@media (min-width: 1024px) {
+  body.single-product .product-page__hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+/* Gallery control */
+body.single-product .product-page__media {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+body.single-product .product-page__gallery {
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+}
+
+body.single-product .product-page__gallery-wrapper {
+  display: flex;
+}
+
+body.single-product .product-page__gallery-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+body.single-product .product-page__gallery-slide img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+/* Info column */
+body.single-product .product-page__info {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  body.single-product .product-page__info {
+    text-align: left;
+    margin: 0;
+  }
+}
+
+/* Global guard */
+body.single-product {
+  overflow-x: hidden;
+}
+
+/* Tabs are handled by BEM `.product-tabs__*` selectors below. */
+
+/* End Phase 2 REAL layout control */
+
+/* ==================================================
+   Phase 2C — Structural cleanup and control (layout-only)
+   - Remove Woo tabs output (hooked), add static tabs markup, enforce gallery containment
+   ==================================================*/
+
+/* Gallery final control */
+body.single-product .woocommerce-product-gallery {
+  overflow: hidden;
+}
+
+body.single-product .woocommerce-product-gallery__wrapper {
+  display: flex;
+  width: 100%;
+}
+
+body.single-product .woocommerce-product-gallery__image {
+  flex: 0 0 100%;
+}
+
+body.single-product .woocommerce-product-gallery__image img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+/* Hard guard to remove horizontal scroll */
+body.single-product {
+  overflow-x: hidden;
+}
+
+/* ==================================================
+   FORCE: single scroll container for gallery
+   Applied as a last-resort override to neutralize all
+   other scroll/flex containers and make only the
+   `.product-page__gallery-reel` act as the horizontal
+   scrolling track.
+   ==================================================*/
+
+/* Step 2: hard reset all candidate containers */
+.product-page__gallery,
+.product-page__gallery-wrapper,
+.product-page__gallery-canonical,
+.woocommerce-product-gallery,
+.woocommerce-product-gallery__wrapper {
+  display: block !important;
+  overflow: hidden !important;
+  flex: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Step 3: define the only track that scrolls */
+.product-page__gallery-reel {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  scroll-snap-type: x mandatory !important;
+  width: 100% !important;
+  gap: 0 !important;
+}
+
+/* Step 4: lock slides to full width */
+.product-page__gallery-reel > *,
+.product-page__gallery-slide {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  scroll-snap-align: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure images inside slides don't exceed their container */
+.product-page__gallery-reel img,
+.product-page__gallery-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+/* Spacing between hero and tabs/details */
+body.single-product .product-page__details {
+  margin-top: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Basic tab layout (no design) */
+.product-tabs__nav {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.product-tabs__tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.product-tabs__panel {
+  display: none;
+}
+
+.product-tabs__panel.is-active {
+  display: block;
+}
+
+/* End Phase 2C */
+
+/* ==================================================
+   Phase 2D — Final gallery/tabs/overflow controls (layout-only)
+   - Force only first gallery image visible
+   - Strict overflow guards and minimal tab layout tweaks
+   ==================================================*/
+
+/* Disable slider behavior: show only first image */
+body.single-product .woocommerce-product-gallery__wrapper {
+  display: block;
+}
+
+body.single-product .woocommerce-product-gallery__image {
+  display: none;
+}
+
+body.single-product .woocommerce-product-gallery__image:first-child {
+  display: block;
+}
+
+/* Remove horizontal overflow strictly */
+body.single-product {
+  overflow-x: hidden;
+}
+
+body.single-product * {
+  max-width: 100%;
+}
+
+/* Tabs spacing and layout adjustments */
+body.single-product .product-page__details {
+  margin-top: 120px;
+}
+
+.product-tabs__nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+/* Active tab structural indicator */
+.product-tabs__tab {
+  position: relative;
+}
+
+.product-tabs__tab.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+
+/* Keep panels hidden by default; JS will toggle .is-active */
+.product-tabs__panel { display: none; }
+.product-tabs__panel.is-active { display: block; }
+
+/* End Phase 2D */
+
+/* Emergency override removed — gallery sizing is controlled by core blocks above. */
+/* Gallery reel behavior: allow multiple slides and make them full-width.
+   When multiple images exist, JS initializes an infinite reel/slider and
+   uses the wrapper transform to show slides. Rules are scoped to
+   `body.single-product` and use !important only to defeat legacy interfering
+   declarations while remaining localized. */
+body.single-product .product-page__media .woocommerce-product-gallery__wrapper {
+  display: flex !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+body.single-product .product-page__media .woocommerce-product-gallery__image {
+  display: block !important;
+  flex: 0 0 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+body.single-product .product-page__media .woocommerce-product-gallery__image img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+

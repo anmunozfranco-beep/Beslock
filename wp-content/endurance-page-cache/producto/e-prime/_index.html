@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Performance: preconnect a CDN / fonts -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload hero poster image on front page to improve LCP (si existe) -->
+  
+  <title>e-Prime &#8211; beslock</title>
+<meta name='robots' content='max-image-preview:large' />
+  <script>
+  (function(){
+    function openOverlay(src){
+      try{
+        if(window.__beslock_inline_overlay) return;
+        var overlay = document.createElement('div');
+        overlay.id = 'beslock-inline-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.left = '0';
+        overlay.style.top = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(8,8,8,0.95)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = 2147483647;
+        overlay.style.cursor = 'zoom-out';
+
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.style.maxWidth = '100%';
+        img.style.maxHeight = '100%';
+        img.style.objectFit = 'contain';
+
+        var btn = document.createElement('button');
+        btn.setAttribute('type','button');
+        btn.setAttribute('aria-label','Close image');
+        btn.className = 'beslock-inline-close';
+        btn.innerHTML = '\u00D7';
+        btn.style.position = 'absolute';
+        btn.style.top = '12px';
+        btn.style.right = '12px';
+        btn.style.width = '44px';
+        btn.style.height = '44px';
+        btn.style.border = '0';
+        btn.style.borderRadius = '22px';
+        btn.style.background = 'rgba(0,0,0,0.5)';
+        btn.style.color = '#fff';
+        btn.style.fontSize = '28px';
+        btn.style.lineHeight = '44px';
+        btn.style.textAlign = 'center';
+        btn.style.cursor = 'pointer';
+        btn.style.zIndex = 2147483650;
+
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          try{ if(overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }catch(err){}
+          window.__beslock_inline_overlay = null;
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', onKey);
+        }, false);
+
+        overlay.style.position = 'fixed';
+        overlay.style.padding = '24px';
+
+        overlay.appendChild(btn);
+        overlay.appendChild(img);
+
+        function close(){
+          try{ if(overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }catch(e){}
+          window.__beslock_inline_overlay = null;
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', onKey);
+        }
+
+        function onKey(e){ if(e.key === 'Escape' || e.keyCode === 27) close(); }
+
+        overlay.addEventListener('click', function(e){
+          var actionable = e.target.closest && e.target.closest('a, button');
+          if(actionable) return;
+          close();
+        }, { capture: true });
+
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.body.appendChild(overlay);
+        window.__beslock_inline_overlay = overlay;
+        document.addEventListener('keydown', onKey);
+      }catch(e){ }
+    }
+
+    function inertAnchors(){
+      try{
+        var anchors = document.querySelectorAll('.woocommerce div.product div.images a');
+        anchors.forEach(function(a){
+          try{
+            var href = a.getAttribute('href') || a.href || '';
+            if(href && href.indexOf('/wp-content/uploads/') !== -1){
+              a.setAttribute('data-beslock-inert','1');
+              try{ a.removeAttribute('href'); }catch(e){}
+              a.style.cursor = 'default';
+            }
+          }catch(e){}
+        });
+      }catch(e){}
+    }
+
+    function onPointer(e){
+      try{
+        var a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if(!a) return;
+        if(!(a.closest && a.closest('.woocommerce div.product'))) return;
+        var href = a.getAttribute('href') || a.href || '';
+        if(href && href.indexOf('/wp-content/uploads/') !== -1){
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          try{ a.removeAttribute('href'); }catch(e){}
+          openOverlay(href);
+        }
+      }catch(err){}
+    }
+
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', inertAnchors);
+    } else { inertAnchors(); }
+
+    document.addEventListener('pointerdown', onPointer, true);
+    document.addEventListener('touchstart', onPointer, true);
+
+    try{
+      var prod = document.querySelector('.woocommerce div.product');
+      if(prod && window.MutationObserver){
+        var mo = new MutationObserver(function(){ inertAnchors(); });
+        mo.observe(prod, { childList:true, subtree:true, attributes:true });
+      }
+    }catch(e){}
+  })();
+  </script>
+    <script>
+  (function(){
+    function openOverlay(src){
+      try{
+        if(window.__beslock_inline_overlay) return;
+        var overlay = document.createElement('div');
+        overlay.id = 'beslock-inline-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.left = '0';
+        overlay.style.top = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(8,8,8,0.95)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = 2147483647;
+        overlay.style.cursor = 'zoom-out';
+
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        img.style.maxWidth = '100%';
+        img.style.maxHeight = '100%';
+        img.style.objectFit = 'contain';
+
+        var btn = document.createElement('button');
+        btn.setAttribute('type','button');
+        btn.setAttribute('aria-label','Close image');
+        btn.className = 'beslock-inline-close';
+        btn.innerHTML = '\u00D7';
+        btn.style.position = 'absolute';
+        btn.style.top = '12px';
+        btn.style.right = '12px';
+        btn.style.width = '44px';
+        btn.style.height = '44px';
+        btn.style.border = '0';
+        btn.style.borderRadius = '22px';
+        btn.style.background = 'rgba(0,0,0,0.5)';
+        btn.style.color = '#fff';
+        btn.style.fontSize = '28px';
+        btn.style.lineHeight = '44px';
+        btn.style.textAlign = 'center';
+        btn.style.cursor = 'pointer';
+        btn.style.zIndex = 2147483650;
+
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          try{ if(overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }catch(err){}
+          window.__beslock_inline_overlay = null;
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', onKey);
+        }, false);
+
+        overlay.style.position = 'fixed';
+        overlay.style.padding = '24px';
+
+        overlay.appendChild(btn);
+        overlay.appendChild(img);
+
+        function close(){
+          try{ if(overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay); }catch(e){}
+          window.__beslock_inline_overlay = null;
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', onKey);
+        }
+
+        function onKey(e){ if(e.key === 'Escape' || e.keyCode === 27) close(); }
+
+        overlay.addEventListener('click', function(e){
+          var actionable = e.target.closest && e.target.closest('a, button');
+          if(actionable) return;
+          close();
+        }, { capture: true });
+
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        document.body.appendChild(overlay);
+        window.__beslock_inline_overlay = overlay;
+        document.addEventListener('keydown', onKey);
+      }catch(e){ }
+    }
+
+    function inertAnchors(){
+      try{
+        var anchors = document.querySelectorAll('.woocommerce div.product div.images a');
+        anchors.forEach(function(a){
+          try{
+            var href = a.getAttribute('href') || a.href || '';
+            if(href && href.indexOf('/wp-content/uploads/') !== -1){
+              a.setAttribute('data-beslock-inert','1');
+              try{ a.removeAttribute('href'); }catch(e){}
+              a.style.cursor = 'default';
+            }
+          }catch(e){}
+        });
+      }catch(e){}
+    }
+
+    function onPointer(e){
+      try{
+        var a = e.target && e.target.closest ? e.target.closest('a') : null;
+        if(!a) return;
+        if(!(a.closest && a.closest('.woocommerce div.product'))) return;
+        var href = a.getAttribute('href') || a.href || '';
+        if(href && href.indexOf('/wp-content/uploads/') !== -1){
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          try{ a.removeAttribute('href'); }catch(e){}
+          openOverlay(href);
+        }
+      }catch(err){}
+    }
+
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', inertAnchors);
+    } else { inertAnchors(); }
+
+    document.addEventListener('pointerdown', onPointer, true);
+    document.addEventListener('touchstart', onPointer, true);
+
+    try{
+      var prod = document.querySelector('.woocommerce div.product');
+      if(prod && window.MutationObserver){
+        var mo = new MutationObserver(function(){ inertAnchors(); });
+        mo.observe(prod, { childList:true, subtree:true, attributes:true });
+      }
+    }catch(e){}
+  })();
+  </script>
+  <link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel="alternate" type="application/rss+xml" title="beslock &raquo; Feed" href="http://localhost:8080/feed/" />
+<link rel="alternate" type="application/rss+xml" title="beslock &raquo; RSS de los comentarios" href="http://localhost:8080/comments/feed/" />
+			<script>document.documentElement.classList.remove( 'no-js' );</script>
+			<link rel="alternate" type="application/rss+xml" title="beslock &raquo; e-Prime RSS de los comentarios" href="http://localhost:8080/producto/e-prime/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="http://localhost:8080/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8080%2Fproducto%2Fe-prime%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="http://localhost:8080/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flocalhost%3A8080%2Fproducto%2Fe-prime%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='beslock-main-style-css' href='http://localhost:8080/wp-content/themes/beslock-custom/style.css?ver=1778098131' media='all' />
+<style id='beslock-main-style-inline-css'>
+
+.header{position:fixed;top:0;left:0;right:0;z-index:var(--z-header);}
+
+
+.header{position:fixed;top:0;left:0;right:0;z-index:var(--z-header);}
+
+/*# sourceURL=beslock-main-style-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='beslock-extra-style-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/main.css?ver=1778098211' media='all' />
+<link rel='stylesheet' id='beslock-bootstrap-icons-css' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css?ver=1.13.1' media='all' />
+<link rel='stylesheet' id='beslock-menu-products-mobile-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/menu-products-mobile.css?ver=1778098214' media='all' />
+<link rel='stylesheet' id='beslock-models-mobile-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/models-mobile.css?ver=1778098213' media='all' />
+<link rel='stylesheet' id='beslock-product-widgets-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/product-widgets.css?ver=1778253096' media='all' />
+<link rel='stylesheet' id='beslock-product-page-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/product-page.css?ver=1778252989' media='all' />
+<link rel='stylesheet' id='beslock-product-tabs-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/product-tabs.css?ver=1778254794' media='all' />
+<link rel='stylesheet' id='beslock-product-rotator-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/product-rotator.css?ver=1778098210' media='all' />
+<link rel='stylesheet' id='beslock-header-state-css-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/header-state.css?ver=1778098213' media='all' />
+<link rel='stylesheet' id='kad-splide-css' href='http://localhost:8080/wp-content/themes/kadence/assets/css/kadence-splide.min.css?ver=1.4.1' media='all' />
+<link rel='stylesheet' id='beslock-wc-scope-fix-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/wc-scope-fix.css?ver=1778253096' media='all' />
+<link rel='stylesheet' id='beslock-product-normalize-css' href='http://localhost:8080/wp-content/themes/beslock-custom/assets/css/product-normalize.css?ver=1778254723' media='all' />
+<script src="http://localhost:8080/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="http://localhost:8080/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.7.0" id="wc-jquery-blockui-js" defer data-wp-strategy="defer"></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrito","cart_url":"http://localhost:8080/carrito/","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+</script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.7.0" id="wc-add-to-cart-js" defer data-wp-strategy="defer"></script>
+<script id="wc-single-product-js-extra">
+var wc_single_product_params = {"i18n_required_rating_text":"Por favor elige una puntuaci\u00f3n","i18n_rating_options":["1 of 5 stars","2 of 5 stars","3 of 5 stars","4 of 5 stars","5 of 5 stars"],"i18n_product_gallery_trigger_text":"View full-screen image gallery","review_rating_required":"yes","flexslider":{"rtl":false,"animation":"slide","smoothHeight":true,"directionNav":false,"controlNav":"thumbnails","slideshow":false,"animationSpeed":500,"animationLoop":false,"allowOneSlide":false},"zoom_enabled":"","zoom_options":[],"photoswipe_enabled":"","photoswipe_options":{"shareEl":false,"closeOnScroll":false,"history":false,"hideAnimationDuration":0,"showAnimationDuration":0},"flexslider_enabled":""};
+//# sourceURL=wc-single-product-js-extra
+</script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=10.7.0" id="wc-single-product-js" defer data-wp-strategy="defer"></script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.7.0" id="wc-js-cookie-js" defer data-wp-strategy="defer"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Mostrar contrase\u00f1a","i18n_password_hide":"Ocultar contrase\u00f1a"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.7.0" id="woocommerce-js" defer data-wp-strategy="defer"></script>
+<link rel="https://api.w.org/" href="http://localhost:8080/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="http://localhost:8080/wp-json/wp/v2/product/201" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8080/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<meta name="generator" content="WooCommerce 10.7.0" />
+<link rel="canonical" href="http://localhost:8080/producto/e-prime/" />
+<link rel='shortlink' href='http://localhost:8080/?p=201' />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="http://localhost:8080/wp-content/uploads/2025/12/cropped-Favicon_Beslock-32x32.png" sizes="32x32" />
+<link rel="icon" href="http://localhost:8080/wp-content/uploads/2025/12/cropped-Favicon_Beslock-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="http://localhost:8080/wp-content/uploads/2025/12/cropped-Favicon_Beslock-180x180.png" />
+<meta name="msapplication-TileImage" content="http://localhost:8080/wp-content/uploads/2025/12/cropped-Favicon_Beslock-270x270.png" />
+		<style id="wp-custom-css">
+			.cmplz-manage-consent,
+.cmplz-btn.cmplz-manage-consent,
+#cmplz-manage-consent,
+.cmplz-cookiebanner,
+.cmplz-cookiebanner-container {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}		</style>
+		<link rel='stylesheet' id='wc-blocks-style-css' href='http://localhost:8080/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.7.0' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--theme-palette-1: var(--global-palette1);--wp--preset--color--theme-palette-2: var(--global-palette2);--wp--preset--color--theme-palette-3: var(--global-palette3);--wp--preset--color--theme-palette-4: var(--global-palette4);--wp--preset--color--theme-palette-5: var(--global-palette5);--wp--preset--color--theme-palette-6: var(--global-palette6);--wp--preset--color--theme-palette-7: var(--global-palette7);--wp--preset--color--theme-palette-8: var(--global-palette8);--wp--preset--color--theme-palette-9: var(--global-palette9);--wp--preset--color--theme-palette-10: var(--global-palette10);--wp--preset--color--theme-palette-11: var(--global-palette11);--wp--preset--color--theme-palette-12: var(--global-palette12);--wp--preset--color--theme-palette-13: var(--global-palette13);--wp--preset--color--theme-palette-14: var(--global-palette14);--wp--preset--color--theme-palette-15: var(--global-palette15);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: var(--global-font-size-small);--wp--preset--font-size--medium: var(--global-font-size-medium);--wp--preset--font-size--large: var(--global-font-size-large);--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--larger: var(--global-font-size-larger);--wp--preset--font-size--xxlarge: var(--global-font-size-xxlarge);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+</head>
+<body class="wp-singular product-template-default single single-product postid-201 wp-embed-responsive wp-theme-kadence wp-child-theme-beslock-custom theme-kadence woocommerce woocommerce-page woocommerce-no-js footer-on-bottom hide-focus-outline link-style-standard content-title-style-normal content-width-normal content-style-unboxed content-vertical-padding-show non-transparent-header mobile-non-transparent-header product-tab-style-normal product-variation-style-horizontal kadence-cart-button-normal">
+
+<header class="header">
+  <div class="u-container header__bar">
+    <button id="menuBtn" class="header__icon header__icon--menu" aria-controls="mobileDrawer" aria-expanded="false" aria-label="Open menu">&#9776;</button>
+
+    <a href="http://localhost:8080/" class="header__logo">
+      <span class="logo-wrapper">
+        <img src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/logo-green.png" alt="BESLOCK Logo" />
+        <span class="logo__tm" aria-hidden="true">®</span>
+      </span>
+    </a>
+
+    <script>
+    (function(){
+      function setLogoVar(){
+        var wrapper = document.querySelector('.logo-wrapper');
+        if(!wrapper) return;
+        var img = wrapper.querySelector('img');
+        if(!img) return;
+        var rect = img.getBoundingClientRect();
+        var h = rect && rect.height ? rect.height : (img.naturalHeight || 0);
+        if(h) wrapper.style.setProperty('--logo-h', h + 'px');
+          if(h) {
+            wrapper.setAttribute('data-logo-h', Math.round(h));
+            try { console.log('logo measured height:', Math.round(h)); } catch(e){}
+          }
+      }
+      document.addEventListener('DOMContentLoaded', setLogoVar);
+      window.addEventListener('resize', function(){ requestAnimationFrame(setLogoVar); });
+      var imgEl = document.querySelector('.logo-wrapper img');
+      if(imgEl){
+        if(!imgEl.complete){ imgEl.addEventListener('load', setLogoVar); }
+        else { setLogoVar(); }
+        // expose measured height for debugging/inspection
+        imgEl.addEventListener('load', function(){ var w=document.querySelector('.logo-wrapper'); if(w && imgEl.getBoundingClientRect) w.setAttribute('data-logo-h', Math.round(imgEl.getBoundingClientRect().height)); });
+      }
+    })();
+    </script>
+
+        <a href="http://localhost:8080/carrito/" class="header__icon header__icon--cart" aria-label="Go to cart">
+      <i class="bi bi-cart" aria-hidden="true"></i>
+          </a>
+  </div>
+</header>
+ 
+
+<!-- Drawer principal: no incluye botón de apertura (ese está en header.php) -->
+<nav id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="dialog" aria-label="Mobile menu">
+  <div class="mobile-drawer__panel" role="document">
+    <!-- Drawer header: close/back button at left and centered logo (same height as main header) -->
+    <div class="drawer-header" role="banner">
+      <!-- Close/back button placed at the left side of the header -->
+      <button id="closeDrawer" class="mobile-drawer__close" aria-label="Close menu">
+        <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        <span class="screen-reader-text">Back</span>
+      </button>
+
+      <!-- Centered logo (positioned absolutely to match header behavior) -->
+      <a class="drawer__logo" href="http://localhost:8080/" aria-label="Home">
+        <img src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/logo-green.png" alt="BESLOCK Logo" />
+      </a>
+    </div>
+
+    <ul class="mobile-menu" role="menu">
+      <li class="mobile-menu__item" role="none">
+        <button class="mobile-menu__link" id="productsToggle" aria-expanded="false" aria-controls="productsPanel" role="menuitem">
+          Products <span class="chev" aria-hidden="true">›</span>
+        </button>
+
+                <div id="productsPanel" class="mobile-products-panel models models--hidden" role="region" aria-hidden="true" aria-labelledby="productsToggle">
+          <section class="models__list" aria-hidden="false">
+          <article class="models__item" role="article" aria-labelledby="models-item-title-e-flex">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-flex.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-flex.webp"
+            alt="e-Flex"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-flex" class="models__item-title" tabindex="-1" aria-hidden="false">e-Flex</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Ideal para estancias cortas</span>
+          </div>
+        </div>
+      </div>
+    </article>
+        <article class="models__item" role="article" aria-labelledby="models-item-title-e-nova">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-nova.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-nova.webp"
+            alt="e-Nova"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-nova" class="models__item-title" tabindex="-1" aria-hidden="false">e-Nova</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Privacidad sin complicaciones</span>
+          </div>
+        </div>
+      </div>
+    </article>
+        <article class="models__item" role="article" aria-labelledby="models-item-title-e-orbit">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-orbit.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-orbit.webp"
+            alt="e-Orbit"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-orbit" class="models__item-title" tabindex="-1" aria-hidden="false">e-Orbit</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Desde donde te encuentres</span>
+          </div>
+        </div>
+      </div>
+    </article>
+        <article class="models__item" role="article" aria-labelledby="models-item-title-e-prime">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-prime.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-prime.webp"
+            alt="e-Prime"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-prime" class="models__item-title" tabindex="-1" aria-hidden="false">e-Prime</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Pensada para oficinas</span>
+          </div>
+        </div>
+      </div>
+    </article>
+        <article class="models__item" role="article" aria-labelledby="models-item-title-e-shield">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-shield.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-shield.webp"
+            alt="e-Shield"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-shield" class="models__item-title" tabindex="-1" aria-hidden="false">e-Shield</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Máxima protección en tu hogar</span>
+          </div>
+        </div>
+      </div>
+    </article>
+        <article class="models__item" role="article" aria-labelledby="models-item-title-e-touch">
+      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+        <picture>
+                      <source srcset="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-touch.webp" type="image/webp">
+          
+          <img
+            src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/products/e-touch.webp"
+            alt="e-Touch"
+            loading="lazy"
+            class="models__item-img"
+            width="1200"
+            height="675"
+                      />
+        </picture>
+
+        <div class="models__item-media__shade" aria-hidden="true"></div>
+
+        <div class="models__item-media__overlay" aria-hidden="false">
+          <h3 id="models-item-title-e-touch" class="models__item-title" tabindex="-1" aria-hidden="false">e-Touch</h3>
+
+          <div class="models__item-badges" aria-hidden="false">
+            <span class="models__item-badge">Acceso para todos</span>
+          </div>
+        </div>
+      </div>
+    </article>
+      </section>        </div>
+      </li>
+
+      <!-- 'Tienda de productos' item removed as requested -->
+
+      <li class="mobile-menu__item" role="none">
+        <a class="mobile-menu__link" href="http://localhost:8080/offers" role="menuitem">
+          <i class="bi bi-percent" aria-hidden="true"></i>
+          <div class="mobile-menu__meta">
+            <span class="mobile-menu__title">Catch our Limited Offers</span>
+            <span class="mobile-menu__subtitle">Save and boost profits</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="mobile-menu__item" role="none">
+        <a class="mobile-menu__link" href="http://localhost:8080/contact" role="menuitem">
+          <i class="bi bi-headset" aria-hidden="true"></i>
+          <div class="mobile-menu__meta">
+            <span class="mobile-menu__title">Contact us Now</span>
+            <span class="mobile-menu__subtitle">We are right back with you</span>
+          </div>
+        </a>
+      </li>
+
+      <li class="mobile-menu__item" role="none">
+        <a class="mobile-menu__link" href="http://localhost:8080/docs" role="menuitem">
+          <i class="bi bi-hand-thumbs-up" aria-hidden="true"></i>
+          <div class="mobile-menu__meta">
+            <span class="mobile-menu__title">Technical Documentation</span>
+            <span class="mobile-menu__subtitle">Top products on specifications</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Backdrop para cerrar tocando afuera -->
+  <div class="mobile-drawer__backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>
+</nav>
+<main class="product-page">
+
+  
+    <div class="product-page__hero">
+
+      <div class="product-page__media">
+        <div class="product-page__gallery">
+          <div class="product-page__gallery-wrapper" aria-hidden="false">
+            <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
+	<div class="woocommerce-product-gallery__wrapper">
+		<div data-thumb="http://localhost:8080/wp-content/uploads/2026/04/e-prime_-100x100.webp" data-thumb-alt="e-Prime" data-thumb-srcset="http://localhost:8080/wp-content/uploads/2026/04/e-prime_-100x100.webp 100w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-300x300.webp 300w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-600x600.webp 600w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-150x150.webp 150w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_.webp 700w"  data-thumb-sizes="(max-width: 100px) 100vw, 100px" class="woocommerce-product-gallery__image"><a href="http://localhost:8080/wp-content/uploads/2026/04/e-prime_.webp"><img width="600" height="600" src="http://localhost:8080/wp-content/uploads/2026/04/e-prime_-600x600.webp" class="wp-post-image" alt="e-Prime" data-caption="" data-src="http://localhost:8080/wp-content/uploads/2026/04/e-prime_.webp" data-large_image="http://localhost:8080/wp-content/uploads/2026/04/e-prime_.webp" data-large_image_width="700" data-large_image_height="700" decoding="async" fetchpriority="high" srcset="http://localhost:8080/wp-content/uploads/2026/04/e-prime_-600x600.webp 600w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-300x300.webp 300w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-100x100.webp 100w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_-150x150.webp 150w, http://localhost:8080/wp-content/uploads/2026/04/e-prime_.webp 700w" sizes="(max-width: 600px) 100vw, 600px" /></a></div>	</div>
+</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-page__info">
+        <h1 class="product_title entry-title">e-Prime</h1>        <p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>&nbsp;941.000</bdi></span></p>
+        <div class="woocommerce-product-details__short-description">
+	<p>Control total para accesos exigentes. Gestión avanzada de usuarios para espacios de alto flujo.</p>
+</div>
+        
+	
+	<form class="cart" action="http://localhost:8080/producto/e-prime/" method="post" enctype='multipart/form-data'>
+		
+		<div class="quantity">
+		<label class="screen-reader-text" for="quantity_69fe0837c5745">e-Prime cantidad</label>
+	<input
+		type="number"
+				id="quantity_69fe0837c5745"
+		class="input-text qty text"
+		name="quantity"
+		value="1"
+		aria-label="Cantidad de productos"
+				min="1"
+							step="1"
+			placeholder=""
+			inputmode="numeric"
+			autocomplete="off"
+			/>
+	</div>
+
+		<button type="submit" name="add-to-cart" value="201" class="single_add_to_cart_button button alt">Agregar al carrito</button>
+
+			</form>
+
+	
+      </div>
+
+    </div>
+
+    <div class="product-page__details">
+      <div class="product-tabs">
+
+        <div class="product-tabs__nav">
+          <button class="product-tabs__tab is-active">Features</button>
+          <button class="product-tabs__tab">Reviews</button>
+        </div>
+
+        <div class="product-tabs__content">
+
+          <div class="product-tabs__panel is-active">
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Sed do eiusmod tempor</li>
+              <li>Incididunt ut labore</li>
+              <li>Et dolore magna aliqua</li>
+              <li>Ut enim ad minim veniam</li>
+              <li>Quis nostrud exercitation</li>
+            </ul>
+          </div>
+
+          <div class="product-tabs__panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      const tabs = Array.from(document.querySelectorAll('.product-tabs__tab'));
+      const panels = Array.from(document.querySelectorAll('.product-tabs__panel'));
+      if(!tabs.length || !panels.length) return;
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('is-active'));
+          panels.forEach(p => p.classList.remove('is-active'));
+          tab.classList.add('is-active');
+          if(panels[index]) panels[index].classList.add('is-active');
+        });
+      });
+    });
+    </script>
+
+  
+</main>
+
+<footer class="site-footer">
+  <div class="u-container" style="padding:2rem 0; text-align:center;">
+    <img
+      class="footer-logo"
+      src="http://localhost:8080/wp-content/themes/beslock-custom/assets/images/logo-white.png"
+      alt="Beslock logo blanco"
+      loading="lazy"
+    />
+  </div>
+</footer>
+
+<!-- Sticky header / shrink (moved here desde header.php para centralizar scripts en el footer) -->
+<script>
+(function(){
+  // Throttled scroll handler to toggle .header--scrolled
+  var last = 0;
+  var throttleMS = 90;
+  // HERO gate (12vh) — recomputed on init and resize only
+  var HERO_GATE = (window && window.innerHeight) ? window.innerHeight * 0.12 : 0;
+  function updateHeroGate() { try { HERO_GATE = window.innerHeight * 0.12; } catch (e) {} }
+
+  function onScroll() {
+    var now = Date.now();
+    if (now - last < throttleMS) return;
+    last = now;
+    var header = document.querySelector('.header');
+    if (!header) return;
+    var y = window.scrollY || 0;
+    // While inside the hero keep header fully in its initial state
+    if (y < HERO_GATE) {
+      header.classList.remove('header--scrolled');
+      return;
+    }
+    if (y > 10) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  // Keep HERO_GATE correct on resize
+  window.addEventListener('resize', function(){
+    updateHeroGate();
+  }, { passive: true });
+
+  // Sincroniza el tama���o del logo del header con la variable CSS --site-logo-height
+  // para que el footer pueda usar calc(var(--site-logo-height) * 0.4)
+  function updateSiteLogoHeight() {
+    var logo = document.querySelector('.header__logo img');
+    if (!logo) return;
+    // Si la imagen a���n no tiene tama���o, intenta esperar a load
+    var setVar = function() {
+      var h = logo.clientHeight || logo.naturalHeight || 0;
+      if (h && h > 0) {
+        document.documentElement.style.setProperty('--site-logo-height', h + 'px');
+      }
+    };
+    // Si la imagen ya est��� cargada
+    if (logo.complete) {
+      setVar();
+    } else {
+      // cuando se cargue la imagen, actualiza
+      logo.addEventListener('load', setVar, { once: true });
+      // fallback: intenta de inmediato
+      setVar();
+    }
+  }
+
+  // Actualiza al cargar el DOM, al cargar la ventana y al redimensionar
+  document.addEventListener('DOMContentLoaded', updateSiteLogoHeight);
+  window.addEventListener('load', updateSiteLogoHeight);
+  window.addEventListener('resize', function() {
+    // debounce ligero
+    clearTimeout(window.__beslock_logo_h_timeout);
+    window.__beslock_logo_h_timeout = setTimeout(updateSiteLogoHeight, 120);
+  });
+})();
+</script>
+
+			<script>document.documentElement.style.setProperty('--scrollbar-offset', window.innerWidth - document.documentElement.clientWidth + 'px' );</script>
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/beslock-custom/*","/wp-content/themes/kadence/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script src="http://localhost:8080/wp-content/themes/kadence/assets/js/product-cls.min.js?ver=1.4.1" id="kadence-product-cls-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" id="gsap-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" id="scrolltrigger-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/main.js?ver=1778098238" id="beslock-main-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/main.js?ver=1778255927" id="beslock-debug-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/fix-placeholder.js?ver=1778247383" id="beslock-fix-placeholder-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/menu-products-mobile.js?ver=1778098240" id="beslock-menu-products-mobile-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/models-mobile.js?ver=1778098239" id="beslock-models-mobile-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/product-tabs.js?ver=1778098238" id="beslock-product-tabs-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/product-quantity-controls.js?ver=1778098234" id="beslock-product-qty-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/product-rotator.js?ver=1778098236" id="beslock-product-rotator-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/product-gallery-reel.js?ver=1778254615" id="beslock-product-gallery-reel-js-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/header-state.js?ver=1778098239" id="beslock-header-state-js"></script>
+<script src="http://localhost:8080/wp-content/themes/beslock-custom/assets/js/product-gallery-reel.js?ver=1778254615" id="beslock-gallery-reel-js"></script>
+<script src="http://localhost:8080/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async data-wp-strategy="async" fetchpriority="low"></script>
+<script id="kadence-navigation-js-extra">
+var kadenceConfig = {"screenReader":{"expand":"Men\u00fa hijo","expandOf":"Men\u00fa hijo de","collapse":"Men\u00fa hijo","collapseOf":"Men\u00fa hijo de"},"breakPoints":{"desktop":"1024","tablet":768},"scrollOffset":"0"};
+//# sourceURL=kadence-navigation-js-extra
+</script>
+<script src="http://localhost:8080/wp-content/themes/kadence/assets/js/navigation.min.js?ver=1.4.1" id="kadence-navigation-js" async></script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.7.0" id="sourcebuster-js-js"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"http://localhost:8080/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script src="http://localhost:8080/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.7.0" id="wc-order-attribution-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"http://localhost:8080/wp-includes/js/wp-emoji-release.min.js?ver=6.9.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=http://localhost:8080/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<!-- product-gallery-reel fetch+eval fallback DISABLED (was causing load issues). -->
+<script>console && console.info && console.info('product-gallery-reel: fetch fallback disabled');</script>
+
+</body>
+</html>
+
+<script>
+// Fallback ligero: si por alguna razón no se inicializó el drawer JS, este handler
+// garantiza que el botón del menú abra/cierre el drawer de forma básica.
+(function(){
+  function initFallback() {
+    try {
+      var menuBtn = document.getElementById('menuBtn');
+      var mobileDrawer = document.getElementById('mobileDrawer');
+      var backdrop = document.getElementById('drawerBackdrop') || document.querySelector('.mobile-drawer__backdrop');
+      if (!menuBtn || !mobileDrawer) return;
+
+      // No sobrescribimos si ya existe la API moderna
+      if (window.beslock && window.beslock.drawer && (typeof window.beslock.drawer.open === 'function')) return;
+
+      function open() {
+        mobileDrawer.classList.add('is-open');
+        mobileDrawer.setAttribute('aria-hidden','false');
+        menuBtn.setAttribute('aria-expanded','true');
+        if (backdrop) backdrop.classList.add('backdrop-visible');
+        document.documentElement.classList.add('has-drawer-open');
+        document.body.style.position = 'fixed';
+      }
+      function close() {
+        mobileDrawer.classList.remove('is-open');
+        mobileDrawer.setAttribute('aria-hidden','true');
+        menuBtn.setAttribute('aria-expanded','false');
+        if (backdrop) backdrop.classList.remove('backdrop-visible');
+        document.documentElement.classList.remove('has-drawer-open');
+        document.body.style.position = '';
+      }
+
+      menuBtn.addEventListener('click', function(e){ e && e.preventDefault && e.preventDefault(); if (mobileDrawer.classList.contains('is-open')) close(); else open(); });
+      if (backdrop) backdrop.addEventListener('click', function(e){ e && e.preventDefault && e.preventDefault(); close(); });
+    } catch (e) { /* silent */ }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFallback); else initFallback();
+})();
+</script>
+<script>
+// Emergency runtime safeguard: if header or cart are hidden by other scripts,
+// force them visible. This runs late to override transient states.
+(function(){
+  try{
+    var hdr = document.querySelector('.header');
+    if(hdr){ hdr.style.setProperty('display','flex','important'); hdr.style.setProperty('visibility','visible'); hdr.style.setProperty('opacity','1'); hdr.style.setProperty('z-index','9998'); }
+    var cart = document.querySelector('.header__icon--cart');
+    if(cart){ cart.style.setProperty('display','flex','important'); cart.style.setProperty('visibility','visible'); cart.style.setProperty('opacity','1'); cart.style.setProperty('z-index','9999'); }
+    var tm = document.querySelector('.logo__tm');
+    if(tm){ tm.style.setProperty('font-size','20px','important'); tm.style.setProperty('opacity','1'); tm.style.setProperty('display','inline-flex','important'); }
+  }catch(e){ console && console.error && console.error('beslock: emergency header restore failed', e); }
+})();
+</script>
+<script>
+
+<!--Generated by Endurance Page Cache-->

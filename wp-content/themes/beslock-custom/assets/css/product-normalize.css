@@ -1,0 +1,221 @@
+/* product-normalize.css
+  Single-product stabilization slice.
+  Loaded last on single-product to override fragile hacks safely.
+  Mobile-first, focused on hero alignment, spacing and control consistency.
+*/
+
+.single-product .product-page__hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  min-height: auto;
+}
+
+.single-product .product-page__info {
+  margin-top: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 27rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: clamp(0.55rem, 1vw, 0.85rem);
+}
+
+body.single-product .product-page__info {
+  text-align: center !important;
+}
+
+.single-product .product-page__title {
+  margin-top: 0 !important;
+}
+
+body.single-product .product-page__info .product_title,
+body.single-product .product-page__info h1 {
+  margin: 0;
+  max-width: 10ch;
+  text-align: center;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+body.single-product .product-page__info .price,
+body.single-product .product-page__info .product-page__price {
+  margin: 0;
+  text-align: center !important;
+}
+
+body.single-product .product-page__excerpt,
+body.single-product .woocommerce-product-details__short-description,
+body.single-product .summary .woocommerce-product-details__short-description {
+  max-width: 32ch;
+  margin: 0 auto;
+  text-align: center !important;
+  line-height: 1.35;
+}
+
+body.single-product .product-page__info form.cart,
+body.single-product .product-page__info .beslock-buy-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0;
+}
+
+body.single-product .product-page__info .quantity,
+body.single-product .product-page__info .beslock-qty {
+  margin: 0 auto;
+}
+
+body.single-product .product-page__info .beslock-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.single-product .product-page__info .beslock-qty button,
+body.single-product .product-page__info .quantity button,
+body.single-product .beslock-qty button {
+  appearance: none;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  min-width: 47px;
+  height: 47px;
+  min-height: 47px;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  border: 1px solid #d8dee6 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  color: var(--beslock-green) !important;
+  font-size: 1.25rem;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body.single-product .product-page__info .beslock-qty input,
+body.single-product .product-page__info .quantity input.qty,
+body.single-product .beslock-qty input.qty {
+  height: 47px !important;
+  min-height: 47px;
+  box-sizing: border-box;
+}
+
+body.single-product .product-page__info .single_add_to_cart_button,
+body.single-product .product-page__buy .single_add_to_cart_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  height: 44px !important;
+  margin: 0;
+  padding: 0 1.1rem !important;
+  box-sizing: border-box !important;
+  border: none;
+  border-radius: 10px;
+  background: var(--beslock-green) !important;
+  color: #fff !important;
+  font-weight: 700;
+  line-height: 1.1 !important;
+  opacity: 0.6 !important;
+  transition: opacity 280ms cubic-bezier(.16,.84,.29,1), transform 360ms cubic-bezier(.16,.84,.29,1), box-shadow 360ms cubic-bezier(.16,.84,.29,1);
+  will-change: transform, opacity, box-shadow;
+  backface-visibility: hidden;
+}
+
+body.single-product .product-page__info .single_add_to_cart_button:hover,
+body.single-product .product-page__buy .single_add_to_cart_button:hover {
+  opacity: 1 !important;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(3,69,38,0.10);
+  background: var(--beslock-green) !important;
+  color: #fff !important;
+}
+
+body.single-product .product-page__info .single_add_to_cart_button:active,
+body.single-product .product-page__buy .single_add_to_cart_button:active {
+  transform: translateY(0) scale(0.995);
+  box-shadow: 0 4px 10px rgba(3,69,38,0.06);
+}
+
+body.single-product .product-page__info .single_add_to_cart_button:focus,
+body.single-product .product-page__buy .single_add_to_cart_button:focus {
+  outline: 3px solid rgba(3,69,38,0.14);
+}
+
+.single-product .product-page__media {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.single-product .product-page__gallery {
+  margin: 0 auto;
+}
+
+body.single-product .product-gallery__ui {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+body.single-product .product-gallery__counter {
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+body.single-product .product-page__gallery-slide img {
+  image-rendering: auto;
+}
+
+body.single-product .product-page__gallery-reel {
+  cursor: grab;
+  overscroll-behavior-x: contain;
+}
+
+body.single-product .product-page__gallery-reel.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  user-select: none;
+}
+
+.single-product .product-page__gallery,
+.single-product .product-page__gallery-reel,
+.single-product .woocommerce-product-gallery,
+.single-product .product-page__gallery-wrapper {
+  max-width: 100%;
+  overflow: visible;
+}
+
+.single-product .product-page__hero > * {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  body.single-product .product-page__hero {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 0;
+    height: auto;
+  }
+  body.single-product .product-page__media { order: 0; margin-top: 0; align-self: center; }
+  body.single-product .product-page__info { order: 1; margin-top: 0; align-self: center; }
+  body.single-product .product-page__details { width: min(100%, 900px); margin: 0.75rem auto 0; }
+}

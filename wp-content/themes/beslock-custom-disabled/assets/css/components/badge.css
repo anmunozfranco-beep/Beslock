@@ -1,0 +1,67 @@
+/* BEM Phase 1 placeholder: components/badge.css
+   Product badge styles to be migrated later. KEEP EMPTY for now. */
+
+/* Base product-card badge positioning (migrated from main.css)
+   Phase 1: only move safe, layout-sensitive properties (position, top/right,
+   size, transform, transform-origin, z-index, pointer-events). Do NOT move
+   transitions, filters, or advanced effects yet. */
+.product-card__badge {
+  position: absolute !important;
+  top: 6px !important;
+  right: 6px !important;
+  width: 90px !important;
+  height: auto !important;
+  transform: rotate(12deg) scale(0.75) !important;
+  transform-origin: top right;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Interaction, responsiveness, transitions & reveal animation
+    Phase: badge interaction (desktop hover, mobile always-visible, reveal)
+    Keep behaviour purely visual (overlay) — does not affect layout. */
+.product-card__badge {
+   transition: opacity 280ms ease, transform 420ms cubic-bezier(0.4,0,0.2,1);
+   will-change: transform, opacity;
+}
+
+@media (hover: hover) {
+   /* Desktop: hidden until hover */
+   .product-card__badge {
+      opacity: 0;
+      transform: translate(50%, -50%) scale(0.9) rotate(14deg) !important;
+   }
+
+   .product-card:hover .product-card__badge {
+      opacity: 1;
+      transform: translate(50%, -50%) scale(1) rotate(14deg) !important;
+   }
+}
+
+@media (hover: none), (max-width: 768px) {
+   /* Mobile: badge always visible and slightly larger for readability */
+   .product-card__badge {
+      opacity: 1 !important;
+      transform: translate(45%, -45%) rotate(12deg) !important;
+      width: 180px !important;
+      pointer-events: none;
+   }
+}
+
+@keyframes badge-pop {
+   0% {
+      opacity: 0;
+      transform: translate(50%, -50%) scale(0.8) rotate(14deg);
+   }
+   60% {
+      opacity: 1;
+      transform: translate(50%, -50%) scale(1.08) rotate(14deg);
+   }
+   100% {
+      transform: translate(50%, -50%) scale(1) rotate(14deg);
+   }
+}
+
+.section-reveal.is-active .product-card__badge {
+   animation: badge-pop 420ms cubic-bezier(0.4,0,0.2,1);
+}

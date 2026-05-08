@@ -1,0 +1,24 @@
+Import run: 2026-05-06 18:11:08
+[DEBUG_NORMALIZED]	source:products_json	slug:e-flex	title:e-Flex	price:689000	thumbnail:	gallery_count:0
+FAILED	Exception for slug:e-flex	msg:Producto no válido.
+[DEBUG_NORMALIZED]	source:products_json	slug:e-nova	title:e-Nova	price:412000	thumbnail:	gallery_count:0
+[UPDATE_MODE]	slug:e-nova	title:e-Nova
+[PRE_SAVE_DEBUG]	slug=e-nova	title=e-Nova	price=412000	status=publish	thumbnail_id=	gallery_count=0
+[PRE_SAVE_DEBUG_PAYLOAD]	{"slug":"e-nova","title":"e-Nova","excerpt":"","content":"","price":"412000","thumbnail_id":"","gallery_ids":[],"badge":"Privacidad sin complicaciones","features":[],"source":"products_json"}
+UPDATED	ID:70	slug:e-nova	title:e-Nova
+[DEBUG_NORMALIZED]	source:products_json	slug:e-orbit	title:e-Orbit	price:1734000	thumbnail:	gallery_count:0
+FAILED	Exception for slug:e-orbit	msg:Producto no válido.
+[DEBUG_NORMALIZED]	source:products_json	slug:e-prime	title:e-Prime	price:941000	thumbnail:	gallery_count:0
+FAILED	Exception for slug:e-prime	msg:Producto no válido.
+[DEBUG_NORMALIZED]	source:products_json	slug:e-shield	title:e-Shield	price:982000	thumbnail:	gallery_count:0
+FAILED	Exception for slug:e-shield	msg:Producto no válido.
+[DEBUG_NORMALIZED]	source:products_json	slug:e-touch	title:e-Touch	price:435000	thumbnail:	gallery_count:0
+FAILED	Exception for slug:e-touch	msg:Producto no válido.
+Ran wc_update_product_lookup_tables()
+LOOKUP_MISSING	slug:e-flex
+LOOKUP_MISSING	slug:e-nova
+LOOKUP_MISSING	slug:e-orbit
+LOOKUP_MISSING	slug:e-prime
+LOOKUP_MISSING	slug:e-shield
+LOOKUP_MISSING	slug:e-touch
+Summary: Created:0 Updated:1 Errors:5

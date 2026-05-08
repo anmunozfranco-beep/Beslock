@@ -1,0 +1,140 @@
+# Translation of Plugins - Captcha Code - Stable (latest release) in Spanish (Spain)
+# This file is distributed under the same license as the Plugins - Captcha Code - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-23 17:28:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Plugins - Captcha Code - Stable (latest release)\n"
+
+#: general_options.php:7
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+#: general_options.php:13
+msgid "Options saved."
+msgstr "Opciones guardadas."
+
+#: general_options.php:64
+msgid "Select Captcha letters type"
+msgstr "Seleccione el tipo de letras del Captcha"
+
+#: general_options.php:67
+msgid "Capital letters only"
+msgstr "Solo mayúsculas"
+
+#: general_options.php:68
+msgid "Small letters only"
+msgstr "Solo minúsculas"
+
+#: general_options.php:69
+msgid "Capital & Small letters"
+msgstr "Mayúsculas y minúsculas"
+
+#: general_options.php:74
+msgid "Select a Captcha type"
+msgstr "Seleccione un tipo de Captcha"
+
+#: general_options.php:77
+msgid "Alphanumeric"
+msgstr "Alfanumérico"
+
+#: general_options.php:78
+msgid "Alphabets only"
+msgstr "Solo caracteres"
+
+#: general_options.php:79
+msgid "Numbers only"
+msgstr "Solo números"
+
+#: general_options.php:84
+msgid "Total number of Captcha Characters"
+msgstr "Número total de caracteres del Captcha"
+
+#: general_options.php:98
+msgid "Captcha display Options"
+msgstr "Opciones de visualización del Captcha"
+
+#: general_options.php:101
+msgid "Enable Captcha for Login form"
+msgstr "Habilitar Captcha para el formulario de autentificación"
+
+#: general_options.php:104 general_options.php:113 general_options.php:122
+#: general_options.php:131 general_options.php:140
+msgid "Yes"
+msgstr "Sí"
+
+#: general_options.php:105 general_options.php:114 general_options.php:123
+#: general_options.php:132 general_options.php:141
+msgid "No"
+msgstr "No"
+
+#: general_options.php:110
+msgid "Enable Captcha for Register form"
+msgstr "Habilitar Captcha para el formulario de registro"
+
+#: general_options.php:119
+msgid "Enable Captcha for Lost Password form"
+msgstr "Habilitar Captcha para el formulario de recuperación de clave"
+
+#: general_options.php:128
+msgid "Enable Captcha for Comments form"
+msgstr "Habilitar Captcha para el envío de comentarios"
+
+#: general_options.php:137
+msgid "Hide Captcha for logged in users"
+msgstr "Ocultar Captcha para usuarios autentificados"
+
+#: wpCaptcha.php:81 wpCaptcha.php:149 wpCaptcha.php:168 wpCaptcha.php:227
+#: wpCaptcha.php:282
+msgid "Captcha"
+msgstr "Captcha"
+
+#: wpCaptcha.php:91 wpCaptcha.php:152 wpCaptcha.php:171 wpCaptcha.php:230
+#: wpCaptcha.php:285
+msgid "Type the text displayed above"
+msgstr "Escriba el texto mostrado arriba"
+
+#: wpCaptcha.php:104
+msgid "Captcha confirmation error!"
+msgstr "¡Error de confirmación del Captcha! "
+
+#: wpCaptcha.php:115
+msgid "Incorrect captcha confirmation!"
+msgstr "¡Confirmación incorrecta del captcha! "
+
+#: wpCaptcha.php:204
+msgid "CAPTCHA cannot be empty."
+msgstr "El CAPTCHA no puede estar vacío."
+
+#: wpCaptcha.php:208 wpCaptcha.php:303
+msgid "Error: Incorrect CAPTCHA. Press your browser's back button and try again."
+msgstr "Error: CAPTCHA incorrecto. Pulse el botón \"Atrás\" de su navegador e inténtelo de nuevo. "
+
+#: wpCaptcha.php:242 wpCaptcha.php:249 wpCaptcha.php:258 wpCaptcha.php:265
+msgid "ERROR"
+msgstr "ERROR"
+
+#: wpCaptcha.php:242 wpCaptcha.php:258 wpCaptcha.php:296
+msgid "Please complete the CAPTCHA."
+msgstr "Complete el CAPTCHA. "
+
+#: wpCaptcha.php:249 wpCaptcha.php:265
+msgid "That CAPTCHA was incorrect."
+msgstr "CAPTCHA incorrecto."
+
+#: general_options.php:11
+msgid "Sorry, your nonce did not verify."
+msgstr "Lo siento, tu nonce no se ha verificado."
+
+#. Author URI of the plugin
+msgid "http://www.webfactoryltd.com/"
+msgstr "http://www.webfactoryltd.com/"
+
+#. Author of the plugin
+msgid "WebFactory Ltd"
+msgstr "WebFactory Ltd"

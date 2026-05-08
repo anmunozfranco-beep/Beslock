@@ -1,0 +1,15 @@
+Import run: 2026-05-06 17:36:53
+FAILED	Exception for slug:e-prime	msg:Producto no válido.
+FAILED	Exception for slug:e-shield	msg:Producto no válido.
+FAILED	Exception for slug:e-flex	msg:Producto no válido.
+FAILED	Exception for slug:e-touch	msg:Producto no válido.
+FAILED	Exception for slug:e-orbit	msg:Producto no válido.
+UPDATED	ID:70	slug:e-nova	title:e-Nova
+Ran wc_update_product_lookup_tables()
+LOOKUP_MISSING	slug:e-prime
+LOOKUP_MISSING	slug:e-shield
+LOOKUP_MISSING	slug:e-flex
+LOOKUP_MISSING	slug:e-touch
+LOOKUP_MISSING	slug:e-orbit
+LOOKUP_MISSING	slug:e-nova
+Summary: Created:0 Updated:1 Errors:5

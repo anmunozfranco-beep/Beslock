@@ -862,38 +862,6 @@ body.single-product {
 }
 
 
-/* Spacing between hero and tabs/details */
-body.single-product .product-page__details {
-  margin-top: 80px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Basic tab layout (no design) */
-.product-tabs__nav {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  margin-bottom: 24px;
-}
-
-.product-tabs__tab {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.product-tabs__panel {
-  display: none;
-}
-
-.product-tabs__panel.is-active {
-  display: block;
-}
-
-/* End Phase 2C */
-
 /* ==================================================
    Phase 2D — Final gallery/tabs/overflow controls (layout-only)
    - Force only first gallery image visible
@@ -921,39 +889,6 @@ body.single-product {
 body.single-product * {
   max-width: 100%;
 }
-
-/* Tabs spacing and layout adjustments */
-body.single-product .product-page__details {
-  margin-top: 120px;
-}
-
-.product-tabs__nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 32px;
-}
-
-/* Active tab structural indicator */
-.product-tabs__tab {
-  position: relative;
-}
-
-.product-tabs__tab.is-active::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: black;
-}
-
-/* Keep panels hidden by default; JS will toggle .is-active */
-.product-tabs__panel { display: none; }
-.product-tabs__panel.is-active { display: block; }
-
-/* End Phase 2D */
 
 /* Emergency override removed — gallery sizing is controlled by core blocks above. */
 /* Gallery reel behavior: allow multiple slides and make them full-width.
