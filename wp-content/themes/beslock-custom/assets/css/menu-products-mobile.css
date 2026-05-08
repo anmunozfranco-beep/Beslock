@@ -9,6 +9,7 @@
   --drawer-bg: #ffffff;
   --products-panel-width: 100%; /* en móvil es 100%, en desktop puedes ajustarlo */
   --backdrop-color: rgba(0,0,0,0.45);
+  --drawer-header-cover-height: max(66px, calc(var(--site-logo-height, 38px) + 1.8rem));
   --drawer-ease: cubic-bezier(.22,.9,.41,1);
   --drawer-duration: 360ms;
   --backdrop-duration: 240ms;
@@ -24,7 +25,7 @@
 .drawer-header {
   position: sticky;
   top: 0;
-  z-index: 1320 !important;
+  z-index: 10050 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: flex-start !important; /* keep close button on the left */
@@ -45,6 +46,20 @@
   z-index: 2 !important;
   display: flex !important;
   align-items: center !important;
+}
+.drawer-header .drawer__logo,
+.drawer-header .drawer__logo:link,
+.drawer-header .drawer__logo:visited,
+.drawer-header .drawer__logo:hover,
+.drawer-header .drawer__logo:active {
+  color: var(--beslock-green, #034526) !important;
+  text-decoration: none !important;
+}
+.drawer-header .drawer__logo .logo-wrapper {
+  display: inline-block !important;
+}
+.drawer-header .drawer__logo .logo__tm {
+  color: inherit !important;
 }
 .drawer-header .drawer__logo img {
   display: block !important;
@@ -68,7 +83,21 @@ nav#mobileDrawer.mobile-drawer {
   position: fixed;
   inset: 0;
   display: block;
-  z-index: 1200;
+  z-index: 10020 !important;
+  pointer-events: none;
+}
+nav#mobileDrawer.is-open::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--drawer-header-cover-height);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04) inset;
+  z-index: 10035 !important;
   pointer-events: none;
 }
 
@@ -79,7 +108,7 @@ nav#mobileDrawer .mobile-drawer__backdrop,
   inset: 0 !important;
   background: rgba(0,0,0,0) !important;
   transition: background var(--backdrop-duration) ease !important;
-  z-index: 1220 !important;
+  z-index: 10030 !important;
   pointer-events: none !important;
 }
 
@@ -96,7 +125,7 @@ nav#mobileDrawer .mobile-drawer__panel {
   transform: translate3d(-100%, 0, 0) !important;
   will-change: transform, opacity !important;
   transition: transform var(--drawer-duration) var(--drawer-ease) !important;
-  z-index: 1301 !important;
+  z-index: 10040 !important;
   overflow: hidden !important; 
   display: none !important;
   /* allow absolute children to overflow */

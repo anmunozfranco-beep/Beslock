@@ -16,7 +16,10 @@
 
       <!-- Centered logo (positioned absolutely to match header behavior) -->
       <a class="drawer__logo" href="<?php echo esc_url( home_url('/') ); ?>" aria-label="<?php esc_attr_e('Home', 'beslock'); ?>">
-        <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="<?php esc_attr_e('BESLOCK Logo', 'beslock'); ?>" />
+        <span class="logo-wrapper">
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="<?php esc_attr_e('BESLOCK Logo', 'beslock'); ?>" />
+          <span class="logo__tm" aria-hidden="true">®</span>
+        </span>
       </a>
     </div>
 

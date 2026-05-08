@@ -37,6 +37,32 @@
     return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
+  function refreshDrawerLogoTm() {
+    try {
+      var wrapper = mobileDrawer.querySelector('.drawer__logo .logo-wrapper');
+      if (!wrapper) return;
+      var img = wrapper.querySelector('img');
+      if (!img) return;
+
+      function measureAndAnimate() {
+        var rect = img.getBoundingClientRect();
+        var height = rect && rect.height ? rect.height : (img.naturalHeight || 0);
+        if (height) {
+          wrapper.style.setProperty('--logo-h', height + 'px');
+          wrapper.setAttribute('data-logo-h', Math.round(height));
+        }
+        wrapper.classList.remove('loaded');
+        void wrapper.offsetWidth;
+        window.setTimeout(function () { wrapper.classList.add('loaded'); }, 120);
+      }
+
+      if (!img.complete) {
+        img.addEventListener('load', measureAndAnimate, { once: true });
+      }
+      measureAndAnimate();
+    } catch (e) {}
+  }
+
   var scrollPos = 0;
   function lockScroll() {
     scrollPos = window.scrollY || document.documentElement.scrollTop || 0;
@@ -246,6 +272,7 @@
     mobileDrawer.setAttribute('aria-hidden', 'false');
     mobileDrawer.classList.add('is-open');
     backdrop.classList.add('backdrop-visible');
+    refreshDrawerLogoTm();
     if (!prefersReducedMotion()) lockScroll(); else document.documentElement.classList.add('has-drawer-open');
     setCloseMode('close');
     var focusTarget = panel.querySelector('#closeDrawer') || panel.querySelector(focusableSelectors);
