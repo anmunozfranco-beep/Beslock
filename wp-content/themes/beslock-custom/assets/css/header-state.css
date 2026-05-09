@@ -11,9 +11,13 @@
     z-index: var(--z-header);
 }
 
+.header.header--scrolled,
 .header--scrolled {
   /* Visual compacting without changing layout height: use transform on children via the header wrapper */
-  background-color: rgba(255,255,255,0.98); /* subtle background change */
+  background-color: rgba(201, 202, 202, 0.74) !important; /* translucent gray while keeping controls solid */
+  background-image: none !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
   /* small visual lift to imply compactness (no layout shift) */
   transform: translateZ(0);
 }
@@ -31,8 +35,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.92);
-  opacity: 0.95;
+  opacity: 1;
   z-index: var(--z-logo);
+}
+
+.header--scrolled .header__icon,
+.header--scrolled .header__icon i,
+.header--scrolled .header__logo img {
+  opacity: 1;
 }
 
 /* Ensure header bar is the positioning context for the logo */

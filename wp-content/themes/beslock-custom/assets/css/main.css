@@ -812,7 +812,7 @@ body {
   opacity: 1;
 }
 .header.header--scrolled {
-  opacity: 0.25; /* preserve existing opacity animation */
+  opacity: 1;
 }
 .header *,
 .header.header--scrolled * {

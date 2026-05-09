@@ -21,8 +21,14 @@
     panel.setAttribute('aria-hidden', 'false');
     if ( toggle ) toggle.setAttribute('aria-expanded', 'true');
 
-    // Focus the first heading inside the panel for accessibility
+    // Focus the first interactive card when available.
     try {
+      var firstLink = panel.querySelector('.models__item-link');
+      if ( firstLink ) {
+        firstLink.focus({ preventScroll: false });
+        return;
+      }
+
       var heading = panel.querySelector('[id^="models-item-title"]');
       if ( heading ) {
         heading.setAttribute('tabindex', '-1');

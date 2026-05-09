@@ -87,6 +87,26 @@ function beslock_title_from_base( $base ) {
   }
   return implode( '-', $segments );
 }
+
+if ( ! function_exists( 'beslock_get_product_url_from_base' ) ) {
+  function beslock_get_product_url_from_base( $base ) {
+    $base = sanitize_title( (string) $base );
+    if ( '' === $base ) {
+      return '';
+    }
+
+    $product_post = get_page_by_path( $base, OBJECT, 'product' );
+    if ( ! $product_post instanceof WP_Post ) {
+      return '';
+    }
+
+    if ( 'publish' !== get_post_status( $product_post ) ) {
+      return '';
+    }
+
+    return (string) get_permalink( $product_post );
+  }
+}
 ?>
 <section class="models__list" aria-hidden="false">
   <?php if ( empty( $files ) ) : ?>
@@ -115,9 +135,13 @@ function beslock_title_from_base( $base ) {
       $title = beslock_title_from_base( $base );
       $badge = isset( $badge_overrides[ $base ] ) ? $badge_overrides[ $base ] : 'Cerradura Electronica';
       $focal = isset( $focal_overrides[ $base ] ) ? $focal_overrides[ $base ] : '';
+      $product_url = beslock_get_product_url_from_base( $base );
       $id_safe = 'models-item-title-' . sanitize_html_class( $base );
     ?>
     <article class="models__item" role="article" aria-labelledby="<?php echo esc_attr( $id_safe ); ?>">
+      <?php if ( ! empty( $product_url ) ) : ?>
+      <a class="models__item-link" href="<?php echo esc_url( $product_url ); ?>" aria-labelledby="<?php echo esc_attr( $id_safe ); ?>">
+      <?php endif; ?>
       <div class="models__item-media models__item-media--lazy" aria-hidden="false">
         <picture>
           <?php if ( $webp_uri ) : ?>
@@ -147,6 +171,9 @@ function beslock_title_from_base( $base ) {
           </div>
         </div>
       </div>
+      <?php if ( ! empty( $product_url ) ) : ?>
+      </a>
+      <?php endif; ?>
     </article>
     <?php endforeach; ?>
   <?php endif; ?>
