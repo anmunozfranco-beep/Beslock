@@ -179,12 +179,56 @@
       var elements = Array.prototype.slice.call(document.querySelectorAll('.section-reveal'));
       if (!elements.length) return;
 
+      var mobilePortfolioLoadReveals = [];
+      var observedElements = elements;
+
+      if (window.matchMedia && window.matchMedia('(max-width: 599px)').matches) {
+        mobilePortfolioLoadReveals = elements.filter(function (el) {
+          try {
+            return el.matches('.products-portfolio.section-reveal, .products-portfolio .section-reveal');
+          } catch (e) {
+            return false;
+          }
+        });
+
+        observedElements = elements.filter(function (el) {
+          return mobilePortfolioLoadReveals.indexOf(el) === -1;
+        });
+      }
+
       // Apply a gentle per-element stagger order so reveals feel premium
-      elements.forEach(function (el, i) {
+      observedElements.forEach(function (el, i) {
         if (!el.style.getPropertyValue('--delay')) el.style.setProperty('--delay', (i * 70) + 'ms');
         // also set a small inline transitionDelay for CSS transition timing
         el.style.transitionDelay = el.style.transitionDelay || (el.style.getPropertyValue('--delay') || '0ms');
       });
+
+      // On mobile, product portfolio cards should reveal on load rather than waiting for scroll.
+      if (mobilePortfolioLoadReveals.length) {
+        var mobilePortfolioCardIndex = 0;
+        mobilePortfolioLoadReveals.forEach(function (el) {
+          var delay = 0;
+          if (!el.matches('.products-portfolio.section-reveal')) {
+            delay = 140 + (mobilePortfolioCardIndex * 90);
+            mobilePortfolioCardIndex += 1;
+          }
+          el.style.setProperty('--delay', delay + 'ms');
+          el.style.transitionDelay = delay + 'ms';
+        });
+
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            mobilePortfolioLoadReveals.forEach(function (el) {
+              el.classList.add('is-active');
+            });
+          });
+        });
+      }
+
+      if (!observedElements.length) {
+        console.log('main.js: section reveals initialized (hero-based)');
+        return;
+      }
 
       var observer = new IntersectionObserver(function (entries, observer) {
         entries.forEach(function (entry) {
@@ -195,7 +239,7 @@
         });
       }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
 
-      elements.forEach(function (el) { observer.observe(el); });
+      observedElements.forEach(function (el) { observer.observe(el); });
       console.log('main.js: section reveals initialized (hero-based)');
     } catch (e) { console.warn('initSectionReveals error', e); }
   }
@@ -520,21 +564,61 @@
 
 })();
 
-/* Failsafe: ensure loader is hidden even if other JS modules fail */
+/* Failsafe: if hero boot stalls, reveal the first slide instead of leaving a black screen. */
 (function(){
   try{
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function(){
-        try{
-          var l = document.getElementById('beslockLoader') || document.querySelector('.beslock-loader');
-          if (l){ l.style.display = 'none'; l.setAttribute('aria-hidden','true'); l.style.pointerEvents = 'none'; }
-        }catch(e){}
-      }, { once:true });
-    } else {
+    function hideLoader(loader){
+      if (!loader) return;
+      loader.setAttribute('aria-hidden','true');
+      loader.style.pointerEvents = 'none';
+    }
+
+    function forceHeroVisible(){
       try{
-        var l = document.getElementById('beslockLoader') || document.querySelector('.beslock-loader');
-        if (l){ l.style.display = 'none'; l.setAttribute('aria-hidden','true'); l.style.pointerEvents = 'none'; }
+        var hero = document.getElementById('beslockHero');
+        var loader = document.getElementById('beslockLoader') || document.querySelector('.beslock-loader');
+        if (!hero) {
+          hideLoader(loader);
+          return;
+        }
+
+        setTimeout(function(){
+          try{
+            if (hero.classList.contains('ready')) return;
+            var slides = Array.prototype.slice.call(hero.querySelectorAll('.hero-slides > .hero-slide'));
+            var firstSlide = slides[0];
+            if (firstSlide) {
+              slides.forEach(function(slide, index){
+                if (index === 0) {
+                  slide.classList.add('is-active');
+                  slide.classList.remove('is-exiting');
+                  slide.setAttribute('aria-hidden','false');
+                } else {
+                  slide.classList.remove('is-active');
+                  slide.classList.remove('is-exiting');
+                  slide.setAttribute('aria-hidden','true');
+                }
+              });
+              var firstVideo = firstSlide.querySelector('.slide-video');
+              if (firstVideo && typeof firstVideo.play === 'function') {
+                firstVideo.play().catch(function(){});
+              }
+            }
+            hero.classList.add('ready');
+            hideLoader(loader);
+            var startupFallback = hero.querySelector('#heroStartupFallback');
+            if (startupFallback) {
+              startupFallback.setAttribute('aria-hidden', 'true');
+            }
+          } catch (e) {}
+        }, 6000);
       }catch(e){}
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', forceHeroVisible, { once:true });
+    } else {
+      forceHeroVisible();
     }
   }catch(e){}
 })();
@@ -558,11 +642,12 @@
   function HeroInit(selector){
     var root = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (!root) return null;
-    var slides = $qa('.hero-slide', root);
+    var slides = $qa('.hero-slides > .hero-slide', root);
     var dots = $qa('.hero-dot', root);
     var loader = $q('.beslock-loader', root);
-    // Loader caption position is controlled via CSS variable `--beslock-loader-offset`.
-    // Expose a small API to adjust the vertical offset programmatically.
+    var startupFallback = $q('#heroStartupFallback', root);
+    // Loader scene position is controlled via CSS variable `--beslock-loader-offset`.
+    // Expose a small API to adjust the startup composition programmatically.
     try {
       window.beslock = window.beslock || {};
       window.beslock.setLoaderOffset = function(offset){
@@ -580,6 +665,17 @@
     var featureSchedule = []; // { id, target, fn }
     var slideStartTs = 0;
     var isTouchPaused = false, touchPauseAt = 0, autoplayRemaining = null, autoplayDeadline = null;
+    var startupFallbackHidden = false;
+
+    function hideStartupFallback(immediate){
+      if (startupFallbackHidden || !startupFallback) return;
+      startupFallbackHidden = true;
+      if (immediate) {
+        startupFallback.classList.add('is-hidden-immediate');
+      }
+      startupFallback.setAttribute('aria-hidden', 'true');
+      startupFallback.style.pointerEvents = 'none';
+    }
 
     // Loader image is handled by template (favicon); no inline SVG injection needed.
     // Loader mode handling (auto/compact/normal)
@@ -643,10 +739,35 @@
     function waitFirst(){
       return new Promise(function(resolve){
         var v = slides[0] && slides[0].querySelector('.slide-video');
-        if (!v) return resolve();
-        if (v.readyState >= 4) return resolve();
-        var t = setTimeout(function(){ resolve(); }, 5000);
-        v.addEventListener('canplaythrough', function(){ clearTimeout(t); resolve(); }, { once:true });
+        var startedAt = (window.performance && typeof window.performance.now === 'function') ? window.performance.now() : Date.now();
+        if (!v) return resolve({ reason: 'missing-video', waitedMs: 0 });
+
+        var settled = false;
+        var t = null;
+        function cleanup(){
+          try { v.removeEventListener('loadeddata', onReady); } catch (e) {}
+          try { v.removeEventListener('canplay', onReady); } catch (e) {}
+          try { v.removeEventListener('canplaythrough', onReady); } catch (e) {}
+          try { if (t) clearTimeout(t); } catch (e) {}
+        }
+        function finish(reason){
+          if (settled) return;
+          settled = true;
+          cleanup();
+          var endedAt = (window.performance && typeof window.performance.now === 'function') ? window.performance.now() : Date.now();
+          resolve({
+            reason: reason,
+            waitedMs: Math.round((endedAt - startedAt) * 10) / 10,
+            readyState: v.readyState
+          });
+        }
+        function onReady(event){ finish(event && event.type ? event.type : 'ready'); }
+
+        if (v.readyState >= 2) return finish('readyState');
+        t = setTimeout(function(){ finish('timeout'); }, 4000);
+        v.addEventListener('loadeddata', onReady, { once:true });
+        v.addEventListener('canplay', onReady, { once:true });
+        v.addEventListener('canplaythrough', onReady, { once:true });
       });
     }
 
@@ -775,10 +896,6 @@
             try {
               if (String(dataOff).indexOf('px') === -1) dataOff = dataOff + 'px';
               targetOverlay.style.setProperty('--overlay-offset', dataOff);
-              // Set an inline transform using the numeric offset and mark it important
-              // so it wins over author stylesheet `!important` rules (main.css).
-              var inlineTransform = 'translateY(calc(-50% + ' + dataOff + ')) scale(1)';
-              try { targetOverlay.style.setProperty('transform', inlineTransform, 'important'); } catch(e) {}
             } catch(e) { try{ targetOverlay.style.removeProperty('--overlay-offset'); targetOverlay.style.removeProperty('transform'); }catch(e){} }
           } else {
             try{ targetOverlay.style.removeProperty('--overlay-offset'); targetOverlay.style.removeProperty('transform'); }catch(e){}
@@ -1013,16 +1130,74 @@
     // visibility pause
     document.addEventListener('visibilitychange', function(){ if (document.hidden) stopAutoplay(); else startAutoplay(); });
 
-    // wait first video then keep loader visible 2.5s, then hide loader and start
-    waitFirst().then(function(){
-      var DELAY = 2500; // ms
+    var startupCommitted = false;
+    var startupStartedAt = Date.now();
+    var STARTUP_TIMEOUT_MS = 4200;
+    var MIN_BRAND_HOLD_MS = 950;
+    var FALLBACK_RELEASE_MS = 560;
+    function publishStartupState(state, meta){
+      var detail = {
+        state: state,
+        atMs: Date.now() - startupStartedAt,
+        reason: meta && meta.reason ? meta.reason : null,
+        waitedMs: meta && typeof meta.waitedMs === 'number' ? meta.waitedMs : null,
+        readyState: meta && typeof meta.readyState === 'number' ? meta.readyState : null
+      };
+      try { root.setAttribute('data-startup-state', state); } catch (e) {}
+      try { if (loader) loader.setAttribute('data-stage', state); } catch (e) {}
+      try { window.__beslockHeroStartup = detail; } catch (e) {}
+      try {
+        if (typeof window.CustomEvent === 'function') {
+          root.dispatchEvent(new CustomEvent('beslock:hero-startup', { detail: detail }));
+          if (state === 'video-ready') root.dispatchEvent(new CustomEvent('beslock:hero-video-ready', { detail: detail }));
+          if (state === 'ready') root.dispatchEvent(new CustomEvent('beslock:hero-ready', { detail: detail }));
+        }
+      } catch (e) {}
+    }
+    function handoffToHero(meta){
+      if (startupCommitted) return;
+      startupCommitted = true;
+      publishStartupState('handoff', meta);
+      hideStartupFallback(true);
+      showSlide(0, { immediate:true });
+      startAutoplay();
+      if (loader) {
+        loader.setAttribute('aria-hidden','true');
+        loader.style.pointerEvents = 'none';
+      }
+      root.classList.add('is-handoff');
+      root.classList.add('ready');
+      publishStartupState('ready', meta);
       setTimeout(function(){
-        if (loader) loader.setAttribute('aria-hidden','true');
-        root.classList.add('ready');
-        showSlide(0, { immediate:true });
-        startAutoplay();
-      }, DELAY);
+        root.classList.remove('is-handoff');
+      }, FALLBACK_RELEASE_MS);
+      try {
+        window.__beslockHeroBoot = {
+          reason: meta && meta.reason ? meta.reason : 'unknown',
+          waitedMs: meta && typeof meta.waitedMs === 'number' ? meta.waitedMs : null,
+          handoffAtMs: Date.now() - startupStartedAt,
+          minBrandHoldMs: MIN_BRAND_HOLD_MS,
+          fallbackReleaseMs: FALLBACK_RELEASE_MS
+        };
+      } catch (e) {}
+    }
+
+    publishStartupState('booting', { reason: 'init' });
+
+    // Start the hero as soon as the first video can render a usable frame,
+    // while keeping a short minimum branded fallback so warm caches don't flash.
+    waitFirst().then(function(meta){
+      if (startupCommitted) return;
+      publishStartupState('video-ready', meta);
+      var elapsed = Date.now() - startupStartedAt;
+      var delay = Math.max(0, MIN_BRAND_HOLD_MS - elapsed);
+      setTimeout(function(){ handoffToHero(meta); }, delay);
     });
+
+    setTimeout(function(){
+      publishStartupState('timeout', { reason: 'startup-timeout', waitedMs: Date.now() - startupStartedAt });
+      handoffToHero({ reason: 'startup-timeout', waitedMs: Date.now() - startupStartedAt });
+    }, STARTUP_TIMEOUT_MS);
 
     // expose for debug
     window.__beslockHero = { show: showSlide, next: nextSlide, prev:function(){ showSlide(current-1); }, stop:stopAutoplay, start:startAutoplay };

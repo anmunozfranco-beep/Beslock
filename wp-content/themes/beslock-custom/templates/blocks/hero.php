@@ -2,17 +2,48 @@
 <?php /*
   Hero implemented as template-part. Uses theme-relative asset paths under
   `images/hero_develp/clips_hero` and `images/hero_develp/images_hero`.
-*/ ?>
-<section class="beslock-hero" id="beslockHero" aria-roledescription="carousel" aria-label="Hero carousel">
-  <div class="beslock-loader" id="beslockLoader" role="status" aria-live="polite" aria-hidden="false" data-loader-mode="auto">
+*/
+  $startup_overlay = 'e-flex_hero.png';
+  $startup_overlay_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/' . $startup_overlay;
+  $startup_overlay_url = get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/' . $startup_overlay;
+  if ( file_exists( $startup_overlay_fs ) ) {
+    $startup_overlay_url .= '?v=' . filemtime( $startup_overlay_fs );
+  }
+
+  $startup_overlay_d_file = 'e-flex_d.png';
+  $startup_overlay_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file;
+  $startup_overlay_d_url = file_exists( $startup_overlay_d_fs )
+    ? ( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file )
+    : '';
+?>
+<section class="beslock-hero" id="beslockHero" aria-roledescription="carousel" aria-label="Hero carousel" data-startup-state="booting">
+  <div class="beslock-loader" id="beslockLoader" role="status" aria-live="polite" aria-label="<?php echo esc_attr__( 'Cargando presentación de Beslock', 'beslock' ); ?>" aria-hidden="false" data-loader-mode="auto" data-stage="booting">
     <div class="beslock-loader__bg" aria-hidden="true"></div>
-    <!-- Use transparent logo (logo-white.png) and wrap to allow circular reveal + spinner -->
-    <span class="beslock-loader__wrap" aria-hidden="true">
-      <img class="beslock-loader__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="Beslock" aria-hidden="true" />
-    </span>
-    <div class="beslock-loader__text" aria-hidden="true">e-Serie</div>
-    <div class="beslock-loader__pulse" aria-hidden="true"></div>
+    <div class="beslock-loader__scene" aria-hidden="true">
+      <span class="beslock-loader__wrap">
+        <img class="beslock-loader__img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="" aria-hidden="true" />
+        <span class="beslock-loader__tm">®</span>
+      </span>
+      <span class="beslock-loader__progress"><span class="beslock-loader__progress-fill"></span></span>
+    </div>
   </div>
+
+  <article class="hero-slide hero-startup-fallback is-active" id="heroStartupFallback" aria-hidden="false" aria-roledescription="slide" aria-label="Intro slide">
+    <div class="slide-inner">
+      <div class="hero-startup-fallback__media" aria-hidden="true"></div>
+      <div class="slide-dim" aria-hidden="true"></div>
+      <picture class="slide-overlay-frame" aria-hidden="true">
+        <?php if ( $startup_overlay_d_url ): ?>
+          <source media="(min-width:600px)" srcset="<?php echo esc_url( $startup_overlay_d_url ); ?>">
+        <?php endif; ?>
+        <img class="slide-overlay overlay--visible" src="<?php echo esc_url( $startup_overlay_url ); ?>" alt="" aria-hidden="true" />
+      </picture>
+      <div class="slide-content">
+        <h1 class="hero__title"><?php echo esc_html( 'e-Flex' ); ?></h1>
+        <p class="hero__subtitle"><?php echo esc_html( 'Llegar sin complicaciones' ); ?></p>
+      </div>
+    </div>
+  </article>
 
   <div class="hero-viewport" id="heroViewport" tabindex="-1">
     <div class="hero-slides" id="heroSlides">
@@ -53,12 +84,14 @@
           <video class="slide-video" muted playsinline preload="auto" loop src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/clips_hero/' . $vid ); ?>"></video>
           <!-- Dim layer strictly over the clip to improve white text contrast; overlays remain above -->
           <div class="slide-dim" aria-hidden="true"></div>
-          <picture aria-hidden="true">
+          <picture class="slide-overlay-frame" aria-hidden="true">
             <?php if ($ov_d_url): ?>
               <source media="(min-width:600px)" srcset="<?php echo esc_url( $ov_d_url ); ?>">
             <?php endif; ?>
             <?php
-              if ($i === 2 || $i === 0 || $i === 5) {
+              if ($i === 0) {
+                $data_offset_attr = ' data-offset="10"';
+              } elseif ($i === 2 || $i === 5) {
                 $data_offset_attr = ' data-offset="27"';
               } elseif ($i === 4) {
                 $data_offset_attr = ' data-offset="30"';
@@ -88,7 +121,7 @@
               $ov2_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file;
               $ov2_d_url = file_exists($ov2_d_fs) ? (get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file) : '';
             ?>
-              <picture aria-hidden="true">
+              <picture class="slide-overlay-frame" aria-hidden="true">
               <?php if ($ov2_d_url): ?>
                 <source media="(min-width:600px)" srcset="<?php echo esc_url( $ov2_d_url ); ?>">
               <?php endif; ?>
