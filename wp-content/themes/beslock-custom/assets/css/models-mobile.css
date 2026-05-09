@@ -78,6 +78,18 @@
   box-sizing: border-box;
 }
 
+.models__item-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.models__item-link:focus-visible {
+  outline: 2px solid rgba(6, 163, 122, 0.28);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
 /* Visual media box:
    - aspect-ratio en navegadores modernos
    - fallback para navegadores sin soporte (padding-top hack dentro de @supports)
