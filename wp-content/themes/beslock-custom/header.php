@@ -8,13 +8,18 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Preload hero poster image on front page to improve LCP (si existe) -->
-  <?php if ( function_exists( 'is_front_page' ) && is_front_page() ) : 
-    $hero_poster = get_stylesheet_directory_uri() . '/assets/images/hero-poster.webp';
-    // Sólo imprimir preload si el archivo probablemente exista (no hacer comprobación server-side aquí)
+  <!-- Preload hero poster image on front page only when the asset exists. -->
+  <?php
+  if ( function_exists( 'is_front_page' ) && is_front_page() ) :
+    $hero_poster_path = get_stylesheet_directory() . '/assets/images/hero-poster.webp';
+    if ( file_exists( $hero_poster_path ) ) :
+      $hero_poster = get_stylesheet_directory_uri() . '/assets/images/hero-poster.webp?v=' . filemtime( $hero_poster_path );
   ?>
     <link rel="preload" as="image" href="<?php echo esc_url( $hero_poster ); ?>">
-  <?php endif; ?>
+  <?php
+    endif;
+  endif;
+  ?>
 
   <?php wp_head(); ?>
 </head>
