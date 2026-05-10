@@ -305,7 +305,15 @@ def process_manual(
     app_instructions = detect_app_instructions(lines)
 
     markdown = build_markdown(sections, specs, steps)
-    structured = build_json_structure(input_pdf, scanned or force_ocr, pages or len(pages_text), sections, specs, steps, app_instructions)
+    structured = build_json_structure(
+        input_pdf,
+        scanned or force_ocr,
+        pages or len(pages_text),
+        sections,
+        specs,
+        steps,
+        app_instructions,
+    )
 
     write_outputs(manual_output, raw_text, markdown, structured, skip_json)
 

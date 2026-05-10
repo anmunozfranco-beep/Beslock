@@ -20,7 +20,7 @@ brew install poppler tesseract ocrmypdf
 # optional Spanish language data if not present
 brew install tesseract-lang
 
-cd /home/runner/work/Beslock/Beslock/tools/manual_ocr
+cd tools/manual_ocr
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -29,10 +29,10 @@ pip install -r requirements.txt
 ## Run (single PDF)
 
 ```bash
-cd /home/runner/work/Beslock/Beslock/tools/manual_ocr
+cd tools/manual_ocr
 python extract_manual.py \
-  --input "/home/runner/work/Beslock/Beslock/User manuals/e-Nova user manual.pdf" \
-  --output "/home/runner/work/Beslock/Beslock/tools/manual_ocr/output"
+  --input "../../User manuals/e-Nova user manual.pdf" \
+  --output "./output"
 ```
 
 Generated output:
@@ -49,8 +49,8 @@ output/
 
 ```bash
 python extract_manual.py \
-  --input "/home/runner/work/Beslock/Beslock/User manuals" \
-  --output "/home/runner/work/Beslock/Beslock/tools/manual_ocr/output"
+  --input "../../User manuals" \
+  --output "./output"
 ```
 
 Batch mode writes each PDF to its own folder inside `output/`.
