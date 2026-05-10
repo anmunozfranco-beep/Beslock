@@ -176,6 +176,52 @@ if ( ! function_exists( 'beslock_get_product_features_list' ) ) {
   }
 }
 
+if ( ! function_exists( 'beslock_get_product_comment_author_label' ) ) {
+  function beslock_get_product_comment_author_label( $comment ) {
+    $author_name = '';
+
+    if ( is_object( $comment ) ) {
+      $author_name = trim( wp_strip_all_tags( (string) ( $comment->comment_author ?? '' ) ) );
+    }
+
+    if ( '' !== $author_name ) {
+      return $author_name;
+    }
+
+    return __( 'Cliente verificado', 'beslock' );
+  }
+}
+
+if ( ! function_exists( 'beslock_get_product_comment_interaction_type' ) ) {
+  function beslock_get_product_comment_interaction_type( $comment ) {
+    if ( ! is_object( $comment ) || empty( $comment->comment_ID ) ) {
+      return '';
+    }
+
+    return sanitize_key( (string) get_comment_meta( $comment->comment_ID, 'interaction_type', true ) );
+  }
+}
+
+if ( ! function_exists( 'beslock_is_product_review_comment' ) ) {
+  function beslock_is_product_review_comment( $comment ) {
+    if ( ! is_object( $comment ) ) {
+      return false;
+    }
+
+    $interaction_type = beslock_get_product_comment_interaction_type( $comment );
+
+    if ( 'review' === $interaction_type ) {
+      return true;
+    }
+
+    if ( in_array( $interaction_type, array( 'question', 'reply' ), true ) ) {
+      return false;
+    }
+
+    return absint( get_comment_meta( $comment->comment_ID, 'rating', true ) ) > 0;
+  }
+}
+
 if ( ! function_exists( 'beslock_get_product_reviews_list' ) ) {
   function beslock_get_product_reviews_list( $product ) {
     if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
@@ -200,10 +246,16 @@ if ( ! function_exists( 'beslock_get_product_reviews_list' ) ) {
           continue;
         }
 
+        if ( ! beslock_is_product_review_comment( $comment ) ) {
+          continue;
+        }
+
         $reviews[] = array(
-          'author' => trim( wp_strip_all_tags( (string) ( $comment->comment_author ?: __( 'Cliente verificado', 'beslock' ) ) ) ),
-          'rating' => min( 5, max( 0, absint( get_comment_meta( $comment->comment_ID, 'rating', true ) ) ) ),
-          'text'   => trim( wp_strip_all_tags( (string) $comment->comment_content ) ),
+          'author'   => beslock_get_product_comment_author_label( $comment ),
+          'rating'   => min( 5, max( 0, absint( get_comment_meta( $comment->comment_ID, 'rating', true ) ) ) ),
+          'text'     => trim( wp_strip_all_tags( (string) $comment->comment_content ) ),
+          'date'     => get_comment_date( get_option( 'date_format' ), $comment ),
+          'date_iso' => get_comment_date( 'c', $comment ),
         );
       }
     }
@@ -213,6 +265,75 @@ if ( ! function_exists( 'beslock_get_product_reviews_list' ) ) {
     }
 
     return array();
+  }
+}
+
+if ( ! function_exists( 'beslock_get_product_questions_list' ) ) {
+  function beslock_get_product_questions_list( $product ) {
+    if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
+      $product = wc_get_product( intval( $product ) );
+    }
+
+    if ( ! $product || ! is_a( $product, 'WC_Product' ) ) {
+      return array();
+    }
+
+    $questions = array();
+    $replies_by_parent = array();
+    $comments = get_comments( array(
+      'post_id' => $product->get_id(),
+      'status'  => 'approve',
+      'orderby' => 'comment_date_gmt',
+      'order'   => 'ASC',
+    ) );
+
+    if ( ! is_array( $comments ) ) {
+      return array();
+    }
+
+    foreach ( $comments as $comment ) {
+      if ( empty( $comment->comment_content ) || in_array( $comment->comment_type, array( 'pingback', 'trackback' ), true ) ) {
+        continue;
+      }
+
+      $interaction_type = beslock_get_product_comment_interaction_type( $comment );
+
+      if ( 'question' === $interaction_type && empty( $comment->comment_parent ) ) {
+        $questions[ $comment->comment_ID ] = array(
+          'comment_id' => absint( $comment->comment_ID ),
+          'author'     => beslock_get_product_comment_author_label( $comment ),
+          'text'       => trim( wp_strip_all_tags( (string) $comment->comment_content ) ),
+          'date'       => get_comment_date( get_option( 'date_format' ), $comment ),
+          'date_iso'   => get_comment_date( 'c', $comment ),
+          'replies'    => array(),
+        );
+        continue;
+      }
+
+      if ( 'reply' === $interaction_type && ! empty( $comment->comment_parent ) ) {
+        $parent_id = absint( $comment->comment_parent );
+        if ( ! isset( $replies_by_parent[ $parent_id ] ) ) {
+          $replies_by_parent[ $parent_id ] = array();
+        }
+
+        $replies_by_parent[ $parent_id ][] = array(
+          'comment_id'         => absint( $comment->comment_ID ),
+          'author'             => beslock_get_product_comment_author_label( $comment ),
+          'text'               => trim( wp_strip_all_tags( (string) $comment->comment_content ) ),
+          'date'               => get_comment_date( get_option( 'date_format' ), $comment ),
+          'date_iso'           => get_comment_date( 'c', $comment ),
+          'is_admin_response'  => ! empty( get_comment_meta( $comment->comment_ID, 'is_admin_response', true ) ),
+        );
+      }
+    }
+
+    foreach ( $questions as $question_id => $question ) {
+      if ( ! empty( $replies_by_parent[ $question_id ] ) ) {
+        $questions[ $question_id ]['replies'] = $replies_by_parent[ $question_id ];
+      }
+    }
+
+    return array_values( $questions );
   }
 }
 

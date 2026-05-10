@@ -358,18 +358,28 @@ No mezclar consultas como si fueran reseñas
 2. Ante migración o recuperación, importer lo lee
 3. Se restauran/sobrescriben las interacciones
 
+### Implementación actual de Stage 1
+- plugin source exporter: `wp-content/plugins/beslock-interactions-exporter/`
+- plugin source importer: `wp-content/plugins/beslock-interactions-importer/`
+- paquete instalable exporter: `wp-content/themes/beslock-custom/interactions/exporter_interactions.zip`
+- paquete instalable importer: `wp-content/themes/beslock-custom/interactions/importer_interactions.zip`
+- el importer aplica overwrite por producto resolviendo en este orden: `sku`, `slug`, `name`
+- el exporter declara `post_type = product` en su query para evitar que WooCommerce excluya reseñas e interacciones de producto en consultas globales de comentarios
+- si una interacción proviene del importer, el exporter preserva `interaction_id`, `thread.parent_interaction_id` y `product.product_id` originales usando meta `beslock_original_*`
+- la validación actual conserva `54/54` interacciones y los IDs canónicos, pero una exportación fresca local todavía difiere en `product.sku` porque el exporter serializa el SKU real del catálogo WooCommerce; en un diff textual también cambian `exported_at`, `source.site_url` y el orden de `interactions` (el exporter serializa en orden `comment_date_gmt` ascendente)
+
 ---
 
 ## Checklist de trabajo
 
 ### Fase 1
-- [ ] Crear carpeta `interactions/`
-- [ ] Definir schema de `interactions.json`
-- [ ] Definir `review`, `question`, `reply`
-- [ ] Definir overwrite obligatorio
-- [ ] Definir exporter
-- [ ] Definir importer
-- [ ] Documentar flujo de backup/restore
+- [x] Crear carpeta `interactions/`
+- [x] Definir schema de `interactions.json`
+- [x] Definir `review`, `question`, `reply`
+- [x] Definir overwrite obligatorio
+- [x] Definir exporter
+- [x] Definir importer
+- [x] Documentar flujo de backup/restore
 
 ### Fase 2
 - [ ] Ubicar bloque debajo del tabset

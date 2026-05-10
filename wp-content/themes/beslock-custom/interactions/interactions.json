@@ -1,0 +1,2393 @@
+{
+  "schema_version": "1.0",
+  "exported_at": "2026-05-10T15:00:00Z",
+  "source": {
+    "site_url": "https://beslock.com.co",
+    "platform": "wordpress-woocommerce",
+    "theme": "beslock-custom"
+  },
+  "interactions": [
+    {
+      "interaction_id": 1001,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Ana P.",
+        "email": "ana.perez@estadiaurbana.example",
+        "display_name": "Ana P."
+      },
+      "content": {
+        "title": "",
+        "body": "La puse en un apartaestudio para renta corta y los codigos temporales nos ahorran tiempo en cada check-in."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-14T14:10:00Z",
+        "updated_at": "2026-02-14T14:10:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1002,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Julian M.",
+        "email": "julian.morales@hostandgo.example.org",
+        "display_name": "Julian M."
+      },
+      "content": {
+        "title": "",
+        "body": "La app me deja abrir a distancia cuando el huesped llega antes de que termine el aseo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-28T18:25:00Z",
+        "updated_at": "2026-02-28T18:25:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1003,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Karen R.",
+        "email": "",
+        "display_name": "Karen R."
+      },
+      "content": {
+        "title": "",
+        "body": "La huella responde rapido y cambiar el codigo entre reservas es muy simple."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-18T12:40:00Z",
+        "updated_at": "2026-03-18T12:40:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1004,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Mateo C.",
+        "email": "mateo.castro@loftfacil.example.net",
+        "display_name": "Mateo C."
+      },
+      "content": {
+        "title": "",
+        "body": "Lleva dos meses con uso casi diario y no se ha desconfigurado."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-11T16:55:00Z",
+        "updated_at": "2026-04-11T16:55:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1005,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "",
+        "email": "mariae.garcia@rentaactiva.invalid",
+        "display_name": "mariae.garcia@rentaactiva.invalid"
+      },
+      "content": {
+        "title": "",
+        "body": "Hasta ahora va bien para estadias de fin de semana. Quiero ver como se comporta en temporada alta."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-07T20:15:00Z",
+        "updated_at": "2026-05-07T20:15:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1006,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Diego L.",
+        "email": "diego.leon@visitatemporal.example",
+        "display_name": "Diego L."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo crear un codigo diferente para cada huesped sin estar en el apartamento?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-26T17:40:00Z",
+        "updated_at": "2026-03-26T17:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1007,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Desde la app puedes generar claves temporales por reserva y revocarlas cuando termina la estadia."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1006,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-27T14:20:00Z",
+        "updated_at": "2026-03-27T14:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1008,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Paula S.",
+        "email": "",
+        "display_name": "Paula S."
+      },
+      "content": {
+        "title": "",
+        "body": "Lo hice en Semana Santa y me funciono bien incluso con dos ingresos el mismo dia."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1006,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-28T09:10:00Z",
+        "updated_at": "2026-03-28T09:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1009,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "",
+        "email": "reservas@loftcentral.example.net",
+        "display_name": "reservas@loftcentral.example.net"
+      },
+      "content": {
+        "title": "",
+        "body": "Cuanto dura la bateria si el apartamento recibe entradas todos los dias?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-09T19:05:00Z",
+        "updated_at": "2026-05-09T19:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1101,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Laura G.",
+        "email": "laura.garcia@hogarclaro.example",
+        "display_name": "Laura G."
+      },
+      "content": {
+        "title": "",
+        "body": "La instalamos en la puerta del apartamento y el uso diario ha sido mucho mas comodo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-16T13:10:00Z",
+        "updated_at": "2026-02-16T13:10:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1102,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Felipe T.",
+        "email": "",
+        "display_name": "Felipe T."
+      },
+      "content": {
+        "title": "",
+        "body": "Reconoce bien la huella y mi mama se adapto rapido al teclado."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-03T10:35:00Z",
+        "updated_at": "2026-03-03T10:35:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1103,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Monica V.",
+        "email": "monica.velasco@casaurbana.example.org",
+        "display_name": "Monica V."
+      },
+      "content": {
+        "title": "",
+        "body": "Para un hogar pequeno cumple muy bien y se siente estable."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-25T19:20:00Z",
+        "updated_at": "2026-03-25T19:20:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1104,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Camilo A.",
+        "email": "",
+        "display_name": "Camilo A."
+      },
+      "content": {
+        "title": "",
+        "body": "La relacion precio-beneficio es muy buena para una cerradura de entrada principal."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-14T15:50:00Z",
+        "updated_at": "2026-04-14T15:50:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1105,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Sandra P.",
+        "email": "sandra.prieto@familiaandina.invalid",
+        "display_name": "Sandra P."
+      },
+      "content": {
+        "title": "",
+        "body": "La estamos probando con visitas frecuentes y por ahora va excelente."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-08T18:40:00Z",
+        "updated_at": "2026-05-08T18:40:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1106,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Jorge N.",
+        "email": "jorge.nieto@maderasegura.example.net",
+        "display_name": "Jorge N."
+      },
+      "content": {
+        "title": "",
+        "body": "Sirve para una puerta de apartamento en madera de 4 cm?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-12T16:05:00Z",
+        "updated_at": "2026-03-12T16:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1107,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Es compatible con espesores comunes de puerta residencial y validamos medidas antes de instalar."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1106,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-13T11:30:00Z",
+        "updated_at": "2026-03-13T11:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1108,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Claudia B.",
+        "email": "",
+        "display_name": "Claudia B."
+      },
+      "content": {
+        "title": "",
+        "body": "La tengo en una puerta de madera similar desde febrero y quedo bien ajustada."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1106,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-14T08:55:00Z",
+        "updated_at": "2026-03-14T08:55:00Z"
+      }
+    },
+    {
+      "interaction_id": 1109,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "",
+        "email": "contacto@hogarandino.example",
+        "display_name": "contacto@hogarandino.example"
+      },
+      "content": {
+        "title": "",
+        "body": "Se pueden registrar varias huellas para una misma familia?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-09T21:10:00Z",
+        "updated_at": "2026-05-09T21:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1201,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Natalia H.",
+        "email": "natalia.henao@casaconectada.example.org",
+        "display_name": "Natalia H."
+      },
+      "content": {
+        "title": "",
+        "body": "Lo que mas valoro es poder ver quien llega cuando no estoy en casa."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-20T20:05:00Z",
+        "updated_at": "2026-02-20T20:05:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1202,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Ricardo E.",
+        "email": "",
+        "display_name": "Ricardo E."
+      },
+      "content": {
+        "title": "",
+        "body": "La conexion ha sido estable y las alertas llegan rapido al celular."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-06T17:25:00Z",
+        "updated_at": "2026-03-06T17:25:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1203,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Paola M.",
+        "email": "paola.mejia@alerta360.example.net",
+        "display_name": "Paola M."
+      },
+      "content": {
+        "title": "",
+        "body": "Para entregas y domicilios me ha servido mucho tener video y apertura remota."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-29T14:45:00Z",
+        "updated_at": "2026-03-29T14:45:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1204,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Esteban R.",
+        "email": "",
+        "display_name": "Esteban R."
+      },
+      "content": {
+        "title": "",
+        "body": "Se siente premium y la experiencia desde la app esta bien resuelta."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-19T12:15:00Z",
+        "updated_at": "2026-04-19T12:15:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1205,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "",
+        "email": "carolina.segura@redsegura.invalid",
+        "display_name": "carolina.segura@redsegura.invalid"
+      },
+      "content": {
+        "title": "",
+        "body": "Aun estoy afinando la red wifi de la casa, pero la cerradura va cumpliendo bien."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-06T22:30:00Z",
+        "updated_at": "2026-05-06T22:30:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1206,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Adriana C.",
+        "email": "adriana.cortes@puertavista.example",
+        "display_name": "Adriana C."
+      },
+      "content": {
+        "title": "",
+        "body": "La camara me avisa al celular aunque no este en casa?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-17T18:10:00Z",
+        "updated_at": "2026-03-17T18:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1207,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Con una conexion estable recibes notificaciones y puedes revisar el acceso desde la app."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1206,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-18T13:05:00Z",
+        "updated_at": "2026-03-18T13:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1208,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Mauricio D.",
+        "email": "",
+        "display_name": "Mauricio D."
+      },
+      "content": {
+        "title": "",
+        "body": "Las alertas me han servido bastante cuando llegan domicilios y nadie esta en el apartamento."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1206,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-19T09:20:00Z",
+        "updated_at": "2026-03-19T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1209,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "",
+        "email": "contacto@monitor360.example.org",
+        "display_name": "contacto@monitor360.example.org"
+      },
+      "content": {
+        "title": "",
+        "body": "Guarda historial de quien toco la puerta o solo video en vivo?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-09T16:35:00Z",
+        "updated_at": "2026-05-09T16:35:00Z"
+      }
+    },
+    {
+      "interaction_id": 1301,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Sergio M.",
+        "email": "sergio.marin@nodooficina.example.net",
+        "display_name": "Sergio M."
+      },
+      "content": {
+        "title": "",
+        "body": "Nos sirvio para organizar accesos en una oficina pequena con varios usuarios."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-18T11:15:00Z",
+        "updated_at": "2026-02-18T11:15:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1302,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Valentina O.",
+        "email": "",
+        "display_name": "Valentina O."
+      },
+      "content": {
+        "title": "",
+        "body": "La administracion desde el celular ahorra tiempo cuando entra personal nuevo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-04T15:40:00Z",
+        "updated_at": "2026-03-04T15:40:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1303,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Daniel Q.",
+        "email": "daniel.quintero@flujocorporativo.invalid",
+        "display_name": "Daniel Q."
+      },
+      "content": {
+        "title": "",
+        "body": "Buena opcion para espacios de alto flujo donde no queremos depender de llaves."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-22T18:55:00Z",
+        "updated_at": "2026-03-22T18:55:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1304,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Marta L.",
+        "email": "",
+        "display_name": "Marta L."
+      },
+      "content": {
+        "title": "",
+        "body": "Se siente robusta y la gestion de permisos ha sido clara para el equipo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-16T13:25:00Z",
+        "updated_at": "2026-04-16T13:25:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1305,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "",
+        "email": "administracion@torrenorte.example",
+        "display_name": "administracion@torrenorte.example"
+      },
+      "content": {
+        "title": "",
+        "body": "La estamos probando con turnos extendidos y hasta ahora responde muy bien."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-08T19:50:00Z",
+        "updated_at": "2026-05-08T19:50:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1306,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Oscar B.",
+        "email": "oscar.bedoya@accesocorp.example.org",
+        "display_name": "Oscar B."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo crear horarios distintos para personal administrativo y aseo?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-20T17:00:00Z",
+        "updated_at": "2026-03-20T17:00:00Z"
+      }
+    },
+    {
+      "interaction_id": 1307,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes asignar perfiles con horarios y permisos diferentes segun el rol de cada usuario."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1306,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-21T10:15:00Z",
+        "updated_at": "2026-03-21T10:15:00Z"
+      }
+    },
+    {
+      "interaction_id": 1308,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Lina C.",
+        "email": "",
+        "display_name": "Lina C."
+      },
+      "content": {
+        "title": "",
+        "body": "Eso nos sirvio para limitar el acceso del turno nocturno sin cambiar credenciales todo el tiempo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1306,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-22T08:35:00Z",
+        "updated_at": "2026-03-22T08:35:00Z"
+      }
+    },
+    {
+      "interaction_id": 1309,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "",
+        "email": "operaciones@gestionturnos.example.net",
+        "display_name": "operaciones@gestionturnos.example.net"
+      },
+      "content": {
+        "title": "",
+        "body": "La app muestra registro de aperturas por usuario?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-10T07:45:00Z",
+        "updated_at": "2026-05-10T07:45:00Z"
+      }
+    },
+    {
+      "interaction_id": 1401,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Maria F.",
+        "email": "maria.franco@casaprotegida.invalid",
+        "display_name": "Maria F."
+      },
+      "content": {
+        "title": "",
+        "body": "Me da mucha tranquilidad en la puerta principal y se siente firme."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-15T19:45:00Z",
+        "updated_at": "2026-02-15T19:45:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1402,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Andres V.",
+        "email": "",
+        "display_name": "Andres V."
+      },
+      "content": {
+        "title": "",
+        "body": "La construccion es solida y la apertura por huella ha sido muy confiable."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-01T14:30:00Z",
+        "updated_at": "2026-03-01T14:30:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1403,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Tatiana R.",
+        "email": "tatiana.ruiz@hogarfirme.example",
+        "display_name": "Tatiana R."
+      },
+      "content": {
+        "title": "",
+        "body": "La usamos todos los dias y el acceso mecanico de respaldo tambien da confianza."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-24T12:05:00Z",
+        "updated_at": "2026-03-24T12:05:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1404,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Jhon S.",
+        "email": "",
+        "display_name": "Jhon S."
+      },
+      "content": {
+        "title": "",
+        "body": "La integracion con control remoto mediante gateway fue lo que necesitabamos en casa."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-20T16:40:00Z",
+        "updated_at": "2026-04-20T16:40:00Z"
+      },
+      "rating": 5
+    },
+    {
+      "interaction_id": 1405,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "",
+        "email": "contacto@proteccionhogar.example.org",
+        "display_name": "contacto@proteccionhogar.example.org"
+      },
+      "content": {
+        "title": "",
+        "body": "Hasta ahora la experiencia es buena; quiero ver el consumo real de bateria en varios meses."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-07T21:25:00Z",
+        "updated_at": "2026-05-07T21:25:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1406,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Patricia N.",
+        "email": "patricia.naranjo@puertametal.example.net",
+        "display_name": "Patricia N."
+      },
+      "content": {
+        "title": "",
+        "body": "Funciona bien en una puerta principal metalica?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-11T18:30:00Z",
+        "updated_at": "2026-03-11T18:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1407,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Revisamos espesor y tipo de puerta antes de la instalacion para asegurar un montaje estable."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1406,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-12T11:20:00Z",
+        "updated_at": "2026-03-12T11:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1408,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "German P.",
+        "email": "",
+        "display_name": "German P."
+      },
+      "content": {
+        "title": "",
+        "body": "La instale en una puerta metalica calibre 18 y quedo firme desde el primer dia."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1406,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-13T09:00:00Z",
+        "updated_at": "2026-03-13T09:00:00Z"
+      }
+    },
+    {
+      "interaction_id": 1409,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "",
+        "email": "familia@resguardo360.invalid",
+        "display_name": "familia@resguardo360.invalid"
+      },
+      "content": {
+        "title": "",
+        "body": "Si se va el internet, la cerradura sigue abriendo con huella y codigo?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-09T20:50:00Z",
+        "updated_at": "2026-05-09T20:50:00Z"
+      }
+    },
+    {
+      "interaction_id": 1501,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Helena C.",
+        "email": "helena.cano@consultorioabierto.example",
+        "display_name": "Helena C."
+      },
+      "content": {
+        "title": "",
+        "body": "Nos funciono bien en un consultorio donde entran varias personas durante el dia."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-02-19T13:30:00Z",
+        "updated_at": "2026-02-19T13:30:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1502,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Brayan R.",
+        "email": "",
+        "display_name": "Brayan R."
+      },
+      "content": {
+        "title": "",
+        "body": "Cambiar codigos y registrar huellas fue mas facil de lo que esperaba."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-05T10:45:00Z",
+        "updated_at": "2026-03-05T10:45:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1503,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Luisa T.",
+        "email": "luisa.toro@espaciocomun.example.org",
+        "display_name": "Luisa T."
+      },
+      "content": {
+        "title": "",
+        "body": "Buena opcion para espacios compartidos donde nadie quiere cargar llaves."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-27T17:15:00Z",
+        "updated_at": "2026-03-27T17:15:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1504,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Nestor A.",
+        "email": "",
+        "display_name": "Nestor A."
+      },
+      "content": {
+        "title": "",
+        "body": "Va bien para uso general; en nuestro caso toco ajustar el cierre de la puerta al inicio."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-18T12:00:00Z",
+        "updated_at": "2026-04-18T12:00:00Z"
+      },
+      "rating": 3
+    },
+    {
+      "interaction_id": 1505,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "",
+        "email": "equipo@equipocompartido.example.net",
+        "display_name": "equipo@equipocompartido.example.net"
+      },
+      "content": {
+        "title": "",
+        "body": "Aun la estamos acomodando al cambio de personal, pero el manejo es sencillo."
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-08T17:55:00Z",
+        "updated_at": "2026-05-08T17:55:00Z"
+      },
+      "rating": 4
+    },
+    {
+      "interaction_id": 1506,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Camila Z.",
+        "email": "camila.zuluaga@gestionconsulta.invalid",
+        "display_name": "Camila Z."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo registrar varias huellas y un codigo general para el consultorio?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-15T16:25:00Z",
+        "updated_at": "2026-03-15T16:25:00Z"
+      }
+    },
+    {
+      "interaction_id": 1507,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes combinar huellas de usuarios frecuentes con un codigo compartido para el equipo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1506,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-03-16T11:10:00Z",
+        "updated_at": "2026-03-16T11:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1508,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Rocio M.",
+        "email": "",
+        "display_name": "Rocio M."
+      },
+      "content": {
+        "title": "",
+        "body": "Nos funciono asi en un estudio con tres personas y un codigo para proveedores."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1506,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-03-17T09:35:00Z",
+        "updated_at": "2026-03-17T09:35:00Z"
+      }
+    },
+    {
+      "interaction_id": 1509,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "",
+        "email": "coordinacion@turnofacil.example",
+        "display_name": "coordinacion@turnofacil.example"
+      },
+      "content": {
+        "title": "",
+        "body": "Es facil cambiar el codigo cuando rota el personal?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-10T08:20:00Z",
+        "updated_at": "2026-05-10T08:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1510,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Laura V.",
+        "email": "laura.vargas@rentasagiles.example",
+        "display_name": "Laura V."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo generar un codigo distinto para cada reserva corta sin ir hasta el apartamento?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1511,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes crear claves temporales por estadia y revocarlas cuando termina cada reserva."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1510,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1512,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Camilo V.",
+        "email": "",
+        "display_name": "Camilo V."
+      },
+      "content": {
+        "title": "",
+        "body": "Nos ha funcionado bien para Airbnb porque cada huesped recibe su propio acceso."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1510,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1513,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "",
+        "email": "operaciones@lofturbano.example",
+        "display_name": "operaciones@lofturbano.example"
+      },
+      "content": {
+        "title": "",
+        "body": "Si las baterias se descargan, queda alguna forma de abrir mientras las cambio?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1514,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 9,
+        "sku": "E-FLEX",
+        "slug": "e-flex",
+        "name": "e-Flex"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Tienes respaldo para apertura de emergencia y puedes programar alertas de bateria baja desde la app."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1513,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1515,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Natalia V.",
+        "email": "natalia.velez@hogarlisto.example",
+        "display_name": "Natalia V."
+      },
+      "content": {
+        "title": "",
+        "body": "Permite dejar huellas para la familia y un codigo temporal para visitas o domicilio?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1516,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes combinar huellas permanentes con claves de un solo uso o por franjas de tiempo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1515,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1517,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Andrea V.",
+        "email": "",
+        "display_name": "Andrea V."
+      },
+      "content": {
+        "title": "",
+        "body": "En nuestro apartamento dejamos huellas a la familia y codigo temporal al personal de aseo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1515,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1518,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Carlos V.",
+        "email": "carlos.v@domoticafacil.example.net",
+        "display_name": "Carlos V."
+      },
+      "content": {
+        "title": "",
+        "body": "La aplicacion avisa con tiempo cuando la bateria esta por agotarse?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1519,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 6,
+        "sku": "E-NOVA",
+        "slug": "e-nova",
+        "name": "e-Nova"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. La cerradura reporta bateria baja para que puedas reemplazarla antes de quedarte sin energia."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1518,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1520,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Paula C.",
+        "email": "paula@porterianube.example",
+        "display_name": "Paula C."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo ver desde el celular quien timbro aunque no este en la casa?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1521,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Desde la app puedes recibir notificaciones y revisar quien esta en la puerta en tiempo real."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1520,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1522,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Mauricio D.",
+        "email": "",
+        "display_name": "Mauricio D."
+      },
+      "content": {
+        "title": "",
+        "body": "A nosotros nos ha servido mucho para dejar entrar domicilios cuando el apartamento esta solo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1520,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1523,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "",
+        "email": "seguridad@torre360.example",
+        "display_name": "seguridad@torre360.example"
+      },
+      "content": {
+        "title": "",
+        "body": "El audio de dos vias funciona bien para hablar con mensajeros antes de abrir?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1524,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 7,
+        "sku": "E-ORBIT",
+        "slug": "e-orbit",
+        "name": "e-Orbit"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes hablar desde la app y decidir si abres o no sin acercarte a la puerta."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1523,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1525,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Diana R.",
+        "email": "diana.ruiz@oficinapractica.example",
+        "display_name": "Diana R."
+      },
+      "content": {
+        "title": "",
+        "body": "Se pueden crear accesos por horario para recepcion, aseo y personal administrativo?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1526,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes definir franjas horarias y permisos diferentes segun el rol de cada usuario."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1525,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1527,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Oscar B.",
+        "email": "",
+        "display_name": "Oscar B."
+      },
+      "content": {
+        "title": "",
+        "body": "Lo usamos asi en oficina y ayuda mucho a controlar quien entra fuera del horario laboral."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1525,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1528,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Luisa P.",
+        "email": "luisa@equipotrabajo.example.org",
+        "display_name": "Luisa P."
+      },
+      "content": {
+        "title": "",
+        "body": "Si alguien sale de la empresa, puedo borrarlo al instante sin afectar al resto del equipo?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1529,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 11,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "e-Prime"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes eliminar ese usuario puntual y conservar intactos los permisos del resto."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1528,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1530,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Monica T.",
+        "email": "monica.t@casafinca.example",
+        "display_name": "Monica T."
+      },
+      "content": {
+        "title": "",
+        "body": "Sirve para dejar acceso temporal al jardinero o al personal de servicio sin compartir la clave principal?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1531,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes crear accesos temporales por horas o dias sin exponer la clave definitiva."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1530,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1532,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Felipe N.",
+        "email": "",
+        "display_name": "Felipe N."
+      },
+      "content": {
+        "title": "",
+        "body": "En una casa campestre nos funciono muy bien para proveedores y mantenimiento."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1530,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1533,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Andrea S.",
+        "email": "andrea@terrazaexterior.example.net",
+        "display_name": "Andrea S."
+      },
+      "content": {
+        "title": "",
+        "body": "Resiste bien lluvia y sol cuando queda instalada en una entrada exterior techada?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1534,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 10,
+        "sku": "E-SHIELD",
+        "slug": "e-shield",
+        "name": "e-Shield"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Esta pensada para uso residencial exigente, siempre siguiendo la recomendacion de instalacion del equipo."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1533,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 1535,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Juliana M.",
+        "email": "juliana.m@consultorioabierto.example",
+        "display_name": "Juliana M."
+      },
+      "content": {
+        "title": "",
+        "body": "Puedo registrar varias huellas y un codigo general al mismo tiempo para el consultorio?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-05T15:10:00Z",
+        "updated_at": "2026-04-05T15:10:00Z"
+      }
+    },
+    {
+      "interaction_id": 1536,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. Puedes combinar varias huellas con un codigo compartido para el equipo y mantener control del acceso."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1535,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-06T09:20:00Z",
+        "updated_at": "2026-04-06T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 1537,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Rocio M.",
+        "email": "",
+        "display_name": "Rocio M."
+      },
+      "content": {
+        "title": "",
+        "body": "Nosotros lo hacemos asi y ha sido muy util para el personal y los proveedores."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1535,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-07T12:05:00Z",
+        "updated_at": "2026-04-07T12:05:00Z"
+      }
+    },
+    {
+      "interaction_id": 1538,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "",
+        "email": "info@espaciosflex.example",
+        "display_name": "info@espaciosflex.example"
+      },
+      "content": {
+        "title": "",
+        "body": "Si alguien olvida el codigo, la apertura con huella sigue funcionando aunque no haya internet?"
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-04-22T16:40:00Z",
+        "updated_at": "2026-04-22T16:40:00Z"
+      }
+    },
+    {
+      "interaction_id": 1539,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 8,
+        "sku": "E-TOUCH",
+        "slug": "e-touch",
+        "name": "e-Touch"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "soporte@beslock-demo.example.org",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Si. La autenticacion local por huella sigue disponible y la conexion solo afecta funciones remotas de la app."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 1538,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-04-23T08:30:00Z",
+        "updated_at": "2026-04-23T08:30:00Z"
+      }
+    }
+  ]
+}

@@ -59,13 +59,13 @@
 ## Stage 1 — Backup / Restore
 
 ### Documentation
-- [ ] Keep README aligned with implementation
-- [ ] Prepare dedicated brief for exporter/importer if implementation begins
+- [x] Keep README aligned with implementation
+- [x] Prepare dedicated brief for exporter/importer if implementation begins
 
 ### Schema
-- [ ] Preserve schema v1
-- [ ] Keep `interaction_type` aligned with frontend metadata
-- [ ] Ensure future exporter/importer use:
-  - [ ] `review`
-  - [ ] `question`
-  - [ ] `reply`
+- [x] Preserve schema v1
+- [x] Keep `interaction_type` aligned with frontend metadata
+- [x] Ensure future exporter/importer use:
+  - [x] `review`
+  - [x] `question`
+  - [x] `reply`
