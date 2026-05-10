@@ -118,6 +118,184 @@ El archivo `interactions.json` debe soportar:
 - exportador: `exporter_interactions.zip`
 - importador: `importer_interactions.zip`
 
+### Schema v1 for `interactions.json`
+
+#### Root structure
+```json
+{
+  "schema_version": "1.0",
+  "exported_at": "2026-05-10T17:00:00Z",
+  "source": {
+    "site_url": "https://beslock.com.co",
+    "platform": "wordpress-woocommerce",
+    "theme": "beslock-custom"
+  },
+  "interactions": []
+}
+```
+
+#### Root fields
+- `schema_version` (`string`, required)
+- `exported_at` (`string`, required, ISO 8601 UTC)
+- `source` (`object`, required)
+- `interactions` (`array`, required)
+
+#### Interaction base structure
+Each interaction item must include:
+- `interaction_id`
+- `interaction_type`
+- `product`
+- `author`
+- `content`
+- `status`
+- `thread`
+- `timestamps`
+
+#### Common fields
+- `interaction_id`: required stable identifier
+- `interaction_type`: `review`, `question`, or `reply`
+- `product.product_id`: original numeric reference when available
+- `product.sku`: primary reconciliation key for restore
+- `product.slug`: recommended fallback key
+- `product.name`: required product label
+- `author.name`: optional individually
+- `author.email`: optional individually
+- `author.display_name`: required; use name first, email as fallback
+- `content.title`: optional or empty
+- `content.body`: required
+- `status`: `approved`, `pending`, `spam`, or `trash`
+- `thread.parent_interaction_id`: null for roots, required for replies
+- `thread.is_admin_response`: boolean, required
+- `timestamps.created_at`: required, ISO 8601 UTC
+- `timestamps.updated_at`: required, ISO 8601 UTC
+
+#### Type-specific rules
+##### Review
+- `rating` is required
+- `rating` must be an integer from 1 to 5
+
+##### Question
+- `rating` must be omitted or null
+
+##### Reply
+- `thread.parent_interaction_id` is required
+- `rating` must be omitted or null unless a future rule explicitly allows it
+
+#### Validation rules
+1. Every interaction must include at least one of:
+   - `author.name`
+   - `author.email`
+2. `author.display_name` must resolve to:
+   - `author.name` if present
+   - otherwise `author.email`
+3. `review` requires `rating`
+4. `question` does not use `rating`
+5. `reply` requires `thread.parent_interaction_id`
+6. Product data must be sufficient for restore reconciliation:
+   - prefer `sku`
+   - fallback to `slug`
+   - always include `name`
+
+#### Example JSON
+```json
+{
+  "schema_version": "1.0",
+  "exported_at": "2026-05-10T17:00:00Z",
+  "source": {
+    "site_url": "https://beslock.com.co",
+    "platform": "wordpress-woocommerce",
+    "theme": "beslock-custom"
+  },
+  "interactions": [
+    {
+      "interaction_id": 101,
+      "interaction_type": "review",
+      "product": {
+        "product_id": 123,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "E-Prime"
+      },
+      "author": {
+        "name": "Carlos",
+        "email": "carlos@email.com",
+        "display_name": "Carlos"
+      },
+      "content": {
+        "title": "",
+        "body": "Excelente producto, fácil de instalar."
+      },
+      "rating": 5,
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-08T16:10:00Z",
+        "updated_at": "2026-05-09T18:30:00Z"
+      }
+    },
+    {
+      "interaction_id": 102,
+      "interaction_type": "question",
+      "product": {
+        "product_id": 123,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "E-Prime"
+      },
+      "author": {
+        "name": "",
+        "email": "cliente@email.com",
+        "display_name": "cliente@email.com"
+      },
+      "content": {
+        "title": "",
+        "body": "¿Funciona con puerta metálica?"
+      },
+      "status": "pending",
+      "thread": {
+        "parent_interaction_id": null,
+        "is_admin_response": false
+      },
+      "timestamps": {
+        "created_at": "2026-05-10T09:20:00Z",
+        "updated_at": "2026-05-10T09:20:00Z"
+      }
+    },
+    {
+      "interaction_id": 103,
+      "interaction_type": "reply",
+      "product": {
+        "product_id": 123,
+        "sku": "E-PRIME",
+        "slug": "e-prime",
+        "name": "E-Prime"
+      },
+      "author": {
+        "name": "Equipo Beslock",
+        "email": "info@beslock.com.co",
+        "display_name": "Equipo Beslock"
+      },
+      "content": {
+        "title": "",
+        "body": "Sí, funciona con puertas metálicas compatibles."
+      },
+      "status": "approved",
+      "thread": {
+        "parent_interaction_id": 102,
+        "is_admin_response": true
+      },
+      "timestamps": {
+        "created_at": "2026-05-10T10:00:00Z",
+        "updated_at": "2026-05-10T10:00:00Z"
+      }
+    }
+  ]
+}
+```
+
 ---
 
 ## Stage 2 — Frontend Product Interactions
