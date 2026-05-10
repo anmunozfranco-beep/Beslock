@@ -111,6 +111,17 @@ add_action( 'wp_enqueue_scripts', function() {
     true
   );
 
+  $hero_telemetry_config = array(
+    'enabled'  => (bool) apply_filters( 'beslock_hero_startup_telemetry_enabled', true ),
+    'endpoint' => esc_url_raw( rest_url( 'beslock/v1/hero-startup' ) ),
+  );
+
+  wp_add_inline_script(
+    'beslock-main-js',
+    'window.beslockHeroTelemetry = ' . wp_json_encode( $hero_telemetry_config ) . ';',
+    'before'
+  );
+
   $product_card_component_js = $theme_dir_path . '/assets/js/components/product-card.js';
   if ( file_exists( $product_card_component_js ) ) {
     wp_enqueue_script(

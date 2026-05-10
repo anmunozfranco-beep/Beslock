@@ -564,64 +564,9 @@
 
 })();
 
-/* Failsafe: if hero boot stalls, reveal the first slide instead of leaving a black screen. */
-(function(){
-  try{
-    function hideLoader(loader){
-      if (!loader) return;
-      loader.setAttribute('aria-hidden','true');
-      loader.style.pointerEvents = 'none';
-    }
-
-    function forceHeroVisible(){
-      try{
-        var hero = document.getElementById('beslockHero');
-        var loader = document.getElementById('beslockLoader') || document.querySelector('.beslock-loader');
-        if (!hero) {
-          hideLoader(loader);
-          return;
-        }
-
-        setTimeout(function(){
-          try{
-            if (hero.classList.contains('ready')) return;
-            var slides = Array.prototype.slice.call(hero.querySelectorAll('.hero-slides > .hero-slide'));
-            var firstSlide = slides[0];
-            if (firstSlide) {
-              slides.forEach(function(slide, index){
-                if (index === 0) {
-                  slide.classList.add('is-active');
-                  slide.classList.remove('is-exiting');
-                  slide.setAttribute('aria-hidden','false');
-                } else {
-                  slide.classList.remove('is-active');
-                  slide.classList.remove('is-exiting');
-                  slide.setAttribute('aria-hidden','true');
-                }
-              });
-              var firstVideo = firstSlide.querySelector('.slide-video');
-              if (firstVideo && typeof firstVideo.play === 'function') {
-                firstVideo.play().catch(function(){});
-              }
-            }
-            hero.classList.add('ready');
-            hideLoader(loader);
-            var startupFallback = hero.querySelector('#heroStartupFallback');
-            if (startupFallback) {
-              startupFallback.setAttribute('aria-hidden', 'true');
-            }
-          } catch (e) {}
-        }, 6000);
-      }catch(e){}
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', forceHeroVisible, { once:true });
-    } else {
-      forceHeroVisible();
-    }
-  }catch(e){}
-})();
+/* Live hero startup is managed inside HeroInit.
+   The old global force-visible fallback could race the real startup state
+   machine and reveal overlays over an unrendered video frame. */
 
 /* === HERO BESLOCK LOGIC (appended) === */
 (function () {
@@ -642,6 +587,10 @@
   function HeroInit(selector){
     var root = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (!root) return null;
+    if (root.getAttribute('data-runtime-bound') === 'true') {
+      return window.__beslockHero || null;
+    }
+    root.setAttribute('data-runtime-bound', 'true');
     var slides = $qa('.hero-slides > .hero-slide', root);
     var dots = $qa('.hero-dot', root);
     var loader = $q('.beslock-loader', root);
@@ -956,38 +905,175 @@
       };
     }catch(e){}
 
-    function waitFirst(){
+    function hideLoaderForStartup(){
+      if (!loader) return;
+      loader.setAttribute('aria-hidden','true');
+      loader.style.pointerEvents = 'none';
+    }
+
+    function bindVideoActivityTracking(video){
+      if (!video || video._beslockActivityTrackingBound) return;
+      video._beslockActivityTrackingBound = true;
+
+      function markActivity(){
+        if (video.readyState >= 2 && video.videoWidth > 0 && video.videoHeight > 0) {
+          video._beslockUsableFrame = true;
+        }
+        if (typeof video.currentTime === 'number' && video.currentTime > 0.04) {
+          video._beslockPlaybackProgress = true;
+        }
+      }
+
+      ['loadeddata', 'canplay', 'canplaythrough', 'playing', 'timeupdate', 'seeked'].forEach(function(eventName){
+        video.addEventListener(eventName, markActivity, { passive:true });
+      });
+
+      markActivity();
+    }
+
+    function hasUsableVideoFrame(video){
+      bindVideoActivityTracking(video);
+      return !!(video && (video._beslockUsableFrame || (video.readyState >= 2 && video.videoWidth > 0 && video.videoHeight > 0)));
+    }
+
+    function hasVideoPlaybackProgress(video){
+      bindVideoActivityTracking(video);
+      return !!(video && (video._beslockPlaybackProgress || (typeof video.currentTime === 'number' && video.currentTime > 0.04)));
+    }
+
+    function playVideoForSlide(video){
+      if (!video) return;
+      bindVideoActivityTracking(video);
+      try{
+        var src = (video.getAttribute('src') || video.currentSrc || '').toString();
+        var SKIP_EPS = 0.06;
+        if (/_?e-(orbit|shield)/i.test(src)) {
+          try { video.currentTime = SKIP_EPS; } catch (e) {}
+        } else {
+          try { video.currentTime = 0; } catch (e) {}
+        }
+      }catch(e){}
+      try {
+        video.play().catch(function(error){
+          video._beslockLastPlayError = error && error.name ? error.name : 'play-rejected';
+        });
+      } catch (error) {
+        video._beslockLastPlayError = error && error.name ? error.name : 'play-rejected';
+      }
+    }
+
+    function waitFirst(opts){
+      opts = opts || {};
       return new Promise(function(resolve){
         var v = slides[0] && slides[0].querySelector('.slide-video');
         var startedAt = (window.performance && typeof window.performance.now === 'function') ? window.performance.now() : Date.now();
-        if (!v) return resolve({ reason: 'missing-video', waitedMs: 0 });
+        var timeoutMs = typeof opts.timeoutMs === 'number' ? opts.timeoutMs : 4000;
+        var attemptPlay = opts.attemptPlay !== false;
+        if (!v) return resolve({ ok: false, reason: 'missing-video', waitedMs: 0 });
+        bindVideoActivityTracking(v);
 
         var settled = false;
         var t = null;
+        var frameTimer = null;
+        var playSettled = !attemptPlay;
+        var playAllowed = !attemptPlay;
+        var playErrorName = null;
         function cleanup(){
-          try { v.removeEventListener('loadeddata', onReady); } catch (e) {}
-          try { v.removeEventListener('canplay', onReady); } catch (e) {}
-          try { v.removeEventListener('canplaythrough', onReady); } catch (e) {}
+          try { v.removeEventListener('loadeddata', onFrameReady); } catch (e) {}
+          try { v.removeEventListener('canplay', onFrameReady); } catch (e) {}
+          try { v.removeEventListener('canplaythrough', onFrameReady); } catch (e) {}
+          try { v.removeEventListener('playing', onPlaybackProgress); } catch (e) {}
+          try { v.removeEventListener('timeupdate', onPlaybackProgress); } catch (e) {}
+          try { v.removeEventListener('error', onVideoError); } catch (e) {}
           try { if (t) clearTimeout(t); } catch (e) {}
+          try { if (frameTimer) clearTimeout(frameTimer); } catch (e) {}
         }
-        function finish(reason){
+        function finish(reason, extra){
           if (settled) return;
           settled = true;
           cleanup();
           var endedAt = (window.performance && typeof window.performance.now === 'function') ? window.performance.now() : Date.now();
           resolve({
+            ok: !!(extra && extra.ok),
             reason: reason,
             waitedMs: Math.round((endedAt - startedAt) * 10) / 10,
-            readyState: v.readyState
+            readyState: v.readyState,
+            blocked: !!(extra && extra.blocked),
+            errorName: extra && extra.errorName ? extra.errorName : playErrorName,
+            currentTime: typeof v.currentTime === 'number' ? Math.round(v.currentTime * 1000) / 1000 : null
           });
         }
-        function onReady(event){ finish(event && event.type ? event.type : 'ready'); }
+        function onVideoError(){
+          finish('error', {
+            ok: false,
+            errorName: v.error && typeof v.error.code !== 'undefined' ? 'media-error-' + v.error.code : 'media-error'
+          });
+        }
+        function queueFrameAccept(reason){
+          if (frameTimer || settled) return;
+          frameTimer = setTimeout(function(){
+            frameTimer = null;
+            if (settled) return;
+            if (playSettled && !playAllowed) return;
+            if (hasUsableVideoFrame(v)) {
+              finish(reason || 'frame-ready', { ok: true });
+            }
+          }, 140);
+        }
+        function onFrameReady(event){
+          if (!hasUsableVideoFrame(v)) return;
+          if (playSettled) {
+            if (!playAllowed) return;
+            finish(event && event.type ? event.type : 'frame-ready', { ok: true });
+            return;
+          }
+          queueFrameAccept(event && event.type ? event.type : 'frame-ready');
+        }
+        function onPlaybackProgress(event){
+          if (hasVideoPlaybackProgress(v) || hasUsableVideoFrame(v)) {
+            finish(event && event.type ? event.type : 'playback-progress', { ok: true });
+          }
+        }
 
-        if (v.readyState >= 2) return finish('readyState');
-        t = setTimeout(function(){ finish('timeout'); }, 4000);
-        v.addEventListener('loadeddata', onReady, { once:true });
-        v.addEventListener('canplay', onReady, { once:true });
-        v.addEventListener('canplaythrough', onReady, { once:true });
+        if (hasUsableVideoFrame(v) && (!attemptPlay || hasVideoPlaybackProgress(v))) {
+          return finish('readyState', { ok: true });
+        }
+
+        t = setTimeout(function(){
+          finish('timeout', { ok: false, blocked: playSettled && !playAllowed });
+        }, timeoutMs);
+
+        v.addEventListener('loadeddata', onFrameReady, { once:true });
+        v.addEventListener('canplay', onFrameReady, { once:true });
+        v.addEventListener('canplaythrough', onFrameReady, { once:true });
+        v.addEventListener('playing', onPlaybackProgress, { once:true });
+        v.addEventListener('timeupdate', onPlaybackProgress, { once:true });
+        v.addEventListener('error', onVideoError, { once:true });
+
+        if (attemptPlay && typeof v.play === 'function') {
+          try {
+            var playPromise = v.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+              playPromise.then(function(){
+                playSettled = true;
+                playAllowed = true;
+                if (hasUsableVideoFrame(v)) {
+                  finish('play', { ok: true });
+                }
+              }).catch(function(error){
+                playSettled = true;
+                playAllowed = false;
+                playErrorName = error && error.name ? error.name : 'play-rejected';
+                finish('play-rejected', { ok: false, blocked: true, errorName: playErrorName });
+              });
+            }
+          } catch (error) {
+            playSettled = true;
+            playAllowed = false;
+            playErrorName = error && error.name ? error.name : 'play-rejected';
+            finish('play-rejected', { ok: false, blocked: true, errorName: playErrorName });
+          }
+        }
       });
     }
 
@@ -1024,7 +1110,7 @@
         slides.forEach(function(s,i){ if (s!==newSlide){ s.classList.remove('is-active'); s.classList.remove('is-exiting'); s.setAttribute('aria-hidden','true'); } });
         newSlide.classList.add('is-active'); newSlide.setAttribute('aria-hidden','false');
         // play new video, pause others
-        slides.forEach(function(s,i){ var v=s.querySelector('.slide-video'); if (!v) return; if (s===newSlide){ try{ v.currentTime=0; }catch(e){} v.play().catch(function(){}); } else { try{ v.pause(); v.currentTime=0; }catch(e){} } });
+        slides.forEach(function(s,i){ var v=s.querySelector('.slide-video'); if (!v) return; if (s===newSlide){ playVideoForSlide(v); } else { try{ v.pause(); v.currentTime=0; }catch(e){} } });
         try { scheduleMobileVideoFocus(newSlide, newSlide && newSlide.querySelector('.slide-video'), { delay: 120, attempts: 4 }); } catch (e) {}
         try { bindMobileVideoFocusTimeline(newSlide, newSlide && newSlide.querySelector('.slide-video')); } catch (e) {}
         // schedule overlays for new slide below (same logic as before)
@@ -1053,19 +1139,8 @@
           // Immediately make new slide active (it will fade in 0->1)
           if (newSlide) {
             newSlide.classList.add('is-active'); newSlide.classList.remove('is-exiting'); newSlide.setAttribute('aria-hidden','false');
-            // rewind and play new slide video. For known clips that show an initial
-            // black frame on play we skip a small epsilon to avoid the flash.
             try{ var nv = newSlide.querySelector('.slide-video'); if (nv){
-                try{
-                  var SRC = (nv.getAttribute('src') || nv.currentSrc || '').toString();
-                  var SKIP_EPS = 0.06; // skip ~60ms to avoid initial black frame
-                  if (/_?e-(orbit|shield)/i.test(SRC)) {
-                    try { nv.currentTime = SKIP_EPS; } catch (e) {}
-                  } else {
-                    try { nv.currentTime = 0; } catch (e) {}
-                  }
-                }catch(e){}
-                nv.play().catch(function(){});
+                playVideoForSlide(nv);
                 scheduleMobileVideoFocus(newSlide, nv, { delay: 140, attempts: 4 });
                 bindMobileVideoFocusTimeline(newSlide, nv);
               } }catch(e){}
@@ -1113,6 +1188,7 @@
       if (sl){
         var vid = sl.querySelector('.slide-video');
         var ovs = Array.prototype.slice.call(sl.querySelectorAll('.slide-overlay'));
+        bindVideoActivityTracking(vid);
         // Ensure overlays start hidden when (re)showing the slide so transitions run on each loop
         // Also clear any inline transforms and per-overlay CSS variables set previously.
         ovs.forEach(function(o){
@@ -1131,15 +1207,17 @@
                   curOvs.forEach(function(o){
                     var startAtLoop = parseFloat(o.getAttribute('data-start'));
                     if (isNaN(startAtLoop)) startAtLoop = H.overlayStartAt;
-                    if (vid.currentTime >= startAtLoop) { activateOverlay(o); }
+                    if (vid.currentTime >= startAtLoop && hasUsableVideoFrame(vid)) { activateOverlay(o); }
                     else {
-                      o._ontime = function(){ if (vid.currentTime >= startAtLoop){ activateOverlay(o); try{ vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; }catch(e){} } };
+                      o._ontime = function(){ if (vid.currentTime >= startAtLoop && hasUsableVideoFrame(vid)){ activateOverlay(o); try{ vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; }catch(e){} } };
                       vid.addEventListener('timeupdate', o._ontime, { passive:true });
-                      var fallbackDelay = Math.max(200, H.slideDuration-1200);
-                      var target = (slideStartTs || Date.now()) + fallbackDelay;
-                      var delay = Math.max(0, target - Date.now());
-                      var t2 = setTimeout(function(){ if (!o.classList.contains('overlay--visible')) activateOverlay(o); try{ if (o._ontime) { vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} }, delay);
-                      overlaySchedule.push({ id: t2, target: target, fn: function(){ if (!o.classList.contains('overlay--visible')) activateOverlay(o); try{ if (o._ontime) { vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} } });
+                      if (hasVideoPlaybackProgress(vid)) {
+                        var fallbackDelay = Math.max(200, H.slideDuration-1200);
+                        var target = (slideStartTs || Date.now()) + fallbackDelay;
+                        var delay = Math.max(0, target - Date.now());
+                        var t2 = setTimeout(function(){ if (!o.classList.contains('overlay--visible') && hasUsableVideoFrame(vid)) activateOverlay(o); try{ if (o._ontime) { vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} }, delay);
+                        overlaySchedule.push({ id: t2, target: target, fn: function(){ if (!o.classList.contains('overlay--visible') && hasUsableVideoFrame(vid)) activateOverlay(o); try{ if (o._ontime) { vid.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} } });
+                      }
                     }
                   });
                 }
@@ -1175,16 +1253,18 @@
           ovs.forEach(function(ov){
             var startAt = parseFloat(ov.getAttribute('data-start'));
             if (isNaN(startAt)) startAt = H.overlayStartAt;
-            if (vid.currentTime >= startAt) {
+            if (vid.currentTime >= startAt && hasUsableVideoFrame(vid)) {
               activateOverlay(ov);
             } else {
-              ov._ontime = function(){ if (vid.currentTime >= startAt){ activateOverlay(ov); try{ vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; }catch(e){} } };
+              ov._ontime = function(){ if (vid.currentTime >= startAt && hasUsableVideoFrame(vid)){ activateOverlay(ov); try{ vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; }catch(e){} } };
               vid.addEventListener('timeupdate', ov._ontime, { passive:true });
-              var fallbackDelay = Math.max(200, H.slideDuration - 1200);
-              var target = (slideStartTs || Date.now()) + fallbackDelay;
-              var delay = Math.max(0, target - Date.now());
-              var t = setTimeout(function(){ if (!ov.classList.contains('overlay--visible')) activateOverlay(ov); try{ if (ov._ontime) { vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; } }catch(e){} }, delay);
-              overlaySchedule.push({ id: t, target: target, fn: function(){ if (!ov.classList.contains('overlay--visible')) activateOverlay(ov); try{ if (ov._ontime) { vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; } }catch(e){} } });
+              if (hasVideoPlaybackProgress(vid)) {
+                var fallbackDelay = Math.max(200, H.slideDuration - 1200);
+                var target = (slideStartTs || Date.now()) + fallbackDelay;
+                var delay = Math.max(0, target - Date.now());
+                var t = setTimeout(function(){ if (!ov.classList.contains('overlay--visible') && hasUsableVideoFrame(vid)) activateOverlay(ov); try{ if (ov._ontime) { vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; } }catch(e){} }, delay);
+                overlaySchedule.push({ id: t, target: target, fn: function(){ if (!ov.classList.contains('overlay--visible') && hasUsableVideoFrame(vid)) activateOverlay(ov); try{ if (ov._ontime) { vid.removeEventListener('timeupdate', ov._ontime); delete ov._ontime; } }catch(e){} } });
+              }
             }
           });
         }
@@ -1312,24 +1392,132 @@
     })();
 
     // visibility pause
-    document.addEventListener('visibilitychange', function(){ if (document.hidden) stopAutoplay(); else startAutoplay(); });
+    document.addEventListener('visibilitychange', function(){ if (document.hidden) stopAutoplay(); else if (startupCommitted) startAutoplay(); });
 
     var startupCommitted = false;
     var startupStartedAt = Date.now();
     var STARTUP_TIMEOUT_MS = 4200;
     var MIN_BRAND_HOLD_MS = 950;
     var FALLBACK_RELEASE_MS = 560;
+    var startupTimeoutId = null;
+    var startupRecoveryInteractionBound = false;
+    var startupTelemetryConfig = window.beslockHeroTelemetry || null;
+    var reportedStartupTelemetryStates = Object.create(null);
+    var startupTelemetrySessionId = 'hero-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 8);
+    var prefersReducedMotion = false;
+    try {
+      prefersReducedMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    } catch (e) {}
+
+    function getHeroNavigationType(){
+      try {
+        if (window.performance && typeof window.performance.getEntriesByType === 'function') {
+          var entries = window.performance.getEntriesByType('navigation');
+          if (entries && entries[0] && entries[0].type) return entries[0].type;
+        }
+        if (window.performance && window.performance.navigation) {
+          if (window.performance.navigation.type === 1) return 'reload';
+          if (window.performance.navigation.type === 2) return 'back_forward';
+        }
+      } catch (e) {}
+      return 'navigate';
+    }
+
+    function shouldReportStartupState(state){
+      return state === 'ready' || state === 'image-fallback' || state === 'reduced-motion';
+    }
+
+    function reportStartupTelemetry(detail){
+      if (!detail || !shouldReportStartupState(detail.state)) return;
+      if (reportedStartupTelemetryStates[detail.state]) return;
+      reportedStartupTelemetryStates[detail.state] = true;
+
+      var payload = {
+        sessionId: startupTelemetrySessionId,
+        state: detail.state,
+        reason: detail.reason || null,
+        atMs: typeof detail.atMs === 'number' ? detail.atMs : null,
+        waitedMs: typeof detail.waitedMs === 'number' ? detail.waitedMs : null,
+        readyState: typeof detail.readyState === 'number' ? detail.readyState : null,
+        blocked: !!detail.blocked,
+        errorName: detail.errorName || null,
+        currentTime: typeof detail.currentTime === 'number' ? detail.currentTime : null,
+        navigationType: getHeroNavigationType(),
+        path: window.location && window.location.pathname ? window.location.pathname : '/',
+        viewportWidth: window.innerWidth || 0,
+        viewportHeight: window.innerHeight || 0,
+        reportedAt: new Date().toISOString()
+      };
+
+      try {
+        window.__beslockHeroTelemetryEvents = window.__beslockHeroTelemetryEvents || [];
+        window.__beslockHeroTelemetryEvents.push(payload);
+      } catch (e) {}
+
+      try {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'beslock_hero_startup',
+          hero_state: payload.state,
+          hero_reason: payload.reason || 'unknown',
+          hero_blocked: payload.blocked ? 'true' : 'false',
+          hero_navigation_type: payload.navigationType,
+          hero_waited_ms: payload.waitedMs,
+          hero_startup: payload
+        });
+      } catch (e) {}
+
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'beslock_hero_startup', {
+            hero_state: payload.state,
+            hero_reason: payload.reason || 'unknown',
+            hero_blocked: payload.blocked ? 1 : 0,
+            hero_navigation_type: payload.navigationType,
+            hero_waited_ms: payload.waitedMs,
+            non_interaction: true
+          });
+        }
+      } catch (e) {}
+
+      if (!startupTelemetryConfig || startupTelemetryConfig.enabled === false || !startupTelemetryConfig.endpoint) return;
+
+      var body = JSON.stringify(payload);
+      try {
+        if (navigator.sendBeacon) {
+          var queued = navigator.sendBeacon(startupTelemetryConfig.endpoint, new Blob([body], { type: 'application/json' }));
+          if (queued) return;
+        }
+      } catch (e) {}
+
+      try {
+        if (window.fetch) {
+          window.fetch(startupTelemetryConfig.endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: body,
+            keepalive: true,
+            credentials: 'omit'
+          }).catch(function(){});
+        }
+      } catch (e) {}
+    }
+
     function publishStartupState(state, meta){
       var detail = {
         state: state,
         atMs: Date.now() - startupStartedAt,
         reason: meta && meta.reason ? meta.reason : null,
         waitedMs: meta && typeof meta.waitedMs === 'number' ? meta.waitedMs : null,
-        readyState: meta && typeof meta.readyState === 'number' ? meta.readyState : null
+        readyState: meta && typeof meta.readyState === 'number' ? meta.readyState : null,
+        blocked: !!(meta && meta.blocked),
+        errorName: meta && meta.errorName ? meta.errorName : null,
+        currentTime: meta && typeof meta.currentTime === 'number' ? meta.currentTime : null
       };
       try { root.setAttribute('data-startup-state', state); } catch (e) {}
       try { if (loader) loader.setAttribute('data-stage', state); } catch (e) {}
       try { window.__beslockHeroStartup = detail; } catch (e) {}
+      reportStartupTelemetry(detail);
       try {
         if (typeof window.CustomEvent === 'function') {
           root.dispatchEvent(new CustomEvent('beslock:hero-startup', { detail: detail }));
@@ -1338,17 +1526,139 @@
         }
       } catch (e) {}
     }
+
+    function scheduleStartupHandoff(meta){
+      if (startupCommitted) return;
+      if (startupTimeoutId) {
+        clearTimeout(startupTimeoutId);
+        startupTimeoutId = null;
+      }
+      publishStartupState('video-ready', meta);
+      try { scheduleMobileVideoFocus(slides[0], slides[0] && slides[0].querySelector('.slide-video'), { delay: 60, attempts: 4 }); } catch (e) {}
+      var elapsed = Date.now() - startupStartedAt;
+      var delay = Math.max(0, MIN_BRAND_HOLD_MS - elapsed);
+      setTimeout(function(){ handoffToHero(meta); }, delay);
+    }
+
+    function bindStartupInteractionRecovery(){
+      if (startupRecoveryInteractionBound || prefersReducedMotion) return;
+      startupRecoveryInteractionBound = true;
+
+      function cleanup(){
+        startupRecoveryInteractionBound = false;
+        document.removeEventListener('pointerdown', onInteract, true);
+        document.removeEventListener('touchstart', onInteract, true);
+        document.removeEventListener('keydown', onKeydown, true);
+      }
+
+      function retry(reason){
+        if (startupCommitted) {
+          cleanup();
+          return;
+        }
+        cleanup();
+        waitFirst({ timeoutMs: 2200, attemptPlay: true }).then(function(meta){
+          if (startupCommitted) return;
+          if (meta && meta.ok) {
+            meta.reason = reason + ':' + meta.reason;
+            scheduleStartupHandoff(meta);
+          } else if (!startupCommitted && root.getAttribute('data-startup-state') === 'image-fallback') {
+            bindStartupInteractionRecovery();
+          }
+        });
+      }
+
+      function onInteract(){ retry('user-activation'); }
+      function onKeydown(event){
+        if (!event) return;
+        if (event.key === 'Tab' || event.key === 'Enter' || event.key === ' ' || event.key === 'Spacebar') {
+          retry('user-activation');
+        }
+      }
+
+      document.addEventListener('pointerdown', onInteract, { once:true, capture:true });
+      document.addEventListener('touchstart', onInteract, { once:true, capture:true, passive:true });
+      document.addEventListener('keydown', onKeydown, { once:true, capture:true });
+    }
+
+    function bindLateStartupRecovery(video){
+      if (!video || video._beslockLateStartupRecoveryBound) return;
+      video._beslockLateStartupRecoveryBound = true;
+      bindVideoActivityTracking(video);
+
+      function cleanup(){
+        try { video.removeEventListener('loadeddata', onLateReady); } catch (e) {}
+        try { video.removeEventListener('canplay', onLateReady); } catch (e) {}
+        try { video.removeEventListener('playing', onLateReady); } catch (e) {}
+        try { video.removeEventListener('timeupdate', onLateReady); } catch (e) {}
+      }
+
+      function onLateReady(event){
+        if (startupCommitted) {
+          cleanup();
+          return;
+        }
+        if (root.getAttribute('data-startup-state') !== 'image-fallback') return;
+        if (!(hasVideoPlaybackProgress(video) || (!video.paused && hasUsableVideoFrame(video)))) return;
+        cleanup();
+        scheduleStartupHandoff({
+          ok: true,
+          reason: 'late-' + (event && event.type ? event.type : 'recovery'),
+          waitedMs: Date.now() - startupStartedAt,
+          readyState: video.readyState,
+          currentTime: typeof video.currentTime === 'number' ? Math.round(video.currentTime * 1000) / 1000 : null
+        });
+      }
+
+      video.addEventListener('loadeddata', onLateReady, { passive:true });
+      video.addEventListener('canplay', onLateReady, { passive:true });
+      video.addEventListener('playing', onLateReady, { passive:true });
+      video.addEventListener('timeupdate', onLateReady, { passive:true });
+    }
+
+    function showStaticStartupFallback(meta){
+      if (startupCommitted) return;
+      if (startupTimeoutId) {
+        clearTimeout(startupTimeoutId);
+        startupTimeoutId = null;
+      }
+      publishStartupState(meta && meta.reason === 'reduced-motion' ? 'reduced-motion' : 'image-fallback', meta);
+      stopAutoplay();
+      slides.forEach(function(slide){
+        try {
+          slide.classList.remove('is-active');
+          slide.classList.remove('is-exiting');
+          slide.setAttribute('aria-hidden','true');
+        } catch (e) {}
+        try {
+          var video = slide.querySelector('.slide-video');
+          if (video) video.pause();
+        } catch (e) {}
+      });
+      if (startupFallback) {
+        startupFallback.classList.add('is-active');
+        startupFallback.classList.remove('is-hidden-immediate');
+        startupFallback.setAttribute('aria-hidden', 'false');
+        startupFallback.style.pointerEvents = 'none';
+      }
+      root.classList.remove('is-handoff');
+      root.classList.remove('ready');
+      hideLoaderForStartup();
+      bindStartupInteractionRecovery();
+    }
+
     function handoffToHero(meta){
       if (startupCommitted) return;
       startupCommitted = true;
+      if (startupTimeoutId) {
+        clearTimeout(startupTimeoutId);
+        startupTimeoutId = null;
+      }
       publishStartupState('handoff', meta);
       hideStartupFallback(true);
       showSlide(0, { immediate:true });
       startAutoplay();
-      if (loader) {
-        loader.setAttribute('aria-hidden','true');
-        loader.style.pointerEvents = 'none';
-      }
+      hideLoaderForStartup();
       root.classList.add('is-handoff');
       root.classList.add('ready');
       publishStartupState('ready', meta);
@@ -1368,21 +1678,29 @@
 
     publishStartupState('booting', { reason: 'init' });
 
-    // Start the hero as soon as the first video can render a usable frame,
-    // while keeping a short minimum branded fallback so warm caches don't flash.
-    waitFirst().then(function(meta){
-      if (startupCommitted) return;
-      publishStartupState('video-ready', meta);
-      try { scheduleMobileVideoFocus(slides[0], slides[0] && slides[0].querySelector('.slide-video'), { delay: 60, attempts: 4 }); } catch (e) {}
-      var elapsed = Date.now() - startupStartedAt;
-      var delay = Math.max(0, MIN_BRAND_HOLD_MS - elapsed);
-      setTimeout(function(){ handoffToHero(meta); }, delay);
-    });
+    bindLateStartupRecovery(slides[0] && slides[0].querySelector('.slide-video'));
 
-    setTimeout(function(){
-      publishStartupState('timeout', { reason: 'startup-timeout', waitedMs: Date.now() - startupStartedAt });
-      handoffToHero({ reason: 'startup-timeout', waitedMs: Date.now() - startupStartedAt });
-    }, STARTUP_TIMEOUT_MS);
+    if (prefersReducedMotion) {
+      setTimeout(function(){
+        showStaticStartupFallback({ reason: 'reduced-motion', waitedMs: Date.now() - startupStartedAt, ok: false });
+      }, MIN_BRAND_HOLD_MS);
+    } else {
+      // Start the hero as soon as the first video can render a usable frame,
+      // while keeping a short minimum branded fallback so warm caches don't flash.
+      waitFirst({ timeoutMs: STARTUP_TIMEOUT_MS, attemptPlay: true }).then(function(meta){
+        if (startupCommitted) return;
+        if (meta && meta.ok) {
+          scheduleStartupHandoff(meta);
+        } else {
+          showStaticStartupFallback(meta || { reason: 'startup-fallback', waitedMs: Date.now() - startupStartedAt, ok: false });
+        }
+      });
+
+      startupTimeoutId = setTimeout(function(){
+        if (startupCommitted) return;
+        showStaticStartupFallback({ reason: 'startup-timeout', waitedMs: Date.now() - startupStartedAt, ok: false });
+      }, STARTUP_TIMEOUT_MS + 120);
+    }
 
     // expose for debug
     window.__beslockHero = { show: showSlide, next: nextSlide, prev:function(){ showSlide(current-1); }, stop:stopAutoplay, start:startAutoplay };

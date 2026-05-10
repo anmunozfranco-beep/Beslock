@@ -78,6 +78,12 @@
           if ( file_exists( $video_fs ) ) {
             $video_url .= '?v=' . filemtime( $video_fs );
           }
+          $poster_relative_path = '/assets/images/Clips_hero/posters/' . pathinfo( $vid, PATHINFO_FILENAME ) . '.webp';
+          $poster_fs = get_stylesheet_directory() . $poster_relative_path;
+          $poster_url = '';
+          if ( file_exists( $poster_fs ) ) {
+            $poster_url = get_stylesheet_directory_uri() . $poster_relative_path . '?v=' . filemtime( $poster_fs );
+          }
           // Map overlay filename to high-res variant in images_hero/images_hero_d if present
           $ov_base = pathinfo($ov, PATHINFO_FILENAME);
           if (preg_match('/^(.*)_2_hero$/i', $ov_base, $m)) {
@@ -90,7 +96,7 @@
       ?>
       <article class="hero-slide" data-index="<?php echo $i; ?>" aria-roledescription="slide" aria-label="Slide <?php echo $i+1; ?>">
         <div class="slide-inner">
-          <video class="slide-video" muted playsinline preload="auto" loop src="<?php echo esc_url( $video_url ); ?>"></video>
+          <video class="slide-video" muted playsinline preload="auto" loop<?php echo $poster_url ? ' poster="' . esc_url( $poster_url ) . '"' : ''; ?> src="<?php echo esc_url( $video_url ); ?>"></video>
           <!-- Dim layer strictly over the clip to improve white text contrast; overlays remain above -->
           <div class="slide-dim" aria-hidden="true"></div>
           <picture class="slide-overlay-frame" aria-hidden="true">
