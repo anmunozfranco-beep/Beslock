@@ -1,0 +1,15 @@
+2026-05-10 19:58:58 [INFO] === Processing: e-Orbit user manual.pdf ===
+2026-05-10 19:58:58 [DEBUG] Dependency status: {'pymupdf': True, 'pytesseract': True, 'pdf2image': True, 'pillow': True, 'ocrmypdf': True, 'tesseract': True, 'pdftoppm': True}
+2026-05-10 19:58:58 [INFO] Detecting PDF type...
+2026-05-10 19:58:58 [INFO] PDF type: scanned | pages=2 | text_chars=0
+2026-05-10 19:58:58 [DEBUG] Running: ocrmypdf --skip-text --optimize 1 -l spa+eng /home/runner/work/Beslock/Beslock/User manuals/e-Orbit user manual.pdf /home/runner/work/Beslock/Beslock/output/e-orbit/e-Orbit user manual.searchable.pdf
+2026-05-10 19:59:18 [INFO] ocrmypdf succeeded → e-Orbit user manual.searchable.pdf
+2026-05-10 19:59:18 [INFO] Running pdf2image+pytesseract OCR on e-Orbit user manual.searchable.pdf...
+2026-05-10 19:59:18 [DEBUG] Converting PDF to images with pdf2image at 300 DPI
+2026-05-10 19:59:21 [DEBUG] OCR page 1/2
+2026-05-10 19:59:42 [DEBUG] OCR page 2/2
+2026-05-10 19:59:56 [INFO] pytesseract OCR complete: 2 pages, avg_conf=80.9%
+2026-05-10 19:59:56 [INFO] Raw text: 15867 characters after cleaning
+2026-05-10 19:59:56 [INFO] Structure: sections=1 specs=9 steps=3 warnings=13 features=14 app=9
+2026-05-10 19:59:56 [INFO] Outputs written to: /home/runner/work/Beslock/Beslock/output/e-orbit
+2026-05-10 19:59:56 [INFO] ✓ e-Orbit user manual.pdf: scanned=True pages=2 avg_confidence=80.9% method=ocrmypdf+pytesseract
