@@ -13,17 +13,19 @@ rm -rf \
   /usr/src/wordpress/wp-content/themes/twentytwentyfour \
   /usr/src/wordpress/wp-content/themes/twentytwentyfive
 
-# Ensure a usable `wp-config.php` exists. Some setups mount a volume over
-# `/var/www/html` which can hide bind-mounted files; in that case copy the
-# provided `wp-config-docker.php` into place at container start if missing.
-if [ ! -f /var/www/html/wp-config.php ]; then
-  if [ -f /var/www/html/wp-config-docker.php ]; then
-    cp /var/www/html/wp-config-docker.php /var/www/html/wp-config.php 2>/dev/null || true
-    chown www-data:www-data /var/www/html/wp-config.php 2>/dev/null || true
-  elif [ -f /usr/src/wordpress/wp-config-docker.php ]; then
-    cp /usr/src/wordpress/wp-config-docker.php /var/www/html/wp-config.php 2>/dev/null || true
-    chown www-data:www-data /var/www/html/wp-config.php 2>/dev/null || true
-  fi
+# Keep the effective wp-config in sync with the bind-mounted docker config.
+config_target="/var/www/html/wp-config.php"
+config_source=""
+
+if [ -f /var/www/html/wp-config-docker.php ]; then
+  config_source="/var/www/html/wp-config-docker.php"
+elif [ -f /usr/src/wordpress/wp-config-docker.php ]; then
+  config_source="/usr/src/wordpress/wp-config-docker.php"
+fi
+
+if [ -n "$config_source" ] && { [ ! -f "$config_target" ] || ! cmp -s "$config_source" "$config_target"; }; then
+  cp "$config_source" "$config_target" 2>/dev/null || true
+  chown www-data:www-data "$config_target" 2>/dev/null || true
 fi
 
 exec docker-entrypoint.sh "$@"

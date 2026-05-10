@@ -22,6 +22,7 @@ $table_prefix = getenv( 'WORDPRESS_TABLE_PREFIX' ) ?: 'wptq_';
 
 define( 'WP_DEBUG', false );
 define( 'WP_CACHE', false );
+define( 'DONOTCACHEPAGE', true );
 define( 'FORCE_SSL_ADMIN', false );
 define( 'FS_METHOD', 'direct' );
 

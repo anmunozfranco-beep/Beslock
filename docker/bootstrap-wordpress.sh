@@ -5,14 +5,18 @@ path="/var/www/html"
 max_attempts=60
 attempt=1
 
-if [ ! -f "$path/wp-config.php" ]; then
-  if [ -f "$path/wp-config-docker.php" ]; then
-    cp "$path/wp-config-docker.php" "$path/wp-config.php"
-    chown www-data:www-data "$path/wp-config.php" 2>/dev/null || true
-  elif [ -f "/usr/src/wordpress/wp-config-docker.php" ]; then
-    cp "/usr/src/wordpress/wp-config-docker.php" "$path/wp-config.php"
-    chown www-data:www-data "$path/wp-config.php" 2>/dev/null || true
-  fi
+config_target="$path/wp-config.php"
+config_source=""
+
+if [ -f "$path/wp-config-docker.php" ]; then
+  config_source="$path/wp-config-docker.php"
+elif [ -f "/usr/src/wordpress/wp-config-docker.php" ]; then
+  config_source="/usr/src/wordpress/wp-config-docker.php"
+fi
+
+if [ -n "$config_source" ] && { [ ! -f "$config_target" ] || ! cmp -s "$config_source" "$config_target"; }; then
+  cp "$config_source" "$config_target"
+  chown www-data:www-data "$config_target" 2>/dev/null || true
 fi
 
 until wp core is-installed --allow-root --path="$path" >/dev/null 2>&1; do
