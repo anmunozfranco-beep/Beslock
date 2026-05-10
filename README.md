@@ -12,36 +12,6 @@ The repository ships with a minimal Docker Compose stack for local development:
 
 The bootstrap is designed for a production SQL dump stored locally at `database/andres38_wp718.sql`. That dump is intentionally kept out of Git.
 
-## GitHub Codespaces / Dev Containers
-
-This repository includes a `.devcontainer/` configuration so Codespaces can run the same Docker Compose workflow used locally.
-
-### Codespaces quick start
-
-1. Open the repository in GitHub Codespaces.
-2. Wait for container setup to finish (`postCreateCommand` verifies Docker tooling).
-3. Place the SQL dump at `database/andres38_wp718.sql` if you need production-like content.
-4. Start from scratch (first boot):
-
-	```bash
-	make fresh
-	```
-
-	Or start an existing environment:
-
-	```bash
-	make up
-	```
-
-5. Open forwarded ports:
-   - `8080`: WordPress
-   - `8081`: phpMyAdmin
-
-### Local Docker vs Codespaces
-
-- **Local Docker**: run the same `make`/`docker compose` commands on your machine.
-- **Codespaces**: run the same commands inside the dev container terminal; ports are exposed through Codespaces forwarding.
-
 ### Services
 
 - `wordpress` using `wordpress:php8.2-apache`
