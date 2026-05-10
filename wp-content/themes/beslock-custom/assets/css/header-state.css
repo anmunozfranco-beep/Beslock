@@ -69,47 +69,58 @@
    Uses transform override to avoid layout changes and stays within allowed
    transition properties (transform, opacity). */
 @media (min-width: 600px) {
-  /* Overlay offset is now controlled via CSS custom property `--overlay-offset`.
-     This allows JS to set numeric offsets per-overlay (data-offset="20")
-     without relying on inline `transform` styles that win over stylesheet rules.
-     The variable defaults to 0 and can be overridden per-overlay. */
-  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay {
-    transform: translateY(calc(-50% + var(--overlay-offset, 0px))) scale(1);
-  }
-  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay.overlay--visible {
-    transform: translateY(calc(-50% + var(--overlay-offset, 0px))) scale(1.02);
-  }
-
   /* Keep a fallback selector for the third slide (e-prime) in case markup
      doesn't include `data-offset`. Not `!important` — JS will set the
      preferred `--overlay-offset` when present. */
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
-    transform: translateY(calc(-50% + 27px)) scale(1);
+    --overlay-offset: 27px;
   }
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(3) .slide-overlay.overlay--visible {
-    transform: translateY(calc(-50% + 27px)) scale(1.02);
+    --overlay-offset: 27px;
   }
   /* Also provide a fallback for the first slide (e-Flex) when data-offset is
      not present. This mirrors the e-prime fallback and keeps visual parity. */
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(1) .slide-overlay {
-    transform: translateY(calc(-50% + 27px)) scale(1);
+    --overlay-offset: 10px;
   }
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(1) .slide-overlay.overlay--visible {
-    transform: translateY(calc(-50% + 27px)) scale(1.02);
+    --overlay-offset: 10px;
   }
   /* Fallback for the fifth slide (e-touch) to apply 30px offset when no data-offset is present */
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(5) .slide-overlay {
-    transform: translateY(calc(-50% + 30px)) scale(1);
+    --overlay-offset: 30px;
   }
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(5) .slide-overlay.overlay--visible {
-    transform: translateY(calc(-50% + 30px)) scale(1.02);
+    --overlay-offset: 30px;
   }
   /* Fallback for the sixth slide (e-orbit) to apply 27px offset when no data-offset is present */
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(6) .slide-overlay {
-    transform: translateY(calc(-50% + 27px)) scale(1);
+    --overlay-offset: 27px;
   }
   .beslock-hero .hero-viewport .hero-slides > .hero-slide:nth-child(6) .slide-overlay.overlay--visible {
-    transform: translateY(calc(-50% + 27px)) scale(1.02);
+    --overlay-offset: 27px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1279px) {
+  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay {
+    object-position: right calc(50% + var(--overlay-offset, 0px));
+    transform: scale(var(--overlay-focus-scale-base, 1));
+  }
+  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay.overlay--visible {
+    object-position: right calc(50% + var(--overlay-offset, 0px));
+    transform: scale(var(--overlay-focus-scale-active, 1.02));
+  }
+}
+
+@media (min-width: 1280px) {
+  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay {
+    object-position: left center;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1));
+  }
+  .beslock-hero .hero-viewport .hero-slides .hero-slide .slide-overlay.overlay--visible {
+    object-position: left center;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1));
   }
 }
 /* Desktop safety shim: cover tiny subpixel/gap artifacts that can appear

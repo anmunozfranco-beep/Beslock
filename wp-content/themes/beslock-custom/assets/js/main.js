@@ -666,6 +666,226 @@
     var slideStartTs = 0;
     var isTouchPaused = false, touchPauseAt = 0, autoplayRemaining = null, autoplayDeadline = null;
     var startupFallbackHidden = false;
+    var mobileVideoFocusQuery = window.matchMedia ? window.matchMedia('(max-width: 599px)') : null;
+    var mobileVideoFocusOverrides = {
+      'e-Flex.mp4': { x: 37 }
+    };
+    var mobileVideoFocusTimelines = {
+      'e-Orbit.mp4': [
+        { at: 4, x: 42.5, y: 50 }
+      ]
+    };
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function isMobileVideoFocusEnabled() {
+      return !mobileVideoFocusQuery || mobileVideoFocusQuery.matches;
+    }
+
+    function getVideoBaseName(video) {
+      if (!video) return '';
+      var src = (video.currentSrc || video.getAttribute('src') || '').split('?')[0];
+      return src ? src.split('/').pop() : '';
+    }
+
+    function getVideoFocusOverride(video) {
+      var baseName = getVideoBaseName(video);
+      return baseName && mobileVideoFocusOverrides[baseName] ? mobileVideoFocusOverrides[baseName] : null;
+    }
+
+    function getVideoFocusTimeline(video) {
+      var baseName = getVideoBaseName(video);
+      return baseName && mobileVideoFocusTimelines[baseName] ? mobileVideoFocusTimelines[baseName] : null;
+    }
+
+    function mapFocusToObjectPosition(focusRatio, visibleRatio) {
+      if (!(visibleRatio > 0 && visibleRatio < 0.999)) return 50;
+      var position = (focusRatio - (visibleRatio / 2)) / (1 - visibleRatio);
+      return clamp(position, 0.16, 0.84) * 100;
+    }
+
+    function sampleVideoFocus(video) {
+      if (!video || !video.videoWidth || !video.videoHeight) return null;
+
+      var sampleWidth = 64;
+      var sampleHeight = 36;
+      var canvas = document.createElement('canvas');
+      canvas.width = sampleWidth;
+      canvas.height = sampleHeight;
+
+      var ctx = canvas.getContext('2d', { willReadFrequently: true });
+      if (!ctx) return null;
+
+      try {
+        ctx.drawImage(video, 0, 0, sampleWidth, sampleHeight);
+      } catch (e) {
+        return null;
+      }
+
+      var data = ctx.getImageData(0, 0, sampleWidth, sampleHeight).data;
+      var totalWeight = 0;
+      var xWeight = 0;
+      var yWeight = 0;
+
+      for (var y = 1; y < sampleHeight - 1; y += 1) {
+        for (var x = 1; x < sampleWidth - 1; x += 1) {
+          var index = (y * sampleWidth + x) * 4;
+          var r = data[index];
+          var g = data[index + 1];
+          var b = data[index + 2];
+          var lum = (r * 0.299) + (g * 0.587) + (b * 0.114);
+
+          var leftIndex = ((y * sampleWidth) + (x - 1)) * 4;
+          var upIndex = (((y - 1) * sampleWidth) + x) * 4;
+          var leftLum = (data[leftIndex] * 0.299) + (data[leftIndex + 1] * 0.587) + (data[leftIndex + 2] * 0.114);
+          var upLum = (data[upIndex] * 0.299) + (data[upIndex + 1] * 0.587) + (data[upIndex + 2] * 0.114);
+
+          var contrast = Math.abs(lum - leftLum) + Math.abs(lum - upLum);
+          var saturation = Math.max(r, g, b) - Math.min(r, g, b);
+          var xNorm = x / (sampleWidth - 1);
+          var centerBias = 0.84 + ((1 - Math.min(1, Math.abs(xNorm - 0.5) * 2)) * 0.16);
+          var weight = ((contrast * 0.78) + (saturation * 0.22)) * centerBias;
+
+          totalWeight += weight;
+          xWeight += x * weight;
+          yWeight += y * weight;
+        }
+      }
+
+      if (!totalWeight || !isFinite(totalWeight)) return null;
+
+      return {
+        focusX: clamp((xWeight / totalWeight) / (sampleWidth - 1), 0, 1),
+        focusY: clamp((yWeight / totalWeight) / (sampleHeight - 1), 0, 1)
+      };
+    }
+
+    function applyVideoFocus(slide, video, focus) {
+      if (!slide || !video || !focus) return null;
+
+      var containerWidth = Math.max(video.clientWidth || 0, root.clientWidth || 0, window.innerWidth || 0, 1);
+      var containerHeight = Math.max(video.clientHeight || 0, root.clientHeight || 0, window.innerHeight || 0, 1);
+      var containerAspect = containerWidth / Math.max(1, containerHeight);
+      var videoAspect = video.videoWidth / Math.max(1, video.videoHeight);
+      var visibleXRatio = 1;
+      var visibleYRatio = 1;
+
+      if (videoAspect > containerAspect) {
+        visibleXRatio = containerAspect / videoAspect;
+      } else if (videoAspect < containerAspect) {
+        visibleYRatio = videoAspect / containerAspect;
+      }
+
+      var focusXPercent = mapFocusToObjectPosition(focus.focusX, visibleXRatio);
+      var focusYPercent = mapFocusToObjectPosition(focus.focusY, visibleYRatio);
+      var override = getVideoFocusOverride(video);
+
+      if (override && typeof override.x === 'number') {
+        focusXPercent = override.x;
+      }
+      if (override && typeof override.y === 'number') {
+        focusYPercent = override.y;
+      }
+
+      return commitVideoFocus(slide, video, focusXPercent, focusYPercent);
+    }
+
+    function commitVideoFocus(slide, video, focusXPercent, focusYPercent) {
+      video.style.setProperty('--hero-video-focus-x', focusXPercent.toFixed(1) + '%');
+      video.style.setProperty('--hero-video-focus-y', focusYPercent.toFixed(1) + '%');
+      slide.setAttribute('data-video-focus-x', focusXPercent.toFixed(1));
+      slide.setAttribute('data-video-focus-y', focusYPercent.toFixed(1));
+
+      return {
+        x: focusXPercent,
+        y: focusYPercent
+      };
+    }
+
+    function computeAndApplyVideoFocus(slide, video) {
+      if (!isMobileVideoFocusEnabled() || !slide || !video || video.readyState < 2) return null;
+
+      var focus = sampleVideoFocus(video);
+      if (!focus) return null;
+
+      video.dataset.mobileFocusReady = 'true';
+      return applyVideoFocus(slide, video, focus);
+    }
+
+    function bindMobileVideoFocusTimeline(slide, video) {
+      var timeline = getVideoFocusTimeline(video);
+      if (!slide || !video || !isMobileVideoFocusEnabled() || !timeline || !timeline.length) return;
+
+      if (video._mobileFocusTimelineHandler) {
+        try { video.removeEventListener('timeupdate', video._mobileFocusTimelineHandler); } catch (e) {}
+      }
+
+      var state = {
+        nextIndex: 0,
+        lastCurrentTime: typeof video.currentTime === 'number' ? video.currentTime : 0
+      };
+
+      var handler = function() {
+        var currentTime = typeof video.currentTime === 'number' ? video.currentTime : 0;
+
+        if (currentTime + 0.35 < state.lastCurrentTime) {
+          state.nextIndex = 0;
+          scheduleMobileVideoFocus(slide, video, { delay: 70, attempts: 3 });
+        }
+
+        state.lastCurrentTime = currentTime;
+
+        while (state.nextIndex < timeline.length && currentTime >= timeline[state.nextIndex].at) {
+          var point = timeline[state.nextIndex];
+          commitVideoFocus(
+            slide,
+            video,
+            typeof point.x === 'number' ? point.x : 50,
+            typeof point.y === 'number' ? point.y : 50
+          );
+          state.nextIndex += 1;
+        }
+      };
+
+      video._mobileFocusTimelineHandler = handler;
+      video.addEventListener('timeupdate', handler, { passive: true });
+      handler();
+    }
+
+    function scheduleMobileVideoFocus(slide, video, opts) {
+      opts = opts || {};
+      if (!slide || !video || !isMobileVideoFocusEnabled()) return;
+
+      if (video._mobileFocusTimer) {
+        clearTimeout(video._mobileFocusTimer);
+      }
+
+      var delay = typeof opts.delay === 'number' ? opts.delay : 180;
+      var remainingAttempts = typeof opts.attempts === 'number' ? opts.attempts : 3;
+
+      video._mobileFocusTimer = setTimeout(function tryFocus() {
+        video._mobileFocusTimer = null;
+
+        var applied = computeAndApplyVideoFocus(slide, video);
+        if (applied || remainingAttempts <= 1) return;
+
+        remainingAttempts -= 1;
+        video._mobileFocusTimer = setTimeout(tryFocus, 180);
+      }, delay);
+    }
+
+    if (mobileVideoFocusQuery && typeof mobileVideoFocusQuery.addEventListener === 'function') {
+      mobileVideoFocusQuery.addEventListener('change', function(event) {
+        if (!event.matches) return;
+        try {
+          var activeSlide = slides[current];
+          var activeVideo = activeSlide && activeSlide.querySelector('.slide-video');
+          scheduleMobileVideoFocus(activeSlide, activeVideo, { delay: 90, attempts: 3 });
+        } catch (e) {}
+      });
+    }
 
     function hideStartupFallback(immediate){
       if (startupFallbackHidden || !startupFallback) return;
@@ -771,29 +991,11 @@
       });
     }
 
-    // Features scheduling helpers (isolated module)
+    // Feature blocks are disabled in the template; keep these helpers as no-ops
+    // so the surrounding hero lifecycle does not need branching changes.
     function clearFeatureTimeouts(){ if (Array.isArray(featureSchedule)){ featureSchedule.forEach(function(obj){ try{ if (obj.id) clearTimeout(obj.id); }catch(e){} }); featureSchedule=[]; } }
-    function resetFeaturesOnSlide(slide){ try{ if(!slide) return; var fw = slide.querySelector('.features-wrapper'); if (!fw) return; fw.classList.remove('features--fading'); Array.prototype.slice.call(fw.querySelectorAll('.feature')).forEach(function(f){ f.classList.remove('feature--visible'); }); }catch(e){} }
-    function scheduleFeatures(slide){ try{
-        clearFeatureTimeouts(); if(!slide) return; var fw = slide.querySelector('.features-wrapper'); if(!fw) return;
-        // reset immediately
-        resetFeaturesOnSlide(slide);
-        var features = Array.prototype.slice.call(fw.querySelectorAll('.feature'));
-        // Show all features at once after a short delay so entrance animation still plays
-        var SHOW_DELAY = 1200; // ms
-        var now = Date.now();
-        var base = slideStartTs || now;
-        var tShowTarget = base + SHOW_DELAY;
-        var tFadeTarget = base + 6500;
-        var tHideTarget = base + 7400;
-
-        function scheduleAt(target, fn){ var delay = Math.max(0, target - Date.now()); if (delay === 0) { try{ fn(); }catch(e){} } else { var id = setTimeout(fn, delay); featureSchedule.push({ id:id, target: target, fn: fn }); } }
-
-        scheduleAt(tShowTarget, function(){ try{ features.forEach(function(f){ f.classList.add('feature--visible'); }); }catch(e){} });
-        scheduleAt(tFadeTarget, function(){ try{ fw.classList.add('features--fading'); }catch(e){} });
-        scheduleAt(tHideTarget, function(){ try{ features.forEach(function(f){ f.classList.remove('feature--visible'); }); fw.classList.remove('features--fading'); }catch(e){} });
-      }catch(e){}
-    }
+    function resetFeaturesOnSlide(){ }
+    function scheduleFeatures(){ }
 
     function showSlide(idx, opts){
       opts = opts||{}; idx = (idx + slides.length) % slides.length; // normalize
@@ -809,6 +1011,7 @@
         var pv = s.querySelector('.slide-video'); if (!pv) return;
         s.querySelectorAll('.slide-overlay').forEach(function(o){ try{ if (o._ontime) { pv.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} });
         try{ if (pv._loopWatcher) { pv.removeEventListener('timeupdate', pv._loopWatcher); delete pv._loopWatcher; delete pv._lastCurrent; } }catch(e){}
+        try{ if (pv._mobileFocusTimelineHandler) { pv.removeEventListener('timeupdate', pv._mobileFocusTimelineHandler); delete pv._mobileFocusTimelineHandler; } }catch(e){}
       });
 
       var oldIndex = current;
@@ -822,6 +1025,8 @@
         newSlide.classList.add('is-active'); newSlide.setAttribute('aria-hidden','false');
         // play new video, pause others
         slides.forEach(function(s,i){ var v=s.querySelector('.slide-video'); if (!v) return; if (s===newSlide){ try{ v.currentTime=0; }catch(e){} v.play().catch(function(){}); } else { try{ v.pause(); v.currentTime=0; }catch(e){} } });
+        try { scheduleMobileVideoFocus(newSlide, newSlide && newSlide.querySelector('.slide-video'), { delay: 120, attempts: 4 }); } catch (e) {}
+        try { bindMobileVideoFocusTimeline(newSlide, newSlide && newSlide.querySelector('.slide-video')); } catch (e) {}
         // schedule overlays for new slide below (same logic as before)
         slideStartTs = Date.now();
         current = idx;
@@ -861,6 +1066,8 @@
                   }
                 }catch(e){}
                 nv.play().catch(function(){});
+                scheduleMobileVideoFocus(newSlide, nv, { delay: 140, attempts: 4 });
+                bindMobileVideoFocusTimeline(newSlide, nv);
               } }catch(e){}
           }
 
@@ -984,30 +1191,7 @@
       }
     }
 
-    // Ensure the .features-wrapper is placed where CSS expects for each breakpoint.
-    // On large desktop (>=1024px) we want the features block to be direct child of .hero-slide
-    // so absolute positioning (top) is relative to the slide. For widths <1024px we keep
-    // the features block inside .slide-content so it sits directly under the subtitle.
-    function relocateFeaturesForBreakpoint() {
-      try {
-        var isDesktop = window.innerWidth >= 1024;
-        slides.forEach(function(s){
-          var fw = s.querySelector('.features-wrapper');
-          var sc = s.querySelector('.slide-content');
-          if (!fw || !sc) return;
-          if (isDesktop) {
-            if (fw.parentNode !== s) s.appendChild(fw);
-          } else {
-            if (fw.parentNode !== sc) sc.appendChild(fw);
-          }
-        });
-      } catch (e) { console.warn('relocateFeaturesForBreakpoint error', e); }
-    }
-
-    // run once on init and on resize (debounced)
-    relocateFeaturesForBreakpoint();
-    var _relocTid = null;
-    window.addEventListener('resize', function(){ if (_relocTid) clearTimeout(_relocTid); _relocTid = setTimeout(relocateFeaturesForBreakpoint, 140); }, { passive: true });
+    function relocateFeaturesForBreakpoint() {}
 
     function startAutoplay(){ stopAutoplay(); isPlaying=true; autoplayDeadline = Date.now() + H.slideDuration; timer = setTimeout(nextSlide, H.slideDuration); }
     function stopAutoplay(){ if (timer){ clearTimeout(timer); timer=null; } isPlaying=false; autoplayDeadline = null; autoplayRemaining = null; }
@@ -1189,6 +1373,7 @@
     waitFirst().then(function(meta){
       if (startupCommitted) return;
       publishStartupState('video-ready', meta);
+      try { scheduleMobileVideoFocus(slides[0], slides[0] && slides[0].querySelector('.slide-video'), { delay: 60, attempts: 4 }); } catch (e) {}
       var elapsed = Date.now() - startupStartedAt;
       var delay = Math.max(0, MIN_BRAND_HOLD_MS - elapsed);
       setTimeout(function(){ handoffToHero(meta); }, delay);
