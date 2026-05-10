@@ -141,6 +141,7 @@ max_execution_time = 300
 - `wp-content/themes/beslock-custom`: Kadence child theme customizations.
 - `wp-content/plugins/beslock-product-sync`: Deterministic JSON-driven WooCommerce product sync.
 - `data/products.json`: filesystem source of product data consumed by sync.
+- `tools/manual_ocr`: reusable OCR ingestion workflow for scanned product manuals (raw text, markdown, JSON outputs).
 
 ## Notes for new developers
 
