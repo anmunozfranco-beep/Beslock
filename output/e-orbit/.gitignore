@@ -1,0 +1,2 @@
+# Exclude intermediate OCR searchable PDF files (large intermediates, not needed in repo)
+*.searchable.pdf
