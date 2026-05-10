@@ -12,6 +12,8 @@ The repository ships with a minimal Docker Compose stack for local development:
 
 The bootstrap is designed for a production SQL dump stored locally at `database/andres38_wp718.sql`. That dump is intentionally kept out of Git.
 
+> **Prefer a cloud environment?** See [GitHub Codespaces](#github-codespaces) below — the `.devcontainer/` configuration lets you run the full stack in a browser without installing anything locally.
+
 ### Services
 
 - `wordpress` using `wordpress:php8.2-apache`
@@ -46,6 +48,58 @@ Beslock/
 - MySQL data lives in its own named volume so the production SQL is imported only on first bootstrap and persists across restarts.
 - The default local table prefix is `wptq_`, matching the current site configuration and making production SQL imports safer.
 - A one-shot `wpcli` bootstrap runs `search-replace` from `https://beslock.com.co` to `http://localhost:8080` after the import.
+
+## GitHub Codespaces
+
+The repository ships with a `.devcontainer/` configuration so the full stack can
+be opened and used directly in [GitHub Codespaces](https://github.com/features/codespaces)
+without any local Docker or tooling requirement.
+
+### Opening in Codespaces
+
+1. On the repository page, click **Code → Codespaces → Create codespace on this branch**.
+2. The devcontainer will build automatically and:
+   - detect the Codespaces-forwarded URL for port 8080,
+   - update `WORDPRESS_LOCAL_URL` in `.env` accordingly,
+   - run `make fresh` to import the SQL dump and bootstrap WordPress.
+3. After ~1-2 minutes the **PORTS** panel will show port 8080 (WordPress) and
+   port 8081 (phpMyAdmin) as forwarded.  Click the 🌐 globe icon next to port
+   8080 to open WordPress.
+
+> **SQL dump:** if `database/andres38_wp718.sql` is not present in the
+> repository the import step is skipped and WordPress shows its installer.
+> Add the dump and run `make fresh` inside the Codespace terminal to complete
+> the bootstrap.
+
+### URL handling in Codespaces
+
+Codespaces forwards port 8080 to a public HTTPS URL
+(`https://<codespace-name>-8080.preview.app.github.dev`).  The `post-create`
+script sets `WORDPRESS_LOCAL_URL` to that URL so WordPress redirects and admin
+links resolve correctly from the browser.
+
+If you ever need to apply the URL update manually (e.g. after changing the
+`.env`), run:
+
+```bash
+bash .devcontainer/post-create.sh
+```
+
+### Resuming a Codespace
+
+When a Codespace is resumed after being stopped, the `postStartCommand` runs
+`docker compose up -d` automatically to restart all services.
+
+### Useful commands inside the Codespace
+
+```bash
+make logs     # tail Docker Compose logs
+make fresh    # tear down + re-import SQL dump from scratch
+make up       # start services
+make down     # stop services
+```
+
+---
 
 ## Quick start
 

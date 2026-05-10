@@ -1,0 +1,44 @@
+{
+  "name": "Beslock WordPress Dev",
+
+  // Use a standard Ubuntu dev image. Docker Compose services (WordPress,
+  // MySQL, phpMyAdmin) start as sibling containers via the host socket.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+
+  "features": {
+    // Exposes the host Docker socket inside the devcontainer so that
+    // `docker` and `docker compose` work without a nested Docker daemon.
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {
+      "moby": false
+    }
+  },
+
+  // Forward WordPress, phpMyAdmin, and MySQL ports.
+  "forwardPorts": [8080, 8081, 3306],
+  "portsAttributes": {
+    "8080": {
+      "label": "WordPress",
+      "onAutoForward": "openBrowserOnce"
+    },
+    "8081": {
+      "label": "phpMyAdmin",
+      "onAutoForward": "notify"
+    },
+    "3306": {
+      "label": "MySQL",
+      "onAutoForward": "silent"
+    }
+  },
+
+  // Run once after the Codespace container is created:
+  // - updates WORDPRESS_LOCAL_URL in .env to the Codespaces-forwarded URL
+  //   so that WordPress redirects and admin links resolve correctly.
+  // - starts the Docker Compose stack.
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+
+  // On every subsequent start (e.g., after the Codespace is resumed),
+  // bring the Docker Compose services back up.
+  "postStartCommand": "docker compose up -d",
+
+  "remoteUser": "vscode"
+}
