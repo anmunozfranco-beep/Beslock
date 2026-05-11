@@ -64,8 +64,7 @@ WARNING_PATTERN = re.compile(
     r"\b(warning|caution|danger|note|important|advertencia|precaución|peligro|nota)\b",
     re.IGNORECASE,
 )
-MIN_FEATURE_LENGTH = 10
-FEATURE_PATTERN = re.compile(r"^[\-\*\•]\s+.{" + str(MIN_FEATURE_LENGTH) + r",}")
+FEATURE_PATTERN = re.compile(r"^[\-\*\•]\s+.{10,}")
 PAGE_NUMBER_PATTERN = re.compile(r"^\d{1,3}$")
 SUSPICIOUS_SYMBOL_PATTERN = re.compile(r"[+|<>{}\[\]~`_\\]")
 # Keep multilingual keyword coverage for current manuals (English + Spanish).
@@ -140,7 +139,7 @@ MIN_ALPHA_RATIO_WITH_SYMBOLS = 0.7
 MIN_LENGTH_FOR_ALPHA_CHECK = 10
 MIN_ALPHA_RATIO_LONG_LINE = 0.45
 MAX_SPEC_VALUE_WORDS = 22
-SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|aa|kv)\b")
+SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|aa|kv)\b", re.IGNORECASE)
 # Character-density heuristic (avg chars/page -> confidence) used when OCR engines
 # do not expose confidence scores (e.g., OCRmyPDF + native text extraction path).
 TEXT_CONFIDENCE_THRESHOLDS: tuple[tuple[int, float], ...] = (
@@ -479,7 +478,6 @@ def normalize_spacing(lines: Iterable[str]) -> list[str]:
 
 def is_noise_line(line: str) -> bool:
     stripped = line.strip()
-    stripped_lower = stripped.lower()
     if not stripped:
         return True
     if PAGE_NUMBER_PATTERN.fullmatch(stripped):
@@ -500,6 +498,7 @@ def is_noise_line(line: str) -> bool:
         return True
     if SUSPICIOUS_SYMBOL_PATTERN.search(stripped) and alpha < 6:
         return True
+    stripped_lower = stripped.lower()
     if (
         len(stripped) <= MAX_SHORT_LINE_LENGTH
         and alpha <= MAX_SHORT_ALPHA_CHARS
