@@ -1,20 +1,20 @@
 # e-Orbit
-## Implementation starter pack for content and AI-generated images
+## Paquete inicial de implementación para contenido e imágenes IA
 
-## 1. Objective
-This document connects the initial implementation of the e-Orbit help center with the first batch of AI-generated images.
+## 1. Objetivo
+Este documento conecta la implementación inicial del centro de ayuda de e-Orbit con el primer lote de imágenes generadas por IA.
 
-It is intended to help with:
-- MVP Phase 1 implementation
-- content and image coordination
-- file naming and organization
-- prioritization of visual assets
-- integration planning in CMS or frontend
+Está pensado para ayudar con:
+- implementación del MVP Fase 1
+- coordinación entre contenido e imágenes
+- nombrado y organización de archivos
+- priorización de assets visuales
+- planeación de integración en CMS o frontend
 
 ---
 
-## 2. Priority pages for Phase 1
-Initial implementation should prioritize these pages:
+## 2. Páginas prioritarias para Fase 1
+La implementación inicial debería priorizar estas páginas:
 
 - `/productos/e-orbit`
 - `/productos/e-orbit/primeros-pasos`
@@ -30,8 +30,8 @@ Initial implementation should prioritize these pages:
 
 ---
 
-## 3. Priority image assets
-Produce these first:
+## 3. Assets visuales prioritarios
+Producir primero:
 
 1. `e-orbit-hero-main.jpg`
 2. `e-orbit-installed-context.jpg`
@@ -41,7 +41,7 @@ Produce these first:
 6. `e-orbit-app-add-device.jpg`
 7. `e-orbit-link-qr.jpg`
 
-Produce later:
+Producir después:
 
 8. `e-orbit-pin-use.jpg`
 9. `e-orbit-troubleshoot-fingerprint.jpg`
@@ -50,52 +50,52 @@ Produce later:
 
 ---
 
-## 4. Suggested asset-to-page mapping
+## 4. Mapeo sugerido entre asset y página
 
 ### Hub
-- page: `/productos/e-orbit`
-- main image: `e-orbit-hero-main.jpg`
+- página: `/productos/e-orbit`
+- imagen principal: `e-orbit-hero-main.jpg`
 
-### First steps
-- page: `/productos/e-orbit/primeros-pasos`
-- main image: `e-orbit-installed-context.jpg`
+### Primeros pasos
+- página: `/productos/e-orbit/primeros-pasos`
+- imagen principal: `e-orbit-installed-context.jpg`
 
-### Add administrator
-- page: `/productos/e-orbit/usuarios/agregar-administrador`
-- main image: `e-orbit-add-admin-action.jpg`
+### Agregar administrador
+- página: `/productos/e-orbit/usuarios/agregar-administrador`
+- imagen principal: `e-orbit-add-admin-action.jpg`
 
 ### PIN
-- page: `/productos/e-orbit/uso/pin`
-- main image: `e-orbit-pin-use.jpg`
+- página: `/productos/e-orbit/uso/pin`
+- imagen principal: `e-orbit-pin-use.jpg`
 
-### Fingerprint
-- page: `/productos/e-orbit/uso/huella`
-- main image: `e-orbit-fingerprint-use.jpg`
+### Huella
+- página: `/productos/e-orbit/uso/huella`
+- imagen principal: `e-orbit-fingerprint-use.jpg`
 
-### Language
-- page: `/productos/e-orbit/configuracion/idioma`
-- main image: `e-orbit-language-settings.jpg`
+### Idioma
+- página: `/productos/e-orbit/configuracion/idioma`
+- imagen principal: `e-orbit-language-settings.jpg`
 
-### Add device in app
-- page: `/productos/e-orbit/app/agregar-dispositivo`
-- main image: `e-orbit-app-add-device.jpg`
+### Agregar dispositivo en app
+- página: `/productos/e-orbit/app/agregar-dispositivo`
+- imagen principal: `e-orbit-app-add-device.jpg`
 
-### Pair by QR
-- page: `/productos/e-orbit/app/vincular-por-qr`
-- main image: `e-orbit-link-qr.jpg`
+### Vincular por QR
+- página: `/productos/e-orbit/app/vincular-por-qr`
+- imagen principal: `e-orbit-link-qr.jpg`
 
-### Fingerprint troubleshooting
-- page: `/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`
-- main image: `e-orbit-troubleshoot-fingerprint.jpg`
+### Troubleshooting de huella
+- página: `/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`
+- imagen principal: `e-orbit-troubleshoot-fingerprint.jpg`
 
-### App connection troubleshooting
-- page: `/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`
-- main image: `e-orbit-troubleshoot-app-connection.jpg`
+### Troubleshooting de app
+- página: `/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`
+- imagen principal: `e-orbit-troubleshoot-app-connection.jpg`
 
 ---
 
-## 5. Suggested folder organization
-If the repo later stores the actual generated images, a clean structure could be:
+## 5. Organización sugerida de carpetas
+Si más adelante el repositorio almacena las imágenes generadas, una estructura limpia podría ser:
 
 ```text
 User manuals/
@@ -119,53 +119,53 @@ User manuals/
 
 ---
 
-## 6. Integration checklist
-Use this checklist before connecting the images to the site:
+## 6. Checklist de integración
+Usar esta lista antes de conectar las imágenes al sitio:
 
-- [ ] The file exists
-- [ ] The image is visually clear
-- [ ] The image matches the intended page
-- [ ] The image does not depend on generated text being correct
-- [ ] The crop works for the intended placement
-- [ ] The file name is consistent
-- [ ] The asset is optimized for web if needed
-
----
-
-## 7. Suggested generation workflow
-
-### Step 1
-Generate 3 variants for each priority image.
-
-### Step 2
-Select one variant based on:
-- clarity
-- realism
-- documentary usefulness
-- consistency with the product
-
-### Step 3
-Refine chosen images if needed by changing:
-- angle
-- lighting
-- background
-- hand position
-- framing
-
-### Step 4
-Export the chosen version using the final file name.
+- [ ] El archivo existe
+- [ ] La imagen es visualmente clara
+- [ ] La imagen corresponde a la página esperada
+- [ ] La imagen no depende de texto generado correcto
+- [ ] El recorte funciona para el uso previsto
+- [ ] El nombre de archivo es consistente
+- [ ] El asset está optimizado para web si hace falta
 
 ---
 
-## 8. Implementation recommendation
-Start the implementation now with:
-- text content already structured
-- placeholder image names already defined
-- AI-generated assets produced in parallel
+## 7. Flujo recomendado de generación
 
-This allows frontend or CMS work to move without waiting for a perfect final visual package.
+### Paso 1
+Generar 3 variantes para cada imagen prioritaria.
+
+### Paso 2
+Elegir una variante por:
+- claridad
+- realismo
+- utilidad documental
+- consistencia con el producto
+
+### Paso 3
+Refinar las elegidas si hace falta cambiando:
+- ángulo
+- iluminación
+- fondo
+- posición de la mano
+- encuadre
+
+### Paso 4
+Exportar la versión elegida con el nombre final de archivo.
 
 ---
 
-## 9. Final note
-These documents are intended to support the first implementation cycle and reduce improvisation across content, design, and UI work.
+## 8. Recomendación de implementación
+Empezar la implementación ya con:
+- contenido estructurado
+- nombres de archivos definidos
+- assets IA producidos en paralelo
+
+Esto permite que frontend o CMS avancen sin esperar un paquete visual final perfecto.
+
+---
+
+## 9. Recomendación final
+Estos documentos sirven para apoyar el primer ciclo de implementación y reducir improvisación entre contenido, diseño y UI.

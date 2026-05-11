@@ -1,252 +1,252 @@
 # e-Orbit
-## Final copy/paste prompts for DALL·E or other graphic AI
+## Prompts finales copiar/pegar para DALL·E u otra IA gráfica
 
-## 1. Main product hero
+## 1. Hero principal del producto
 
-**Suggested file name:** `e-orbit-hero-main`  
-**Use:** home / main help center hub
+**Nombre sugerido:** `e-orbit-hero-main`  
+**Uso:** home / hub principal del centro de ayuda
 
-### Final prompt
-Modern smart lock installed on an elegant residential door, front view with a slight angle, clean and contemporary design, modern and tidy interior environment, soft natural lighting, clear focus on the lock, simple composition suitable for a help center, realistic product photography, neutral tones, believable materials, high definition, technical and restrained style, no exaggerated advertising look
+### Prompt final
+Cerradura inteligente moderna instalada en una puerta residencial elegante, vista frontal con ángulo leve, diseño limpio y contemporáneo, ambiente interior moderno y ordenado, iluminación natural suave, enfoque claro en la cerradura, composición simple y útil para centro de ayuda, fotografía realista de producto, tonos neutros, materiales creíbles, alta definición, estilo técnico y sobrio, sin apariencia publicitaria exagerada
 
 ### Negative prompt
-text inside the image, letters, fake interface, deformed hands, extra fingers, extreme perspective, exaggerated futuristic style, neon lights, cluttered background, plastic render, irrelevant objects, chaotic composition, low resolution
+texto dentro de la imagen, letras, interfaz falsa, manos deformes, dedos extra, perspectiva extrema, estilo futurista exagerado, luces de neón, fondo recargado, render plástico, objetos irrelevantes, composición caótica, baja resolución
 
-### Suggested format
+### Formato sugerido
 16:9 horizontal
 
-### Optional variants
-- apartment door
-- contemporary house door
-- more minimal neutral background
+### Variantes opcionales
+- puerta de apartamento moderno
+- puerta de casa contemporánea
+- fondo interior neutro más minimalista
 
 ---
 
-## 2. Product installed in real context
+## 2. Producto instalado en contexto real
 
-**Suggested file name:** `e-orbit-installed-context`  
-**Use:** first steps / installation support / general context
+**Nombre sugerido:** `e-orbit-installed-context`  
+**Uso:** primeros pasos / apoyo de instalación / contexto general
 
-### Final prompt
-Modern smart lock installed on a real apartment or house door, clean and realistic contextual view, tidy home environment, feeling of a product ready to be configured and used, documentary-style photography, balanced natural light, main focus on the lock and the door, clear composition for a technical guide, believable materials, high definition
+### Prompt final
+Cerradura inteligente moderna instalada en una puerta real de apartamento o casa, vista de contexto limpio y realista, ambiente doméstico ordenado, sensación de producto listo para configurar y usar, fotografía documental, luz natural equilibrada, enfoque principal en la cerradura y la puerta, composición clara para guía técnica, materiales creíbles, alta definición
 
 ### Negative prompt
-clutter, too many decorative objects, darkness, dramatic advertising look, embedded text, distortions, futuristic style, artificial render, busy background
+desorden, objetos decorativos excesivos, oscuridad, dramatismo visual, texto incrustado, distorsiones, estilo futurista, render artificial, fondo recargado
 
-### Suggested format
+### Formato sugerido
 4:3 horizontal
 
-### Optional variants
-- closer shot of the lock
-- medium shot showing part of the door and surroundings
-- warmer or more neutral environment
+### Variantes opcionales
+- plano más cercano a la cerradura
+- plano medio mostrando parte de la puerta y el entorno
+- ambiente más cálido o más neutro
 
 ---
 
-## 3. Interaction with panel to create administrator
+## 3. Interacción con panel para crear administrador
 
-**Suggested file name:** `e-orbit-add-admin-action`  
-**Use:** page “Add administrator”
+**Nombre sugerido:** `e-orbit-add-admin-action`  
+**Uso:** página “Agregar administrador”
 
-### Final prompt
-Realistic close-up of an adult person interacting with the panel or keypad of a modern smart lock installed on a door, clear focus on the setup action, natural and well-proportioned hand, clean composition, discreet background, technical and documentary style, soft lighting, realistic product and usage photography, high definition
+### Prompt final
+Primer plano realista de una persona adulta interactuando con el panel o teclado de una cerradura inteligente moderna instalada en una puerta, enfoque claro en la acción de configuración, mano natural y bien proporcionada, composición limpia, fondo discreto, estilo técnico y documental, iluminación suave, fotografía realista de producto y uso, alta definición
 
 ### Negative prompt
-deformed hands, extra fingers, tiny text as main element, invented complex interface, extreme angle, cluttered background, futuristic aesthetic, exaggerated reflections, low resolution
+manos deformes, dedos extra, texto pequeño protagonista, interfaz inventada compleja, ángulo extremo, fondo recargado, estética futurista, brillos exagerados, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:5 vertical
 
-### Optional variants
-- finger touching touch panel
-- hand approaching keypad
-- slightly wider framing showing more of the lock
+### Variantes opcionales
+- dedo tocando panel táctil
+- mano acercándose al teclado
+- encuadre un poco más abierto mostrando más de la cerradura
 
 ---
 
-## 4. Fingerprint reader use
+## 4. Uso del lector de huella
 
-**Suggested file name:** `e-orbit-fingerprint-use`  
-**Use:** page “Register fingerprint” / fingerprint troubleshooting
+**Nombre sugerido:** `e-orbit-fingerprint-use`  
+**Uso:** página “Registrar huella” / troubleshooting de huella
 
-### Final prompt
-Realistic close-up of a person using the fingerprint reader of a modern smart lock, finger resting naturally on the sensor, sharp focus on the contact point, clear and instructional composition, technical photography, soft lighting, neutral blurred background, high definition, restrained style for a help center
+### Prompt final
+Primer plano realista de una persona usando el lector de huella de una cerradura inteligente moderna, dedo apoyado de manera natural sobre el sensor, enfoque nítido en el punto de contacto, composición clara y didáctica, fotografía técnica, iluminación suave, fondo neutro desenfocado, alta definición, estilo sobrio para centro de ayuda
 
 ### Negative prompt
-deformed fingers, extra hands, unclear sensor, robotic appearance, strange lighting, cluttered composition, text inside image, low resolution
+dedos deformes, manos extra, sensor poco claro, apariencia robótica, luces extrañas, composición recargada, texto dentro de imagen, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:5 vertical
 
-### Optional variants
-- very close shot of the sensor
-- medium framing showing part of the full panel
-- masculine / feminine / neutral hand
+### Variantes opcionales
+- encuadre muy cercano al sensor
+- encuadre medio mostrando parte del panel completo
+- mano masculina / mano femenina / mano neutra sin rasgos muy marcados
 
 ---
 
-## 5. Configuration or language settings
+## 5. Configuración o cambio de idioma
 
-**Suggested file name:** `e-orbit-language-settings`  
-**Use:** page “Change language”
+**Nombre sugerido:** `e-orbit-language-settings`  
+**Uso:** página “Cambiar idioma”
 
-### Final prompt
-Modern smart lock with active panel in configuration mode, adult hand interacting with the device, focus on the panel and the action, realistic photography, technical and clean style, simple tidy background, soft lighting, instructional composition for a help article, high definition
+### Prompt final
+Cerradura inteligente moderna con panel activo en modo de configuración, mano adulta interactuando con el dispositivo, enfoque en el panel y la acción, fotografía realista, estilo técnico y limpio, fondo simple y ordenado, iluminación suave, composición didáctica para artículo de ayuda, alta definición
 
 ### Negative prompt
-text-dominant panel, fantasy interface, deformed hands, cluttered background, extreme reflections, sci-fi style, low resolution, floating elements
+texto ilegible dominante, interfaz fantasiosa, manos deformes, fondo recargado, reflejos extremos, estilo sci-fi, baja resolución, elementos flotantes
 
-### Suggested format
+### Formato sugerido
 4:5 vertical
 
-### Optional variants
-- brighter panel
-- slight side angle
-- tighter framing on the interaction point
+### Variantes opcionales
+- panel más brillante
+- ángulo lateral leve
+- plano más cercano al punto de interacción
 
 ---
 
-## 6. App use to add device
+## 6. Uso de app para agregar dispositivo
 
-**Suggested file name:** `e-orbit-app-add-device`  
-**Use:** page “Add device in Smart Life”
+**Nombre sugerido:** `e-orbit-app-add-device`  
+**Uso:** página “Agregar dispositivo en Smart Life”
 
-### Final prompt
-Adult person holding a smartphone in front of a door with a modern smart lock, realistic scene of device configuration, clean home environment, clear balanced composition, shared focus between the phone and the lock, restrained documentary and technological photography, soft natural lighting, high definition
+### Prompt final
+Persona adulta sosteniendo un smartphone frente a una puerta con cerradura inteligente moderna, escena realista de configuración de dispositivo, ambiente doméstico limpio, composición clara y equilibrada, enfoque compartido entre el celular y la cerradura, fotografía documental y tecnológica sobria, iluminación natural suave, alta definición
 
 ### Negative prompt
-screen with highly visible fake text, deformed hands, strange perspective, messy background, exaggerated advertising aesthetic, fantasy interface, low resolution
+pantalla con texto falso muy visible, manos deformes, perspectiva rara, fondo desordenado, estética publicitaria exagerada, interfaz fantasiosa, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:3 horizontal
 
-### Optional variants
-- phone closer to the camera
-- lock more dominant
-- over-the-shoulder view
+### Variantes opcionales
+- celular más cerca de la cámara
+- cerradura más protagonista
+- vista sobre hombro de la persona
 
 ---
 
-## 7. QR pairing
+## 7. Vinculación por QR
 
-**Suggested file name:** `e-orbit-link-qr`  
-**Use:** page “Pair by QR”
+**Nombre sugerido:** `e-orbit-link-qr`  
+**Uso:** página “Vincular por QR”
 
-### Final prompt
-Realistic scene of pairing a smartphone and a smart lock using a QR code, phone displaying a generic QR code in front of the lock, clean and tidy indoor environment, instructional composition, clear technical photography, controlled lighting, high definition, restrained style for a help center
+### Prompt final
+Escena realista de vinculación entre smartphone y cerradura inteligente mediante código QR, teléfono mostrando un código QR genérico frente a la cerradura, ambiente interior limpio y ordenado, composición didáctica, fotografía técnica y clara, iluminación controlada, alta definición, estilo sobrio para centro de ayuda
 
 ### Negative prompt
-deformed QR, invented text as main element, extra hands, unrealistic screens, futuristic style, neon lights, cluttered background, low resolution
+QR deformado, texto inventado protagonista, manos extra, pantallas irreales, estilo futurista, luces de neón, fondo recargado, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:3 horizontal
 
-### Optional variants
-- tighter shot around the QR
-- medium shot showing smartphone, lock, and door
-- slightly side angle
+### Variantes opcionales
+- plano más cerrado al QR
+- plano medio mostrando smartphone + cerradura + puerta
+- ángulo ligeramente lateral
 
 ---
 
-## 8. Fingerprint reading problem
+## 8. Problema de lectura de huella
 
-**Suggested file name:** `e-orbit-troubleshoot-fingerprint`  
-**Use:** page “Fingerprint not recognized”
+**Nombre sugerido:** `e-orbit-troubleshoot-fingerprint`  
+**Uso:** página “No reconoce huella”
 
-### Final prompt
-Realistic scene of a person trying to use the fingerprint reader of a smart lock and encountering a small difficulty, subtle expression of doubt or review, focus on the reader and the interaction, clean environment, documentary photography, clear composition for a troubleshooting article, restrained tone, high definition
+### Prompt final
+Escena realista de una persona intentando usar el lector de huella de una cerradura inteligente y encontrando una pequeña dificultad, gesto sutil de duda o revisión, enfoque en el lector y la interacción, ambiente limpio, fotografía documental, composición clara para artículo de solución de problemas, tono sobrio, alta definición
 
 ### Negative prompt
-exaggerated drama, caricature-like expressions, deformed hands, busy background, ad-like aesthetic, embedded text, low resolution
+dramatismo exagerado, gestos caricaturescos, manos deformes, fondo recargado, estética de anuncio, texto incrustado, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:5 vertical
 
-### Optional variants
-- more neutral expression
-- tighter shot on hand and sensor
-- version with less face and more action
+### Variantes opcionales
+- gesto más neutro
+- plano más cerrado en mano + sensor
+- versión con menos rostro y más acción
 
 ---
 
-## 9. App connection problem
+## 9. Problema de conexión con app
 
-**Suggested file name:** `e-orbit-troubleshoot-app-connection`  
-**Use:** page “App won’t connect”
+**Nombre sugerido:** `e-orbit-troubleshoot-app-connection`  
+**Uso:** página “No conecta a la app”
 
-### Final prompt
-Realistic scene of a person trying to connect a smart lock with a mobile app, smartphone in hand in front of the door, slight gesture of review or waiting, clean home environment, clear and restrained composition for a troubleshooting article, realistic photography, high definition
+### Prompt final
+Escena realista de una persona intentando conectar una cerradura inteligente con una aplicación móvil, smartphone en mano frente a la puerta, gesto leve de revisión o espera, ambiente doméstico limpio, composición clara y sobria para solución de problemas, fotografía realista, alta definición
 
 ### Negative prompt
-huge fake error messages on screen, excessive drama, cluttered background, deformed hands, invented complex interface, futuristic aesthetic, low resolution
+errores falsos gigantes en pantalla, dramatismo excesivo, fondo recargado, manos deformes, interfaz inventada compleja, estética futurista, baja resolución
 
-### Suggested format
+### Formato sugerido
 4:3 horizontal
 
-### Optional variants
-- more emphasis on the phone
-- more emphasis on the lock
-- soft side view
+### Variantes opcionales
+- plano con énfasis en teléfono
+- plano con énfasis en cerradura
+- vista lateral suave
 
 ---
 
-## 10. Documentation and downloads
+## 10. Documentación y descargas
 
-**Suggested file name:** `e-orbit-downloads-docs`  
-**Use:** downloads section / manual cards
+**Nombre sugerido:** `e-orbit-downloads-docs`  
+**Uso:** sección descargas / tarjetas de manuales
 
-### Final prompt
-Realistic editorial composition with a modern smart lock next to documents or technical manuals on a clean desk, minimal style, restrained photography, professional and tidy environment, useful for a downloads or documentation section, neutral tones, high definition
+### Prompt final
+Composición editorial realista con una cerradura inteligente moderna junto a documentos o manuales técnicos sobre una mesa limpia, estilo minimalista, fotografía sobria, ambiente profesional y ordenado, útil para sección de descargas o documentación, tonos neutros, alta definición
 
 ### Negative prompt
-messy papers, unreadable text as main focus, rigid corporate aesthetic, visual saturation, cluttered background, low resolution
+papeles desordenados, texto protagonista ilegible, estética corporativa rígida, saturación visual, fondo recargado, baja resolución
 
-### Suggested format
+### Formato sugerido
 16:9 horizontal
 
-### Optional variants
-- include a tablet next to documents
-- more technical desk setup
-- cleaner composition with fewer objects
+### Variantes opcionales
+- incluir tablet junto a documentos
+- composición más cercana a escritorio técnico
+- composición más limpia con menos objetos
 
 ---
 
-## 11. Reusable short master prompts
+## 11. Prompt corto maestro reutilizable
 
-### Product / usage base
-Modern smart lock installed on a residential door, realistic photography, clean and tidy environment, soft lighting, clear composition for a help center, technical and restrained style, high definition
+### Base producto/uso
+Cerradura inteligente moderna instalada en una puerta residencial, fotografía realista, ambiente limpio y ordenado, iluminación suave, composición clara para centro de ayuda, estilo técnico y sobrio, alta definición
 
-### Interaction base
-Adult person interacting with a modern smart lock, single clear action, realistic photography, clean composition, discreet background, documentary and technical style, high definition
+### Base interacción
+Persona adulta interactuando con una cerradura inteligente moderna, acción clara y única, fotografía realista, composición limpia, fondo discreto, estilo documental y técnico, alta definición
 
-### App base
-Person using a smartphone in front of a modern smart lock, realistic setup or connection scene, clean home environment, clear composition, restrained photography, high definition
+### Base app
+Persona usando un smartphone frente a una cerradura inteligente moderna, escena realista de configuración o conexión, ambiente doméstico limpio, composición clara, fotografía sobria, alta definición
 
 ---
 
-## 12. Suggested generation workflow
-For each priority image:
+## 12. Recomendación de generación
+Para cada imagen prioritaria:
 
-### Round 1
-Generate **3 variants** per prompt
+### Primera ronda
+Generar **3 variantes** por prompt
 
-### Round 2
-Choose 1 and refine:
-- angle
-- lighting
-- proximity
-- background cleanliness
-- hand naturalness
+### Segunda ronda
+Elegir 1 variante y refinar:
+- ángulo
+- iluminación
+- cercanía
+- limpieza del fondo
+- naturalidad de la mano
 
-### Round 3 if needed
-Create a final version already adapted to the site crop:
+### Tercera ronda si hace falta
+Hacer una versión final ya orientada al recorte real del sitio:
 - hero
-- article header
-- card thumbnail
+- cabecera de artículo
+- miniatura de tarjeta
 
 ---
 
-## 13. Recommended generation order
+## 13. Orden ideal para generar primero
 1. `e-orbit-hero-main`
 2. `e-orbit-installed-context`
 3. `e-orbit-add-admin-action`
@@ -260,5 +260,5 @@ Create a final version already adapted to the site crop:
 
 ---
 
-## 14. Final note
-This file is intended for direct use in DALL·E or another graphic AI and can be used immediately to start image production.
+## 14. Recomendación final
+Este archivo está pensado para uso directo en DALL·E u otra IA gráfica y puede usarse de inmediato para empezar producción visual.
