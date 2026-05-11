@@ -399,9 +399,36 @@ def normalize_spacing(lines: Iterable[str]) -> list[str]:
     normalized: list[str] = []
     for line in lines:
         line = re.sub(r"\s+", " ", line).strip()
-        if line:
+        if line and not is_noise_line(line):
             normalized.append(line)
     return normalized
+
+
+def is_noise_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return True
+    if re.fullmatch(r"[\W_]+", stripped):
+        return True
+    alnum = sum(1 for ch in stripped if ch.isalnum())
+    alpha = sum(1 for ch in stripped if ch.isalpha())
+    if alnum < 2:
+        return True
+    if len(stripped) <= 3 and alpha <= 1 and not stripped.isdigit():
+        return True
+    return False
+
+
+def dedupe_preserve_order(lines: list[str]) -> list[str]:
+    seen: set[str] = set()
+    deduped: list[str] = []
+    for line in lines:
+        key = line.strip().lower()
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        deduped.append(line)
+    return deduped
 
 
 # ---------------------------------------------------------------------------
@@ -417,17 +444,34 @@ def _classify_section(title: str) -> str:
     return "General"
 
 
+def _is_probable_heading(line: str) -> bool:
+    if STEP_PATTERN.match(line):
+        return False
+    if len(line) < 4 or len(line) > 110:
+        return False
+    words = line.split()
+    if len(words) > 14:
+        return False
+    alpha_chars = sum(1 for ch in line if ch.isalpha())
+    if alpha_chars < 3:
+        return False
+    return bool(HEADING_PATTERN.match(line) or line.isupper())
+
+
 def detect_sections(lines: list[str]) -> list[Section]:
     sections: list[Section] = [Section(title="Overview", content=[], semantic_category="General")]
 
     for line in lines:
-        if len(line) <= 110 and (HEADING_PATTERN.match(line) or line.isupper()):
+        if _is_probable_heading(line):
             cat = _classify_section(line)
             sections.append(Section(title=line.title(), content=[], semantic_category=cat))
             continue
         sections[-1].content.append(line)
 
-    return [s for s in sections if s.content or s.title != "Overview"]
+    filtered = [s for s in sections if s.content]
+    if not filtered and lines:
+        return [Section(title="Overview", content=lines, semantic_category="General")]
+    return filtered
 
 
 def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
@@ -439,24 +483,32 @@ def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
             value = match.group(2).strip()
             if len(key.split()) <= 6 and value:
                 specs.append({"name": key, "value": value})
-    return specs
+    unique: list[dict[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for spec in specs:
+        key = (spec["name"].lower(), spec["value"].lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(spec)
+    return unique
 
 
 def preserve_ordered_steps(lines: list[str]) -> list[str]:
-    return [line for line in lines if STEP_PATTERN.match(line)]
+    return dedupe_preserve_order([line for line in lines if STEP_PATTERN.match(line)])
 
 
 def detect_app_instructions(lines: list[str]) -> list[str]:
     keywords = ("app", "aplicación", "bluetooth", "wifi", "emparejar", "pair", "application")
-    return [line for line in lines if any(kw in line.lower() for kw in keywords)]
+    return dedupe_preserve_order([line for line in lines if any(kw in line.lower() for kw in keywords)])
 
 
 def detect_warnings(lines: list[str]) -> list[str]:
-    return [line for line in lines if WARNING_PATTERN.search(line)]
+    return dedupe_preserve_order([line for line in lines if WARNING_PATTERN.search(line)])
 
 
 def detect_features(lines: list[str]) -> list[str]:
-    return [line for line in lines if FEATURE_PATTERN.match(line)]
+    return dedupe_preserve_order([line for line in lines if FEATURE_PATTERN.match(line)])
 
 
 def detect_troubleshooting(lines: list[str]) -> list[str]:
@@ -465,7 +517,7 @@ def detect_troubleshooting(lines: list[str]) -> list[str]:
         line_lower = line.lower()
         if any(kw in line_lower for kw in TROUBLESHOOTING_KEYWORDS):
             matches.append(line)
-    return matches
+    return dedupe_preserve_order(matches)
 
 
 # ---------------------------------------------------------------------------

@@ -1,3 +1,13 @@
 __pycache__/
 *.pyc
-generated_manuals/
+generated_manuals/*
+!generated_manuals/batch_report.md
+!generated_manuals/batch_summary.json
+!generated_manuals/*/
+generated_manuals/*/*
+!generated_manuals/*/manual_raw.txt
+!generated_manuals/*/manual.md
+!generated_manuals/*/manual.json
+!generated_manuals/*/extraction_report.md
+!generated_manuals/*/extracted_images/
+!generated_manuals/*/extracted_images/**

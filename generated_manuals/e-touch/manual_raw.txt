@@ -1,0 +1,611 @@
+Packing List
+Open the product package.Check that the follwoing accessories are included.
+C-Spring Bol 
+D-Pinch Plate 
+E-Keyx2TMF-Squa 
+
+Buckle Coverx' 
+
+sid
+11
+Dear user; Thank you for purchasing the smart door lock 
+Es FINGERPRINT LOCK
+To improve the quality survivalwith innovative technology, to create the world's most outstanding, most innovative products 
+INSTALLATION INSTRUCTIONS
+so that enterprises become the industry benchmark .We always adhere to the " quality survival, service and development"
+business philosophy. In the intelligent lock industry, all constantly improve the product quality system. our company keep up with
+the pace of the times . We always walk in the forefront of the industry, and always steadfastly protects the people's
+property safety! From products to service ,we always pursue to provide you with a full range of intimate and comfortable
+service!Thank you for your support for smart door lock!!
+A-Outside Handle 
+x1 
+{ |
+H-Connecting 
+H-Connecting I-Fix the Handle J-Fix the Cover
+
+Pipe-Long x2 | Pipe-short 
+x2 
+Screw x2 
+K-Battery x4
+Disclaimer: We have done our best to ensure that the information provided in this manual is correct and reliable, but we cannot 
+BAnside 
+HARE
+fully guarantee errors before and during printing. Sometimes we in order to improve the
+performance, reliability and safety of components and systems, may upgrade the product, which may be somewhat
+inconsistent with the contents of the manual, but does not affect the actual operation, if there is 
+a change is not known, please
+
+E-Ek
+understand! Our company will update the content regularly. If you have any questions, please call our company to answer .The 
+Q Y
+A-front handle
+final interpretation of the entire contents of this manual is the right of the Company. The functions described in this statement 
+B-rear handle 
+ene, Td
+B-1 cover screw 
+pee
+are not used as a reason for the use of this product for special purposes and the Company shall not be liable for accidents and 
+e
+hazards caused by the customer's improper operation. 
+Ñ
+B-2 rear cover 
+
+with battery 
+C-spring bolt
+J-Fix the Cover
+K-Battery x4
+A) (88) O] (0) e (o 
+cnc
+| «trick lock
+A 
+000 
+po ey screw of front and 
+a
+Fingerprint 
+Password Thepeep-proof Always 
+Emergency 
+rear plate
+unlocked 
+unlocked 
+function 
+on mode 
+ane power supply 
+D-pinch plate,
+
+buckle cover
+Diagram of Door Lock Installation
+1 
+LAPP registration,login
+Installation Steps 
+9 
+slog
+it l / PX 
+A 
+R*
+
+Re 
+asamn
+
+|ML L
+
+Register
+STEP 1 
+
+toads 
+APP registration:choose to register if without an APP
+China 
+China 
+account orlog in through SMS verication code.
+Pass the square 
+2.The hole position can
+along the wire 
+be adjusted according to 
+Medble Nuniber/Emsl 
+Please enter your account 
+Click "Create a new account'to enter the account
+the door lock position 
+registration page.Get SMS verification code and set
+Paasword 
+password according to the prompt.
+After completing 
+the 
+above steps,the 
+door lock 
+installation 
+is complete 
+If you already have an existing account,you can dick
+"Log in with an existing account"to log in to the APP.
+STEP 2: 
+o 
+Login mode supports password, verification code and
+
+a 
+
+1 
+ini 
+
+Forgot Pmnsord 
+social account ogin.
+3 
+Choose the screw of 
+
+a 
+Registered Administrator:
+
+the 
+corresponding 
+Al 
+
+stat and fix the door 
+1. Short press setting key (s1): add administrator / user function, if the system has
+length according to the 
+anale 
+registered administrator (not for the first time), verify the administrator;
+and tiohien the sereurs 
+2. Long press setting key (s1): force the system to initialization mode without verifying 
+oo 
+oo
+the administrator;
+3. Open key s2: quick open / close open mode;
+STEP 3 
+4. Long press for 
+|.Add bluetooth door lock
+
+5. seconds, 5 seconds as short press. 
+a 
+Pm 
+ae 
+j=
+Open the batte 
+cover 
+(Set fingerprint or password in initial state:Press the 
+Set the bey 
+Ses 
+ae is — 
+eae 
+Ñ
+to install the batte 
+key in the rear handle hole for 1 seconds., the 
+x 
+eee 
+=F 
+eee om
+fingerprint headlamp is on, press the fingerprint 5 
+0 
+E 
+7 
+sing woardng to the 
+nro 
+
+A por 
+times or the password 2 times, and the buzzer flutes 
+2 
+sa 
+a 
+‘Sn 
+eS omnes 
+Ps
+
+satus ty fulowt 
+a 
+
+once. The setting is successful enter the second user 
+
+e) 
+
+4 
+
+STEP 4: | 
+and verify the administrator). The first 3 users are 
+Has been open button , 
+
+oe 
+A
+
+administrators 
+Su 
+
+Install the deadbolt 
+Set password: 
+
+CAUTION;Any_fingerprint _can_ unlock it if no user is enrollec + 
+a 
+ó
+
+Indoor Intelligent Lock Bluetooth Tuya Operation Guide 
+en 
+
+= age 
+
+eo hB-- two
+
+Introduction and acquisition of APP 
+s
+Tighten the screws 
+E
+secur-ing the 
+"Tuya Smart APP"is an intelligent device management APP provided by Tuya to end consumers.Through the "Tuya 
+y
+battery cover 
+Smart APP",you can conveniently configure and control the smart products in the whole house,configure your favorite
+scenes and automation schemes,share your smart devices with family and friends,and enjoy the fun of smart in the 
+1.Click the "add device"icon on the homepage of APP.
+whole house.
+2.Click the "Security monitoring"category on the left and find and dlick "Smart Door Lock".
+Acquisition APP:Search for "Tuya Smart"in the application market or "Apple Mall"or scan the following QR code to 
+3.Start Bluetooth network distribution and click "Next".
+
+download. 
+4.Wake up the door lock keyboard, 
+or touch the fingerprint to wake up,wait for the mobile phone to scan the device,and
+1 Pay attention to the 
+This document takes Smart Life APP as an example to explain the functions of APP&door lock 
+press the "+"icon to add the device.
+direction of the lock 
+
+5.Waiting for the device to be added,the door lock emits "Drip"twice, indicating that the device is successfully added.
+tongue 
+when 
+you 
+panel in detail
+installing
+II.Bluetooth 
+door 
+lock 
+panel--homepage
+
+Bluntooth fingerprint p... 
+4 
+Bluatooth A 
+p 
+
+A 
+Pp. 
+
+92137717
+aa 
+e a Dreams. Puna 
+Capy Pr.
+Otemu: 
+0, 
+Qhema
+8 
+HB 
+
+oo 
+8 
+Ho 
+=> 
+A 
+H 
+so.
+1.The lower side of the homepage contains the names of the displayed door lock and the curent power condition on the
+upper side of the homepage of "Member Management" "Unlocking Record" "Smart Linkage"and "Setings".
+The connection status of Bluetooth will be displayed in the homepage center 
+If it is connected,you can click "Long press
+to unlock"and directly unlock the door lock (Please
+make sure the Bluetooth of the mobile phone is turned on and the mobile phone is within a reasonable distance from the
+door Ibck.Itis recommended to operate within 5 meters);If Bluetooth is not connected,"Bluetooth cannot be connected”
+is displayed,and the Bluetooth door lock cannot be opened directly through APP.
+3.The homepage slides to the left to the next page,with dynamic password function.
+After dicking "Get Dynamic Password",a group of 8-digit passwords wil appear randomly.You can use this digital
+password to unlock the door within 5 minutes.
+IV.Member management-family member management
+1. Validity period:once added, the permission ofusing
+time of family 
+members 
+is 
+permanent 
+until 
+the
+hratin 
+administrator deletes the member,and the members
+always have the corresponding permission.
+2.Door 
+opening 
+method:The 
+administrator 
+can
+decide the permission type of the member;As shown
+in the figure,if the administrator doses all the door
+Argorpmt Paragement 
+E-abled
+other 
+Lao 
+opening permissions of the member the user can no
+Urtodowin Mobil Phorp 
+>. 
+onger maintain his own door opening mode through
+APP and can only use the existing door opening
+Dyrare Pasword Nanape ment 
+E-ebled 
+mode.
+Be 
+3.Create/delete the door opening mode.
+Ge) 
+Set Vskity Peviad 
+Porrarert 
+By connecting the doorlock with APP Bluetooth,the
+administrator can create/delete the door opening for
+Erge'pm 
+other family members.
+Pasewort
+V.Member management-other member management
+2.Two Ways to Turn ON Normally-Open Mode
+Method 1:
+STEP 
+1: 
+STEP 2:
+Long press the button 
+When the indicator light
+onthe inside handle 
+turns green,release the
+for 1 second 
+button
+Method 2:
+STEP 
+1: 
+STEP 2:
+A
+Touch to wake up the
+password area
+STEP 3:
+Press the registered
+adminis trator fingerprint
+3.Four Ways to Turn OFF Normally-Open Mode
+a.Repeat the above 2 methods to turn off the normally open mode
+b.Press "#'to lock and turn off the normally open mode
+c.Enter an enrolled fingerprint or password to lockupg
+Enter“10#’Verify Administrator Add user
+
+Add Mamiber
+Family Member
+Other Member
+A
+
+Member Information.
+VI.Fingerprint management
+Caneel 
+Add Fingerpr..
+How to 
+Capture Fingerprint
+Cance 
+Add Fingerpr
+M)
+Vil.Password management
+1.Select “password management'as the entry of the home page.
+2.Before adding a password,select the user
+1.Validity period:the 
+administrator can decide the
+length of validity period of other members.It can be
+set as permanent,or set the specified start time-end
+time.
+2.Door opening mode:the administrator can decide
+the 
+permission type of the door opening mode
+possessed by the member;As shown in the figure.if
+the 
+administrator 
+coses 
+al 
+the 
+door 
+opening
+permissions of the member,the user can no longer
+maintain his own door opening mode through APP,
+and can only use the existing door opening mode.
+3.After creating another member,the administrator
+can associate the member with a certain user of APP
+by "sharing" When the specified end time of the user
+arrives,the users APP wil automatically lose the
+device.
+1.Before 
+selecting 
+"fingerpri 
+g 
+for
+collection,select 
+the 
+user 
+corresponding 
+to 
+the
+fingerprint to be added.
+2.Click 
+"Start 
+Collection"to enter 
+the 
+fingerprint
+collection 
+interface.For each fingerprint collection,
+muliple 
+fingerprints 
+need 
+to 
+be 
+entered 
+(the
+manufacturer can customize the collection times).
+3.Connect the door lock through APP Bluetooth,and
+the administrator can colect fingerprints for himself 
+or
+other family members.
+d to be added.
+ding 
+to the p
+3.Click "Add Password"to enter the password entry interface,which supports random generation and 
+user-defined
+passwords
+4.Connect the door lock through APP 
+Bluetoothand the administrator can 
+enter the 
+password for 
+himself 
+or 
+other family
+members.
+Vill. Temporary password management
+4.Emergency Unlock
+Method 1:
+STEP 
+1:
+Plug the USB power cord
+into the connector
+Useful Tips
+STEP 2:
+STEP 3:
+
+Press the registered
+Unlocking is successful
+administrator fingerprint
+1.Keep at least one key out of the door for emergency.
+2.When the battery is low,the indicator will blink red light. The rest power could
+only be used for about 50 times.
+a
+3.When the battery is out of power,you can unlock the door with 
+key,or supply
+the lock with power through the micro-USB port and use fingerprint or password
+to unlock it.
+4.Use alkaline batteries to prevent the damage by battery leakage.Batteries
+must be replaced every 2 years.
+Product Parameters
+1.Number of fingerprints: 100
+2.Number 
+of 
+passwords:100
+3.Power supply:4 AAA 1.5V alkaline batteries
+4.Card:100
+After-Sales Service
+If you 
+have any problem during 
+installation or operation,please contact us.
+
+EE OSS
+
+Settings 
+
+Temporary Password
+Oráne Password
+Cne-Tene Pasewors
+‘Smart Lrkage 
+1.Home page setup entry-select "temporary
+password management"
+Pomots UNoding 
+
+Parada Pusmnerd
+2.You can choose “one-time password"or"periodic
+password"according to user's requirements.
+Ofine Password) 
+3.Please select "Orline Password"when the
+Bluetooth signal is good,and select "Ofline
+Rne-Tine Password 
+Password"when the Bluetooth signal is
+disconnected or poor.
+Time-Lmted Pattegg
+Cearing Cade
+IX.Door opening record.
+The log can be queried in the"Door Opening Record"entry of the homepage,and the records are arranged in reverse
+order.The unlocking ID that has been associated with the user name will directly display the corresponding user name,
+and the unlocking ID that has not been associated with the name from the APP will display the specific unlocking 1D;
+About the record of door opening:when the door lock is connected with Bluetooth of mobile phone,the record of door
+opening will be displayed on APP in real time,otherwise,the record will be cached localy in the door lock,and it will be
+retransmitted after the door lock is connected with Bluetooth of mobile phone and opened next time.
+X.Restore the factory settings
+Click the icon in the upper right comer of the main page,enter the interface,find "Remove device",and select "Unbind and
+clear data".
+1.When the mobile phone APP is connected to the door lock by Bluetooth,the factory reset operation is used.Alllocal
+door opening methods of the door lock will be deleted,and the door lock will be restored to its original factory default state.
+Other users can re-add the door lock through APP.
+2.When the mobile phone is not connected with the door lock by Bluetooth,restore the factory settings of the door lock
+on the door lock.The way of opening the door on the door Ibck remains unaffected.Other users can re-pair with the door
+lock through APP.The original unlocking method of the rare door lock will be invalid.
+3.Press the setting button in the smal hole of the rear handle for 5 seconds,and the door Ibck will make a long "drip"
+sound,which will force the factory settings to be restored.All the door opening methods on the door lock wil be deleted,
+and the door lock will be restored to its original factory default state.Other users can add the door lock again through APP.
+XI.Normally open setting/cancel normally open
+After indoor handle
+1.Normally open setting:press the normally open button for 1
+second in the rare handle and the door lock will make a "drip"
+sound to open the normally open mode;
+Set the key 
+2. Cancel the normally open mode:Press the normaly open
+
+button for 1 second in the rare handle,and the door lock will
+make a"drip"sound to close the normaly open mode;
+> o 
+2 Automatically cancel the normally open mode after verifying
+A 
+that the administrator or user is correct;
+3 Press the "#"key in the front handle to cancel the normally
+Has been open button F 
+open mode.
+Useful Tips:
+1.Keep at least one key out of the door for emergency.
+O ther S etti ngs
+1.Two Ways to Reset and Delete All the Users
+Method 1:
+STEP 
+1:
+| 9
+Seconds 
+
+STEP 2:
+Method 2:
+STFP 1:
+STEP 2:
+Press the registered
+adminis-trator fingerprint,
+the reset is successful
+2.When the battery is low,the indicator will blink red light. The rest power conld only beused for about 50 times.
+3.When the battery is out of power,you can unlock the door with key,or supply the lockwith power through the micro-USB port and use fingerprint or password
+4.Use alkaline batteries to prevent the damage by battery leakage.Batteries must bereplaced every 2 years.
+Q8A:
+Q:The button doesn't respond and light doesn't light up?
+Long press the small hole on
+the inside handle with a small
+screwdriver for 9 seconds
+When the indicator blinks red
+light,stop the operation,the
+reset is successful
+Enter"888"+"#" 
+and the
+indicator will blink red light
+A:Check the cable is it connect to the right way or it's loose,After this it's still can't work,normally it's the battery dead. 
+It needs to change the batteries(4*1.5V AAA battery),or
+pull out the inner back cover and insert it again.
+Q:Which model of the door can install the fingerprint door lock ?
+A:There is no limit.If the door thickness more than 3.5cm-6.5cm then it can install.
+Q:How to restore the factory settings ?
+A:Long click the setting button 5s,the blue light will shinning and have the beesound, After 5s will have the red lighshinningandhaveavoiceremainder'initialsuccess", 
+This
+means successful.
+Q:What is the initial password if the fingerprint lock is restored to the factory setting?
+A: Initial password is "123456"#
+Q:How to do if the lock run out of the battery?
+A:Use the power bank to connect the USB port to charge then use of use the key toopen the door.
+Q:How to do if you forget the password?
+A:Use the fingerprint or key to unlocked the door and then restore the factory settingsto reset the password.
+Warranty Card
+The Company provide life long maintenance for the sale of products,from the date of purchase within one year the company provides free warranty service;lf
+the following cases are not held for free warranty services:
+(1) If there is no product warranty card or valid purchase voucher the warranty card and
+purchase certificate do not match the product;(2) Damage caused by human factors, including use in an abnormal working environment, damage caused by
+the use of a non-stated manual,etc.;
+(3) The user's private dismantling,self-repair,
+modification or maintenance by a non-authorized unit of the Company or other irresistible factors damaged"
+User name 
+
+Contact Tel |
+Address
+Model No 
+[Lock cylinder No]
+Serial No
+Purchase date 
+
+Install date |
+Supplier
+Contact address
+Contact Tel
+Note to users:
+In order to protect your Legal rights, please keep the service card and the relevant purchase voucher to protect your Legal rights in warranty services,
+warranty card once modified will be invalid
