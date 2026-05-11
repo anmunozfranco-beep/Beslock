@@ -4,6 +4,7 @@ Place validated generated outputs for e-Orbit here after they pass visual review
 
 ## Operational files in this folder
 - `pilot-wave-01.md`
+- `pilot-wave-01-variant-pack.md`
 - `selected-assets-register.md`
 
 ## Publishing rule

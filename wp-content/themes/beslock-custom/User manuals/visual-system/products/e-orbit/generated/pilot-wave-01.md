@@ -19,6 +19,7 @@ The pilot scope matches the current dashboard instruction and the first-wave set
 - `../ai-image-prompts.md`
 - `../image-generation-matrix.md`
 - `../visual-validation.md`
+- `pilot-wave-01-variant-pack.md`
 - `../../shared/generation-guides/review-checklist.md`
 
 ## Execution sequence
