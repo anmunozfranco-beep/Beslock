@@ -57,17 +57,92 @@ except ImportError:  # pragma: no cover - runtime dependency
 HEADING_PATTERN = re.compile(
     r"^(?:\d+(?:\.\d+)*[\.)]?\s+)?[A-ZÁÉÍÓÚÑ][A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9\s\-/(),]{2,}$"
 )
-STEP_PATTERN = re.compile(r"^(?:step|paso\s*)?\d+[\).:-]\s+", re.IGNORECASE)
+# Matches either "Paso 1:", "Step 2." style lines or parenthesized "(1)" step markers.
+STEP_PATTERN = re.compile(r"^(?:(?:step|paso)\s*)?\d+[\).:-]\s+|^\(\d+\)\s+", re.IGNORECASE)
 SPEC_PATTERN = re.compile(r"^([A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9\s\-/().]{2,60}):\s+(.+)$")
 WARNING_PATTERN = re.compile(
     r"\b(warning|caution|danger|note|important|advertencia|precaución|peligro|nota)\b",
     re.IGNORECASE,
 )
-FEATURE_PATTERN = re.compile(
-    r"^[\-\*\•]\s+.{10,}|^\d+\.\s+.{10,}",
-)
+# Feature extraction intentionally focuses on explicit bullet markers to avoid
+# polluting features with numbered procedural/setup lines.
+FEATURE_PATTERN = re.compile(r"^[\-\*\•]\s+.{10,}")
+PAGE_NUMBER_PATTERN = re.compile(r"^\d{1,3}$")
+SUSPICIOUS_SYMBOL_PATTERN = re.compile(r"[+|<>{}\[\]~`\\]")
 # Keep multilingual keyword coverage for current manuals (English + Spanish).
 TROUBLESHOOTING_KEYWORDS = ("troubleshoot", "error", "problem", "issue", "fallo", "problema")
+HEADING_KEYWORDS = (
+    "manual",
+    "instal",
+    "config",
+    "oper",
+    "paso",
+    "introdu",
+    "parámetro",
+    "spec",
+    "app",
+    "bluetooth",
+    "gateway",
+    "troubleshoot",
+    "warning",
+    "nota",
+)
+STEP_ACTION_KEYWORDS = (
+    "install",
+    "instale",
+    "instalar",
+    "presione",
+    "pulse",
+    "abra",
+    "open",
+    "gire",
+    "ingrese",
+    "introduzca",
+    "conecte",
+    "ajuste",
+    "descargue",
+    "toque",
+    "seleccione",
+    "siga",
+    "active",
+    "mantenga",
+    "haga clic",
+)
+SPEC_KEYWORD_HINTS = (
+    "modelo",
+    "material",
+    "tamaño",
+    "grosor",
+    "tipo",
+    "vida",
+    "capacidad",
+    "longitud",
+    "tasa",
+    "temperatura",
+    "corriente",
+    "humedad",
+    "voltaje",
+    "tensión",
+    "alimentación",
+    "energía",
+    "suministro",
+    "bater",
+    "consumo",
+    "protecci",
+)
+FEATURE_KEYWORDS = ("función", "feature", "modo", "alarma", "bluetooth", "wifi", "seguridad")
+PROTECTED_SHORT_KEYWORDS = ("paso", "step", "app")
+MAX_SHORT_LINE_LENGTH = 8
+MAX_SHORT_ALPHA_CHARS = 4
+MIN_TOKENS_FOR_RATIO_CHECK = 4
+MAX_SINGLE_CHAR_RATIO = 0.5
+MAX_SHORT_TOKEN_RATIO = 0.75
+MAX_TOTAL_CHARS_SHORT_TOKENS = 12
+MIN_ALPHA_RATIO_WITH_SYMBOLS = 0.7
+MIN_LENGTH_FOR_ALPHA_CHECK = 10
+MIN_ALPHA_RATIO_LONG_LINE = 0.45
+MAX_SPEC_VALUE_WORDS = 22
+SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|\baa\b|kv)\b", re.IGNORECASE)
 # Character-density heuristic (avg chars/page -> confidence) used when OCR engines
 # do not expose confidence scores (e.g., OCRmyPDF + native text extraction path).
 TEXT_CONFIDENCE_THRESHOLDS: tuple[tuple[int, float], ...] = (
@@ -408,6 +483,8 @@ def is_noise_line(line: str) -> bool:
     stripped = line.strip()
     if not stripped:
         return True
+    if PAGE_NUMBER_PATTERN.fullmatch(stripped):
+        return True
     if re.fullmatch(r"[\W_]+", stripped):
         return True
     alnum = 0
@@ -422,6 +499,35 @@ def is_noise_line(line: str) -> bool:
         return True
     if len(stripped) <= 3 and alpha <= 1 and not stripped.isdigit():
         return True
+    if SUSPICIOUS_SYMBOL_PATTERN.search(stripped) and alpha < 6:
+        return True
+    stripped_lower = stripped.lower()
+    if (
+        len(stripped) <= MAX_SHORT_LINE_LENGTH
+        and alpha <= MAX_SHORT_ALPHA_CHARS
+        and not any(k in stripped_lower for k in PROTECTED_SHORT_KEYWORDS)
+    ):
+        return True
+    tokens = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", stripped)
+    if tokens:
+        single_char_tokens = sum(1 for t in tokens if len(t) == 1)
+        if len(tokens) >= MIN_TOKENS_FOR_RATIO_CHECK:
+            single_char_ratio = single_char_tokens / len(tokens)
+            if single_char_ratio > MAX_SINGLE_CHAR_RATIO:
+                return True
+        short_tokens = sum(1 for t in tokens if len(t) <= 2)
+        if (
+            len(tokens) >= MIN_TOKENS_FOR_RATIO_CHECK
+            and short_tokens / len(tokens) >= MAX_SHORT_TOKEN_RATIO
+            and sum(len(t) for t in tokens) <= MAX_TOTAL_CHARS_SHORT_TOKENS
+        ):
+            return True
+    if not STEP_PATTERN.match(stripped) and not SPEC_PATTERN.match(stripped):
+        alpha_ratio = alpha / max(len(stripped), 1)
+        if SUSPICIOUS_SYMBOL_PATTERN.search(stripped) and alpha_ratio < MIN_ALPHA_RATIO_WITH_SYMBOLS:
+            return True
+        if len(stripped) >= MIN_LENGTH_FOR_ALPHA_CHECK and alpha_ratio < MIN_ALPHA_RATIO_LONG_LINE:
+            return True
     return False
 
 
@@ -453,6 +559,10 @@ def _classify_section(title: str) -> str:
 def _is_probable_heading(line: str) -> bool:
     if STEP_PATTERN.match(line):
         return False
+    if is_noise_line(line):
+        return False
+    if SPEC_PATTERN.match(line):
+        return False
     if len(line) < 4 or len(line) > 110:
         return False
     words = line.split()
@@ -461,7 +571,16 @@ def _is_probable_heading(line: str) -> bool:
     alpha_chars = sum(1 for ch in line if ch.isalpha())
     if alpha_chars < 3:
         return False
-    return bool(HEADING_PATTERN.match(line) or line.isupper())
+    line_lower = line.lower()
+    numbered_heading = bool(re.match(r"^\d+(?:\.\d+)*\s+[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]", line))
+    has_keyword = any(kw in line_lower for kw in HEADING_KEYWORDS)
+    if numbered_heading and len(words) < 3 and not has_keyword:
+        return False
+    if ":" in line and not numbered_heading and not has_keyword:
+        return False
+    if not (numbered_heading or has_keyword or line.isupper()):
+        return False
+    return bool(HEADING_PATTERN.match(line) or line.isupper() or numbered_heading)
 
 
 def detect_sections(lines: list[str]) -> list[Section]:
@@ -487,8 +606,22 @@ def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
         if match:
             key = match.group(1).strip()
             value = match.group(2).strip()
-            if len(key.split()) <= 6 and value:
-                specs.append({"name": key, "value": value})
+            key_lower = key.lower()
+            value_lower = value.lower()
+            value_words = len(value.split())
+            has_numeric = bool(re.search(r"\d", value))
+            has_unit = bool(SPEC_UNITS_PATTERN.search(value_lower))
+            key_hint = any(hint in key_lower for hint in SPEC_KEYWORD_HINTS)
+            # These colon-form labels are common explanatory annotations, not specs.
+            if key_lower in {"nota", "note", "atención", "attention", "administrador", "tecla"}:
+                continue
+            if len(key.split()) > 8 or not value:
+                continue
+            if value_words > MAX_SPEC_VALUE_WORDS:
+                continue
+            if not (has_numeric or has_unit or key_hint):
+                continue
+            specs.append({"name": key, "value": value})
     unique: list[dict[str, str]] = []
     seen: set[tuple[str, str]] = set()
     for spec in specs:
@@ -501,7 +634,14 @@ def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
 
 
 def preserve_ordered_steps(lines: list[str]) -> list[str]:
-    return dedupe_preserve_order([line for line in lines if STEP_PATTERN.match(line)])
+    steps: list[str] = []
+    for line in lines:
+        if not STEP_PATTERN.match(line):
+            continue
+        line_lower = line.lower()
+        if any(keyword in line_lower for keyword in STEP_ACTION_KEYWORDS):
+            steps.append(line)
+    return dedupe_preserve_order(steps)
 
 
 def detect_app_instructions(lines: list[str]) -> list[str]:
@@ -514,7 +654,14 @@ def detect_warnings(lines: list[str]) -> list[str]:
 
 
 def detect_features(lines: list[str]) -> list[str]:
-    return dedupe_preserve_order([line for line in lines if FEATURE_PATTERN.match(line)])
+    features: list[str] = []
+    for line in lines:
+        if not FEATURE_PATTERN.match(line):
+            continue
+        line_lower = line.lower()
+        if any(keyword in line_lower for keyword in FEATURE_KEYWORDS):
+            features.append(line)
+    return dedupe_preserve_order(features)
 
 
 def detect_troubleshooting(lines: list[str]) -> list[str]:

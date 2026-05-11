@@ -9,34 +9,14 @@
       "title": "Manual",
       "semantic_category": "General",
       "content": [
-        "123 NX5",
-        "4 5 6"
-      ]
-    },
-    {
-      "title": "Ias Den E:",
-      "semantic_category": "General",
-      "content": [
-        "UN -",
-        "AS"
-      ]
-    },
-    {
-      "title": "Can Sl Ar A Ee",
-      "semantic_category": "General",
-      "content": [
-        "(ah, 3 11 OÍ"
+        "IAS DEN E:"
       ]
     },
     {
       "title": "Instrucciones De Instalación",
       "semantic_category": "Installation",
       "content": [
-        "a A",
-        "24 , Ñ , — : A",
-        "2506 bye a",
         "nes aos",
-        "a oa :",
         "1. Definición de términos y teclas de función",
         "Administrador: Se refiere a las huellas dactilares, contraseñas y tarjetas de los usuarios con",
         "privilegios de gestión.",
@@ -59,13 +39,8 @@
         "Si la batería se agota, conecte una bateria externa (Power Bank) al puerto USB mediante un",
         "cable de datos para suministrar energía de emergencia. Una vez conectado, tardará unos 30",
         "segundos en permitir el desbloqueo.",
-        "5. Alarma por usuario ilegal"
-      ]
-    },
-    {
-      "title": "Si Se Ingresa Una Huella, Contraseña O Tarjeta Incorrecta S Veces Consecutivas, El Sistema",
-      "semantic_category": "General",
-      "content": [
+        "5. Alarma por usuario ilegal",
+        "Si se ingresa una huella, contraseña o tarjeta incorrecta S veces consecutivas, el sistema",
         "dirá: \"Usuario ilegal, intrusión ilegal, el propietario ha sido notificado\" y se bloqueará por 90",
         "segundos. Durante este tiempo, la cerradura no responderá a ninguna operación.",
         "6. Contraseña virtual",
@@ -98,7 +73,6 @@
         "Siga el mismo proceso que para el administrador.",
         "Máximo: 240 usuarios (incluyendo hasta 40 usuarios de huella dactilar).",
         "5. Eliminar usuario por número",
-        "Ingrese al menú principal (* # + Admin + #). Presione 1 y luego presione 3 para",
         "“Eliminar usuario\".",
         "Siga las instrucciones de voz para seleccionar el ID a eliminar.",
         "6. Restaurar ajustes de fábrica (Vía Menú)",
@@ -136,22 +110,13 @@
         "Voltaje de alimentación: 4.8-6.5V",
         "Fuente de alimentación: 4 baterías AA",
         "Suministro de energía de emergencia: USB",
-        "Cilindro de cerradura nivel C de inserción directa: y"
-      ]
-    },
-    {
-      "title": "Protección Contra Interferencias Electromagnéticas V",
-      "semantic_category": "General",
-      "content": [
+        "Cilindro de cerradura nivel C de inserción directa: y",
+        "Anti-seguimiento y",
+        "Protección contra interferencias electromagnéticas V",
         "Anti-espiado: Vv",
         "Contraseña virtual para prevenir mirones: Vv",
-        "Lea atentamente el manual antes de la instalación y guárdelo en un lugar seguro."
-      ]
-    },
-    {
-      "title": "Consulte A Agentes Comerciales Y Profesionales Para Obtener Información No Incluida En",
-      "semantic_category": "General",
-      "content": [
+        "Lea atentamente el manual antes de la instalación y guárdelo en un lugar seguro.",
+        "Consulte a agentes comerciales y profesionales para obtener información no incluida en",
         "este manual"
       ]
     },
@@ -161,56 +126,37 @@
       "content": [
         "Bienvenido al manual de configuración para la aplicación TECDOFY. En este manual, le",
         "guiaremos a través de los pasos necesarios para configurar y aprovechar al máximo todas las",
-        "funciones de la app."
-      ]
-    },
-    {
-      "title": "Es Importante Que, Para Conectar La Aplicación Correctamente A Su Dispositivo, Éste Se Encuentre",
-      "semantic_category": "App Instructions",
-      "content": [
-        "auna distancia máxima de 8 metros"
-      ]
-    },
-    {
-      "title": "Contenido",
-      "semantic_category": "General",
-      "content": [
+        "funciones de la app.",
+        "Es importante que, para conectar la aplicación correctamente a su dispositivo, éste se encuentre",
+        "auna distancia máxima de 8 metros",
+        "Contenido",
         "1. Registro e inicio de sesión 5. Gestión de tarjetas",
         "1 1 Inicio de sesión correcto 6. Gestión de huellas",
         "2. Gestión de cerraduras 7. Desbloqueo por Bluetooth",
-        "8. Gestión de asistencia",
-        "2.1 Añadir \"uevo disoos “vo",
-        "2.2 Actualización ce cerraduras 9. Configuración del sistema",
-        "2.3 Fecha y nora. diagnóstico ae errores"
+        "8. Gestión de asistencia"
       ]
     },
     {
-      "title": "2.4 Admin Strador Autonzado",
+      "title": "9.1 Informacié~ De La Cuenta",
       "semantic_category": "General",
       "content": [
-        "9.1 Informacié~ de la cuenta",
         "3. Gestión de llaves 9.2 Usuar os de dispositivo"
       ]
     },
     {
-      "title": "9.3 Grupo Ae D Sposilivo",
+      "title": "32 So Se Vee Ento A 9.5 Eliminar Cerradura",
       "semantic_category": "General",
       "content": [
-        "3.1 Gestión de llaves 9.4 Trans‘erir derechos de administrador",
-        "32 so se vee ento a 9.5 Eliminar cerradura",
         "a squeda de registro de accesos",
         "sau sat 9.6 Servicio al cliente",
-        "o, . 9.7 Acerca de",
         "4. Gestion de contrasenas",
         "10. Gestión de Gateway"
       ]
     },
     {
-      "title": "4.2 Coaigo De Acceso Temporal",
+      "title": "4.4 Eliminar 10.2 Manual",
       "semantic_category": "General",
       "content": [
-        "4.3 Contraseña de un solo uso 10.1 Agregar Gateway",
-        "4.4 Eliminar 10.2 Manual",
         "4 5 Cóoigo acceso cic ico Y"
       ]
     },
@@ -218,32 +164,17 @@
       "title": "4.7 Corpartir Contraseña",
       "semantic_category": "General",
       "content": [
-        "1. Resgistro e inicio de sesión"
-      ]
-    },
-    {
-      "title": "Los Ususarios Pueden Registrar Su Cuenta A Través Del",
-      "semantic_category": "General",
-      "content": [
+        "1. Resgistro e inicio de sesión",
+        "Los ususarios pueden registrar su cuenta a través del",
         "teléfono móvil o del correo electrónico El código de",
         "verificación se enviará al teléfono móvil o al correo ara --.",
         "electrónico del usuario y el registro se realizará",
-        "correctamente tras la verificación. mn e"
-      ]
-    },
-    {
-      "title": "Si Ha Olvidado Su Contraseña, Puede Ir A La Página De",
-      "semantic_category": "General",
-      "content": [
+        "correctamente tras la verificación. mn e",
+        "Si ha olvidado su contraseña, puede ir a la página de",
         "contraseña para restablecerla. Cuando se inicia sesión en",
         "un nuevo teléfono movil. es necesario verificar la cuenta. 2",
-        "Una vez verificada, podrá iniciar sesión. y"
-      ]
-    },
-    {
-      "title": "Todos Los Datos Se Pueden Ver Y Utilizar En El Nuevo",
-      "semantic_category": "General",
-      "content": [
+        "Una vez verificada, podrá iniciar sesión. y",
+        "Todos los datos se pueden ver y utilizar en el nuevo",
         "teléfono móvil Y"
       ]
     },
@@ -253,28 +184,16 @@
       "content": [
         "La primera vez que utilice la aplicación de la cerradura, $1 no hay datos previos de la cerradura,",
         "la página de inicio mostrará el botón para añadir la cerradura Si ya hay alguna cerradura o llave",
-        "en la cuenta se mostrará la información de la cerradura",
-        "ñ E 3 2"
+        "en la cuenta se mostrará la información de la cerradura"
       ]
     },
     {
       "title": "Oui Ld In Get",
       "semantic_category": "General",
       "content": [
-        "€ 2 o e"
-      ]
-    },
-    {
-      "title": "A Pes Cut",
-      "semantic_category": "General",
-      "content": [
-        "2. Gestión de cerraduras"
-      ]
-    },
-    {
-      "title": "Cuando Se Añade La Cerradura, El Primer Usuario En Agregarla",
-      "semantic_category": "General",
-      "content": [
+        "A Pes CUT",
+        "2. Gestión de cerraduras",
+        "Cuando se añade la cerradura, el primer usuario en agregarla",
         "se convierte en el administrador de la cerradura Esta solo se",
         "puede volver a añadir después de que el administrados actual - -",
         "haya borrado la cerradura. La operación de borrar la ,",
@@ -282,54 +201,33 @@
       ]
     },
     {
-      "title": "La Cerradura Debe Añadirse A La Aplicación Antes De Poder Utilizarse Para Esto Sitúe",
-      "semantic_category": "App Instructions",
+      "title": "2.1 Añadir Nuevo Dispositivo",
+      "semantic_category": "General",
       "content": [
+        "La cerradura debe añadirse a la aplicación antes de poder utilizarse Para esto sitúe",
         "el dispositivo móvil al lado de la cerradura",
         "1. Tocar el botón circular de “+” para agregar la",
         "cerradura",
         "y Tides ss dsposit os",
-        ". oes 2. Seleccionar el tipo de dispositive que posee"
-      ]
-    },
-    {
-      "title": "Dats Muerte 7 Cirdo",
-      "semantic_category": "General",
-      "content": [
+        ". oes 2. Seleccionar el tipo de dispositive que posee",
+        "Ceca Caviany",
+        "Dats Muerte 7 Cirdo",
         "Caza ds © Camana",
         "peed de su ota",
-        "Toa",
-        "“emoto"
-      ]
-    },
-    {
-      "title": "Tea Et Lea Pata Al",
-      "semantic_category": "General",
-      "content": [
+        "“emoto",
+        "Tea et lea pata al",
         "el tee ade",
         "3. Tocar el teclado de la cerradura para que entre",
-        "en modo configuración y presionar siguiente en la"
-      ]
-    },
-    {
-      "title": "F Aplicación",
-      "semantic_category": "App Instructions",
-      "content": [
+        "en modo configuración y presionar siguiente en la",
+        "F aplicación",
         "fete de",
-        "o Pd_303073 +",
         "4. Seleccionar el nombre predeterminado de su",
         "dispositivo",
         "o Si es una cerradura que se ha añadido previamente a un dispositivo. se deberá eliminar",
         "primero de la aplicación para registrarla de nuevo",
-        "5. Cambiar el nombre del dispositivo a uno"
-      ]
-    },
-    {
-      "title": "Ón Deseado O Dejar El Nombre Predeterminado",
-      "semantic_category": "General",
-      "content": [
+        "5. Cambiar el nombre del dispositivo a uno",
+        "ÓN deseado o dejar el nombre predeterminado",
         "Al terminar presionar “OK”",
-        "mans",
         "O Al lira war. podrá gestora’ la cerradura con a aol cac ón, irc uyenco el ervio de ura llave, cortraseña etc",
         "Los datos ce nc al zación de la cerradura deben cargarse en la rea cuando asia esté cisporible para comolerar todo e",
         "praceso de agregar dispasr vo"
@@ -341,7 +239,8 @@
       "content": [
         "El usuario puede actualizar la cerradura desde el apartado de “Configuración” en la aplicación",
         "La actualizacion debe realizarse a través de Bluetooth situando el dispositivo móvil junto a la",
-        "cerradura"
+        "cerradura",
+        "No hay actualizaciones"
       ]
     },
     {
@@ -350,13 +249,8 @@
       "content": [
         "De contar con un disporitivo Gateway, el rela; se calibrará en primer lugar a través del mismo. Si",
         "no se cuenta con este dispositivo, será necesario calibrarlo mediante el Bluetooth del teléfono",
-        "móvil"
-      ]
-    },
-    {
-      "title": "El Diagnóstico De Errores Tiene Como Objetivo A A Tia Ta",
-      "semantic_category": "Troubleshooting",
-      "content": [
+        "móvil",
+        "El diagnóstico de errores tiene como objetivo a a tia ta",
         "ayudar a analizar los problemas del sistema Debe noe es ae aad",
         "realizarse a través de Bluetooth situando el A",
         "dispositivo móvil junto a la cerradura ° Ñ",
@@ -367,65 +261,33 @@
       "title": "2.4 Administrador Autorizado",
       "semantic_category": "General",
       "content": [
-        "Suena Parcioal - ."
-      ]
-    },
-    {
-      "title": "Solo El Administrador Original Puede Autorizar La",
-      "semantic_category": "General",
-      "content": [
+        "Suena Parcioal - .",
+        "Solo el administrador original puede autorizar la",
         "clave. Para agregar a un administrador autorizado",
         "dirijase al apartado de \"Administrador autonzado”",
-        "8 iE Eo] 5",
         "eee corts cate o",
-        "e a oO e"
-      ]
-    },
-    {
-      "title": "Id O Rec Ea",
-      "semantic_category": "General",
-      "content": [
         "Presionar el botón de “Crear Administrador” y colocar los datos correspondientes del usuario que",
         "se convertirá en Administrador Autorizado. para finalizar dar clic en enviar",
-        "e wens ced Denia gral nro"
-      ]
-    },
-    {
-      "title": "O Crew Agruraseracor Rete A Sme",
-      "semantic_category": "General",
-      "content": [
+        "e wens ced Denia gral nro",
+        "O crew agruraseracor Rete a SME",
         "@® El usLao autorizado bodrá v sualizar en su aolicac ón la interfaz de admirist-ador",
         "Puede enviar claves a otros. contraseñas. etc Sir embargo, e adminusteagor aulonzado no podra dar de",
         "ata más peri es de aaministrac ón",
-        "3. Gestión de llaves"
-      ]
-    },
-    {
-      "title": "Adicionalmente Podrá Gestionar La Vigencia De Una Ekey Que Esté A Punto De Caducar",
-      "semantic_category": "General",
-      "content": [
+        "3. Gestión de llaves",
+        "El administrador original tiene los máximos derechos administrativos de la cerradura",
+        "Adicionalmente podrá gestionar la vigencia de una eKey que esté a punto de caducar",
         "1. Dirigirse al apartado de “eKeys” y hacer clic en el botón de",
-        "“Enviar e Key” al inferior de la pantalla. e"
-      ]
-    },
-    {
-      "title": "Oke Akey",
-      "semantic_category": "General",
-      "content": [
+        "“Enviar e Key” al inferior de la pantalla. e",
+        "Oke akey",
         "2. Seleccionar el tipo de eKey que se quiera enviar. llenar los datos del usuario al que se",
-        "le proporcionará la eKey y hacer clicl en “Enviar”"
-      ]
-    },
-    {
-      "title": "Tipos De Keys A A Braco Ane Te",
-      "semantic_category": "General",
-      "content": [
+        "le proporcionará la eKey y hacer clicl en “Enviar”",
+        "Terror Aerea Ur me ads Tp Dean a Cte",
+        "Tipos de Keys a a braco ane te",
         "- Key temporal: Sera vara curarte el",
         "nempo espeul caso eg deter E",
         "- «Key permanente: Podrá ull arse ce",
         "- 0Koy de un solo uso. Se borrará Uta ved be",
-        "ull aca,",
-        "10"
+        "ull aca,"
       ]
     },
     {
@@ -436,7 +298,8 @@
         "mismo tiempo podrá buscar el registro de accegps a la cerradura",
         "bee te ales 7",
         "ae 0 ¿ota regu cain quer",
-        "BORMAR cole they!"
+        "BORMAR cole they!",
+        "Leida Firmar"
       ]
     },
     {
@@ -449,38 +312,16 @@
       ]
     },
     {
-      "title": "Ia O",
+      "title": "3.3 Búsqueda De Registro De Accesos",
       "semantic_category": "General",
       "content": [
-        "12) at 1"
-      ]
-    },
-    {
-      "title": "Los Perfiles De Administración Podrán E",
-      "semantic_category": "General",
-      "content": [
+        "Los perfiles de administración podrán e",
         "consultar el registro de accesos de cada llave [a] a AN",
-        "2244 34 92",
-        "a q"
-      ]
-    },
-    {
-      "title": "Oo Tata",
-      "semantic_category": "General",
-      "content": [
-        "o loo",
-        "11",
+        "Oo tata",
         "4. Gestión de contraseñas",
         "Para establecer una contraseña dirijase al apartado de “Contraseñas”, de clic al botón",
         "inferior de la pantalla “Enviar código de acceso”. Se desplegarán los diferentes tipos de",
         "códigos. selecciones el desado y llene los datos correspondientes.",
-        "oe wi see e e te"
-      ]
-    },
-    {
-      "title": "As As",
-      "semantic_category": "General",
-      "content": [
         "Una vez llenados los datos del tipo de constraseña seleccionado se le mostrará en la",
         "pantalla un código. el cual deberá introducir en la cerradura y presionar el botón “#” para que",
         "se registre",
@@ -494,26 +335,26 @@
         "A heats we Ceesoe ea wie: pees",
         "hot sm. star sete",
         "(y) swe a went ma",
-        "23017426 see ree \"oa >",
         "oops user",
         "Oo Ya establecida la contraseña en la cerradura. poara mod ‘car el cod go. NoMdre, vempo de valices.",
         "elimiraria, etc"
       ]
     },
     {
-      "title": "Cuando Se Estableza Una Nueva Contraseña Es",
+      "title": "4.1 Codigo De Acceso Permanente",
       "semantic_category": "General",
       "content": [
+        "Cuando se estableza una nueva contraseña es",
         "permanente, esta deberá utilizarse en las 24 horas a",
         "siguientes a su generación; de lo contrario, caducará -",
-        "automaticamente SUR LES SU Pt",
-        "12"
+        "automaticamente SUR LES SU Pt"
       ]
     },
     {
-      "title": "El Cóódigo De Acceso Temporal Tendrá Una Fecha De Poca A A",
+      "title": "4.2 Código De Acceso Temporal",
       "semantic_category": "General",
       "content": [
+        "El cóódigo de acceso temporal tendrá una fecha de Poca a a",
         "caducidad determinada. siendo de un minimo de una",
         "hora y máximo de tres años. Si el periodo de validez es mer: ees",
         "inferior a unaño, la hora podrá configurarse de forma weer a tea SEEN Ge",
@@ -526,57 +367,51 @@
       ]
     },
     {
-      "title": "Esta Contraseña Únicamente Podrá Utilizarse Una Vez Y Cn Cement Ane Mtcre Cane",
-      "semantic_category": "General",
+      "title": "4.3 Contraseña De Un Solo Uso",
+      "semantic_category": "Operation",
       "content": [
-        "estara disponible durante 6 horas. cee ."
-      ]
-    },
-    {
-      "title": "4.4 Eliminar",
-      "semantic_category": "General",
-      "content": [
+        "Esta contraseña únicamente podrá utilizarse una vez y Cn Cement ane mtcre cane",
+        "estara disponible durante 6 horas. cee .",
+        "Seer eens",
+        "4.4 Eliminar",
         "El apartado de Eliminar se utiliza para borrar todos los Cente oe 49 rem Seg NOS",
         "códigos de acceso que la cerradura ha establecido. y .",
         "que están disponibles durante 24 horas °"
       ]
     },
     {
-      "title": "Lema Cn Pein Gra Be",
+      "title": "4.5 Codigo De Acceso Ciclico",
       "semantic_category": "General",
       "content": [
+        "Lema cn Pein Gra be",
         "La contraseña ciclica se puede reutilizar dentro de un —",
         "periodo de tiempo especifico, incluyendo el tipo diario, o CC",
         "el tipo de dia de la semana, el tipo de fin de semana, Mode",
-        "etc Potato los ra",
-        "13"
+        "etc Potato los ra"
       ]
     },
     {
-      "title": "Ber Aete Terie Mn Deal Sate Y",
+      "title": "4.6 Código De Acceso Personalizado",
       "semantic_category": "General",
       "content": [
+        "Ber aete Terie mn Deal sate Y",
         "El usuario puede establecer las contraseñas y pe cave ©",
-        "el periodo de validez que desee",
-        "teen"
+        "el periodo de validez que desee"
       ]
     },
     {
-      "title": "Los Usuarios Podrán Compartir Las Contraseñas Pri",
+      "title": "4.7 Compartir Contrasenas",
       "semantic_category": "General",
       "content": [
+        "Los usuarios podrán compartir las contraseñas Pri",
         "que deseen a otros usuanos a través de sms. Comparte",
         "email, whatsapp. etc En este . °",
         "5. Gestion de tarjetas RF",
         "Para agregar una tarjeta primero deberá dirigirse al apartado \"Tarjetas RF”, dar click en el botón",
         "inferior “Agregar tarjetas RF”. seleccionar el tiempo que desea activa la tarjeta RF. ponerle un",
-        "nombre y presionar “Ok”"
-      ]
-    },
-    {
-      "title": "O Arega Torero Re",
-      "semantic_category": "General",
-      "content": [
+        "nombre y presionar “Ok”",
+        "Pomo tens Lian",
+        "O arega Torero RE",
         "La cerradura le pedirá que coloque la tarjeta RF cerca del teclado. al quedar enlazada",
         "correctamente la cerradura le avisará. Finalmente. podrá modificar el nombre y ver los registros",
         "de la tarjeta desde la aplicación.",
@@ -586,25 +421,13 @@
         "La gestión de huellas dactilares es similar a la gestión de tarjetas RF. Para poder guardarla",
         "correctamente deberá presionar en 4 ocasiones la huella en el lector. Tras añadir una huella",
         "dactilar, podrá utilizarla para desbloquear la puerta",
-        "14",
-        "7. Desbloqueo por Bluetooth"
-      ]
-    },
-    {
-      "title": "Los Usuarios De La Aplicación Podrán Bloquear La",
-      "semantic_category": "App Instructions",
-      "content": [
+        "7. Desbloqueo por Bluetooth",
+        "Los usuarios de la aplicación podrán bloquear la",
         "cerradura a través de Bluetooth y también podrán",
-        "enviar ekeys a cualquier persona"
-      ]
-    },
-    {
-      "title": "También Podrá Desbloquear La Cerradura A Través De",
-      "semantic_category": "General",
-      "content": [
+        "enviar ekeys a cualquier persona",
+        "También podrá desbloquear la cerradura a través de",
         "la aplicación haciendo clic en el botón con el símbolo",
         "de candado. mur",
-        "wy 70R",
         "O E B.eloolr bene un a carece de Brrelros favor de ut Zarla api cacor XxX",
         "dentro ce rango",
         "8. Gestión de asistencia",
@@ -613,24 +436,28 @@
         "estadisticas de asistencia y más",
         "Todas las cerraduras de puerta 3.0 tienen funciones de asistencia. La función de asistencia de",
         "la cerradura estará deshabilitada de forma predeterminada. El usuario podrá activarla o",
-        "desactivarla desde la aplicación en el apartado de configuración",
-        "9 see traia?",
+        "desactivarla desde la aplicación en el apartado de configuración"
+      ]
+    },
+    {
+      "title": "9 See Traia?",
+      "semantic_category": "General",
+      "content": [
         "eee , wore",
-        "E] “ es",
         "pa Mee a tee",
         "eg arta nga wae tens",
         "9. Configuración del sistema",
         "En la configuracuón del sistema. se incluye el interruptor de toque para abrir. gestión de grupo,",
         "gestión de Gateway, configuración de seguridad, recordatorios, asi como la transferencia de",
         "administración de la cerradura",
-        "o E ajuste de toca: para apar determina si se p.cde aber la puera tocando a cerradura",
-        "15"
+        "o E ajuste de toca: para apar determina si se p.cde aber la puera tocando a cerradura"
       ]
     },
     {
-      "title": "En Este Apartado Podrá Modificar Toda La Información",
+      "title": "9.1 Información De La Cuenta",
       "semantic_category": "General",
       "content": [
+        "En este apartado podrá modificar toda la información",
         "relacionada a su usuario como el nombre. avatar, email e coe \"",
         "reiniciar la contraseña. establecer las preguntas de et",
         "seguridad, etc",
@@ -638,9 +465,10 @@
       ]
     },
     {
-      "title": "Para Visualizar La Información De Los Usuarios Del",
+      "title": "9.2 Usuarios Del Dispositivo",
       "semantic_category": "General",
       "content": [
+        "Para visualizar la información de los usuarios del",
         "dispositivo, dirijase a la configuración de la aplicación y",
         "haga clic en el apartado \"Usuarios del dispositivo”. Aquí",
         "aparecerá el nombre de usuario y su número de teléfono",
@@ -667,9 +495,7 @@
         "recibirá un código de verificación. Si se introduce el código de forma correcta. la transferencia",
         "concluirá exitosamente.",
         "o La cuenta que desee tramas” + debera ser a cuerla del adrunistrador or g “a",
-        "16",
-        "ee",
-        "- HA"
+        "Dan aer"
       ]
     },
     {
@@ -689,27 +515,16 @@
       "semantic_category": "General",
       "content": [
         "El usuario puede consultar todos los contactos de servicio al cliente para resolver cualquier duda",
-        "Cesto +5? 81 BC 4767"
-      ]
-    },
-    {
-      "title": "9.7 Acerca De",
-      "semantic_category": "General",
-      "content": [
+        "Fi TOS",
+        "Sito web oficial were SOUL OST",
         "En este apartado puede comprobar que la aplicación se encuentre en su última versión de",
         "actualización",
-        "17",
         "10. Gestión de Gateway",
         "La cerradura cuenta con conexión Bluetooth de forma predeterminada, sin embargo no contará con conectividad WiFi El Gateway fungira",
         "como puente entre la cerradura y una red doméstica de WiFi. A través",
         "del Gateway, el usuario podrá administrar remotamente el reloj y",
-        "visualizar el historial de registros"
-      ]
-    },
-    {
-      "title": "Adicionalmente, También Podrá Borrar Y Modificar Contraseñas A Do",
-      "semantic_category": "General",
-      "content": [
+        "visualizar el historial de registros",
+        "Adicionalmente, también podrá borrar y modificar contraseñas a DO",
         "distancia."
       ]
     },
@@ -723,45 +538,20 @@
         "la esquina superior derecha",
         "C Seleccione el Gateway que posee e introdu/a su clave de WiF 1 sna de",
         "y el nombre que desee ponerle al Gateway. después presione ON",
-        "“siguiente”."
-      ]
-    },
-    {
-      "title": "D Siga Las Instrucciones De La Aplicación Para Completar El Enlace",
-      "semantic_category": "App Instructions",
-      "content": [
+        "“siguiente”.",
+        "D Siga las instrucciones de la aplicación para completar el enlace",
         "de any",
         "Tras un breve penodo de tiempo, podrá visualizar los dispositivos que se encuentran cerca del",
         "alcance del Gateway. Una vez que la cerradura esté vinculada al Gateway, podrá ser gestionada",
-        "a través de este"
-      ]
-    },
-    {
-      "title": "Na Tee Ge Salma",
-      "semantic_category": "General",
-      "content": [
-        "AQ'egado exrtosamente",
-        "18"
+        "a través de este",
+        "Nem ore ve",
+        "Cato O)",
+        "Na tee ge Salma",
+        "AQ'egado exrtosamente"
       ]
     }
   ],
   "specifications": [
-    {
-      "name": "Administrador",
-      "value": "Se refiere a las huellas dactilares, contraseñas y tarjetas de los usuarios con"
-    },
-    {
-      "name": "Información de usuario",
-      "value": "Datos registrados (huellas, contraseñas y tarjetas) tanto de"
-    },
-    {
-      "name": "La voz indicará",
-      "value": "\"Para restaurar los ajustes de fábrica, presione # para confirmar o * para cancelar\"."
-    },
-    {
-      "name": "Nota",
-      "value": "En estado de fábrica, cualquier huella o contraseña puede abrir la cerradura."
-    },
     {
       "name": "dirá",
       "value": "\"Usuario ilegal, intrusión ilegal, el propietario ha sido notificado\" y se bloqueará por 90"
@@ -775,20 +565,12 @@
       "value": "Ingrese de 6 a 8 digitos y presione #. Repita la contraseña y presione #."
     },
     {
-      "name": "Tarjeta",
-      "value": "Acerque la tarjeta al área de lectura IC."
-    },
-    {
       "name": "Máximo",
       "value": "10 administradores."
     },
     {
       "name": "Máximo",
       "value": "240 usuarios (incluyendo hasta 40 usuarios de huella dactilar)."
-    },
-    {
-      "name": "Atención",
-      "value": "Se borrarán todos los datos de usuario. Opere con precaución."
     },
     {
       "name": "Modelo",
@@ -881,62 +663,12 @@
     {
       "name": "Suministro de energía de emergencia",
       "value": "USB"
-    },
-    {
-      "name": "Anti-espiado",
-      "value": "Vv"
-    },
-    {
-      "name": "Contraseña virtual para prevenir mirones",
-      "value": "Vv"
-    },
-    {
-      "name": "- Key temporal",
-      "value": "Sera vara curarte el"
-    },
-    {
-      "name": "A heats we Ceesoe ea wie",
-      "value": "pees"
-    },
-    {
-      "name": "o E ajuste de toca",
-      "value": "para apar determina si se p.cde aber la puera tocando a cerradura"
     }
   ],
   "steps": [
-    "1. Definición de términos y teclas de función",
     "2. Restaurar ajustes de fábrica",
-    "3. Aviso de batería baja",
-    "4. Alimentación de emergencia por USB",
-    "5. Alarma por usuario ilegal",
-    "6. Contraseña virtual",
-    "1. Añadir contraseña de administrador por primera vez",
-    "2. Acceso al menú principal",
-    "3. Añadir un Administrador (Tecla 1)",
-    "5. Eliminar usuario por número",
     "6. Restaurar ajustes de fábrica (Vía Menú)",
-    "7. Ajustes del Sistema",
-    "1. Registro e inicio de sesión 5. Gestión de tarjetas",
-    "2. Gestión de cerraduras 7. Desbloqueo por Bluetooth",
-    "8. Gestión de asistencia",
-    "3. Gestión de llaves 9.2 Usuar os de dispositivo",
-    "4. Gestion de contrasenas",
-    "10. Gestión de Gateway",
-    "1. Resgistro e inicio de sesión",
-    "2. Gestión de cerraduras",
-    "1. Tocar el botón circular de “+” para agregar la",
-    "3. Tocar el teclado de la cerradura para que entre",
-    "4. Seleccionar el nombre predeterminado de su",
-    "5. Cambiar el nombre del dispositivo a uno",
-    "3. Gestión de llaves",
-    "1. Dirigirse al apartado de “eKeys” y hacer clic en el botón de",
-    "2. Seleccionar el tipo de eKey que se quiera enviar. llenar los datos del usuario al que se",
-    "12) at 1",
-    "4. Gestión de contraseñas",
-    "5. Gestion de tarjetas RF",
-    "6. Gestión de huellas",
-    "7. Desbloqueo por Bluetooth",
-    "9. Configuración del sistema"
+    "7. Ajustes del Sistema"
   ],
   "app_instructions": [
     "Bienvenido al manual de configuración para la aplicación TECDOFY. En este manual, le",
@@ -981,49 +713,9 @@
     "Nota: En estado de fábrica, cualquier huella o contraseña puede abrir la cerradura.",
     "Atención: Se borrarán todos los datos de usuario. Opere con precaución."
   ],
-  "features": [
-    "1. Definición de términos y teclas de función",
-    "2. Restaurar ajustes de fábrica",
-    "3. Aviso de batería baja",
-    "4. Alimentación de emergencia por USB",
-    "5. Alarma por usuario ilegal",
-    "6. Contraseña virtual",
-    "1. Añadir contraseña de administrador por primera vez",
-    "- Active la pantalla táctil, presione * y luego #. La voz dirá: \"Por favor, ingrese la información",
-    "- Ingrese la contraseña inicial 123456 y presione #.",
-    "- Presione * para volver.",
-    "2. Acceso al menú principal",
-    "- Active la pantalla, presione * y luego #. Verifique la identidad del administrador.",
-    "3. Añadir un Administrador (Tecla 1)",
-    "5. Eliminar usuario por número",
-    "6. Restaurar ajustes de fábrica (Vía Menú)",
-    "7. Ajustes del Sistema",
-    "1. Registro e inicio de sesión 5. Gestión de tarjetas",
-    "2. Gestión de cerraduras 7. Desbloqueo por Bluetooth",
-    "8. Gestión de asistencia",
-    "3. Gestión de llaves 9.2 Usuar os de dispositivo",
-    "4. Gestion de contrasenas",
-    "10. Gestión de Gateway",
-    "1. Resgistro e inicio de sesión",
-    "2. Gestión de cerraduras",
-    "1. Tocar el botón circular de “+” para agregar la",
-    "3. Tocar el teclado de la cerradura para que entre",
-    "4. Seleccionar el nombre predeterminado de su",
-    "5. Cambiar el nombre del dispositivo a uno",
-    "3. Gestión de llaves",
-    "1. Dirigirse al apartado de “eKeys” y hacer clic en el botón de",
-    "2. Seleccionar el tipo de eKey que se quiera enviar. llenar los datos del usuario al que se",
-    "- Key temporal: Sera vara curarte el",
-    "- «Key permanente: Podrá ull arse ce",
-    "- 0Koy de un solo uso. Se borrará Uta ved be",
-    "4. Gestión de contraseñas",
-    "5. Gestion de tarjetas RF",
-    "6. Gestión de huellas",
-    "7. Desbloqueo por Bluetooth",
-    "9. Configuración del sistema"
-  ],
+  "features": [],
   "metadata": {
-    "generated_at": "2026-05-11T08:48:06.462639+00:00",
+    "generated_at": "2026-05-11T09:21:09.060720+00:00",
     "downstream_use": [
       "woocommerce",
       "technical_manual",
