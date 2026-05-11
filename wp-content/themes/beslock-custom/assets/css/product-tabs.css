@@ -610,6 +610,7 @@ body.single-product .product-interactions__questions {
 body.single-product .product-interactions__questions-header {
   display: grid;
   gap: 8px;
+  margin-top: 18px;
   margin-bottom: 16px;
 }
 

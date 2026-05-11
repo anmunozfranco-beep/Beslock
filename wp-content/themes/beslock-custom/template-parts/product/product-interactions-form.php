@@ -132,11 +132,12 @@ $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_
     </form>
   </div>
 
+  <div class="product-interactions__questions-header">
+    <h3><?php echo esc_html__( 'Preguntas y respuestas', 'beslock' ); ?></h3>
+    <p><?php echo esc_html__( 'Aquí verás las consultas aprobadas para este producto y, cuando existan, sus respuestas.', 'beslock' ); ?></p>
+  </div>
+
   <div class="product-interactions__surface product-interactions__questions">
-    <div class="product-interactions__questions-header">
-      <h3><?php echo esc_html__( 'Consultas publicadas', 'beslock' ); ?></h3>
-      <p><?php echo esc_html__( 'Aquí verás las consultas aprobadas para este producto y, cuando existan, sus respuestas.', 'beslock' ); ?></p>
-    </div>
 
     <?php if ( ! empty( $questions ) ) : ?>
       <ol class="product-interactions__question-list">
