@@ -410,8 +410,14 @@ def is_noise_line(line: str) -> bool:
         return True
     if re.fullmatch(r"[\W_]+", stripped):
         return True
-    alnum = sum(1 for ch in stripped if ch.isalnum())
-    alpha = sum(1 for ch in stripped if ch.isalpha())
+    alnum = 0
+    alpha = 0
+    for ch in stripped:
+        if ch.isalpha():
+            alpha += 1
+            alnum += 1
+        elif ch.isalnum():
+            alnum += 1
     if alnum < 2:
         return True
     if len(stripped) <= 3 and alpha <= 1 and not stripped.isdigit():
