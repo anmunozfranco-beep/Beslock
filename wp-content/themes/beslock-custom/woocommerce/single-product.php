@@ -165,14 +165,28 @@ get_header();
             hidden
           >
             <?php if ( ! empty( $product_reviews ) ) : ?>
-              <ul class="product-specs-list product-reviews-list">
+              <ul class="product-reviews-list">
                 <?php foreach ( $product_reviews as $review ) : ?>
-                  <li>
-                    <strong><?php echo esc_html( $review['author'] ); ?></strong>
-                    <?php if ( ! empty( $review['rating'] ) ) : ?>
-                      <span><?php printf( esc_html__( ' (%d/5)', 'beslock' ), intval( $review['rating'] ) ); ?></span>
-                    <?php endif; ?>
-                    <p><?php echo esc_html( $review['text'] ); ?></p>
+                  <?php $review_rating = isset( $review['rating'] ) ? intval( $review['rating'] ) : 0; ?>
+                  <li class="product-review-card">
+                    <div class="product-review-card__header">
+                      <?php if ( $review_rating > 0 ) : ?>
+                        <div class="product-review-card__rating" aria-label="<?php printf( esc_attr__( 'Calificación: %d de 5', 'beslock' ), $review_rating ); ?>">
+                          <?php for ( $star_index = 1; $star_index <= 5; $star_index++ ) : ?>
+                            <span class="product-review-card__star <?php echo $star_index <= $review_rating ? 'is-filled' : ''; ?>" aria-hidden="true">&#9733;</span>
+                          <?php endfor; ?>
+                        </div>
+                      <?php endif; ?>
+
+                      <div class="product-review-card__meta">
+                        <strong class="product-review-card__author"><?php echo esc_html( $review['author'] ); ?></strong>
+                        <?php if ( ! empty( $review['date'] ) ) : ?>
+                          <time class="product-review-card__date" datetime="<?php echo esc_attr( $review['date_iso'] ?? '' ); ?>"><?php echo esc_html( $review['date'] ); ?></time>
+                        <?php endif; ?>
+                      </div>
+                    </div>
+
+                    <p class="product-review-card__body"><?php echo esc_html( $review['text'] ); ?></p>
                   </li>
                 <?php endforeach; ?>
               </ul>
@@ -186,6 +200,10 @@ get_header();
         </div>
 
       </div>
+
+      <?php if ( function_exists( 'beslock_render_product_interactions_block' ) ) : ?>
+        <?php beslock_render_product_interactions_block( $product ); ?>
+      <?php endif; ?>
     </div>
 
     <script>
