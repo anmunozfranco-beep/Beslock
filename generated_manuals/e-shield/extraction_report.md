@@ -1,7 +1,7 @@
 # Extraction Report
 
 **Source file:** `e-Shield user manual.pdf`  
-**Generated:** 2026-05-11 09:18 UTC
+**Generated:** 2026-05-11 09:21 UTC
 
 ## Summary
 
@@ -52,10 +52,10 @@ Image optimization did not improve the file - optimizations will not be used
 Image optimization ratio: 1.00 savings: -0.1%
 Total file size ratio: 1.00 savings: 0.2%
 Output file is a PDF (auto mode)
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 10521230): input stream is complete but output may still be valid
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 11150341): input stream is complete but output may still be valid
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 10521230): input stream is complete but output may still be valid
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 11150341): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 10521229): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 11150340): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 10521229): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-shield/e-Shield user manual.searchable.pdf (offset 11150340): input stream is complete but output may still be valid
 Output file: The generated PDF is INVALID
 - **pytesseract**: ✅ Success
 

@@ -64,9 +64,11 @@ WARNING_PATTERN = re.compile(
     r"\b(warning|caution|danger|note|important|advertencia|precaución|peligro|nota)\b",
     re.IGNORECASE,
 )
+# Feature extraction intentionally focuses on explicit bullet markers to avoid
+# polluting features with numbered procedural/setup lines.
 FEATURE_PATTERN = re.compile(r"^[\-\*\•]\s+.{10,}")
 PAGE_NUMBER_PATTERN = re.compile(r"^\d{1,3}$")
-SUSPICIOUS_SYMBOL_PATTERN = re.compile(r"[+|<>{}\[\]~`_\\]")
+SUSPICIOUS_SYMBOL_PATTERN = re.compile(r"[+|<>{}\[\]~`\\]")
 # Keep multilingual keyword coverage for current manuals (English + Spanish).
 TROUBLESHOOTING_KEYWORDS = ("troubleshoot", "error", "problem", "issue", "fallo", "problema")
 HEADING_KEYWORDS = (
@@ -128,6 +130,7 @@ SPEC_KEYWORD_HINTS = (
     "consumo",
     "protecci",
 )
+FEATURE_KEYWORDS = ("función", "feature", "modo", "alarma", "bluetooth", "wifi", "seguridad")
 PROTECTED_SHORT_KEYWORDS = ("paso", "step", "app")
 MAX_SHORT_LINE_LENGTH = 8
 MAX_SHORT_ALPHA_CHARS = 4
@@ -139,7 +142,7 @@ MIN_ALPHA_RATIO_WITH_SYMBOLS = 0.7
 MIN_LENGTH_FOR_ALPHA_CHECK = 10
 MIN_ALPHA_RATIO_LONG_LINE = 0.45
 MAX_SPEC_VALUE_WORDS = 22
-SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|aa|kv)\b", re.IGNORECASE)
+SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|\baa\b|kv)\b", re.IGNORECASE)
 # Character-density heuristic (avg chars/page -> confidence) used when OCR engines
 # do not expose confidence scores (e.g., OCRmyPDF + native text extraction path).
 TEXT_CONFIDENCE_THRESHOLDS: tuple[tuple[int, float], ...] = (
@@ -609,6 +612,7 @@ def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
             has_numeric = bool(re.search(r"\d", value))
             has_unit = bool(SPEC_UNITS_PATTERN.search(value_lower))
             key_hint = any(hint in key_lower for hint in SPEC_KEYWORD_HINTS)
+            # These colon-form labels are common explanatory annotations, not specs.
             if key_lower in {"nota", "note", "atención", "attention", "administrador", "tecla"}:
                 continue
             if len(key.split()) > 8 or not value:
@@ -650,13 +654,12 @@ def detect_warnings(lines: list[str]) -> list[str]:
 
 
 def detect_features(lines: list[str]) -> list[str]:
-    feature_keywords = ("función", "feature", "modo", "alarma", "bluetooth", "wifi", "seguridad")
     features: list[str] = []
     for line in lines:
         if not FEATURE_PATTERN.match(line):
             continue
         line_lower = line.lower()
-        if any(keyword in line_lower for keyword in feature_keywords):
+        if any(keyword in line_lower for keyword in FEATURE_KEYWORDS):
             features.append(line)
     return dedupe_preserve_order(features)
 
