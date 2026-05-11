@@ -1,174 +1,272 @@
-# Manual standardization current-state audit
+# Beslock Manual Standardization — Current-State Architecture & Editorial Audit
 
-## 1. PROJECT PURPOSE & DESIGN PHILOSOPHY
+> Repository: `anmunozfranco-beep/Beslock`  
+> Commit analyzed: `b2f9a5ff4264928f0e80e98f494382366068ca31`  
+> Scope: `User manuals/` plus directly related OCR/manual-processing code and docs
 
-### 1.1 Observed purpose
-- The repository treats manual work as a reusable OCR-to-structured-content pipeline plus product-facing documentation assets, not as one-off files. This is explicit in the OCR tooling docs and root README (`tools/manual_ocr/README.md:1-4`, `README.md:144-160`).
-- The e-Orbit project pack frames documentation as an implementation system spanning editorial closure, technical validation, CMS loading, and visual production (`User manuals/e-Orbit project/00-paquete-maestro.md:5-13`, `User manuals/e-Orbit project/00-paquete-maestro.md:17-29`).
+## 1. Project purpose & design philosophy
 
-### 1.2 Core philosophy inferred from implementation
-- **Standardize first, then adapt per product:** repeated per-product image prompt/matrix/starter-pack files exist for e-Flex, e-Nova, e-Orbit, e-Prime, e-Shield, and e-Touch with shared structure and product-specific tokens (`User manuals/e-Flex - image generation matrix.md:1-33`, `User manuals/e-Nova - image generation matrix.md:1-33`, `User manuals/e-Prime - image generation matrix.md:1-33`, `User manuals/e-Shield - image generation matrix.md:1-33`, `User manuals/e-Touch - image generation matrix.md:1-33`).
-- **Practical editorial quality over theoretical completeness:** e-Orbit editorial guidance emphasizes clarity, actionability, and explicit uncertainty marking (`User manuals/e-Orbit project/01-guia-estilo-editorial.md:9-15`, `User manuals/e-Orbit project/01-guia-estilo-editorial.md:35-42`).
-- **Parallel content+visual production:** starter packs explicitly recommend beginning implementation with structured content and stable filenames while visuals are produced in parallel (`User manuals/e-Orbit - implementation starter pack.md:160-167`, `User manuals/e-Flex - implementation starter pack.md:15-16`).
+The implementation is optimizing for **practical manual standardization** from OEM PDFs into reusable, Spanish-first help-center content, while keeping tooling lightweight and file-based.
 
-## 2. CURRENT REPOSITORY STRUCTURE
+Evidence of intent:
+- Batch OCR pipeline dedicated to manuals: `process_manuals.py:2`, `process_manuals.py:15-22`, `README.md:146-160`
+- Reusable OCR workflow with fallback stages and downstream hooks: `tools/manual_ocr/README.md:93-133`
+- Editorial style centered on clarity/action over marketing tone: `User manuals/e-Orbit project/01-guia-estilo-editorial.md:9-15`, `:35-42`
+- Visual style centered on utility/scannability over decoration: `User manuals/e-Orbit project/02-guia-estilo-visual.md:9-15`, `:30-36`
 
-### 2.1 Subtree organization (`User manuals/`)
-- Source manuals are OEM-style PDFs (referenced by exact filename in product mappings and batch outputs): `e-Flex`, `e-Nova`, `e-Orbit`, `e-Prime`, `e-Shield`, `e-Touch` (`wp-content/themes/beslock-custom/data/product-manual-features.php:5`, `:30`, `:59`, `:84`, `:117`, `:154`; `generated_manuals/batch_summary.json:3-10`).
-- The subtree includes:
-  - Per-product AI prompt docs.
-  - Per-product image-generation matrices.
-  - Per-product implementation starter packs.
-  - A deep e-Orbit project pack (editorial/visual/CMS/backlog/plan docs).
-  - Product asset placeholder folders under `User manuals/assets/<slug>/` with README conventions (`User manuals/assets/e-orbit/README.md:3-11`).
+In practice, the system balances:
+- **Usability**: task-oriented pages and step-by-step flows
+- **Standardization**: common structures, naming, and image slot patterns
+- **Scalability**: repeatable per-product document packs
+- **Flexibility**: explicit “validate before final publication” notes in content
+- **Product adaptation**: product-specific docs and asset namespaces (`e-orbit`, `e-flex`, etc.)
 
-### 2.2 Adjacent pipeline structure outside subtree (directly connected)
-- Batch entrypoint: `process_manuals.py` (`process_manuals.py:14-22`, `:64-96`).
-- OCR engine and normalization logic: `tools/manual_ocr/extract_manual.py` (`tools/manual_ocr/extract_manual.py:1-10`, `:947-1099`).
-- Generated artifacts in `generated_manuals/<slug>/` and tracked via selective `.gitignore` rules (`.gitignore:3-13`).
-- Legacy/sandbox run output also exists under `output/e-orbit/` (including extraction log), indicating iterative pipeline evolution (`output/e-orbit/extraction.log:1-16`).
+---
 
-## 3. CONTENT PIPELINE
+## 2. Current repository structure (`User manuals/` deep audit)
 
-### 3.1 Ingestion and orchestration
-1. PDFs are discovered from `User manuals/` (or any input path) via recursive discovery (`process_manuals.py:16-17`, `:67-70`; `tools/manual_ocr/extract_manual.py:282-287`).
-2. Product slug output folders are generated from filename normalization (e.g., remove “user manual”, kebab-case) (`tools/manual_ocr/extract_manual.py:290-295`).
-3. Batch mode writes summaries (`batch_summary.json`, `batch_report.md`) with pass/fail status (`process_manuals.py:25-37`, `:39-62`, `:94-96`; `generated_manuals/batch_report.md:1-18`).
+Top-level structure under `User manuals/` currently includes:
+- Source PDFs (6 products): e-Flex, e-Nova, e-Orbit, e-Prime, e-Shield, e-Touch
+- Per-product image planning docs:
+  - `*- image generation matrix.md`
+  - `*- AI image prompts.md`
+  - `*- implementation starter pack.md`
+- e-Orbit-specific advanced docs:
+  - `e-Orbit user manual.md`
+  - `e-Orbit user manual - image-ready.md`
+  - `e-Orbit - manual validation checklist.md`
+  - `e-Orbit project/` (editorial + visual + CMS + backlog package)
+- Shared asset roots by product:
+  - `User manuals/assets/e-flex/README.md`
+  - `User manuals/assets/e-nova/README.md`
+  - `User manuals/assets/e-orbit/README.md`
+  - `User manuals/assets/e-prime/README.md`
+  - `User manuals/assets/e-shield/README.md`
+  - `User manuals/assets/e-touch/README.md`
 
-### 3.2 OCR extraction stack (current)
-- PDF type detection uses text-density and image-heavy heuristics (`tools/manual_ocr/extract_manual.py:303-320`).
-- Multi-stage OCR strategy is explicit and resilient:
-  1. OCRmyPDF (`:328-349`, `:989-1004`)
-  2. pdf2image+pytesseract fallback with per-page preprocessing and confidence (`:375-429`, `:1014-1029`)
-  3. PyMuPDF native fallback (`:431-440`, `:1031-1045`)
-- This same staged behavior is documented for operators in README (`tools/manual_ocr/README.md:93-101`).
+Key responsibility split inferred:
+- `User manuals/*.pdf`: OEM inputs
+- `generated_manuals/<slug>/...`: machine extraction artifacts
+- `User manuals/*.md`: editorial standardization outputs/planning
+- `User manuals/assets/*`: visual asset governance and future storage
 
-### 3.3 Cleanup, semantic normalization, and restructuring
-- Noise cleanup and spacing normalization are first-class functions (`tools/manual_ocr/extract_manual.py:461-470`, `:473-479`).
-- Heuristic filters remove page numbers/symbol noise and preserve valid short tokens like “app/paso” (`tools/manual_ocr/extract_manual.py:482-531`, `:134-135`).
-- Semantic section categorization spans Installation/Configuration/Operation/Specifications/App/Troubleshooting/etc. (`tools/manual_ocr/extract_manual.py:159-169`, `:551-556`).
-- Structured detectors extract specs, ordered steps, app instructions, warnings, features, troubleshooting candidates (`tools/manual_ocr/extract_manual.py:602-674`).
+Emerging pattern: **“product namespace + repeated module set”** (prompts/matrix/starter-pack/assets), with e-Orbit as the most mature reference implementation.
 
-### 3.4 Markdown/JSON artifact generation
-- Markdown output is generated with OCR metadata, section rendering, warning blocks, and synthesized sections (Features, Technical Specifications, Setup Steps, App Setup, Troubleshooting) (`tools/manual_ocr/extract_manual.py:681-755`).
-- JSON output is normalized (`ManualStructure`) with metadata and downstream use hints (`tools/manual_ocr/extract_manual.py:193-207`, `:757-796`).
-- Quality report generation includes method history, quality notes, missing expected section checks, and downstream readiness (`tools/manual_ocr/extract_manual.py:808-920`).
+---
 
-### 3.5 Current-state evidence from generated outputs
-- All six manuals processed successfully in the latest tracked batch (`generated_manuals/batch_summary.json:3-13`).
-- Method/quality vary by manual: e-Orbit reached `ocrmypdf` + Good quality (`generated_manuals/e-orbit/extraction_report.md:12-19`, `:23-25`), while e-Nova/e-Shield fell back to pytesseract with acceptable quality and OCRmyPDF invalid-PDF warnings (`generated_manuals/e-nova/extraction_report.md:12-15`, `:23-48`; `generated_manuals/e-shield/extraction_report.md:12-15`, `:23-60`).
+## 3. Content pipeline (current actual flow)
 
-### 3.6 Reusable content blocks and website integration
-- Reports explicitly position artifacts for WooCommerce pages, FAQs, and installation guides (`generated_manuals/e-orbit/extraction_report.md:121-126`; same template in tool code `tools/manual_ocr/extract_manual.py:913-917`).
-- Current live integration appears manual-curated: product feature rows are stored in a PHP catalog keyed by product slug and source PDF filename (`wp-content/themes/beslock-custom/data/product-manual-features.php:3-6`, `:58-60`, `:153-155`).
-- Theme logic loads this catalog and prioritizes it over post meta (`wp-content/themes/beslock-custom/inc/woocommerce/product-features.php:13-33`, `:55-63`, `:158-169`).
+### 3.1 Ingestion and OCR
+1. PDFs discovered recursively in `User manuals/`: `tools/manual_ocr/extract_manual.py:282-287`
+2. Batch runner executes per PDF into slugged output dirs: `process_manuals.py:76-87`, `extract_manual.py:958`
+3. OCR strategy:
+   - PDF-type detection: `extract_manual.py:303-320`
+   - Stage 1 OCRmyPDF: `extract_manual.py:328-349`
+   - Stage 2 pdf2image + pytesseract fallback: `extract_manual.py:1014-1030`
+   - Stage 3 PyMuPDF native fallback: `extract_manual.py:1031-1046`
 
-## 4. IMAGE PIPELINE
+### 3.2 Cleanup and semantic structuring
+- OCR cleanup and noise filtering: `extract_manual.py:461-531`
+- Section detection and semantic categorization: `extract_manual.py:551-599`, `:159-169`
+- Specs/steps/app/warnings/troubleshooting extraction: `extract_manual.py:602-674`
 
-### 4.1 Source, extracted, and regenerated image layers
-- **Source layer:** OEM PDFs under `User manuals/` (referenced by filename in catalog and batch summary) (`wp-content/themes/beslock-custom/data/product-manual-features.php:5`, `:30`, `:59`; `generated_manuals/batch_summary.json:3-10`).
-- **OCR-extracted layer:** `generated_manuals/<slug>/extracted_images/page_###.png` produced during pytesseract fallback (`tools/manual_ocr/extract_manual.py:410-412`).
-- **AI-regenerated layer:** prompt and matrix docs define synthetic assets by deterministic names (`User manuals/e-Orbit - AI image prompts.md:6-7`, `:249-259`; `User manuals/e-Nova - AI image prompts.md:5`, `:14`, `:20`).
+### 3.3 Generated artifacts
+Per product:
+- `manual_raw.txt`
+- `manual.md`
+- `manual.json`
+- `extraction_report.md`
+- `extracted_images/`
 
-### 4.2 Current extracted-image behavior (evidence)
-- Extracted page images are present for at least e-Nova and e-Shield in tracked artifacts (`generated_manuals/e-nova/extracted_images/page_001.png`, `generated_manuals/e-shield/extracted_images/page_001.png`).
-- Other manuals show empty/placeholder extracted-image folders in tracked outputs, which aligns with method differences reported across manuals (`generated_manuals/e-nova/extraction_report.md:12-13`, `generated_manuals/e-orbit/extraction_report.md:12-13`).
+Written in code: `extract_manual.py:931-939` and documented in `README.md:154-160`.
 
-### 4.3 Prompt systems and matrix controls
-- e-Orbit has a full production-grade image system with per-image prompts, negative prompts, format guidance, variant strategy, and generation order (`User manuals/e-Orbit - AI image prompts.md:4-17`, `:227-246`, `:249-259`).
-- Other products currently use a lighter template (short prompt set + prioritized categories), suggesting staged maturity (`User manuals/e-Shield - AI image prompts.md:4-24`, `User manuals/e-Prime - AI image prompts.md:4-24`).
+Batch status currently shows 6/6 successful at run level: `generated_manuals/batch_report.md:3-14`, `generated_manuals/batch_summary.json:3-13`.
 
-### 4.4 Visual asset reuse and naming conventions
-- Asset README files define strict filename conventions: lowercase, hyphenated, no accents/spaces, descriptive names (`User manuals/assets/e-orbit/README.md:14-21`).
-- They also define page-to-image mapping and IA-to-real replacement strategy (`User manuals/assets/e-orbit/README.md:62-74`, `:87-88`).
-- Folder strategy is intentionally minimal now, with optional future split (`ai-generated`, `real-captures`, `web-ready`, `thumbnails`) when volume grows (`User manuals/assets/e-orbit/README.md:46-59`).
+### 3.4 Editorial restructuring
+After OCR outputs, editorial standardization is manually/AI-assisted in markdown docs (fully visible for e-Orbit):
+- polished manual: `User manuals/e-Orbit user manual.md`
+- image-ready variant with placeholders: `User manuals/e-Orbit user manual - image-ready.md:7`, `:26`, `:44`, etc.
 
-## 5. MANUAL STANDARDIZATION SYSTEM
+### 3.5 CMS/web integration readiness
+- URL/page topology is already defined in seed docs: `User manuals/e-Orbit project/03-seed-content-cms.md:20-32`
+- Starter packs map assets to routes: `User manuals/e-Orbit - implementation starter pack.md:53-94`
 
-### 5.1 System components currently in place
-- **Extraction engine:** robust OCR and normalization implementation (`tools/manual_ocr/extract_manual.py:245-275`, `:986-1099`).
-- **Batch operational wrapper:** one-command processing of all manuals (`process_manuals.py:64-96`; `README.md:148-152`).
-- **Structured outputs:** raw text, md draft, json schema, quality report, extracted images (`README.md:154-160`; `.gitignore:8-13`).
-- **Editorial controls:** e-Orbit validation checklist and style guides (`User manuals/e-Orbit - manual validation checklist.md:9-19`, `:22-33`; `User manuals/e-Orbit project/01-guia-estilo-editorial.md:35-42`).
-- **Visual controls:** image matrix/prompt/starter-pack triad per product (`User manuals/e-Flex - image generation matrix.md:1-33`, `User manuals/e-Flex - AI image prompts.md:1-24`, `User manuals/e-Flex - implementation starter pack.md:1-16`).
+### 3.6 Manual intervention points (still required)
+- Technical validation of uncertain codes/flows before publication:
+  - `e-Orbit user manual.md:14`, `:155-156`
+  - checklist enforces validation: `e-Orbit - manual validation checklist.md:23-33`
+- Final editorial QA and visual QA are checklist-driven, not automated.
 
-### 5.2 Standardization vs flexibility balance
-- Standardized skeleton repeats across products (same document families, same asset naming pattern) (`User manuals/e-Flex - implementation starter pack.md:1-16`, `User manuals/e-Touch - implementation starter pack.md:1-16`).
-- Flexibility is preserved via product-specific names, slugs, and path mappings (`User manuals/e-Nova - AI image prompts.md:5`, `:14`, `:20`; `User manuals/e-Orbit - implementation starter pack.md:19-30`).
-- e-Orbit serves as a “reference implementation” with deeper editorial and operational detail than other products (`User manuals/e-Orbit - image generation matrix.md:62-76`, `:79-256`; `User manuals/e-Orbit project/README.md:20-26`).
+---
 
-## 6. EXISTING CONVENTIONS
+## 4. Image pipeline audit
 
-### 6.1 Naming and path conventions
-- Product slugs are kebab-case (`e-orbit`, `e-nova`, etc.) and reused across OCR outputs and asset naming (`tools/manual_ocr/extract_manual.py:290-295`; `User manuals/assets/e-orbit/README.md:23-33`).
-- Suggested CMS URL taxonomy is stable and hierarchical (`/productos/<slug>/...`) (`User manuals/e-Orbit - implementation starter pack.md:19-30`, `:55-94`).
+Current architecture is planning-heavy and generation-ready but still mostly manual in execution.
 
-### 6.2 Editorial conventions
-- Action-first step writing, consistent product/app names, and prudent handling of uncertain technical points (`User manuals/e-Orbit project/01-guia-estilo-editorial.md:35-42`; `User manuals/e-Orbit user manual.md:154-156`).
-- Validation checklists include editorial, technical, visual, and structure gates (`User manuals/e-Orbit - manual validation checklist.md:9-63`).
+### 4.1 Existing system
+- Image matrix templates per product define IDs, purpose, prompt base, negative prompt, format, priority, status (fully detailed in e-Orbit):
+  - `User manuals/e-Orbit - image generation matrix.md:62-76`, `:79-317`
+- Prompt libraries exist per product (depth varies):
+  - Full detailed prompt pack for e-Orbit: `User manuals/e-Orbit - AI image prompts.md`
+- Starter packs map asset filenames to CMS page routes:
+  - `User manuals/e-Orbit - implementation starter pack.md:53-94`
 
-### 6.3 Output-tracking conventions
-- Only core generated artifacts are committed; other runtime artifacts remain ignored (`.gitignore:3-13`).
-- OCR tooling itself also keeps local virtualenv/output untracked (`tools/manual_ocr/.gitignore:1-4`).
+### 4.2 Asset governance
+Asset README convention is consistent across products:
+- lowercase + hyphens + no spaces/accents: e.g. `assets/e-orbit/README.md:15-21`
+- recommended canonical names: `assets/e-orbit/README.md:23-33`
+- “AI now, real captures later” policy: `assets/e-orbit/README.md:87-88`
 
-## 7. CURRENT MATURITY ASSESSMENT
+### 4.3 Strengths
+- Strong naming consistency and page-to-asset mapping
+- Reusable matrix/prompt framework
+- Clear quality checklist before integration
 
-### 7.1 What is mature now
-- OCR ingestion architecture is mature and fault-tolerant (multi-engine with staged fallback and quality reporting) (`tools/manual_ocr/extract_manual.py:986-1045`, `:808-920`).
-- Batch operations and artifact contract are clear and documented (`process_manuals.py:14-22`, `:94-96`; `tools/manual_ocr/README.md:44-51`, `:60-70`).
-- Product feature consumption in WordPress is production-usable through curated PHP catalog + normalization (`wp-content/themes/beslock-custom/inc/woocommerce/product-features.php:13-33`, `:92-145`, `:158-173`).
+### 4.4 Bottlenecks
+- Pipeline is still manual-heavy for generation/selection/refinement
+- Product maturity is uneven (e-Orbit is far ahead)
+- No committed shared central image registry file beyond per-product docs
+- Potential duplication in nearly identical asset README structures across products
 
-### 7.2 What is partially mature
-- Manual standardization artifacts are uneven: e-Orbit is deep and operationally detailed, while other product packs are currently lightweight templates (`User manuals/e-Orbit - image generation matrix.md:79-256` vs `User manuals/e-Nova - image generation matrix.md:16-33`).
-- Image production pipeline controls are defined, but `User manuals/assets/*` currently hold only README guidance (no committed final visual files yet) (`User manuals/assets/e-orbit/README.md:3-11`; `User manuals/assets/e-shield/README.md:3-11`).
+---
 
-## 8. CURRENT BOTTLENECKS
+## 5. Manual standardization system (how normalization works)
 
-1. **OCR reliability variance by source PDF quality/tool behavior**
-   - OCRmyPDF succeeds for some manuals but fails/produces invalid searchable output for others, triggering fallback and “Acceptable” quality outcomes (`generated_manuals/e-orbit/extraction_report.md:12-15`, `:23-25`; `generated_manuals/e-nova/extraction_report.md:23-48`; `generated_manuals/e-shield/extraction_report.md:23-60`).
-2. **Semantic extraction noise still present in difficult manuals**
-   - Section indexes contain OCR-garbled headings in some outputs, increasing editorial cleanup load (`generated_manuals/e-nova/extraction_report.md:62-70`; `generated_manuals/e-shield/extraction_report.md:74-103`).
-3. **Editorial system depth concentrated in a single product (e-Orbit)**
-   - e-Orbit has full project governance docs, while other products mostly have concise prompt/matrix/starter templates (`User manuals/e-Orbit project/00-paquete-maestro.md:17-29`; `User manuals/e-Flex - implementation starter pack.md:1-16`).
-4. **No evident automated bridge from `generated_manuals/*.json` into theme catalog**
-   - OCR reports claim downstream readiness, but current theme integration reads `product-manual-features.php` directly (`tools/manual_ocr/extract_manual.py:913-917`; `wp-content/themes/beslock-custom/inc/woocommerce/product-features.php:22-29`, `:158-169`).
+Normalization currently happens through layered artifacts:
 
-## 9. HIGH-VALUE UPGRADE OPPORTUNITIES
+1. **Machine normalization** (OCR + structure extraction)
+   - Produces raw + structured machine-readable outputs
+2. **Editorial normalization** (human/AI-guided)
+   - Applies tone, structure, and action-first language style
+3. **Implementation normalization**
+   - Maps editorial modules to URL routes and asset names
 
-> Framed as compatible next steps within current architecture (not redesign).
+### Audience handling
+The e-Orbit docs are written as practical end-user support content (clear tasks, minimal jargon), with explicit QA gates for technical confirmation before publication.
 
-1. **Add a lightweight “artifact promotion” convention from OCR outputs to curated product catalog**
-   - Compatible because current system already separates generated artifacts from curated feature rows (`.gitignore:3-13`; `wp-content/themes/beslock-custom/data/product-manual-features.php:3-6`).
-   - Opportunity: codify a review step that maps approved `manual.json` fields into the existing PHP catalog structure.
+### Reusable vs product-specific
+- Reusable:
+  - docs triplet pattern (matrix/prompts/starter-pack)
+  - asset naming schema
+  - page archetypes (hub, primeros pasos, tareas, troubleshooting)
+- Product-specific:
+  - menu flows
+  - app coupling details (e.g., Smart Life for e-Orbit)
+  - technical codes to validate (e.g., `888#`, `3009#`)
 
-2. **Standardize the e-Orbit governance pack pattern across remaining products incrementally**
-   - Compatible with existing template family and naming conventions (`User manuals/e-Orbit project/README.md:9-17`; `User manuals/e-Nova - implementation starter pack.md:1-16`).
-   - Opportunity: replicate checklist/editorial/visual/seed/backlog layers where product complexity justifies it.
+### UX/readability strategy
+- action-first steps
+- route boxes/menu paths
+- recommendations + post-validation checks
+- troubleshooting slices for common failures
 
-3. **Introduce extraction-quality triage thresholds for editorial workload planning**
-   - Compatible with existing confidence + quality report outputs (`tools/manual_ocr/extract_manual.py:798-806`, `:824-905`).
-   - Opportunity: use current `Good/Acceptable/Poor/Failed` and section-missing flags to drive whether a manual goes straight to editorial or needs deeper OCR rework.
+(Ref: `01-guia-estilo-editorial.md:45-53`, `02-guia-estilo-visual.md:18-27`)
 
-4. **Operationalize asset-folder lifecycle already documented**
-   - Compatible with current assets README recommendations (`User manuals/assets/e-orbit/README.md:46-59`, `:87-88`).
-   - Opportunity: start populating `ai-generated` and `real-captures` subfolders only when production volume requires it, preserving current lightweight state.
+---
 
-5. **Keep iterative pipeline comparisons explicit (as shown by `output/e-orbit` vs `generated_manuals/e-orbit`)**
-   - Compatible with current evidence of iterative improvement (`output/e-orbit/extraction_report.md:12-19` vs `generated_manuals/e-orbit/extraction_report.md:12-19`).
-   - Opportunity: preserve this compare-and-promote practice as a QA pattern when OCR logic is tuned.
+## 6. Existing conventions (stable and valuable)
 
-## 10. OUTPUT FORMAT
+### Naming
+- Product slug naming in assets and generated outputs (`e-orbit`, `e-flex`, etc.)
+- Deterministic file naming for images and generated OCR pages
 
-### 10.1 Current canonical outputs (per manual)
-- `manual_raw.txt` (raw/cleaned OCR text) (`tools/manual_ocr/extract_manual.py:932`).
-- `manual.md` (structured markdown draft) (`tools/manual_ocr/extract_manual.py:933`).
-- `manual.json` (normalized schema for downstream integrations) (`tools/manual_ocr/extract_manual.py:936-939`).
-- `extraction_report.md` (quality and method trace) (`tools/manual_ocr/extract_manual.py:934`, `:808-920`).
-- `extracted_images/` (OCR preprocessing page images when applicable) (`tools/manual_ocr/extract_manual.py:978-980`, `:410-412`).
+### Markdown/document conventions
+- Modular docs by purpose (manual, prompts, matrix, starter, checklist)
+- Checklist-driven QA gates
+- Consistent route mapping format
 
-### 10.2 Batch-level outputs
-- `generated_manuals/batch_summary.json` and `generated_manuals/batch_report.md` summarize run success/failure (`process_manuals.py:35-37`, `:61`, `:94`; `generated_manuals/batch_summary.json:1-14`).
+### Generation conventions
+- “Generate variants → select by clarity/realism/utility → refine”
+  - `e-Orbit - implementation starter pack.md:135-157`
+  - `e-Orbit - AI image prompts.md:227-246`
 
-### 10.3 Current editorial-delivery formats in `User manuals/`
-- Product-facing manuals: OEM PDFs and e-Orbit markdown manuals (`User manuals/e-Orbit user manual.md:1-5`, `User manuals/e-Orbit user manual - image-ready.md:1-8`).
-- Visual-production formats: matrix docs, AI prompt packs, starter packs, per-product asset README contracts (`User manuals/e-Orbit - image generation matrix.md:1-5`, `User manuals/e-Orbit - AI image prompts.md:1-3`, `User manuals/assets/e-orbit/README.md:14-21`).
+### OCR artifacts tracked in git
+Repo tracks core artifacts while ignoring other generated noise:
+- `.gitignore:3-13`
+
+These conventions appear stable and scalable for adding more products incrementally.
+
+---
+
+## 7. Current maturity assessment
+
+### Robust today
+- OCR engine architecture and fallback resilience
+- Artifact model (`raw/md/json/report/images`) per product
+- e-Orbit editorial package depth (style + visual + CMS seed + backlog + schedule)
+
+### Scales reasonably well
+- Slug-based foldering
+- Repeatable per-product documentation modules
+- Batch processing from repository root
+
+### Fragile / debt-prone
+- OCR quality variability by manual (some products rely on fallback OCR and show noisier section detection)
+  - e-Nova fallback and invalid OCRmyPDF output: `generated_manuals/e-nova/extraction_report.md:23-48`
+  - e-Shield similar pattern: `generated_manuals/e-shield/extraction_report.md:23-60`
+- Editorial completion is uneven across products
+- Significant duplicated prose across per-product docs may drift over time
+
+### Missing pieces
+- Fully unified cross-product master editorial standard file at `User manuals/` root
+- More explicit automation bridge from structured OCR JSON to CMS ingest
+- Executed image production inventory in repo (most is still planning structure)
+
+---
+
+## 8. Prioritized bottlenecks (practical impact)
+
+1. **Editorial throughput bottleneck**: only e-Orbit has full, mature manual pack
+2. **Validation bottleneck**: technical flows/codes require real-device confirmation before publication
+3. **Image production bottleneck**: robust planning exists, but generation/refinement is still manually intensive
+4. **Consistency drift risk**: duplicated product docs can diverge as updates accumulate
+5. **Maintainability bottleneck**: no single top-level “manual standardization system” source-of-truth doc until now
+
+---
+
+## 9. High-value upgrade opportunities (compatible with current approach)
+
+Without redesigning architecture:
+
+1. **Consolidate shared conventions** into root-level reusable templates to reduce duplicated edits
+2. **Add a root “standardization playbook”** (workflow + gates + naming + QA) for onboarding speed
+3. **Define lightweight JSON-to-CMS mapping checklist** using existing `manual.json` fields
+4. **Add per-product maturity scoreboard** (editorial ready, visual ready, validation ready) in one md table
+5. **Create a canonical image registry table** per product/route/asset/status to reduce ambiguity
+6. **Document fallback OCR handling policy** (when to accept vs re-run with force/dpi adjustments)
+
+These changes preserve current philosophy: pragmatic, editorial-first, and product-adaptive.
+
+---
+
+## Evidence index (selected references)
+
+- OCR batch runner: `/home/runner/work/Beslock/Beslock/process_manuals.py`
+- OCR core: `/home/runner/work/Beslock/Beslock/tools/manual_ocr/extract_manual.py`
+- OCR docs: `/home/runner/work/Beslock/Beslock/tools/manual_ocr/README.md`
+- Root OCR usage docs: `/home/runner/work/Beslock/Beslock/README.md:146-160`
+- Tracked generated artifacts policy: `/home/runner/work/Beslock/Beslock/.gitignore:3-13`
+- e-Orbit manual (editorial baseline): `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit user manual.md`
+- e-Orbit image-ready manual: `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit user manual - image-ready.md`
+- e-Orbit validation checklist: `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit - manual validation checklist.md`
+- e-Orbit project package:
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/00-paquete-maestro.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/01-guia-estilo-editorial.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/02-guia-estilo-visual.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/03-seed-content-cms.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/04-backlog-mvp-fase-1.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/05-cronograma-semanal.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/e-Orbit project/06-starter-pack-implementacion.md`
+- Product asset conventions:
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-orbit/README.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-flex/README.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-nova/README.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-prime/README.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-shield/README.md`
+  - `/home/runner/work/Beslock/Beslock/User manuals/assets/e-touch/README.md`
+- Batch outputs:
+  - `/home/runner/work/Beslock/Beslock/generated_manuals/batch_report.md`
+  - `/home/runner/work/Beslock/Beslock/generated_manuals/batch_summary.json`
+  - `/home/runner/work/Beslock/Beslock/generated_manuals/e-nova/extraction_report.md`
+  - `/home/runner/work/Beslock/Beslock/generated_manuals/e-shield/extraction_report.md`
+
