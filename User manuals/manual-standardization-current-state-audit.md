@@ -71,7 +71,8 @@
 - **AI-regenerated layer:** prompt and matrix docs define synthetic assets by deterministic names (`User manuals/e-Orbit - AI image prompts.md:6-7`, `:249-259`; `User manuals/e-Nova - AI image prompts.md:5`, `:14`, `:20`).
 
 ### 4.2 Current extracted-image behavior (evidence)
-- Extracted page images are present for at least e-Nova/e-Shield (scanned/fallback-heavy manuals) and absent/empty for others in tracked artifacts, matching method diversity (`generated_manuals/e-nova/extracted_images/page_001.png`, `generated_manuals/e-shield/extracted_images/page_001.png`; summarized method differences in `generated_manuals/e-nova/extraction_report.md:12-13` and `generated_manuals/e-orbit/extraction_report.md:12-13`).
+- Extracted page images are present for at least e-Nova and e-Shield in tracked artifacts (`generated_manuals/e-nova/extracted_images/page_001.png`, `generated_manuals/e-shield/extracted_images/page_001.png`).
+- Other manuals show empty/placeholder extracted-image folders in tracked outputs, which aligns with method differences reported across manuals (`generated_manuals/e-nova/extraction_report.md:12-13`, `generated_manuals/e-orbit/extraction_report.md:12-13`).
 
 ### 4.3 Prompt systems and matrix controls
 - e-Orbit has a full production-grade image system with per-image prompts, negative prompts, format guidance, variant strategy, and generation order (`User manuals/e-Orbit - AI image prompts.md:4-17`, `:227-246`, `:249-259`).
@@ -129,7 +130,7 @@
    - Section indexes contain OCR-garbled headings in some outputs, increasing editorial cleanup load (`generated_manuals/e-nova/extraction_report.md:62-70`; `generated_manuals/e-shield/extraction_report.md:74-103`).
 3. **Editorial system depth concentrated in a single product (e-Orbit)**
    - e-Orbit has full project governance docs, while other products mostly have concise prompt/matrix/starter templates (`User manuals/e-Orbit project/00-paquete-maestro.md:17-29`; `User manuals/e-Flex - implementation starter pack.md:1-16`).
-4. **No evidenced automated bridge from `generated_manuals/*.json` into theme catalog**
+4. **No evident automated bridge from `generated_manuals/*.json` into theme catalog**
    - OCR reports claim downstream readiness, but current theme integration reads `product-manual-features.php` directly (`tools/manual_ocr/extract_manual.py:913-917`; `wp-content/themes/beslock-custom/inc/woocommerce/product-features.php:22-29`, `:158-169`).
 
 ## 9. HIGH-VALUE UPGRADE OPPORTUNITIES
