@@ -1,19 +1,5 @@
 __pycache__/
 *.pyc
-!User manuals/
-User manuals/*
-!User manuals/*.md
-!User manuals/ext-images/
-User manuals/ext-images/*
-!User manuals/ext-images/*.webp
-!User manuals/ext-images/README.md
-!User manuals/ext-images/*/
-User manuals/ext-images/*/*
-!User manuals/ext-images/*/*.md
-!User manuals/visual-system/
-!User manuals/visual-system/**
-!User manuals/architecture/
-!User manuals/architecture/*.md
 generated_manuals/*
 !generated_manuals/batch_report.md
 !generated_manuals/batch_summary.json

@@ -4,7 +4,7 @@
 This file defines the current operational boundaries of the manual-reconstruction and visual-production system after the visual-system upgrade scaffold was introduced.
 
 ## Active layers
-- `../generated_manuals/`: OCR extraction artifacts and machine-structured outputs
+- `../../../../../generated_manuals/`: OCR extraction artifacts and machine-structured outputs that remain outside the theme tree
 - `../*.pdf`: source manuals
 - `../*.md` at the User manuals root: legacy planning and editorial files that remain valid during migration
 - `../ext-images/`: visual truth layer based on canonical product references

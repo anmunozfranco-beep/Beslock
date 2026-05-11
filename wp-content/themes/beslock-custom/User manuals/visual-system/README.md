@@ -30,7 +30,7 @@ The new directory structure sits above those files as the operational control la
 
 ## Canonical inputs
 - `../ext-images/*.webp`: current visual truth layer with one canonical product reference image per product
-- `../generated_manuals/`: OCR and extraction outputs
+- `../../../../../generated_manuals/`: OCR and extraction outputs stored outside the theme tree
 - `../*.pdf`: OEM source manuals
 - `products/<slug>/image-production-status.md`: execution state by image slot
 - `shared/`: reusable prompt modules, rules, and review guides
