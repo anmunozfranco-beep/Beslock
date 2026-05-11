@@ -23,8 +23,9 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def write_batch_report(output_dir: Path, successes: list[str], failures: list[dict[str, str]]) -> None:
+    report_timestamp = datetime.now(timezone.utc)
     summary = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": report_timestamp.isoformat(),
         "successful_manuals": successes,
         "failed_manuals": failures,
         "success_count": len(successes),
@@ -38,7 +39,7 @@ def write_batch_report(output_dir: Path, successes: list[str], failures: list[di
     lines = [
         "# OCR Batch Summary",
         "",
-        f"- Generated: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}",
+        f"- Generated: {report_timestamp.strftime('%Y-%m-%d %H:%M UTC')}",
         f"- Successful manuals: {len(successes)}",
         f"- Failed manuals: {len(failures)}",
         "",
@@ -84,6 +85,8 @@ def main() -> int:
                 batch_mode=True,
             )
             successes.append(pdf.name)
+        except (KeyboardInterrupt, SystemExit):
+            raise
         except Exception as exc:
             failures.append({"file": pdf.name, "error": str(exc)})
             print(f"✗ Failed processing {pdf.name}: {exc}")

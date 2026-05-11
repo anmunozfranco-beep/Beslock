@@ -66,6 +66,19 @@ WARNING_PATTERN = re.compile(
 FEATURE_PATTERN = re.compile(
     r"^[\-\*\•]\s+.{10,}|^\d+\.\s+.{10,}",
 )
+# Keep multilingual keyword coverage for current manuals (English + Spanish).
+TROUBLESHOOTING_KEYWORDS = ("troubleshoot", "error", "problem", "issue", "fallo", "problema")
+# Character-density heuristic (avg chars/page -> confidence) used when OCR engines
+# do not expose confidence scores (e.g., OCRmyPDF + native text extraction path).
+TEXT_CONFIDENCE_THRESHOLDS: tuple[tuple[int, float], ...] = (
+    (1200, 92.0),
+    (700, 88.0),
+    (300, 80.0),
+)
+MIN_TEXT_CONFIDENCE = 70.0
+REQUIRED_SECTION_SPECS = "Technical Specifications"
+REQUIRED_SECTION_STEPS = "Setup Steps"
+REQUIRED_SECTION_APP = "App Instructions"
 
 # Product-manual keyword sets for section matching
 SECTION_KEYWORDS: dict[str, list[str]] = {
@@ -200,6 +213,7 @@ def list_input_pdfs(input_path: Path) -> list[Path]:
 
 
 def slug_from_pdf_name(pdf_name: str) -> str:
+    """Build stable product slugs from manual PDF names."""
     base = re.sub(r"\.pdf$", "", pdf_name, flags=re.IGNORECASE).strip()
     base = re.sub(r"\buser\s*manual\b", "", base, flags=re.IGNORECASE).strip()
     base = re.sub(r"[^a-zA-Z0-9]+", "-", base.lower()).strip("-")
@@ -352,18 +366,16 @@ def extract_text_native(pdf_path: Path) -> list[str]:
 
 
 def estimate_text_confidence(pages_text: list[str]) -> float:
-    """Heuristic confidence when OCR engine confidence is unavailable."""
-    if not pages_text:
+    """Estimate confidence from average non-empty characters per page."""
+    non_empty_pages = [page for page in pages_text if (page or "").strip()]
+    if not non_empty_pages:
         return 0.0
-    total_chars = sum(len((page or "").strip()) for page in pages_text)
-    avg_chars_per_page = total_chars / max(1, len(pages_text))
-    if avg_chars_per_page >= 1200:
-        return 92.0
-    if avg_chars_per_page >= 700:
-        return 88.0
-    if avg_chars_per_page >= 300:
-        return 80.0
-    return 70.0
+    total_chars = sum(len(page.strip()) for page in non_empty_pages)
+    avg_chars_per_page = total_chars / len(non_empty_pages)
+    for min_chars_per_page, confidence in TEXT_CONFIDENCE_THRESHOLDS:
+        if avg_chars_per_page >= min_chars_per_page:
+            return confidence
+    return MIN_TEXT_CONFIDENCE
 
 
 # ---------------------------------------------------------------------------
@@ -448,8 +460,12 @@ def detect_features(lines: list[str]) -> list[str]:
 
 
 def detect_troubleshooting(lines: list[str]) -> list[str]:
-    keywords = ("troubleshoot", "error", "problem", "issue", "fallo", "problema")
-    return [line for line in lines if any(kw in line.lower() for kw in keywords)]
+    matches: list[str] = []
+    for line in lines:
+        line_lower = line.lower()
+        if any(kw in line_lower for kw in TROUBLESHOOTING_KEYWORDS):
+            matches.append(line)
+    return matches
 
 
 # ---------------------------------------------------------------------------
@@ -604,11 +620,11 @@ def build_extraction_report(
     detected_cats = sorted({s.semantic_category for s in sections if s.semantic_category != "General"})
     missing_required = []
     if not specs:
-        missing_required.append("Technical Specifications")
+        missing_required.append(REQUIRED_SECTION_SPECS)
     if not steps:
-        missing_required.append("Setup Steps")
+        missing_required.append(REQUIRED_SECTION_STEPS)
     if not app_instructions:
-        missing_required.append("App Instructions")
+        missing_required.append(REQUIRED_SECTION_APP)
 
     lines: list[str] = [
         "# Extraction Report",
@@ -771,7 +787,7 @@ def process_manual(
         method_results.append(ocrmypdf_result)
         ocr_source = searchable_pdf if ocrmypdf_result.success and searchable_pdf.exists() else input_pdf
 
-        if ocrmypdf_result.success:
+        if ocrmypdf_result.success and searchable_pdf.exists():
             _log.info("OCRmyPDF succeeded; extracting text from searchable PDF")
             try:
                 ocr_pages = extract_text_native(searchable_pdf)
@@ -782,7 +798,12 @@ def process_manual(
                     OcrMethodResult("ocrmypdf_native_text", True, len(ocr_pages), avg_confidence)
                 )
             except Exception as exc:
-                _log.warning("Searchable PDF text extraction failed: %s", exc)
+                _log.warning(
+                    "Searchable PDF text extraction failed for %s: %s",
+                    searchable_pdf.name,
+                    exc,
+                )
+                ocr_pages = []
                 method_results.append(OcrMethodResult("ocrmypdf_native_text", False, 0, 0.0, str(exc)))
 
         # Stage 2 fallback: pdf2image + pytesseract
