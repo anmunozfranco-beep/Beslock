@@ -143,6 +143,22 @@ max_execution_time = 300
 - `data/products.json`: filesystem source of product data consumed by sync.
 - `tools/manual_ocr`: reusable OCR ingestion workflow for scanned product manuals (raw text, markdown, JSON outputs).
 
+## Manual OCR batch pipeline
+
+Run all manuals from `User manuals/` with one command:
+
+```bash
+python process_manuals.py
+```
+
+Outputs are written to `generated_manuals/<product-slug>/` with:
+
+- `manual_raw.txt`
+- `manual.md`
+- `manual.json`
+- `extraction_report.md`
+- `extracted_images/`
+
 ## Notes for new developers
 
 - Do not commit production SQL dumps. The `database/` directory is reserved for local bootstrap only.
