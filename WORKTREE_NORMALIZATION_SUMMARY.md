@@ -267,7 +267,7 @@ This section isolates the remaining shadow media surface under
 | Path or subpath | Classification | Tooling dependency |
 | --- | --- | --- |
 | `assets/images/e-flex_.webp`, `e-nova_.webp`, `e-orbit_.webp`, `e-prime_.webp`, `e-shield_.webp`, `e-touch_.webp` | TOOLING CRITICAL | referenced by `data/products.json` as primary product image source for importer flows |
-| `assets/images/e-nova_s.webp`, `e-shield_e.webp`, `e-touch_c.webp` | TOOLING CRITICAL | referenced by `data/products.json` as gallery image sources for importer flows |
+| `assets/images/e-nova_l.webp`, `e-shield_e.webp`, `e-touch_c.webp` | TOOLING CRITICAL | referenced by `data/products.json` as gallery image sources for importer flows |
 | `assets/images/products/*.webp` | TOOLING CRITICAL | read by `scripts/carga_portfolio_data.php`, `scripts/fix-placeholder-images.php`, and menu/mobile card generation |
 | `assets/images/` root as search dir | TOOLING CRITICAL | importer and placeholder-fix tooling scan this directory as fallback source for product media |
 | `assets/images/hero-poster.webp` | PRESERVED LEGACY / OPTIONAL RUNTIME | checked by `header.php` and `header-noheader.php`, but not present in current image inventory |
