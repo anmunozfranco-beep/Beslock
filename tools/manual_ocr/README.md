@@ -9,7 +9,7 @@ tools/manual_ocr/
   extract_manual.py
   requirements.txt
   README.md
-output/
+generated_manuals/
   e-orbit/
     manual_raw.txt
     manual.md
@@ -41,18 +41,26 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+## Run (preferred batch command from repository root)
+
+```bash
+python process_manuals.py
+```
+
+This command processes all PDFs under `User manuals/` and writes one slugged folder per manual under `generated_manuals/`.
+
 ## Run (single PDF → custom output folder)
 
 ```bash
 python tools/manual_ocr/extract_manual.py \
   --input "User manuals/e-Orbit user manual.pdf" \
-  --output "output/e-orbit"
+  --output "generated_manuals/e-orbit"
 ```
 
 Generated output:
 
 ```text
-output/e-orbit/
+generated_manuals/e-orbit/
   manual_raw.txt        # raw OCR text
   manual.md             # AI-ready markdown with headings and warnings
   manual.json           # structured JSON for downstream integrations
@@ -61,15 +69,15 @@ output/e-orbit/
   extracted_images/     # preprocessed page images used for OCR
 ```
 
-## Run (batch directory)
+## Run (batch directory via OCR tool)
 
 ```bash
 python tools/manual_ocr/extract_manual.py \
   --input "User manuals" \
-  --output "output"
+  --output "generated_manuals"
 ```
 
-Batch mode writes each PDF to its own sub-folder inside `output/` (e.g. `output/e-Orbit user manual/`).
+Batch mode writes each PDF to its own slugged sub-folder inside `generated_manuals/` (e.g. `generated_manuals/e-orbit/`).
 
 ## CLI options
 
@@ -85,8 +93,8 @@ Batch mode writes each PDF to its own sub-folder inside `output/` (e.g. `output/
 ## Workflow behavior
 
 1. **PDF type detection** — uses PyMuPDF (text density + image-heavy pages) to decide OCR strategy.
-2. **OCR stage 1 — OCRmyPDF** — when available, produces a searchable PDF to improve input quality.
-3. **OCR stage 2 — pdf2image + pytesseract** — converts pages to images, applies preprocessing (grayscale, autocontrast, denoise, threshold), then runs Tesseract page-by-page with confidence scoring.
+2. **OCR stage 1 — OCRmyPDF** — first attempt; if successful, text is read from the searchable PDF.
+3. **OCR stage 2 — pdf2image + pytesseract** — fallback when OCRmyPDF/native extraction fails; converts pages to images, applies preprocessing (grayscale, autocontrast, denoise, threshold), then runs Tesseract page-by-page with confidence scoring.
 4. **OCR stage 3 — PyMuPDF native fallback** — used when image-based methods are unavailable.
 5. Continues processing even if one stage fails; each failure is logged.
 6. Produces all output artifacts plus an extraction quality report.

@@ -112,6 +112,7 @@ class ManualStructure:
     specifications: list[dict[str, str]]
     steps: list[str]
     app_instructions: list[str]
+    troubleshooting: list[str]
     warnings: list[str]
     features: list[str]
     metadata: dict[str, Any] = field(default_factory=dict)
@@ -125,6 +126,8 @@ class ManualStructure:
 def setup_logging(log_file: Path | None = None) -> logging.Logger:
     logger = logging.getLogger("manual_ocr")
     logger.setLevel(logging.DEBUG)
+    logger.handlers.clear()
+    logger.propagate = False
     fmt = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
 
     ch = logging.StreamHandler(sys.stdout)
@@ -194,6 +197,13 @@ def list_input_pdfs(input_path: Path) -> list[Path]:
     if input_path.is_dir():
         return sorted(p for p in input_path.rglob("*.pdf") if p.is_file())
     return []
+
+
+def slug_from_pdf_name(pdf_name: str) -> str:
+    base = re.sub(r"\.pdf$", "", pdf_name, flags=re.IGNORECASE).strip()
+    base = re.sub(r"\buser\s*manual\b", "", base, flags=re.IGNORECASE).strip()
+    base = re.sub(r"[^a-zA-Z0-9]+", "-", base.lower()).strip("-")
+    return base or "manual"
 
 
 # ---------------------------------------------------------------------------
@@ -341,6 +351,21 @@ def extract_text_native(pdf_path: Path) -> list[str]:
     return pages_text
 
 
+def estimate_text_confidence(pages_text: list[str]) -> float:
+    """Heuristic confidence when OCR engine confidence is unavailable."""
+    if not pages_text:
+        return 0.0
+    total_chars = sum(len((page or "").strip()) for page in pages_text)
+    avg_chars_per_page = total_chars / max(1, len(pages_text))
+    if avg_chars_per_page >= 1200:
+        return 92.0
+    if avg_chars_per_page >= 700:
+        return 88.0
+    if avg_chars_per_page >= 300:
+        return 80.0
+    return 70.0
+
+
 # ---------------------------------------------------------------------------
 # Text cleaning and normalization
 # ---------------------------------------------------------------------------
@@ -422,6 +447,11 @@ def detect_features(lines: list[str]) -> list[str]:
     return [line for line in lines if FEATURE_PATTERN.match(line)]
 
 
+def detect_troubleshooting(lines: list[str]) -> list[str]:
+    keywords = ("troubleshoot", "error", "problem", "issue", "fallo", "problema")
+    return [line for line in lines if any(kw in line.lower() for kw in keywords)]
+
+
 # ---------------------------------------------------------------------------
 # Output builders
 # ---------------------------------------------------------------------------
@@ -433,6 +463,8 @@ def build_markdown(
     steps: list[str],
     warnings: list[str],
     features: list[str],
+    app_instructions: list[str],
+    troubleshooting: list[str],
     source_name: str,
     ocr_method: str,
     avg_confidence: float,
@@ -480,10 +512,22 @@ def build_markdown(
             md_lines.append(f"{i}. {step}")
         md_lines.append("")
 
+    if app_instructions:
+        md_lines.extend(["## App Setup", ""])
+        for i, line in enumerate(app_instructions, start=1):
+            md_lines.append(f"{i}. {line}")
+        md_lines.append("")
+
     if warnings:
         md_lines.extend(["## Warnings & Notes", ""])
         for w in warnings:
             md_lines.append(f"> ⚠️ {w}")
+        md_lines.append("")
+
+    if troubleshooting:
+        md_lines.extend(["## Troubleshooting", ""])
+        for i, line in enumerate(troubleshooting, start=1):
+            md_lines.append(f"{i}. {line}")
         md_lines.append("")
 
     return "\n".join(md_lines).strip() + "\n"
@@ -499,6 +543,7 @@ def build_json_structure(
     specs: list[dict[str, str]],
     steps: list[str],
     app_instructions: list[str],
+    troubleshooting: list[str],
     warnings: list[str],
     features: list[str],
 ) -> ManualStructure:
@@ -519,6 +564,7 @@ def build_json_structure(
         specifications=specs,
         steps=steps,
         app_instructions=app_instructions,
+        troubleshooting=troubleshooting,
         warnings=warnings,
         features=features,
         metadata={
@@ -550,10 +596,19 @@ def build_extraction_report(
     warnings: list[str],
     specs: list[dict[str, str]],
     steps: list[str],
+    app_instructions: list[str],
+    troubleshooting: list[str],
 ) -> str:
     """Generate a markdown extraction quality report."""
     quality = _quality_label(avg_confidence, total_chars)
     detected_cats = sorted({s.semantic_category for s in sections if s.semantic_category != "General"})
+    missing_required = []
+    if not specs:
+        missing_required.append("Technical Specifications")
+    if not steps:
+        missing_required.append("Setup Steps")
+    if not app_instructions:
+        missing_required.append("App Instructions")
 
     lines: list[str] = [
         "# Extraction Report",
@@ -623,6 +678,10 @@ def build_extraction_report(
         lines.append("- No technical specification table was automatically detected.")
     if not steps:
         lines.append("- No numbered setup steps were automatically detected.")
+    if troubleshooting:
+        lines.append(f"- Troubleshooting candidates detected: {len(troubleshooting)}.")
+    if missing_required:
+        lines.append("- Missing expected sections: " + ", ".join(missing_required) + ".")
 
     lines += [
         "",
@@ -675,7 +734,7 @@ def process_manual(
 ) -> None:
     global _log
 
-    manual_output = output_root / input_pdf.stem if batch_mode else output_root
+    manual_output = output_root / slug_from_pdf_name(input_pdf.name) if batch_mode else output_root
     log_file = manual_output / "extraction.log"
     _log = setup_logging(log_file)
 
@@ -712,14 +771,28 @@ def process_manual(
         method_results.append(ocrmypdf_result)
         ocr_source = searchable_pdf if ocrmypdf_result.success and searchable_pdf.exists() else input_pdf
 
-        # Stage 2: pdf2image + pytesseract
-        if deps["pytesseract"] and deps["tesseract"]:
-            _log.info("Running pdf2image+pytesseract OCR on %s...", ocr_source.name)
+        if ocrmypdf_result.success:
+            _log.info("OCRmyPDF succeeded; extracting text from searchable PDF")
+            try:
+                ocr_pages = extract_text_native(searchable_pdf)
+                avg_confidence = estimate_text_confidence(ocr_pages)
+                final_method = "ocrmypdf"
+                pages = pages or len(ocr_pages)
+                method_results.append(
+                    OcrMethodResult("ocrmypdf_native_text", True, len(ocr_pages), avg_confidence)
+                )
+            except Exception as exc:
+                _log.warning("Searchable PDF text extraction failed: %s", exc)
+                method_results.append(OcrMethodResult("ocrmypdf_native_text", False, 0, 0.0, str(exc)))
+
+        # Stage 2 fallback: pdf2image + pytesseract
+        if not ocr_pages and deps["pytesseract"] and deps["tesseract"]:
+            _log.info("Running fallback pdf2image+pytesseract OCR on %s...", ocr_source.name)
             try:
                 ocr_pages, avg_confidence = extract_text_with_ocr(
                     ocr_source, image_output_dir, dpi=dpi, language=language
                 )
-                final_method = "ocrmypdf+pytesseract" if ocrmypdf_result.success else "pytesseract"
+                final_method = "pytesseract"
                 pages = pages or len(ocr_pages)
                 _log.info("pytesseract OCR complete: %d pages, avg_conf=%.1f%%", len(ocr_pages), avg_confidence)
                 method_results.append(
@@ -735,9 +808,12 @@ def process_manual(
             try:
                 ocr_pages = extract_text_native(input_pdf)
                 final_method = "pymupdf_native"
+                avg_confidence = estimate_text_confidence(ocr_pages)
                 pages = pages or len(ocr_pages)
                 _log.info("Native extraction complete: %d pages", len(ocr_pages))
-                method_results.append(OcrMethodResult("pymupdf_native", True, len(ocr_pages), 0.0))
+                method_results.append(
+                    OcrMethodResult("pymupdf_native", True, len(ocr_pages), avg_confidence)
+                )
             except Exception as exc:
                 _log.error("PyMuPDF native extraction also failed: %s", exc)
                 method_results.append(OcrMethodResult("pymupdf_native", False, 0, 0.0, str(exc)))
@@ -748,8 +824,9 @@ def process_manual(
         try:
             ocr_pages = extract_text_native(input_pdf)
             final_method = "pymupdf_native"
+            avg_confidence = estimate_text_confidence(ocr_pages)
             pages = pages or len(ocr_pages)
-            method_results.append(OcrMethodResult("pymupdf_native", True, len(ocr_pages), 0.0))
+            method_results.append(OcrMethodResult("pymupdf_native", True, len(ocr_pages), avg_confidence))
         except Exception as exc:
             _log.error("Native extraction failed: %s", exc)
             method_results.append(OcrMethodResult("pymupdf_native", False, 0, 0.0, str(exc)))
@@ -767,6 +844,7 @@ def process_manual(
     specs = detect_specification_tables(lines)
     steps = preserve_ordered_steps(lines)
     app_instructions = detect_app_instructions(lines)
+    troubleshooting = detect_troubleshooting(lines)
     warnings = detect_warnings(lines)
     features = detect_features(lines)
 
@@ -777,18 +855,18 @@ def process_manual(
 
     # --- Build outputs ---
     markdown = build_markdown(
-        sections, specs, steps, warnings, features,
+        sections, specs, steps, warnings, features, app_instructions, troubleshooting,
         source_name=input_pdf.stem.replace("-", " ").title(),
         ocr_method=final_method,
         avg_confidence=avg_confidence,
     )
     structured = build_json_structure(
         input_pdf, scanned or force_ocr, pages, final_method, avg_confidence,
-        sections, specs, steps, app_instructions, warnings, features,
+        sections, specs, steps, app_instructions, troubleshooting, warnings, features,
     )
     report = build_extraction_report(
         input_pdf, scanned or force_ocr, pages, method_results, final_method,
-        avg_confidence, sections, total_chars, warnings, specs, steps,
+        avg_confidence, sections, total_chars, warnings, specs, steps, app_instructions, troubleshooting,
     )
 
     write_outputs(manual_output, raw_text, markdown, structured, report, skip_json)
