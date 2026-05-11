@@ -92,6 +92,12 @@ foreach ( $gallery_image_ids as $gallery_image_id ) {
 
 $card_image_ids = array_values( array_filter( $card_image_ids ) );
 $should_rotate_card_images = 'e-nova' === $product->get_slug() && count( $card_image_ids ) > 1;
+$card_variation_labels = $should_rotate_card_images
+  ? array(
+      __( 'Core', 'beslock' ),
+      __( 'Lite', 'beslock' ),
+    )
+  : array();
 ?>
 
 <article class="<?php echo esc_attr( implode( ' ', $card_classes ) ); ?>" data-js="product-card" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
@@ -105,14 +111,21 @@ $should_rotate_card_images = 'e-nova' === $product->get_slug() && count( $card_i
               'product-card__frame',
               'product-frame',
             );
+            $frame_attributes = array();
 
             if ( 0 === $index ) {
               $frame_classes[] = 'product-card__frame--active';
               $frame_classes[] = 'is-active';
               $frame_classes[] = 'visible';
             }
+
+            $frame_attributes['class'] = implode( ' ', $frame_classes );
+
+            if ( isset( $card_variation_labels[ $index ] ) ) {
+              $frame_attributes['data-bes-variation-label'] = $card_variation_labels[ $index ];
+            }
             ?>
-            <?php echo wp_get_attachment_image( $image_id, 'medium', false, array( 'class' => implode( ' ', $frame_classes ) ) ); ?>
+            <?php echo wp_get_attachment_image( $image_id, 'medium', false, $frame_attributes ); ?>
           <?php endforeach; ?>
         </div>
       <?php else : ?>
@@ -134,6 +147,10 @@ $should_rotate_card_images = 'e-nova' === $product->get_slug() && count( $card_i
 
   <div class="<?php echo esc_attr( implode( ' ', $content_classes ) ); ?>">
     <h3 class="<?php echo esc_attr( implode( ' ', $title_classes ) ); ?>"><?php echo esc_html( $product->get_name() ); ?></h3>
+
+    <?php if ( isset( $card_variation_labels[0] ) ) : ?>
+      <p class="product-card__variant-label" data-js="product-card-variation-label"><?php echo esc_html( $card_variation_labels[0] ); ?></p>
+    <?php endif; ?>
 
     <p class="<?php echo esc_attr( implode( ' ', $price_classes ) ); ?>"><?php echo $product->get_price_html(); ?></p>
 

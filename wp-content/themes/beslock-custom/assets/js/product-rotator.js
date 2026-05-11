@@ -9,6 +9,19 @@
 
   var INTERVAL_MS = 4000;
 
+  function syncVariationLabel(wrapper, activeImage) {
+    var card = wrapper && wrapper.closest ? wrapper.closest('[data-js="product-card"]') : null;
+    if (!card) return;
+
+    var label = card.querySelector('[data-js="product-card-variation-label"]');
+    if (!label || !activeImage) return;
+
+    var nextLabel = activeImage.getAttribute('data-bes-variation-label') || '';
+    if (!nextLabel) return;
+
+    label.textContent = nextLabel;
+  }
+
   function startRotators() {
     // Prefer BEM container, fall back to legacy selector
     var wrappers = document.querySelectorAll('.product-card__image-rotator, .product-image-rotator');
@@ -41,6 +54,8 @@
         }
       });
 
+      syncVariationLabel(wrapper, imgs[visibleIndex] || null);
+
       if (imgs.length === 1) return; // nothing to rotate
 
       setInterval(function () {
@@ -49,6 +64,7 @@
         visibleIndex = (visibleIndex + 1) % imgs.length;
         imgs[visibleIndex].classList.add('product-card__frame--active');
         imgs[visibleIndex].classList.add('is-active');
+        syncVariationLabel(wrapper, imgs[visibleIndex]);
       }, INTERVAL_MS);
       });
     }

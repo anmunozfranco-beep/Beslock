@@ -36,6 +36,25 @@
    margin: 0;
 }
 
+.product-card__variant-label {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   margin: 0.45rem auto 0.25rem;
+   padding: 0.32rem 0.75rem;
+   min-width: 5.25rem;
+   border: 1px solid rgba(3, 69, 38, 0.16);
+   border-radius: 999px;
+   background: rgba(3, 69, 38, 0.08);
+   color: var(--beslock-green);
+   font-size: 0.73rem;
+   font-weight: 700;
+   letter-spacing: 0.08em;
+   line-height: 1;
+   text-transform: uppercase;
+ }
+
 .product-card__price {
    font-size: 20px;
    font-weight: 700;

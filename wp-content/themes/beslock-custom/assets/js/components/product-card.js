@@ -18,6 +18,25 @@
     card.classList.toggle('bes-product-card--hover', isActive);
   }
 
+  function syncVariationLabel(wrapper, activeFrame) {
+    var card = wrapper && wrapper.closest ? wrapper.closest('[data-js="product-card"]') : null;
+    if (!card) {
+      return;
+    }
+
+    var label = card.querySelector('[data-js="product-card-variation-label"]');
+    if (!label || !activeFrame) {
+      return;
+    }
+
+    var nextLabel = activeFrame.getAttribute('data-bes-variation-label') || '';
+    if (!nextLabel) {
+      return;
+    }
+
+    label.textContent = nextLabel;
+  }
+
   function initHoverState(card) {
     if (card.dataset.besProductCardHoverReady === 'true') {
       return;
@@ -50,7 +69,7 @@
     });
   }
 
-  function markActiveFrame(frames, activeIndex) {
+  function markActiveFrame(wrapper, frames, activeIndex) {
     frames.forEach(function (frame, index) {
       var isActive = index === activeIndex;
       frame.classList.toggle('product-card__frame--active', isActive);
@@ -58,6 +77,8 @@
       frame.classList.toggle('visible', isActive);
       frame.setAttribute('aria-hidden', isActive ? 'false' : 'true');
     });
+
+    syncVariationLabel(wrapper, frames[activeIndex] || null);
   }
 
   function initFrameRotator(wrapper, cardIndex) {
@@ -87,7 +108,7 @@
       }
     });
 
-    markActiveFrame(frames, activeIndex);
+    markActiveFrame(wrapper, frames, activeIndex);
 
     if (frames.length < 2 || prefersReducedMotion()) {
       return;
@@ -97,7 +118,7 @@
     window.setTimeout(function () {
       window.setInterval(function () {
         activeIndex = (activeIndex + 1) % frames.length;
-        markActiveFrame(frames, activeIndex);
+        markActiveFrame(wrapper, frames, activeIndex);
       }, ROTATOR_INTERVAL_MS);
     }, delay);
   }
