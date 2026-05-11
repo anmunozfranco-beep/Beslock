@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var ROTATOR_INTERVAL_MS = 5000;
+  var ROTATOR_INTERVAL_MS = 4000;
   var hoverMediaQuery = window.matchMedia ? window.matchMedia('(hover: hover)') : null;
 
   function prefersReducedMotion() {

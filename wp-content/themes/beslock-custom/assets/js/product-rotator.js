@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var INTERVAL_MS = 5000;
+  var INTERVAL_MS = 4000;
 
   function startRotators() {
     // Prefer BEM container, fall back to legacy selector
@@ -15,9 +15,15 @@
     if (!wrappers || wrappers.length === 0) return;
 
     wrappers.forEach(function (wrapper) {
+      if (wrapper.dataset && wrapper.dataset.besProductCardRotatorReady === 'true') return;
+
       // Prefer BEM frame, fall back to legacy
       var imgs = wrapper.querySelectorAll('img.product-card__frame, img.product-frame');
       if (!imgs || imgs.length < 1) return; // need at least one image
+
+      if (wrapper.dataset) {
+        wrapper.dataset.besLegacyProductRotatorReady = 'true';
+      }
 
       // Initialize active index using BEM modifier or legacy 'is-active' / 'visible'
       var visibleIndex = 0;
@@ -43,7 +49,7 @@
         visibleIndex = (visibleIndex + 1) % imgs.length;
         imgs[visibleIndex].classList.add('product-card__frame--active');
         imgs[visibleIndex].classList.add('is-active');
-      }, 5000);
+      }, INTERVAL_MS);
       });
     }
 
