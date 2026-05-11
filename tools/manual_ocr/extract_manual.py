@@ -65,7 +65,7 @@ WARNING_PATTERN = re.compile(
     re.IGNORECASE,
 )
 MIN_FEATURE_LENGTH = 10
-FEATURE_PATTERN = re.compile(rf"^[\-\*\•]\s+.{{{MIN_FEATURE_LENGTH},}}")
+FEATURE_PATTERN = re.compile(r"^[\-\*\•]\s+.{" + str(MIN_FEATURE_LENGTH) + r",}")
 PAGE_NUMBER_PATTERN = re.compile(r"^\d{1,3}$")
 SUSPICIOUS_SYMBOL_PATTERN = re.compile(r"[+|<>{}\[\]~`_\\]")
 # Keep multilingual keyword coverage for current manuals (English + Spanish).
@@ -140,7 +140,7 @@ MIN_ALPHA_RATIO_WITH_SYMBOLS = 0.7
 MIN_LENGTH_FOR_ALPHA_CHECK = 10
 MIN_ALPHA_RATIO_LONG_LINE = 0.45
 MAX_SPEC_VALUE_WORDS = 22
-SPEC_UNITS_PATTERN = r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|aa|kv)\b"
+SPEC_UNITS_PATTERN = re.compile(r"(?:°c|°f|mm|cm|kg|mah|ah|ma|ua|rh|%|usb|aa|kv)\b")
 # Character-density heuristic (avg chars/page -> confidence) used when OCR engines
 # do not expose confidence scores (e.g., OCRmyPDF + native text extraction path).
 TEXT_CONFIDENCE_THRESHOLDS: tuple[tuple[int, float], ...] = (
@@ -509,8 +509,10 @@ def is_noise_line(line: str) -> bool:
     tokens = re.findall(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+", stripped)
     if tokens:
         single_char_tokens = sum(1 for t in tokens if len(t) == 1)
-        if len(tokens) >= MIN_TOKENS_FOR_RATIO_CHECK and single_char_tokens / len(tokens) > MAX_SINGLE_CHAR_RATIO:
-            return True
+        if len(tokens) >= MIN_TOKENS_FOR_RATIO_CHECK:
+            single_char_ratio = single_char_tokens / len(tokens)
+            if single_char_ratio > MAX_SINGLE_CHAR_RATIO:
+                return True
         short_tokens = sum(1 for t in tokens if len(t) <= 2)
         if (
             len(tokens) >= MIN_TOKENS_FOR_RATIO_CHECK
@@ -606,7 +608,7 @@ def detect_specification_tables(lines: list[str]) -> list[dict[str, str]]:
             value_lower = value.lower()
             value_words = len(value.split())
             has_numeric = bool(re.search(r"\d", value))
-            has_unit = bool(re.search(SPEC_UNITS_PATTERN, value_lower))
+            has_unit = bool(SPEC_UNITS_PATTERN.search(value_lower))
             key_hint = any(hint in key_lower for hint in SPEC_KEYWORD_HINTS)
             if key_lower in {"nota", "note", "atención", "attention", "administrador", "tecla"}:
                 continue

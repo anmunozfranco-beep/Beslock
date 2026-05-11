@@ -1,7 +1,7 @@
 # Extraction Report
 
 **Source file:** `e-Nova user manual.pdf`  
-**Generated:** 2026-05-11 09:12 UTC
+**Generated:** 2026-05-11 09:15 UTC
 
 ## Summary
 
@@ -42,8 +42,8 @@ Image optimization did not improve the file - optimizations will not be used
 Image optimization ratio: 1.00 savings: -0.0%
 Total file size ratio: 1.00 savings: 0.1%
 Output file is a PDF (auto mode)
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-nova/e-Nova user manual.searchable.pdf (offset 16996707): input stream is complete but output may still be valid
-WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-nova/e-Nova user manual.searchable.pdf (offset 14597013): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-nova/e-Nova user manual.searchable.pdf (offset 16996706): input stream is complete but output may still be valid
+WARNING: /home/runner/work/Beslock/Beslock/generated_manuals/e-nova/e-Nova user manual.searchable.pdf (offset 14597012): input stream is complete but output may still be valid
 Output file: The generated PDF is INVALID
 - **pytesseract**: ✅ Success
 
