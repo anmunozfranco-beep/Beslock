@@ -1,0 +1,10 @@
+{
+  "append_only": true,
+  "constitutional_layer_index": 42,
+  "created_at": "2026-05-14T15:00:15Z",
+  "deterministic": true,
+  "events": [],
+  "kind": "procedural-continuity-events",
+  "reviewer_authoritative": true,
+  "schema": "governed-fs-event-store/1.0"
+}

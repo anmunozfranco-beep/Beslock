@@ -1,0 +1,177 @@
+{
+  "consoles": [
+    "grounding-console",
+    "visual-publication-console",
+    "supportive-image-console",
+    "prompt-governance-console",
+    "visual-troubleshooting-console",
+    "continuity-console",
+    "visual-lifecycle-console",
+    "multimodal-inspection-console"
+  ],
+  "constitutional_layer_index": 42,
+  "generated_at": "2026-05-14T15:01:12Z",
+  "grounding_kinds": [
+    "procedural-step",
+    "troubleshooting-flow",
+    "specification-field",
+    "warning",
+    "installation-sequence",
+    "operational-state"
+  ],
+  "image_roles": [
+    "contextual",
+    "procedural",
+    "warning",
+    "troubleshooting",
+    "specification",
+    "orientation",
+    "escalation-support",
+    "comparison-support"
+  ],
+  "js_assets": [
+    "grounding-engine.js",
+    "visual-publication-engine.js",
+    "supportive-image-engine.js",
+    "prompt-engine.js",
+    "visual-troubleshooting-engine.js",
+    "continuity-engine.js",
+    "visual-lifecycle-engine.js",
+    "multimodal-render-engine.js"
+  ],
+  "new_event_stores": [
+    "grounding-events",
+    "visual-publication-build-events",
+    "supportive-image-mapping-events",
+    "prompt-events",
+    "prompt-revision-events",
+    "visual-troubleshooting-events",
+    "procedural-continuity-events",
+    "visual-asset-lifecycle-events"
+  ],
+  "posture": {
+    "append_only_visual_lineage": true,
+    "browser_surfaces_never_write_filesystem": true,
+    "deterministic": true,
+    "fail_closed_on_broken_continuity": true,
+    "no_autonomous_image_generation": true,
+    "no_cloud_image_pipeline": true,
+    "no_daemon_no_watcher": true,
+    "no_hidden_visual_inference": true,
+    "no_ml_embeddings": true,
+    "no_probabilistic_visual_matching": true,
+    "no_saas_orchestration": true,
+    "no_silent_image_replacement": true,
+    "no_silent_prompt_mutation": true,
+    "publishes_only_into_visual_publication_builds": true,
+    "reviewer_authoritative": true,
+    "writes_to_live_publication_tree": false
+  },
+  "report_slug": "09-multimodal-visibility-summary",
+  "rule_tables": [
+    "multimodal-grounding-rules.json",
+    "visual-publication-rules.json",
+    "supportive-image-matrix-rules.json",
+    "prompt-governance-rules.json",
+    "visual-troubleshooting-rules.json",
+    "procedural-image-continuity-rules.json",
+    "visual-asset-lifecycle-rules.json",
+    "multimodal-render-rules.json"
+  ],
+  "schema": "governance-report/1.0",
+  "subordinate_to": [
+    "knowledge-core-doctrine",
+    "governance-source-of-truth-doctrine",
+    "runtime-evidence-and-trust-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-doctrine",
+    "governed-transactional-execution-and-recovery-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance"
+  ],
+  "title": "Multimodal visibility & inspection summary.",
+  "visual_asset_edges": [
+    [
+      "candidate",
+      "grounded"
+    ],
+    [
+      "grounded",
+      "review-required"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "candidate"
+    ],
+    [
+      "reviewer-approved",
+      "publication-ready"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-ready",
+      "superseded"
+    ],
+    [
+      "publication-ready",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "visual_asset_states": [
+    "candidate",
+    "deprecated",
+    "grounded",
+    "publication-ready",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "visual_asset_terminal_states": [
+    "deprecated",
+    "superseded"
+  ]
+}

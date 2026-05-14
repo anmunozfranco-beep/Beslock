@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "PC-1",
+      "rule": "procedural images MUST be ordered by procedural step_index; gaps are detected and flagged."
+    },
+    {
+      "id": "PC-2",
+      "rule": "missing-step visuals MUST emit a continuity-event with kind='missing-step-visual'."
+    },
+    {
+      "id": "PC-3",
+      "rule": "orphan visual assets (no grounding) MUST emit a continuity-event with kind='orphan-asset'."
+    },
+    {
+      "id": "PC-4",
+      "rule": "broken image lineage (image_id referenced by a grounding but absent from the asset ledger) is fail-closed."
+    },
+    {
+      "id": "PC-5",
+      "rule": "broken continuity blocks publication-ready promotion of the corresponding visual publication build."
+    },
+    {
+      "id": "PC-6",
+      "rule": "reviewer override MUST be explicit, attributed, and recorded as a continuity-event with kind='reviewer-accepted-gap'."
+    }
+  ],
+  "schema": "procedural-image-continuity-rules/1.0"
+}

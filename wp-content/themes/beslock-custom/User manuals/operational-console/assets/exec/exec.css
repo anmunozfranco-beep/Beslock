@@ -85,3 +85,21 @@
 .oc-pub-state[data-state="superseded"], .oc-pub-state[data-state="deprecated"] { background: #fee2e2; color: #7f1d1d; border-color: #fca5a5; }
 .oc-conflict { background: #fff7ed; border-left: 4px solid #ea580c; padding: 8px 10px; margin: 6px 0; }
 .oc-evidence-pin { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #475569; }
+
+/* phase 49 — multimodal grounding & visual publication additions */
+.oc-visual { margin: 1rem 0; padding: 0.5rem; border: 1px solid #d6d6d6; }
+.oc-visual img { max-width: 100%; height: auto; display: block; }
+.oc-visual figcaption { font-size: 0.85rem; color: #555; margin-top: 0.25rem; }
+.oc-visual-role { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem; background: #eef; margin-right: 0.5rem; }
+.oc-visual-trust[data-tier='OEM'] { background: #cfc; padding: 0.1rem 0.4rem; }
+.oc-visual-trust[data-tier='certified-installer'] { background: #ffe; padding: 0.1rem 0.4rem; }
+.oc-visual-trust[data-tier='field-reviewer'] { background: #fee; padding: 0.1rem 0.4rem; }
+.oc-visual-missing { padding: 1rem; border: 2px dashed #c00; color: #900; font-weight: bold; }
+.oc-grounding-state[data-state='unresolved'] { color: #c00; font-weight: bold; }
+.oc-grounding-state[data-state='review-required'] { color: #b58900; }
+.oc-grounding-state[data-state='reviewer-approved'] { color: #060; }
+.oc-asset-state { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem; border: 1px solid #999; font-size: 0.8rem; }
+.oc-asset-state[data-state='publication-ready'] { background: #cfc; }
+.oc-asset-state[data-state='superseded'], .oc-asset-state[data-state='deprecated'] { background: #ddd; color: #555; }
+.oc-continuity-gap { background: #fee; padding: 0.25rem 0.5rem; border-left: 4px solid #c00; }
+.oc-prompt-revision { font-family: monospace; white-space: pre-wrap; background: #f7f7f7; padding: 0.5rem; border-left: 3px solid #69c; }

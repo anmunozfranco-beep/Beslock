@@ -91,3 +91,25 @@ Hard rules:
 - No silent evidence merge; every conflict is explicit.
 - Live publication tree is never overwritten by this layer.
 - All transitions are append-only and reviewer-attributed.
+
+
+## phase 49 — governed multimodal knowledge grounding & visual publication orchestration
+
+Layer 42. Subordinate to layer 41 (governed-knowledge-synthesis-and-canonical-publication-governance).
+
+Mutation is performed exclusively by `tools/governed_multimodal_grounding_executor.py --confirm`.
+Subcommands (`--kind`):
+
+- `grounding` — bind images to procedural / troubleshooting / specification / warning / installation / operational targets.
+- `supportive-image-mapping` — declare image role and applicability.
+- `prompt` — append a reviewer-authored prompt (append-only; revisions carry prior_prompt_id).
+- `visual-publication-build` — write a deterministic visual manual (HTML + JSON) under `operational-console/visual-publication-builds/draft/<build_id>/`.
+- `visual-troubleshooting` — bind visuals to a troubleshooting flow.
+- `procedural-continuity` — record continuity check (gaps, orphans, broken lineage, reviewer-accepted gaps).
+- `visual-asset-lifecycle-transition` — advance an image through candidate → grounded → review-required → reviewer-approved → publication-ready → {superseded | deprecated}.
+
+Every command:
+- requires reviewer attribution,
+- is fail-closed on missing evidence / broken lineage / illegal transitions,
+- appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
+- writes only into `grounding-drafts/`, `prompt-drafts/`, `visual-publication-builds/`, or `visual-asset-ledger/`.

@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "VP-1",
+      "rule": "visual publication builds MUST be written under operational-console/visual-publication-builds/<state>/<build_id>/ — NEVER into the live publication tree."
+    },
+    {
+      "id": "VP-2",
+      "rule": "build_id collisions are refused (fail-closed)."
+    },
+    {
+      "id": "VP-3",
+      "rule": "outputs are deterministic: identical inputs MUST yield byte-identical manual.html and manual.json."
+    },
+    {
+      "id": "VP-4",
+      "rule": "every visual placement MUST carry grounding_id + image_id + role + evidence_ids."
+    },
+    {
+      "id": "VP-5",
+      "rule": "supported output formats: html, json. PDF is out-of-scope for this layer."
+    },
+    {
+      "id": "VP-6",
+      "rule": "synthesis_id MUST resolve to a layer-41 synthesis manifest."
+    },
+    {
+      "id": "VP-7",
+      "rule": "publication-ready promotion is blocked when any required image role is missing or when continuity check fails."
+    }
+  ],
+  "schema": "visual-publication-rules/1.0"
+}
