@@ -1,0 +1,88 @@
+{
+  "auto_action": "none",
+  "auto_mutates_source_truth": false,
+  "auto_propagates_across_canonicals": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 36,
+  "emits": "change-detection-report (consumed by refresh-orchestrator)",
+  "executable": false,
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "modeling_only": true,
+  "rules": [
+    {
+      "applies_to": "evidence-source",
+      "id": "evidence-hash-changed",
+      "signal": "deterministic content-hash differs from last lineage stamp"
+    },
+    {
+      "applies_to": "identity-record",
+      "id": "mapping-record-appended",
+      "signal": "new alias / OEM mapping appended to layer-35 stores"
+    },
+    {
+      "applies_to": "linguistic-rendering",
+      "id": "terminology-rule-version-bumped",
+      "signal": "linguistic-governance terminology rule version changed"
+    },
+    {
+      "applies_to": "specifications-fragment",
+      "id": "specification-fragment-validated",
+      "signal": "reviewer-attested validation event recorded"
+    },
+    {
+      "applies_to": "semantic-domain",
+      "id": "propagation-rule-updated",
+      "signal": "layer-34 propagation rule version bumped"
+    },
+    {
+      "applies_to": "publication-html",
+      "id": "publication-lineage-older-than-upstream",
+      "signal": "publication lineage stamp predates upstream lineage stamp"
+    },
+    {
+      "applies_to": "runtime-index",
+      "id": "runtime-lineage-older-than-publication",
+      "signal": "runtime-index lineage predates publication lineage"
+    }
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance"
+  ],
+  "updated_at": "2026-05-14T10:31:18Z"
+}

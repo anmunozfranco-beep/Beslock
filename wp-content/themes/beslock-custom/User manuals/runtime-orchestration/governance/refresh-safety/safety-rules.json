@@ -1,0 +1,84 @@
+{
+  "auto_mutates_source_truth": false,
+  "auto_propagates_across_canonicals": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 36,
+  "enforcement": "All rules are unconditional. Violations block manifest emission.",
+  "executable": false,
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "modeling_only": true,
+  "rules": [
+    {
+      "id": "no-uncontrolled-propagation",
+      "rule": "Propagation only fires after a reviewer-validated mutation; layer-34 propagation modes apply."
+    },
+    {
+      "id": "no-stale-semantic-reuse",
+      "rule": "Identity-resolution memory must be re-consulted on every refresh; stale alias mappings are not reused."
+    },
+    {
+      "id": "no-rebuild-loops",
+      "rule": "Each refresh manifest must declare a strictly downstream node set; cycles are rejected by dependency-resolver."
+    },
+    {
+      "id": "no-cross-product-contamination",
+      "rule": "Product-scope rebuilds may not write to fragments owned by other canonical products."
+    },
+    {
+      "id": "no-invalid-lineage-refresh",
+      "rule": "lineage-manifest is append-only; lineage-refresh may never overwrite or delete lineage events."
+    },
+    {
+      "id": "no-publication-runtime-divergence",
+      "rule": "runtime-refresh may not run while publication-refresh of the same slice is unresolved."
+    },
+    {
+      "id": "no-source-truth-mutation",
+      "rule": "No pipeline may write to source-of-truth; source-of-truth is human-curated only."
+    },
+    {
+      "id": "reviewer-authorization-required",
+      "rule": "Any refresh that crosses canonical boundaries or touches identity-resolution requires reviewer authorization."
+    }
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance"
+  ],
+  "updated_at": "2026-05-14T10:31:18Z"
+}

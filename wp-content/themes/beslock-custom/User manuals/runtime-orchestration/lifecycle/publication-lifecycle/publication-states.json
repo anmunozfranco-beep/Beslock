@@ -1,0 +1,78 @@
+{
+  "auto_mutates_source_truth": false,
+  "auto_propagates_across_canonicals": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 36,
+  "executable": false,
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "modeling_only": true,
+  "schema": "runtime-orchestration-governance/1.0",
+  "states": [
+    "upstream-stable",
+    "publication-stale",
+    "republishing",
+    "published",
+    "verified"
+  ],
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance"
+  ],
+  "transitions": [
+    {
+      "from": "upstream-stable",
+      "to": "publication-stale",
+      "trigger": "stale-detector"
+    },
+    {
+      "from": "publication-stale",
+      "to": "republishing",
+      "trigger": "publication-refresh pipeline"
+    },
+    {
+      "from": "republishing",
+      "to": "published",
+      "trigger": "html-regeneration completed"
+    },
+    {
+      "from": "published",
+      "to": "verified",
+      "trigger": "runtime-refresh confirmed"
+    }
+  ],
+  "updated_at": "2026-05-14T10:31:18Z"
+}
