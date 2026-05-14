@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publication (exec) — Beslock Operational Console (executable)</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <link rel="stylesheet" href="../assets/exec/exec.css" />
+  <meta name="governance-layer" content="38" />
+  <meta name="governance-schema" content="executable-operational-bindings/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+  <meta name="network-calls" content="false" />
+</head>
+<body class="oc-body oc-body--exec">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console <span class="oc-tag oc-tag--exec">EXEC</span></div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../exec.html">Exec Dashboard</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../intake-console/exec.html">Intake (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../routing-console/exec.html">Routing (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../refresh-console/exec.html">Refresh (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../reconciliation-console/exec.html">Reconciliation (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../publication-console/exec.html">Publication (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../governance-console/exec.html">Governance (exec)</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 38 — executable bindings, draft-only">L38</div>
+  </header>
+  <div class="oc-banner oc-banner--exec" role="status" aria-live="polite">
+    <strong>Executable layer.</strong> Runs locally from the file system. Every action emits an append-only <em>draft manifest</em>. No knowledge-core, source-of-truth, runtime, publication or governance state is ever mutated by this UI.
+  </div>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Publication visibility (interactive read-only) <span class="oc-tag oc-tag--exec">L38</span></h1>
+      <p>Inspect generated HTML, stale outputs, lineage and rebuild history locally. <strong>Read-only.</strong> No regeneration, no publication-root writes.</p>
+    </section>
+    <section class="oc-exec">
+      <article class="oc-exec__panel">
+        <h3>Local HTML preview</h3>
+        <div class="oc-exec__row"><label>Pick a local .html file <input id="html-input" type="file" accept=".html,.htm" /></label></div>
+        <iframe id="html-preview" sandbox="" style="width:100%; height:300px; background:#fff; border:1px solid #1f2a3d;"></iframe>
+        <p class="oc-exec__hint">Preview is sandboxed; the iframe cannot script, navigate, or call the network.</p>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>Mock visibility feeds</h3>
+        <pre class="oc-exec__pre" id="feeds">—</pre>
+      </article>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("html-input").addEventListener("change", function (e) {
+          const f = e.target.files && e.target.files[0]; if (!f) return;
+          const url = URL.createObjectURL(f);
+          const ifr = document.getElementById("html-preview");
+          ifr.src = url;
+        });
+        fetch("../mock-data/publications.json").then(function (r) { return r.json(); }).then(function (j) {
+          document.getElementById("feeds").textContent = JSON.stringify(j, null, 2);
+        }).catch(function () { document.getElementById("feeds").textContent = "(could not load mock feed)"; });
+      });
+    </script>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required · Append-only</span>
+    <span>No SaaS · No cloud · No backend · No autonomous agents · No ML · No telemetry · No network calls</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+  <script src="../assets/exec/state.js" defer></script>
+  <script src="../assets/exec/ux.js" defer></script>
+</body>
+</html>

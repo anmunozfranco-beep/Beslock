@@ -1,0 +1,52 @@
+{
+  "classes": [
+    {
+      "id": "vendor-document",
+      "label": "Vendor document",
+      "trust_default": "tier-2"
+    },
+    {
+      "id": "vendor-spec-sheet",
+      "label": "Vendor specification",
+      "trust_default": "tier-2"
+    },
+    {
+      "id": "vendor-image",
+      "label": "Vendor image",
+      "trust_default": "tier-2"
+    },
+    {
+      "id": "vendor-video",
+      "label": "Vendor video",
+      "trust_default": "tier-2"
+    },
+    {
+      "id": "structured-data",
+      "label": "Structured data",
+      "trust_default": "tier-2"
+    },
+    {
+      "id": "evidence-bundle",
+      "label": "Evidence bundle (zip)",
+      "trust_default": "tier-3"
+    },
+    {
+      "id": "third-party",
+      "label": "Third-party document",
+      "trust_default": "tier-3"
+    },
+    {
+      "id": "operator-note",
+      "label": "Operator-authored note",
+      "trust_default": "tier-3"
+    },
+    {
+      "id": "unclassified",
+      "label": "Unclassified",
+      "trust_default": "tier-4"
+    }
+  ],
+  "constitutional_layer_index": 38,
+  "purpose": "Declared evidence classes referenced by the intake engine. Class assignment is a *suggestion*; the reviewer chooses the canonical class.",
+  "schema": "executable-operational-bindings/1.0"
+}

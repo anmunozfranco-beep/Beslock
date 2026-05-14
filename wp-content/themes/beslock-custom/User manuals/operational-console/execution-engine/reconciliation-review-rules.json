@@ -1,0 +1,38 @@
+{
+  "auto_link_canonicals": false,
+  "auto_promotion": false,
+  "auto_resolve_contradictions": false,
+  "constitutional_layer_index": 38,
+  "purpose": "Deterministic helpers for the 5 reconciliation review types. Geometry-only; no ML, no embeddings, no face recognition.",
+  "review_types": [
+    {
+      "id": "oem-vs-commercial",
+      "produces": "reconciliation-decision-draft"
+    },
+    {
+      "id": "alias-review",
+      "produces": "alias-decision-draft"
+    },
+    {
+      "id": "visual-reconciliation",
+      "produces": "visual-reconciliation-draft"
+    },
+    {
+      "id": "confidence-inspection",
+      "produces": "confidence-note-draft"
+    },
+    {
+      "id": "unresolved-identities",
+      "produces": "triage-decision-draft"
+    }
+  ],
+  "reviewer_classifications": [
+    "match-confirmed",
+    "match-rejected",
+    "needs-more-evidence",
+    "duplicate",
+    "deprecated",
+    "unresolved"
+  ],
+  "schema": "executable-operational-bindings/1.0"
+}

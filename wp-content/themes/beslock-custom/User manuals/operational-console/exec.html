@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exec Dashboard — Beslock Operational Console (executable)</title>
+  <link rel="stylesheet" href="assets/console.css" />
+  <link rel="stylesheet" href="assets/exec/exec.css" />
+  <meta name="governance-layer" content="38" />
+  <meta name="governance-schema" content="executable-operational-bindings/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+  <meta name="network-calls" content="false" />
+</head>
+<body class="oc-body oc-body--exec">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console <span class="oc-tag oc-tag--exec">EXEC</span></div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="index.html">Dashboard</a>
+      <a class="oc-nav__item" href="intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="reports-console/index.html">Reports</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="exec.html">Exec Dashboard</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="intake-console/exec.html">Intake (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="routing-console/exec.html">Routing (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="refresh-console/exec.html">Refresh (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="reconciliation-console/exec.html">Reconciliation (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="publication-console/exec.html">Publication (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="governance-console/exec.html">Governance (exec)</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 38 — executable bindings, draft-only">L38</div>
+  </header>
+  <div class="oc-banner oc-banner--exec" role="status" aria-live="polite">
+    <strong>Executable layer.</strong> Runs locally from the file system. Every action emits an append-only <em>draft manifest</em>. No knowledge-core, source-of-truth, runtime, publication or governance state is ever mutated by this UI.
+  </div>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Executable Operational Bindings <span class="oc-tag oc-tag--exec">L38</span></h1>
+      <p>Lightweight executable surfaces over the layer-37 console. All actions are draft-only and stay on the local machine.</p>
+    </section>
+    <section class="oc-exec">
+      <article class="oc-exec__panel">
+        <h3>Reviewer session</h3>
+        <div class="oc-exec__row">
+          <label>Reviewer name <input id="reviewer-name" type="text" placeholder="reviewer@local" /></label>
+          <button class="oc-exec__btn" id="reviewer-set">Set reviewer</button>
+        </div>
+        <p>Session id: <code id="session-id">—</code></p>
+        <p>Drafts in session: <code id="drafts-count">0</code> · History entries: <code id="history-count">0</code></p>
+        <div class="oc-exec__row">
+          <button class="oc-exec__btn" id="export-snapshot">Export session snapshot (.json)</button>
+          <button class="oc-exec__btn oc-exec__btn--warn" id="clear-drafts">Clear local drafts</button>
+        </div>
+        <p class="oc-exec__hint">Stored only in <span class="oc-exec__kbd">localStorage</span>. No network call. No cloud. No telemetry.</p>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>Recent drafts</h3>
+        <ul class="oc-exec__list" id="drafts-list"></ul>
+        <pre class="oc-exec__pre" id="drafts-dump">{}</pre>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>Executable consoles</h3>
+        <ul class="oc-exec__list">
+          <li><a class="oc-link" href="intake-console/exec.html">Intake (executable)</a></li>
+          <li><a class="oc-link" href="routing-console/exec.html">Routing (executable)</a></li>
+          <li><a class="oc-link" href="refresh-console/exec.html">Refresh (executable)</a></li>
+          <li><a class="oc-link" href="reconciliation-console/exec.html">Reconciliation (executable)</a></li>
+          <li><a class="oc-link" href="publication-console/exec.html">Publication (interactive read-only)</a></li>
+          <li><a class="oc-link" href="governance-console/exec.html">Governance (interactive read-only)</a></li>
+        </ul>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>Governance posture</h3>
+        <ul class="oc-list">
+          <li>Layer <span class="oc-tag oc-tag--accent">38</span></li>
+          <li>Subordinate chain length <span class="oc-tag">37</span></li>
+          <li>Network calls <span class="oc-tag oc-tag--ok">none</span></li>
+          <li>Auto-approval <span class="oc-tag oc-tag--ok">disabled</span></li>
+          <li>Source-truth mutation <span class="oc-tag oc-tag--ok">forbidden</span></li>
+          <li>Append-only drafts <span class="oc-tag oc-tag--ok">enforced</span></li>
+          <li>Reviewer authorization <span class="oc-tag oc-tag--warn">required for every promotion</span></li>
+        </ul>
+      </article>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const s = window.OC.State.ensureSession();
+        document.getElementById("session-id").textContent = s.session_id;
+        document.getElementById("reviewer-name").value = s.reviewer || "";
+        function refresh() {
+          const drafts = window.OC.State.listDrafts();
+          document.getElementById("drafts-count").textContent = drafts.length;
+          document.getElementById("history-count").textContent = window.OC.State.listHistory().length;
+          const ul = document.getElementById("drafts-list");
+          ul.innerHTML = "";
+          drafts.slice(-10).reverse().forEach(function (d) {
+            const li = document.createElement("li");
+            li.textContent = d.proposed_at_iso + " · " + d.kind + " · " + d.draft_id.slice(0, 8);
+            ul.appendChild(li);
+          });
+          document.getElementById("drafts-dump").textContent = JSON.stringify(drafts, null, 2);
+        }
+        refresh();
+        document.getElementById("reviewer-set").addEventListener("click", function () {
+          window.OC.State.setReviewer(document.getElementById("reviewer-name").value); refresh();
+        });
+        document.getElementById("export-snapshot").addEventListener("click", function () {
+          window.OC.Drafts.exportDownload("oc-session-" + s.session_id.slice(0,8) + ".json", window.OC.State.exportSnapshot());
+        });
+        document.getElementById("clear-drafts").addEventListener("click", function () {
+          if (confirm("Clear local draft list? (history retains the clear event)")) { window.OC.State.clearDrafts(); refresh(); }
+        });
+      });
+    </script>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required · Append-only</span>
+    <span>No SaaS · No cloud · No backend · No autonomous agents · No ML · No telemetry · No network calls</span>
+  </footer>
+  <script src="assets/console.js" defer></script>
+  <script src="assets/exec/state.js" defer></script>
+  <script src="assets/exec/drafts.js" defer></script>
+</body>
+</html>

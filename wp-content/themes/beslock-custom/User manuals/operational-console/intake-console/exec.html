@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intake (exec) — Beslock Operational Console (executable)</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <link rel="stylesheet" href="../assets/exec/exec.css" />
+  <meta name="governance-layer" content="38" />
+  <meta name="governance-schema" content="executable-operational-bindings/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+  <meta name="network-calls" content="false" />
+</head>
+<body class="oc-body oc-body--exec">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console <span class="oc-tag oc-tag--exec">EXEC</span></div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../exec.html">Exec Dashboard</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../intake-console/exec.html">Intake (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../routing-console/exec.html">Routing (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../refresh-console/exec.html">Refresh (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../reconciliation-console/exec.html">Reconciliation (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../publication-console/exec.html">Publication (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../governance-console/exec.html">Governance (exec)</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 38 — executable bindings, draft-only">L38</div>
+  </header>
+  <div class="oc-banner oc-banner--exec" role="status" aria-live="polite">
+    <strong>Executable layer.</strong> Runs locally from the file system. Every action emits an append-only <em>draft manifest</em>. No knowledge-core, source-of-truth, runtime, publication or governance state is ever mutated by this UI.
+  </div>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Intake (executable) <span class="oc-tag oc-tag--exec">L38</span></h1>
+      <p>Pick a file from your local machine. The console reads its metadata, applies deterministic rules, shows the reasoning chain, lets you override any field, then emits an append-only intake-draft. <strong>Nothing is uploaded.</strong></p>
+    </section>
+    <section class="oc-exec">
+      <article class="oc-exec__panel">
+        <h3>1 · Local file</h3>
+        <div class="oc-exec__row">
+          <label>Pick file <input id="file-input" type="file" /></label>
+        </div>
+        <pre class="oc-exec__pre" id="file-meta">no file selected</pre>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>2 · Inferred</h3>
+        <pre class="oc-exec__pre" id="inferred-dump">—</pre>
+        <h3>Reasoning chain</h3>
+        <div class="oc-exec__chain"><ol id="chain-list"></ol></div>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>3 · Reviewer override</h3>
+        <div class="oc-exec__row">
+          <label>Format     <input id="ov-format" type="text" /></label>
+          <label>Evidence class
+            <select id="ov-evidence"><option value="vendor-document">vendor-document</option><option value="vendor-spec-sheet">vendor-spec-sheet</option><option value="vendor-image">vendor-image</option><option value="vendor-video">vendor-video</option><option value="structured-data">structured-data</option><option value="evidence-bundle">evidence-bundle</option><option value="third-party">third-party</option><option value="operator-note">operator-note</option><option value="unclassified">unclassified</option></select>
+          </label>
+          <label>Trust tier
+            <select id="ov-trust"><option value="tier-1">tier-1</option><option value="tier-2">tier-2</option><option value="tier-3">tier-3</option><option value="tier-4">tier-4</option></select>
+          </label>
+        </div>
+        <div class="oc-exec__row">
+          <label>Product   <input id="ov-product" type="text" /></label>
+          <label>Domain    <input id="ov-domain" type="text" /></label>
+          <label>Routing   <input id="ov-routing" type="text" /></label>
+        </div>
+        <div class="oc-exec__row">
+          <label style="flex:1"><span>Reviewer notes</span><textarea id="ov-notes" placeholder="Optional reviewer notes for the audit chain"></textarea></label>
+        </div>
+        <div class="oc-exec__row">
+          <button class="oc-exec__btn" id="emit-draft">Emit intake-draft</button>
+          <button class="oc-exec__btn oc-exec__btn--ghost" id="export-draft">Export draft (.json)</button>
+          <span id="indicator" class="oc-exec__indicator">no unsaved draft</span>
+        </div>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>4 · Draft preview</h3>
+        <pre class="oc-exec__pre" id="draft-preview">—</pre>
+      </article>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let inferred = null, lastDraft = null;
+        const fileInput = document.getElementById("file-input");
+        const meta = document.getElementById("file-meta");
+        const idump = document.getElementById("inferred-dump");
+        const chain = document.getElementById("chain-list");
+
+        window.OC.IntakeEngine.loadTables().catch(function () {
+          window.OC.UX.showWarning("file-meta", "Could not load rule tables (file:// fetch may be blocked). Serve via 'python -m http.server' from the repo root and reload.");
+        });
+
+        fileInput.addEventListener("change", function (e) {
+          const f = e.target.files && e.target.files[0]; if (!f) return;
+          const r = window.OC.IntakeEngine.infer(f);
+          inferred = r;
+          meta.textContent = JSON.stringify(r.meta, null, 2);
+          idump.textContent = JSON.stringify(r.inferred, null, 2);
+          chain.innerHTML = "";
+          r.reasoning_chain.forEach(function (step) {
+            const li = document.createElement("li");
+            li.textContent = step.rule + " — " + step.evidence;
+            chain.appendChild(li);
+          });
+          document.getElementById("ov-format").value   = r.inferred.format;
+          document.getElementById("ov-evidence").value = r.inferred.evidence_class;
+          document.getElementById("ov-trust").value    = r.inferred.trust_tier;
+          document.getElementById("ov-product").value  = r.inferred.product || "";
+          document.getElementById("ov-domain").value   = r.inferred.domain;
+          document.getElementById("ov-routing").value  = r.inferred.routing;
+          window.OC.UX.setIndicator("indicator", "intake inferred — review before emitting", "unsaved");
+        });
+
+        document.getElementById("emit-draft").addEventListener("click", function () {
+          if (!inferred) { alert("Pick a file first."); return; }
+          const overrides = {
+            format:         document.getElementById("ov-format").value,
+            evidence_class: document.getElementById("ov-evidence").value,
+            trust_tier:     document.getElementById("ov-trust").value,
+            product:        document.getElementById("ov-product").value || null,
+            domain:         document.getElementById("ov-domain").value,
+            routing:        document.getElementById("ov-routing").value,
+            reviewer_notes: document.getElementById("ov-notes").value,
+          };
+          const payload = { meta: inferred.meta, inferred: inferred.inferred, overrides: overrides };
+          lastDraft = window.OC.Drafts.record("intake-draft", payload, inferred.reasoning_chain);
+          window.OC.Drafts.preview("draft-preview", lastDraft);
+          window.OC.UX.setIndicator("indicator", "intake-draft appended (id " + lastDraft.draft_id.slice(0,8) + ")", "ok");
+        });
+
+        document.getElementById("export-draft").addEventListener("click", function () {
+          if (!lastDraft) { alert("No draft to export. Emit first."); return; }
+          window.OC.Drafts.exportDownload("intake-draft-" + lastDraft.draft_id.slice(0,8) + ".json", lastDraft);
+        });
+      });
+    </script>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required · Append-only</span>
+    <span>No SaaS · No cloud · No backend · No autonomous agents · No ML · No telemetry · No network calls</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+  <script src="../assets/exec/state.js" defer></script>
+  <script src="../assets/exec/drafts.js" defer></script>
+  <script src="../assets/exec/intake-engine.js" defer></script>
+  <script src="../assets/exec/ux.js" defer></script>
+</body>
+</html>

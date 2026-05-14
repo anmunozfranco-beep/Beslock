@@ -1,5 +1,3 @@
-# Operational console — draft manifests
+# manifests
 
-Append-only stores for proposals emitted by the console. Reviewer
-authorization (out-of-band) is required to promote any draft into
-governance. The console never auto-promotes.
+Append-only draft stores. Layer-37 stores from phase 44 plus layer-38 stores from phase 45. Real promotion always happens out-of-band through reviewer governance.
