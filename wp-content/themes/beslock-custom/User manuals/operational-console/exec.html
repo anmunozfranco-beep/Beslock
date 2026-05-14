@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Exec Dashboard — Beslock Operational Console (executable)</title>
+  <title>Beslock — Reviewer Workspace</title>
   <link rel="stylesheet" href="assets/console.css" />
   <link rel="stylesheet" href="assets/exec/exec.css" />
   <meta name="governance-layer" content="38" />
@@ -11,119 +11,336 @@
   <meta name="reviewer-required" content="true" />
   <meta name="auto-approval" content="false" />
   <meta name="network-calls" content="false" />
+  <meta name="ux-compression-of-phases" content="52,54,55,56,57,58,59" />
 </head>
-<body class="oc-body oc-body--exec">
+<body class="oc-body oc-body--exec oc-body--rwx">
   <header class="oc-header">
-    <div class="oc-header__brand">Beslock · Operational Console <span class="oc-tag oc-tag--exec">EXEC</span></div>
-    <nav class="oc-nav">
-      <a class="oc-nav__item" href="index.html">Dashboard</a>
-      <a class="oc-nav__item" href="intake-console/index.html">Intake</a>
-      <a class="oc-nav__item" href="routing-console/index.html">Routing</a>
-      <a class="oc-nav__item" href="refresh-console/index.html">Refresh</a>
-      <a class="oc-nav__item" href="reconciliation-console/index.html">Reconciliation</a>
-      <a class="oc-nav__item" href="publication-console/index.html">Publication</a>
-      <a class="oc-nav__item" href="governance-console/index.html">Governance</a>
-      <a class="oc-nav__item" href="reports-console/index.html">Reports</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="exec.html">Exec Dashboard</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="intake-console/exec.html">Intake (exec)</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="routing-console/exec.html">Routing (exec)</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="refresh-console/exec.html">Refresh (exec)</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="reconciliation-console/exec.html">Reconciliation (exec)</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="publication-console/exec.html">Publication (exec)</a>
-      <a class="oc-nav__item oc-nav__item--exec" href="governance-console/exec.html">Governance (exec)</a>
-    </nav>
-    <div class="oc-header__badge" title="Governance layer 38 — executable bindings, draft-only">L38</div>
+    <div class="oc-header__brand">Beslock · Reviewer Workspace</div>
+    <div class="oc-header__badge" title="Single coherent manual-generation product">Reviewer</div>
   </header>
-  <div class="oc-banner oc-banner--exec" role="status" aria-live="polite">
-    <strong>Executable layer.</strong> Runs locally from the file system. Every action emits an append-only <em>draft manifest</em>. No knowledge-core, source-of-truth, runtime, publication or governance state is ever mutated by this UI.
-  </div>
-  <main class="oc-main">
-    <section class="oc-section">
-      <h1>Executable Operational Bindings <span class="oc-tag oc-tag--exec">L38</span></h1>
-      <p>Lightweight executable surfaces over the layer-37 console. All actions are draft-only and stay on the local machine.</p>
-    </section>
-    <section class="oc-exec">
-      <article class="oc-exec__panel">
-        <h3>Reviewer session</h3>
-        <div class="oc-exec__row">
-          <label>Reviewer name <input id="reviewer-name" type="text" placeholder="reviewer@local" /></label>
-          <button class="oc-exec__btn" id="reviewer-set">Set reviewer</button>
-        </div>
-        <p>Session id: <code id="session-id">—</code></p>
-        <p>Drafts in session: <code id="drafts-count">0</code> · History entries: <code id="history-count">0</code></p>
-        <div class="oc-exec__row">
-          <button class="oc-exec__btn" id="export-snapshot">Export session snapshot (.json)</button>
-          <button class="oc-exec__btn oc-exec__btn--warn" id="clear-drafts">Clear local drafts</button>
-        </div>
-        <p class="oc-exec__hint">Stored only in <span class="oc-exec__kbd">localStorage</span>. No network call. No cloud. No telemetry.</p>
-      </article>
-      <article class="oc-exec__panel">
-        <h3>Recent drafts</h3>
-        <ul class="oc-exec__list" id="drafts-list"></ul>
-        <pre class="oc-exec__pre" id="drafts-dump">{}</pre>
-      </article>
-      <article class="oc-exec__panel">
-        <h3>Executable consoles</h3>
-        <ul class="oc-exec__list">
-          <li><a class="oc-link" href="intake-console/exec.html">Intake (executable)</a></li>
-          <li><a class="oc-link" href="routing-console/exec.html">Routing (executable)</a></li>
-          <li><a class="oc-link" href="refresh-console/exec.html">Refresh (executable)</a></li>
-          <li><a class="oc-link" href="reconciliation-console/exec.html">Reconciliation (executable)</a></li>
-          <li><a class="oc-link" href="publication-console/exec.html">Publication (interactive read-only)</a></li>
-          <li><a class="oc-link" href="governance-console/exec.html">Governance (interactive read-only)</a></li>
-        </ul>
-      </article>
-      <article class="oc-exec__panel">
-        <h3>Governance posture</h3>
-        <ul class="oc-list">
-          <li>Layer <span class="oc-tag oc-tag--accent">38</span></li>
-          <li>Subordinate chain length <span class="oc-tag">37</span></li>
-          <li>Network calls <span class="oc-tag oc-tag--ok">none</span></li>
-          <li>Auto-approval <span class="oc-tag oc-tag--ok">disabled</span></li>
-          <li>Source-truth mutation <span class="oc-tag oc-tag--ok">forbidden</span></li>
-          <li>Append-only drafts <span class="oc-tag oc-tag--ok">enforced</span></li>
-          <li>Reviewer authorization <span class="oc-tag oc-tag--warn">required for every promotion</span></li>
-        </ul>
-      </article>
-    </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const s = window.OC.State.ensureSession();
-        document.getElementById("session-id").textContent = s.session_id;
-        document.getElementById("reviewer-name").value = s.reviewer || "";
-        function refresh() {
-          const drafts = window.OC.State.listDrafts();
-          document.getElementById("drafts-count").textContent = drafts.length;
-          document.getElementById("history-count").textContent = window.OC.State.listHistory().length;
-          const ul = document.getElementById("drafts-list");
-          ul.innerHTML = "";
-          drafts.slice(-10).reverse().forEach(function (d) {
-            const li = document.createElement("li");
-            li.textContent = d.proposed_at_iso + " · " + d.kind + " · " + d.draft_id.slice(0, 8);
-            ul.appendChild(li);
-          });
-          document.getElementById("drafts-dump").textContent = JSON.stringify(drafts, null, 2);
-        }
-        refresh();
-        document.getElementById("reviewer-set").addEventListener("click", function () {
-          window.OC.State.setReviewer(document.getElementById("reviewer-name").value); refresh();
-        });
-        document.getElementById("export-snapshot").addEventListener("click", function () {
-          window.OC.Drafts.exportDownload("oc-session-" + s.session_id.slice(0,8) + ".json", window.OC.State.exportSnapshot());
-        });
-        document.getElementById("clear-drafts").addEventListener("click", function () {
-          if (confirm("Clear local draft list? (history retains the clear event)")) { window.OC.State.clearDrafts(); refresh(); }
-        });
-      });
-    </script>
 
+  <main class="oc-rwx">
+    <!-- LEFT: evidence + metadata + selected file -->
+    <aside class="oc-rwx__left">
+      <section class="oc-rwx__panel">
+        <h3>Reviewer</h3>
+        <div class="oc-exec__row">
+          <input id="rwx-reviewer" type="text" placeholder="reviewer@local" />
+          <button class="oc-exec__btn" id="rwx-reviewer-set">Set</button>
+        </div>
+        <p class="oc-exec__hint">All actions require reviewer attribution.</p>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Source file</h3>
+        <input id="rwx-file" type="file" accept=".pdf,.txt,.md,.json,.html,.docx,.zip" />
+        <dl class="oc-rwx__meta" id="rwx-file-meta">
+          <dt>Name</dt><dd id="rwx-file-name">—</dd>
+          <dt>Size</dt><dd id="rwx-file-size">—</dd>
+          <dt>Modified</dt><dd id="rwx-file-mtime">—</dd>
+        </dl>
+        <p class="oc-exec__hint">Files are read locally only. No upload, no network call.</p>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Workflow lineage</h3>
+        <ol class="oc-rwx__lineage" id="rwx-lineage">
+          <li class="oc-exec__hint">No prior workflows for this session.</li>
+        </ol>
+      </section>
+    </aside>
+
+    <!-- CENTER: semantic analysis results -->
+    <section class="oc-rwx__center">
+      <header class="oc-rwx__center-header">
+        <h2>Semantic review</h2>
+        <span class="oc-rwx__status" id="rwx-status" data-status="empty">no workflow</span>
+      </header>
+
+      <section class="oc-rwx__panel oc-rwx__panel--summary">
+        <h3>Knowledge inventory</h3>
+        <p class="oc-exec__hint">
+          Reviewer-authored counts. Numbers reflect <em>your</em> review of the source file —
+          the platform never infers them. Fill in, then proceed to Accept.
+        </p>
+        <div class="oc-rwx__grid">
+          <label>Procedures detected
+            <input id="rwx-sum-procedures" type="number" min="0" step="1" value="0" />
+          </label>
+          <label>Warning groups
+            <input id="rwx-sum-warnings" type="number" min="0" step="1" value="0" />
+          </label>
+          <label>Troubleshooting groups
+            <input id="rwx-sum-troubleshooting" type="number" min="0" step="1" value="0" />
+          </label>
+          <label>Visual support requirements
+            <input id="rwx-sum-visual" type="number" min="0" step="1" value="0" />
+          </label>
+          <label>Prompt packages
+            <input id="rwx-sum-prompts" type="number" min="0" step="1" value="0" />
+          </label>
+        </div>
+        <label class="oc-rwx__field">
+          <span>Reviewer notes</span>
+          <textarea id="rwx-sum-notes" rows="3"
+            placeholder="Brief reviewer commentary on what was found in the source."></textarea>
+        </label>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Acceptance conclusion</h3>
+        <label class="oc-rwx__field">
+          <span>Reviewer conclusion (required for Accept)</span>
+          <textarea id="rwx-conclusion" rows="2"
+            placeholder="One-line attestation. e.g. 'Reviewed; semantic inventory matches source; ready for export.'"></textarea>
+        </label>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Workflow envelopes</h3>
+        <p class="oc-exec__hint">
+          Bundle exported on demand. Pipe through
+          <code class="oc-exec__kbd">tools/governed_fs_executor.py</code> to materialize
+          export-ready entities. The browser never writes to disk.
+        </p>
+        <pre class="oc-exec__pre" id="rwx-bundle-preview">{}</pre>
+      </section>
+    </section>
+
+    <!-- RIGHT: reviewer actions -->
+    <aside class="oc-rwx__right">
+      <section class="oc-rwx__panel oc-rwx__panel--actions">
+        <h3>Actions</h3>
+        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>Analyze</button>
+        <p class="oc-exec__hint">
+          Orchestrates extraction, convergence, synthesis, visual-support detection,
+          and prompt-package pre-generation in one operation.
+        </p>
+
+        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>Accept</button>
+        <p class="oc-exec__hint">
+          Triggers lifecycle, export-ready entity generation, stabilization,
+          readiness audit, handoff and final attestation.
+        </p>
+
+        <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>Re-analyze</button>
+        <p class="oc-exec__hint">
+          Lineage-aware: preserves prior analysis and supersedes via pointer.
+          Never overwrites.
+        </p>
+
+        <hr />
+        <button class="oc-exec__btn" id="rwx-export-bundle" disabled>Export bundle (.json)</button>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Operational guarantees</h3>
+        <ul class="oc-list oc-rwx__guarantees">
+          <li>Append-only lineage</li>
+          <li>Deterministic replay</li>
+          <li>Reviewer authority required</li>
+          <li>Fail-closed on missing attribution</li>
+          <li>Overwrite protection enforced</li>
+          <li>No autonomous approval</li>
+          <li>No probabilistic inference</li>
+          <li>No embeddings · No ML/LLM</li>
+          <li>No telemetry · No dashboards</li>
+        </ul>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <details>
+          <summary>Advanced consoles (per-runtime)</summary>
+          <ul class="oc-rwx__advanced">
+            <li><a class="oc-link" href="intake-console/exec.html">Intake</a></li>
+            <li><a class="oc-link" href="routing-console/exec.html">Routing</a></li>
+            <li><a class="oc-link" href="reconciliation-console/exec.html">Reconciliation</a></li>
+            <li><a class="oc-link" href="publication-console/exec.html">Publication</a></li>
+            <li><a class="oc-link" href="governance-console/exec.html">Governance</a></li>
+            <li><a class="oc-link" href="reviewer-workflow-console/exec.html">Reviewer workflow (raw)</a></li>
+            <li><a class="oc-link" href="runtime-navigation-console/exec.html">Runtime navigation</a></li>
+            <li><a class="oc-link" href="index.html">Full dashboard</a></li>
+          </ul>
+        </details>
+      </section>
+    </aside>
   </main>
+
   <footer class="oc-footer">
-    <span>Repo-native · Local-first · Governance-first · Reviewer-required · Append-only</span>
-    <span>No SaaS · No cloud · No backend · No autonomous agents · No ML · No telemetry · No network calls</span>
+    <span>Repo-native · Local-first · Reviewer-required · Append-only</span>
+    <span>No SaaS · No backend · No autonomous agents · No ML · No telemetry · No network</span>
   </footer>
+
   <script src="assets/console.js" defer></script>
   <script src="assets/exec/state.js" defer></script>
   <script src="assets/exec/drafts.js" defer></script>
+  <script src="assets/exec/fs-bridge.js" defer></script>
+  <script src="assets/exec/reviewer-workflow.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const RW = window.OC.ReviewerWorkflow;
+      const State = window.OC.State;
+      const session = State.ensureSession();
+
+      const $ = function (id) { return document.getElementById(id); };
+      const elReviewer = $('rwx-reviewer');
+      const elReviewerSet = $('rwx-reviewer-set');
+      const elFile = $('rwx-file');
+      const elFileName = $('rwx-file-name');
+      const elFileSize = $('rwx-file-size');
+      const elFileMtime = $('rwx-file-mtime');
+      const elStatus = $('rwx-status');
+      const elLineage = $('rwx-lineage');
+      const elBtnAnalyze = $('rwx-analyze');
+      const elBtnAccept = $('rwx-accept');
+      const elBtnReanalyze = $('rwx-reanalyze');
+      const elBtnExport = $('rwx-export-bundle');
+      const elBundlePreview = $('rwx-bundle-preview');
+      const elConclusion = $('rwx-conclusion');
+      const elNotes = $('rwx-sum-notes');
+
+      let selectedFile = null;
+      elReviewer.value = session.reviewer === 'anonymous' ? '' : session.reviewer;
+
+      function readSummary() {
+        return {
+          procedures_detected: parseInt($('rwx-sum-procedures').value, 10) || 0,
+          warning_groups: parseInt($('rwx-sum-warnings').value, 10) || 0,
+          troubleshooting_groups: parseInt($('rwx-sum-troubleshooting').value, 10) || 0,
+          visual_support_requirements: parseInt($('rwx-sum-visual').value, 10) || 0,
+          prompt_packages: parseInt($('rwx-sum-prompts').value, 10) || 0,
+          reviewer_notes: elNotes.value.trim()
+        };
+      }
+      function writeSummary(s) {
+        s = s || {};
+        $('rwx-sum-procedures').value = s.procedures_detected || 0;
+        $('rwx-sum-warnings').value = s.warning_groups || 0;
+        $('rwx-sum-troubleshooting').value = s.troubleshooting_groups || 0;
+        $('rwx-sum-visual').value = s.visual_support_requirements || 0;
+        $('rwx-sum-prompts').value = s.prompt_packages || 0;
+        elNotes.value = s.reviewer_notes || '';
+      }
+      function fmtBytes(n) {
+        if (!n) return '—';
+        if (n < 1024) return n + ' B';
+        if (n < 1024 * 1024) return (n / 1024).toFixed(1) + ' KB';
+        return (n / (1024 * 1024)).toFixed(2) + ' MB';
+      }
+      function refreshButtons() {
+        const cur = RW.find(RW.current());
+        const hasReviewer = !!(elReviewer.value && elReviewer.value.trim());
+        elBtnAnalyze.disabled = !(hasReviewer && selectedFile);
+        elBtnAccept.disabled = !(cur && cur.status === 'analyzed');
+        elBtnReanalyze.disabled = !cur;
+        elBtnExport.disabled = !cur;
+      }
+      function refreshStatus() {
+        const cur = RW.find(RW.current());
+        if (!cur) {
+          elStatus.textContent = 'no workflow';
+          elStatus.dataset.status = 'empty';
+        } else {
+          elStatus.textContent = cur.status + ' · ' + cur.workflow_id.slice(0, 18) + '…';
+          elStatus.dataset.status = cur.status;
+        }
+      }
+      function refreshLineage() {
+        const cur = RW.find(RW.current());
+        elLineage.innerHTML = '';
+        if (!cur) {
+          const li = document.createElement('li');
+          li.className = 'oc-exec__hint';
+          li.textContent = 'No prior workflows for this session.';
+          elLineage.appendChild(li);
+          return;
+        }
+        RW.lineageOf(cur.workflow_id).forEach(function (w) {
+          const li = document.createElement('li');
+          li.textContent = w.proposed_at_iso.slice(0, 19).replace('T', ' ')
+            + ' · ' + w.status + ' · ' + w.workflow_id.slice(0, 18) + '…';
+          if (w.workflow_id === cur.workflow_id) li.style.fontWeight = '600';
+          elLineage.appendChild(li);
+        });
+      }
+      function refreshBundle() {
+        const cur = RW.find(RW.current());
+        if (!cur) { elBundlePreview.textContent = '{}'; return; }
+        const b = RW.bundleEnvelopes(cur.workflow_id);
+        elBundlePreview.textContent = JSON.stringify({
+          workflow_id: b.workflow_id,
+          prior_workflow_id: b.prior_workflow_id,
+          status: b.status,
+          summary: b.summary,
+          reviewer_conclusion: b.reviewer_conclusion,
+          envelope_count: b.envelopes.length,
+          envelope_kinds: b.envelopes.map(function (e) { return e.kind; })
+        }, null, 2);
+      }
+      function refreshAll() {
+        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle();
+      }
+
+      elReviewerSet.addEventListener('click', function () {
+        State.setReviewer(elReviewer.value.trim() || 'anonymous');
+        refreshAll();
+      });
+      elReviewer.addEventListener('input', refreshButtons);
+
+      elFile.addEventListener('change', function (ev) {
+        const f = ev.target.files && ev.target.files[0];
+        if (!f) { selectedFile = null; refreshAll(); return; }
+        selectedFile = { name: f.name, size: f.size, lastModified: f.lastModified };
+        elFileName.textContent = f.name;
+        elFileSize.textContent = fmtBytes(f.size);
+        elFileMtime.textContent = f.lastModified
+          ? new Date(f.lastModified).toISOString().slice(0, 19).replace('T', ' ')
+          : '—';
+        refreshButtons();
+      });
+
+      elBtnAnalyze.addEventListener('click', function () {
+        try {
+          if (elReviewer.value.trim()) State.setReviewer(elReviewer.value.trim());
+          const wf = RW.startAnalyze(selectedFile, readSummary(), null);
+          writeSummary(wf.summary);
+          refreshAll();
+        } catch (e) { alert('Analyze failed: ' + e.message); }
+      });
+
+      elBtnAccept.addEventListener('click', function () {
+        try {
+          const cur = RW.find(RW.current());
+          if (!cur) throw new Error('no current workflow');
+          cur.summary = readSummary();
+          RW.accept(cur.workflow_id, elConclusion.value.trim());
+          refreshAll();
+        } catch (e) { alert('Accept failed: ' + e.message); }
+      });
+
+      elBtnReanalyze.addEventListener('click', function () {
+        try {
+          const cur = RW.find(RW.current());
+          if (!cur) throw new Error('no current workflow');
+          const wf = RW.reanalyze(cur.workflow_id, readSummary());
+          writeSummary(wf.summary);
+          elConclusion.value = '';
+          refreshAll();
+        } catch (e) { alert('Re-analyze failed: ' + e.message); }
+      });
+
+      elBtnExport.addEventListener('click', function () {
+        try {
+          const cur = RW.find(RW.current());
+          if (!cur) throw new Error('no current workflow');
+          RW.exportBundle(cur.workflow_id);
+        } catch (e) { alert('Export failed: ' + e.message); }
+      });
+
+      const cur = RW.find(RW.current());
+      if (cur) writeSummary(cur.summary || {});
+      refreshAll();
+    });
+  </script>
 </body>
 </html>
