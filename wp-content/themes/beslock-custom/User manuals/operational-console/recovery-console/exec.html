@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Recovery console — Beslock Operational Console</title>
+<link rel="stylesheet" href="../assets/console.css" />
+<link rel="stylesheet" href="../assets/exec/exec.css" />
+</head>
+<body class="oc-body oc-body--exec">
+<header class="oc-header">
+  <a class="oc-header__brand" href="../index.html">Beslock Operational Console</a>
+  <nav class="oc-header__nav">
+    <a href="../exec.html">Exec</a>
+    <a href="../mutation-console/exec.html">Mutation</a>
+    <a href="../lineage-console/exec.html">Lineage</a>
+    <a href="../rollback-console/exec.html">Rollback</a>
+    <a href="../safety-console/exec.html">Safety</a>
+    <a href="../transaction-console/exec.html">Transactions</a>
+    <a href="../snapshot-console/exec.html">Snapshots</a>
+    <a href="../recovery-console/exec.html">Recovery</a>
+    <a href="../replay-console/exec.html">Replay</a>
+    <a href="../integrity-console/exec.html">Integrity</a>
+    <a href="../failure-console/exec.html">Failures</a>
+  </nav>
+</header>
+<main class="oc-main oc-exec">
+
+<section class="oc-exec__panel">
+  <h1>Recovery manifest</h1>
+  <p class="oc-exec__danger">
+    Read-only detector for incomplete operations. The recovery engine
+    NEVER auto-recovers. The reviewer chooses replay or rollback and runs
+    <code>tools/governed_transactional_executor.py</code> with
+    <code>--confirm</code>.
+  </p>
+  <div id="rec-summary"><em>Generating…</em></div>
+  <h2>Findings</h2>
+  <div id="rec-findings"><em>Generating…</em></div>
+</section>
+<script>
+(async function () {
+  const m = await window.OC.RecoveryEngine.buildRecoveryManifest();
+  document.getElementById('rec-summary').innerHTML =
+    '<p>Generated: <code>' + m.generated_at_iso + '</code></p>'
+    + '<p>Findings: <strong>' + m.findings.length + '</strong></p>'
+    + '<p>Auto-recovery: <strong>' + m.auto_recovery + '</strong></p>';
+  document.getElementById('rec-findings').innerHTML = m.findings.length
+    ? m.findings.map(f => '<div class="oc-tx__finding--recovery"><strong>'
+        + f.signal + '</strong> &middot; ' + (f.transaction_id || f.operation_id || '')
+        + '<br>recommends: <code>' + f.recommends + '</code> &middot; alt: <code>'
+        + f.alternative + '</code></div>').join('')
+    : '<em>(no incomplete operations detected)</em>';
+})();
+</script>
+</main>
+<script src="../assets/exec/state.js"></script>
+<script src="../assets/exec/ux.js"></script>
+<script src="../assets/exec/drafts.js"></script>
+<script src="../assets/exec/fs-bridge.js"></script>
+<script src="../assets/exec/dest-resolver.js"></script>
+<script src="../assets/exec/mutation-engine.js"></script>
+<script src="../assets/exec/rollback-engine.js"></script>
+<script src="../assets/exec/safety-engine.js"></script>
+<script src="../assets/exec/transaction-engine.js"></script>
+<script src="../assets/exec/snapshot-engine.js"></script>
+<script src="../assets/exec/rollback-exec-engine.js"></script>
+<script src="../assets/exec/recovery-engine.js"></script>
+<script src="../assets/exec/replay-engine.js"></script>
+<script src="../assets/exec/integrity-engine.js"></script>
+<script src="../assets/exec/failure-engine.js"></script>
+<script src="../assets/exec/consistency-engine.js"></script>
+</body></html>

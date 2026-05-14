@@ -1,0 +1,155 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "checks": [
+    {
+      "action": "block_new_executions_until_reviewer_clears",
+      "detects": "two transaction_events with identical request_id and state=executing",
+      "id": "CON-1",
+      "kind": "duplicate-transaction-execution"
+    },
+    {
+      "action": "block_new_executions_until_reviewer_clears",
+      "detects": "two unfinished transactions targeting overlapping destination paths",
+      "id": "CON-2",
+      "kind": "concurrent-conflicting-mutations"
+    },
+    {
+      "action": "emit_audit_warning",
+      "detects": "manifest event without a corresponding transaction_event",
+      "id": "CON-3",
+      "kind": "orphan-manifest"
+    },
+    {
+      "action": "emit_audit_warning",
+      "detects": "lineage event referencing operation_id with no mutation_event",
+      "id": "CON-4",
+      "kind": "stale-lineage"
+    },
+    {
+      "action": "emit_recovery_manifest",
+      "detects": "rollback_event present but transaction state still 'failed' (not advanced)",
+      "id": "CON-5",
+      "kind": "partial-rollback"
+    },
+    {
+      "action": "emit_recovery_manifest",
+      "detects": "replay_event with mode=reconstruct-into-rollback-target but rollback-target tree empty",
+      "id": "CON-6",
+      "kind": "incomplete-replay"
+    },
+    {
+      "action": "emit_audit_warning",
+      "detects": "publication_event timestamp older than referenced source mutation_event timestamp",
+      "id": "CON-7",
+      "kind": "publication-runtime-drift"
+    },
+    {
+      "action": "block_and_emit_audit_block",
+      "detects": "mutation_event destination in forbidden_destinations or outside repo root",
+      "id": "CON-8",
+      "kind": "propagation-inconsistency"
+    }
+  ],
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Deterministic consistency enforcement. Detects duplicate / concurrent / orphaned / partial / drifted states and BLOCKS unsafe execution while preserving evidence.",
+  "recovery_is_reviewer_authorized": true,
+  "replay_is_reviewer_authorized": true,
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "CON-R-1",
+      "rule": "consistency_checks_must_be_deterministic"
+    },
+    {
+      "fail_closed": true,
+      "id": "CON-R-2",
+      "rule": "consistency_findings_are_append_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "CON-R-3",
+      "rule": "consistency_must_preserve_evidence"
+    },
+    {
+      "fail_closed": true,
+      "id": "CON-R-4",
+      "rule": "consistency_blocks_unsafe_execution_until_reviewer_clears"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "title": "Repository Consistency Rules",
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}

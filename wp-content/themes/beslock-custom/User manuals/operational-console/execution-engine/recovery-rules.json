@@ -1,0 +1,186 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "incomplete_operation_signals": [
+    {
+      "id": "REC-SIG-1",
+      "interpretation": "Process was interrupted mid-execution.",
+      "signal": "transaction_state == 'executing' but no committed/failed event"
+    },
+    {
+      "id": "REC-SIG-2",
+      "interpretation": "Snapshot captured but mutation did not begin or did not record.",
+      "signal": "snapshot exists but no mutation event references it"
+    },
+    {
+      "id": "REC-SIG-3",
+      "interpretation": "Lineage write was skipped; likely interrupted.",
+      "signal": "mutation event present but no lineage event for same operation_id"
+    },
+    {
+      "id": "REC-SIG-4",
+      "interpretation": "Rollback recorded but state transition incomplete.",
+      "signal": "rollback event present but transaction not in 'rolled-back'"
+    },
+    {
+      "id": "REC-SIG-5",
+      "interpretation": "Publication divergence; reviewer must reconcile.",
+      "signal": "publication event present but refresh event missing"
+    },
+    {
+      "id": "REC-SIG-6",
+      "interpretation": "Stale propagation; reviewer must reconcile.",
+      "signal": "destination exists but mutation event does not reference it"
+    }
+  ],
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Interrupted-execution recovery orchestration. The recovery engine DETECTS incomplete operations and EMITS a recovery manifest; it NEVER auto-recovers. The reviewer chooses replay or rollback.",
+  "recovery_is_reviewer_authorized": true,
+  "recovery_recommendations": [
+    {
+      "alternative": "rollback-via-restore-prior-snapshot",
+      "from_signal": "REC-SIG-1",
+      "id": "REC-REC-1",
+      "recommends": "replay-from-snapshot"
+    },
+    {
+      "alternative": "replay-from-snapshot",
+      "from_signal": "REC-SIG-2",
+      "id": "REC-REC-2",
+      "recommends": "abandon-snapshot-no-op"
+    },
+    {
+      "alternative": "rollback-revert-failed-mutation",
+      "from_signal": "REC-SIG-3",
+      "id": "REC-REC-3",
+      "recommends": "append-bridge-lineage-event"
+    },
+    {
+      "alternative": "manual-reviewer-triage",
+      "from_signal": "REC-SIG-4",
+      "id": "REC-REC-4",
+      "recommends": "advance-transaction-state-to-rolled-back"
+    },
+    {
+      "alternative": "reviewer-authorised-republication",
+      "from_signal": "REC-SIG-5",
+      "id": "REC-REC-5",
+      "recommends": "reviewer-authorised-publication-rollback"
+    },
+    {
+      "alternative": "rollback-revert-failed-mutation",
+      "from_signal": "REC-SIG-6",
+      "id": "REC-REC-6",
+      "recommends": "reviewer-triage-via-integrity-console"
+    }
+  ],
+  "replay_is_reviewer_authorized": true,
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "REC-1",
+      "reasoning": "Detection only; reviewer authorizes the actual recovery action.",
+      "rule": "recovery_engine_must_be_read_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "REC-2",
+      "rule": "recovery_must_emit_recovery_manifest"
+    },
+    {
+      "fail_closed": true,
+      "id": "REC-3",
+      "rule": "recovery_manifest_must_carry_transaction_id"
+    },
+    {
+      "fail_closed": true,
+      "id": "REC-4",
+      "rule": "recovery_manifest_must_carry_recommendations"
+    },
+    {
+      "fail_closed": true,
+      "id": "REC-5",
+      "rule": "no_autonomous_recovery_action"
+    },
+    {
+      "fail_closed": true,
+      "id": "REC-6",
+      "rule": "recovery_history_is_append_only"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "title": "Recovery Rules",
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}

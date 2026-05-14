@@ -1,0 +1,142 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "inputs": [
+    "runtime-snapshots/transaction-state/",
+    "runtime-manifests/transaction-events/",
+    "runtime-manifests/mutation-events/",
+    "runtime-manifests/lineage-events/",
+    "runtime-manifests/snapshot-events/",
+    "runtime-manifests/audit-events/"
+  ],
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Deterministic replay of governed transactions from snapshots + transaction journal + lineage + manifest events. Replay is read-only by default; reviewer-authorized writes only.",
+  "recovery_is_reviewer_authorized": true,
+  "replay_is_reviewer_authorized": true,
+  "replay_modes": [
+    {
+      "description": "Reconstructs the expected outcome and compares against current state. Emits a replay-finding event. No filesystem mutation.",
+      "mode": "verify-only",
+      "writes": false
+    },
+    {
+      "description": "Writes the replayed outcome into a rollback-target/ tree (never into the live tree directly).",
+      "mode": "reconstruct-into-rollback-target",
+      "requires_reviewer_confirm": true,
+      "writes": true
+    }
+  ],
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "RPL-1",
+      "reasoning": "Same inputs must always produce the same replay.",
+      "rule": "replay_must_be_deterministic"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-2",
+      "rule": "replay_default_mode_is_read_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-3",
+      "rule": "replay_must_consume_only_snapshots_and_event_journals"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-4",
+      "rule": "replay_must_emit_replay_event"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-5",
+      "rule": "replay_writing_mode_requires_reviewer_confirm"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-6",
+      "rule": "replay_must_never_overwrite_live_tree"
+    },
+    {
+      "fail_closed": true,
+      "id": "RPL-7",
+      "rule": "replay_must_carry_transaction_id_and_replay_id"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "title": "Replay Rules",
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}

@@ -1,0 +1,165 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Real rollback execution. Restores prior state forward (never destructive), preserves the failed state as evidence, and appends to the transaction + lineage + audit + rollback event stores.",
+  "recovery_is_reviewer_authorized": true,
+  "replay_is_reviewer_authorized": true,
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_kinds": [
+    {
+      "action": "copy snapshot of pre-mutation destination state forward into a rollback-target path; mark the failed destination as preserved; emit rollback + lineage + audit events.",
+      "deletes_evidence": false,
+      "kind": "revert-failed-mutation",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "restore staging/incoming/<file> from snapshot; route the failed destination contents into staging/quarantined/<ts>/.",
+      "deletes_evidence": false,
+      "kind": "revert-failed-staging",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "restore prior publication-events pointer from snapshot; mark the regenerated outputs as superseded; do not delete them.",
+      "deletes_evidence": false,
+      "kind": "revert-publication-regeneration",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "restore prior manifest snapshot; append a rollback-record event linking to the failed registration; do not rewrite history.",
+      "deletes_evidence": false,
+      "kind": "revert-manifest-registration",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "copy a reviewer-selected snapshot back into a restore-target tree (NEVER over the live tree directly; reviewer migrates).",
+      "deletes_evidence": false,
+      "kind": "restore-prior-snapshot",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "append a lineage-bridge event referencing both the failed and restored operation_ids; never edit prior lineage events.",
+      "deletes_evidence": false,
+      "kind": "restore-lineage-continuity",
+      "preserves_failed_state": true
+    }
+  ],
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "RBE-1",
+      "rule": "rollback_requires_reviewer_authorization"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-2",
+      "rule": "rollback_must_be_transaction_bound"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-3",
+      "rule": "rollback_must_reference_snapshot_path"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-4",
+      "rule": "rollback_must_be_append_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-5",
+      "rule": "rollback_must_not_delete_evidence"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-6",
+      "reasoning": "Restored content lands in a rollback-target/ path; reviewer explicitly migrates if desired.",
+      "rule": "rollback_must_not_overwrite_live_tree"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-7",
+      "rule": "rollback_must_emit_rollback_lineage_audit_events"
+    },
+    {
+      "fail_closed": true,
+      "id": "RBE-8",
+      "reasoning": "From failed -> rolled-back.",
+      "rule": "rollback_must_advance_transaction_state"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "title": "Rollback Execution Rules",
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}
