@@ -266,3 +266,205 @@
 @media (max-width: 1100px) {
   .oc-rwx { grid-template-columns: 1fr; }
 }
+
+/* ---- Reviewer attribution state pill (Phase 60 UX compression) ---- */
+.oc-body--rwx #rwx-reviewer-state {
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #2a3953;
+  background: #0e1726;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.oc-body--rwx #rwx-reviewer-state[data-committed="true"] {
+  border-color: #2f6f4f;
+  background: #102218;
+  color: #8be9a3;
+}
+.oc-body--rwx #rwx-reviewer-state[data-committed="pending"] {
+  border-color: #b08a2a;
+  background: #1f1a0d;
+  color: #f5d27a;
+}
+.oc-body--rwx #rwx-reviewer-state[data-committed="false"] {
+  border-color: #5a2a2a;
+  background: #1f1212;
+  color: #e89a9a;
+}
+
+/* ---- Reviewer findings + implications tables (Phase 60 UX compression) ---- */
+.oc-rwx__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0 10px 0;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.oc-rwx__table th,
+.oc-rwx__table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 6px 8px;
+  border-bottom: 1px solid #1f2c45;
+}
+.oc-rwx__table tr:last-child th,
+.oc-rwx__table tr:last-child td { border-bottom: 0; }
+.oc-rwx__table-key {
+  width: 38%;
+  color: #cfd6e2;
+  font-weight: 500;
+  background: #0f1a2c;
+}
+.oc-rwx__table-hint {
+  display: block;
+  color: #8a93a4;
+  font-weight: 400;
+  font-size: 11px;
+  margin-top: 2px;
+}
+.oc-rwx__table-val { color: #e4ecf7; word-break: break-word; }
+.oc-rwx__table-val--number input[type="number"] {
+  width: 88px;
+  background: #0e1726;
+  color: #e4ecf7;
+  border: 1px solid #2a3953;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+.oc-rwx__chiplist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+}
+.oc-rwx__chip {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #1f2c45;
+  color: #cfd6e2;
+  font-size: 11px;
+  line-height: 1.5;
+  border: 1px solid #2a3953;
+}
+.oc-rwx__chip--solo { background: #102218; color: #8be9a3; border-color: #2f6f4f; }
+.oc-rwx__advanced-bundle > summary {
+  cursor: pointer;
+  color: #f5d27a;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 0;
+  list-style: none;
+}
+.oc-rwx__advanced-bundle > summary::-webkit-details-marker { display: none; }
+.oc-rwx__advanced-bundle > summary::before {
+  content: "\25B8\00a0";
+  display: inline-block;
+  transition: transform 120ms ease;
+}
+.oc-rwx__advanced-bundle[open] > summary::before { content: "\25BE\00a0"; }
+
+/* ---- Operational realism layer (Phase 60 staged execution UX) ---- */
+.oc-rwx__runtime-state {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 2px 10px;
+  border-radius: 4px;
+  margin-right: 6px;
+  background: #1f2c45;
+  color: #cfd6e2;
+  border: 1px solid #2a3953;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.oc-rwx__runtime-state[data-state="idle"]         { background: #1f2c45; color: #8a93a4; }
+.oc-rwx__runtime-state[data-state="preparing"]    { background: #2a3953; color: #cfd6e2; }
+.oc-rwx__runtime-state[data-state="analyzing"]    { background: #2b6cb0; color: #fff; animation: oc-rwx-pulse 1.4s ease-in-out infinite; }
+.oc-rwx__runtime-state[data-state="converging"]   { background: #4a3a8a; color: #fff; animation: oc-rwx-pulse 1.4s ease-in-out infinite; }
+.oc-rwx__runtime-state[data-state="synthesizing"] { background: #6b4f15; color: #f5d27a; animation: oc-rwx-pulse 1.4s ease-in-out infinite; }
+.oc-rwx__runtime-state[data-state="completed"]    { background: #2f6f4f; color: #8be9a3; }
+.oc-rwx__runtime-state[data-state="failed"]       { background: #5a2a2a; color: #e89a9a; }
+@keyframes oc-rwx-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+.oc-rwx__panel--stream { padding-bottom: 10px; }
+.oc-rwx__stream-meta {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin: 0 0 8px 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.oc-rwx__stream {
+  list-style: none;
+  margin: 0;
+  padding: 8px 10px;
+  background: #0a121f;
+  border: 1px solid #1f2c45;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  line-height: 1.55;
+  max-height: 220px;
+  min-height: 96px;
+  overflow-y: auto;
+  color: #cfd6e2;
+}
+.oc-rwx__stream-line { padding: 1px 0; white-space: pre-wrap; }
+.oc-rwx__stream-line--idle     { color: #8a93a4; font-style: italic; }
+.oc-rwx__stream-line--meta     { color: #8a93a4; }
+.oc-rwx__stream-line--running  { color: #f5d27a; }
+.oc-rwx__stream-line--running::after {
+  content: " \25CF";
+  animation: oc-rwx-blink 0.9s steps(2, start) infinite;
+}
+.oc-rwx__stream-line--complete { color: #8be9a3; }
+.oc-rwx__stream-line--error    { color: #e89a9a; }
+@keyframes oc-rwx-blink {
+  to { visibility: hidden; }
+}
+
+.oc-rwx__panel--attestation h3 { color: #cfd6e2; }
+.oc-rwx__attest {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px 8px;
+  margin: 6px 0 8px 0;
+}
+.oc-rwx__attest label {
+  display: flex; flex-direction: column; gap: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8a93a4;
+}
+.oc-rwx__attest input[type="number"] {
+  background: #0e1726; color: #e4ecf7;
+  border: 1px solid #2a3953; border-radius: 4px;
+  padding: 4px 6px; font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  -moz-appearance: textfield;
+}
+.oc-rwx__attest input[type="number"]::-webkit-outer-spin-button,
+.oc-rwx__attest input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; margin: 0;
+}
+@media (max-width: 1100px) {
+  .oc-rwx__attest { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.oc-rwx__numeric {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+  color: #f5d27a;
+  font-size: 13px;
+}
+
+/* Disable Analyze/Reanalyze visually while runner is active. */
+.oc-rwx__btn-primary[disabled] { animation: none; }

@@ -25,21 +25,27 @@
       <section class="oc-rwx__panel">
         <h3>Reviewer</h3>
         <div class="oc-exec__row">
-          <input id="rwx-reviewer" type="text" placeholder="reviewer@local" />
-          <button class="oc-exec__btn" id="rwx-reviewer-set">Set</button>
+          <input id="rwx-reviewer" type="text" placeholder="reviewer@local" autocomplete="username" />
+          <button class="oc-exec__btn" id="rwx-reviewer-set" title="Optional — attribution auto-commits on Enter or when the field loses focus.">Set</button>
         </div>
-        <p class="oc-exec__hint">All actions require reviewer attribution.</p>
+        <p class="oc-exec__hint" id="rwx-reviewer-state" data-committed="false">
+          Attribution required. Press Enter or click outside the field to commit; Set is optional.
+        </p>
       </section>
 
       <section class="oc-rwx__panel">
         <h3>Source file</h3>
-        <input id="rwx-file" type="file" accept=".pdf,.txt,.md,.json,.html,.docx,.zip" />
+        <input id="rwx-file" type="file" />
         <dl class="oc-rwx__meta" id="rwx-file-meta">
           <dt>Name</dt><dd id="rwx-file-name">—</dd>
           <dt>Size</dt><dd id="rwx-file-size">—</dd>
           <dt>Modified</dt><dd id="rwx-file-mtime">—</dd>
         </dl>
-        <p class="oc-exec__hint">Files are read locally only. No upload, no network call.</p>
+        <p class="oc-exec__hint">
+          Any local file is selectable. Evidence type is classified and rejected
+          (if unsupported) by the deterministic runtime — never by the picker.
+          Files are read locally only. No upload, no network call.
+        </p>
       </section>
 
       <section class="oc-rwx__panel">
@@ -54,37 +60,77 @@
     <section class="oc-rwx__center">
       <header class="oc-rwx__center-header">
         <h2>Semantic review</h2>
+        <span class="oc-rwx__runtime-state" id="rwx-runtime-state" data-state="idle">idle</span>
         <span class="oc-rwx__status" id="rwx-status" data-status="empty">no workflow</span>
       </header>
 
+      <section class="oc-rwx__panel oc-rwx__panel--stream">
+        <h3>Live analysis stream</h3>
+        <div class="oc-rwx__stream-meta">
+          <span id="rwx-stream-profile" class="oc-rwx__chip">profile: idle</span>
+          <span id="rwx-stream-eta" class="oc-rwx__chip oc-rwx__chip--solo">ETA —</span>
+        </div>
+        <ol class="oc-rwx__stream" id="rwx-stream" aria-live="polite">
+          <li class="oc-rwx__stream-line oc-rwx__stream-line--idle">Runtime idle. Select a file and click Analyze to begin.</li>
+        </ol>
+      </section>
+
       <section class="oc-rwx__panel oc-rwx__panel--summary">
-        <h3>Knowledge inventory</h3>
+        <h3>Analysis findings</h3>
         <p class="oc-exec__hint">
-          Reviewer-authored counts. Numbers reflect <em>your</em> review of the source file —
-          the platform never infers them. Fill in, then proceed to Accept.
+          Operational records emerge as each stage of the analysis sequence
+          completes. Derived deterministically from the source file and the
+          existing Phase 52/54/55 dispatch map.
         </p>
-        <div class="oc-rwx__grid">
-          <label>Procedures detected
-            <input id="rwx-sum-procedures" type="number" min="0" step="1" value="0" />
+        <table class="oc-rwx__table" id="rwx-findings">
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="oc-rwx__panel oc-rwx__panel--attestation">
+        <h3>Reviewer attestation</h3>
+        <p class="oc-exec__hint">
+          Reviewer-authored counts. The platform never infers these. Adjust
+          before Accept.
+        </p>
+        <div class="oc-rwx__attest" id="rwx-attest">
+          <label data-summary-key="procedures_detected">
+            <span>Procedures</span>
+            <input type="number" min="0" step="1" value="0" />
           </label>
-          <label>Warning groups
-            <input id="rwx-sum-warnings" type="number" min="0" step="1" value="0" />
+          <label data-summary-key="warning_groups">
+            <span>Warnings</span>
+            <input type="number" min="0" step="1" value="0" />
           </label>
-          <label>Troubleshooting groups
-            <input id="rwx-sum-troubleshooting" type="number" min="0" step="1" value="0" />
+          <label data-summary-key="troubleshooting_groups">
+            <span>Troubleshooting</span>
+            <input type="number" min="0" step="1" value="0" />
           </label>
-          <label>Visual support requirements
-            <input id="rwx-sum-visual" type="number" min="0" step="1" value="0" />
+          <label data-summary-key="visual_support_requirements">
+            <span>Visual support</span>
+            <input type="number" min="0" step="1" value="0" />
           </label>
-          <label>Prompt packages
-            <input id="rwx-sum-prompts" type="number" min="0" step="1" value="0" />
+          <label data-summary-key="prompt_packages">
+            <span>Prompt packages</span>
+            <input type="number" min="0" step="1" value="0" />
           </label>
         </div>
         <label class="oc-rwx__field">
           <span>Reviewer notes</span>
-          <textarea id="rwx-sum-notes" rows="3"
+          <textarea id="rwx-sum-notes" rows="2"
             placeholder="Brief reviewer commentary on what was found in the source."></textarea>
         </label>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <h3>Runtime implications</h3>
+        <p class="oc-exec__hint">
+          Where this resource will be routed and what it will produce after
+          Accept. Derived from existing dispatch wiring — not a new runtime.
+        </p>
+        <table class="oc-rwx__table" id="rwx-implications">
+          <tbody></tbody>
+        </table>
       </section>
 
       <section class="oc-rwx__panel">
@@ -97,13 +143,15 @@
       </section>
 
       <section class="oc-rwx__panel">
-        <h3>Workflow envelopes</h3>
-        <p class="oc-exec__hint">
-          Bundle exported on demand. Pipe through
-          <code class="oc-exec__kbd">tools/governed_fs_executor.py</code> to materialize
-          export-ready entities. The browser never writes to disk.
-        </p>
-        <pre class="oc-exec__pre" id="rwx-bundle-preview">{}</pre>
+        <details class="oc-rwx__advanced-bundle">
+          <summary>Advanced · Raw operational bundle</summary>
+          <p class="oc-exec__hint">
+            Append-only envelope bundle. Pipe through
+            <code class="oc-exec__kbd">tools/governed_fs_executor.py</code> to materialize
+            export-ready entities. The browser never writes to disk.
+          </p>
+          <pre class="oc-exec__pre" id="rwx-bundle-preview">{}</pre>
+        </details>
       </section>
     </section>
 
@@ -176,6 +224,8 @@
   <script src="assets/exec/drafts.js" defer></script>
   <script src="assets/exec/fs-bridge.js" defer></script>
   <script src="assets/exec/reviewer-workflow.js" defer></script>
+  <script src="assets/exec/findings.js" defer></script>
+  <script src="assets/exec/analysis-runner.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const RW = window.OC.ReviewerWorkflow;
@@ -185,6 +235,7 @@
       const $ = function (id) { return document.getElementById(id); };
       const elReviewer = $('rwx-reviewer');
       const elReviewerSet = $('rwx-reviewer-set');
+      const elReviewerState = $('rwx-reviewer-state');
       const elFile = $('rwx-file');
       const elFileName = $('rwx-file-name');
       const elFileSize = $('rwx-file-size');
@@ -196,30 +247,65 @@
       const elBtnReanalyze = $('rwx-reanalyze');
       const elBtnExport = $('rwx-export-bundle');
       const elBundlePreview = $('rwx-bundle-preview');
+      const elFindings = $('rwx-findings').querySelector('tbody');
+      const elImplications = $('rwx-implications').querySelector('tbody');
+      const elAttest = $('rwx-attest');
+      const elStream = $('rwx-stream');
+      const elStreamProfile = $('rwx-stream-profile');
+      const elStreamEta = $('rwx-stream-eta');
+      const elRuntimeState = $('rwx-runtime-state');
       const elConclusion = $('rwx-conclusion');
       const elNotes = $('rwx-sum-notes');
 
       let selectedFile = null;
+      let analysisCtl = null;            // active runner controller, if any
+      let revealedStages = null;         // Set<stageId> — null = reveal all (post-analyze)
+      // Reviewer-authored summary lives in memory; bound to the attestation strip.
+      // Persists into wf.summary at Analyze/Accept.
+      let liveSummary = {
+        procedures_detected: 0,
+        warning_groups: 0,
+        troubleshooting_groups: 0,
+        visual_support_requirements: 0,
+        prompt_packages: 0,
+        reviewer_notes: ''
+      };
       elReviewer.value = session.reviewer === 'anonymous' ? '' : session.reviewer;
 
+      // Bind attestation strip inputs to liveSummary (no longer in findings table).
+      Array.prototype.forEach.call(elAttest.querySelectorAll('label[data-summary-key]'), function (lab) {
+        const key = lab.dataset.summaryKey;
+        const inp = lab.querySelector('input');
+        inp.addEventListener('input', function () {
+          liveSummary[key] = parseInt(inp.value, 10) || 0;
+        });
+      });
+
       function readSummary() {
-        return {
-          procedures_detected: parseInt($('rwx-sum-procedures').value, 10) || 0,
-          warning_groups: parseInt($('rwx-sum-warnings').value, 10) || 0,
-          troubleshooting_groups: parseInt($('rwx-sum-troubleshooting').value, 10) || 0,
-          visual_support_requirements: parseInt($('rwx-sum-visual').value, 10) || 0,
-          prompt_packages: parseInt($('rwx-sum-prompts').value, 10) || 0,
-          reviewer_notes: elNotes.value.trim()
-        };
+        const out = Object.assign({}, liveSummary);
+        Array.prototype.forEach.call(elAttest.querySelectorAll('label[data-summary-key]'), function (lab) {
+          const inp = lab.querySelector('input');
+          out[lab.dataset.summaryKey] = parseInt(inp.value, 10) || 0;
+        });
+        out.reviewer_notes = elNotes.value.trim();
+        liveSummary = out;
+        return out;
       }
       function writeSummary(s) {
         s = s || {};
-        $('rwx-sum-procedures').value = s.procedures_detected || 0;
-        $('rwx-sum-warnings').value = s.warning_groups || 0;
-        $('rwx-sum-troubleshooting').value = s.troubleshooting_groups || 0;
-        $('rwx-sum-visual').value = s.visual_support_requirements || 0;
-        $('rwx-sum-prompts').value = s.prompt_packages || 0;
-        elNotes.value = s.reviewer_notes || '';
+        liveSummary = {
+          procedures_detected: s.procedures_detected || 0,
+          warning_groups: s.warning_groups || 0,
+          troubleshooting_groups: s.troubleshooting_groups || 0,
+          visual_support_requirements: s.visual_support_requirements || 0,
+          prompt_packages: s.prompt_packages || 0,
+          reviewer_notes: s.reviewer_notes || ''
+        };
+        elNotes.value = liveSummary.reviewer_notes;
+        Array.prototype.forEach.call(elAttest.querySelectorAll('label[data-summary-key]'), function (lab) {
+          const inp = lab.querySelector('input');
+          inp.value = liveSummary[lab.dataset.summaryKey] || 0;
+        });
       }
       function fmtBytes(n) {
         if (!n) return '—';
@@ -227,13 +313,48 @@
         if (n < 1024 * 1024) return (n / 1024).toFixed(1) + ' KB';
         return (n / (1024 * 1024)).toFixed(2) + ' MB';
       }
+      function committedReviewer() {
+        const s = State.ensureSession();
+        return (s && s.reviewer && s.reviewer !== 'anonymous') ? s.reviewer : '';
+      }
+      function commitReviewer() {
+        const typed = elReviewer.value.trim();
+        if (!typed) return false;
+        if (committedReviewer() === typed) { refreshReviewerState(); return true; }
+        State.setReviewer(typed);
+        refreshAll();
+        return true;
+      }
+      function refreshReviewerState() {
+        const committed = committedReviewer();
+        const typed = elReviewer.value.trim();
+        if (committed && committed === typed) {
+          elReviewerState.dataset.committed = 'true';
+          elReviewerState.textContent = '\u2713 Attribution active as ' + committed + '.';
+        } else if (committed && typed && committed !== typed) {
+          elReviewerState.dataset.committed = 'pending';
+          elReviewerState.textContent = 'Pending: press Enter (or click outside) to commit \u201C' + typed + '\u201D. Currently active as ' + committed + '.';
+        } else if (committed && !typed) {
+          elReviewerState.dataset.committed = 'true';
+          elReviewerState.textContent = '\u2713 Attribution active as ' + committed + '.';
+        } else if (!committed && typed) {
+          elReviewerState.dataset.committed = 'pending';
+          elReviewerState.textContent = 'Pending: press Enter or click outside to commit attribution.';
+        } else {
+          elReviewerState.dataset.committed = 'false';
+          elReviewerState.textContent = 'Attribution required. Press Enter or click outside the field to commit; Set is optional.';
+        }
+      }
       function refreshButtons() {
         const cur = RW.find(RW.current());
-        const hasReviewer = !!(elReviewer.value && elReviewer.value.trim());
-        elBtnAnalyze.disabled = !(hasReviewer && selectedFile);
-        elBtnAccept.disabled = !(cur && cur.status === 'analyzed');
-        elBtnReanalyze.disabled = !cur;
-        elBtnExport.disabled = !cur;
+        const typed = elReviewer.value.trim();
+        const hasReviewer = !!(committedReviewer() || typed);
+        const running = !!analysisCtl;
+        elBtnAnalyze.disabled = running || !(hasReviewer && selectedFile);
+        elBtnAccept.disabled = running || !(cur && cur.status === 'analyzed');
+        elBtnReanalyze.disabled = running || !cur;
+        elBtnExport.disabled = running || !cur;
+        refreshReviewerState();
       }
       function refreshStatus() {
         const cur = RW.find(RW.current());
@@ -277,15 +398,203 @@
           envelope_kinds: b.envelopes.map(function (e) { return e.kind; })
         }, null, 2);
       }
+
+      // ---- Dynamic finding/implication table renderer ---------------------
+      // Renders any { label, kind, value|values, editable?, hint? } row.
+      // Future findings can be added without touching this UI — just extend
+      // OC.ReviewerFindings.deriveFindings / deriveImplications.
+      function renderCell(row) {
+        const td = document.createElement('td');
+        td.className = 'oc-rwx__table-val oc-rwx__table-val--' + (row.kind || 'text');
+        // Editable cells are now rendered exclusively inside the attestation
+        // strip; the findings table is read-only operational records.
+        if (row.kind === 'list' && Array.isArray(row.values)) {
+          if (!row.values.length) { td.textContent = '—'; return td; }
+          const ul = document.createElement('ul');
+          ul.className = 'oc-rwx__chiplist';
+          row.values.forEach(function (v) {
+            const li = document.createElement('li');
+            li.className = 'oc-rwx__chip';
+            li.textContent = String(v);
+            ul.appendChild(li);
+          });
+          td.appendChild(ul);
+          return td;
+        }
+        if (row.kind === 'badge') {
+          const span = document.createElement('span');
+          span.className = 'oc-rwx__chip oc-rwx__chip--solo';
+          span.textContent = row.value != null ? String(row.value) : '—';
+          td.appendChild(span);
+          return td;
+        }
+        if (row.kind === 'number') {
+          // Read-only numeric mirror (the editable input lives in the attestation strip).
+          const span = document.createElement('span');
+          span.className = 'oc-rwx__numeric';
+          span.textContent = row.value != null ? String(row.value) : '0';
+          td.appendChild(span);
+          return td;
+        }
+        td.textContent = row.value != null && row.value !== '' ? String(row.value) : '—';
+        return td;
+      }
+      function renderTable(tbody, rows) {
+        tbody.innerHTML = '';
+        rows.forEach(function (row) {
+          const tr = document.createElement('tr');
+          const th = document.createElement('th');
+          th.scope = 'row';
+          th.className = 'oc-rwx__table-key';
+          th.textContent = row.label;
+          if (row.hint) {
+            const small = document.createElement('span');
+            small.className = 'oc-rwx__table-hint';
+            small.textContent = row.hint;
+            th.appendChild(document.createElement('br'));
+            th.appendChild(small);
+          }
+          tr.appendChild(th);
+          tr.appendChild(renderCell(row));
+          tbody.appendChild(tr);
+        });
+      }
+      function pseudoWorkflow() {
+        // Minimal shape so the renderer can preview findings before Analyze.
+        return {
+          file: selectedFile ? {
+            name: selectedFile.name,
+            size: selectedFile.size,
+            last_modified: selectedFile.lastModified
+          } : null,
+          summary: liveSummary,
+          status: null
+        };
+      }
+      function refreshTables() {
+        const cur = RW.find(RW.current());
+        const wfView = cur || pseudoWorkflow();
+        const Findings = (window.OC && window.OC.ReviewerFindings) || null;
+        if (!Findings) {
+          elFindings.innerHTML = '<tr><td>findings module unavailable</td></tr>';
+          elImplications.innerHTML = '<tr><td>findings module unavailable</td></tr>';
+          return;
+        }
+        const d = Findings.derive(wfView);
+        // Stage-aware filtering. revealedStages === null => show everything
+        // (idle/before-run, or post-completion). Otherwise only rows whose
+        // .stage is in the set are visible — progressive reveal during run.
+        function visible(rows) {
+          if (!revealedStages) return rows;
+          return rows.filter(function (r) { return revealedStages.has(r.stage); });
+        }
+        renderTable(elFindings, visible(d.findings));
+        renderTable(elImplications, visible(d.implications));
+      }
+
+      // ---- Live analysis stream + runtime state -----------------------------
+      function setRuntimeState(state) {
+        elRuntimeState.dataset.state = state;
+        elRuntimeState.textContent = state;
+      }
+      function clearStream() { elStream.innerHTML = ''; }
+      function appendStreamLine(text, cls) {
+        const li = document.createElement('li');
+        li.className = 'oc-rwx__stream-line' + (cls ? ' ' + cls : '');
+        li.textContent = text;
+        elStream.appendChild(li);
+        elStream.scrollTop = elStream.scrollHeight;
+        return li;
+      }
+      function nowStamp() {
+        return new Date().toISOString().slice(11, 23);
+      }
+
+      function startStagedAnalyze(priorWorkflowId) {
+        const Runner = window.OC && window.OC.AnalysisRunner;
+        if (!Runner) {
+          // Runner unavailable — fall back to direct startAnalyze.
+          const wf = RW.startAnalyze(selectedFile, readSummary(), priorWorkflowId || null);
+          writeSummary(wf.summary);
+          revealedStages = null;
+          refreshAll();
+          return;
+        }
+        const planned = Runner.plan({ name: selectedFile.name, size: selectedFile.size, lastModified: selectedFile.lastModified });
+        clearStream();
+        revealedStages = new Set();
+        elStreamProfile.textContent = 'profile: ' + planned.profile.kind + ' · ' + planned.profile.label;
+        elStreamEta.textContent = 'ETA ≈ ' + (planned.total_ms / 1000).toFixed(1) + ' s · ' + planned.stages.length + ' stages';
+        appendStreamLine('[' + nowStamp() + '] runtime engaged — reviewer: ' + (committedReviewer() || elReviewer.value.trim()), 'oc-rwx__stream-line--meta');
+        appendStreamLine('[' + nowStamp() + '] source: ' + selectedFile.name + ' (' + fmtBytes(selectedFile.size) + ')', 'oc-rwx__stream-line--meta');
+
+        const stageStartLines = {};
+        analysisCtl = Runner.run({
+          file: { name: selectedFile.name, size: selectedFile.size, lastModified: selectedFile.lastModified },
+          summary: readSummary(),
+          priorWorkflowId: priorWorkflowId || null,
+          onState: function (state) {
+            setRuntimeState(state);
+            refreshButtons();
+          },
+          onStage: function (stg, phase) {
+            if (phase === 'start') {
+              stageStartLines[stg.id] = appendStreamLine(
+                '[' + nowStamp() + '] ▸ ' + stg.label + ' …',
+                'oc-rwx__stream-line--running'
+              );
+            } else if (phase === 'complete') {
+              const li = stageStartLines[stg.id];
+              if (li) {
+                li.classList.remove('oc-rwx__stream-line--running');
+                li.classList.add('oc-rwx__stream-line--complete');
+                li.textContent = '[' + nowStamp() + '] ✓ ' + stg.label + ' — complete';
+              }
+              revealedStages.add(stg.id);
+              refreshTables();
+            }
+          },
+          onComplete: function (wf) {
+            analysisCtl = null;
+            revealedStages = null; // unlock all rows
+            writeSummary(wf.summary || {});
+            appendStreamLine('[' + nowStamp() + '] ✓ envelopes constructed (' +
+              (wf.analyze_envelopes ? wf.analyze_envelopes.length : 0) +
+              ' analyze · workflow ' + wf.workflow_id.slice(0, 18) + '…)',
+              'oc-rwx__stream-line--complete');
+            appendStreamLine('[' + nowStamp() + '] runtime state: completed', 'oc-rwx__stream-line--meta');
+            refreshAll();
+          },
+          onError: function (err) {
+            analysisCtl = null;
+            revealedStages = null;
+            appendStreamLine('[' + nowStamp() + '] ✗ analysis failed: ' + err.message,
+              'oc-rwx__stream-line--error');
+            refreshAll();
+            alert('Analyze failed: ' + err.message);
+          }
+        });
+        refreshButtons();
+      }
       function refreshAll() {
-        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle();
+        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle(); refreshTables();
       }
 
       elReviewerSet.addEventListener('click', function () {
+        // Explicit commit; preserves fail-closed (empty -> anonymous, runtime will refuse).
         State.setReviewer(elReviewer.value.trim() || 'anonymous');
         refreshAll();
       });
       elReviewer.addEventListener('input', refreshButtons);
+      // Auto-commit on blur (text inputs fire `change` on blur when value changed).
+      elReviewer.addEventListener('change', commitReviewer);
+      elReviewer.addEventListener('blur', commitReviewer);
+      elReviewer.addEventListener('keydown', function (ev) {
+        if (ev.key === 'Enter') {
+          ev.preventDefault();
+          if (commitReviewer()) elReviewer.blur();
+        }
+      });
 
       elFile.addEventListener('change', function (ev) {
         const f = ev.target.files && ev.target.files[0];
@@ -302,9 +611,8 @@
       elBtnAnalyze.addEventListener('click', function () {
         try {
           if (elReviewer.value.trim()) State.setReviewer(elReviewer.value.trim());
-          const wf = RW.startAnalyze(selectedFile, readSummary(), null);
-          writeSummary(wf.summary);
-          refreshAll();
+          if (analysisCtl) return;
+          startStagedAnalyze(null);
         } catch (e) { alert('Analyze failed: ' + e.message); }
       });
 
@@ -322,10 +630,9 @@
         try {
           const cur = RW.find(RW.current());
           if (!cur) throw new Error('no current workflow');
-          const wf = RW.reanalyze(cur.workflow_id, readSummary());
-          writeSummary(wf.summary);
+          if (analysisCtl) return;
           elConclusion.value = '';
-          refreshAll();
+          startStagedAnalyze(cur.workflow_id);
         } catch (e) { alert('Re-analyze failed: ' + e.message); }
       });
 
