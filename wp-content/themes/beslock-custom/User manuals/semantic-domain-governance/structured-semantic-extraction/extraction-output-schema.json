@@ -1,0 +1,98 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "structured-semantic-extraction",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "Canonical row shape produced by structured extraction.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "fields": [
+    {
+      "name": "product",
+      "notes": "null when portfolio-level",
+      "type": "string|null"
+    },
+    {
+      "name": "domain",
+      "notes": "MUST resolve to semantic-domain-catalog id",
+      "type": "string"
+    },
+    {
+      "name": "subdomain",
+      "type": "string|null"
+    },
+    {
+      "name": "field",
+      "type": "string"
+    },
+    {
+      "name": "value",
+      "type": "string|number|boolean"
+    },
+    {
+      "name": "unit",
+      "type": "string|null"
+    },
+    {
+      "name": "source_evidence_id",
+      "notes": "layer-32 evidence id",
+      "type": "string"
+    },
+    {
+      "name": "trust_tier",
+      "notes": "layer-32 trust tier",
+      "type": "string"
+    },
+    {
+      "name": "extraction_method",
+      "notes": "MUST be one of: spreadsheet, json, yaml, markdown-table",
+      "type": "string"
+    }
+  ],
+  "id": "extraction-output-schema"
+}
