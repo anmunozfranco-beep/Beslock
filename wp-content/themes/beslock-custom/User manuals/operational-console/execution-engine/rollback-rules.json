@@ -1,0 +1,130 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 39,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Deterministic rollback governance. Rollback NEVER deletes evidence; it copies the previous state forward and marks the failed state as preserved.",
+  "requires_reviewer_confirmation": true,
+  "rollback_kinds": [
+    {
+      "action": "copy_destination_back_to_staging_review_pending",
+      "kind": "revert-failed-placement",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "restore_previous_manifest_and_mark_destination_as_quarantined",
+      "kind": "revert-failed-mutation",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "mark_refresh_event_as_rolled_back_and_restore_prior_publication_pointer",
+      "kind": "revert-failed-refresh",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "append_previous_manifest_back_to_event_store",
+      "kind": "restore-previous-manifest",
+      "preserves_failed_state": true
+    },
+    {
+      "action": "no_op_evidence_already_preserved_in_failed_directory",
+      "kind": "preserve-failed-state-evidence",
+      "preserves_failed_state": true
+    }
+  ],
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "R-RB-1",
+      "rule": "rollback_requires_reviewer_authorization"
+    },
+    {
+      "fail_closed": true,
+      "id": "R-RB-2",
+      "rule": "rollback_must_be_append_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "R-RB-3",
+      "rule": "rollback_must_not_delete_evidence"
+    },
+    {
+      "fail_closed": true,
+      "id": "R-RB-4",
+      "rule": "rollback_must_emit_lineage_event"
+    },
+    {
+      "fail_closed": true,
+      "id": "R-RB-5",
+      "rule": "rollback_must_reference_original_operation_id"
+    },
+    {
+      "fail_closed": true,
+      "id": "R-RB-6",
+      "rule": "rollback_must_preserve_audit_history"
+    }
+  ],
+  "schema": "governed-filesystem-orchestration/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance"
+  ],
+  "telemetry": false,
+  "title": "Rollback Rules",
+  "updated_at": "2026-05-14T12:23:11Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false
+}

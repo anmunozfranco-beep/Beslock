@@ -1,0 +1,189 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 39,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "forbidden_destination_reason": "Knowledge-core, governance, runtime-implementation and the runtime manifest event stores are immutable from intake. Mutation requests targeting them MUST fail closed in the executor.",
+  "forbidden_destinations": [
+    "wp-includes/",
+    "wp-admin/",
+    "wp-content/plugins/",
+    "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/",
+    "wp-content/themes/beslock-custom/User manuals/_repository-governance/",
+    "wp-content/themes/beslock-custom/User manuals/operational-console/runtime-manifests/",
+    "runtime-implementation/"
+  ],
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "product_slugs": [
+    "e-orbit",
+    "e-prime",
+    "e-flex",
+    "e-touch",
+    "e-shield",
+    "e-nova"
+  ],
+  "purpose": "Deterministically map (evidence_class, format_category, product, domain, trust_tier) -> proposed repository destination. The reviewer may override; the engine never auto-commits.",
+  "requires_reviewer_confirmation": true,
+  "rules": [
+    {
+      "destination_template": "ext-documents/{product}/source-of-truth/manuals/",
+      "id": "R-DEST-1",
+      "match": {
+        "evidence_class": "manual",
+        "format_category": "document"
+      },
+      "reasoning": "Manuals are canonical product source-of-truth documents.",
+      "trust_tier_required": "tier-2-reviewer-validated"
+    },
+    {
+      "destination_template": "ext-documents/{product}/source-of-truth/datasheets/",
+      "id": "R-DEST-2",
+      "match": {
+        "evidence_class": "datasheet",
+        "format_category": "document"
+      },
+      "reasoning": "Datasheets are canonical specifications evidence.",
+      "trust_tier_required": "tier-2-reviewer-validated"
+    },
+    {
+      "destination_template": "ext-images/{product}/intake/",
+      "id": "R-DEST-3",
+      "match": {
+        "evidence_class": "image",
+        "format_category": "image"
+      },
+      "reasoning": "Raw images enter through intake before reviewer promotion.",
+      "trust_tier_required": "tier-1-intake"
+    },
+    {
+      "destination_template": "ext-videos/{product}/intake/",
+      "id": "R-DEST-4",
+      "match": {
+        "evidence_class": "video",
+        "format_category": "video"
+      },
+      "reasoning": "Raw videos enter through intake before reviewer promotion.",
+      "trust_tier_required": "tier-1-intake"
+    },
+    {
+      "destination_template": "ext-documents/{product}/source-of-truth/specifications/",
+      "id": "R-DEST-5",
+      "match": {
+        "evidence_class": "specification",
+        "format_category": "structured"
+      },
+      "reasoning": "Structured specifications attach to canonical specs domain.",
+      "trust_tier_required": "tier-2-reviewer-validated"
+    },
+    {
+      "destination_template": "ext-documents/{product}/source-of-truth/service-bulletins/",
+      "id": "R-DEST-6",
+      "match": {
+        "evidence_class": "service-bulletin",
+        "format_category": "document"
+      },
+      "reasoning": "Service bulletins are reviewer-validated operational evidence.",
+      "trust_tier_required": "tier-2-reviewer-validated"
+    },
+    {
+      "destination_template": "ext-documents/{product}/intake/archives/",
+      "id": "R-DEST-7",
+      "match": {
+        "evidence_class": "reference-archive",
+        "format_category": "archive"
+      },
+      "reasoning": "Archives must be reviewer-unpacked before promotion.",
+      "trust_tier_required": "tier-0-unvalidated"
+    },
+    {
+      "destination_template": "ext-documents/_portfolio/{domain}/",
+      "id": "R-DEST-8",
+      "match": {
+        "evidence_class": "portfolio-asset"
+      },
+      "reasoning": "Portfolio assets attach to portfolio domain, not product.",
+      "trust_tier_required": "tier-2-reviewer-validated"
+    },
+    {
+      "destination_template": "operational-console/staging/review-pending/{product}/",
+      "id": "R-DEST-9",
+      "match": {
+        "trust_tier": "tier-0-unvalidated"
+      },
+      "reasoning": "Unvalidated evidence is held in staging until reviewer raises trust tier.",
+      "trust_tier_required": "tier-0-unvalidated"
+    },
+    {
+      "destination_template": "operational-console/staging/review-pending/_uncategorised/",
+      "id": "R-DEST-10",
+      "match": {
+        "evidence_class": "*",
+        "product": "*"
+      },
+      "reasoning": "Fallback when no specific rule matched; reviewer triage required.",
+      "trust_tier_required": "tier-0-unvalidated"
+    }
+  ],
+  "schema": "governed-filesystem-orchestration/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance"
+  ],
+  "telemetry": false,
+  "title": "Destination Resolution Rules",
+  "updated_at": "2026-05-14T12:23:11Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false
+}

@@ -1,0 +1,10 @@
+# Governed Filesystem Orchestration Governance (phase 46, layer 39)
+
+- [Real Mutation, Reviewer Authorized](./01-real-mutation-but-reviewer-authorized-doctrine.md)
+- [CLI Only, No Daemon](./02-cli-only-no-daemon-doctrine.md)
+- [No Destructive Overwrite](./03-no-destructive-overwrite-doctrine.md)
+- [Append-Only Event Stores](./04-append-only-event-stores-doctrine.md)
+- [Deterministic Destination Resolution](./05-deterministic-destination-resolution-doctrine.md)
+- [Fail-Closed Safety](./06-fail-closed-safety-doctrine.md)
+- [Rollback Preserves Evidence](./07-rollback-preserves-evidence-doctrine.md)
+- [Knowledge-Core and Governance Immutable From Intake](./08-knowledge-core-and-governance-immutable-from-intake-doctrine.md)
