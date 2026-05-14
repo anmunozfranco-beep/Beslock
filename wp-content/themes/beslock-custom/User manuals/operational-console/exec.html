@@ -56,158 +56,74 @@
       </section>
     </aside>
 
-    <!-- CENTER: semantic analysis results -->
-    <section class="oc-rwx__center">
-      <header class="oc-rwx__center-header">
-        <h2>Semantic review</h2>
+    <!-- CENTER: live execution terminal (single surface) -->
+    <section class="oc-rwx__center oc-rwx__center--terminal">
+      <header class="oc-rwx__terminal-header">
+        <span class="oc-rwx__terminal-title">runtime://reviewer-workspace</span>
         <span class="oc-rwx__runtime-state" id="rwx-runtime-state" data-state="idle">idle</span>
+        <span class="oc-rwx__chip" id="rwx-stream-profile">profile: idle</span>
+        <span class="oc-rwx__chip oc-rwx__chip--solo" id="rwx-stream-eta">ETA &mdash;</span>
         <span class="oc-rwx__status" id="rwx-status" data-status="empty">no workflow</span>
       </header>
+      <ol class="oc-rwx__terminal" id="rwx-stream" aria-live="polite">
+        <li class="oc-rwx__stream-line oc-rwx__stream-line--idle">// runtime idle &mdash; select a file, then engage analyze.</li>
+      </ol>
+      <details class="oc-rwx__advanced-bundle">
+        <summary>// raw operational bundle</summary>
+        <pre class="oc-exec__pre" id="rwx-bundle-preview">{}</pre>
+      </details>
+    </section>
 
-      <section class="oc-rwx__panel oc-rwx__panel--stream">
-        <h3>Live analysis stream</h3>
-        <div class="oc-rwx__stream-meta">
-          <span id="rwx-stream-profile" class="oc-rwx__chip">profile: idle</span>
-          <span id="rwx-stream-eta" class="oc-rwx__chip oc-rwx__chip--solo">ETA —</span>
-        </div>
-        <ol class="oc-rwx__stream" id="rwx-stream" aria-live="polite">
-          <li class="oc-rwx__stream-line oc-rwx__stream-line--idle">Runtime idle. Select a file and click Analyze to begin.</li>
-        </ol>
-      </section>
-
-      <section class="oc-rwx__panel oc-rwx__panel--summary">
-        <h3>Analysis findings</h3>
-        <p class="oc-exec__hint">
-          Operational records emerge as each stage of the analysis sequence
-          completes. Derived deterministically from the source file and the
-          existing Phase 52/54/55 dispatch map.
-        </p>
-        <table class="oc-rwx__table" id="rwx-findings">
-          <tbody></tbody>
-        </table>
+    <!-- RIGHT: reviewer actions + attestation -->
+    <aside class="oc-rwx__right">
+      <section class="oc-rwx__panel oc-rwx__panel--actions">
+        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>&#9654; analyze</button>
+        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>&#10003; accept</button>
+        <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>&#8634; re-analyze</button>
+        <hr />
+        <button class="oc-exec__btn" id="rwx-export-bundle" disabled>&#8681; export bundle (.json)</button>
       </section>
 
       <section class="oc-rwx__panel oc-rwx__panel--attestation">
-        <h3>Reviewer attestation</h3>
-        <p class="oc-exec__hint">
-          Reviewer-authored counts. The platform never infers these. Adjust
-          before Accept.
-        </p>
+        <h3>// reviewer attestation</h3>
         <div class="oc-rwx__attest" id="rwx-attest">
-          <label data-summary-key="procedures_detected">
-            <span>Procedures</span>
-            <input type="number" min="0" step="1" value="0" />
-          </label>
-          <label data-summary-key="warning_groups">
-            <span>Warnings</span>
-            <input type="number" min="0" step="1" value="0" />
-          </label>
-          <label data-summary-key="troubleshooting_groups">
-            <span>Troubleshooting</span>
-            <input type="number" min="0" step="1" value="0" />
-          </label>
-          <label data-summary-key="visual_support_requirements">
-            <span>Visual support</span>
-            <input type="number" min="0" step="1" value="0" />
-          </label>
-          <label data-summary-key="prompt_packages">
-            <span>Prompt packages</span>
-            <input type="number" min="0" step="1" value="0" />
-          </label>
+          <label data-summary-key="procedures_detected"><span>proc</span><input type="number" min="0" step="1" value="0" /></label>
+          <label data-summary-key="warning_groups"><span>warn</span><input type="number" min="0" step="1" value="0" /></label>
+          <label data-summary-key="troubleshooting_groups"><span>tshoot</span><input type="number" min="0" step="1" value="0" /></label>
+          <label data-summary-key="visual_support_requirements"><span>visual</span><input type="number" min="0" step="1" value="0" /></label>
+          <label data-summary-key="prompt_packages"><span>prompt</span><input type="number" min="0" step="1" value="0" /></label>
         </div>
-        <label class="oc-rwx__field">
-          <span>Reviewer notes</span>
-          <textarea id="rwx-sum-notes" rows="2"
-            placeholder="Brief reviewer commentary on what was found in the source."></textarea>
-        </label>
-      </section>
-
-      <section class="oc-rwx__panel">
-        <h3>Runtime implications</h3>
-        <p class="oc-exec__hint">
-          Where this resource will be routed and what it will produce after
-          Accept. Derived from existing dispatch wiring — not a new runtime.
-        </p>
-        <table class="oc-rwx__table" id="rwx-implications">
-          <tbody></tbody>
-        </table>
-      </section>
-
-      <section class="oc-rwx__panel">
-        <h3>Acceptance conclusion</h3>
-        <label class="oc-rwx__field">
-          <span>Reviewer conclusion (required for Accept)</span>
-          <textarea id="rwx-conclusion" rows="2"
-            placeholder="One-line attestation. e.g. 'Reviewed; semantic inventory matches source; ready for export.'"></textarea>
-        </label>
-      </section>
-
-      <section class="oc-rwx__panel">
-        <details class="oc-rwx__advanced-bundle">
-          <summary>Advanced · Raw operational bundle</summary>
-          <p class="oc-exec__hint">
-            Append-only envelope bundle. Pipe through
-            <code class="oc-exec__kbd">tools/governed_fs_executor.py</code> to materialize
-            export-ready entities. The browser never writes to disk.
-          </p>
-          <pre class="oc-exec__pre" id="rwx-bundle-preview">{}</pre>
-        </details>
-      </section>
-    </section>
-
-    <!-- RIGHT: reviewer actions -->
-    <aside class="oc-rwx__right">
-      <section class="oc-rwx__panel oc-rwx__panel--actions">
-        <h3>Actions</h3>
-        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>Analyze</button>
-        <p class="oc-exec__hint">
-          Orchestrates extraction, convergence, synthesis, visual-support detection,
-          and prompt-package pre-generation in one operation.
-        </p>
-
-        <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>Accept</button>
-        <p class="oc-exec__hint">
-          Triggers lifecycle, export-ready entity generation, stabilization,
-          readiness audit, handoff and final attestation.
-        </p>
-
-        <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>Re-analyze</button>
-        <p class="oc-exec__hint">
-          Lineage-aware: preserves prior analysis and supersedes via pointer.
-          Never overwrites.
-        </p>
-
-        <hr />
-        <button class="oc-exec__btn" id="rwx-export-bundle" disabled>Export bundle (.json)</button>
-      </section>
-
-      <section class="oc-rwx__panel">
-        <h3>Operational guarantees</h3>
-        <ul class="oc-list oc-rwx__guarantees">
-          <li>Append-only lineage</li>
-          <li>Deterministic replay</li>
-          <li>Reviewer authority required</li>
-          <li>Fail-closed on missing attribution</li>
-          <li>Overwrite protection enforced</li>
-          <li>No autonomous approval</li>
-          <li>No probabilistic inference</li>
-          <li>No embeddings · No ML/LLM</li>
-          <li>No telemetry · No dashboards</li>
-        </ul>
+        <textarea id="rwx-sum-notes" rows="2" placeholder="// reviewer notes (optional)"></textarea>
+        <textarea id="rwx-conclusion" rows="2" placeholder="// reviewer conclusion (required for accept)"></textarea>
       </section>
 
       <section class="oc-rwx__panel">
         <details>
-          <summary>Advanced consoles (per-runtime)</summary>
+          <summary>// guarantees</summary>
+          <ul class="oc-list oc-rwx__guarantees">
+            <li>append-only lineage</li>
+            <li>deterministic replay</li>
+            <li>reviewer authority required</li>
+            <li>fail-closed on missing attribution</li>
+            <li>no autonomous approval</li>
+            <li>no embeddings &middot; no ml/llm</li>
+            <li>no telemetry &middot; no network</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <details>
+          <summary>// advanced consoles</summary>
           <ul class="oc-rwx__advanced">
-            <li><a class="oc-link" href="intake-console/exec.html">Intake</a></li>
-            <li><a class="oc-link" href="routing-console/exec.html">Routing</a></li>
-            <li><a class="oc-link" href="reconciliation-console/exec.html">Reconciliation</a></li>
-            <li><a class="oc-link" href="publication-console/exec.html">Publication</a></li>
-            <li><a class="oc-link" href="governance-console/exec.html">Governance</a></li>
-            <li><a class="oc-link" href="reviewer-workflow-console/exec.html">Reviewer workflow (raw)</a></li>
-            <li><a class="oc-link" href="runtime-navigation-console/exec.html">Runtime navigation</a></li>
-            <li><a class="oc-link" href="index.html">Full dashboard</a></li>
+            <li><a class="oc-link" href="intake-console/exec.html">intake</a></li>
+            <li><a class="oc-link" href="routing-console/exec.html">routing</a></li>
+            <li><a class="oc-link" href="reconciliation-console/exec.html">reconciliation</a></li>
+            <li><a class="oc-link" href="publication-console/exec.html">publication</a></li>
+            <li><a class="oc-link" href="governance-console/exec.html">governance</a></li>
+            <li><a class="oc-link" href="reviewer-workflow-console/exec.html">reviewer workflow (raw)</a></li>
+            <li><a class="oc-link" href="runtime-navigation-console/exec.html">runtime navigation</a></li>
+            <li><a class="oc-link" href="index.html">full dashboard</a></li>
           </ul>
         </details>
       </section>
@@ -247,8 +163,6 @@
       const elBtnReanalyze = $('rwx-reanalyze');
       const elBtnExport = $('rwx-export-bundle');
       const elBundlePreview = $('rwx-bundle-preview');
-      const elFindings = $('rwx-findings').querySelector('tbody');
-      const elImplications = $('rwx-implications').querySelector('tbody');
       const elAttest = $('rwx-attest');
       const elStream = $('rwx-stream');
       const elStreamProfile = $('rwx-stream-profile');
@@ -259,7 +173,6 @@
 
       let selectedFile = null;
       let analysisCtl = null;            // active runner controller, if any
-      let revealedStages = null;         // Set<stageId> — null = reveal all (post-analyze)
       // Reviewer-authored summary lives in memory; bound to the attestation strip.
       // Persists into wf.summary at Analyze/Accept.
       let liveSummary = {
@@ -399,99 +312,6 @@
         }, null, 2);
       }
 
-      // ---- Dynamic finding/implication table renderer ---------------------
-      // Renders any { label, kind, value|values, editable?, hint? } row.
-      // Future findings can be added without touching this UI — just extend
-      // OC.ReviewerFindings.deriveFindings / deriveImplications.
-      function renderCell(row) {
-        const td = document.createElement('td');
-        td.className = 'oc-rwx__table-val oc-rwx__table-val--' + (row.kind || 'text');
-        // Editable cells are now rendered exclusively inside the attestation
-        // strip; the findings table is read-only operational records.
-        if (row.kind === 'list' && Array.isArray(row.values)) {
-          if (!row.values.length) { td.textContent = '—'; return td; }
-          const ul = document.createElement('ul');
-          ul.className = 'oc-rwx__chiplist';
-          row.values.forEach(function (v) {
-            const li = document.createElement('li');
-            li.className = 'oc-rwx__chip';
-            li.textContent = String(v);
-            ul.appendChild(li);
-          });
-          td.appendChild(ul);
-          return td;
-        }
-        if (row.kind === 'badge') {
-          const span = document.createElement('span');
-          span.className = 'oc-rwx__chip oc-rwx__chip--solo';
-          span.textContent = row.value != null ? String(row.value) : '—';
-          td.appendChild(span);
-          return td;
-        }
-        if (row.kind === 'number') {
-          // Read-only numeric mirror (the editable input lives in the attestation strip).
-          const span = document.createElement('span');
-          span.className = 'oc-rwx__numeric';
-          span.textContent = row.value != null ? String(row.value) : '0';
-          td.appendChild(span);
-          return td;
-        }
-        td.textContent = row.value != null && row.value !== '' ? String(row.value) : '—';
-        return td;
-      }
-      function renderTable(tbody, rows) {
-        tbody.innerHTML = '';
-        rows.forEach(function (row) {
-          const tr = document.createElement('tr');
-          const th = document.createElement('th');
-          th.scope = 'row';
-          th.className = 'oc-rwx__table-key';
-          th.textContent = row.label;
-          if (row.hint) {
-            const small = document.createElement('span');
-            small.className = 'oc-rwx__table-hint';
-            small.textContent = row.hint;
-            th.appendChild(document.createElement('br'));
-            th.appendChild(small);
-          }
-          tr.appendChild(th);
-          tr.appendChild(renderCell(row));
-          tbody.appendChild(tr);
-        });
-      }
-      function pseudoWorkflow() {
-        // Minimal shape so the renderer can preview findings before Analyze.
-        return {
-          file: selectedFile ? {
-            name: selectedFile.name,
-            size: selectedFile.size,
-            last_modified: selectedFile.lastModified
-          } : null,
-          summary: liveSummary,
-          status: null
-        };
-      }
-      function refreshTables() {
-        const cur = RW.find(RW.current());
-        const wfView = cur || pseudoWorkflow();
-        const Findings = (window.OC && window.OC.ReviewerFindings) || null;
-        if (!Findings) {
-          elFindings.innerHTML = '<tr><td>findings module unavailable</td></tr>';
-          elImplications.innerHTML = '<tr><td>findings module unavailable</td></tr>';
-          return;
-        }
-        const d = Findings.derive(wfView);
-        // Stage-aware filtering. revealedStages === null => show everything
-        // (idle/before-run, or post-completion). Otherwise only rows whose
-        // .stage is in the set are visible — progressive reveal during run.
-        function visible(rows) {
-          if (!revealedStages) return rows;
-          return rows.filter(function (r) { return revealedStages.has(r.stage); });
-        }
-        renderTable(elFindings, visible(d.findings));
-        renderTable(elImplications, visible(d.implications));
-      }
-
       // ---- Live analysis stream + runtime state -----------------------------
       function setRuntimeState(state) {
         elRuntimeState.dataset.state = state;
@@ -506,6 +326,32 @@
         elStream.scrollTop = elStream.scrollHeight;
         return li;
       }
+      function appendStreamTable(table, cls) {
+        // Render a {title, rows:[[k,v]]} block as an inline monospace ASCII
+        // table inside the terminal stream. Append-only.
+        const li = document.createElement('li');
+        li.className = 'oc-rwx__stream-line oc-rwx__stream-line--table' + (cls ? ' ' + cls : '');
+        const pre = document.createElement('pre');
+        pre.className = 'oc-rwx__ascii-table';
+        const rows = (table.rows || []).map(function (r) {
+          return [String(r[0]), String(r[1])];
+        });
+        const kw = Math.max.apply(null, rows.map(function (r) { return r[0].length; }).concat([8]));
+        const vw = Math.max.apply(null, rows.map(function (r) { return r[1].length; }).concat([5]));
+        const sep = '+' + '-'.repeat(kw + 2) + '+' + '-'.repeat(vw + 2) + '+';
+        const out = [];
+        out.push('  // ' + (table.title || 'table'));
+        out.push('  ' + sep);
+        rows.forEach(function (r) {
+          out.push('  | ' + r[0].padEnd(kw, ' ') + ' | ' + r[1].padEnd(vw, ' ') + ' |');
+        });
+        out.push('  ' + sep);
+        pre.textContent = out.join('\n');
+        li.appendChild(pre);
+        elStream.appendChild(li);
+        elStream.scrollTop = elStream.scrollHeight;
+        return li;
+      }
       function nowStamp() {
         return new Date().toISOString().slice(11, 23);
       }
@@ -516,19 +362,15 @@
           // Runner unavailable — fall back to direct startAnalyze.
           const wf = RW.startAnalyze(selectedFile, readSummary(), priorWorkflowId || null);
           writeSummary(wf.summary);
-          revealedStages = null;
           refreshAll();
           return;
         }
         const planned = Runner.plan({ name: selectedFile.name, size: selectedFile.size, lastModified: selectedFile.lastModified });
         clearStream();
-        revealedStages = new Set();
         elStreamProfile.textContent = 'profile: ' + planned.profile.kind + ' · ' + planned.profile.label;
         elStreamEta.textContent = 'ETA ≈ ' + (planned.total_ms / 1000).toFixed(1) + ' s · ' + planned.stages.length + ' stages';
         appendStreamLine('[' + nowStamp() + '] runtime engaged — reviewer: ' + (committedReviewer() || elReviewer.value.trim()), 'oc-rwx__stream-line--meta');
-        appendStreamLine('[' + nowStamp() + '] source: ' + selectedFile.name + ' (' + fmtBytes(selectedFile.size) + ')', 'oc-rwx__stream-line--meta');
 
-        const stageStartLines = {};
         analysisCtl = Runner.run({
           file: { name: selectedFile.name, size: selectedFile.size, lastModified: selectedFile.lastModified },
           summary: readSummary(),
@@ -537,38 +379,32 @@
             setRuntimeState(state);
             refreshButtons();
           },
-          onStage: function (stg, phase) {
+          onStage: function (stg, phase, payload) {
             if (phase === 'start') {
-              stageStartLines[stg.id] = appendStreamLine(
-                '[' + nowStamp() + '] ▸ ' + stg.label + ' …',
-                'oc-rwx__stream-line--running'
-              );
-            } else if (phase === 'complete') {
-              const li = stageStartLines[stg.id];
-              if (li) {
-                li.classList.remove('oc-rwx__stream-line--running');
-                li.classList.add('oc-rwx__stream-line--complete');
-                li.textContent = '[' + nowStamp() + '] ✓ ' + stg.label + ' — complete';
+              appendStreamLine('[' + nowStamp() + '] >> ' + stg.label, 'oc-rwx__stream-line--stage');
+            } else if (phase === 'narrate' && payload) {
+              if (payload.table) {
+                appendStreamTable(payload.table, 'oc-rwx__stream-line--' + (payload.kind || 'meta'));
+              } else if (payload.text) {
+                appendStreamLine('  ' + payload.text, 'oc-rwx__stream-line--' + (payload.kind || 'detect'));
               }
-              revealedStages.add(stg.id);
-              refreshTables();
+            } else if (phase === 'complete') {
+              appendStreamLine('[' + nowStamp() + '] << ' + stg.label + ' complete', 'oc-rwx__stream-line--complete');
             }
           },
           onComplete: function (wf) {
             analysisCtl = null;
-            revealedStages = null; // unlock all rows
             writeSummary(wf.summary || {});
-            appendStreamLine('[' + nowStamp() + '] ✓ envelopes constructed (' +
+            appendStreamLine('[' + nowStamp() + '] [runtime] envelopes constructed (' +
               (wf.analyze_envelopes ? wf.analyze_envelopes.length : 0) +
               ' analyze · workflow ' + wf.workflow_id.slice(0, 18) + '…)',
               'oc-rwx__stream-line--complete');
-            appendStreamLine('[' + nowStamp() + '] runtime state: completed', 'oc-rwx__stream-line--meta');
+            appendStreamLine('[' + nowStamp() + '] [runtime] analysis completed successfully', 'oc-rwx__stream-line--complete');
             refreshAll();
           },
           onError: function (err) {
             analysisCtl = null;
-            revealedStages = null;
-            appendStreamLine('[' + nowStamp() + '] ✗ analysis failed: ' + err.message,
+            appendStreamLine('[' + nowStamp() + '] [runtime] analysis failed: ' + err.message,
               'oc-rwx__stream-line--error');
             refreshAll();
             alert('Analyze failed: ' + err.message);
@@ -577,7 +413,7 @@
         refreshButtons();
       }
       function refreshAll() {
-        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle(); refreshTables();
+        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle();
       }
 
       elReviewerSet.addEventListener('click', function () {

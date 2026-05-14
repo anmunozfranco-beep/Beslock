@@ -468,3 +468,175 @@
 
 /* Disable Analyze/Reanalyze visually while runner is active. */
 .oc-rwx__btn-primary[disabled] { animation: none; }
+
+/* ---- Phase 60.1: full-terminal center surface ---- */
+.oc-rwx__center--terminal {
+  background: #060b14;
+  border: 1px solid #1f2c45;
+  border-radius: 6px;
+  padding: 0;
+  display: flex; flex-direction: column;
+  min-height: 70vh;
+  overflow: hidden;
+}
+.oc-rwx__terminal-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px;
+  background: #0a121f;
+  border-bottom: 1px solid #1f2c45;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  flex-wrap: wrap;
+}
+.oc-rwx__terminal-title {
+  color: #f5d27a;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-right: auto;
+}
+.oc-rwx__terminal {
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  background: #060b14;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  line-height: 1.55;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  color: #cfd6e2;
+  min-height: 360px;
+}
+.oc-rwx__terminal .oc-rwx__stream-line {
+  padding: 1px 0;
+  white-space: pre-wrap;
+}
+.oc-rwx__stream-line--idle     { color: #6c7a90; font-style: italic; }
+.oc-rwx__stream-line--meta     { color: #6c7a90; }
+.oc-rwx__stream-line--stage    { color: #f5d27a; font-weight: 600; padding-top: 6px !important; }
+.oc-rwx__stream-line--complete { color: #8be9a3; }
+.oc-rwx__stream-line--error    { color: #e89a9a; }
+.oc-rwx__stream-line--scan     { color: #cfd6e2; }
+.oc-rwx__stream-line--classify { color: #9cd2ff; }
+.oc-rwx__stream-line--meta     { color: #6c7a90; }
+.oc-rwx__stream-line--frame    { color: #c19af0; }
+.oc-rwx__stream-line--ocr      { color: #ffd180; }
+.oc-rwx__stream-line--sem      { color: #9cd2ff; }
+.oc-rwx__stream-line--detect   { color: #8be9a3; }
+.oc-rwx__stream-line--conv     { color: #c19af0; }
+.oc-rwx__stream-line--impl     { color: #ffd180; }
+.oc-rwx__stream-line--syn      { color: #f5d27a; }
+.oc-rwx__stream-line--table    { padding: 4px 0 !important; }
+.oc-rwx__ascii-table {
+  margin: 0;
+  padding: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #e4ecf7;
+  white-space: pre;
+  background: transparent;
+}
+
+.oc-rwx__center--terminal .oc-rwx__advanced-bundle {
+  border-top: 1px solid #1f2c45;
+  padding: 6px 12px;
+  background: #0a121f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+}
+.oc-rwx__center--terminal .oc-rwx__advanced-bundle summary {
+  cursor: pointer;
+  color: #6c7a90;
+  padding: 4px 0;
+}
+.oc-rwx__center--terminal .oc-rwx__advanced-bundle[open] summary { color: #f5d27a; }
+.oc-rwx__center--terminal .oc-rwx__advanced-bundle .oc-exec__pre {
+  margin-top: 6px; max-height: 220px;
+}
+
+/* ---- Right pane: terminal-control posture ---- */
+.oc-rwx__panel--actions {
+  background: #0a121f;
+  border: 1px solid #1f2c45;
+  padding: 10px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.oc-rwx__panel--actions .oc-exec__btn,
+.oc-rwx__panel--actions .oc-rwx__btn-primary {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  padding: 8px 10px;
+  text-align: left;
+  letter-spacing: 0.02em;
+  border-radius: 4px;
+}
+.oc-rwx__panel--actions hr {
+  border: 0; border-top: 1px solid #1f2c45; margin: 4px 0;
+}
+
+/* Right-pane attestation: compact strip */
+.oc-rwx__panel--attestation h3 {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #f5d27a;
+  font-size: 11px;
+  margin: 0 0 6px 0;
+}
+.oc-rwx__panel--attestation .oc-rwx__attest {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  margin: 0 0 6px 0;
+}
+.oc-rwx__panel--attestation .oc-rwx__attest label {
+  font-size: 9.5px;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  gap: 1px;
+}
+.oc-rwx__panel--attestation .oc-rwx__attest input[type="number"] {
+  background: #060b14;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  padding: 3px 4px;
+}
+.oc-rwx__panel--attestation textarea {
+  background: #060b14;
+  color: #e4ecf7;
+  border: 1px solid #2a3953;
+  border-radius: 4px;
+  padding: 5px 7px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11.5px;
+  width: 100%;
+  margin-top: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Compact guarantees + advanced consoles details */
+.oc-rwx__right details summary {
+  cursor: pointer;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: #f5d27a;
+  padding: 2px 0;
+}
+.oc-rwx__right .oc-rwx__guarantees {
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-top: 6px;
+  color: #cfd6e2;
+}
+.oc-rwx__right .oc-rwx__advanced {
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  margin-top: 6px;
+}
+
+/* Status pill (right side of terminal header) - downsized */
+.oc-rwx__terminal-header .oc-rwx__status {
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: lowercase;
+}
