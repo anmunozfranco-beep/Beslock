@@ -663,3 +663,52 @@
 }
 .oc-rwx__btn-fs:hover { background: #265038; }
 .oc-rwx__btn-fs[disabled] { background: #2a2f3d; color: #6c7a90; border-color: #2a2f3d; cursor: not-allowed; }
+
+/* ---- Phase 62: AI augmentation channel (advisory-only, non-canonical) ---- */
+.oc-rwx__ai-toggle {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 8px;
+  background: #181a2e;
+  border: 1px dashed #4a3a6a;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: #c19af0;
+  cursor: pointer;
+  margin: 4px 0;
+}
+.oc-rwx__ai-toggle input[type="checkbox"] { accent-color: #c19af0; margin: 0; }
+
+/* AI lines stand DELIBERATELY apart from canonical [runtime]/[fs] lines. */
+.oc-rwx__stream-line--ai {
+  color: #c19af0;
+  border-left: 2px solid #4a3a6a;
+  padding-left: 8px !important;
+  margin-left: 2px;
+}
+.oc-rwx__stream-line--ai-meta {
+  color: #8a7ab0;
+  font-style: italic;
+}
+.oc-rwx__stream-line--ai-banner {
+  color: #c19af0;
+  background: #181a2e;
+  padding: 2px 8px !important;
+  border-left: 3px solid #6a4aa0;
+  margin: 4px 0 !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---- Phase 62.1: AI ASCII tables (distinct from canonical) ---- */
+.oc-rwx__stream-line--ai-table {
+  border-left: 3px solid #6a4aa0;
+  background: #15162a;
+  padding: 6px 8px !important;
+  margin: 2px 0 !important;
+}
+.oc-rwx__stream-line--ai-table .oc-rwx__ascii-table {
+  color: #c19af0;
+  background: transparent;
+  margin: 0;
+}

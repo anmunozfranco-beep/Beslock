@@ -257,6 +257,29 @@
         }, Promise.resolve());
       })
       .then(function () {
+        // Phase 62: optional AI advisory artifact, stored in a deliberately
+        // separate non-canonical subtree. NEVER under runtime/envelopes/ or
+        // source-of-truth/. Reviewer-sealed via the manifest reference, but
+        // never authoritative.
+        if (!opts.aiAdvisory) return null;
+        return ensurePath(rootHandle, [product, 'runtime', 'ai-augmentation'])
+          .then(function (aiDir) {
+            const advisory = Object.assign({}, opts.aiAdvisory, {
+              workflow_id: wf.workflow_id,
+              prior_workflow_id: wf.prior_workflow_id || null,
+              reviewer: wf.reviewer || null,
+              authoritative: false,
+              advisory_only: true,
+              committed_at_iso: tsIso()
+            });
+            const name = ts + '__' + wfidShort + '__ai-advisory.json';
+            onLog('[fs] writing AI advisory (non-canonical) \u2192 runtime/ai-augmentation/' + name);
+            return writeFile(aiDir, name, JSON.stringify(advisory, null, 2)).then(function (rec) {
+              written.push({ path: product + '/runtime/ai-augmentation/' + rec.name, bytes: rec.bytes, advisory: true });
+            });
+          });
+      })
+      .then(function () {
         return ensurePath(rootHandle, [product, 'manifests']);
       })
       .then(function (manDir) {
@@ -272,6 +295,11 @@
           source_file: wf.file || null,
           envelope_count: (wf.analyze_envelopes || []).length + (wf.accept_envelopes || []).length
             + (wf.workflow_envelope ? 1 : 0),
+          ai_advisory_attached: !!opts.aiAdvisory,
+          ai_advisory_model_kind: opts.aiAdvisory ? (opts.aiAdvisory.model_kind || null) : null,
+          ai_advisory_semantic_model: opts.aiAdvisory ? (opts.aiAdvisory.semantic_model || null) : null,
+          ai_advisory_emergence_count: opts.aiAdvisory ? (opts.aiAdvisory.emergence_count || 0) : 0,
+          ai_advisory_active_domain_count: opts.aiAdvisory ? (opts.aiAdvisory.domain_count_active || 0) : 0,
           written_paths: written.map(function (w) { return w.path; }),
           authorized_root: rootName(),
           committed_at_iso: tsIso(),

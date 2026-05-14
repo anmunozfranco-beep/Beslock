@@ -79,6 +79,10 @@
     <aside class="oc-rwx__right">
       <section class="oc-rwx__panel oc-rwx__panel--actions">
         <button class="oc-exec__btn oc-rwx__btn-fs" id="rwx-authorize">&#128274; authorize runtime tree</button>
+        <label class="oc-rwx__ai-toggle">
+          <input type="checkbox" id="rwx-ai-toggle" />
+          <span>// enable AI augmentation (advisory-only)</span>
+        </label>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>&#9654; analyze</button>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>&#10003; accept</button>
         <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>&#8634; re-analyze</button>
@@ -142,6 +146,7 @@
   <script src="assets/exec/drafts.js" defer></script>
   <script src="assets/exec/fs-bridge.js" defer></script>
   <script src="assets/exec/fs-tree.js" defer></script>
+  <script src="assets/exec/ai-augmentation.js" defer></script>
   <script src="assets/exec/reviewer-workflow.js" defer></script>
   <script src="assets/exec/findings.js" defer></script>
   <script src="assets/exec/analysis-runner.js" defer></script>
@@ -167,6 +172,7 @@
       const elBtnExport = $('rwx-export-bundle');
       const elBtnAuthorize = $('rwx-authorize');
       const elFsState = $('rwx-fs-state');
+      const elAiToggle = $('rwx-ai-toggle');
       const elBundlePreview = $('rwx-bundle-preview');
       const elAttest = $('rwx-attest');
       const elStream = $('rwx-stream');
@@ -180,6 +186,7 @@
       let selectedBlob = null;          // real File object (for fs-tree copy)
       let analysisCtl = null;            // active runner controller, if any
       let acceptInFlight = false;        // guard concurrent Accept commits
+      let pendingAiAdvisory = null;      // last AI advisory (advisory-only) bound to current workflow
       // Reviewer-authored summary lives in memory; bound to the attestation strip.
       // Persists into wf.summary at Analyze/Accept.
       let liveSummary = {
@@ -388,7 +395,39 @@
         return new Date().toISOString().slice(11, 23);
       }
 
+      // ---- Phase 62 / 62.1: AI augmentation channel (advisory-only) ------
+      // Plays an OC.AIAugmentation stream plan back through the terminal
+      // with deterministic cadence so the reviewer perceives progressive
+      // semantic emergence rather than a single blob emission.
+      let aiPlaybackToken = 0;
+      function runAiAugmentationIfEnabled(wf) {
+        const AI = window.OC && window.OC.AIAugmentation;
+        const Runner = window.OC && window.OC.AnalysisRunner;
+        if (!AI || !AI.isEnabled() || !Runner || !selectedFile) {
+          pendingAiAdvisory = null;
+          return;
+        }
+        const ctx = Runner.ctxFor(selectedFile, wf.summary || {});
+        const advisory = AI.augment(ctx);
+        pendingAiAdvisory = advisory;
+        const plan = AI.buildStreamPlan(advisory);
+        const myToken = ++aiPlaybackToken;
+        plan.forEach(function (entry) {
+          setTimeout(function () {
+            // Cancel playback if a new analyze started in the meantime.
+            if (myToken !== aiPlaybackToken) return;
+            if (entry.table) {
+              appendStreamTable(entry.table, entry.cls);
+            } else {
+              appendStreamLine('[' + nowStamp() + '] ' + entry.line, entry.cls);
+            }
+          }, entry.delayMs);
+        });
+      }
+
       function startStagedAnalyze(priorWorkflowId) {
+        pendingAiAdvisory = null;  // advisory is per-analysis; never carries over
+        aiPlaybackToken++;          // cancel any in-flight AI playback
         const Runner = window.OC && window.OC.AnalysisRunner;
         if (!Runner) {
           // Runner unavailable — fall back to direct startAnalyze.
@@ -432,6 +471,8 @@
               ' analyze · workflow ' + wf.workflow_id.slice(0, 18) + '…)',
               'oc-rwx__stream-line--complete');
             appendStreamLine('[' + nowStamp() + '] [runtime] analysis completed successfully', 'oc-rwx__stream-line--complete');
+            // Phase 62: optional advisory-only augmentation, AFTER deterministic completion.
+            runAiAugmentationIfEnabled(wf);
             refreshAll();
           },
           onError: function (err) {
@@ -552,10 +593,19 @@
           workflow: accepted,
           fileBlob: selectedBlob,
           product: product,
+          aiAdvisory: pendingAiAdvisory,
           onLog: function (line) {
             appendStreamLine('  ' + line, 'oc-rwx__stream-line--detect');
           }
         }).then(function (result) {
+          if (pendingAiAdvisory) {
+            appendStreamLine('[' + nowStamp() + '] [ai] writing advisory artifacts → runtime/ai-augmentation/',
+              'oc-rwx__stream-line--ai-banner');
+            appendStreamLine('[' + nowStamp() + '] [ai] append-only advisory commit complete',
+              'oc-rwx__stream-line--ai-meta');
+            appendStreamLine('[' + nowStamp() + '] [ai] canonical manifests untouched · envelopes untouched',
+              'oc-rwx__stream-line--ai-meta');
+          }
           appendStreamLine('[' + nowStamp() + '] [runtime] accept committed (' +
             result.written.length + ' files, append-only, lineage preserved)',
             'oc-rwx__stream-line--complete');
@@ -612,6 +662,25 @@
         });
       } else {
         refreshFsState();
+      }
+
+      // Phase 62: AI augmentation toggle (off by default; reviewer-triggered).
+      const AI = window.OC && window.OC.AIAugmentation;
+      if (AI) {
+        elAiToggle.checked = AI.isEnabled();
+        elAiToggle.addEventListener('change', function () {
+          if (elAiToggle.checked) {
+            AI.enable();
+            appendStreamLine('[' + nowStamp() + '] [ai] augmentation enabled (advisory-only · model_kind: ' +
+              AI.modelKind() + ')', 'oc-rwx__stream-line--ai-meta');
+          } else {
+            AI.disable();
+            pendingAiAdvisory = null;
+            appendStreamLine('[' + nowStamp() + '] [ai] augmentation disabled', 'oc-rwx__stream-line--ai-meta');
+          }
+        });
+      } else if (elAiToggle) {
+        elAiToggle.disabled = true;
       }
     });
   </script>
