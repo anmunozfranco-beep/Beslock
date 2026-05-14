@@ -1,0 +1,87 @@
+{
+  "id": "semantic-wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/workflows/wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#7"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/workflows/wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "abrir `Camera&Lock`",
+      "semantic_actions": [
+        "lock"
+      ],
+      "matched_lexicon": [
+        "lock"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "elegir `Lock (Wi-Fi)`",
+      "semantic_actions": [
+        "lock",
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "seleccionar la red Wi-Fi e introducir la contrasena",
+      "semantic_actions": [
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "entrar a `Reset the device`",
+      "semantic_actions": [
+        "reset"
+      ],
+      "matched_lexicon": [
+        "reset"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "seleccionar `EZ Mode`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "si falla la distribucion, cambiar a otro modo de distribucion o usar el hotspot indicado por la app",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

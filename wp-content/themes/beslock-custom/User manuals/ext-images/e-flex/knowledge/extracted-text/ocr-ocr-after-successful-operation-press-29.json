@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-after-successful-operation-press-29",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "After Successful Operation, Press",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-29"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "\"*\" to return to the previous level\nor continue deleting users\n█\u0001Restore Factory Settings:\nIn normal status:\n\"*\" functions as Return/Exit/Delete key\n\"#\" functions as Confirm/Enter/Repeat",
+  "storage_bucket": "extracted-text"
+}

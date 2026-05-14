@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-2-2-actualizacion-de-cerraduras-13",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "2.2 Actualización De Cerraduras",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-13"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "El usuario puede actualizar la cerradura desde el apartado de “Configuración” en la aplicación\nLa actualizacion debe realizarse a través de Bluetooth situando el dispositivo móvil junto a la\ncerradura\nNo hay actualizaciones",
+  "storage_bucket": "extracted-text"
+}

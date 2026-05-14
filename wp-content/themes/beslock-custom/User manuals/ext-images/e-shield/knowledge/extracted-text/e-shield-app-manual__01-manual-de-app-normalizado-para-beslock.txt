@@ -1,0 +1,5 @@
+# Manual de app normalizado para Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#1
+
+

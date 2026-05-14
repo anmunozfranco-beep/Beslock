@@ -1,0 +1,340 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "models": [
+    {
+      "id": "lock-state",
+      "states": [
+        "locked",
+        "unlocking",
+        "unlocked",
+        "lockout"
+      ],
+      "initial": "locked",
+      "terminal": [],
+      "safe_states": [
+        "locked",
+        "unlocked"
+      ],
+      "unsafe_states": [
+        "lockout"
+      ]
+    },
+    {
+      "id": "pairing-state",
+      "states": [
+        "unpaired",
+        "pairing",
+        "paired",
+        "pairing-failed"
+      ],
+      "initial": "unpaired",
+      "terminal": [
+        "paired"
+      ],
+      "safe_states": [
+        "unpaired",
+        "paired"
+      ],
+      "unsafe_states": [
+        "pairing-failed"
+      ]
+    },
+    {
+      "id": "enrollment-state",
+      "states": [
+        "unenrolled",
+        "enrolling",
+        "enrolled",
+        "enrollment-failed"
+      ],
+      "initial": "unenrolled",
+      "terminal": [
+        "enrolled"
+      ],
+      "safe_states": [
+        "unenrolled",
+        "enrolled"
+      ],
+      "unsafe_states": [
+        "enrollment-failed"
+      ]
+    },
+    {
+      "id": "battery-state",
+      "states": [
+        "nominal",
+        "low-battery",
+        "replacement-in-progress",
+        "restored",
+        "depleted"
+      ],
+      "initial": "nominal",
+      "terminal": [],
+      "safe_states": [
+        "nominal",
+        "restored"
+      ],
+      "unsafe_states": [
+        "depleted"
+      ]
+    },
+    {
+      "id": "operational-state",
+      "states": [
+        "normal",
+        "warning",
+        "troubleshooting",
+        "recovery",
+        "blocked"
+      ],
+      "initial": "normal",
+      "terminal": [],
+      "safe_states": [
+        "normal"
+      ],
+      "unsafe_states": [
+        "blocked"
+      ]
+    },
+    {
+      "id": "install-state",
+      "states": [
+        "uninstalled",
+        "mounting",
+        "wired",
+        "configured",
+        "verified-install"
+      ],
+      "initial": "uninstalled",
+      "terminal": [
+        "verified-install"
+      ],
+      "safe_states": [
+        "uninstalled",
+        "verified-install"
+      ],
+      "unsafe_states": []
+    },
+    {
+      "id": "admin-state",
+      "states": [
+        "no-admin",
+        "admin-pending",
+        "admin-set",
+        "admin-locked-out"
+      ],
+      "initial": "no-admin",
+      "terminal": [
+        "admin-set"
+      ],
+      "safe_states": [
+        "no-admin",
+        "admin-set"
+      ],
+      "unsafe_states": [
+        "admin-locked-out"
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "model": "lock-state",
+      "from": "locked",
+      "to": "unlocking",
+      "guard": "valid-credential-presented"
+    },
+    {
+      "model": "lock-state",
+      "from": "unlocking",
+      "to": "unlocked",
+      "guard": "credential-accepted"
+    },
+    {
+      "model": "lock-state",
+      "from": "unlocking",
+      "to": "locked",
+      "guard": "credential-rejected"
+    },
+    {
+      "model": "lock-state",
+      "from": "unlocked",
+      "to": "locked",
+      "guard": "auto-relock OR manual-lock"
+    },
+    {
+      "model": "lock-state",
+      "from": "unlocking",
+      "to": "lockout",
+      "guard": "max-failed-attempts"
+    },
+    {
+      "model": "lock-state",
+      "from": "lockout",
+      "to": "locked",
+      "guard": "lockout-timer-elapsed OR admin-override"
+    },
+    {
+      "model": "pairing-state",
+      "from": "unpaired",
+      "to": "pairing",
+      "guard": "pairing-mode-activated"
+    },
+    {
+      "model": "pairing-state",
+      "from": "pairing",
+      "to": "paired",
+      "guard": "pairing-confirmed"
+    },
+    {
+      "model": "pairing-state",
+      "from": "pairing",
+      "to": "pairing-failed",
+      "guard": "timeout OR network-error"
+    },
+    {
+      "model": "pairing-state",
+      "from": "pairing-failed",
+      "to": "unpaired",
+      "guard": "user-acknowledged-failure"
+    },
+    {
+      "model": "enrollment-state",
+      "from": "unenrolled",
+      "to": "enrolling",
+      "guard": "enrollment-started"
+    },
+    {
+      "model": "enrollment-state",
+      "from": "enrolling",
+      "to": "enrolled",
+      "guard": "credential-captured-and-confirmed"
+    },
+    {
+      "model": "enrollment-state",
+      "from": "enrolling",
+      "to": "enrollment-failed",
+      "guard": "capture-rejected OR timeout"
+    },
+    {
+      "model": "enrollment-state",
+      "from": "enrollment-failed",
+      "to": "unenrolled",
+      "guard": "retry-acknowledged"
+    },
+    {
+      "model": "battery-state",
+      "from": "nominal",
+      "to": "low-battery",
+      "guard": "voltage-below-threshold"
+    },
+    {
+      "model": "battery-state",
+      "from": "low-battery",
+      "to": "replacement-in-progress",
+      "guard": "replacement-procedure-started"
+    },
+    {
+      "model": "battery-state",
+      "from": "replacement-in-progress",
+      "to": "restored",
+      "guard": "battery-installed-and-verified"
+    },
+    {
+      "model": "battery-state",
+      "from": "low-battery",
+      "to": "depleted",
+      "guard": "voltage-critical"
+    },
+    {
+      "model": "battery-state",
+      "from": "depleted",
+      "to": "replacement-in-progress",
+      "guard": "emergency-power-applied OR replacement-started"
+    },
+    {
+      "model": "operational-state",
+      "from": "normal",
+      "to": "warning",
+      "guard": "warning-trigger-fired"
+    },
+    {
+      "model": "operational-state",
+      "from": "warning",
+      "to": "normal",
+      "guard": "warning-acknowledged-and-cleared"
+    },
+    {
+      "model": "operational-state",
+      "from": "warning",
+      "to": "troubleshooting",
+      "guard": "symptom-observed"
+    },
+    {
+      "model": "operational-state",
+      "from": "troubleshooting",
+      "to": "recovery",
+      "guard": "recovery-procedure-started"
+    },
+    {
+      "model": "operational-state",
+      "from": "recovery",
+      "to": "normal",
+      "guard": "recovery-completed-and-verified"
+    },
+    {
+      "model": "operational-state",
+      "from": "troubleshooting",
+      "to": "blocked",
+      "guard": "tier-4-or-5-required"
+    },
+    {
+      "model": "install-state",
+      "from": "uninstalled",
+      "to": "mounting",
+      "guard": "install-procedure-started"
+    },
+    {
+      "model": "install-state",
+      "from": "mounting",
+      "to": "wired",
+      "guard": "mechanical-mount-complete"
+    },
+    {
+      "model": "install-state",
+      "from": "wired",
+      "to": "configured",
+      "guard": "wiring-and-power-confirmed"
+    },
+    {
+      "model": "install-state",
+      "from": "configured",
+      "to": "verified-install",
+      "guard": "install-validation-passed"
+    },
+    {
+      "model": "admin-state",
+      "from": "no-admin",
+      "to": "admin-pending",
+      "guard": "admin-setup-started"
+    },
+    {
+      "model": "admin-state",
+      "from": "admin-pending",
+      "to": "admin-set",
+      "guard": "admin-credential-confirmed"
+    },
+    {
+      "model": "admin-state",
+      "from": "admin-set",
+      "to": "admin-locked-out",
+      "guard": "admin-credential-lost OR factory-reset-required"
+    },
+    {
+      "model": "admin-state",
+      "from": "admin-locked-out",
+      "to": "no-admin",
+      "guard": "factory-reset-completed"
+    }
+  ]
+}

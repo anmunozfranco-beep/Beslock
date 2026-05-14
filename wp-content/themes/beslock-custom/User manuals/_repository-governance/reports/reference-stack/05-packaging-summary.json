@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/packaging/",
+  "invariants_count": 5,
+  "kind": "packaging-summary",
+  "schema": "reference-stack-governance/1.0",
+  "standards": [
+    "runtime-package-manifest",
+    "module-assembly-manifest",
+    "deployment-manifest",
+    "environment-manifest",
+    "governance-manifest",
+    "operational-composition-manifest"
+  ]
+}

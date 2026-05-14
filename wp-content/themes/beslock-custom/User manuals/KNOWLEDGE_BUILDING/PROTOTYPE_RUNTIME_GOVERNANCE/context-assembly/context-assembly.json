@@ -1,0 +1,46 @@
+{
+  "flows": [
+    {
+      "id": "procedures+warnings+prerequisites",
+      "merges": [
+        "procedure-nodes",
+        "mandatory-warnings",
+        "prerequisite-records"
+      ]
+    },
+    {
+      "id": "troubleshooting+causal+continuity",
+      "merges": [
+        "diagnostic-nodes",
+        "causal-edges",
+        "continuity-state"
+      ]
+    },
+    {
+      "id": "escalation+continuity+adaptive",
+      "merges": [
+        "escalation-predicate-result",
+        "continuity-snapshot",
+        "adaptation-record"
+      ]
+    },
+    {
+      "id": "onboarding+adaptive+supervision",
+      "merges": [
+        "onboarding-nodes",
+        "adaptation-record",
+        "supervision-receipt"
+      ]
+    }
+  ],
+  "generated": "2026-05-13T21:12:10Z",
+  "kind": "context-assembly",
+  "rules": [
+    "Mandatory warnings cannot be suppressed in any assembly.",
+    "Prerequisite gaps block assembly emission; they do not silently degrade guidance.",
+    "Continuity state is read-only at assembly time; mutations require declared continuity flow.",
+    "Adaptive precedence (knowledge-core > adaptive) is invariant.",
+    "Assembly emits a single bound assembly-package per run-step."
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

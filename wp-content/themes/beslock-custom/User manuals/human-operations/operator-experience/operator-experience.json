@@ -1,0 +1,74 @@
+{
+  "interaction_principles": [
+    "Every operator action emits a supervision-receipt; no silent action exists.",
+    "Every operator surface declares its scope; out-of-scope actions are not exposed.",
+    "Every operator decision is reversible by an equal-or-higher governance decision.",
+    "Operators see provenance before they see conclusions.",
+    "Operators see uncertainty before they see recommendations."
+  ],
+  "kind": "operator-experience",
+  "operator_profiles": [
+    {
+      "audit_required": true,
+      "decisions": [
+        "approve",
+        "reject",
+        "demote"
+      ],
+      "id": "runtime-operator",
+      "primary_surface": "supervised flow CLI"
+    },
+    {
+      "audit_required": true,
+      "decisions": [
+        "approve",
+        "reject",
+        "request-evidence",
+        "open-dispute"
+      ],
+      "id": "reviewer",
+      "primary_surface": "reviewer-workbench panels"
+    },
+    {
+      "audit_required": true,
+      "decisions": [
+        "assign",
+        "revoke",
+        "scope-edit (within charter)"
+      ],
+      "id": "governance-maintainer",
+      "primary_surface": "governance console"
+    },
+    {
+      "audit_required": true,
+      "decisions": [
+        "accept-handoff",
+        "route",
+        "halt-slice",
+        "request-dual-review"
+      ],
+      "id": "escalation-supervisor",
+      "primary_surface": "escalation console"
+    },
+    {
+      "audit_required": true,
+      "decisions": [
+        "bind-source",
+        "reject-source",
+        "supersede-source"
+      ],
+      "id": "oem-reviewer",
+      "primary_surface": "OEM evidence panel"
+    },
+    {
+      "audit_required": true,
+      "decisions": [
+        "raise-finding",
+        "request-replay"
+      ],
+      "id": "operational-auditor",
+      "primary_surface": "audit console (read-only)"
+    }
+  ],
+  "schema": "human-operations-governance/1.0"
+}

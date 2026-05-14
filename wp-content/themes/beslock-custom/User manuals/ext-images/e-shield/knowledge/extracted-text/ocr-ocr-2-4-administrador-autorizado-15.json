@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-2-4-administrador-autorizado-15",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "2.4 Administrador Autorizado",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-15"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Suena Parcioal - .\nSolo el administrador original puede autorizar la\nclave. Para agregar a un administrador autorizado\ndirijase al apartado de \"Administrador autonzado”\neee corts cate o\nPresionar el botón de “Crear Administrador” y colocar los datos correspondientes del usuario que\nse convertirá en Administrador Autorizado. para finalizar dar clic en enviar\ne wens ced Denia gral nro\nO crew agruraseracor Rete a SME\n@® El usLao autorizado bodrá v sualizar en su aolicac ón la interfaz de admirist-ador\nPuede enviar claves a otros. contraseñas. etc Sir embargo, e adminusteagor aulonzado no podra dar de\nata más peri es de aaministrac ón\n3. Gestión de llaves\nEl administrador original tiene los máximos derechos administrativos de la cerradura\nAdicionalmente podrá gestionar la vigencia de una eKey que esté a punto de caducar\n1. Dirigirse al apartado de “eKeys” y hacer clic en el botón de\n“Enviar e Key” al inferior de la pantalla. e\nOke akey\n2. Seleccionar el tipo de eKey que se quiera enviar. llenar los datos del usuario al que se\nle proporcionará la eKey y hacer clicl en “Enviar”\nTerror Aerea Ur me ads Tp Dean a Cte\nTipos de Keys a a braco ane te\n- Key temporal: Sera vara curarte el\nnempo espeul caso eg deter E\n- «Key permanente: Podrá ull arse ce\n- 0Koy de un solo uso. Se borrará Uta ved be\null aca,",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,9 @@
+# Compatibilidad antes de montar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#4
+
+Antes de fijar el conjunto:
+- valida el sentido de apertura interior/exterior y la direccion del pestillo
+- confirma que la posicion del agujero se ajuste a la posicion real del cuerpo de cerradura
+- elige la longitud de tornilleria o separadores segun el grosor de la puerta
+- prepara el paso del eje cuadrado y del cableado antes de cerrar las manijas

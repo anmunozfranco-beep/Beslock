@@ -1,0 +1,20 @@
+{
+  "product_slug": "e-touch",
+  "product_display": "e-Touch",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "canonical_png": "ext-images/e-touch/source-of-truth/product-images/e-Touch.png",
+  "approved_sources": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf"
+  ],
+  "publishing_surfaces": [],
+  "visual_system": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/generation-matrices/e-Touch - image generation matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/generation-matrices/image-generation-matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/prompts/ai-image-prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/prompts/e-Touch - AI image prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/qa/image-production-status.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/references/e-touch-visual-profile.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/validations/visual-validation.md"
+  ]
+}

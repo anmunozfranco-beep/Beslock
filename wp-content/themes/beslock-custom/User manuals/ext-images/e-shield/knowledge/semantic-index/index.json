@@ -1,0 +1,103 @@
+{
+  "product": "e-shield",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "totals": {
+    "entities": 62,
+    "capabilities": 1,
+    "workflows": 9,
+    "troubleshooting": 1,
+    "warning": 1,
+    "installation": 12,
+    "terminology": 5,
+    "ocr-evidence": 33
+  },
+  "by_type": {
+    "capability": [
+      "cap-objetivo"
+    ],
+    "workflow": [
+      "wf-registro-e-inicio-de-sesion",
+      "wf-agregar-la-cerradura",
+      "wf-ekeys-y-acceso-compartido",
+      "wf-contrasenas-remotas",
+      "wf-tarjetas-rf-y-huellas",
+      "wf-tarjetas-rf-y-huellas-tarjetas-rf",
+      "wf-tarjetas-rf-y-huellas-huellas",
+      "wf-desbloqueo-por-bluetooth",
+      "wf-gateway-y-funciones-remotas"
+    ],
+    "troubleshooting": [
+      "ts-gestion-del-dispositivo"
+    ],
+    "warning": [
+      "warning-advertencias-editoriales"
+    ],
+    "installation-flow": [
+      "install-context-objetivo",
+      "install-context-que-vas-a-instalar",
+      "install-context-compatibilidad-fisica-antes-de-perforar",
+      "install-context-que-necesitas-antes-de-empezar",
+      "install-usar-la-plantilla-de-instalacion",
+      "install-preparar-la-puerta",
+      "install-montar-el-conjunto-exterior-e-interior",
+      "install-energia-y-encendido-inicial",
+      "install-context-validacion-despues-de-instalar",
+      "install-context-problemas-frecuentes-de-instalacion",
+      "install-context-relacion-con-el-paquete-documental",
+      "install-context-estado-editorial"
+    ],
+    "glossary-term": [
+      "term-pin",
+      "term-huella",
+      "term-administrador",
+      "term-bluetooth",
+      "term-wi-fi"
+    ],
+    "extracted-text": [
+      "ocr-ocr-manual-1",
+      "ocr-ocr-instrucciones-de-instalacion-2",
+      "ocr-ocr-configuracion-de-usuario-3",
+      "ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient",
+      "ocr-ocr-introduccion-5",
+      "ocr-ocr-9-1-informacie-de-la-cuenta-6",
+      "ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7",
+      "ocr-ocr-4-4-eliminar-10-2-manual-8",
+      "ocr-ocr-4-7-corpartir-contrasena-9",
+      "ocr-ocr-1-1-inicio-de-sesion-correcto-10",
+      "ocr-ocr-oui-ld-in-get-11",
+      "ocr-ocr-2-1-anadir-nuevo-dispositivo-12",
+      "ocr-ocr-2-2-actualizacion-de-cerraduras-13",
+      "ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14",
+      "ocr-ocr-2-4-administrador-autorizado-15",
+      "ocr-ocr-3-1-gestion-de-llaves-16",
+      "ocr-ocr-3-2-aviso-de-vencimiento-17",
+      "ocr-ocr-3-3-busqueda-de-registro-de-accesos-18",
+      "ocr-ocr-o-eres-19",
+      "ocr-ocr-4-1-codigo-de-acceso-permanente-20",
+      "ocr-ocr-4-2-codigo-de-acceso-temporal-21",
+      "ocr-ocr-4-3-contrasena-de-un-solo-uso-22",
+      "ocr-ocr-4-5-codigo-de-acceso-ciclico-23",
+      "ocr-ocr-4-6-codigo-de-acceso-personalizado-24",
+      "ocr-ocr-4-7-compartir-contrasenas-25",
+      "ocr-ocr-9-see-traia-26",
+      "ocr-ocr-9-1-informacion-de-la-cuenta-27",
+      "ocr-ocr-9-2-usuarios-del-dispositivo-28",
+      "ocr-ocr-9-3-grupo-de-dispositivos-29",
+      "ocr-ocr-9-4-transferir-derechos-de-administrador-30",
+      "ocr-ocr-9-5-eliminar-cuenta-ar-31",
+      "ocr-ocr-9-6-servicio-al-cliente-32",
+      "ocr-ocr-10-1-agregar-gateway-33"
+    ]
+  }
+}

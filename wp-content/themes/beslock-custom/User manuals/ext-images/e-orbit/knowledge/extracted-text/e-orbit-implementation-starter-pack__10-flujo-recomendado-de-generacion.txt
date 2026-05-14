@@ -1,0 +1,44 @@
+# Flujo recomendado de generación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#10
+
+
+
+
+## Paso 1
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#10.1
+
+Generar 3 variantes para cada imagen prioritaria.
+
+
+## Paso 2
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#10.2
+
+Elegir una variante por:
+- claridad
+- realismo
+- utilidad documental
+- consistencia con el producto
+
+
+## Paso 3
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#10.3
+
+Refinar las elegidas si hace falta cambiando:
+- ángulo
+- iluminación
+- fondo
+- posición de la mano
+- encuadre
+
+
+## Paso 4
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#10.4
+
+Exportar la versión elegida con el nombre final de archivo.
+
+---

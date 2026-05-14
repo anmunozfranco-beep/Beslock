@@ -1,0 +1,53 @@
+{
+  "id": "wf-desbloqueo-por-bluetooth",
+  "type": "workflow",
+  "product": "e-shield",
+  "summary": "La app permite abrir la cerradura desde el boton con icono de candado cuando estas dentro de alcance",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#10"
+  ],
+  "extraction_lineage": [
+    "knowledge/workflows/wf-desbloqueo-por-bluetooth.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abre la pantalla del dispositivo"
+    },
+    {
+      "n": 2,
+      "text": "verifica conexion Bluetooth activa"
+    },
+    {
+      "n": 3,
+      "text": "toca el icono de candado para bloquear o desbloquear"
+    },
+    {
+      "n": 4,
+      "text": "confirma respuesta fisica de la cerradura"
+    }
+  ],
+  "preconditions": [],
+  "legacy_storage_bucket": "workflows"
+}

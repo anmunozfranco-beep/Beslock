@@ -1,0 +1,28 @@
+{
+  "id": "install-context-objetivo",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "Ordenar la instalacion fisica de e-Touch usando la guia OEM suplementaria disponible, sin confundirla con una plantilla de perforacion a escala real",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#2"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "Ordenar la instalacion fisica de e-Touch usando la guia OEM suplementaria disponible, sin confundirla con una plantilla de perforacion a escala real."
+  ],
+  "storage_bucket": "installation"
+}

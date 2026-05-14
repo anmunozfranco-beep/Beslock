@@ -1,0 +1,184 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:46:30Z",
+  "policy": "These are RECOMMENDATIONS. NO file has been deleted. Each item carries explicit blockers_to_deletion that must be cleared by a human before any removal.",
+  "count": 17,
+  "recommendations": [
+    {
+      "path": "HEADER_CSS_CONSOLIDATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "MAIN_CSS_DECOMPOSITION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "HEADER_RUNTIME_CLEANUP_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "UTILITIES_MIGRATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "PRIMARY_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "HOMEPAGE_SURFACE_MIGRATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "PRODUCT_CARD_CONSOLIDATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "WORKTREE_NORMALIZATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "HEADER_MIGRATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "LEGACY_RUNTIME_AUDIT_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "PRODUCT_CARD_MIGRATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "ACTIVE_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "PRODUCT_CARD_RUNTIME_OWNERSHIP_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "PRODUCT_CARD_PRESENTATION_OWNERSHIP_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "path": "STOREFRONT_OWNERSHIP_SUMMARY.md",
+      "category": "F",
+      "rationale": "Historical WordPress theme migration receipts; superseded by git history. Not Beslock product knowledge.",
+      "blockers_to_deletion": [
+        "human review required",
+        "archive copy must first be relocated to _repository-governance/migration-history/frontend-summaries/"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "duplicate_group_md5": "6479c9e9d7664a645fdb2fd760299638",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf"
+      ],
+      "rationale": "Byte-identical PDFs detected. Keep one canonical, archive the others as duplicate ledgers.",
+      "blockers_to_deletion": [
+        "human must designate the canonical copy",
+        "metadata/audit/duplicate-oem-sources.json must be created before deletion"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    },
+    {
+      "duplicate_group_md5": "22a401c8db04fe45d245aaea4e9a1c79",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf"
+      ],
+      "rationale": "Byte-identical PDFs detected. Keep one canonical, archive the others as duplicate ledgers.",
+      "blockers_to_deletion": [
+        "human must designate the canonical copy",
+        "metadata/audit/duplicate-oem-sources.json must be created before deletion"
+      ],
+      "delete_action_taken": "none (proposal only)"
+    }
+  ]
+}

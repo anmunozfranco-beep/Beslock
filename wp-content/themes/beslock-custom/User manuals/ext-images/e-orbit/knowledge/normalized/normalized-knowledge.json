@@ -1,0 +1,3336 @@
+{
+  "product": "e-orbit",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "entities": [
+    {
+      "id": "cap-objetivo",
+      "type": "capability",
+      "product": "e-orbit",
+      "summary": "Este documento conecta la implementación inicial del centro de ayuda de e-Orbit con el primer lote de imágenes generadas por IA",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "implementación del MVP Fase 1",
+        "coordinación entre contenido e imágenes",
+        "nombrado y organización de archivos",
+        "priorización de assets visuales",
+        "planeación de integración en CMS o frontend"
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "ts-paginas-prioritarias-para-fase-1",
+      "type": "troubleshooting",
+      "product": "e-orbit",
+      "summary": "Páginas prioritarias para Fase 1",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "symptoms": [
+        "La implementación inicial debería priorizar estas páginas:"
+      ],
+      "resolutions": [
+        "`/productos/e-orbit`",
+        "`/productos/e-orbit/primeros-pasos`",
+        "`/productos/e-orbit/usuarios/agregar-administrador`",
+        "`/productos/e-orbit/usuarios/agregar-usuario`",
+        "`/productos/e-orbit/uso/pin`",
+        "`/productos/e-orbit/uso/huella`",
+        "`/productos/e-orbit/configuracion/idioma`",
+        "`/productos/e-orbit/app/agregar-dispositivo`",
+        "`/productos/e-orbit/app/vincular-por-qr`",
+        "`/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`",
+        "`/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`"
+      ],
+      "storage_bucket": "troubleshooting"
+    },
+    {
+      "id": "cap-objetivo",
+      "type": "capability",
+      "product": "e-orbit",
+      "summary": "Determinar que aportan realmente `e-Orbit_1",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "Determinar que aportan realmente `e-Orbit_1.xls` y `e-Orbit_2.pdf`, separar conocimiento util de app, especificaciones y contexto visual, y dejar explicito que estas fuentes no equivalen a una plantilla 1:1 de instalacion."
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "install-context-decision-sobre-plantilla-de-instalacion",
+      "type": "installation-flow",
+      "product": "e-orbit",
+      "summary": "Con estas fuentes no es seguro crear una plantilla de instalacion real",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "no hay cotas de perforacion",
+        "no hay centros de agujeros ni backset detallado",
+        "no hay escala de impresion ni dibujo de corte",
+        "las dimensiones generales del cuerpo no alcanzan para derivar una drilling template confiable"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "cap-objetivo",
+      "type": "capability",
+      "product": "e-orbit",
+      "summary": "Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2.pdf` y como apoyo tecnico `e-Orbit_1.xls`."
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "cap-alcance-real-de-la-fuente",
+      "type": "capability",
+      "product": "e-orbit",
+      "summary": "Las fuentes nuevas soportan con bastante claridad:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "alta del dispositivo en `Smart Life` / `Tuya`",
+        "configuracion de red del equipo",
+        "desbloqueo remoto",
+        "consulta de registros",
+        "gestion de miembros",
+        "passwords temporales"
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "proc-requisitos-antes-de-vincular",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "La hoja tecnica indica que el producto usa `Tuya WiFi` integrado y no requiere gateway adicional",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "menu_path": "",
+      "preconditions": [],
+      "steps": [],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "wf-alta-del-dispositivo-por-qr",
+      "type": "workflow",
+      "product": "e-orbit",
+      "summary": "La ruta OEM observada es:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abrir `Smart Life`"
+        },
+        {
+          "n": 2,
+          "text": "tocar `+` para `Add device`"
+        },
+        {
+          "n": 3,
+          "text": "entrar en `Camera&Lock`"
+        },
+        {
+          "n": 4,
+          "text": "elegir `Video Lock (Wi-Fi)`"
+        },
+        {
+          "n": 5,
+          "text": "seguir la pantalla `Reset the device`"
+        },
+        {
+          "n": 6,
+          "text": "seleccionar la red Wi-Fi e introducir la contrasena"
+        },
+        {
+          "n": 7,
+          "text": "poner la cerradura en modo de red"
+        },
+        {
+          "n": 8,
+          "text": "apuntar el codigo QR del telefono a la camara de la cerradura"
+        },
+        {
+          "n": 9,
+          "text": "cuando la cerradura emita el aviso sonoro, confirmar que se ha oido y esperar el alta"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+      "type": "workflow",
+      "product": "e-orbit",
+      "summary": "El PDF tambien muestra una variante de alta:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abrir `Camera&Lock`"
+        },
+        {
+          "n": 2,
+          "text": "elegir `Lock (Wi-Fi)`"
+        },
+        {
+          "n": 3,
+          "text": "seleccionar la red Wi-Fi e introducir la contrasena"
+        },
+        {
+          "n": 4,
+          "text": "entrar a `Reset the device`"
+        },
+        {
+          "n": 5,
+          "text": "seleccionar `EZ Mode`"
+        },
+        {
+          "n": 6,
+          "text": "si falla la distribucion, cambiar a otro modo de distribucion o usar el hotspot indicado por la app"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-gestion-de-miembros",
+      "type": "workflow",
+      "product": "e-orbit",
+      "summary": "La guia OEM muestra `Gestion de miembros` con este flujo general:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "device",
+        "user"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entrar a la seccion de miembros"
+        },
+        {
+          "n": 2,
+          "text": "usar `+` para agregar otros miembros"
+        },
+        {
+          "n": 3,
+          "text": "introducir el nombre del miembro"
+        },
+        {
+          "n": 4,
+          "text": "entrar a la informacion del miembro"
+        },
+        {
+          "n": 5,
+          "text": "gestionar el modo de desbloqueo"
+        },
+        {
+          "n": 6,
+          "text": "vincular el numero de usuario correspondiente"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "proc-primeros-pasos",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "Antes de empezar, verifica lo siguiente:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "crear el administrador principal"
+        },
+        {
+          "n": 2,
+          "text": "registrar un PIN"
+        },
+        {
+          "n": 3,
+          "text": "registrar una huella"
+        },
+        {
+          "n": 4,
+          "text": "probar los accesos registrados"
+        },
+        {
+          "n": 5,
+          "text": "revisar configuraciones básicas"
+        },
+        {
+          "n": 6,
+          "text": "conectar la cerradura a la app si aplica"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-agregar-un-administrador",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "Agregar usuario → Agregar administrador",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario → Agregar administrador",
+      "preconditions": [
+        "la cerradura está encendida",
+        "el panel responde al activarlo",
+        "tienes acceso al menú del sistema",
+        "ya definiste quién será el administrador principal"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "activa el panel de la cerradura"
+        },
+        {
+          "n": 2,
+          "text": "entra al menú"
+        },
+        {
+          "n": 3,
+          "text": "selecciona **Agregar usuario**"
+        },
+        {
+          "n": 4,
+          "text": "selecciona **Agregar administrador**"
+        },
+        {
+          "n": 5,
+          "text": "elige el método de acceso que vas a registrar"
+        },
+        {
+          "n": 6,
+          "text": "completa el proceso siguiendo las indicaciones del sistema"
+        },
+        {
+          "n": 7,
+          "text": "guarda el registro"
+        },
+        {
+          "n": 8,
+          "text": "prueba inmediatamente el acceso creado"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-agregar-un-usuario",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "Agregar usuario → Agregar usuario",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario → Agregar usuario",
+      "preconditions": [
+        "la cerradura está encendida",
+        "ya existe al menos un administrador configurado",
+        "sabes qué método de acceso vas a registrar"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "activa el panel de la cerradura"
+        },
+        {
+          "n": 2,
+          "text": "entra al menú"
+        },
+        {
+          "n": 3,
+          "text": "selecciona **Agregar usuario**"
+        },
+        {
+          "n": 4,
+          "text": "elige **Agregar usuario**"
+        },
+        {
+          "n": 5,
+          "text": "selecciona el método de acceso"
+        },
+        {
+          "n": 6,
+          "text": "completa el registro"
+        },
+        {
+          "n": 7,
+          "text": "guarda el cambio"
+        },
+        {
+          "n": 8,
+          "text": "prueba el acceso"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-registrar-una-contrasena-o-pin",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario → Agregar administrador / Agregar usuario",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra a **Agregar usuario**"
+        },
+        {
+          "n": 2,
+          "text": "elige si vas a registrar un administrador o un usuario regular"
+        },
+        {
+          "n": 3,
+          "text": "selecciona **Contraseña**"
+        },
+        {
+          "n": 4,
+          "text": "ingresa la clave"
+        },
+        {
+          "n": 5,
+          "text": "confírmala"
+        },
+        {
+          "n": 6,
+          "text": "guarda el registro"
+        },
+        {
+          "n": 7,
+          "text": "prueba el PIN"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-registrar-una-huella",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario → Agregar administrador / Agregar usuario",
+      "preconditions": [
+        "el dedo está limpio y seco",
+        "la cerradura responde normalmente",
+        "el usuario puede apoyar el dedo con comodidad"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra al menú"
+        },
+        {
+          "n": 2,
+          "text": "selecciona **Agregar usuario**"
+        },
+        {
+          "n": 3,
+          "text": "elige el tipo de usuario"
+        },
+        {
+          "n": 4,
+          "text": "selecciona **Huella**"
+        },
+        {
+          "n": 5,
+          "text": "coloca el dedo sobre el lector cuando el sistema lo indique"
+        },
+        {
+          "n": 6,
+          "text": "retira y vuelve a colocar el mismo dedo las veces necesarias"
+        },
+        {
+          "n": 7,
+          "text": "espera la confirmación"
+        },
+        {
+          "n": 8,
+          "text": "prueba la huella"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-cambiar-el-idioma",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "La extracción disponible muestra ingreso con `888#` y selección de español con `3009#`",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "",
+      "preconditions": [
+        "la cerradura está encendida",
+        "el panel responde al activarlo",
+        "el usuario tiene acceso al equipo"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "activa el panel"
+        },
+        {
+          "n": 2,
+          "text": "ingresa `888#`"
+        },
+        {
+          "n": 3,
+          "text": "entra al sistema de idioma"
+        },
+        {
+          "n": 4,
+          "text": "selecciona el idioma deseado"
+        },
+        {
+          "n": 5,
+          "text": "para español, usa `3009#` si corresponde a tu versión"
+        },
+        {
+          "n": 6,
+          "text": "confirma el cambio si el sistema lo solicita"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "configuration"
+    },
+    {
+      "id": "proc-conectar-la-cerradura-a-la-aplicacion",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "La app asociada para este proyecto es **Smart Life**",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "menu_path": "",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abre **Smart Life**"
+        },
+        {
+          "n": 2,
+          "text": "pulsa **Agregar dispositivo** o el símbolo **+**"
+        },
+        {
+          "n": 3,
+          "text": "entra a la categoría correspondiente"
+        },
+        {
+          "n": 4,
+          "text": "elige la opción de cerradura adecuada"
+        },
+        {
+          "n": 5,
+          "text": "sigue el flujo de vinculación"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "proc-vincular-por-qr",
+      "type": "procedure",
+      "product": "e-orbit",
+      "summary": "abre **Smart Life",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "local-device",
+      "menu_path": "",
+      "preconditions": [
+        "la app Smart Life está instalada",
+        "la cerradura está en modo de vinculación",
+        "el celular tiene suficiente brillo en pantalla"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abre **Smart Life**"
+        },
+        {
+          "n": 2,
+          "text": "entra a **Agregar dispositivo**"
+        },
+        {
+          "n": 3,
+          "text": "selecciona la categoría correspondiente"
+        },
+        {
+          "n": 4,
+          "text": "sigue el flujo hasta que la app muestre el código QR"
+        },
+        {
+          "n": 5,
+          "text": "lleva la cerradura al modo de vinculación"
+        },
+        {
+          "n": 6,
+          "text": "muestra el QR del celular frente al equipo"
+        },
+        {
+          "n": 7,
+          "text": "espera la confirmación"
+        },
+        {
+          "n": 8,
+          "text": "completa el proceso en la aplicación"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "term-tuya",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Plataforma OEM de aplicación móvil.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "TUYA",
+      "oem_variants": [
+        "TUYA",
+        "TUYA APP",
+        "Tuya"
+      ],
+      "definition": "Plataforma OEM de aplicación móvil.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-smart-life",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Aplicación móvil OEM compatible.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "Smart Life",
+      "oem_variants": [
+        "Smart Life"
+      ],
+      "definition": "Aplicación móvil OEM compatible.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-ez-mode",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Modo de provisión rápida en TUYA.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "EZ Mode",
+      "oem_variants": [
+        "EZ Mode",
+        "EZ"
+      ],
+      "definition": "Modo de provisión rápida en TUYA.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-qr",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Código gráfico de provisión.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "QR",
+      "oem_variants": [
+        "QR",
+        "código QR",
+        "codigo QR"
+      ],
+      "definition": "Código gráfico de provisión.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-pin",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Código numérico de acceso.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "PIN",
+      "oem_variants": [
+        "PIN",
+        "contraseña",
+        "contrasena",
+        "Contrasena"
+      ],
+      "definition": "Código numérico de acceso.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-huella",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Credencial biométrica dactilar.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "huella",
+      "oem_variants": [
+        "huella",
+        "fingerprint"
+      ],
+      "definition": "Credencial biométrica dactilar.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-administrador",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Usuario con permisos de gestión.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "administrador",
+      "oem_variants": [
+        "administrador",
+        "administrator",
+        "admin"
+      ],
+      "definition": "Usuario con permisos de gestión.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-reset",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Acción o botón de inicialización.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "Reset",
+      "oem_variants": [
+        "Reset",
+        "RESET",
+        "reinicio"
+      ],
+      "definition": "Acción o botón de inicialización.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-wi-fi",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Canal inalámbrico de red local.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "Wi-Fi",
+      "oem_variants": [
+        "Wi-Fi",
+        "WiFi",
+        "WIFI"
+      ],
+      "definition": "Canal inalámbrico de red local.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-ip66",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Clasificación de protección ambiental.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "IP66",
+      "oem_variants": [
+        "IP66"
+      ],
+      "definition": "Clasificación de protección ambiental.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-ip68",
+      "type": "glossary-term",
+      "product": "e-orbit",
+      "summary": "Clasificación de protección ambiental.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "IP68",
+      "oem_variants": [
+        "IP68"
+      ],
+      "definition": "Clasificación de protección ambiental.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "ocr-ocr-smart-lock-manual-1",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Smart Lock Manual",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "One.Specification parameters",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-specification-parameters-2",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Specification Parameters",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Specifications",
+      "raw_text": "one",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-comparison-mode-3",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Comparison Mode",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "two",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-self-learning-capacitive-press-4",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Self Learning Capacitive Press",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "fingerprint head\nthree",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-acquisition-head-resolution-5",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Acquisition Head Resolution",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "508dpi\nfour",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-rejection-rate-6",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Rejection Rate",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "<0.1%\nfive",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-fake-admission-rate-7",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Fake Admission Rate",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "<0.001%\nsix",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-fingerprint-collection-range-8",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Fingerprint Collection Range",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "+180°\nseven",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-card-type-9",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Card Type",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "eight\nuser capacity\nTotal capacity of 250 sets: up\nto 100 fingerprints, up to 100\npasswords, up to 50 faces, and\nup to 100 cards. Administrator",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-id-range-010-249-10",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Id Range 010-249",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "nine",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-scroll-600-strip-11",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Scroll 600 Strip",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "ten",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-number-of-door-openings-12",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Number Of Door Openings",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "greater than or equal 3000\ntimes\neleven\nworking voltage\n7.0V~8.4V, low voltage alarm\nvoltage 6.8 + 0.2V\ntwelve",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-dynamic-power-13",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Dynamic Power",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "less than or equal 1A (no\nconsumption\nmotor action, no playback\nsound\nthirteen",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-static-power-14",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Static Power",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-14"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "less than or equal 200UA (averconsumption\nage power consumption\nfourteen",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-verification-time-15",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Verification Time",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-15"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "less than or equal 3s, (including\nthe entire process of fingerprint collection, comparison,\nand unlocking signal output\nfifteen\nkeyboard type",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-touch-sensing-16",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Touch Sensing",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-16"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "sixteen\n(OLED display screen\n0.96\"",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-oled-17",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Oled",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-17"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "seventeen",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-extemal-emergency-power-supply-fr-display-screen-18",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Extemal Emergency Power Supply Fr Display Screen",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-18"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "5V1A Micro USB\neighteen",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-antistatic-ability-19",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Antistatic Ability",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-19"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "28KV (contact) >\n15KV(Non-contact type)\nnineteen\nstorage temperature\n-25°C ~ 80°C\ntwenty\noperation temperature\n-25°C ~ 70°C\ntwenty-one\nambient humidity",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-15-rh-93-rh-20",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "15%Rh~ 93%Rh",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-20"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Two.Setting Description\n1.initialization\nLong press the settings button for 5 seconds, and the voice will broadcast: \"Factory reset, NO(*) YES(#).\" Press\nthe # key to confirm, and the system will restart to its initial state.\nIn the initial state, any face, fingerprint, password, or card can unlock the device. Performing a factory reset\noperation cannot clear the set door-opening direction or torque parameters.\n2.Low battery warning\nIf the system's battery level is less than 25%, the system will voice prompt \"Low power\" ,The battery can still\nbe unlocked about 50 times, but please charge it in a timely manner (or replace the battery).\n3.External USB emergency power supply\nUsing USB emergency power supply, it takes approximately 30 seconds to unlock.\n4.Illegal user alarm\nFailed to unlock after 3 to 5 consecutive inputs, with voice message: ‘Illegal user, illegal intrusion, owner notified’. After the 5th broadcast, the system is locked for 90 seconds, during which time no user action is taken.\nUnlock after 90 seconds.\n5.Virtual password\nWhen using a password to unlock, any number can be added before and after the correct password, which\ncan increase the security of the digital password. For example, if the password is \"123456\", you can enter\n\"426123456745\" to unlock.\nNote: The system can only recognize the first 16 digits\n6.version number\nEnter 999 # to read the system version number.\nThree.Function and operation",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-wake-up-touch-panel-21",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Wake Up Touch Panel",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-21"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Press the *+# keys\nVoice announcement: \"Please\nenter a 6 to 8 digit passAfter successful addition, voice\nbroadcast:: “User OOOAdd Suc-\nword” (enter password)\nal\n1.Add User",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-please-enter-the-password-22",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Please Enter The Password,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-22"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "voice broadcast: \"User * * *,\nfingerprint, or card you want fia\nto add\n1.Add User\nMS\n1.Add Admin\nAdd Success”\ncan be added\ncontinuously\n2.Add user\n+ Face: The voice will say \"Enroll face.\" The user needs to position their face parallel to the camera at a distance of 30-80cm. Follow the voice prompts to complete the continuous face recording.\n- Fingerprint: The user places their finger on the fingerprint sensor, and the voice prompts \"Press again.\" The\nuser then places the same finger on the sensor to complete the continuous fingerprint recording.\n- Password: The user enters a 6 to 8-digit password and confirms it by pressing the # key.\n- Card: The user brings the card close to the IC card sensing area on the touch keypad, and the system automatically reads and saves the card information.\nNote: Number of management users: numbered 000-009, with a total of 10 digits; Number of ordinary users:\nnumbers 010-249, a total of 240 characters.\n2.Delete user\n(1) Verify Delete\nAfter successful verificaVoice announcement:\nom, vols nomdlese\n2.delete user\nFE\n1Verify Delete\n\"Please verify the user\n\"User * * * Delete Sucto be deleted\"\ncess”\nVerification method:\n-Fingerprint: Place the finger to be deleted on the fingerprint sensor.\n-Password: Enter the password to be delete.\n-Card: The IC card to be deleted is located near the sensing area of the touch keyboard.\nIf the user exists in the system, the voice broadcast will read: \"Success\"; If the user does not exist, the voice\nbroadcast will say \"Failure\".\n(2) Delete by ID",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-deletion-23",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "After Successful Deletion,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-23"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "2.delete user\n2.delete by ID\n:Please enter the user\nvoice broadcast:\"User * * *,",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-id-to-be-deleted-24",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Id To Be Deleted",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-24"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Delete Success\"\n3.System settings\n(1) datetime settings\nVoice announcement:\"Please\nenter the datetime\" (input\ntime format is: year month\nhour minute)\nAfter successful networking, voice broadcast:\n\"Success\"\n3.System\n1.datetime\nsettings\nsettings\n(2) Installation settings\n@Door opening direction setting\n3.System settings\n2.Installation settings\n1.Opening direction [L]\nNote: The direction of opening the door is in the direction of opening the lock outside the door.\n@Auto-lock\n3.System settings\n2.Installation settings\n2.Delayed lock [N]\nNote: Delayed locking refers to setting a fixed anti lock time. Users can choose the locking time: 10S, 15S, 20S,\n30S, 60S, 1205.\n@Lock settings\n-Tamper Alarm\n3.System\n2.Installation\nTam\n3.Lock settings\n1.Tamper Alarm [N\nsettings\nsettings\nIN]\nNote: After activating the anti tamper alarm, if the door lock is tampered with, the system will issue an alarm\nprompt: \"Illegal user, illegal intrusion, owner notified\". If the device is connected to the network, it will push\nalarm information to the phone.\n-Motor Torque\n3.System\n2.Installation\nmE\n> e ~~ pe\nNote: Motor torque is specific to the strength of the motor's torque.\n-Lock back time\n3.System\n2.Installation\n3.Lock settings\n4.Dwell Alert [20s]\nNote: Within 1 minute, if\na human body is detected for a total of 20 seconds, a stay alarm will be triggered.\nThe pushed network devices will not receive sound and light alarms by default.\n@Face recognition settings\n-Lock back time\n3.System\n2.Installation\n4.Face recogni-\n1.Auto Detect [Y]\nsettings\nsettings\ntion settings\nNote: 1. Classification of human sensory function:\n-Human body sensing [off]: The intelligent door lock will not engage in human body sensing in standby\nmode.\n-Human body sensing [intelligence]: The intelligent door lock will not engage in human body sensing when\nthe door is opened.\n-Human body sensing [open]: In any state, the intelligent door lock will undergo human body sensing.\n2.lf there are 10 consecutive awakenings and no facial recognition is detected, human sensing will be turned\noff by default for 5 minutes.\n2.-Detection distance\n3.System\n2.Installation\niti\n2Detection distance [M\nNote:Detection distance[Near]: About 30~50cm; Detection distance[Medium]: 50~70cm; Detection distance[Far]: 70~80cm.\n(3) Function settings\n@Network configuration",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-anada-25",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Añada",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-25"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. Network",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-networkty-26",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "After Successful Networkty",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-26"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "ti a »\nconfiguration\n> | Mie Ute elere",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-es-es-27",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Es) Es",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-27"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "ings\nNM\n\"Success\"\n(Please refer to the appendix of the manual for detailed operation of networked products).\nNote: The distribution function only supports one mobile phone for distribution. If you enter the networking\nconfiguration again, the last distribution data will be automatically cleared. Users should be cautious when\noperating.\n@Volume\n| 3.System settings |\nsettings",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-mentes-28",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "=> Mentes",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-28"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "settings\n=> Lo\n2 VolumelH]\n(Dual authentication\n3.System settings\n3.Installation settings\n3. Dual authentication [N]\nNote:Dual authenticationOnly for ordinary key unlocking, two different ordinary user keys must be verified\nto successfully unlock, and administrator users can directly unlock.\n(4) Factory reset",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-confirm-the-restoration-of-factory-29",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Confirm The Restoration Of Factory",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-29"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "3.System\n3.Installation\n4, Factory",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-loam-30",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Loam",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-30"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "reset, voice broadcast: \"Clear sucsettings\nsettings\nreset\ncess\", system restart\nNote: After restoring the actory reset, all user data will be cleared. Please operate with caution.\n4.information inquiry\n(1) User Count\nVoice announcement:\nse SUES\n1.User Count\n“Admin***\ninquiry\nUser***\"\n(2) Read Records\n-Inquiry by order\n4.information inquiry\n2.ecord inquiry\n1, inquiry by order\nNote: Sequential query starts with the latest information and goes down. Press the 8th key to search for the\nnext item and the 2nd key to search for the previous item.\n-Inquiry by time\n4.information\n2.ecord\n2. inquiry",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-enter-the-time-you-want-to-query-31",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Enter The Time You Want To Query",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-31"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "inquiry\ninquiry\nby time\n(time is year, month, day)\nTo change the system language of the smart lock in its factory state:\nEnter the language system: 888+\nNext, enter the code:\n30004 (Chinese)\n30074 (Portuguese)\n3015# (Italian)\n30014 (English)\n3008# (French)\n30164 (Mongolian)\n3002 (Hong Kong)\n30094 (Spanish)\n3017 (Uzbekistan)\n3003# (Russian)\n30114 (Indonesian)\n3018# (Kazakh)\n3004# (Vietnamese)\n3012# (Thai)\n3019# (Serbian)\n3005# (Korean)\n3013# (Hebrew)\n3020# (Korean)\n3006# (Arabic)\n3014# (Turkish)\n3022# (Japanese)\n(Visitor mode\nIn visitor mode, users can generate time-limited passwords for limited 1 to 59 minutes, counting from the\ncurrent time, which will become invalid after the time limited.\n(2)Renting mode\nIn short-term lease mode, users can generate valid passwords for any period of time. The validity time\nmust be longer than the validity time and the current time. The maximum time range cannot exceed 60\ndays. The generated temporary password must be entered within 24 hours after the password takes\neffect. Otherwise, the password becomes invalid.\n(3)Nanny mode\nIn nanny mode, users can set the allowable time periods for unlocking every day. The time losing efficacy\nshall be later than the time taking effect. The generated password needs to be input within 24 hours, otherwise it will be invalid.\n(4)Password Management\nThe password management function can be used to delete the time-limited passwords that are already in\neffect ona lock. However, it is not possible to delete the time-limited password that takes effect within 24\nhours, administrator user's password, or standard user's password. If you need to invalidate all time-limited passwords, you need to delete User 000 on the lock first, and then add it again.\nappendix",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-app-operation-32",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "App Operation",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-32"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "App Store search [Smart Life] Download and sign in.\n1, Add device\nAfter entering the APP, click \"+\" in the upper right corner of the home page to add the device, and enter\nthe \"Add Device\" page;\n1) Two-dimensional code distribution network\n- Select [Camera&lock] and click \"Video lock (Wi-Fi)\" to jump to the next page.\n- \"Reset the device\" interface, click Next, check the Scan the OR code with door lock camera,click [Next].\n- Select WIFI and enter password, click [Next].\n- After entering the \"Reset the devica\" page, keep waiting, go to the smart door lock operation, let it\nenter the network mode.\n- Point the QR code of the mobile phone at the camera. When the lock end plays a \"stomp\" prompt tone,\nclick \"| Hear a prompt\" to enter the distribution state.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-doorbell-33",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Doorbell",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-33"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Dual Band)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-lock-34",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-34"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Wi-Fi)\nCamera &",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-lock-35",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-35"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(NB-loT)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-video-lock-36",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Video Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-36"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Wi-Fi)\nrn\nul",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-camera-37",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Camera",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-37"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "DVR",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-bird-feeder-38",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Bird Feeder",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-38"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(wifi)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-lock-39",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-39"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Zigbee)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-no-prompts-40",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "No Prompts",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-40"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "2) WIFI distribution network\n- Select [Camera&lock] and click \"Lock (Wi-Fi)\" to jump to the next page.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-41",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Scan The Qr Code With The Door Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-41"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "camera",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-42",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Scan The Qr Code With The Door Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-42"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "camera\nual\npe |",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-connecting-device-43",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Connecting Device",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-43"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Power on the device.\n01:59",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-scan-44",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Scan",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-44"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "devices.\n- Select WIFI and enter password, click [Next].\n- \"Reset the Device\" interface, click Next, select [EZ Mode ].\nSelect 2.4 GHz Wi-Fi Network and\nenter password.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-added-successfully-45",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Added Successfully",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-45"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "- After entering the \"Add device\" page, keep waiting, go to the smart door lock operation, let it enter the\nnetwork mode.\n- If the power distribution fails, you can select \"Switch the power distribution mode\" or select the hotspot\nmode. Connect to the Wi-Fi hotspot starting with SmartLife, and configure the network according to the instructions of the mobile phone.\nNote: Some device hotspot names may be user-defined\nCamera &",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-camera-46",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Camera",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-46"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Wi-Fi)\n4G Camera\n(ac)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-doorbell-47",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Doorbell",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-47"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Dual Band)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-connecting-device-48",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Connecting Device",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-48"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Power on the device.\n01:59",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-ble-49",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "(Ble)",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-49"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Hz)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-camera-50",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Camera",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-50"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "DVR",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-bird-feeder-51",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Bird Feeder",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-51"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(wifi)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-lock-52",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Lock",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-52"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Select 2.4 GHz Wi-Fi Network and\nenter password.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-l8t-rd-53",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "@ L8T-Rd",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-53"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "(Zigbee)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-add-device-54",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Add Device",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-54"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1 devices)\nadded\nsuccessfully",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-select-the-status-of-the-indicator-light-or-55",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Select The Status Of The Indicator Light Or",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-55"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "hear the beep:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-check-if-the-device-has-been-reset-and-56",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Check If The Device Has Been Reset And",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-56"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "the indicator is blinking quickly.\nCheck if it is 2.4 GHz Wi-Fi.\nVerify the Wi-Fi password.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-connect-your-mobile-phone-to-57",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Connect Your Mobile Phone To",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-57"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "the device's hotspot",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-connect-your-phone-to-the-hotspot-shown-58",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "9 Connect Your Phone To The Hotspot Shown",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-58"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "below:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-y-sl-xxxx-59",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Y Sl-Xxxx",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-59"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "@ Go back and add devices.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-go-to-connect-60",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Go To Connect",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-60"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "2, Remote unlocking\n- Visitors ring the doorbell, the user's\nmobile phone can receive a remote\nunlock request.\n- Click the adaptive broadcast button\nto talk to the visitor.\n- Slide the release button to the right\nfor remote unlocking.\n3, Record query",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-messages-such-as-doorbell-push-61",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Messages Such As Doorbell Push,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-61"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "illegal user, low battery, and unlocking can be queried in the log.\n4. Member management",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-1-days-62",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "1 Days",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-62"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "e Member Management",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-online-offline-password-63",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Online/Offline Password",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-63"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "[o] Smart Linkage\nIN\n- Click [Member Management] to enter the member management page.\n- Click [+] in the upper right corner to select other members.\n- Enter the name of the member to be bound.\n-On the Member information page, click Manage Unlock Mode.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-ea-ed-64",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Ea -Ed",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-64"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "passwordO Unlock",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-logs-65",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Logs",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-65"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "-Select the user number to be bound and click OK\nNote: Account number - User code generated when the door lock is added.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-member-management-66",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Member Management",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-66"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "ber. Associ.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-user-details-67",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "User Details",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-67"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "Any\n® FingerPrint",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-8-card-68",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "8 Card",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-68"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "card10",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-o-face-69",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "O Face",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-69"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "5, Temporary password\n1) One-time password",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-any-unlock-with-card10-70",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Any Unlock With Card10",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-70"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "49\npassword0 Unlock\nud storage for up to 30",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-save-71",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Save",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-71"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "3 days. You can purchase cloud storage resources of Tuya to increa:\nrage duration and capacity\n50 the",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-user-details-72",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "User Details",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-72"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "® FingerPrint\n© Password",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-o-face-73",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "O Face",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-73"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "@ Cinna nin",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-user-details-74",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "User Details",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-74"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "Any\n® FingerPrint",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-o-face-75",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "O Face",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-75"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Select a one-time password and click Add or the + sign in the top right corner; Click to obtain the password,\nthe system automatically generates a set of ten-digit password, click to complete.\nThe password must be used within 6 hours after it is generated. The password can only be used once within\nthe valid period.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-temporary-password-76",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Temporary Password",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-76"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "© Time-timited Password",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-offline-password-77",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Offline Password",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-77"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "@ one-time Password\n© Time-timited Password\nclick to complete.\nNo valid Password.\n2) Unlimited password\nMz\nNo valid Password.\nAdd",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-expiration-time-78",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Expiration Time",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-78"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Learing code immediately. The clearing\n11-17-2023 13:00 >\nve\nand expiration time before you\ncan obtain the\nThe one-time password is obtained.\ny The clearing\ncode isnot\ndisplayed\nin\n2671847259",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-message-notification-79",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Message Notification",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-79"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Select an unlimited password and click Add or the + sign in the top right corner; Select effective time and implementation time; Click to obtain the password, the system automatically generates a set of ten-digit password,",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-expiration-time-80",
+      "type": "extracted-text",
+      "product": "e-orbit",
+      "summary": "Expiration Time",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-orbit/manual.json#section-80"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "diately. The\nclearing\ncode\nis not displayed\nin",
+      "storage_bucket": "extracted-text"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "wf-alta-del-dispositivo-por-qr",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "La ruta OEM observada es:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abrir `Smart Life`"
+    },
+    {
+      "n": 2,
+      "text": "tocar `+` para `Add device`"
+    },
+    {
+      "n": 3,
+      "text": "entrar en `Camera&Lock`"
+    },
+    {
+      "n": 4,
+      "text": "elegir `Video Lock (Wi-Fi)`"
+    },
+    {
+      "n": 5,
+      "text": "seguir la pantalla `Reset the device`"
+    },
+    {
+      "n": 6,
+      "text": "seleccionar la red Wi-Fi e introducir la contrasena"
+    },
+    {
+      "n": 7,
+      "text": "poner la cerradura en modo de red"
+    },
+    {
+      "n": 8,
+      "text": "apuntar el codigo QR del telefono a la camara de la cerradura"
+    },
+    {
+      "n": 9,
+      "text": "cuando la cerradura emita el aviso sonoro, confirmar que se ha oido y esperar el alta"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

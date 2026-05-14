@@ -1,0 +1,266 @@
+[
+  {
+    "id": "ocr-ocr-manual-1",
+    "summary": "Manual",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-instrucciones-de-instalacion-2",
+    "summary": "Instrucciones De Instalación",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-configuracion-de-usuario-3",
+    "summary": "Configuración De Usuario",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient",
+    "summary": "Ingrese Al Menú Principal Y Presione La Tecla Correspondiente A La Configuración Del",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-introduccion-5",
+    "summary": "Introducción",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-1-informacie-de-la-cuenta-6",
+    "summary": "9.1 Informacié~ De La Cuenta",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7",
+    "summary": "32 So Se Vee Ento A 9.5 Eliminar Cerradura",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-4-eliminar-10-2-manual-8",
+    "summary": "4.4 Eliminar 10.2 Manual",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-7-corpartir-contrasena-9",
+    "summary": "4.7 Corpartir Contraseña",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-1-1-inicio-de-sesion-correcto-10",
+    "summary": "1.1 Inicio De Sesión Correcto",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-oui-ld-in-get-11",
+    "summary": "Oui Ld In Get",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-2-1-anadir-nuevo-dispositivo-12",
+    "summary": "2.1 Añadir Nuevo Dispositivo",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-2-2-actualizacion-de-cerraduras-13",
+    "summary": "2.2 Actualización De Cerraduras",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14",
+    "summary": "2.3 Fecha Y Hora, Diagnóstico De Errores",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-2-4-administrador-autorizado-15",
+    "summary": "2.4 Administrador Autorizado",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-15"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-3-1-gestion-de-llaves-16",
+    "summary": "3.1 Gestión De Llaves",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-16"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-3-2-aviso-de-vencimiento-17",
+    "summary": "3.2 Aviso De Vencimiento",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-17"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-3-3-busqueda-de-registro-de-accesos-18",
+    "summary": "3.3 Búsqueda De Registro De Accesos",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-18"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-o-eres-19",
+    "summary": ". O Eres",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-19"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-1-codigo-de-acceso-permanente-20",
+    "summary": "4.1 Codigo De Acceso Permanente",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-20"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-2-codigo-de-acceso-temporal-21",
+    "summary": "4.2 Código De Acceso Temporal",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-21"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-3-contrasena-de-un-solo-uso-22",
+    "summary": "4.3 Contraseña De Un Solo Uso",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-22"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-5-codigo-de-acceso-ciclico-23",
+    "summary": "4.5 Codigo De Acceso Ciclico",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-23"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-6-codigo-de-acceso-personalizado-24",
+    "summary": "4.6 Código De Acceso Personalizado",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-24"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-4-7-compartir-contrasenas-25",
+    "summary": "4.7 Compartir Contrasenas",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-25"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-see-traia-26",
+    "summary": "9 See Traia?",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-26"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-1-informacion-de-la-cuenta-27",
+    "summary": "9.1 Información De La Cuenta",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-27"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-2-usuarios-del-dispositivo-28",
+    "summary": "9.2 Usuarios Del Dispositivo",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-28"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-3-grupo-de-dispositivos-29",
+    "summary": "9.3 Grupo De Dispositivos",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-29"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-4-transferir-derechos-de-administrador-30",
+    "summary": "9.4 Transferir Derechos De Administrador",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-30"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-5-eliminar-cuenta-ar-31",
+    "summary": "9.5 Eliminar Cuenta Ar -",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-31"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-6-servicio-al-cliente-32",
+    "summary": "9.6 Servicio Al Cliente",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-32"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-10-1-agregar-gateway-33",
+    "summary": "10.1 Agregar Gateway",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-33"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

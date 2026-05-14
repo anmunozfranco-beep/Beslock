@@ -1,0 +1,59 @@
+{
+  "rules": [
+    "Transitions are sequential; no skipping a transition that produced state.",
+    "Each transition has explicit exit criteria and demotion triggers.",
+    "Promotion requires a documented exit decision with provenance.",
+    "Demotion does not require a decision; it is the safe response to anomalies.",
+    "All transitions remain subordinate to the governed knowledge-core forever."
+  ],
+  "schema": "operational-proof-governance/1.0",
+  "transitions": [
+    {
+      "demotion_triggers": [
+        "any safety predicate failure",
+        "any contract violation",
+        "operator demotion decision"
+      ],
+      "exit_criteria": [
+        "all retrieval predicates pass on declared scope",
+        "all safety predicates pass continuously across the run window",
+        "no contract violation observed",
+        "operator-signed proof report exists"
+      ],
+      "from": "proof-of-value-slice",
+      "to": "supervised-operational-pilot"
+    },
+    {
+      "demotion_triggers": [
+        "unresolved escalation",
+        "rollback failure",
+        "operator demotion decision"
+      ],
+      "exit_criteria": [
+        "bounded user population success criteria met",
+        "incident review clean (no unresolved escalations)",
+        "proof-of-value report appended with pilot evidence",
+        "rollback path verified end-to-end"
+      ],
+      "from": "supervised-operational-pilot",
+      "to": "controlled-runtime-system"
+    },
+    {
+      "demotion_triggers": [
+        "regression",
+        "ecosystem observability red",
+        "post-deployment review finding",
+        "operator demotion decision"
+      ],
+      "exit_criteria": [
+        "regression suite green",
+        "ecosystem observability green",
+        "post-deployment review clean",
+        "kill-switch verified",
+        "all interop contracts active and pinned"
+      ],
+      "from": "controlled-runtime-system",
+      "to": "future-production-operational-ecosystem"
+    }
+  ]
+}

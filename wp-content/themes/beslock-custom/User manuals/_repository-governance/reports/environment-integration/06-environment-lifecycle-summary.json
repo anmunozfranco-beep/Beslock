@@ -1,0 +1,16 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/environment-governance/environment-lifecycle/",
+  "invariants_count": 5,
+  "kind": "environment-lifecycle-summary",
+  "schema": "environment-integration-governance/1.0",
+  "states": [
+    "proposed",
+    "provisioned",
+    "active",
+    "under-review",
+    "deprecated",
+    "quarantined",
+    "retired"
+  ],
+  "transitions_count": 9
+}

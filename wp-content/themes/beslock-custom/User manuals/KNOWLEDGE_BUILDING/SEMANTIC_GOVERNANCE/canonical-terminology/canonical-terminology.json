@@ -1,0 +1,301 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "groups": [
+    {
+      "canonical": "administrator",
+      "domain": "terminology",
+      "synonyms": [
+        "administrador",
+        "admin"
+      ]
+    },
+    {
+      "canonical": "user",
+      "domain": "terminology",
+      "synonyms": [
+        "usuario"
+      ]
+    },
+    {
+      "canonical": "fingerprint",
+      "domain": "terminology",
+      "synonyms": [
+        "huella",
+        "huella-dactilar"
+      ]
+    },
+    {
+      "canonical": "pin",
+      "domain": "terminology",
+      "synonyms": [
+        "contrasena",
+        "contrasena",
+        "password",
+        "codigo",
+        "codigo"
+      ]
+    },
+    {
+      "canonical": "temporary-password",
+      "domain": "terminology",
+      "synonyms": [
+        "virtual-password",
+        "contrasena-temporal",
+        "contrasena-temporal",
+        "clave-temporal"
+      ]
+    },
+    {
+      "canonical": "factory-reset",
+      "domain": "terminology",
+      "synonyms": [
+        "reset",
+        "restablecer",
+        "restablecer-de-fabrica",
+        "restauracion-de-fabrica"
+      ]
+    },
+    {
+      "canonical": "qr-pairing",
+      "domain": "terminology",
+      "synonyms": [
+        "qr",
+        "vincular-por-qr",
+        "alta-del-dispositivo-por-qr",
+        "pair-by-qr"
+      ]
+    },
+    {
+      "canonical": "ez-mode-pairing",
+      "domain": "terminology",
+      "synonyms": [
+        "ez-mode",
+        "pair-by-ez-mode",
+        "alta-del-dispositivo-por-wi-fi-ez-mode",
+        "app-pairing-ez-mode"
+      ]
+    },
+    {
+      "canonical": "tuya-smart-app",
+      "domain": "terminology",
+      "synonyms": [
+        "tuya",
+        "tuya-smart",
+        "tongtong-app",
+        "smart-life"
+      ]
+    },
+    {
+      "canonical": "wi-fi",
+      "domain": "terminology",
+      "synonyms": [
+        "wifi"
+      ]
+    },
+    {
+      "canonical": "register-fingerprint",
+      "domain": "procedure",
+      "synonyms": [
+        "registrar-una-huella",
+        "enrol-fingerprint",
+        "enroll-fingerprint"
+      ]
+    },
+    {
+      "canonical": "register-pin",
+      "domain": "procedure",
+      "synonyms": [
+        "registrar-una-contrasena-o-pin",
+        "registrar-una-contrasena",
+        "registrar-una-contrasena",
+        "add-pin",
+        "set-pin"
+      ]
+    },
+    {
+      "canonical": "add-administrator",
+      "domain": "procedure",
+      "synonyms": [
+        "agregar-un-administrador"
+      ]
+    },
+    {
+      "canonical": "add-user",
+      "domain": "procedure",
+      "synonyms": [
+        "agregar-un-usuario"
+      ]
+    },
+    {
+      "canonical": "change-language",
+      "domain": "procedure",
+      "synonyms": [
+        "cambiar-el-idioma"
+      ]
+    },
+    {
+      "canonical": "pair-with-app",
+      "domain": "procedure",
+      "synonyms": [
+        "conectar-la-cerradura-a-la-aplicacion",
+        "conectar-la-cerradura-a-la-aplicacion",
+        "primeros-pasos",
+        "local-onboarding"
+      ]
+    },
+    {
+      "canonical": "member-management",
+      "domain": "procedure",
+      "synonyms": [
+        "gestion-de-miembros",
+        "gestion-de-miembros"
+      ]
+    }
+  ],
+  "variant_to_canonical": {
+    "administrator": "administrator",
+    "administrador": "administrator",
+    "admin": "administrator",
+    "user": "user",
+    "usuario": "user",
+    "fingerprint": "fingerprint",
+    "huella": "fingerprint",
+    "huella-dactilar": "fingerprint",
+    "pin": "pin",
+    "contrasena": "pin",
+    "password": "pin",
+    "codigo": "pin",
+    "temporary-password": "temporary-password",
+    "virtual-password": "temporary-password",
+    "contrasena-temporal": "temporary-password",
+    "clave-temporal": "temporary-password",
+    "factory-reset": "factory-reset",
+    "reset": "factory-reset",
+    "restablecer": "factory-reset",
+    "restablecer-de-fabrica": "factory-reset",
+    "restauracion-de-fabrica": "factory-reset",
+    "qr-pairing": "qr-pairing",
+    "qr": "qr-pairing",
+    "vincular-por-qr": "qr-pairing",
+    "alta-del-dispositivo-por-qr": "qr-pairing",
+    "pair-by-qr": "qr-pairing",
+    "ez-mode-pairing": "ez-mode-pairing",
+    "ez-mode": "ez-mode-pairing",
+    "pair-by-ez-mode": "ez-mode-pairing",
+    "alta-del-dispositivo-por-wi-fi-ez-mode": "ez-mode-pairing",
+    "app-pairing-ez-mode": "ez-mode-pairing",
+    "tuya-smart-app": "tuya-smart-app",
+    "tuya": "tuya-smart-app",
+    "tuya-smart": "tuya-smart-app",
+    "tongtong-app": "tuya-smart-app",
+    "smart-life": "tuya-smart-app",
+    "wi-fi": "wi-fi",
+    "wifi": "wi-fi",
+    "register-fingerprint": "register-fingerprint",
+    "registrar-una-huella": "register-fingerprint",
+    "enrol-fingerprint": "register-fingerprint",
+    "enroll-fingerprint": "register-fingerprint",
+    "register-pin": "register-pin",
+    "registrar-una-contrasena-o-pin": "register-pin",
+    "registrar-una-contrasena": "register-pin",
+    "add-pin": "register-pin",
+    "set-pin": "register-pin",
+    "add-administrator": "add-administrator",
+    "agregar-un-administrador": "add-administrator",
+    "add-user": "add-user",
+    "agregar-un-usuario": "add-user",
+    "change-language": "change-language",
+    "cambiar-el-idioma": "change-language",
+    "pair-with-app": "pair-with-app",
+    "conectar-la-cerradura-a-la-aplicacion": "pair-with-app",
+    "primeros-pasos": "pair-with-app",
+    "local-onboarding": "pair-with-app",
+    "member-management": "member-management",
+    "gestion-de-miembros": "member-management"
+  },
+  "canonical_to_variants": {
+    "administrator": [
+      "administrador",
+      "admin"
+    ],
+    "user": [
+      "usuario"
+    ],
+    "fingerprint": [
+      "huella",
+      "huella-dactilar"
+    ],
+    "pin": [
+      "contrasena",
+      "contrasena",
+      "password",
+      "codigo",
+      "codigo"
+    ],
+    "temporary-password": [
+      "virtual-password",
+      "contrasena-temporal",
+      "contrasena-temporal",
+      "clave-temporal"
+    ],
+    "factory-reset": [
+      "reset",
+      "restablecer",
+      "restablecer-de-fabrica",
+      "restauracion-de-fabrica"
+    ],
+    "qr-pairing": [
+      "qr",
+      "vincular-por-qr",
+      "alta-del-dispositivo-por-qr",
+      "pair-by-qr"
+    ],
+    "ez-mode-pairing": [
+      "ez-mode",
+      "pair-by-ez-mode",
+      "alta-del-dispositivo-por-wi-fi-ez-mode",
+      "app-pairing-ez-mode"
+    ],
+    "tuya-smart-app": [
+      "tuya",
+      "tuya-smart",
+      "tongtong-app",
+      "smart-life"
+    ],
+    "wi-fi": [
+      "wifi"
+    ],
+    "register-fingerprint": [
+      "registrar-una-huella",
+      "enrol-fingerprint",
+      "enroll-fingerprint"
+    ],
+    "register-pin": [
+      "registrar-una-contrasena-o-pin",
+      "registrar-una-contrasena",
+      "registrar-una-contrasena",
+      "add-pin",
+      "set-pin"
+    ],
+    "add-administrator": [
+      "agregar-un-administrador"
+    ],
+    "add-user": [
+      "agregar-un-usuario"
+    ],
+    "change-language": [
+      "cambiar-el-idioma"
+    ],
+    "pair-with-app": [
+      "conectar-la-cerradura-a-la-aplicacion",
+      "conectar-la-cerradura-a-la-aplicacion",
+      "primeros-pasos",
+      "local-onboarding"
+    ],
+    "member-management": [
+      "gestion-de-miembros",
+      "gestion-de-miembros"
+    ]
+  }
+}

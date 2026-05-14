@@ -1,0 +1,26 @@
+{
+  "architecture_status": "FOUNDATIONALLY COMPLETE (unchanged)",
+  "generated": "2026-05-14T02:38:34Z",
+  "kind": "operational-sustainability-reassessment",
+  "long_term_commitments": [
+    "corpus growth proceeds through declared categories per product, preserving symmetry",
+    "reviewer ecosystem grows via the reviewer registry; revocation is a first-class event",
+    "operational maintenance is performed against the lineage, never against canonical JSON in-place",
+    "knowledge aging is detected by stale-knowledge rules; aged records are queued, not dropped",
+    "OEM updates enter as new bindings; old bindings are superseded, not overwritten",
+    "runtime-safe growth: new domains route through ALLOWED_DOMAINS + governed retrieval kinds",
+    "production operational scaling is out of scope; sustainability is for the governed corpus only"
+  ],
+  "next_bottleneck": "executable enforcement of the lifecycle model (registry, event log, binding store)",
+  "primary_bottleneck": "TRUSTED KNOWLEDGE EVOLUTION (now governed by declared model)",
+  "runtime_status": "ARCHITECTURALLY MATURE + HARDENED + FUNCTIONALLY VALIDATED (unchanged)",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "sustainability_invariants": [
+    "no autonomous promotion path exists, ever",
+    "no record is ever silently deleted; archival preserves lineage",
+    "no reviewer signoff is ever silently overridden",
+    "no runtime mutation of knowledge-core occurs from any layer",
+    "no macro-governance mega-layer is spawned by sustainability work"
+  ],
+  "trust_governance_status": "MODELED (executable enforcement pending)"
+}

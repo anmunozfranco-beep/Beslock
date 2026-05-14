@@ -1,0 +1,63 @@
+{
+  "id": "semantic-wf-agregar-la-cerradura",
+  "type": "procedural-semantics",
+  "product": "e-shield",
+  "summary": "Normalized semantic actions for wf-agregar-la-cerradura",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-agregar-la-cerradura.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-agregar-la-cerradura.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-agregar-la-cerradura",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "toca el boton `+` para agregar una cerradura",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "selecciona el tipo de dispositivo correcto",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "activa el teclado o panel de la cerradura para entrar en modo de configuracion",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "sigue el flujo de alta desde la app",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "acepta o cambia el nombre del dispositivo",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

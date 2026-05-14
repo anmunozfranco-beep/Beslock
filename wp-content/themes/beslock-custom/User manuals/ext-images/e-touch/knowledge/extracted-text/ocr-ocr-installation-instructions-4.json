@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-installation-instructions-4",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Installation Instructions",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-4"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Installation",
+  "raw_text": "so that enterprises become the industry benchmark .We always adhere to the \" quality survival, service and development\"\nbusiness philosophy. In the intelligent lock industry, all constantly improve the product quality system. our company keep up with\nthe pace of the times . We always walk in the forefront of the industry, and always steadfastly protects the people's\nproperty safety! From products to service ,we always pursue to provide you with a full range of intimate and comfortable\nservice!Thank you for your support for smart door lock!!",
+  "storage_bucket": "extracted-text"
+}

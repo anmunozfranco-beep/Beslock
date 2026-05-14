@@ -1,0 +1,29 @@
+{
+  "id": "proc-validacion-despues-del-alta",
+  "type": "procedure",
+  "product": "e-flex",
+  "summary": "Despues de enlazar el equipo:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "menu_path": "",
+  "preconditions": [],
+  "steps": [],
+  "validation_checks": [],
+  "storage_bucket": "operation"
+}

@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-13T15:18:31Z",
+  "items": [
+    {
+      "product": "e-flex",
+      "missing": [
+        "normalized user-manual markdown"
+      ]
+    },
+    {
+      "product": "e-nova",
+      "missing": [
+        "normalized user-manual markdown",
+        "normalized installation-manual markdown",
+        "normalized app-manual markdown"
+      ]
+    },
+    {
+      "product": "e-orbit",
+      "missing": [
+        "normalized installation-manual markdown"
+      ]
+    },
+    {
+      "product": "e-prime",
+      "missing": [
+        "normalized user-manual markdown"
+      ]
+    },
+    {
+      "product": "e-shield",
+      "missing": [
+        "normalized user-manual markdown"
+      ]
+    },
+    {
+      "product": "e-touch",
+      "missing": [
+        "normalized user-manual markdown"
+      ]
+    }
+  ]
+}

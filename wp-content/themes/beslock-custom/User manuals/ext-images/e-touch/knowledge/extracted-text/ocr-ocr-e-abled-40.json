@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-e-abled-40",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "E-Abled",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-40"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "other\nLao\nopening permissions of the member the user can no",
+  "storage_bucket": "extracted-text"
+}

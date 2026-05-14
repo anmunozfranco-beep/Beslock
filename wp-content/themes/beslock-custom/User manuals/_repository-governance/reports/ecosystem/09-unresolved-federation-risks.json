@@ -1,0 +1,100 @@
+{
+  "high": [
+    "no-incident-id-emitter",
+    "no-ecosystem-session-id",
+    "no-schema-pin-enforcement",
+    "no-cross-runtime-provenance-bus",
+    "no-supervision-receipt-emitter",
+    "no-shared-context-store",
+    "no-escalation-aggregator",
+    "oem-channel-contract-missing",
+    "no-confidence-tier-on-nodes",
+    "no-checkpoint-registry",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap"
+  ],
+  "medium": [
+    "no-arbitration-rule-set",
+    "no-receiver-acknowledgement-channel",
+    "no-broadcast-lock-mechanism"
+  ],
+  "risks": [
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "ecosystem cannot bind shared context across runtimes",
+      "severity": "high"
+    },
+    {
+      "id": "no-ecosystem-session-id",
+      "impact": "ecosystem-session traces and shared-context kinds cannot bind",
+      "severity": "high"
+    },
+    {
+      "id": "no-schema-pin-enforcement",
+      "impact": "federation may proceed under mismatched schemas",
+      "severity": "high"
+    },
+    {
+      "id": "no-cross-runtime-provenance-bus",
+      "impact": "cross-runtime messages may lose provenance at boundary",
+      "severity": "high"
+    },
+    {
+      "id": "no-supervision-receipt-emitter",
+      "impact": "delegation and handoff supervision unauditable",
+      "severity": "high"
+    },
+    {
+      "id": "no-shared-context-store",
+      "impact": "shared-context kinds cannot persist append-only",
+      "severity": "high"
+    },
+    {
+      "id": "no-escalation-aggregator",
+      "impact": "tier monotonicity not observable end-to-end",
+      "severity": "high"
+    },
+    {
+      "id": "oem-channel-contract-missing",
+      "impact": "tier-4/5 ecosystem→OEM federation cannot complete",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "impact": "confidence cannot be preserved across boundary",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "continuity-preserving escalation degrades",
+      "severity": "high"
+    },
+    {
+      "id": "no-arbitration-rule-set",
+      "impact": "co-execution cannot resolve overlapping scopes",
+      "severity": "medium"
+    },
+    {
+      "id": "no-receiver-acknowledgement-channel",
+      "impact": "handoff-failed cannot be detected promptly",
+      "severity": "medium"
+    },
+    {
+      "id": "no-broadcast-lock-mechanism",
+      "impact": "tier-5 ecosystem-broadcast cannot enforce read-only lock",
+      "severity": "medium"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "impact": "troubleshooting ecosystem cannot release on most products",
+      "severity": "high"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "impact": "guidance federation with mandatory-warning surface gated",
+      "severity": "high"
+    }
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "total": 15
+}

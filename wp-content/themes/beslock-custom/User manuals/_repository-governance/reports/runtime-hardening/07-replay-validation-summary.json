@@ -1,0 +1,13 @@
+{
+  "cli": "runtime-implementation/cli.py replay",
+  "contract": "node-id-set parity between captured and replayed retrieval-trace events",
+  "doctrine": "runtime-implementation/runtime-hardening/replay-validation/README.md",
+  "kind": "replay-validation-summary",
+  "module": "runtime-implementation/runtime/replay.py",
+  "schema": "runtime-hardening-governance/1.0",
+  "synthetic_skip": "packages with manifest.extra.empty=True are skipped",
+  "tests": [
+    "testing/test_hardening.py::ReplayDeterminismTests::test_replay_run_is_deterministic",
+    "testing/test_hardening.py::ReplayDeterminismTests::test_replay_summary_shape"
+  ]
+}

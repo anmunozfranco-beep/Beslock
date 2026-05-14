@@ -1,0 +1,66 @@
+{
+  "consensus_rules": [
+    "approve/approve → promote",
+    "approve/reject  → escalate to consensus reviewer",
+    "reject/reject   → demote to candidate + rationale",
+    "any reviewer flags irreversible-operation → force escalation review",
+    "no silent overrides; every override is a logged decision"
+  ],
+  "irreversible_operation_review": [
+    "records touching irreversible operations (factory reset, admin wipe, firmware) require:",
+    "  - dual-review",
+    "  - operator co-signature",
+    "  - explicit reversibility statement (or declared irreversibility)",
+    "  - mandatory escalation policy on the record"
+  ],
+  "kind": "review-workflows",
+  "reviewer_assignment": [
+    "reviewers are declared in a reviewer registry (identity + signoff scope)",
+    "assignment is by domain (operation, warnings, troubleshooting, install, ...) and product",
+    "no reviewer may approve their own authored record",
+    "OEM-binding reviews require an OEM-scope reviewer"
+  ],
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "workflow_steps": [
+    {
+      "actor": "automation",
+      "responsibility": "validate candidate schema + scope",
+      "step": "intake"
+    },
+    {
+      "actor": "governance",
+      "responsibility": "assign reviewer(s) by domain+product",
+      "step": "triage"
+    },
+    {
+      "actor": "reviewer",
+      "responsibility": "attach OEM source artifacts + checksums",
+      "step": "evidence-pull"
+    },
+    {
+      "actor": "reviewer-1",
+      "responsibility": "first-pass approve/reject + rationale",
+      "step": "single-review"
+    },
+    {
+      "actor": "reviewer-2",
+      "responsibility": "second-pass (required for OEM promotion)",
+      "step": "dual-review"
+    },
+    {
+      "actor": "governance",
+      "responsibility": "resolve disagreement via documented merge",
+      "step": "consensus"
+    },
+    {
+      "actor": "governance",
+      "responsibility": "emit supervision receipt + state transition",
+      "step": "signoff"
+    },
+    {
+      "actor": "automation",
+      "responsibility": "append append-only review record",
+      "step": "post-audit"
+    }
+  ]
+}

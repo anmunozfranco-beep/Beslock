@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-unlocking-is-successful-53",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Unlocking Is Successful",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-53"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-unlocking-is-successful-53.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Operation",
+  "raw_text": "administrator fingerprint\n1.Keep at least one key out of the door for emergency.\n2.When the battery is low,the indicator will blink red light. The rest power could\nonly be used for about 50 times.\n3.When the battery is out of power,you can unlock the door with\nkey,or supply\nthe lock with power through the micro-USB port and use fingerprint or password\nto unlock it.\n4.Use alkaline batteries to prevent the damage by battery leakage.Batteries\nmust be replaced every 2 years.",
+  "legacy_storage_bucket": "extracted-text"
+}

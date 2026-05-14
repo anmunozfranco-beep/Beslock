@@ -1,0 +1,9 @@
+# Validacion despues del alta
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#8
+
+Despues de enlazar el equipo:
+- confirma que la cerradura aparece en la app
+- valida una accion basica de sincronizacion o consulta de estado
+- verifica que el alta no haya dejado la cerradura en modo de red abierto
+- si el flujo falla, repite la secuencia local `*+#` con permisos de administrador

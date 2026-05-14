@@ -1,0 +1,1252 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "total_findings": 439,
+  "by_class": {
+    "missing-channel-targets": 417,
+    "missing-summary": 6,
+    "missing-provenance-refs": 6,
+    "cross-product-terminology-canonical": 10
+  },
+  "per_product": {
+    "e-flex": {
+      "items": 118,
+      "rag_ready": 54,
+      "missing_summary": 1,
+      "missing_channel_targets": 64
+    },
+    "e-nova": {
+      "items": 21,
+      "rag_ready": 6,
+      "missing_summary": 1,
+      "missing_channel_targets": 15
+    },
+    "e-orbit": {
+      "items": 198,
+      "rag_ready": 88,
+      "missing_summary": 1,
+      "missing_channel_targets": 110
+    },
+    "e-prime": {
+      "items": 116,
+      "rag_ready": 50,
+      "missing_summary": 1,
+      "missing_channel_targets": 66
+    },
+    "e-shield": {
+      "items": 119,
+      "rag_ready": 56,
+      "missing_summary": 1,
+      "missing_channel_targets": 63
+    },
+    "e-touch": {
+      "items": 139,
+      "rag_ready": 40,
+      "missing_summary": 1,
+      "missing_channel_targets": 99
+    }
+  },
+  "findings_sample": [
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "cap-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "cap-alcance-real-de-la-fuente",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "wf-secuencia-local-en-la-cerradura",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "wf-alta-desde-tuya-app",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "wf-qr-y-mini-programa-de-wechat",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "proc-validacion-despues-del-alta",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "warning-limites-de-evidencia",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-que-vas-a-instalar",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-usar-la-guia-de-instalacion-disponible",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-montar-panel-exterior-e-interior",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-cambio-de-direccion",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-energia-e-inicializacion",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-validacion-despues-de-instalar",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "warning-precauciones-clave",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "install-context-estado-editorial",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-tuya",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-wechat",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-2-4g",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-qr",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-pin",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-huella",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-administrador",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "term-reset",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-overview-1",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-reset-button-2",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-mechanical-key-3",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-the-length-of-the-4",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-for-door-thicknesses-5",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-changing-handle-direction-6",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-do-not-remove-the-7",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-changing-lock-body-direction-8",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-9",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-ic-card-10",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-pr-11",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-in-normal-status-12",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-13",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-adding-an-administrator-14",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-function-settings-15",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-settings-16",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-17",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-settings-18",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-please-enter-the-time-19",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-20",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-enter-time-21",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-22",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-23",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-in-normal-status-24",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-25",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-adding-an-administrator-26",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-press-27",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-enter-the-fingerprint-password-28",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-press-29",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-press-and-hold-for-5-30",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-doodle-app-download-installation-and-door-31",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "ocr-ocr-sweep-32",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-summary",
+      "product": "e-flex",
+      "id": "oem-source-index-e-flex",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-flex",
+      "id": "oem-source-index-e-flex",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-provenance-refs",
+      "product": "e-flex",
+      "id": "oem-source-index-e-flex",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-1-2",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-2-3",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-3-4",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-4-5",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-29300-portale-ein-go-10",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-summary",
+      "product": "e-nova",
+      "id": "oem-source-index-e-nova",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-nova",
+      "id": "oem-source-index-e-nova",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-provenance-refs",
+      "product": "e-nova",
+      "id": "oem-source-index-e-nova",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "cap-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ts-paginas-prioritarias-para-fase-1",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "cap-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "install-context-decision-sobre-plantilla-de-instalacion",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "cap-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "cap-alcance-real-de-la-fuente",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "wf-alta-del-dispositivo-por-qr",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "wf-gestion-de-miembros",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-primeros-pasos",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-agregar-un-administrador",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-agregar-un-usuario",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-registrar-una-contrasena-o-pin",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-registrar-una-huella",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-cambiar-el-idioma",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-conectar-la-cerradura-a-la-aplicacion",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "proc-vincular-por-qr",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-tuya",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-smart-life",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-ez-mode",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-qr",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-pin",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-huella",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-administrador",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-reset",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-wi-fi",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-ip66",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "term-ip68",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-smart-lock-manual-1",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-specification-parameters-2",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-comparison-mode-3",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-self-learning-capacitive-press-4",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-acquisition-head-resolution-5",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-rejection-rate-6",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-fake-admission-rate-7",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-fingerprint-collection-range-8",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-card-type-9",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-id-range-010-249-10",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scroll-600-strip-11",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-number-of-door-openings-12",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-dynamic-power-13",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-static-power-14",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-verification-time-15",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-touch-sensing-16",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-oled-17",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-extemal-emergency-power-supply-fr-display-screen-18",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-antistatic-ability-19",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-15-rh-93-rh-20",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-wake-up-touch-panel-21",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-please-enter-the-password-22",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-after-successful-deletion-23",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-id-to-be-deleted-24",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-anada-25",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-after-successful-networkty-26",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-es-es-27",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-mentes-28",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-confirm-the-restoration-of-factory-29",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-loam-30",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-enter-the-time-you-want-to-query-31",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-app-operation-32",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-doorbell-33",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-34",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-35",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-video-lock-36",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-37",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-bird-feeder-38",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-39",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-no-prompts-40",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-41",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-42",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connecting-device-43",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-44",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-added-successfully-45",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-46",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-doorbell-47",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connecting-device-48",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-ble-49",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-50",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-bird-feeder-51",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-52",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-l8t-rd-53",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-add-device-54",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-select-the-status-of-the-indicator-light-or-55",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-check-if-the-device-has-been-reset-and-56",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connect-your-mobile-phone-to-57",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-9-connect-your-phone-to-the-hotspot-shown-58",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-y-sl-xxxx-59",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-go-to-connect-60",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-messages-such-as-doorbell-push-61",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-1-days-62",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-online-offline-password-63",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-ea-ed-64",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-logs-65",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-member-management-66",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-67",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-8-card-68",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-69",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-any-unlock-with-card10-70",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-save-71",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-72",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-73",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-74",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-75",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-temporary-password-76",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-offline-password-77",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-expiration-time-78",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-message-notification-79",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "ocr-ocr-expiration-time-80",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-summary",
+      "product": "e-orbit",
+      "id": "oem-source-index-e-orbit",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-orbit",
+      "id": "oem-source-index-e-orbit",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-provenance-refs",
+      "product": "e-orbit",
+      "id": "oem-source-index-e-orbit",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-prime",
+      "id": "cap-objetivo",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-prime",
+      "id": "cap-fuente-y-alcance-real",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-prime",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-prime",
+      "id": "wf-flujo-oem-base-de-vinculacion",
+      "domain": "entities"
+    },
+    {
+      "class": "missing-channel-targets",
+      "product": "e-prime",
+      "id": "wf-alta-desde-la-app",
+      "domain": "entities"
+    }
+  ],
+  "findings_truncated_to": 200
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "failure_states": [
+    {
+      "id": "blocked-state",
+      "recoverable": true,
+      "requires": "tier-3 or tier-4 escalation",
+      "examples": [
+        "operational-state.blocked",
+        "admin-state.admin-locked-out"
+      ]
+    },
+    {
+      "id": "unsafe-state",
+      "recoverable": true,
+      "requires": "warning acknowledgement + prerequisite restore",
+      "examples": [
+        "lock-state.lockout"
+      ]
+    },
+    {
+      "id": "unresolved-state",
+      "recoverable": false,
+      "requires": "human/OEM intervention",
+      "examples": [
+        "pairing-failed (after N retries)",
+        "enrollment-failed (after N retries)"
+      ]
+    },
+    {
+      "id": "irrecoverable-state",
+      "recoverable": false,
+      "requires": "vendor RMA",
+      "examples": [
+        "depleted + battery-physically-damaged",
+        "firmware-bricked"
+      ]
+    },
+    {
+      "id": "escalation-required",
+      "recoverable": true,
+      "requires": "tier-3..5 troubleshooting",
+      "examples": [
+        "repeated validation-failure across procedures"
+      ]
+    }
+  ],
+  "unsafe_sequences": [
+    {
+      "sequence": [
+        "unlocking",
+        "factory-reset"
+      ],
+      "reason": "factory-reset during unlocking corrupts credential state"
+    },
+    {
+      "sequence": [
+        "pairing",
+        "factory-reset"
+      ],
+      "reason": "factory-reset during pairing leaves device in inconsistent network state"
+    },
+    {
+      "sequence": [
+        "enrolling",
+        "battery-replacement"
+      ],
+      "reason": "battery removal during enrollment loses captured credential"
+    },
+    {
+      "sequence": [
+        "replacement-in-progress",
+        "factory-reset"
+      ],
+      "reason": "factory-reset during battery swap can brick configuration"
+    },
+    {
+      "sequence": [
+        "mounting",
+        "configured"
+      ],
+      "reason": "skipping wired/power confirmation step before configuration"
+    }
+  ],
+  "rules": [
+    "Failure states classify recoverable vs unrecoverable; classification is non-negotiable.",
+    "Unsafe sequences are blocked at composition time; assemblies cannot include them as adjacent steps.",
+    "Escalation-required failures transition operational-state to `troubleshooting` and cannot return to `normal` without verified recovery.",
+    "Irrecoverable failures emit a vendor-RMA escalation and never present a 'retry' affordance."
+  ]
+}

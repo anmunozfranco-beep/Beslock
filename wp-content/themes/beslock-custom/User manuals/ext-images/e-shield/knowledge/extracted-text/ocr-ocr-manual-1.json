@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-manual-1",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Manual",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-1"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "IAS DEN E:",
+  "storage_bucket": "extracted-text"
+}

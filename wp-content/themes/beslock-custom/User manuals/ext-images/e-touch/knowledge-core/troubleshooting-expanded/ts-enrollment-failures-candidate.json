@@ -1,0 +1,45 @@
+{
+  "candidate_causes": [
+    "candidato pendiente de revisión OEM"
+  ],
+  "category": "enrollment-failures",
+  "channel_targets": [
+    "support",
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "diagnostic_questions": [
+    "¿se puede reproducir el síntoma de forma consistente?",
+    "¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?",
+    "¿hay eventos recientes (cambio de batería, reset, actualización)?"
+  ],
+  "escalation_required": true,
+  "extraction_lineage": [
+    "corpus-enrichment/troubleshooting-candidate/ts-enrollment-failures-candidate"
+  ],
+  "id": "ts-enrollment-failures-candidate",
+  "language": "es-CO",
+  "menu_path": "",
+  "next_actions": [
+    "elevar el caso al canal de revisión OEM antes de operar",
+    "registrar el síntoma observado en el log operacional"
+  ],
+  "ocr_dependency": "none",
+  "product": "e-touch",
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "fallo al registrar huella, pin, llave o credencial",
+  "surface": "runtime-corpus",
+  "symptoms": [
+    "el lector de huella no responde",
+    "la huella se rechaza repetidamente",
+    "la cerradura cierra el alta sin guardar el credencial"
+  ],
+  "type": "troubleshooting-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

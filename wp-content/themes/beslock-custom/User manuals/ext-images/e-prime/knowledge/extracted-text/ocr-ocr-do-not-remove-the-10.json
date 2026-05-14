@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-do-not-remove-the-10",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Do Not Remove The",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-10"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "handle hole screws when\nchanging direction.\n1. Loosen the handle direction change screw;\n2. Rotate the handle 180° towards the top of the\nlock;\n3. Rotate the direction changer;\n4. Tighten the direction change screw to complete\nthe process.\n1. Push the direction change switch upwards;\n2. Press in the latch bolt;\n3. Rotate the latch bolt 180° to change direction;",
+  "storage_bucket": "extracted-text"
+}

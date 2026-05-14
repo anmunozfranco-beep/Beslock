@@ -1,0 +1,5 @@
+# Recomendación final
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#12
+
+Estos documentos sirven para apoyar el primer ciclo de implementación y reducir improvisación entre contenido, diseño y UI.

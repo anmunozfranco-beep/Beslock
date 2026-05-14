@@ -1,0 +1,7 @@
+# 1 Paquete documental actual
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#5
+
+- `e-Orbit user manual - image-ready.md` -> manual de uso final actual
+- `e-Orbit app manual.md` -> base normalizada de app a partir de las fuentes OEM suplementarias
+- `e-Orbit - supplemental source review.md` -> auditoria de `e-Orbit_1.xls` y `e-Orbit_2.pdf`

@@ -1,0 +1,32 @@
+{
+  "id": "cap-alcance-real-de-la-fuente",
+  "type": "capability",
+  "product": "e-orbit",
+  "summary": "Las fuentes nuevas soportan con bastante claridad:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "alta del dispositivo en `Smart Life` / `Tuya`",
+    "configuracion de red del equipo",
+    "desbloqueo remoto",
+    "consulta de registros",
+    "gestion de miembros",
+    "passwords temporales"
+  ],
+  "storage_bucket": "capabilities"
+}

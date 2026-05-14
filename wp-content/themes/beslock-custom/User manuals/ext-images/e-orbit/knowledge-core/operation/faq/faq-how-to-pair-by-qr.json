@@ -1,0 +1,31 @@
+{
+  "id": "faq-how-to-pair-by-qr",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "How does the QR onboarding flow work?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "document-supported",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit app manual.md#5",
+    "source-of-truth/manuals/e-Orbit user manual.md#9",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "How does the QR onboarding flow work?",
+  "answer": "Open Smart Life, add a device from Camera&Lock, choose the observed Wi-Fi video lock family, select the network, place the lock in pairing mode, then present the QR from the phone to the lock camera and wait for confirmation."
+}

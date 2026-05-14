@@ -1,0 +1,384 @@
+{
+  "generated_at": "2026-05-13T15:40:35Z",
+  "products": {
+    "e-flex": {
+      "procedural_semantics": 9,
+      "action_token_index": {
+        "press": 1,
+        "place-finger": 2,
+        "lock": 1,
+        "confirm": 3,
+        "open-app": 1
+      },
+      "components": 7,
+      "components_anchored": [
+        "fingerprint-zone",
+        "ic-card-zone",
+        "exterior-handle",
+        "deadbolt",
+        "latch",
+        "lock-body",
+        "mechanical-key-slot"
+      ],
+      "risks": 4,
+      "intents": 6,
+      "publication_routing": 66,
+      "publication_channel_counts": {
+        "pdf": 21,
+        "web": 32,
+        "support": 21,
+        "onboarding": 19,
+        "future-video": 17,
+        "chatbot": 19,
+        "rag": 50,
+        "comfyui": 2
+      },
+      "missing_action_tokens": [
+        "hold",
+        "scan",
+        "enroll",
+        "pair",
+        "unlock",
+        "reset",
+        "enter-menu",
+        "select",
+        "connect-wifi",
+        "install",
+        "replace-battery",
+        "show-qr",
+        "test"
+      ],
+      "missing_components": [
+        "keypad",
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "camera-cluster",
+        "interior-thumbturn",
+        "emergency-usb-port",
+        "led-indicator",
+        "buzzer",
+        "battery-compartment"
+      ],
+      "missing_visual_intents": [
+        "intent-reset-procedure",
+        "intent-battery-replacement"
+      ]
+    },
+    "e-nova": {
+      "procedural_semantics": 0,
+      "action_token_index": {},
+      "components": 1,
+      "components_anchored": [
+        "fingerprint-zone"
+      ],
+      "risks": 1,
+      "intents": 1,
+      "publication_routing": 17,
+      "publication_channel_counts": {
+        "chatbot": 2,
+        "rag": 17,
+        "comfyui": 2,
+        "web": 1
+      },
+      "missing_action_tokens": [
+        "press",
+        "hold",
+        "scan",
+        "place-finger",
+        "enroll",
+        "pair",
+        "unlock",
+        "lock",
+        "reset",
+        "confirm",
+        "enter-menu",
+        "select",
+        "connect-wifi",
+        "install",
+        "replace-battery",
+        "open-app",
+        "show-qr",
+        "test"
+      ],
+      "missing_components": [
+        "keypad",
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "ic-card-zone",
+        "camera-cluster",
+        "exterior-handle",
+        "interior-thumbturn",
+        "deadbolt",
+        "latch",
+        "lock-body",
+        "emergency-usb-port",
+        "mechanical-key-slot",
+        "led-indicator",
+        "buzzer",
+        "battery-compartment"
+      ],
+      "missing_visual_intents": [
+        "intent-installation-assistance",
+        "intent-fingerprint-enrollment",
+        "intent-app-pairing",
+        "intent-reset-procedure",
+        "intent-battery-replacement",
+        "intent-emergency-unlock",
+        "intent-warning-visualisation"
+      ]
+    },
+    "e-orbit": {
+      "procedural_semantics": 24,
+      "action_token_index": {
+        "scan": 1,
+        "place-finger": 5,
+        "enroll": 19,
+        "pair": 3,
+        "unlock": 3,
+        "lock": 18,
+        "reset": 4,
+        "confirm": 11,
+        "enter-menu": 4,
+        "select": 16,
+        "connect-wifi": 10,
+        "open-app": 2,
+        "show-qr": 1,
+        "test": 5
+      },
+      "components": 4,
+      "components_anchored": [
+        "fingerprint-zone",
+        "camera-cluster",
+        "emergency-usb-port",
+        "led-indicator"
+      ],
+      "risks": 3,
+      "intents": 7,
+      "publication_routing": 169,
+      "publication_channel_counts": {
+        "pdf": 27,
+        "web": 60,
+        "support": 45,
+        "onboarding": 26,
+        "future-video": 10,
+        "chatbot": 71,
+        "rag": 158,
+        "comfyui": 4
+      },
+      "missing_action_tokens": [
+        "press",
+        "hold",
+        "install",
+        "replace-battery"
+      ],
+      "missing_components": [
+        "keypad",
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "ic-card-zone",
+        "exterior-handle",
+        "interior-thumbturn",
+        "deadbolt",
+        "latch",
+        "lock-body",
+        "mechanical-key-slot",
+        "buzzer",
+        "battery-compartment"
+      ],
+      "missing_visual_intents": [
+        "intent-battery-replacement"
+      ]
+    },
+    "e-prime": {
+      "procedural_semantics": 9,
+      "action_token_index": {
+        "press": 1,
+        "place-finger": 1,
+        "confirm": 2,
+        "open-app": 1
+      },
+      "components": 7,
+      "components_anchored": [
+        "fingerprint-zone",
+        "ic-card-zone",
+        "exterior-handle",
+        "deadbolt",
+        "latch",
+        "lock-body",
+        "battery-compartment"
+      ],
+      "risks": 3,
+      "intents": 5,
+      "publication_routing": 91,
+      "publication_channel_counts": {
+        "pdf": 20,
+        "web": 30,
+        "support": 22,
+        "onboarding": 18,
+        "future-video": 16,
+        "chatbot": 19,
+        "rag": 73,
+        "comfyui": 2
+      },
+      "missing_action_tokens": [
+        "hold",
+        "scan",
+        "enroll",
+        "pair",
+        "unlock",
+        "lock",
+        "reset",
+        "enter-menu",
+        "select",
+        "connect-wifi",
+        "install",
+        "replace-battery",
+        "show-qr",
+        "test"
+      ],
+      "missing_components": [
+        "keypad",
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "camera-cluster",
+        "interior-thumbturn",
+        "emergency-usb-port",
+        "mechanical-key-slot",
+        "led-indicator",
+        "buzzer"
+      ],
+      "missing_visual_intents": [
+        "intent-reset-procedure",
+        "intent-battery-replacement",
+        "intent-emergency-unlock"
+      ]
+    },
+    "e-shield": {
+      "procedural_semantics": 13,
+      "action_token_index": {
+        "place-finger": 1,
+        "enroll": 1,
+        "unlock": 1,
+        "lock": 1,
+        "confirm": 6,
+        "connect-wifi": 1
+      },
+      "components": 5,
+      "components_anchored": [
+        "fingerprint-zone",
+        "keypad",
+        "ic-card-zone",
+        "latch",
+        "mechanical-key-slot"
+      ],
+      "risks": 4,
+      "intents": 6,
+      "publication_routing": 71,
+      "publication_channel_counts": {
+        "pdf": 22,
+        "web": 29,
+        "support": 24,
+        "onboarding": 21,
+        "future-video": 21,
+        "chatbot": 20,
+        "rag": 56,
+        "comfyui": 2
+      },
+      "missing_action_tokens": [
+        "press",
+        "hold",
+        "scan",
+        "pair",
+        "reset",
+        "enter-menu",
+        "select",
+        "install",
+        "replace-battery",
+        "open-app",
+        "show-qr",
+        "test"
+      ],
+      "missing_components": [
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "camera-cluster",
+        "exterior-handle",
+        "interior-thumbturn",
+        "deadbolt",
+        "lock-body",
+        "emergency-usb-port",
+        "led-indicator",
+        "buzzer",
+        "battery-compartment"
+      ],
+      "missing_visual_intents": [
+        "intent-reset-procedure",
+        "intent-battery-replacement"
+      ]
+    },
+    "e-touch": {
+      "procedural_semantics": 4,
+      "action_token_index": {
+        "press": 3,
+        "place-finger": 1,
+        "lock": 3,
+        "confirm": 2
+      },
+      "components": 9,
+      "components_anchored": [
+        "fingerprint-zone",
+        "keypad",
+        "exterior-handle",
+        "deadbolt",
+        "latch",
+        "lock-body",
+        "mechanical-key-slot",
+        "led-indicator",
+        "battery-compartment"
+      ],
+      "risks": 4,
+      "intents": 5,
+      "publication_routing": 101,
+      "publication_channel_counts": {
+        "pdf": 15,
+        "web": 24,
+        "support": 15,
+        "onboarding": 14,
+        "future-video": 12,
+        "chatbot": 14,
+        "rag": 89,
+        "comfyui": 2
+      },
+      "missing_action_tokens": [
+        "hold",
+        "scan",
+        "enroll",
+        "pair",
+        "unlock",
+        "reset",
+        "enter-menu",
+        "select",
+        "connect-wifi",
+        "install",
+        "replace-battery",
+        "open-app",
+        "show-qr",
+        "test"
+      ],
+      "missing_components": [
+        "face-recognition-cam",
+        "palm-vein-sensor",
+        "ic-card-zone",
+        "camera-cluster",
+        "interior-thumbturn",
+        "emergency-usb-port",
+        "buzzer"
+      ],
+      "missing_visual_intents": [
+        "intent-app-pairing",
+        "intent-reset-procedure",
+        "intent-battery-replacement"
+      ]
+    }
+  }
+}

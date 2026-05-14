@@ -1,0 +1,45 @@
+{
+  "id": "wf-remote-unlock-response",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "Remote unlock response",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#remote-unlock-response"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "app",
+  "outcomes": [
+    "visitor-reviewed",
+    "unlock-request-processed",
+    "event-log-preserved"
+  ],
+  "preconditions": [
+    "lock already paired",
+    "visitor event triggered"
+  ],
+  "steps": [
+    "Receive the ring or unlock request in the app.",
+    "Review the visitor context.",
+    "Use the unlock control if access is approved.",
+    "Review the related event in the logs if needed."
+  ],
+  "validation_checks": [],
+  "authorized_visual_renderer": "ComfyUI"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "cap-alcance-real-de-la-fuente",
+  "type": "capability",
+  "product": "e-flex",
+  "summary": "La fuente OEM suplementaria muestra un flujo de alta corto y dos referencias de ecosistema:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "`TUYA APP`",
+    "mini-programa `WeChat` por QR"
+  ],
+  "storage_bucket": "capabilities"
+}

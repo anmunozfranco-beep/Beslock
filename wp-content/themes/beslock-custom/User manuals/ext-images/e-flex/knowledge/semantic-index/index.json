@@ -1,0 +1,104 @@
+{
+  "product": "e-flex",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "totals": {
+    "entities": 63,
+    "capabilities": 2,
+    "operation": 2,
+    "workflows": 3,
+    "warning": 2,
+    "installation": 14,
+    "terminology": 8,
+    "ocr-evidence": 32
+  },
+  "by_type": {
+    "capability": [
+      "cap-objetivo",
+      "cap-alcance-real-de-la-fuente"
+    ],
+    "procedure": [
+      "proc-requisitos-antes-de-vincular",
+      "proc-validacion-despues-del-alta"
+    ],
+    "workflow": [
+      "wf-secuencia-local-en-la-cerradura",
+      "wf-alta-desde-tuya-app",
+      "wf-qr-y-mini-programa-de-wechat"
+    ],
+    "warning": [
+      "warning-limites-de-evidencia",
+      "warning-precauciones-clave"
+    ],
+    "installation-flow": [
+      "install-context-objetivo",
+      "install-context-que-vas-a-instalar",
+      "install-context-compatibilidad-fisica-antes-de-perforar",
+      "install-context-que-necesitas-antes-de-empezar",
+      "install-usar-la-guia-de-instalacion-disponible",
+      "install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+      "install-montar-panel-exterior-e-interior",
+      "install-cambio-de-direccion",
+      "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+      "install-energia-e-inicializacion",
+      "install-context-validacion-despues-de-instalar",
+      "install-context-relacion-con-el-paquete-documental",
+      "install-context-estado-editorial"
+    ],
+    "glossary-term": [
+      "term-tuya",
+      "term-wechat",
+      "term-2-4g",
+      "term-qr",
+      "term-pin",
+      "term-huella",
+      "term-administrador",
+      "term-reset"
+    ],
+    "extracted-text": [
+      "ocr-ocr-overview-1",
+      "ocr-ocr-reset-button-2",
+      "ocr-ocr-mechanical-key-3",
+      "ocr-ocr-the-length-of-the-4",
+      "ocr-ocr-for-door-thicknesses-5",
+      "ocr-ocr-changing-handle-direction-6",
+      "ocr-ocr-do-not-remove-the-7",
+      "ocr-ocr-changing-lock-body-direction-8",
+      "ocr-ocr-wake-up-the-screen-by-9",
+      "ocr-ocr-ic-card-10",
+      "ocr-ocr-after-successful-operation-pr-11",
+      "ocr-ocr-in-normal-status-12",
+      "ocr-ocr-wake-up-the-screen-by-13",
+      "ocr-ocr-after-adding-an-administrator-14",
+      "ocr-ocr-function-settings-15",
+      "ocr-ocr-settings-16",
+      "ocr-ocr-after-successful-operation-17",
+      "ocr-ocr-settings-18",
+      "ocr-ocr-please-enter-the-time-19",
+      "ocr-ocr-select-the-appropriate-20",
+      "ocr-ocr-enter-time-21",
+      "ocr-ocr-select-the-appropriate-22",
+      "ocr-ocr-select-the-appropriate-23",
+      "ocr-ocr-in-normal-status-24",
+      "ocr-ocr-wake-up-the-screen-by-25",
+      "ocr-ocr-after-adding-an-administrator-26",
+      "ocr-ocr-after-successful-operation-press-27",
+      "ocr-ocr-enter-the-fingerprint-password-28",
+      "ocr-ocr-after-successful-operation-press-29",
+      "ocr-ocr-press-and-hold-for-5-30",
+      "ocr-ocr-doodle-app-download-installation-and-door-31",
+      "ocr-ocr-sweep-32"
+    ]
+  }
+}

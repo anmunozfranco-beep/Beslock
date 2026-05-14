@@ -1,0 +1,9 @@
+# Que vas a instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#3
+
+e-Flex usa una arquitectura de placas largas frontal y trasera con:
+- keypad superior en el panel exterior
+- sensor de huella en la cara de la manija exterior
+- compartimiento de baterias y boton `Reset` en el conjunto interior
+- llave mecanica y alimentacion de emergencia en el conjunto exterior

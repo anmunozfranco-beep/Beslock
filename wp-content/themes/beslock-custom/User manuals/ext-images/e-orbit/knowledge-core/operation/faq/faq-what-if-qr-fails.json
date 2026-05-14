@@ -1,0 +1,31 @@
+{
+  "id": "faq-what-if-qr-fails",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "What should support suggest if QR pairing fails?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "document-supported",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#9",
+    "source-of-truth/manuals/e-Orbit app manual.md#6",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "What should support suggest if QR pairing fails?",
+  "answer": "Adjust one variable at a time such as brightness, distance, or lighting. If the QR route still fails, use the EZ Mode fallback instead of treating both pairing modes as the same workflow."
+}

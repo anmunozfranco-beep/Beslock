@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-cearing-cade-60",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Cearing Cade",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-60"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "IX.Door opening record.\nThe log can be queried in the\"Door Opening Record\"entry of the homepage,and the records are arranged in reverse\norder.The unlocking ID that has been associated with the user name will directly display the corresponding user name,\nand the unlocking ID that has not been associated with the name from the APP will display the specific unlocking 1D;\nAbout the record of door opening:when the door lock is connected with Bluetooth of mobile phone,the record of door\nopening will be displayed on APP in real time,otherwise,the record will be cached localy in the door lock,and it will be\nretransmitted after the door lock is connected with Bluetooth of mobile phone and opened next time.\nX.Restore the factory settings\nClick the icon in the upper right comer of the main page,enter the interface,find \"Remove device\",and select \"Unbind and\nclear data\".\n1.When the mobile phone APP is connected to the door lock by Bluetooth,the factory reset operation is used.Alllocal\ndoor opening methods of the door lock will be deleted,and the door lock will be restored to its original factory default state.\nOther users can re-add the door lock through APP.\n2.When the mobile phone is not connected with the door lock by Bluetooth,restore the factory settings of the door lock\non the door lock.The way of opening the door on the door Ibck remains unaffected.Other users can re-pair with the door\nlock through APP.The original unlocking method of the rare door lock will be invalid.\n3.Press the setting button in the smal hole of the rear handle for 5 seconds,and the door Ibck will make a long \"drip\"\nsound,which will force the factory settings to be restored.All the door opening methods on the door lock wil be deleted,\nand the door lock will be restored to its original factory default state.Other users can add the door lock again through APP.\nXI.Normally open setting/cancel normally open",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "decision-intelligence-governance/1.0",
+  "generated_at": "2026-05-13T19:16:08+00:00",
+  "path_classes": [
+    {
+      "id": "preferred",
+      "description": "canonical path with verified-truth evidence and full safeguards"
+    },
+    {
+      "id": "alternative",
+      "description": "alternate canonical path also verified-truth (e.g. role-specific)"
+    },
+    {
+      "id": "fallback",
+      "description": "registered fallback when canonical unavailable"
+    },
+    {
+      "id": "emergency",
+      "description": "safety-only path under emergency operational mode"
+    },
+    {
+      "id": "safe-minimal",
+      "description": "smallest safe path that still asserts validation predicate"
+    },
+    {
+      "id": "advanced",
+      "description": "expanded path for advanced/installer/administrator/maintenance roles"
+    },
+    {
+      "id": "degraded",
+      "description": "operational path under reduced capability"
+    }
+  ],
+  "rules": [
+    "preferred > alternative > fallback > degraded > emergency > escalation",
+    "safety-preserving overrides simplifying or shorter",
+    "verified-truth path beats inferred path of same shape",
+    "role-eligible paths beat role-gated paths the user cannot execute",
+    "registered fallback beats improvisation (improvisation is forbidden)",
+    "irreversible operations always require an explicit administrator-flow path"
+  ],
+  "tie_breakers": [
+    "shortest declared path among same-class candidates",
+    "fewest cross-product collisions",
+    "highest declared maturity level of underlying nodes",
+    "fewest unresolved validation findings on the path"
+  ]
+}

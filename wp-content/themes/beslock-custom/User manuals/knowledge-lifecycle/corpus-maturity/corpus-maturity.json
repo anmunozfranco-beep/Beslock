@@ -1,0 +1,83 @@
+{
+  "kind": "corpus-maturity",
+  "maturity_dimensions": [
+    {
+      "id": "operational-readiness",
+      "rolls_up_from": [
+        "operation",
+        "workflows",
+        "procedural-semantics",
+        "install"
+      ]
+    },
+    {
+      "id": "troubleshooting-maturity",
+      "rolls_up_from": [
+        "troubleshooting",
+        "troubleshooting-expanded",
+        "causal-graphs"
+      ]
+    },
+    {
+      "id": "warning-maturity",
+      "rolls_up_from": [
+        "warnings",
+        "warnings-expanded"
+      ]
+    },
+    {
+      "id": "continuity-maturity",
+      "rolls_up_from": [
+        "continuity-checkpoints"
+      ]
+    },
+    {
+      "id": "retrieval-readiness",
+      "rolls_up_from": [
+        "all domains with at least one ocr-derived-or-higher record"
+      ]
+    },
+    {
+      "id": "runtime-trustworthiness",
+      "rolls_up_from": [
+        "operationally-proven node count + replay determinism rate"
+      ]
+    }
+  ],
+  "maturity_score_formula": [
+    "per-domain coverage_score = #(ocr-derived-or-higher) / #(declared)",
+    "per-domain trust_score    = mean(tier_weight) over declared records",
+    "per-product maturity      = weighted mean of dimension scores",
+    "weights are declared, not learned; declared per phase",
+    "scores are reproducible: same inputs → same outputs (no clock, no random)"
+  ],
+  "maturity_tiers": [
+    {
+      "range": "< 0.30",
+      "runtime_use": "supervised pilot only",
+      "tier": "nascent"
+    },
+    {
+      "range": "0.30-0.60",
+      "runtime_use": "supervised + mandatory escalation routes",
+      "tier": "emerging"
+    },
+    {
+      "range": "0.60-0.85",
+      "runtime_use": "supervised primary",
+      "tier": "operational"
+    },
+    {
+      "range": ">= 0.85",
+      "runtime_use": "supervised + replay-validated primary",
+      "tier": "mature"
+    }
+  ],
+  "runtime_trustworthiness_inputs": [
+    "share of retrieval packages whose top-K avg weight >= 0.85",
+    "share of supervised runs that complete without demotion",
+    "replay determinism rate over the last K runs",
+    "share of escalation-trace events that were declared (not surprise)"
+  ],
+  "schema": "knowledge-lifecycle-governance/1.0"
+}

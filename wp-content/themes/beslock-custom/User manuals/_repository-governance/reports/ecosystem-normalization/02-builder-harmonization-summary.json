@@ -1,0 +1,10 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/ecosystem-normalization/builder-harmonization/",
+  "builders_declaring_subordinate_to": 6,
+  "builders_inventoried": 39,
+  "builders_using_write_pair": 18,
+  "conventions_count": 9,
+  "kind": "builder-harmonization-summary",
+  "rules_count": 5,
+  "schema": "ecosystem-normalization-governance/1.0"
+}

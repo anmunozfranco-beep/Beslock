@@ -1,0 +1,21 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/ops-model/",
+  "domains": [
+    "corpus-maintenance",
+    "review-operations",
+    "promotion-operations",
+    "oem-ingestion",
+    "runtime-maintenance",
+    "governance-maintenance"
+  ],
+  "invariants_count": 5,
+  "kind": "ops-model-summary",
+  "roles": [
+    "reviewer",
+    "oem-reviewer",
+    "operator",
+    "governance-operator",
+    "auditor"
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

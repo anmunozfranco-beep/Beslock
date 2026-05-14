@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "id": "no-executable-consoles",
+      "impact": "all 6 consoles are design-only; no operator surface exists yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-explainability-renderer",
+      "impact": "explanation patterns declared; no renderer wired into the runtime CLI",
+      "severity": "high"
+    },
+    {
+      "id": "no-claim-ownership-mediator",
+      "impact": "queue claim semantics declared; no mediator enforces concurrency ceiling",
+      "severity": "high"
+    },
+    {
+      "id": "no-operator-identity-store",
+      "impact": "operator id is a free string in flows.py; no identity verification",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-pause-semantics-runtime",
+      "impact": "executable workflows declare halts; runtime CLI has only auto-decide path",
+      "severity": "medium"
+    },
+    {
+      "id": "no-fatigue-throttle",
+      "impact": "ergonomic principles declare ceilings; no throttle exists yet",
+      "severity": "medium"
+    },
+    {
+      "id": "no-explanation-replayability-test",
+      "impact": "explanation determinism is asserted, not yet tested",
+      "severity": "medium"
+    },
+    {
+      "id": "no-cognitive-load-measurement",
+      "impact": "no instrumentation to measure operator decision time / abandonment",
+      "severity": "low"
+    },
+    {
+      "id": "carry-overs-from-phase-28-29",
+      "impact": "no executable reviewer registry, queue store, event log, binding store; 132 candidates still await elevation",
+      "severity": "high"
+    }
+  ],
+  "kind": "unresolved-human-operational-risks",
+  "schema": "human-operations-governance/1.0"
+}

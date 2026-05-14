@@ -1,0 +1,39 @@
+{
+  "id": "sup-e-shield-1-section-001",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Smart Outdoor Lock Nxs Smart Outdoor Lock Nxs",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf#page=?",
+    "generated_manuals_supplemental/e-shield-1/manual.json#sections[0]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-shield-1/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "Smart Outdoor Lock Nxs Smart Outdoor Lock Nxs",
+  "page": "?",
+  "text": [
+    "SETTING DESCRIPTION 5.lilegal User Alarm",
+    "If wrong fingerprints, passwords, or cards are entered 5 times in a row, the system will prompt \"Illegal user, illegal",
+    "© e intrusion, the owner has been notified\" and lock for 90 seconds. During this period, no user operations will be"
+  ],
+  "ocr_avg_confidence": 88.5,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-shield-1"
+}

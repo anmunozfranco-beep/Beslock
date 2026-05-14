@@ -1,0 +1,44 @@
+# Cambiar el idioma
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8
+
+
+
+
+## Qué necesitas antes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8.1
+
+- la cerradura está encendida
+- el panel responde al activarlo
+- el usuario tiene acceso al equipo
+
+
+## Flujo detectado
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8.2
+
+La extracción disponible muestra ingreso con `888#` y selección de español con `3009#`. Conviene validar estos códigos visualmente con la versión real del equipo antes de publicar una versión definitiva del manual.
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8.3
+
+1. activa el panel
+2. ingresa `888#`
+3. entra al sistema de idioma
+4. selecciona el idioma deseado
+5. para español, usa `3009#` si corresponde a tu versión
+6. confirma el cambio si el sistema lo solicita
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8.4
+
+- el idioma sí cambió
+- el usuario entiende el menú
+- el sistema sigue respondiendo normalmente
+
+---

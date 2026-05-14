@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/explainability/",
+  "invariants_count": 5,
+  "kind": "explainability-summary",
+  "patterns": [
+    "retrieval-reasoning",
+    "escalation-trigger",
+    "confidence-disclosure",
+    "provenance-inspection",
+    "continuity-visualization",
+    "operational-uncertainty"
+  ],
+  "schema": "human-operations-governance/1.0"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "stability_contracts_count": 5,
+  "minimum_served_fields": [
+    "id",
+    "maturity",
+    "provenance",
+    "last_updated",
+    "channel_targets"
+  ],
+  "discoverability_paths_count": 3,
+  "doc": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/retrieval-governance/retrieval-governance.md"
+}

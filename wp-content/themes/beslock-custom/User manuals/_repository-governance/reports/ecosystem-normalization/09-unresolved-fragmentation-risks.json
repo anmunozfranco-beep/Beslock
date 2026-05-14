@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "no-canonical-references-enforcement",
+      "impact": "canonical-references is declared as single source of truth; no automated check verifies builder/runtime alignment to it",
+      "severity": "medium"
+    },
+    {
+      "id": "no-builder-conformance-test",
+      "impact": "builder conventions declared; no test asserts new builders satisfy them",
+      "severity": "medium"
+    },
+    {
+      "id": "no-naming-lint",
+      "impact": "canonical terms declared; no lint enforces prohibition on synonyms in builders / doctrine prose",
+      "severity": "low"
+    },
+    {
+      "id": "no-schema-version-registry",
+      "impact": "schema MAJOR transitions are governance actions; no registry records past versions per schema family",
+      "severity": "medium"
+    },
+    {
+      "id": "carry-over-supervision-receipt-runtime",
+      "impact": "supervision-receipt declared (layer 24) but runtime CLI does not yet emit it as a separate field",
+      "severity": "high"
+    },
+    {
+      "id": "carry-over-composition-manifest",
+      "impact": "composition-manifest declared (layer 26) but runtime does not yet emit it at startup",
+      "severity": "high"
+    },
+    {
+      "id": "carry-over-interop-registry",
+      "impact": "interop-contract registry declared (layer 26) but absent in code",
+      "severity": "high"
+    },
+    {
+      "id": "carry-over-incident-trace-channel",
+      "impact": "incident-trace channel declared (layer 25) but not provisioned in channels.py",
+      "severity": "medium"
+    },
+    {
+      "id": "carry-over-executable-consoles",
+      "impact": "all 6 consoles design-only (layer 24); no operator surface exists yet",
+      "severity": "high"
+    },
+    {
+      "id": "carry-over-132-candidates-await-review",
+      "impact": "candidate corpus written by Phase 27 still awaits reviewer elevation",
+      "severity": "high"
+    }
+  ],
+  "kind": "unresolved-fragmentation-risks",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

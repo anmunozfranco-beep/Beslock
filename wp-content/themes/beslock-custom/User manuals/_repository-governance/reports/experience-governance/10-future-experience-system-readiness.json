@@ -1,0 +1,17 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "ready_for": [
+    "editorial review of journeys, onboarding flows and priority tiers",
+    "per-product specialisation authoring",
+    "downstream-consumer interface specification (chatbot, onboarding assistant, troubleshooting assistant)",
+    "instrumentation contracts for guidance triggers"
+  ],
+  "not_ready_for": [
+    "implementation of any consumer surface",
+    "rendering of progressive manuals",
+    "production of multimodal assistance runtimes",
+    "automated A/B of onboarding flows (no instrumentation yet)"
+  ],
+  "subordination_rule": "All future experience surfaces remain subordinate to the knowledge core; none originates knowledge."
+}

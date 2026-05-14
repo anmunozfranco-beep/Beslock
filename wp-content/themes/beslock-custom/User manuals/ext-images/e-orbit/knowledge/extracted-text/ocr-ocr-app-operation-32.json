@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-app-operation-32",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "App Operation",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-32"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "App Store search [Smart Life] Download and sign in.\n1, Add device\nAfter entering the APP, click \"+\" in the upper right corner of the home page to add the device, and enter\nthe \"Add Device\" page;\n1) Two-dimensional code distribution network\n- Select [Camera&lock] and click \"Video lock (Wi-Fi)\" to jump to the next page.\n- \"Reset the device\" interface, click Next, check the Scan the OR code with door lock camera,click [Next].\n- Select WIFI and enter password, click [Next].\n- After entering the \"Reset the devica\" page, keep waiting, go to the smart door lock operation, let it\nenter the network mode.\n- Point the QR code of the mobile phone at the camera. When the lock end plays a \"stomp\" prompt tone,\nclick \"| Hear a prompt\" to enter the distribution state.",
+  "storage_bucket": "extracted-text"
+}

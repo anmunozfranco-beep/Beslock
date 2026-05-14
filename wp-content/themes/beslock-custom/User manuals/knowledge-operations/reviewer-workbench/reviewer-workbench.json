@@ -1,0 +1,47 @@
+{
+  "invariants": [
+    "the workbench is a thin operator surface, not an application: it emits events into the governed log",
+    "the workbench cannot edit canonical knowledge-core JSON; it only emits append-only events",
+    "the workbench cannot perform any action without a supervision-receipt",
+    "the workbench cannot promote past a reviewer's declared tier_ceiling",
+    "the workbench surfaces, but does not resolve, disagreement"
+  ],
+  "kind": "reviewer-workbench",
+  "out_of_scope": [
+    "no consumer-facing UI",
+    "no chatbot interaction",
+    "no autonomous suggestion engine",
+    "no embedding/ML-driven match suggestions"
+  ],
+  "panels": [
+    {
+      "panel": "side-by-side-oem",
+      "purpose": "show candidate node next to its bound OEM source artifact"
+    },
+    {
+      "panel": "ocr-fragment-inspector",
+      "purpose": "render OCR fragment + bbox + ocr_confidence + source page"
+    },
+    {
+      "panel": "provenance-inspector",
+      "purpose": "show full provenance manifest chain + sha256 verification status"
+    },
+    {
+      "panel": "promotion-approval",
+      "purpose": "execute declared transition with rationale + supervision-receipt"
+    },
+    {
+      "panel": "confidence-adjustment",
+      "purpose": "demote/hold confidence within declared tier ceiling; never raise unilaterally"
+    },
+    {
+      "panel": "evidence-attachment",
+      "purpose": "attach a new binding record (sha256-pinned) to a node"
+    },
+    {
+      "panel": "rollback-operations",
+      "purpose": "issue a demotion-event referencing a prior promotion-event"
+    }
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

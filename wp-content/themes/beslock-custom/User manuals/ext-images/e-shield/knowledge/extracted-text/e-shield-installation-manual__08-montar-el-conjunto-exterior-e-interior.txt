@@ -1,0 +1,11 @@
+# Montar el conjunto exterior e interior
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8
+
+Orden practico de montaje:
+1. presenta el cuerpo exterior manteniendo el lector arriba y el keypad debajo
+2. pasa el cilindro y los elementos de union por las perforaciones ya validadas
+3. presenta la caja interior horizontal desde la cara interna
+4. alinea ambos cuerpos sin torsion ni inclinacion
+5. ajusta la fijacion de forma gradual y alternada para no descentrar el conjunto
+6. comprueba que el pestillo semiautomatico y el conjunto de cierre trabajen sin forzar la puerta

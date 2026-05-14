@@ -1,0 +1,5 @@
+# Paquete inicial de implementación para contenido e imágenes IA
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#1
+
+

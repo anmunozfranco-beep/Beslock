@@ -1,0 +1,258 @@
+[
+  {
+    "id": "ocr-ocr-overview-1",
+    "summary": "Overview",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-reset-button-2",
+    "summary": "Reset Button",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-mechanical-key-3",
+    "summary": "Mechanical Key",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-the-length-of-the-4",
+    "summary": "The Length Of The",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-for-door-thicknesses-5",
+    "summary": "For Door Thicknesses",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-changing-handle-direction-6",
+    "summary": "Changing Handle Direction",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-do-not-remove-the-7",
+    "summary": "Do Not Remove The",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-changing-lock-body-direction-8",
+    "summary": "Changing Lock Body Direction",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-9",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ic-card-10",
+    "summary": "Ic Card",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-pr-11",
+    "summary": "After Successful Operation, Pr",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-12",
+    "summary": "In Normal Status",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-13",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-14",
+    "summary": "After Adding An Administrator,",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-function-settings-15",
+    "summary": "Function Settings",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-15"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-settings-16",
+    "summary": "Settings",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-16"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-17",
+    "summary": "After Successful Operation,",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-17"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-settings-18",
+    "summary": "Settings",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-18"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-please-enter-the-time-19",
+    "summary": "Please Enter The Time",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-19"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-20",
+    "summary": "Select The Appropriate",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-20"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-enter-time-21",
+    "summary": "Enter Time",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-21"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-22",
+    "summary": "Select The Appropriate",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-22"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-23",
+    "summary": "Select The Appropriate",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-23"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-24",
+    "summary": "In Normal Status",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-24"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-25",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-25"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-26",
+    "summary": "After Adding An Administrator,",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-26"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-27",
+    "summary": "After Successful Operation, Press",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-27"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-enter-the-fingerprint-password-28",
+    "summary": "Enter The Fingerprint, Password,",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-28"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-29",
+    "summary": "After Successful Operation, Press",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-29"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-press-and-hold-for-5-30",
+    "summary": "Press And Hold For 5",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-30"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-doodle-app-download-installation-and-door-31",
+    "summary": "Doodle App Download Installation And Door",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-31"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-sweep-32",
+    "summary": "Sweep",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-32"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

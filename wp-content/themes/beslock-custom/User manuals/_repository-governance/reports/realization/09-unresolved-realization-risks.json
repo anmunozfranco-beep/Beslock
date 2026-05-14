@@ -1,0 +1,100 @@
+{
+  "high": [
+    "no-evidence-channel",
+    "no-supervision-receipt-emitter",
+    "no-provenance-emitter",
+    "no-checkpoint-registry",
+    "no-kill-switch-mechanism",
+    "no-context-vector-emitter",
+    "no-confidence-tier-on-nodes",
+    "no-incident-id-emitter",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap",
+    "oem-channel-contract-missing"
+  ],
+  "medium": [
+    "no-rollback-policy",
+    "no-rollout-success-criteria-template",
+    "no-regression-suite",
+    "no-post-deployment-review-template"
+  ],
+  "risks": [
+    {
+      "id": "no-evidence-channel",
+      "impact": "stage promotions cannot be evidence-gated",
+      "severity": "high"
+    },
+    {
+      "id": "no-supervision-receipt-emitter",
+      "impact": "supervised stages cannot satisfy evidence requirements",
+      "severity": "high"
+    },
+    {
+      "id": "no-provenance-emitter",
+      "impact": "no stage can produce audit-grade evidence",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "rollback unavailable; controlled-production blocked",
+      "severity": "high"
+    },
+    {
+      "id": "no-kill-switch-mechanism",
+      "impact": "controlled-production cannot be safely entered",
+      "severity": "high"
+    },
+    {
+      "id": "no-context-vector-emitter",
+      "impact": "operational-copilot + procedural-assembly cannot promote",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "impact": "decisioning + reasoning + uncertainty handling all degrade",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-stage continuity binding unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "impact": "troubleshooting realization deferred indefinitely on most products",
+      "severity": "high"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "impact": "guidance realization with mandatory-warning surface gated",
+      "severity": "high"
+    },
+    {
+      "id": "oem-channel-contract-missing",
+      "impact": "administrator-assistant cannot leave deferred",
+      "severity": "high"
+    },
+    {
+      "id": "no-rollback-policy",
+      "impact": "demotion path not formalized",
+      "severity": "medium"
+    },
+    {
+      "id": "no-rollout-success-criteria-template",
+      "impact": "operational-pilot success cannot be measured",
+      "severity": "medium"
+    },
+    {
+      "id": "no-regression-suite",
+      "impact": "controlled-production exit evidence incomplete",
+      "severity": "medium"
+    },
+    {
+      "id": "no-post-deployment-review-template",
+      "impact": "controlled-production audit incomplete",
+      "severity": "medium"
+    }
+  ],
+  "schema": "realization-and-deployment-governance/1.0",
+  "total": 15
+}

@@ -1,0 +1,32 @@
+{
+  "id": "term-smart-life",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "Aplicación móvil OEM compatible.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "canonical": "Smart Life",
+  "oem_variants": [
+    "Smart Life"
+  ],
+  "definition": "Aplicación móvil OEM compatible.",
+  "storage_bucket": "terminology"
+}

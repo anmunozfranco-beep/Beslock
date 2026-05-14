@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-wake-up-the-screen-by-29",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Wake Up The Screen By",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-29"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-wake-up-the-screen-by-29.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "pressing \"*+#\"",
+  "legacy_storage_bucket": "extracted-text"
+}

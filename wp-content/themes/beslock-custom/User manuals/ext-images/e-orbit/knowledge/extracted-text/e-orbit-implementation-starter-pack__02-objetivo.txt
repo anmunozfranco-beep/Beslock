@@ -1,0 +1,14 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#2
+
+Este documento conecta la implementación inicial del centro de ayuda de e-Orbit con el primer lote de imágenes generadas por IA.
+
+Está pensado para ayudar con:
+- implementación del MVP Fase 1
+- coordinación entre contenido e imágenes
+- nombrado y organización de archivos
+- priorización de assets visuales
+- planeación de integración en CMS o frontend
+
+---

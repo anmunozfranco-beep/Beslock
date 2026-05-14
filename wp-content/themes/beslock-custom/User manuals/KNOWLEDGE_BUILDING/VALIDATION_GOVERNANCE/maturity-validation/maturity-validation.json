@@ -1,0 +1,10 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Maturity Validation Rules",
+  "rules": [
+    "Every artifact MUST declare validation_status from the governed set.",
+    "Promoted/verified artifacts with confidence=low or ocr_dependency=full are unsafe-promotions.",
+    "Promoted/verified artifacts MUST have non-empty source_refs (no unresolved-evidence-leak)."
+  ]
+}

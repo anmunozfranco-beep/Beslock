@@ -1,0 +1,23 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "severity_levels": {
+    "critical": "hallucinated sensor; wrong keypad layout; geometry that misleads at unboxing or first install",
+    "high": "missing mechanical key; misplaced fingerprint zone; incorrect handle direction",
+    "medium": "wrong camera position; fake emergency port; wrong indicator placement",
+    "low": "non-critical visibility issues that do not affect identification or operation"
+  },
+  "user_risk_levels": [
+    "low",
+    "medium",
+    "high",
+    "critical"
+  ],
+  "visual_assistance_priorities": [
+    "P1 critical-path",
+    "P2 support",
+    "P3 editorial"
+  ],
+  "mitigation_template": "ComfyUI workflow MUST anchor the listed trigger_components against the OEM PNG references and refuse to render the asset if anchors are missing.",
+  "canonical_policy": "visual-system/_governance/visual-risk/policy.md"
+}

@@ -1,0 +1,29 @@
+{
+  "product": "e-touch",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "sources_used": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+  ],
+  "sources_missing": [],
+  "sections_seen": 24,
+  "entities_emitted": 98,
+  "bucket_counts": {
+    "capabilities": 1,
+    "operation": 2,
+    "workflows": 1,
+    "warning": 1,
+    "installation": 11,
+    "terminology": 7,
+    "ocr-evidence": 75
+  },
+  "gaps": [
+    "Missing normalized user manual under source-of-truth/manuals/."
+  ],
+  "ambiguities": [
+    "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#4).",
+    "Procedure proc-reset-y-recuperacion has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#10)."
+  ],
+  "ambiguity_total": 2
+}

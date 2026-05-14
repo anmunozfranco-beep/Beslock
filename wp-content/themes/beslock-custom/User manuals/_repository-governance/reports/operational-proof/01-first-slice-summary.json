@@ -1,0 +1,100 @@
+{
+  "criteria": [
+    {
+      "id": "operational-value",
+      "weight": 0.2
+    },
+    {
+      "id": "runtime-risk-inverse",
+      "weight": 0.2
+    },
+    {
+      "id": "validates-architecture",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-retrieval",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-assembly",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-coherence",
+      "weight": 0.15
+    }
+  ],
+  "ranking": [
+    {
+      "blocking_risks": [],
+      "id": "contextual-retrieval-proof",
+      "proof_eligible": true,
+      "soft_risks": [
+        "no-provenance-emitter"
+      ],
+      "weighted_score": 4.5
+    },
+    {
+      "blocking_risks": [],
+      "id": "procedural-assistance-proof",
+      "proof_eligible": true,
+      "soft_risks": [
+        "no-context-vector-emitter",
+        "no-confidence-tier-on-nodes"
+      ],
+      "weighted_score": 4.45
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "id": "onboarding-guidance-proof",
+      "proof_eligible": false,
+      "soft_risks": [],
+      "weighted_score": 3.8
+    },
+    {
+      "blocking_risks": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "id": "troubleshooting-guidance-proof",
+      "proof_eligible": false,
+      "soft_risks": [],
+      "weighted_score": 3.5
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "id": "operational-recovery-assistance-proof",
+      "proof_eligible": false,
+      "soft_risks": [],
+      "weighted_score": 3.45
+    },
+    {
+      "blocking_risks": [
+        "destructive-surface-out-of-proof-scope",
+        "oem-channel-contract-missing",
+        "role-declaration-missing"
+      ],
+      "id": "administrator-guidance-proof",
+      "proof_eligible": false,
+      "soft_risks": [],
+      "weighted_score": 2.6
+    }
+  ],
+  "rules": [
+    "First executable slice MUST be read-only and have no blocking risks.",
+    "Destructive surfaces are out of scope for proof-of-value.",
+    "Soft risks degrade the slice to operator-observed mode but do not block.",
+    "Score updates require evidence; ad-hoc reweighting is unsafe.",
+    "Selected slice must validate retrieval + assembly + coherence simultaneously."
+  ],
+  "schema": "operational-proof-governance/1.0"
+}

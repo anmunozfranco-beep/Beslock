@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-loam-30",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Loam",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-30"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-loam-30.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "reset, voice broadcast: \"Clear sucsettings\nsettings\nreset\ncess\", system restart\nNote: After restoring the actory reset, all user data will be cleared. Please operate with caution.\n4.information inquiry\n(1) User Count\nVoice announcement:\nse SUES\n1.User Count\n“Admin***\ninquiry\nUser***\"\n(2) Read Records\n-Inquiry by order\n4.information inquiry\n2.ecord inquiry\n1, inquiry by order\nNote: Sequential query starts with the latest information and goes down. Press the 8th key to search for the\nnext item and the 2nd key to search for the previous item.\n-Inquiry by time\n4.information\n2.ecord\n2. inquiry",
+  "legacy_storage_bucket": "extracted-text"
+}

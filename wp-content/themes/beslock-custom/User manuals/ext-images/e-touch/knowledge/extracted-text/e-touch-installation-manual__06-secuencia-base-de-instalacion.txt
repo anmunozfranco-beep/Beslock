@@ -1,0 +1,13 @@
+# Secuencia base de instalacion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#6
+
+Segun la guia visual OEM:
+1. pasa el eje cuadrado junto con el cableado por el cuerpo de la cerradura
+2. ajusta la posicion del orificio segun la posicion real del lock body
+3. selecciona los tornillos segun el grosor de la puerta y aprietalos
+4. abre la tapa de baterias para preparar la alimentacion interior
+5. instala el `deadbolt`
+6. instala y fija la manija en la puerta
+7. conecta el puerto del circuito del lock
+8. aprieta los tornillos y asegura la tapa de baterias

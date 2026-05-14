@@ -1,0 +1,52 @@
+{
+  "id": "wf-secuencia-local-en-la-cerradura",
+  "type": "workflow",
+  "product": "e-flex",
+  "summary": "La fuente OEM resume este flujo local:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#5"
+  ],
+  "extraction_lineage": [
+    "knowledge/workflows/wf-secuencia-local-en-la-cerradura.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "local-device",
+  "actors": [
+    "user"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "despierta la pantalla con `*+#`"
+    },
+    {
+      "n": 2,
+      "text": "verifica la informacion del administrador"
+    },
+    {
+      "n": 3,
+      "text": "presiona `2` para `wireless settings`"
+    },
+    {
+      "n": 4,
+      "text": "presiona `1` para `add network`"
+    }
+  ],
+  "preconditions": [],
+  "legacy_storage_bucket": "workflows"
+}

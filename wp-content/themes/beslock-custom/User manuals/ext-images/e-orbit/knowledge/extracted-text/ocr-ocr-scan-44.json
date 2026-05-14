@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-scan-44",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Scan",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-44"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "devices.\n- Select WIFI and enter password, click [Next].\n- \"Reset the Device\" interface, click Next, select [EZ Mode ].\nSelect 2.4 GHz Wi-Fi Network and\nenter password.",
+  "storage_bucket": "extracted-text"
+}

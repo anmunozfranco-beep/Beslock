@@ -1,0 +1,15 @@
+# Alta del dispositivo por Wi-Fi / EZ Mode
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#7
+
+El PDF tambien muestra una variante de alta:
+1. abrir `Camera&Lock`
+2. elegir `Lock (Wi-Fi)`
+3. seleccionar la red Wi-Fi e introducir la contrasena
+4. entrar a `Reset the device`
+5. seleccionar `EZ Mode`
+6. si falla la distribucion, cambiar a otro modo de distribucion o usar el hotspot indicado por la app
+
+Regla editorial:
+- documentar este camino como alternativa de recuperacion o fallback
+- no mezclar QR y `EZ Mode` como si fueran un solo paso

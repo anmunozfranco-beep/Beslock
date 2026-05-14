@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-05-13T14:51:24Z",
+  "products": {
+    "e-flex": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 1.0,
+      "classification_meaningful": 1.0,
+      "lineage_to_oem": 1.0,
+      "procedure_step_completeness": 0.0,
+      "knowledge_breadth": 0.67,
+      "procedures_total": 2,
+      "procedures_with_no_steps": 2,
+      "rag_ready": 0.784,
+      "duplicate_id_count": 0,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 0
+    },
+    "e-nova": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 1.0,
+      "classification_meaningful": 1.0,
+      "lineage_to_oem": 0.5,
+      "procedure_step_completeness": 1.0,
+      "knowledge_breadth": 0.0,
+      "procedures_total": 0,
+      "procedures_with_no_steps": 0,
+      "rag_ready": 0.725,
+      "duplicate_id_count": 0,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 0
+    },
+    "e-orbit": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 0.982,
+      "classification_meaningful": 0.0,
+      "lineage_to_oem": 1.0,
+      "procedure_step_completeness": 0.889,
+      "knowledge_breadth": 0.78,
+      "procedures_total": 9,
+      "procedures_with_no_steps": 1,
+      "rag_ready": 0.788,
+      "duplicate_id_count": 1,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 1
+    },
+    "e-prime": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 1.0,
+      "classification_meaningful": 1.0,
+      "lineage_to_oem": 1.0,
+      "procedure_step_completeness": 0.0,
+      "knowledge_breadth": 0.67,
+      "procedures_total": 2,
+      "procedures_with_no_steps": 2,
+      "rag_ready": 0.784,
+      "duplicate_id_count": 0,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 0
+    },
+    "e-shield": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 1.0,
+      "classification_meaningful": 1.0,
+      "lineage_to_oem": 1.0,
+      "procedure_step_completeness": 1.0,
+      "knowledge_breadth": 0.67,
+      "procedures_total": 0,
+      "procedures_with_no_steps": 0,
+      "rag_ready": 0.934,
+      "duplicate_id_count": 0,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 0
+    },
+    "e-touch": {
+      "provenance_complete": 1.0,
+      "non_duplicated": 1.0,
+      "classification_meaningful": 1.0,
+      "lineage_to_oem": 1.0,
+      "procedure_step_completeness": 0.0,
+      "knowledge_breadth": 0.67,
+      "procedures_total": 2,
+      "procedures_with_no_steps": 2,
+      "rag_ready": 0.784,
+      "duplicate_id_count": 0,
+      "entities_missing_source_refs": 0,
+      "misclassified_troubleshooting": 0
+    }
+  },
+  "scoring_notes": [
+    "provenance_complete: 1 - (entities_missing_source_refs / total_entities)",
+    "non_duplicated: 1 - (duplicate_id_entities / total_entities)",
+    "classification_meaningful: 1 - (sitemap-like-troubleshooting / troubleshooting_total)",
+    "lineage_to_oem: 1 if normalized .md sources cite OEM PDF or OCR fallback; 0.5 if only OCR; 0 if none",
+    "procedure_step_completeness: 1 - (procedures_with_no_steps / procedures_total)",
+    "knowledge_breadth: ratio of operational dimensions with at least one entity (see report 08)",
+    "rag_ready: 0.25*provenance + 0.10*non_duplicated + 0.15*classification + 0.15*lineage + 0.15*procedure_step_completeness + 0.20*knowledge_breadth"
+  ]
+}

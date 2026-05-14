@@ -1,0 +1,59 @@
+{
+  "schema": "decision-intelligence-governance/1.0",
+  "generated_at": "2026-05-13T19:16:08+00:00",
+  "types": [
+    {
+      "id": "missing-evidence",
+      "trigger": "required evidence node absent"
+    },
+    {
+      "id": "conflicting-evidence",
+      "trigger": "two verified-truth claims disagree"
+    },
+    {
+      "id": "incomplete-procedure",
+      "trigger": "step missing precondition or validation predicate"
+    },
+    {
+      "id": "unclear-troubleshooting-state",
+      "trigger": "no eligible branch resolves from current context"
+    },
+    {
+      "id": "uncertain-recovery",
+      "trigger": "no checkpoint AND destructive-step started"
+    },
+    {
+      "id": "ambiguous-intent",
+      "trigger": "intent-clarity in {ambiguous,missing} for non-trivial action"
+    },
+    {
+      "id": "shared-concept-collision",
+      "trigger": "concept reused across products without canonical owner"
+    }
+  ],
+  "rules": [
+    "ambiguity is named, not silently resolved",
+    "destructive decisions never proceed under ambiguity",
+    "ambiguity must select between: ask-disambiguation, withhold, or escalate",
+    "default behavior under ambiguity = the safest of the three",
+    "every ambiguity event is recorded for knowledge-health intake",
+    "OEM-confirmation is the only resolver for verified-truth conflicts on P0 procedures"
+  ],
+  "resolution_paths": [
+    {
+      "id": "ask-disambiguation",
+      "when": "intent-clarity ambiguous AND non-destructive",
+      "effect": "surface declarative question"
+    },
+    {
+      "id": "withhold",
+      "when": "evidence missing AND non-destructive",
+      "effect": "decline to assert; expose disclosure"
+    },
+    {
+      "id": "escalate",
+      "when": "destructive OR irrecoverable OR conflicting verified-truth",
+      "effect": "hand off to higher tier or OEM"
+    }
+  ]
+}

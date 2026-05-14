@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "rules": [
+    "all signals are observation-only; instrumentation MUST NOT alter runtime behavior",
+    "all signals carry provenance (session_id, operator role, timestamp, trust-zone)",
+    "no signal stores PII or operator-identifying free text beyond declared fields",
+    "signal storage is sandbox-tier in pilot phase (layer 25)",
+    "signal aggregation is reviewer-visible; raw signals are not auto-actioned"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "signals": [
+    {
+      "captured_when": "retrieval returns 0 results or all results below escalate threshold",
+      "fields": [
+        "query",
+        "product",
+        "domain",
+        "top_score",
+        "result_count",
+        "session_id"
+      ],
+      "id": "retrieval-failure"
+    },
+    {
+      "captured_when": "session escalates to operator or reviewer",
+      "fields": [
+        "session_id",
+        "trigger",
+        "from_role",
+        "to_role",
+        "confidence_at_escalation"
+      ],
+      "id": "escalation-frequency"
+    },
+    {
+      "captured_when": "session checkpoint cannot be resumed or context is lost",
+      "fields": [
+        "session_id",
+        "checkpoint_id",
+        "break_reason"
+      ],
+      "id": "continuity-breakdown"
+    },
+    {
+      "captured_when": "operator requests clarification, retracts an action, or loops on the same step",
+      "fields": [
+        "session_id",
+        "step",
+        "loop_count",
+        "retraction"
+      ],
+      "id": "operator-confusion"
+    },
+    {
+      "captured_when": "reviewer defers, requests more provenance, or cannot decide",
+      "fields": [
+        "candidate_id",
+        "reviewer_id",
+        "deferral_reason",
+        "missing_provenance_fields"
+      ],
+      "id": "reviewer-friction"
+    },
+    {
+      "captured_when": "candidates queue beyond a declared age threshold or one reviewer holds disproportionate load",
+      "fields": [
+        "queue_depth",
+        "oldest_age_days",
+        "reviewer_load_distribution"
+      ],
+      "id": "governance-bottleneck"
+    },
+    {
+      "captured_when": "same query/topic produces divergent retrievals across nearby sessions",
+      "fields": [
+        "topic",
+        "divergence_score",
+        "sessions_observed"
+      ],
+      "id": "ambiguity-hotspot"
+    }
+  ],
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

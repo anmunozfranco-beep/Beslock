@@ -1,0 +1,10 @@
+{
+  "kind": "operational-isolation-doctrine",
+  "principles": [
+    "Isolation is the default; integration is the declared exception.",
+    "Isolation protects provenance, supervision, and reversibility above performance.",
+    "Isolation is measured by observable boundary crossings, not by hopeful policy.",
+    "Isolation failures are incidents, not anomalies."
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

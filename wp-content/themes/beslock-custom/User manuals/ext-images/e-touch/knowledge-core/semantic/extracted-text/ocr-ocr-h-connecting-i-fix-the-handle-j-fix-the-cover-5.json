@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "H-Connecting I-Fix The Handle J-Fix The Cover",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-5"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Pipe-Long x2 | Pipe-short",
+  "legacy_storage_bucket": "extracted-text"
+}

@@ -1,0 +1,42 @@
+{
+  "channels": [
+    {
+      "binds_to": "chain-record",
+      "format": "append-only ndjson",
+      "id": "reasoning-trace"
+    },
+    {
+      "binds_to": "retrieval-package",
+      "format": "append-only ndjson",
+      "id": "retrieval-trace"
+    },
+    {
+      "binds_to": "escalation-package",
+      "format": "append-only ndjson",
+      "id": "escalation-trace"
+    },
+    {
+      "binds_to": "checkpoint-record",
+      "format": "append-only ndjson",
+      "id": "continuity-trace"
+    },
+    {
+      "binds_to": "run-id + slice-id",
+      "format": "append-only ndjson",
+      "id": "orchestration-trace"
+    },
+    {
+      "binds_to": "supervision-receipt",
+      "format": "append-only ndjson",
+      "id": "operational-audit-log"
+    }
+  ],
+  "rules": [
+    "All channels are append-only; mutation is unsafe.",
+    "Every emission carries a provenance reference.",
+    "Every channel binds to run-id + slice-id; cross-run aggregation is out of prototype scope.",
+    "Replay must be deterministic from the captured channels alone.",
+    "No channel may carry destructive operation logs (none are produced)."
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "human-runtime-collaboration-principles",
+  "principles": [
+    "Collaboration is human-led; the runtime is supervised by default.",
+    "Collaboration is bounded by declared scope on both sides.",
+    "Collaboration is auditable end-to-end via the supervision-receipt + observability channels.",
+    "Collaboration is reversible; rollback is a first-class operator action."
+  ],
+  "schema": "human-operations-governance/1.0"
+}

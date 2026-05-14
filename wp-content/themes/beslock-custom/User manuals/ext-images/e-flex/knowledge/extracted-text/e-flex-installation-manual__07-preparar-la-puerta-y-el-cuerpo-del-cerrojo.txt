@@ -1,0 +1,9 @@
+# Preparar la puerta y el cuerpo del cerrojo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#7
+
+Secuencia base:
+1. ajusta la direccion del pestillo segun el metodo de apertura de la puerta
+2. inserta el cuerpo del cerrojo en el orificio preparado
+3. aprieta los tornillos de montaje del cuerpo del cerrojo
+4. confirma que el pestillo se mueva suavemente antes de presentar los paneles

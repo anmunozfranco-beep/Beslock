@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "32 So Se Vee Ento A 9.5 Eliminar Cerradura",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-7"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "a squeda de registro de accesos\nsau sat 9.6 Servicio al cliente\n4. Gestion de contrasenas\n10. Gestión de Gateway",
+  "legacy_storage_bucket": "extracted-text"
+}

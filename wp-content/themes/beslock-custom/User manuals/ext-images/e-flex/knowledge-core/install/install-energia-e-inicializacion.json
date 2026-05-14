@@ -1,0 +1,50 @@
+{
+  "id": "install-energia-e-inicializacion",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Para la prueba inicial:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#10"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-energia-e-inicializacion.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "instala 4 baterias AA alcalinas de alto rendimiento"
+    },
+    {
+      "n": 2,
+      "text": "si el equipo fue manipulado durante montaje o prueba, realiza una inicializacion para limpiar huellas o datos temporales"
+    },
+    {
+      "n": 3,
+      "text": "valida el desbloqueo usando huella o contrasena inicial solo como prueba tecnica local"
+    },
+    {
+      "n": 4,
+      "text": "si el movimiento no es suave, corrige alineacion antes de cerrar con la tapa de baterias"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "products": {
+    "e-flex": {
+      "sources_used": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+      ],
+      "sources_missing": [],
+      "sections_seen": 26,
+      "entities_emitted": 63,
+      "by_type": {
+        "capability": 2,
+        "procedure": 2,
+        "workflow": 3,
+        "warning": 2,
+        "installation-flow": 14,
+        "glossary-term": 8,
+        "extracted-text": 32
+      }
+    },
+    "e-nova": {
+      "sources_used": [],
+      "sources_missing": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/manuals"
+      ],
+      "sections_seen": 0,
+      "entities_emitted": 14,
+      "by_type": {
+        "extracted-text": 14
+      }
+    },
+    "e-orbit": {
+      "sources_used": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+      ],
+      "sources_missing": [],
+      "sections_seen": 91,
+      "entities_emitted": 109,
+      "by_type": {
+        "capability": 4,
+        "troubleshooting": 1,
+        "installation-flow": 1,
+        "procedure": 9,
+        "workflow": 3,
+        "glossary-term": 11,
+        "extracted-text": 80
+      }
+    },
+    "e-prime": {
+      "sources_used": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "sources_missing": [],
+      "sections_seen": 26,
+      "entities_emitted": 65,
+      "by_type": {
+        "capability": 2,
+        "procedure": 2,
+        "workflow": 2,
+        "warning": 2,
+        "installation-flow": 14,
+        "glossary-term": 7,
+        "extracted-text": 36
+      }
+    },
+    "e-shield": {
+      "sources_used": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "sources_missing": [],
+      "sections_seen": 32,
+      "entities_emitted": 62,
+      "by_type": {
+        "capability": 1,
+        "workflow": 9,
+        "troubleshooting": 1,
+        "warning": 1,
+        "installation-flow": 12,
+        "glossary-term": 5,
+        "extracted-text": 33
+      }
+    },
+    "e-touch": {
+      "sources_used": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+      ],
+      "sources_missing": [],
+      "sections_seen": 24,
+      "entities_emitted": 98,
+      "by_type": {
+        "capability": 1,
+        "procedure": 2,
+        "workflow": 1,
+        "warning": 1,
+        "installation-flow": 11,
+        "glossary-term": 7,
+        "extracted-text": 75
+      }
+    }
+  }
+}

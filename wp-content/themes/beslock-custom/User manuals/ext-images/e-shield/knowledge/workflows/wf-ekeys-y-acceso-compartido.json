@@ -1,0 +1,52 @@
+{
+  "id": "wf-ekeys-y-acceso-compartido",
+  "type": "workflow",
+  "product": "e-shield",
+  "summary": "El administrador original puede enviar distintos tipos de eKey desde la app",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "user"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entra al modulo `eKeys`"
+    },
+    {
+      "n": 2,
+      "text": "toca `Enviar eKey`"
+    },
+    {
+      "n": 3,
+      "text": "elige el tipo de vigencia"
+    },
+    {
+      "n": 4,
+      "text": "completa los datos del usuario receptor"
+    },
+    {
+      "n": 5,
+      "text": "envia la llave y valida su vigencia en el historial"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

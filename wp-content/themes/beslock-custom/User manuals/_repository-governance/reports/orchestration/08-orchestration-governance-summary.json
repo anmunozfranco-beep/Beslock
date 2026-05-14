@@ -1,0 +1,8 @@
+{
+  "degraded_doctrine": 4,
+  "observability_doctrine": 4,
+  "philosophy_principles": 6,
+  "safe_runtime_doctrine": 5,
+  "schema": "runtime-orchestration-governance/1.0",
+  "supervision_doctrine": 4
+}

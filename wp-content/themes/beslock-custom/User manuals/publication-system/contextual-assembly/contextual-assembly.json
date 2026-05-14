@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-05-14T03:42:21Z",
+  "inputs": [
+    {
+      "binding": "ordered steps with preconditions",
+      "id": "procedures",
+      "source_layer": "knowledge-core"
+    },
+    {
+      "binding": "rendered verbatim, never abridged",
+      "id": "warnings",
+      "source_layer": "knowledge-core (safety domain)"
+    },
+    {
+      "binding": "symptom → diagnosis → remediation",
+      "id": "troubleshooting",
+      "source_layer": "knowledge-core (troubleshooting)"
+    },
+    {
+      "binding": "escalation receiver + criterion",
+      "id": "escalation-guidance",
+      "source_layer": "HUMAN_OPERATIONS (layer 24)"
+    },
+    {
+      "binding": "checkpoint markers between major sections",
+      "id": "continuity-checkpoints",
+      "source_layer": "CONTINUITY (layer 14)"
+    },
+    {
+      "binding": "per-section confidence band when assembled at runtime",
+      "id": "confidence-disclosure",
+      "source_layer": "RUNTIME / DECISION_INTELLIGENCE"
+    },
+    {
+      "binding": "source-node ids cited at section close",
+      "id": "provenance-references",
+      "source_layer": "knowledge-core/1.0"
+    }
+  ],
+  "rules": [
+    "assembly is deterministic given the same inputs and manifest",
+    "assembly MUST NOT invent content; missing input → section omitted with a declared placeholder",
+    "warnings MUST appear adjacent to the procedure they govern",
+    "continuity checkpoints MUST be placed at governance-declared boundaries, never injected ad hoc",
+    "confidence disclosure is mandatory whenever any contributing node is candidate-tier",
+    "provenance references are mandatory for every published section"
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

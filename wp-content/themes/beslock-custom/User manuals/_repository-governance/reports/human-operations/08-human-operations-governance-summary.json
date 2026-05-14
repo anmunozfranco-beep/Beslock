@@ -1,0 +1,16 @@
+{
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/HUMAN_OPERATIONS_GOVERNANCE/",
+  "doctrine_sections": [
+    "human-operational-philosophy",
+    "supervised-interaction-doctrine",
+    "explainability-philosophy",
+    "operational-ergonomics-doctrine",
+    "human-runtime-collaboration-principles",
+    "safe-governance-interaction-philosophy"
+  ],
+  "kind": "human-operations-governance-summary",
+  "layer_index": 24,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/human-operations/",
+  "schema": "human-operations-governance/1.0",
+  "subordinate_to_count": 24
+}

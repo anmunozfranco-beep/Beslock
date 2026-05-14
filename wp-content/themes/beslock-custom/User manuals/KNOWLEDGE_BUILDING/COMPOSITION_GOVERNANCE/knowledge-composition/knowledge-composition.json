@@ -1,0 +1,102 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "primitives": [
+    "entity",
+    "procedure",
+    "workflow",
+    "warning",
+    "terminology",
+    "capability",
+    "specification",
+    "troubleshooting-symptom",
+    "procedural-semantics",
+    "visual-intent",
+    "visual-risk",
+    "publication-intent",
+    "component-visibility",
+    "provenance",
+    "guidance-trigger",
+    "cognitive-load-assessment",
+    "priority-assignment"
+  ],
+  "operational_packages": [
+    {
+      "id": "installation-package",
+      "purpose": "physical install end-to-end",
+      "primitives": [
+        "procedure(install/*)",
+        "warning",
+        "specification",
+        "visual-intent(physical-installation)",
+        "component-visibility",
+        "provenance"
+      ]
+    },
+    {
+      "id": "onboarding-package",
+      "purpose": "audience-scoped first-use flow",
+      "primitives": [
+        "workflow",
+        "procedural-semantics",
+        "warning",
+        "guidance-trigger",
+        "cognitive-load-assessment",
+        "terminology",
+        "provenance"
+      ]
+    },
+    {
+      "id": "troubleshooting-package",
+      "purpose": "symptom -> recovery path",
+      "primitives": [
+        "troubleshooting-symptom",
+        "warning",
+        "procedure",
+        "escalation-tier",
+        "safety-constraint",
+        "provenance"
+      ]
+    },
+    {
+      "id": "administrator-setup-package",
+      "purpose": "admin enrolment + policy setup",
+      "primitives": [
+        "workflow(administrator-setup)",
+        "procedure(user-enrolment)",
+        "capability",
+        "warning",
+        "provenance"
+      ]
+    },
+    {
+      "id": "maintenance-package",
+      "purpose": "battery + routine maintenance",
+      "primitives": [
+        "procedure(battery-replacement)",
+        "warning",
+        "specification",
+        "visual-intent",
+        "provenance"
+      ]
+    },
+    {
+      "id": "recovery-package",
+      "purpose": "factory-reset / emergency-power",
+      "primitives": [
+        "procedure(factory-reset)",
+        "procedure(emergency-power)",
+        "warning",
+        "guidance-trigger(hard-interrupt)",
+        "provenance"
+      ]
+    }
+  ],
+  "rules": [
+    "Every package declares: id, purpose, primitives, source_artifact_ids, maturity_floor, audience_scope, channel_targets.",
+    "Packages are reproducible from per-product knowledge-core; no orphan content allowed.",
+    "Packages compose primitives by reference (id), never by inlined copy of mutable content.",
+    "Provenance from every primitive flows into the package; provenance-stripped packages are forbidden.",
+    "Packages MUST honour all access-governance filters (maturity, deprecation, unresolved-isolation)."
+  ]
+}

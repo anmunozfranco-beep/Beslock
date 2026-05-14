@@ -1,0 +1,9 @@
+# QR y mini-programa de WeChat
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#7
+
+La guia tambien indica que el QR puede escanearse con `WeChat` para usar el mini-programa de apertura.
+
+Regla editorial:
+- tratar este flujo como opcion OEM observada
+- no presentarlo como canal unico ni como experiencia principal si la implementacion comercial usa `TUYA` como ruta primaria

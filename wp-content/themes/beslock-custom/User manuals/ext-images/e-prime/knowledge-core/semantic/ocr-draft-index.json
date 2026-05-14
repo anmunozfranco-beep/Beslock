@@ -1,0 +1,35 @@
+{
+  "id": "ocr-draft-index",
+  "type": "ocr-draft-index",
+  "product": "e-prime",
+  "summary": "OCR-derived candidate index for e-prime (no normalized markdown source)",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "support"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json",
+    "/home/runner/work/Beslock/Beslock/User manuals/e-Prime user manual.pdf"
+  ],
+  "extraction_lineage": [
+    "generated_manuals/e-prime/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "ocr_method": "ocrmypdf",
+  "ocr_pages": 8,
+  "ocr_avg_confidence": 92.0,
+  "section_count": 36,
+  "step_candidate_count": 27,
+  "warning_candidate_count": 3,
+  "app_instruction_candidate_count": 6,
+  "specification_candidate_count": 5,
+  "feature_candidate_count": 31,
+  "non_canonical": true,
+  "policy": "OCR-DERIVED DRAFTS: candidates may be promoted to verified entities only after a human reviews them against the OEM PDF."
+}

@@ -1,0 +1,1036 @@
+{
+  "id": "publication-intent-map",
+  "type": "publication-intent-map",
+  "product": "e-touch",
+  "summary": "Channel routing for every publishable knowledge-core asset of e-touch",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::CHANNEL_ROUTING"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "routing": [
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-alta-tecnica-inicial-del-administrador.json",
+      "entity_id": "install-context-alta-tecnica-inicial-del-administrador",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-arquitectura-fisica-observada.json",
+      "entity_id": "install-context-arquitectura-fisica-observada",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-compatibilidad-antes-de-montar.json",
+      "entity_id": "install-context-compatibilidad-antes-de-montar",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-estado-editorial.json",
+      "entity_id": "install-context-estado-editorial",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-objetivo.json",
+      "entity_id": "install-context-objetivo",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-problemas-y-cautelas-basicas.json",
+      "entity_id": "install-context-problemas-y-cautelas-basicas",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-relacion-con-el-paquete-documental.json",
+      "entity_id": "install-context-relacion-con-el-paquete-documental",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-validacion-despues-de-instalar.json",
+      "entity_id": "install-context-validacion-despues-de-instalar",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-energia-y-cierre-del-montaje.json",
+      "entity_id": "install-energia-y-cierre-del-montaje",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-rol-de-la-guia-oem-disponible.json",
+      "entity_id": "install-rol-de-la-guia-oem-disponible",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+      "entity_id": "install-secuencia-base-de-instalacion",
+      "entity_type": "installation-flow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "support",
+        "onboarding",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/operation/proc-requisitos-antes-de-vincular.json",
+      "entity_id": "proc-requisitos-antes-de-vincular",
+      "entity_type": "procedure",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "chatbot",
+        "support",
+        "onboarding",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/operation/proc-reset-y-recuperacion.json",
+      "entity_id": "proc-reset-y-recuperacion",
+      "entity_type": "procedure",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "chatbot",
+        "support",
+        "onboarding",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json",
+      "entity_id": "wf-flujo-oem-base-de-alta",
+      "entity_type": "workflow",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "chatbot",
+        "support",
+        "onboarding",
+        "rag",
+        "future-video"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/warnings/warning-limites-de-evidencia.json",
+      "entity_id": "warning-limites-de-evidencia",
+      "entity_type": "warning",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "pdf",
+        "web",
+        "chatbot",
+        "support"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-administrador.json",
+      "entity_id": "term-administrador",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-bluetooth.json",
+      "entity_id": "term-bluetooth",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-huella.json",
+      "entity_id": "term-huella",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-reset.json",
+      "entity_id": "term-reset",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-smart-life.json",
+      "entity_id": "term-smart-life",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-tuya.json",
+      "entity_id": "term-tuya",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-wi-fi.json",
+      "entity_id": "term-wi-fi",
+      "entity_type": "glossary-term",
+      "validation_status": "normalized",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/entities/entity-catalog.json",
+      "entity_id": "entity-catalog",
+      "entity_type": "entity-catalog",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "chatbot",
+        "rag",
+        "comfyui"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/capabilities/cap-objetivo.json",
+      "entity_id": "cap-objetivo",
+      "entity_type": "capability",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/capabilities/capability-map.json",
+      "entity_id": "capability-map",
+      "entity_type": "capability-map",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag",
+        "comfyui"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-1-pay-attention-to-the-36.json",
+      "entity_id": "ocr-ocr-1-pay-attention-to-the-36",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-2-automatically-cancel-the-normally-open-mode-after-verifyin.json",
+      "entity_id": "ocr-ocr-2-automatically-cancel-the-normally-open-mode-after-verifyin",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-a-front-handle-9.json",
+      "entity_id": "ocr-ocr-a-front-handle-9",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-a-por-30.json",
+      "entity_id": "ocr-ocr-a-por-30",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-add-fingerpr-50.json",
+      "entity_id": "ocr-ocr-add-fingerpr-50",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-after-completing-22.json",
+      "entity_id": "ocr-ocr-after-completing-22",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-after-indoor-handle-61.json",
+      "entity_id": "ocr-ocr-after-indoor-handle-61",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-1-cover-screw-11.json",
+      "entity_id": "ocr-ocr-b-1-cover-screw-11",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-2-rear-cover-12.json",
+      "entity_id": "ocr-ocr-b-2-rear-cover-12",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-rear-handle-10.json",
+      "entity_id": "ocr-ocr-b-rear-handle-10",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-bluatooth-a-37.json",
+      "entity_id": "ocr-ocr-bluatooth-a-37",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-bluetoothand-the-administrator-can-51.json",
+      "entity_id": "ocr-ocr-bluetoothand-the-administrator-can-51",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-by-connecting-the-doorlock-with-app-bluetooth-the-43.json",
+      "entity_id": "ocr-ocr-by-connecting-the-doorlock-with-app-bluetooth-the-43",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-caneel-49.json",
+      "entity_id": "ocr-ocr-caneel-49",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-cearing-cade-60.json",
+      "entity_id": "ocr-ocr-cearing-cade-60",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-china-18.json",
+      "entity_id": "ocr-ocr-china-18",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-choose-the-screw-of-26.json",
+      "entity_id": "ocr-ocr-choose-the-screw-of-26",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-cne-tene-pasewors-56.json",
+      "entity_id": "ocr-ocr-cne-tene-pasewors-56",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-contact-tel-75.json",
+      "entity_id": "ocr-ocr-contact-tel-75",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-d-pinch-plate-15.json",
+      "entity_id": "ocr-ocr-d-pinch-plate-15",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-abled-40.json",
+      "entity_id": "ocr-ocr-e-abled-40",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-ebled-42.json",
+      "entity_id": "ocr-ocr-e-ebled-42",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-ek-8.json",
+      "entity_id": "ocr-ocr-e-ek-8",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-keyx2tmf-squa-2.json",
+      "entity_id": "ocr-ocr-e-keyx2tmf-squa-2",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-emergency-14.json",
+      "entity_id": "ocr-ocr-emergency-14",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-es-fingerprint-lock-3.json",
+      "entity_id": "ocr-ocr-es-fingerprint-lock-3",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-forgot-pmnsord-25.json",
+      "entity_id": "ocr-ocr-forgot-pmnsord-25",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5.json",
+      "entity_id": "ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-hare-7.json",
+      "entity_id": "ocr-ocr-hare-7",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-has-been-open-button-32.json",
+      "entity_id": "ocr-ocr-has-been-open-button-32",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-has-been-open-button-f-64.json",
+      "entity_id": "ocr-ocr-has-been-open-button-f-64",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-if-you-55.json",
+      "entity_id": "ocr-ocr-if-you-55",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23.json",
+      "entity_id": "ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-indoor-intelligent-lock-bluetooth-tuya-operation-guide-34.json",
+      "entity_id": "ocr-ocr-indoor-intelligent-lock-bluetooth-tuya-operation-guide-34",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-install-the-deadbolt-33.json",
+      "entity_id": "ocr-ocr-install-the-deadbolt-33",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-installation-instructions-4.json",
+      "entity_id": "ocr-ocr-installation-instructions-4",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-installation-steps-16.json",
+      "entity_id": "ocr-ocr-installation-steps-16",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-13.json",
+      "entity_id": "ocr-ocr-k-battery-x4-13",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-6.json",
+      "entity_id": "ocr-ocr-k-battery-x4-6",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-login-mode-supports-password-verification-code-and-24.json",
+      "entity_id": "ocr-ocr-login-mode-supports-password-verification-code-and-24",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-long-press-the-small-hole-on-68.json",
+      "entity_id": "ocr-ocr-long-press-the-small-hole-on-68",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-model-no-73.json",
+      "entity_id": "ocr-ocr-model-no-73",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-o-ther-s-etti-ngs-65.json",
+      "entity_id": "ocr-ocr-o-ther-s-etti-ngs-65",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-ofine-password-58.json",
+      "entity_id": "ocr-ocr-ofine-password-58",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-open-the-batte-28.json",
+      "entity_id": "ocr-ocr-open-the-batte-28",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-other-member-48.json",
+      "entity_id": "ocr-ocr-other-member-48",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-paasword-21.json",
+      "entity_id": "ocr-ocr-paasword-21",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-packing-list-1.json",
+      "entity_id": "ocr-ocr-packing-list-1",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-parada-pusmnerd-57.json",
+      "entity_id": "ocr-ocr-parada-pusmnerd-57",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-pasewort-44.json",
+      "entity_id": "ocr-ocr-pasewort-44",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-pass-the-square-19.json",
+      "entity_id": "ocr-ocr-pass-the-square-19",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-please-enter-your-account-20.json",
+      "entity_id": "ocr-ocr-please-enter-your-account-20",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-plug-the-usb-power-cord-52.json",
+      "entity_id": "ocr-ocr-plug-the-usb-power-cord-52",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-press-the-registered-47.json",
+      "entity_id": "ocr-ocr-press-the-registered-47",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-press-the-registered-67.json",
+      "entity_id": "ocr-ocr-press-the-registered-67",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-product-parameters-54.json",
+      "entity_id": "ocr-ocr-product-parameters-54",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-purchase-date-74.json",
+      "entity_id": "ocr-ocr-purchase-date-74",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-qhema-38.json",
+      "entity_id": "ocr-ocr-qhema-38",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-rne-tine-password-59.json",
+      "entity_id": "ocr-ocr-rne-tine-password-59",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-set-the-bey-29.json",
+      "entity_id": "ocr-ocr-set-the-bey-29",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-set-the-key-62.json",
+      "entity_id": "ocr-ocr-set-the-key-62",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-1-17.json",
+      "entity_id": "ocr-ocr-step-1-17",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-2-66.json",
+      "entity_id": "ocr-ocr-step-2-66",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-3-27.json",
+      "entity_id": "ocr-ocr-step-3-27",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-4-31.json",
+      "entity_id": "ocr-ocr-step-4-31",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-the-connection-status-of-bluetooth-will-be-displayed-in-the.json",
+      "entity_id": "ocr-ocr-the-connection-status-of-bluetooth-will-be-displayed-in-the-",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-this-70.json",
+      "entity_id": "ocr-ocr-this-70",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-tighten-the-screws-35.json",
+      "entity_id": "ocr-ocr-tighten-the-screws-35",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-touch-to-wake-up-the-46.json",
+      "entity_id": "ocr-ocr-touch-to-wake-up-the-46",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-unlocking-is-successful-53.json",
+      "entity_id": "ocr-ocr-unlocking-is-successful-53",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-urtodowin-mobil-phorp-41.json",
+      "entity_id": "ocr-ocr-urtodowin-mobil-phorp-41",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-user-name-72.json",
+      "entity_id": "ocr-ocr-user-name-72",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-warranty-card-71.json",
+      "entity_id": "ocr-ocr-warranty-card-71",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-blinks-red-69.json",
+      "entity_id": "ocr-ocr-when-the-indicator-blinks-red-69",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-light-45.json",
+      "entity_id": "ocr-ocr-when-the-indicator-light-45",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/ocr-draft-index.json",
+      "entity_id": "ocr-draft-index",
+      "entity_type": "ocr-draft-index",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    }
+  ],
+  "channel_totals": {
+    "pdf": 15,
+    "web": 24,
+    "support": 15,
+    "onboarding": 14,
+    "future-video": 12,
+    "chatbot": 14,
+    "rag": 89,
+    "comfyui": 2
+  },
+  "demotion_rules": {
+    "low-confidence-evidence-only": "rag-only",
+    "low-confidence-evidence": "rag-only",
+    "inferred-but-unverified": "rag + chatbot + support only",
+    "extraction-pending-review": "default channels (per CHANNEL_ROUTING)",
+    "verified": "default channels (per CHANNEL_ROUTING)"
+  },
+  "policy": "Channel routing is advisory metadata. Actual PDF/web/chatbot pipelines must read this map; nothing is published from this layer directly."
+}

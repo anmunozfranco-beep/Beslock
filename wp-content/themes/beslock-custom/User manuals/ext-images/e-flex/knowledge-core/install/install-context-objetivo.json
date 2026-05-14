@@ -1,0 +1,33 @@
+{
+  "id": "install-context-objetivo",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Ordenar la preparacion de puerta, el montaje del cuerpo de cerradura y la validacion inicial de e-Flex usando la fuente OEM suplementaria disponible",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#2"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-objetivo.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "Ordenar la preparacion de puerta, el montaje del cuerpo de cerradura y la validacion inicial de e-Flex usando la fuente OEM suplementaria disponible."
+  ],
+  "legacy_storage_bucket": "installation"
+}

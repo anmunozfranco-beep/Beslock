@@ -1,0 +1,41 @@
+{
+  "id": "install-usar-la-guia-de-instalacion-disponible",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "![Guia de instalacion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-02",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "usa el PDF para secuencia, orientacion y despiece"
+    },
+    {
+      "n": 2,
+      "text": "no derives perforaciones finales a escala real desde una captura del PDF"
+    },
+    {
+      "n": 3,
+      "text": "confirma la mano de apertura antes de cambiar direccion de manija o pestillo"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

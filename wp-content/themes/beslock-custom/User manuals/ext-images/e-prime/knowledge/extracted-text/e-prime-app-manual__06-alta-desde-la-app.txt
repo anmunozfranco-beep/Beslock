@@ -1,0 +1,10 @@
+# Alta desde la app
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#6
+
+La guia OEM no muestra todos los textos internos de la aplicacion, asi que Beslock debe describir el flujo asi:
+1. abre la app `TUYA`
+2. elige agregar un nuevo dispositivo de cerradura inteligente
+3. confirma la red `2.4G`
+4. mantente cerca de la cerradura durante el proceso
+5. completa el enlace y valida que el equipo aparezca en la cuenta

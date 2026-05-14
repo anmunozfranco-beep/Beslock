@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-9-1-informacie-de-la-cuenta-6",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9.1 Informacié~ De La Cuenta",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "3. Gestión de llaves 9.2 Usuar os de dispositivo",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,14 @@
+# Usar la plantilla de instalacion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6
+
+![Plantilla de instalacion de e-Shield](assets/e-shield/pdf-renders/e-shield-2/page-01.png)
+
+La plantilla OEM es la autoridad para la perforacion.
+
+Reglas de uso:
+1. imprime el PDF original sin ajuste de escala
+2. confirma si la hoja visible corresponde a apertura derecha o si debes espejarla para apertura izquierda
+3. alinea la referencia de `LATERAL DE PUERTA` exactamente con el canto de la puerta
+4. respeta el retiro de borde visible de `60 mm`
+5. marca sobre la puerta solo despues de confirmar que la impresion no fue reducida ni ampliada

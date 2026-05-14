@@ -1,0 +1,10 @@
+{
+  "kind": "deployment-composition-philosophy",
+  "principles": [
+    "Compositions are declared per environment and per trust zone.",
+    "Compositions never silently include modules outside their authorization.",
+    "Compositions emit manifests; manifests are the basis for replay.",
+    "Compositions are revocable; rollback is a first-class composition action."
+  ],
+  "schema": "reference-stack-governance/1.0"
+}

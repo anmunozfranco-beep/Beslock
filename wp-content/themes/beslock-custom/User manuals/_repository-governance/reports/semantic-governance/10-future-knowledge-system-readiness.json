@@ -1,0 +1,18 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "ready_for": [
+    "editorial conflict-resolution sweeps",
+    "maturity-field backfill phase",
+    "shared-concept tagging phase",
+    "synonym-expansion at retrieval time",
+    "downstream consumer integration with stable identifier grammar"
+  ],
+  "not_ready_for": [
+    "production multilingual publication (BCP-47 variants not yet authored)",
+    "RAG / embeddings (embedding strategy undeclared)",
+    "automated knowledge QA in CI (audit jobs not wired)",
+    "mass image generation (carry-over: visual constitution + workflow registry blockers)"
+  ],
+  "subordination_rule": "All future surfaces remain subordinate to the knowledge core; none originates knowledge."
+}

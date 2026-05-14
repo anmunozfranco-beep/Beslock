@@ -1,0 +1,40 @@
+{
+  "id": "sup-e-orbit-2-section-006",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "16 Pantalla Oled Oled De 0,96",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-medium",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+    "generated_manuals_supplemental/e-orbit-2/manual.json#sections[5]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-orbit-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "16 Pantalla Oled Oled De 0,96",
+  "page": "?",
+  "text": [
+    "Fuente de alimentacién externa",
+    "17 5V1A Micro USB",
+    "emergencia para la pantalla",
+    ". ere 28KV tacto) 2=15KV (ti i"
+  ],
+  "ocr_avg_confidence": 82.7,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-orbit-2"
+}

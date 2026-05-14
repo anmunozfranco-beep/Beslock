@@ -1,0 +1,15 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:45:52Z",
+  "pointer": {
+    "path": "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png",
+    "category": "F",
+    "sub_label": "unknown",
+    "size_bytes": 318445,
+    "mtime_iso": "2026-05-06T15:57:13Z",
+    "reason": "Ambiguous ownership or unclassified. Pointer recorded here; the asset itself was NOT moved or modified. Resolution requires human review.",
+    "ownership_recommendation": "quarantine until classified manually"
+  },
+  "physical_action_taken": "none",
+  "reversible": true
+}

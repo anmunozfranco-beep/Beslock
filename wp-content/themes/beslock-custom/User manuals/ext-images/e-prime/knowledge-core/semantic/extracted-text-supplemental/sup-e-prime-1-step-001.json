@@ -1,0 +1,34 @@
+{
+  "id": "sup-e-prime-1-step-001",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "[step] 2. Gire la manija 180° hacia la parte 2. Presione el pestillo.",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf#page=?",
+    "generated_manuals_supplemental/e-prime-1/manual.json#steps[0]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-prime-1/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "channel": "step-candidate",
+  "text": "2. Gire la manija 180° hacia la parte 2. Presione el pestillo.",
+  "page": "?",
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-prime-1"
+}

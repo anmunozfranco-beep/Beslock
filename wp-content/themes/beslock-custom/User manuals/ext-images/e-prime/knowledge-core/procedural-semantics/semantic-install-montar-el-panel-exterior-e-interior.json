@@ -1,0 +1,87 @@
+{
+  "id": "semantic-install-montar-el-panel-exterior-e-interior",
+  "type": "procedural-semantics",
+  "product": "e-prime",
+  "summary": "Normalized semantic actions for install-montar-el-panel-exterior-e-interior",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-montar-el-panel-exterior-e-interior.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#8"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-montar-el-panel-exterior-e-interior.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-montar-el-panel-exterior-e-interior",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "ajusta la direccion de la manija segun la apertura de la puerta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "instala los pernos de montaje en el panel frontal y prepara el resorte de manija para el panel trasero",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "inserta el eje cuadrado y cortalo si el grosor real de la puerta lo exige",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "pasa el cable de datos por el orificio superior correspondiente",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "alinea el orificio cuadrado de la manija con el eje y presiona el panel frontal contra la puerta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "conecta el cable de datos al panel trasero",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 7,
+      "raw_text": "alinea el panel trasero con el eje cuadrado y la barra de cerradura",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 8,
+      "raw_text": "aprieta los tornillos de montaje solo hasta poder corregir la alineacion fina",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 9,
+      "raw_text": "cuando el pestillo se mueva suavemente, completa el apriete final",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

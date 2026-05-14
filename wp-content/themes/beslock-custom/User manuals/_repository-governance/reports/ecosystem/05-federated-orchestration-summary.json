@@ -1,0 +1,21 @@
+{
+  "patterns": [
+    "delegation (primary → delegated under preserved supervision)",
+    "handoff (primary → receiver with read-only lock at source)",
+    "broadcast (primary → all observers read-only)",
+    "co-execution (two runtimes execute disjoint loops on a shared incident-id)",
+    "escalation-handoff (primary → receiver under monotonic escalation contract)",
+    "degraded-federation (one runtime is L3+; primary downgrades the federation to read-only-only)",
+    "coexistence (multiple runtimes operate on disjoint scopes within one ecosystem-session)"
+  ],
+  "roles": [
+    "primary-runtime",
+    "delegated-runtime",
+    "observer-runtime",
+    "receiver-runtime",
+    "publication-runtime",
+    "continuity-runtime"
+  ],
+  "rules": 7,
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

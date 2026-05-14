@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-05-13T14:51:24Z",
+  "items": [
+    {
+      "product": "e-flex",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf",
+      "filename": "e-Flex_1.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-flex",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/specifications/e-Flex - supplemental source review.md",
+      "filename": "e-Flex - supplemental source review.md",
+      "kind": "normalized-markdown",
+      "ingestion_status": "missing",
+      "ocr_status": "not-applicable",
+      "reason": "Markdown present but extractor did not record it in sources_used."
+    },
+    {
+      "product": "e-orbit",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf",
+      "filename": "e-Orbit_2.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-orbit",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/specifications/e-Orbit_1.xls",
+      "filename": "e-Orbit_1.xls",
+      "kind": "oem-spreadsheet",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "not-applicable-binary-spreadsheet",
+      "reason": "Spreadsheet not supported by extractor (manuals/*.md only)."
+    },
+    {
+      "product": "e-prime",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf",
+      "filename": "e-Prime_1.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-prime",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf",
+      "filename": "e-Prime_2.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-prime",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/specifications/e-Prime - supplemental source review.md",
+      "filename": "e-Prime - supplemental source review.md",
+      "kind": "normalized-markdown",
+      "ingestion_status": "missing",
+      "ocr_status": "not-applicable",
+      "reason": "Markdown present but extractor did not record it in sources_used."
+    },
+    {
+      "product": "e-shield",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+      "filename": "e-Shied_2.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-shield",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf",
+      "filename": "e-Shield_1.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-shield",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/specifications/e-Shield - supplemental source review.md",
+      "filename": "e-Shield - supplemental source review.md",
+      "kind": "normalized-markdown",
+      "ingestion_status": "missing",
+      "ocr_status": "not-applicable",
+      "reason": "Markdown present but extractor did not record it in sources_used."
+    },
+    {
+      "product": "e-touch",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf",
+      "filename": "e-Touch_1.pdf",
+      "kind": "oem-pdf",
+      "ingestion_status": "ignored-by-design",
+      "ocr_status": "ocr-not-attempted",
+      "reason": "Supplemental PDF without normalized .md counterpart and not flagged for OCR."
+    },
+    {
+      "product": "e-touch",
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/specifications/e-Touch - supplemental source review.md",
+      "filename": "e-Touch - supplemental source review.md",
+      "kind": "normalized-markdown",
+      "ingestion_status": "missing",
+      "ocr_status": "not-applicable",
+      "reason": "Markdown present but extractor did not record it in sources_used."
+    }
+  ]
+}

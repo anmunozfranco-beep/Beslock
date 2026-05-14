@@ -1,0 +1,40 @@
+[
+  {
+    "kind": "duplicate-oem-pdf",
+    "items": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf is byte-identical to e-Flex user manual.pdf",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf is byte-identical to e-Touch user manual.pdf"
+    ],
+    "remediation": "Replace with metadata/audit/duplicate-oem-sources.json ledger pointing at the canonical user-manual PDF."
+  },
+  {
+    "kind": "structural-empty-buckets-in-legacy-knowledge",
+    "items": [
+      "configuration/",
+      "faq/"
+    ],
+    "scope": "every product",
+    "remediation": "knowledge-core/ resolves this by folding configuration into operation/ and surfacing FAQ via operation/faq/ (e-orbit only, from verified structured-knowledge/)."
+  },
+  {
+    "kind": "duplicate-entity-id-in-legacy-manifest",
+    "items": [
+      "e-orbit knowledge/entities/manifest.json contains cap-objetivo three times"
+    ],
+    "remediation": "knowledge-core/ collapses to a single entity at promotion time (DUP_COLLAPSES rule)."
+  },
+  {
+    "kind": "misclassified-troubleshooting",
+    "items": [
+      "e-orbit knowledge/troubleshooting/ts-paginas-prioritarias-para-fase-1.json is a sitemap routing list, not a symptom/resolution pair"
+    ],
+    "remediation": "knowledge-core/ relocates to orchestration/publishing-priority-pages.json (RELOCATIONS rule)."
+  },
+  {
+    "kind": "extractor-blind-to-non-md",
+    "items": [
+      "tools/knowledge_extraction.py only reads source-of-truth/manuals/*.md; XLS, supplemental PDFs, and specifications/*.md are invisible"
+    ],
+    "remediation": "knowledge-core build ingests XLS and supplemental OCR explicitly; future Phase 2 cutover should move this logic into the canonical extractor."
+  }
+]

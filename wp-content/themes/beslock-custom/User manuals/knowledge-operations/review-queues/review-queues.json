@@ -1,0 +1,56 @@
+{
+  "kind": "review-queues",
+  "queue_discipline": [
+    "queues are append-only logs; consumed items are marked, not deleted",
+    "items carry priority = (sla_tier, age, blocking_runtime)",
+    "ownership is explicit: every claim is logged with reviewer_id + timestamp",
+    "no auto-claim; reviewers must explicitly take ownership",
+    "expired claims are released back to the queue with a release event",
+    "queue back-pressure (length, age) feeds the health-monitoring dashboard"
+  ],
+  "queues": [
+    {
+      "blocking_runtime": false,
+      "id": "candidate-review",
+      "sla_tier": "standard",
+      "source": "any node at state=candidate"
+    },
+    {
+      "blocking_runtime": false,
+      "id": "ocr-review",
+      "sla_tier": "standard",
+      "source": "ocr-derived nodes pending reviewer-confirm"
+    },
+    {
+      "blocking_runtime": false,
+      "id": "warning-review",
+      "sla_tier": "elevated",
+      "source": "warnings/* pending promotion or stale"
+    },
+    {
+      "blocking_runtime": false,
+      "id": "troubleshooting-review",
+      "sla_tier": "standard",
+      "source": "troubleshooting/* pending promotion"
+    },
+    {
+      "blocking_runtime": true,
+      "id": "irreversible-operation-review",
+      "sla_tier": "critical",
+      "source": "nodes tagged irreversible-operation"
+    },
+    {
+      "blocking_runtime": false,
+      "id": "stale-knowledge-review",
+      "sla_tier": "standard",
+      "source": "nodes flagged by stale detector"
+    },
+    {
+      "blocking_runtime": true,
+      "id": "disputed-knowledge-review",
+      "sla_tier": "critical",
+      "source": "nodes at state=disputed"
+    }
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

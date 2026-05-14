@@ -1,0 +1,111 @@
+{
+  "dimensions": [
+    {
+      "id": "operational-value",
+      "scale": "1 (low) — 5 (high)",
+      "weight": 0.2
+    },
+    {
+      "id": "implementation-complexity",
+      "scale": "1 (high complexity) — 5 (low complexity)",
+      "weight": 0.15
+    },
+    {
+      "id": "runtime-readiness",
+      "scale": "1 (not ready) — 5 (fully gated)",
+      "weight": 0.15
+    },
+    {
+      "id": "cognition-maturity",
+      "scale": "1 (immature) — 5 (mature)",
+      "weight": 0.15
+    },
+    {
+      "id": "user-impact",
+      "scale": "1 (low) — 5 (high)",
+      "weight": 0.1
+    },
+    {
+      "id": "deployment-safety",
+      "scale": "1 (unsafe) — 5 (safe by construction)",
+      "weight": 0.15
+    },
+    {
+      "id": "governance-stability",
+      "scale": "1 (unstable) — 5 (stable)",
+      "weight": 0.1
+    }
+  ],
+  "ranking": [
+    {
+      "blocking_risks": [],
+      "destructive_surface": false,
+      "id": "contextual-retrieval",
+      "soft_risks": [
+        "no-provenance-emitter"
+      ],
+      "weighted_score": 4.7
+    },
+    {
+      "blocking_risks": [],
+      "destructive_surface": false,
+      "id": "procedural-assembly-runtime",
+      "soft_risks": [
+        "no-context-vector-emitter",
+        "no-confidence-tier-on-nodes"
+      ],
+      "weighted_score": 4.1
+    },
+    {
+      "blocking_risks": [
+        "no-context-vector-emitter",
+        "no-confidence-tier-on-nodes",
+        "no-provenance-emitter"
+      ],
+      "destructive_surface": false,
+      "id": "operational-copilot",
+      "soft_risks": [],
+      "weighted_score": 3.7
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "destructive_surface": false,
+      "id": "onboarding-runtime",
+      "soft_risks": [],
+      "weighted_score": 3.4
+    },
+    {
+      "blocking_risks": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "troubleshooting-runtime",
+      "soft_risks": [],
+      "weighted_score": 2.85
+    },
+    {
+      "blocking_risks": [
+        "oem-channel-contract-missing",
+        "role-declaration-missing",
+        "no-checkpoint-registry"
+      ],
+      "destructive_surface": true,
+      "id": "administrator-assistant",
+      "soft_risks": [],
+      "weighted_score": 2.1
+    }
+  ],
+  "rules": [
+    "Safety > readiness > value: deployment-safety and runtime-readiness dominate value when ranking ties or near-ties occur.",
+    "Any candidate with a destructive surface is automatically gated to supervised-runtime phase or higher; never realized in prototype.",
+    "A candidate with one or more blocking risks is non-realizable regardless of weighted score.",
+    "Soft risks degrade the realization to the next-safer stage but do not block.",
+    "Score updates require evidence; ad-hoc reweighting is unsafe."
+  ],
+  "schema": "realization-and-deployment-governance/1.0"
+}

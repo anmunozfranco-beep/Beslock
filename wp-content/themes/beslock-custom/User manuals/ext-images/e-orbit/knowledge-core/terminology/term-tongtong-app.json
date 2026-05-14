@@ -1,0 +1,32 @@
+{
+  "id": "term-tongtong-app",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "tongtong-app",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit app manual.md#3",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "term": "tongtong-app",
+  "definition": "OEM-mentioned app variant that is not yet approved as the primary commercial route.",
+  "domain": "app-ecosystem",
+  "verified_layer": "structured-knowledge"
+}

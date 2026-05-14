@@ -1,0 +1,13 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "dimension_count": 6,
+  "tier_count": 6,
+  "assignment_count": 15,
+  "p0_concepts": [
+    "procedure.unlock-pin",
+    "procedure.unlock-fingerprint",
+    "procedure.battery-replacement",
+    "procedure.emergency-power"
+  ]
+}

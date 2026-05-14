@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-set-the-key-62",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Set The Key",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-62"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-set-the-key-62.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "2. Cancel the normally open mode:Press the normaly open\nbutton for 1 second in the rare handle,and the door lock will\nmake a\"drip\"sound to close the normaly open mode;",
+  "legacy_storage_bucket": "extracted-text"
+}

@@ -1,0 +1,10 @@
+# Deterministic Replay Philosophy
+
+Replay is node-id-set parity over append-only NDJSON channels.
+
+## Principles
+
+- Replay is deterministic by node-id-set parity over captured retrieval-trace events.
+- Synthetic empty packages are excluded from replay; they are not real retrieval calls.
+- Replay is reporting-only: drift is surfaced, never auto-corrected.
+- The captured NDJSON channels remain append-only ground truth.

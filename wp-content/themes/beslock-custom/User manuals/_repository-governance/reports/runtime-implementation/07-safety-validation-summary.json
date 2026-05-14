@@ -1,0 +1,17 @@
+{
+  "evaluation": "continuous, not terminal",
+  "failure_action": "demote slice (no silent pass)",
+  "implementation": "runtime-implementation/runtime/safety.py",
+  "predicates": [
+    "hallucination-resistance",
+    "no-low-confidence-execution",
+    "no-ambiguous-guidance",
+    "no-provenance-loss",
+    "no-governance-bypass",
+    "no-continuity-loss",
+    "no-unsafe-retrieval",
+    "no-escalation-failure",
+    "no-supervision-loss"
+  ],
+  "schema": "runtime-implementation-governance/1.0"
+}

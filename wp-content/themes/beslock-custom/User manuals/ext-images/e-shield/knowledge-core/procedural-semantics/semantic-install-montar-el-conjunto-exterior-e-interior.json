@@ -1,0 +1,69 @@
+{
+  "id": "semantic-install-montar-el-conjunto-exterior-e-interior",
+  "type": "procedural-semantics",
+  "product": "e-shield",
+  "summary": "Normalized semantic actions for install-montar-el-conjunto-exterior-e-interior",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/install/install-montar-el-conjunto-exterior-e-interior.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/install/install-montar-el-conjunto-exterior-e-interior.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-montar-el-conjunto-exterior-e-interior",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "presenta el cuerpo exterior manteniendo el lector arriba y el keypad debajo",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "pasa el cilindro y los elementos de union por las perforaciones ya validadas",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "presenta la caja interior horizontal desde la cara interna",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "alinea ambos cuerpos sin torsion ni inclinacion",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "ajusta la fijacion de forma gradual y alternada para no descentrar el conjunto",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "comprueba que el pestillo semiautomatico y el conjunto de cierre trabajen sin forzar la puerta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

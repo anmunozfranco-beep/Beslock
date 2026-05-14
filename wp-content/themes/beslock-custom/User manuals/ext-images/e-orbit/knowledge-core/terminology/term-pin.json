@@ -1,0 +1,32 @@
+{
+  "id": "term-pin",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "pin",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#5",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "term": "pin",
+  "definition": "Numeric password credential enrolled from the user-management flow and validated immediately after creation.",
+  "domain": "credentials",
+  "verified_layer": "structured-knowledge"
+}

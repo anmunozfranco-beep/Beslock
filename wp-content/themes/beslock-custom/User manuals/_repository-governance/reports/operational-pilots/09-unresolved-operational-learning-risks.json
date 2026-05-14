@@ -1,0 +1,87 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "risk_count": 10,
+  "risks": [
+    {
+      "id": "no-pilot-yet-executed",
+      "note": "All declared pilots are modeled, not run; no real operational signal exists yet.",
+      "severity": "high"
+    },
+    {
+      "id": "no-instrumentation-emitter",
+      "note": "Signals (TASK 2) are declared; runtime emits none of them today.",
+      "severity": "high"
+    },
+    {
+      "id": "no-telemetry-sink",
+      "note": "No sandbox-tier telemetry sink is provisioned (layer 25 incident-trace channel still pending).",
+      "severity": "high"
+    },
+    {
+      "id": "no-reviewer-workload-meter",
+      "note": "Reviewer fatigue indicator cannot be computed without a workload meter.",
+      "severity": "medium"
+    },
+    {
+      "id": "no-hotspot-aggregator",
+      "note": "Hotspot detection requires aggregation infrastructure not yet built.",
+      "severity": "medium"
+    },
+    {
+      "id": "no-causal-gap-detector",
+      "note": "Causal-graph gap detection requires reasoning-trace export (layer 12).",
+      "severity": "medium"
+    },
+    {
+      "id": "candidate-elevation-throughput",
+      "note": "132 candidates pending elevation; pilot signal will increase, not decrease, this queue without reviewer capacity.",
+      "severity": "high"
+    },
+    {
+      "id": "console-absence",
+      "note": "Operator + reviewer consoles remain design-only (layer 24); pilots cannot run without minimum surfaces.",
+      "severity": "high"
+    },
+    {
+      "id": "no-pilot-exit-criteria-test",
+      "note": "Pilot exit criteria are declared; no automated check verifies a pilot has met them before closure.",
+      "severity": "low"
+    },
+    {
+      "id": "supervision-receipt-runtime-emission",
+      "note": "Carry-over from layer 24: supervision receipts not yet emitted by runtime.",
+      "severity": "high"
+    }
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

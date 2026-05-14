@@ -1,0 +1,22 @@
+{
+  "checkpoint_kinds": [
+    "onboarding",
+    "pairing",
+    "enrollment",
+    "troubleshooting",
+    "battery-replacement",
+    "recovery"
+  ],
+  "domain": "continuity-checkpoints",
+  "kind": "continuity-checkpoint-summary",
+  "records_per_product": {
+    "e-flex": 6,
+    "e-nova": 6,
+    "e-orbit": 6,
+    "e-prime": 6,
+    "e-shield": 6,
+    "e-touch": 6
+  },
+  "schema": "runtime-hardening-governance/1.0",
+  "total_records": 36
+}

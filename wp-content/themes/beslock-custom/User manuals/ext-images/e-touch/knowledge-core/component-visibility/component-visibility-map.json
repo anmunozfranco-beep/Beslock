@@ -1,0 +1,249 @@
+{
+  "id": "component-visibility-map",
+  "type": "component-visibility-map",
+  "product": "e-touch",
+  "summary": "Components that must stay geometrically accurate in future Comfy renders for e-touch",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/capabilities/cap-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/capabilities/capability-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/entities/entity-catalog.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-alta-tecnica-inicial-del-administrador.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-arquitectura-fisica-observada.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-compatibilidad-antes-de-montar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-estado-editorial.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-problemas-y-cautelas-basicas.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-relacion-con-el-paquete-documental.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-validacion-despues-de-instalar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-energia-y-cierre-del-montaje.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-rol-de-la-guia-oem-disponible.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/operation/proc-requisitos-antes-de-vincular.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/operation/proc-reset-y-recuperacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-1-pay-attention-to-the-36.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-2-automatically-cancel-the-normally-open-mode-after-verifyin.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-a-front-handle-9.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-a-por-30.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-add-fingerpr-50.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-after-completing-22.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-after-indoor-handle-61.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-1-cover-screw-11.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-2-rear-cover-12.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-b-rear-handle-10.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-bluatooth-a-37.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-bluetoothand-the-administrator-can-51.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-by-connecting-the-doorlock-with-app-bluetooth-the-43.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-caneel-49.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-cearing-cade-60.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-china-18.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-choose-the-screw-of-26.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-cne-tene-pasewors-56.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-contact-tel-75.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-d-pinch-plate-15.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-abled-40.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-ebled-42.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-ek-8.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-keyx2tmf-squa-2.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-emergency-14.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-es-fingerprint-lock-3.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-forgot-pmnsord-25.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-hare-7.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-has-been-open-button-32.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-has-been-open-button-f-64.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-if-you-55.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-indoor-intelligent-lock-bluetooth-tuya-operation-guide-34.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-install-the-deadbolt-33.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-installation-instructions-4.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-installation-steps-16.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-13.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-6.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-login-mode-supports-password-verification-code-and-24.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-long-press-the-small-hole-on-68.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-model-no-73.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-o-ther-s-etti-ngs-65.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-ofine-password-58.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-open-the-batte-28.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-other-member-48.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-paasword-21.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-packing-list-1.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-parada-pusmnerd-57.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-pasewort-44.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-pass-the-square-19.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-please-enter-your-account-20.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-plug-the-usb-power-cord-52.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-press-the-registered-47.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-press-the-registered-67.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-product-parameters-54.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-purchase-date-74.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-qhema-38.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-rne-tine-password-59.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-set-the-bey-29.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-set-the-key-62.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-1-17.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-2-66.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-3-27.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-step-4-31.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-the-connection-status-of-bluetooth-will-be-displayed-in-the.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-this-70.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-tighten-the-screws-35.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-touch-to-wake-up-the-46.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-unlocking-is-successful-53.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-urtodowin-mobil-phorp-41.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-user-name-72.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-warranty-card-71.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-blinks-red-69.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-light-45.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/ocr-draft-index.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-administrador.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-bluetooth.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-huella.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-reset.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-smart-life.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-tuya.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/terminology/term-wi-fi.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/warnings/warning-limites-de-evidencia.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::COMPONENT_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "components": [
+    {
+      "component_id": "fingerprint-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-es-fingerprint-lock-3.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "keypad",
+      "kind": "input",
+      "matched_surface_terms": [
+        "keypad"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "exterior-handle",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "handle",
+        "manija"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-context-arquitectura-fisica-observada.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-energia-y-cierre-del-montaje.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-a-front-handle-9.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-after-indoor-handle-61.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "deadbolt",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "deadbolt"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-install-the-deadbolt-33.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "latch",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "pestillo"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-rol-de-la-guia-oem-disponible.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "lock-body",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "lock body",
+        "cuerpo de la cerradura"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "mechanical-key-slot",
+      "kind": "fallback",
+      "matched_surface_terms": [
+        "llave"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-energia-y-cierre-del-montaje.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "led-indicator",
+      "kind": "feedback",
+      "matched_surface_terms": [
+        "led",
+        "indicator"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-abled-40.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-e-ebled-42.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-blinks-red-69.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-when-the-indicator-light-45.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "battery-compartment",
+      "kind": "power",
+      "matched_surface_terms": [
+        "battery"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-13.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/extracted-text/ocr-ocr-k-battery-x4-6.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/"
+    }
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "Future ComfyUI workflows MUST consume the trusted_visual_reference PNGs as anchor inputs for any of these components. No generative inference of component position, count, sensor type, keypad layout, or handle direction is allowed."
+}

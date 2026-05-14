@@ -1,0 +1,51 @@
+{
+  "id": "semantic-install-rol-de-la-guia-oem-disponible",
+  "type": "procedural-semantics",
+  "product": "e-touch",
+  "summary": "Normalized semantic actions for install-rol-de-la-guia-oem-disponible",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-rol-de-la-guia-oem-disponible.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#5"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-rol-de-la-guia-oem-disponible.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-rol-de-la-guia-oem-disponible",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "usar el PDF para orden de montaje, identidad de piezas y orientacion del pestillo",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "no derivar cotas finales de perforacion desde una captura reducida del PDF",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "si el proveedor entrega una plantilla 1:1 despues, esa fuente debe mandar sobre esta guia",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

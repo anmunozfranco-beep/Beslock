@@ -1,0 +1,256 @@
+Ⅰ.Product Layout:
+User Manual
+Rear Panel
+Front Panel
+Battery Compartment
+Reset Button 
+(inside battery 
+compartment)
+Digital Password Keypad
+Card Scanning Area
+Doorbell Button
+Fingerprint 
+Recognition Area
+Interior Handle
+Exterior Handle
+Mounting Screw Holes
+Emergency Charging Port
+Mechanical Key
+Note: Please keep the interior of the front and rear panels clean during installation.
+
+Front Panel and Lock Body Installation Steps:
+1. Adjust the latch direction: Change the direction of the lock body's latch according to the door opening method.
+2. Lock body installation: Insert the lock body into the pre-drilled installation hole and tighten the lock body mounting 
+screws.
+3. Front panel installation:
+Adjust the handle direction according to the door opening direction;
+Install and tighten the mounting studs on the front panel, and insert the handle spring into the rear panel;
+Insert the square spindle from the accessory pack into the square hole of the lock body (cut the spindle to fit the 
+actual door thickness);
+Thread the data connection cable through the door hole from the upper mounting stud, align the handle's square hole 
+with the spindle, and press the front panel assembly firmly against the door surface;
+Connect the data connection cable to the socket on the rear panel;
+Align the rear panel handle's square hole with the spindle, align the lock bar with the lock body's bar hole, and press 
+the rear panel assembly firmly against the inner door surface;
+Tighten the panel mounting screws until the panel can be moved with slight force. If it's not smooth, adjust the panel. 
+Once the latch moves smoothly, fully tighten the panel mounting screws;
+Install the batteries and attempt to unlock using fingerprint or by entering the initial password for verification. If 
+the latch movement is not smooth, repeat step . If verification is successful, install the battery cover to complete the 
+installation.
+Door Leaf
+Mounting 
+Studs
+Mounting Studs
+Battery 
+Cover
+Square 
+Spindle
+Mounting 
+Screws
+The length of the
+square spindle 
+protruding from 
+the door surface 
+should be 
+between 10 to 
+30mm
+For door thicknesses
+exceeding the 
+specified range of 
+spindle protrusion, a 
+custom-length 
+spindle should be 
+ordered or the 
+existing spindle 
+should be trimmed 
+accordingly
+
+Changing Handle Direction
+OS
+
+180° (GX
+p* 
+Do not remove the
+handle hole screws when
+|, 
+changing direction.
+
+1. Loosen the handle direction change screw;
+2. Rotate the handle 180° towards the top of the
+lock;
+3. Rotate the direction changer;
+Changing Lock Body Direction
+5
+ao
+cl
+1. Push the direction change switch upwards;
+2. Press in the latch bolt;
+3. Rotate the latch bolt 180° to change
+direction;
+4. Tighten the direction change screw to
+complete the process.
+II. Product Layout:
+Hl Opening Methods: Multiple options including fingerprint, password, IC card, mechanical
+key, WeChat mini-program, etc., offering you a unique door-opening experience (specific
+configuration may vary based on the actual product);
+Wi Fingerprint: Utilizes advanced semiconductor sensors, 360-degree recognition angle, wide
+fingerprint capture area, high resolution, effectively preventing fake fingerprints;
+Hi Password: Employs fashionable and advanced touchscreen button technology, allowing
+addition of up to 12 irrelevant digits before and after the correct password, effectively
+preventing awkward situations when entering passwords in the presence of others;
+Hl Dual Verification Mode: Can set combinations of two among fingerprint, password, and
+card for verification to unlock. Once set, only when two users verify simultaneously can the
+door be opened, suitable for special occasions;
+Hl User Management: Administrators have the highest authority (regular users can only open a
+nd close the door), can edit lock settings, up to 9 administrators (can be fingerprint, password, c
+ard), total capacity of 300 users;
+M Alarm Functions: The device has anti-pry alarm, low voltage alarm, and error attempt alarm;
+Hi Backup Power Supply: When batteries are depleted, a 5V power bank can be used for
+emergency power supply;
+II. Precautions:
+1. After installing a new lock, perform initialization to clear any fingerprints
+entered during installation and debugging;
+
+2. The handle is a crucial component for opening and closing the door. Its flexibility directly 
+affects the use of the door lock. Therefore, please refrain from hanging objects on the handle.
+3. When registering fingerprints, apply moderate finger pressure. Please avoid pressing too 
+hard to prevent damage to the fingerprint scanner.
+4. The battery should not be used for an extended period. It is generally recommended to 
+replace the battery at least once every six months; otherwise, battery leakage may damage the
+smart lock.
+5. This lock uses four AA (1.5V) high-performance alkaline batteries. When you receive the 
+first "Low battery, please replace" warning, depending on the battery capacity, you can still 
+open the door approximately 100 times. At this point, you should replace the batteries 
+promptly to avoid inconvenience due to battery depletion.
+6. After five consecutive incorrect inputs using any combination of fingerprint, card, or 
+password, an alarm will sound. The device will emit an alarm tone, and the door lock will be 
+inoperable for 90 seconds.
+IV. User Guide:
+█Initialization Procedure:
+Remove the battery cover and press the "SET" button next to the battery co 
+mpartment on the back panel for 5 seconds. A voice prompt will confirm "I 
+nitialization successful".
+█Administrator Setup:
+In initialization status
+Wake up the screen by 
+pressing "*+#"
+Add administrator
+Can be fingerprint, password, or 
+IC card
+Press "4" to add administrator
+information; you can register
+fingerprint, password, or card
+After successful operation, pr
+ess "*" to return to the previo
+us level or continue adding a
+dministrators
+In normal status
+"*" functions as Return/Exit/Delete key
+"#" functions as Confirm/Enter/Repeat v
+oice broadcast key
+
+█Lock Settings:
+Wake up the screen by
+pressing "*+#"
+After adding an administrator, 
+verification is required each time 
+to access function management
+Press "1" for 
+Function Settings
+Press "3" for Voice 
+Settings
+Press "2" for Volume 
+Adjustment
+After successful operation,
+press "*" to return to the p
+revious level or continue 
+with other operations
+Press "3" to enter Lock Settings
+Press "4" for Time 
+Settings
+1. Enable Always Open Mode
+2. Enable Dual Verification
+3. Disable Anti-pry Alarm
+4. Enable Silent Mode
+Please enter the time
+20 Year__ Month__ Date 
+__ Hour __ Minute
+1. Increase Volume
+2. Decrease Volume
+1. Chinese Voice
+2. English Voice
+Select the appropriate 
+number key to complete 
+settings as per actual 
+usage requirements
+Enter time
+Input "Year Month Date 
+Hour Minute", * to 
+delete, # to confirm
+Select the appropriate 
+number key to complete 
+settings as per actual 
+usage requirements
+Select the appropriate 
+number key to complete 
+settings as per actual 
+usage requirements
+In normal status
+"*" functions as Return/Exit/Delete key
+"#" functions as Confirm/Enter/Repeat vo 
+ice broadcast key
+
+█User Settings:
+Wake up the screen by 
+pressing "*+#"
+After adding an administrator, 
+verification is required each time to 
+access function management
+Press "1" to add user infor 
+mation; you can register fin 
+gerprint, password, or card
+Press "2" to delete user inf 
+ormation
+After successful operation, press 
+"*" to return to the previous level
+or continue adding regular users
+Enter the fingerprint, password, 
+card, or ID number of the user to 
+be deleted
+After successful operation, press 
+"*" to return to the previous level
+or continue deleting users
+█Restore Factory Settings:
+In normal status:
+"*" functions as Return/Exit/Delete key
+"#" functions as Confirm/Enter/Repeat 
+Press and hold for 5
+seconds without 
+releasing
+voice broadcast key
+
+Ml Other Instructions:
+* After 5 consecutive incorrect password entries, the keyboard will be locked for 3 min
+utes. During this time, the system will not respond to any operations.
+* Password anti-peeping function: When entering the password to open the door, input
+it in the following format: XXX password XXX. This allows you to add irrelevant digit
+s before and after the actual password, then press # to confirm. The correct password
+must be included within the entered sequence. The system will automatically exit if
+there's no operation for more than 10 seconds during any procedure.
+* When the voltage drops below 4.8V, an alarm will sound each time the lock is opene
+d. After this alarm begins, the door lock can be opened 100 more times. Beyond this li
+mit, the lock will be disabled. It is essential to replace the batteries before reaching this
+limit.
+Scan the QR code with WeChat to use the miniprogram for door opening.
+Note: The fingerprint lock time and administrator's numeric password must be set
+before use.
+
+Doodle APP download installation and door
+lock distribution network (2.4G)
+Sweep
+1. A smart lock must have at least one administrator added 
+before it can be connected to the network.
+2. On the smart lock, press "*+#" to verify administrator information press 
+"2" for wireless settings press "1" to add network.
+3. Download and install the "TUYA" APP on your smartphone, then follow 
+the instructions in the image below.

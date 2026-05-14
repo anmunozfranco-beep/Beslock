@@ -1,0 +1,32 @@
+{
+  "id": "term-user",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "user",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#4",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "term": "user",
+  "definition": "Regular enrolled person that should be added only after an administrator already exists.",
+  "domain": "local-device",
+  "verified_layer": "structured-knowledge"
+}

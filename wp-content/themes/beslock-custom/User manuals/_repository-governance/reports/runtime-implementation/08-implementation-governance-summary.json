@@ -1,0 +1,11 @@
+{
+  "doctrine_blocks": {
+    "executable_cognition_doctrine": 4,
+    "implementation_escalation_philosophy": 4,
+    "operational_validation_methodology": 5,
+    "runtime_safety_philosophy": 5,
+    "supervised_implementation_philosophy": 4
+  },
+  "macro_governance_expansion": "suspended",
+  "schema": "runtime-implementation-governance/1.0"
+}

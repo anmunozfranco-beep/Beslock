@@ -1,0 +1,10 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#10
+
+Este manual de app queda normalizado como base operativa minima.
+
+Antes de una version final para cliente conviene validar:
+- nombre exacto de la app en la implementacion comercial
+- vigencia real del mini-programa de `WeChat`
+- textos exactos de menus y botones durante el alta

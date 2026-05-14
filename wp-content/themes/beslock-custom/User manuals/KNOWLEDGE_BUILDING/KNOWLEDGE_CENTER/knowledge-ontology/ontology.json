@@ -1,0 +1,210 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "shared_entities": [
+    {
+      "id": "entity.lock-body",
+      "label": "lock body",
+      "scope": "shared",
+      "definition": "Outer hardware shell mounted on the door."
+    },
+    {
+      "id": "entity.keypad",
+      "label": "keypad",
+      "scope": "shared",
+      "definition": "Touch or capacitive input surface accepting numeric codes."
+    },
+    {
+      "id": "entity.fingerprint-sensor",
+      "label": "fingerprint sensor",
+      "scope": "shared",
+      "definition": "Capacitive biometric sensor for enrolment and verification."
+    },
+    {
+      "id": "entity.handle",
+      "label": "handle",
+      "scope": "shared",
+      "definition": "Lever or knob actuating the latch."
+    },
+    {
+      "id": "entity.deadbolt",
+      "label": "deadbolt",
+      "scope": "shared",
+      "definition": "Sliding bolt mechanism actuated independently of the latch."
+    },
+    {
+      "id": "entity.latch",
+      "label": "latch",
+      "scope": "shared",
+      "definition": "Spring-loaded retracting tongue for door retention."
+    },
+    {
+      "id": "entity.battery-bay",
+      "label": "battery bay",
+      "scope": "shared",
+      "definition": "Compartment housing the AA cells (interior side)."
+    },
+    {
+      "id": "entity.emergency-port",
+      "label": "emergency power port",
+      "scope": "shared",
+      "definition": "External contact point for emergency battery jump."
+    },
+    {
+      "id": "entity.indicator-led",
+      "label": "indicator LED",
+      "scope": "shared",
+      "definition": "Status indicator (colour and pattern carry meaning)."
+    },
+    {
+      "id": "entity.mortise",
+      "label": "mortise mechanism",
+      "scope": "shared",
+      "definition": "Through-door mechanism connecting interior and exterior."
+    },
+    {
+      "id": "entity.app",
+      "label": "companion app",
+      "scope": "shared",
+      "definition": "Mobile companion application for pairing and management."
+    }
+  ],
+  "shared_procedures": [
+    {
+      "id": "procedure.pairing-app",
+      "label": "Pair lock with app"
+    },
+    {
+      "id": "procedure.enrol-fingerprint",
+      "label": "Enrol fingerprint"
+    },
+    {
+      "id": "procedure.add-pin-code",
+      "label": "Add PIN code"
+    },
+    {
+      "id": "procedure.remove-user",
+      "label": "Remove user"
+    },
+    {
+      "id": "procedure.factory-reset",
+      "label": "Factory reset"
+    },
+    {
+      "id": "procedure.battery-replacement",
+      "label": "Replace batteries"
+    },
+    {
+      "id": "procedure.emergency-power",
+      "label": "Apply emergency power"
+    },
+    {
+      "id": "procedure.unlock-mechanical",
+      "label": "Unlock with mechanical key"
+    },
+    {
+      "id": "procedure.unlock-pin",
+      "label": "Unlock with PIN"
+    },
+    {
+      "id": "procedure.unlock-fingerprint",
+      "label": "Unlock with fingerprint"
+    },
+    {
+      "id": "procedure.firmware-update",
+      "label": "Firmware update"
+    }
+  ],
+  "shared_warnings": [
+    {
+      "id": "warning.low-battery",
+      "label": "Low-battery warning"
+    },
+    {
+      "id": "warning.lockout-after-attempts",
+      "label": "Temporary lockout after failed attempts"
+    },
+    {
+      "id": "warning.tamper-alert",
+      "label": "Tamper alert"
+    },
+    {
+      "id": "warning.factory-reset-data-loss",
+      "label": "Factory reset clears all users"
+    }
+  ],
+  "shared_capabilities": [
+    {
+      "id": "capability.pin-unlock",
+      "label": "PIN unlock"
+    },
+    {
+      "id": "capability.fingerprint-unlock",
+      "label": "Fingerprint unlock"
+    },
+    {
+      "id": "capability.app-unlock",
+      "label": "App unlock"
+    },
+    {
+      "id": "capability.mechanical-key",
+      "label": "Mechanical key fallback"
+    },
+    {
+      "id": "capability.emergency-power",
+      "label": "Emergency external power"
+    },
+    {
+      "id": "capability.audit-log",
+      "label": "Access audit log"
+    },
+    {
+      "id": "capability.firmware-update",
+      "label": "Firmware update"
+    }
+  ],
+  "shared_visual_intents": [
+    {
+      "id": "visual-intent.hero",
+      "label": "Hero identification image"
+    },
+    {
+      "id": "visual-intent.installation",
+      "label": "Installation diagram"
+    },
+    {
+      "id": "visual-intent.exploded-anatomy",
+      "label": "Exploded anatomy"
+    },
+    {
+      "id": "visual-intent.battery-replacement",
+      "label": "Battery replacement step"
+    },
+    {
+      "id": "visual-intent.fingerprint-enrol",
+      "label": "Fingerprint enrolment step"
+    },
+    {
+      "id": "visual-intent.app-pairing",
+      "label": "App pairing context"
+    },
+    {
+      "id": "visual-intent.factory-reset",
+      "label": "Factory reset sequence"
+    },
+    {
+      "id": "visual-intent.emergency-power",
+      "label": "Emergency power application"
+    }
+  ],
+  "publication_channels": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "inheritance_rule": "Per-product nuclei reference shared IDs verbatim; product-specific extensions add a sub-id."
+}

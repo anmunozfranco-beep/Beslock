@@ -1,0 +1,31 @@
+{
+  "product": "e-orbit",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "sources_used": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+  ],
+  "sources_missing": [],
+  "sections_seen": 91,
+  "entities_emitted": 109,
+  "bucket_counts": {
+    "capabilities": 4,
+    "troubleshooting": 1,
+    "installation": 1,
+    "operation": 8,
+    "workflows": 3,
+    "configuration": 1,
+    "terminology": 11,
+    "ocr-evidence": 80
+  },
+  "gaps": [
+    "Missing normalized installation manual under source-of-truth/manuals/."
+  ],
+  "ambiguities": [
+    "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5)."
+  ],
+  "ambiguity_total": 1
+}

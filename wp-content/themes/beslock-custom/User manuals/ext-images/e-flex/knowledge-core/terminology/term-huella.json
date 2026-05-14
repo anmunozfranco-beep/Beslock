@@ -1,0 +1,36 @@
+{
+  "id": "term-huella",
+  "type": "glossary-term",
+  "product": "e-flex",
+  "summary": "Credencial biométrica dactilar.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-huella.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "huella",
+  "oem_variants": [
+    "huella",
+    "fingerprint"
+  ],
+  "definition": "Credencial biométrica dactilar.",
+  "legacy_storage_bucket": "terminology"
+}

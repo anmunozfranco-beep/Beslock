@@ -1,0 +1,61 @@
+{
+  "id": "semantic-wf-registro-e-inicio-de-sesion",
+  "type": "procedural-semantics",
+  "product": "e-shield",
+  "summary": "Normalized semantic actions for wf-registro-e-inicio-de-sesion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-registro-e-inicio-de-sesion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#4"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-registro-e-inicio-de-sesion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-registro-e-inicio-de-sesion",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "abre la app `TECDOFY`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "registra la cuenta con telefono o email",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "confirma el codigo de verificacion",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "inicia sesion y verifica la cuenta si cambias de telefono",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "policy": "Conflicts inherited from Phase 6 visual-governance consolidation. NOT resolved by this promotion. Resolution is a separate, dedicated phase.",
+  "carry_over_source": "_repository-governance/reports/visual-governance/03-duplications-and-conflicts.json",
+  "items": [
+    {
+      "id": "conflict.negative-prompts.cross-product-duplication",
+      "status": "open"
+    },
+    {
+      "id": "conflict.image-class.assignment-implicit",
+      "status": "open"
+    },
+    {
+      "id": "conflict.blocked-slots.no-status-enum",
+      "status": "open"
+    },
+    {
+      "id": "conflict.composite-vs-generate.unspecified-per-slot",
+      "status": "open"
+    },
+    {
+      "id": "conflict.workflow-filename.double-extension",
+      "status": "open"
+    },
+    {
+      "id": "conflict.legacy-png.no-decommission-timeline",
+      "status": "open"
+    }
+  ]
+}

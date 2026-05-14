@@ -1,0 +1,46 @@
+{
+  "id": "wf-app-pairing-qr",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "Smart Life QR pairing",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#app-pairing-qr"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "app",
+  "outcomes": [
+    "device-visible-in-app",
+    "lock-network-configured"
+  ],
+  "preconditions": [
+    "app installed and signed in",
+    "compatible Wi-Fi available",
+    "lock in pairing mode"
+  ],
+  "steps": [
+    "Open Smart Life and add a device from Camera&Lock.",
+    "Choose the observed Wi-Fi video lock family.",
+    "Select the target Wi-Fi network and enter the password.",
+    "Show the generated phone QR to the lock camera.",
+    "Wait for the lock prompt and confirm success in the app."
+  ],
+  "validation_checks": [],
+  "authorized_visual_renderer": "ComfyUI"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-touch-to-wake-up-the-46",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Touch To Wake Up The",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-46"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "password area",
+  "storage_bucket": "extracted-text"
+}

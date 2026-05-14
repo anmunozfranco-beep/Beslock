@@ -1,0 +1,45 @@
+{
+  "id": "install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Secuencia base:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "ajusta la direccion del pestillo segun el metodo de apertura de la puerta"
+    },
+    {
+      "n": 2,
+      "text": "inserta el cuerpo del cerrojo en el orificio preparado"
+    },
+    {
+      "n": 3,
+      "text": "aprieta los tornillos de montaje del cuerpo del cerrojo"
+    },
+    {
+      "n": 4,
+      "text": "confirma que el pestillo se mueva suavemente antes de presentar los paneles"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

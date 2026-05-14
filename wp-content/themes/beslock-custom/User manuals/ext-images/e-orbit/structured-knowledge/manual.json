@@ -1,0 +1,309 @@
+{
+  "knowledge_version": "2026-05-13",
+  "product": {
+    "slug": "e-orbit",
+    "name": "e-Orbit",
+    "commercial_model": "NF14",
+    "knowledge_scope": "multimodal product core"
+  },
+  "source_documents": [
+    {
+      "id": "normalized-user-manual",
+      "path": "../source-of-truth/manuals/e-Orbit user manual.md",
+      "role": "local-device operations"
+    },
+    {
+      "id": "normalized-app-manual",
+      "path": "../source-of-truth/manuals/e-Orbit app manual.md",
+      "role": "app onboarding and remote operations"
+    },
+    {
+      "id": "oem-app-manual-pdf",
+      "path": "../source-of-truth/manuals/e-Orbit_2.pdf",
+      "role": "oem app and menu evidence"
+    },
+    {
+      "id": "oem-spec-sheet",
+      "path": "../source-of-truth/specifications/e-Orbit_1.xls",
+      "role": "specifications, dimensions, and commercial cautions"
+    }
+  ],
+  "sections": [
+    {
+      "id": "getting-started",
+      "title": "Primeros pasos",
+      "surface": "local-device",
+      "summary": "Initial setup requires a working installation, an active panel, and a designated primary administrator before any other credential is enrolled.",
+      "key_points": [
+        "Verify installation alignment and free door movement.",
+        "Confirm the panel wakes correctly.",
+        "Define the primary administrator first.",
+        "Recommended order: administrator, PIN, fingerprint, validation, settings, app pairing."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#2"
+      ]
+    },
+    {
+      "id": "add-administrator",
+      "title": "Agregar un administrador",
+      "surface": "local-device",
+      "summary": "Administrator creation happens from the user-management menu and should leave at least one backup credential registered.",
+      "key_points": [
+        "Menu route: Agregar usuario -> Agregar administrador.",
+        "Register at least one PIN and one fingerprint for the main administrator.",
+        "Validate access immediately after saving."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#3"
+      ]
+    },
+    {
+      "id": "add-user",
+      "title": "Agregar un usuario",
+      "surface": "local-device",
+      "summary": "User enrollment follows the same menu family as administrator enrollment but must avoid privilege mistakes.",
+      "key_points": [
+        "Menu route: Agregar usuario -> Agregar usuario.",
+        "Enroll one user at a time.",
+        "Confirm the user did not inherit administrator privileges by mistake."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#4"
+      ]
+    },
+    {
+      "id": "register-pin",
+      "title": "Registrar una contrasena o PIN",
+      "surface": "local-device",
+      "summary": "PIN registration is handled from the user-enrollment flow and must be tested immediately after creation.",
+      "key_points": [
+        "PINs can be attached to either administrators or regular users.",
+        "Avoid obvious credentials.",
+        "Confirm the credential opens consistently."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#5"
+      ]
+    },
+    {
+      "id": "register-fingerprint",
+      "title": "Registrar una huella",
+      "surface": "local-device",
+      "summary": "Fingerprint enrollment requires clean, dry contact and repeated capture cycles until the device confirms completion.",
+      "key_points": [
+        "Capture the same finger repeatedly as prompted.",
+        "Test fingerprint access several times in a row.",
+        "Backup fingerprints are recommended for administrators."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    {
+      "id": "change-language",
+      "title": "Cambiar el idioma",
+      "surface": "local-device",
+      "summary": "The documented language path uses numeric entry codes, but those codes still require real-hardware confirmation before publication as final truth.",
+      "key_points": [
+        "Observed entry code: 888#.",
+        "Observed Spanish code: 3009#.",
+        "Both codes require hardware validation before final commercial publication."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support"
+      ],
+      "validation_status": "hardware-validation-required",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#7",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    {
+      "id": "app-pairing-overview",
+      "title": "Conectar la cerradura a la aplicacion",
+      "surface": "app",
+      "summary": "The primary observed ecosystem is Smart Life or Tuya, with pairing handled from the add-device flow and category-specific lock entry points.",
+      "key_points": [
+        "Smart Life is the primary Beslock presentation path.",
+        "Tuya or Tuya Smart remains the ecosystem reference.",
+        "Device category selection must match the real hardware family."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support",
+        "api"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#8",
+        "source-of-truth/manuals/e-Orbit app manual.md#3"
+      ]
+    },
+    {
+      "id": "qr-pairing",
+      "title": "Vincular por QR",
+      "surface": "app",
+      "summary": "QR onboarding is the strongest observed OEM path for Smart Life pairing, using the camera-based lock flow and an on-screen QR code.",
+      "key_points": [
+        "Observed app path: Add device -> Camera&Lock -> Video Lock (Wi-Fi).",
+        "The phone QR is shown to the lock camera after network selection.",
+        "Brightness, distance, and lighting should be adjusted one variable at a time when pairing fails."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support",
+        "api"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#9",
+        "source-of-truth/manuals/e-Orbit app manual.md#5"
+      ]
+    },
+    {
+      "id": "ez-mode-pairing",
+      "title": "Alta del dispositivo por Wi-Fi o EZ Mode",
+      "surface": "app",
+      "summary": "EZ Mode is an alternate recovery or fallback flow and should not be merged editorially with the QR sequence.",
+      "key_points": [
+        "Observed app path: Camera&Lock -> Lock (Wi-Fi) -> Reset the device -> EZ Mode.",
+        "This path is a fallback, not the same workflow as QR pairing.",
+        "If distribution fails, switch mode or use the hotspot guidance shown by the app."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#6"
+      ]
+    },
+    {
+      "id": "remote-unlock-and-logs",
+      "title": "Desbloqueo remoto y registros",
+      "surface": "app",
+      "summary": "The app supports visitor-triggered remote unlock, two-way talk context, and event-log review for security and support operations.",
+      "key_points": [
+        "Remote unlock can be triggered from a visitor request.",
+        "The app can expose talk flow with the visitor.",
+        "Event logs include ring, illegal user, low battery, and unlock events."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support",
+        "video"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#7"
+      ]
+    },
+    {
+      "id": "member-management",
+      "title": "Gestion de miembros",
+      "surface": "app",
+      "summary": "Member management includes adding named members, opening each member record, and binding the generated user code to an unlock mode.",
+      "key_points": [
+        "The user code is generated when the lock is added.",
+        "Member records are edited from the member information surface.",
+        "Unlock mode assignment happens inside the member detail flow."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support",
+        "api"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#8"
+      ]
+    },
+    {
+      "id": "temporary-passwords",
+      "title": "Passwords temporales",
+      "surface": "app",
+      "summary": "The observed OEM flow clearly supports one-time and unlimited temporary passwords, while additional temporary-password modes still require validation on commercial hardware.",
+      "key_points": [
+        "One-time passwords are described as ten-digit values.",
+        "One-time passwords expire after six hours and can only be used once.",
+        "Unlimited passwords are explicitly visible in the OEM source.",
+        "Additional temporary-password types may exist but are not yet validated."
+      ],
+      "channel_targets": [
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support",
+        "api"
+      ],
+      "validation_status": "partial-document-evidence",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#9",
+        "source-of-truth/manuals/e-Orbit - supplemental source review.md#4"
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "title": "Problemas frecuentes",
+      "surface": "local-device-and-app",
+      "summary": "The current troubleshooting baseline separates biometric failure from app pairing failure and keeps the remedy set practical and non-speculative.",
+      "key_points": [
+        "Fingerprint issues: clean the finger, retry naturally, re-enroll if needed.",
+        "App issues: confirm power, pairing mode, category selection, and network details.",
+        "Avoid promising unsupported diagnostics until hardware validation exists."
+      ],
+      "channel_targets": [
+        "pdf",
+        "website",
+        "chatbot",
+        "rag",
+        "technical-support"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#10",
+        "source-of-truth/manuals/e-Orbit app manual.md#10"
+      ]
+    }
+  ]
+}

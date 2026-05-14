@@ -1,0 +1,73 @@
+{
+  "id": "semantic-wf-gateway-y-funciones-remotas",
+  "type": "procedural-semantics",
+  "product": "e-shield",
+  "summary": "Normalized semantic actions for wf-gateway-y-funciones-remotas",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-gateway-y-funciones-remotas.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#12"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/workflows/wf-gateway-y-funciones-remotas.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-gateway-y-funciones-remotas",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "entra al apartado `Gateway`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "toca `+`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "selecciona el modelo de Gateway",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "introduce la clave WiFi y el nombre del Gateway",
+      "semantic_actions": [
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "sigue el asistente hasta completar el enlace",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "vincula la cerradura al Gateway cuando aparezca dentro del alcance detectado",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

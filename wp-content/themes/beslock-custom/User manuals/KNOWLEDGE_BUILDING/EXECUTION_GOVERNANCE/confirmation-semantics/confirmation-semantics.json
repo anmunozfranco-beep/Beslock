@@ -1,0 +1,55 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "confirmation_types": [
+    {
+      "id": "user-acknowledgement",
+      "required_for": "warning surfacing"
+    },
+    {
+      "id": "explicit-action",
+      "required_for": "destructive steps (factory-reset, delete-credential)"
+    },
+    {
+      "id": "device-feedback",
+      "required_for": "step that depends on physical device response"
+    },
+    {
+      "id": "validation-predicate",
+      "required_for": "procedure completion"
+    },
+    {
+      "id": "oem-confirmation",
+      "required_for": "P0 safety-critical promotions only"
+    }
+  ],
+  "validation_predicates": [
+    {
+      "procedure_class": "pairing",
+      "predicate": "device reports `paired` and round-trip ping succeeds"
+    },
+    {
+      "procedure_class": "enrollment",
+      "predicate": "device reports `enrolled` and credential-id is recorded"
+    },
+    {
+      "procedure_class": "factory-reset",
+      "predicate": "device reports `factory-default` and admin-state=no-admin"
+    },
+    {
+      "procedure_class": "battery-replacement",
+      "predicate": "battery-state=restored and device boots nominally"
+    },
+    {
+      "procedure_class": "installation",
+      "predicate": "install-state=verified-install and operational-state=normal"
+    }
+  ],
+  "rules": [
+    "Procedure completion requires both: terminal state reached AND validation-predicate satisfied.",
+    "Destructive steps require explicit-action confirmation; user-acknowledgement is insufficient.",
+    "Device-feedback failures within timeout default to `validation-failure` interruption.",
+    "OEM-confirmation is mandatory for promoting any procedure to verified-truth at P0.",
+    "Confirmation traces are recorded and feed knowledge-health monitoring."
+  ]
+}

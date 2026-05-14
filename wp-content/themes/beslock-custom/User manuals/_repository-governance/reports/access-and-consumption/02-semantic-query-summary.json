@@ -1,0 +1,125 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "intents": [
+    {
+      "id": "how-to",
+      "examples": [
+        "how to reset e-orbit",
+        "how to enroll fingerprint"
+      ],
+      "primary_targets": [
+        "procedures",
+        "workflows",
+        "procedural-semantics"
+      ]
+    },
+    {
+      "id": "what-is",
+      "examples": [
+        "what is 2.4G",
+        "what is admin mode"
+      ],
+      "primary_targets": [
+        "terminology",
+        "entities",
+        "capabilities"
+      ]
+    },
+    {
+      "id": "where-is",
+      "examples": [
+        "where is the reset button"
+      ],
+      "primary_targets": [
+        "entities",
+        "component-visibility",
+        "visual-intent"
+      ]
+    },
+    {
+      "id": "why-failure",
+      "examples": [
+        "pairing failures",
+        "why won't it unlock"
+      ],
+      "primary_targets": [
+        "troubleshooting",
+        "warnings"
+      ]
+    },
+    {
+      "id": "prerequisite",
+      "examples": [
+        "installation prerequisites",
+        "what do I need before"
+      ],
+      "primary_targets": [
+        "workflows.preconditions",
+        "procedural-semantics"
+      ]
+    },
+    {
+      "id": "comparison",
+      "examples": [
+        "e-orbit vs e-shield"
+      ],
+      "primary_targets": [
+        "capabilities",
+        "specifications",
+        "shared-concepts"
+      ]
+    },
+    {
+      "id": "safety",
+      "examples": [
+        "is it safe to factory reset"
+      ],
+      "primary_targets": [
+        "warnings",
+        "visual-risk",
+        "publication-intent"
+      ]
+    },
+    {
+      "id": "lookup-id",
+      "examples": [
+        "wf-alta-desde-tuya-app"
+      ],
+      "primary_targets": [
+        "by-id"
+      ]
+    },
+    {
+      "id": "ambiguous",
+      "examples": [
+        "app",
+        "lock"
+      ],
+      "primary_targets": [
+        "disambiguation-set"
+      ]
+    }
+  ],
+  "resolution": [
+    "Detect intent class.",
+    "Resolve product scope (explicit token, current session product, or fan-out across all products).",
+    "Map intent to primary targets via QUERY_INTENTS.",
+    "Apply access-governance filters (maturity, deprecation, unresolved).",
+    "Assemble context bundle (see context-assembly).",
+    "If zero results, escalate to fallback strategy.",
+    "If multiple equal-confidence results, return disambiguation-set, never silently choose."
+  ],
+  "fallbacks": [
+    "synonym expansion via terminology.oem_variants",
+    "bilingual expansion via terminology.canonical/oem_variants",
+    "domain-broaden (procedures -> workflows -> procedural-semantics)",
+    "product-broaden (single -> shared-concepts -> all)",
+    "explicit unresolved-knowledge response (never fabricate)"
+  ],
+  "ambiguity_rules": [
+    "An ambiguous query MUST return a disambiguation-set, not a guess.",
+    "Disambiguation-set entries carry: id, product, summary, maturity, confidence.",
+    "Resolution chosen by the consumer is recorded in the access trace."
+  ]
+}

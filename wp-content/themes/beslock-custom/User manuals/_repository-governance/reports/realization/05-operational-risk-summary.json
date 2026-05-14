@@ -1,0 +1,99 @@
+{
+  "high": [
+    "unsafe-runtime-realization",
+    "over-automation",
+    "cognition-drift",
+    "governance-bypass",
+    "escalation-failure",
+    "operational-hallucination",
+    "deployment-sequencing-error",
+    "premature-pilot-promotion",
+    "uncontrolled-destructive-surface",
+    "supervision-receipt-loss",
+    "provenance-loss-at-boundary",
+    "rollback-unavailability"
+  ],
+  "medium": [
+    "value-without-readiness",
+    "cognition-to-product-leakage",
+    "operator-fatigue"
+  ],
+  "risks": [
+    {
+      "id": "unsafe-runtime-realization",
+      "mitigation": "block any candidate with blocking risks; never realize past prototype with destructive surface uncontracted",
+      "severity": "high"
+    },
+    {
+      "id": "over-automation",
+      "mitigation": "supervised-by-default; no autonomous runtime modelled; explicit-action gate mandatory for destructive",
+      "severity": "high"
+    },
+    {
+      "id": "cognition-drift",
+      "mitigation": "schema-pin enforcement; append-only history; no runtime-time promotion",
+      "severity": "high"
+    },
+    {
+      "id": "governance-bypass",
+      "mitigation": "lifecycle P-tier gates enforced at every boundary; federation cannot widen authority",
+      "severity": "high"
+    },
+    {
+      "id": "escalation-failure",
+      "mitigation": "tier-4/5 require declared receiver; queue + lock when absent; broadcast lock at tier-5",
+      "severity": "high"
+    },
+    {
+      "id": "operational-hallucination",
+      "mitigation": "retrieval cannot emit nodes absent from knowledge-core; reasoning only on declared causal edges",
+      "severity": "high"
+    },
+    {
+      "id": "deployment-sequencing-error",
+      "mitigation": "stages sequential; promotion requires evidence; demotion always allowed",
+      "severity": "high"
+    },
+    {
+      "id": "premature-pilot-promotion",
+      "mitigation": "exit criteria with evidence required; soft risks degrade to safer stage",
+      "severity": "high"
+    },
+    {
+      "id": "uncontrolled-destructive-surface",
+      "mitigation": "two-token irreversibility gate; never inheritable across continuity restoration; audit dedicated",
+      "severity": "high"
+    },
+    {
+      "id": "supervision-receipt-loss",
+      "mitigation": "supervision receipts mandatory at every supervised boundary; missing receipt = unsafe",
+      "severity": "high"
+    },
+    {
+      "id": "provenance-loss-at-boundary",
+      "mitigation": "cross-runtime provenance bus required; unattributable messages dropped",
+      "severity": "high"
+    },
+    {
+      "id": "rollback-unavailability",
+      "mitigation": "checkpoint registry required for any stage past assisted-runtime",
+      "severity": "high"
+    },
+    {
+      "id": "value-without-readiness",
+      "mitigation": "value cannot dominate ranking; safety > readiness > value rule",
+      "severity": "medium"
+    },
+    {
+      "id": "cognition-to-product-leakage",
+      "mitigation": "transition contracts narrow authority; never widen",
+      "severity": "medium"
+    },
+    {
+      "id": "operator-fatigue",
+      "mitigation": "supervision boundaries declared; degraded modes prefer safest defaults to minimize unnecessary prompts",
+      "severity": "medium"
+    }
+  ],
+  "schema": "realization-and-deployment-governance/1.0"
+}

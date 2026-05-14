@@ -1,0 +1,33 @@
+{
+  "id": "sup-e-shield-1-warning-001",
+  "type": "warning",
+  "product": "e-shield",
+  "summary": "*After restoring factory settings, all user data will be cleared. Please operate with caution. SECURITY DESIGN",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf#page=?",
+    "generated_manuals_supplemental/e-shield-1/manual.json#warnings[0]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-shield-1/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "text": "*After restoring factory settings, all user data will be cleared. Please operate with caution. SECURITY DESIGN",
+  "page": "?",
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-shield-1"
+}

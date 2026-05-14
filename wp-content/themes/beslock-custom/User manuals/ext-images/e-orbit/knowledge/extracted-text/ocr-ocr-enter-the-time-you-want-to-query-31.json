@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-enter-the-time-you-want-to-query-31",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Enter The Time You Want To Query",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-31"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "inquiry\ninquiry\nby time\n(time is year, month, day)\nTo change the system language of the smart lock in its factory state:\nEnter the language system: 888+\nNext, enter the code:\n30004 (Chinese)\n30074 (Portuguese)\n3015# (Italian)\n30014 (English)\n3008# (French)\n30164 (Mongolian)\n3002 (Hong Kong)\n30094 (Spanish)\n3017 (Uzbekistan)\n3003# (Russian)\n30114 (Indonesian)\n3018# (Kazakh)\n3004# (Vietnamese)\n3012# (Thai)\n3019# (Serbian)\n3005# (Korean)\n3013# (Hebrew)\n3020# (Korean)\n3006# (Arabic)\n3014# (Turkish)\n3022# (Japanese)\n(Visitor mode\nIn visitor mode, users can generate time-limited passwords for limited 1 to 59 minutes, counting from the\ncurrent time, which will become invalid after the time limited.\n(2)Renting mode\nIn short-term lease mode, users can generate valid passwords for any period of time. The validity time\nmust be longer than the validity time and the current time. The maximum time range cannot exceed 60\ndays. The generated temporary password must be entered within 24 hours after the password takes\neffect. Otherwise, the password becomes invalid.\n(3)Nanny mode\nIn nanny mode, users can set the allowable time periods for unlocking every day. The time losing efficacy\nshall be later than the time taking effect. The generated password needs to be input within 24 hours, otherwise it will be invalid.\n(4)Password Management\nThe password management function can be used to delete the time-limited passwords that are already in\neffect ona lock. However, it is not possible to delete the time-limited password that takes effect within 24\nhours, administrator user's password, or standard user's password. If you need to invalidate all time-limited passwords, you need to delete User 000 on the lock first, and then add it again.\nappendix",
+  "storage_bucket": "extracted-text"
+}

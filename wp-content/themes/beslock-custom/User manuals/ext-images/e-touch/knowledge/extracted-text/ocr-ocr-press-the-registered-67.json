@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-press-the-registered-67",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Press The Registered",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-67"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "adminis-trator fingerprint,\nthe reset is successful\n2.When the battery is low,the indicator will blink red light. The rest power conld only beused for about 50 times.\n3.When the battery is out of power,you can unlock the door with key,or supply the lockwith power through the micro-USB port and use fingerprint or password\n4.Use alkaline batteries to prevent the damage by battery leakage.Batteries must bereplaced every 2 years.\nQ8A:\nQ:The button doesn't respond and light doesn't light up?",
+  "storage_bucket": "extracted-text"
+}

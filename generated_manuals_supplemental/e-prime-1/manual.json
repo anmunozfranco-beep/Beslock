@@ -1,0 +1,180 @@
+{
+  "source_pdf": "/Users/andresmunoz/Documents/GitHub/Beslock/wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf",
+  "scanned_pdf": true,
+  "pages": 6,
+  "ocr_method": "pytesseract",
+  "avg_confidence": 86.4,
+  "sections": [
+    {
+      "title": "Manual De Cerradura Inteligente",
+      "semantic_category": "General",
+      "content": [
+        "Te! CA! an =",
+        "ITEM NO.: P14",
+        "Product Layout:",
+        "Panel trasero Panel frontal",
+        "Contrasefia digital",
+        "Teclado 17 3 Compartimento",
+        "de la bateria",
+        "Area de escaneo de tarjetas 4 6",
+        "7 8 9 Botén de reinicio",
+        "Boton del timbre —————«— 9— 4. (dentro del",
+        "compartimento",
+        "Area de reconocimiento 3 de la bateria)",
+        "de huellas dactilares",
+        "Manija exterior",
+        "Llave mecanica",
+        "Puerto de carga de",
+        "emergencia",
+        "Orificios para",
+        "tornillos",
+        "de montaje",
+        "Nota: Mantenga limpio el interior de los paneles frontal y trasero durante la instalacion.",
+        "La longitud del eje cuadrado que sobresale",
+        "de la superficie de la puerta debe estar tee",
+        "Para puertas con un grosor que exceda el",
+        "rango especificado de saliente del husillo, :",
+        "se debe solicitar un husillo de longitud :",
+        "personalizada o recortar el husillo existente",
+        "segun corresponda.",
+        "Tapa de la",
+        "bateria",
+        "Por Leaf :",
+        "Pernos de",
+        "montaje",
+        ": hey o N",
+        ": : “es husill",
+        "Tornillos ! vse",
+        "Pernos de",
+        "montaje",
+        "Pasos de Instalacién del Panel Frontal y del Cuerpo del Cerrojo:",
+        "1.Ajuste de la direccién del pasador:",
+        "Cambie la direccién del pasador del cuerpo del cerrojo segun el método de",
+        "apertura de la puerta.",
+        "2.Instalacién del cuerpo del cerrojo:",
+        "Inserte el cuerpo del cerrojo en el orificio de instalacién pre perforado y apreté los",
+        "tornillos de montaje del cuerpo del cerrojo.",
+        "3.Instalacién del panel frontal:",
+        "Ajuste de la direccién del manillar segun la direccién de apertura de la puerta;",
+        "Instale y apreté los tornillos de montaje en el panel frontal y inserte el resorte del",
+        "manillar en el panel trasero;",
+        "Insira el eje cuadrado del paquete de accesorios en el orificio cuadrado del cuerpo",
+        "del cerrojo (recorte el eje para que se ajuste al grosor real de la puerta);",
+        "Guie el cable de conexién de datos a través del orificio de la puerta desde el tornillo",
+        "superior de montaje, alinee el orificio cuadrado del manillar con el eje y presione el",
+        "ensamblaje del panel frontal firmemente contra la superficie de la puerta;",
+        "Conecte el cable de conexién de datos al enchufe en el panel trasero;",
+        "Alinee el orificio cuadrado del manillar del panel trasero con el eje, alinee la barra",
+        "de cerradura con el orificio de la barra del cuerpo del cerrojo y presione el",
+        "ensamblaje del panel trasero firmemente contra la superficie interior de la puerta;",
+        "Ajuste los tornillos de montaje del panel hasta que el panel pueda moverse con",
+        "una leve fuerza. Si no es suave, ajuste el panel. Una vez que el pasador se mueva",
+        "suavemente, apretar completamente los tornillos de montaje del panel;"
+      ]
+    },
+    {
+      "title": "Instale Las Baterias E Intente Desbloquear Usando El Huella Dactilar O Ingresando La",
+      "semantic_category": "General",
+      "content": [
+        "contrasefa inicial para verificar. Si el movimiento del pasador no es suave, repita",
+        "el paso . Sila verificacién es exitosa, instale la tapa de la bateria para completar",
+        "la instalacién.",
+        "Cambiar la direccién del mango. Cambiar la direccién del cuerpo de la",
+        "cerradura.",
+        "del orificio del ~ e",
+        "mango al cambiar la 298",
+        "ia} direccion te",
+        "1. Afloje el tornillo de cambio de 1. Empuje el interruptor de cambio de",
+        "direccién de la manija. direccién hacia arriba.",
+        "2. Gire la manija 180° hacia la parte 2. Presione el pestillo.",
+        "superior de la cerradura. 3. Gire el pestillo 180° para cambiar",
+        "3. Gire el cambiador de direccién. de direccion.",
+        "4. Apriete el tornillo de cambio de",
+        "direccién para completar el proceso.",
+        "Disefio del producto:",
+        "Métodos de apertura: Varias opciones incluyendo huella dactilar, contrasefia, tarjeta",
+        "de IC, llave mecanica, programa de mini-programa de WeChat, etc., ofreciéndole una",
+        "experiencia Unica de apertura de puertas (la configuracion especifica puede variar",
+        "segun el producto real);",
+        "Huella dactilar: Utiliza sensores de semiconductores avanzados, angulo de",
+        "reconocimiento de 360 grados, area amplia de captura de huellas dactilares, alta",
+        "resolucién, lo que evita efectivamente las huellas dactilares falsas;",
+        "Contrasefia: Utiliza tecnologia de botén tactil de pantalla avanzada y elegante,",
+        "permitiendo agregar hasta 12 digitos irrelevantes antes y después de la contrasena",
+        "correcta, lo que evita situaciones incomodas al ingresar contrasenas en",
+        "presencia de otros;",
+        "Modo de verificacién dual: Puede establecer combinaciones de dos entre huella",
+        "dactilar, contrasefia y tarjeta para verificar el desbloqueo. Una vez configurado,",
+        "solo cuando dos usuarios verifiquen simultaneamente se puede abrir la puerta,",
+        "adecuado para ocasiones especiales;",
+        "Gestion de usuarios: Los administradores tienen la autoridad mas alta (los usuarios",
+        "regulares solo pueden abrir y cerrar la puerta), pueden editar la configuracién de la",
+        "cerradura, hasta 9 administradores (puede ser huella dactilar, contrasefa, tarjeta),",
+        "capacidad total de 300 usuarios",
+        "Funciones de alarma: El dispositivo tiene alarma de robo, alarma de baja tension",
+        "y alarma de intento de error;",
+        "Suministro de energia de respaldo: Cuando las baterias se agotan, se puede utilizar una",
+        "bateria de SV para el suministro de energia de emergencia.",
+        "Precauciones"
+      ]
+    },
+    {
+      "title": "Después De Instalar Una Nueva Cerradura, Realice La Inicializacién Para Borrar Cualquier",
+      "semantic_category": "General",
+      "content": [
+        "huella dactilar registrada durante la instalacién y depuracién;",
+        "El asa es un componente crucial para abrir y cerrar la puerta. Su flexibilidad afecta",
+        "directamente el uso de la cerradura de la puerta. Por lo tanto, por favor, absténgase de",
+        "colgar objetos en el asa.",
+        "Al registrar huellas dactilares, aplique presion de dedo moderada. Por favor, evite",
+        "presionar demasiado para evitar dafo al escaner de huellas dactilares.",
+        "La bateria no debe usarse por un periodo extendido. Se recomienda reemplazar la",
+        "bateria al menos una vez cada seis meses; de lo contrario, la fuga de bateria puede",
+        "dafiar el cerrojo inteligente.",
+        "Este cerrojo utiliza cuatro pilas AA (1,5V) de alta potencia alcalina. Cuando reciba la",
+        "primera advertencia de \"bateria baja\", dependiendo de la capacidad de la bateria, todavia",
+        "puede abrir la puerta aproximadamente 100 veces. En este momento, debe reemplazar",
+        "las baterias rapidamente para evitar inconvenientes debido al agotamiento de la bateria.",
+        "Después de cinco ingresos incorrectos consecutivos utilizando cualquier combinacién",
+        "de huella dactilar, tarjeta o contrasefa, el dispositivo emitira un tono de alarma, y el",
+        "cerrojo de la puerta sera inoperable durante 90 segundos."
+      ]
+    }
+  ],
+  "specifications": [
+    {
+      "name": "ITEM NO.",
+      "value": "P14"
+    },
+    {
+      "name": "Funciones de alarma",
+      "value": "El dispositivo tiene alarma de robo, alarma de baja tension"
+    },
+    {
+      "name": "Suministro de energia de respaldo",
+      "value": "Cuando las baterias se agotan, se puede utilizar una"
+    }
+  ],
+  "steps": [
+    "2. Gire la manija 180° hacia la parte 2. Presione el pestillo.",
+    "3. Gire el cambiador de direccién. de direccion."
+  ],
+  "app_instructions": [],
+  "troubleshooting": [
+    "y alarma de intento de error;"
+  ],
+  "warnings": [
+    "Nota: Mantenga limpio el interior de los paneles frontal y trasero durante la instalacion.",
+    "primera advertencia de \"bateria baja\", dependiendo de la capacidad de la bateria, todavia"
+  ],
+  "features": [],
+  "metadata": {
+    "generated_at": "2026-05-13T15:09:59.328824+00:00",
+    "downstream_use": [
+      "woocommerce",
+      "technical_manual",
+      "faq",
+      "installation_guide"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "product": "e-orbit",
+  "policy": "Phase 2 does not overwrite the pre-existing verified `structured-knowledge/` reference implementation. This pointer file declares the canonical relationship between the two layers.",
+  "legacy_layer": {
+    "root": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge",
+    "validation_status": "verified",
+    "owners": [
+      "Phase 1 reference implementation"
+    ],
+    "files_of_record": [
+      "structured-knowledge/manual.json",
+      "structured-knowledge/glossary.json",
+      "structured-knowledge/faq.json",
+      "structured-knowledge/workflows.json",
+      "structured-knowledge/features/capabilities.json",
+      "structured-knowledge/procedures/procedure-catalog.json",
+      "structured-knowledge/semantic-relations/knowledge-graph.json"
+    ]
+  },
+  "phase2_layer": {
+    "root": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge",
+    "default_validation_status": "extraction-pending-review",
+    "purpose": "Atomized, per-entity files derived directly from `source-of-truth/manuals/*.md` for RAG, support, and chatbot retrieval.",
+    "reconciliation_rules": [
+      "When a Phase 2 entity overlaps a verified Phase 1 entity, the Phase 1 file is the source of truth.",
+      "Promote Phase 2 entities to `verified` only after they are reviewed against the Phase 1 reference and the OEM source.",
+      "Do not edit `structured-knowledge/` from this folder; record any reconciliation in `relationships/manual-overrides.json`."
+    ]
+  }
+}

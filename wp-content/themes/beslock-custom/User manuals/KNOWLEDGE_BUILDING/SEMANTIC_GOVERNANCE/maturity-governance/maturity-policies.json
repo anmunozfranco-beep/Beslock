@@ -1,0 +1,50 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "required_field": "maturity",
+  "default_when_absent": "unresolved",
+  "promotion_table": [
+    {
+      "from": "absent",
+      "to": "unresolved",
+      "evidence": "auto"
+    },
+    {
+      "from": "ocr-derived",
+      "to": "inferred",
+      "evidence": "reviewer note + cross-evidence link"
+    },
+    {
+      "from": "inferred",
+      "to": "canonical",
+      "evidence": "OEM evidence + reviewer approval"
+    },
+    {
+      "from": "canonical",
+      "to": "verified",
+      "evidence": "second OEM source OR field confirmation"
+    },
+    {
+      "from": "any",
+      "to": "deprecated",
+      "evidence": "replacement artifact id"
+    },
+    {
+      "from": "any",
+      "to": "low-confidence",
+      "evidence": "reviewer downgrade note"
+    },
+    {
+      "from": "any",
+      "to": "transitional",
+      "evidence": "migration target + ETA"
+    }
+  ],
+  "invariants": [
+    "verified ⇒ ≥1 OEM evidence span",
+    "canonical ⇒ ≥1 evidence pointer",
+    "deprecated ⇒ replacement reference",
+    "transitional ⇒ migration target",
+    "low-confidence ⇒ confidence_note"
+  ]
+}

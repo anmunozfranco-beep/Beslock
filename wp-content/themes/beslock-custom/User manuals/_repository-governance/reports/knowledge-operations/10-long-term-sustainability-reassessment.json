@@ -1,0 +1,24 @@
+{
+  "future_commitments": [
+    "reviewer ecosystems grow through the reviewer registry; revocation remains a first-class event",
+    "distributed governance teams partition work by scope (domain × product); no global override",
+    "operational maintenance teams operate from append-only logs; no out-of-band edits",
+    "OEM update operations enter as new sources + supersession events; old sources never overwritten",
+    "runtime incident operations are bounded by replay + safety-predicate logs; no silent recovery",
+    "supervised operational scaling proceeds product by product, domain by domain; no fan-out shortcuts"
+  ],
+  "future_invariants": [
+    "no autonomous review path is ever introduced",
+    "no operator action ever bypasses a supervision-receipt",
+    "no canonical JSON mutation ever occurs in-place",
+    "no governance scope is ever silently expanded",
+    "no macro-governance mega-layer is spawned by operations work"
+  ],
+  "generated": "2026-05-14T02:48:11Z",
+  "kind": "long-term-sustainability-reassessment",
+  "next_bottleneck": "executable enforcement of the operations model (queue store, event log, reviewer registry, workbench, schedulers)",
+  "operations_governance_status": "MODELED (executable enforcement pending)",
+  "platform_status": "FOUNDATIONALLY COMPLETE (unchanged)",
+  "primary_bottleneck": "HUMAN OPERATIONAL MAINTAINABILITY (now governed by declared model)",
+  "schema": "knowledge-operations-governance/1.0"
+}

@@ -1,0 +1,14 @@
+# Alta del dispositivo por QR
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#6
+
+La ruta OEM observada es:
+1. abrir `Smart Life`
+2. tocar `+` para `Add device`
+3. entrar en `Camera&Lock`
+4. elegir `Video Lock (Wi-Fi)`
+5. seguir la pantalla `Reset the device`
+6. seleccionar la red Wi-Fi e introducir la contrasena
+7. poner la cerradura en modo de red
+8. apuntar el codigo QR del telefono a la camara de la cerradura
+9. cuando la cerradura emita el aviso sonoro, confirmar que se ha oido y esperar el alta

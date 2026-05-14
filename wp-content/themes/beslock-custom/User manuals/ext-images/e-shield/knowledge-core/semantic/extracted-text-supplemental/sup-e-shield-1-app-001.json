@@ -1,0 +1,34 @@
+{
+  "id": "sup-e-shield-1-app-001",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "[app] You can add continuously. Press * to exit\". Applicable Door thickness 30-110 MM",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf#page=?",
+    "generated_manuals_supplemental/e-shield-1/manual.json#app_instructions[0]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-shield-1/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "channel": "app",
+  "text": "You can add continuously. Press * to exit\". Applicable Door thickness 30-110 MM",
+  "page": "?",
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-shield-1"
+}

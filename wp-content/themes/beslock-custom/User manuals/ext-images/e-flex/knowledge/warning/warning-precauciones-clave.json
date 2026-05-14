@@ -1,0 +1,32 @@
+{
+  "id": "warning-precauciones-clave",
+  "type": "warning",
+  "product": "e-flex",
+  "summary": "Segun la guia OEM:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "severity": "caution",
+  "details": [
+    "no cuelgues objetos en la manija",
+    "aplica presion moderada al registrar huellas",
+    "cambia las baterias con regularidad para evitar fugas",
+    "despues de la primera alerta de bateria baja aun puede haber alrededor de `100` aperturas, pero conviene reemplazar pilas cuanto antes",
+    "tras `5` intentos incorrectos consecutivos, el equipo puede bloquearse durante varios minutos"
+  ],
+  "storage_bucket": "warning"
+}

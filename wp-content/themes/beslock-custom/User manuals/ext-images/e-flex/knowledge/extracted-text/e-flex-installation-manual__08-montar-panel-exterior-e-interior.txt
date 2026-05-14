@@ -1,0 +1,15 @@
+# Montar panel exterior e interior
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#8
+
+Orden practico de montaje:
+1. ajusta la direccion de la manija segun la apertura de la puerta
+2. instala y aprieta los pernos de montaje en el panel frontal
+3. inserta el resorte de manija en el panel trasero
+4. coloca el eje cuadrado y recortalo si el grosor real de la puerta lo exige
+5. pasa el cable de datos por el orificio superior correspondiente
+6. alinea la manija y el eje cuadrado, y presiona el panel frontal contra la puerta
+7. conecta el cable de datos al panel trasero
+8. alinea el panel trasero con el eje y la barra de cerradura
+9. aprieta los tornillos solo hasta corregir alineacion fina
+10. cuando el pestillo se mueva sin friccion, completa el apriete final

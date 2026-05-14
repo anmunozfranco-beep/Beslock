@@ -1,0 +1,46 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "rules": [
+    {
+      "id": "step-progression",
+      "rule": "Steps execute in declared order; out-of-order execution is a safety violation."
+    },
+    {
+      "id": "step-dependency",
+      "rule": "A step is enterable only when all declared preconditions are satisfied."
+    },
+    {
+      "id": "checkpoint",
+      "rule": "Procedures declare ≥1 checkpoint; checkpoints are safe restart anchors."
+    },
+    {
+      "id": "safe-transition",
+      "rule": "Transitions to unsafe states require explicit user confirmation + warning surface."
+    },
+    {
+      "id": "confirmation-required",
+      "rule": "Steps marked `confirmation_required=true` cannot be auto-completed by an assistant."
+    },
+    {
+      "id": "completion-condition",
+      "rule": "A procedure is complete only when its terminal state is reached AND its validation predicate passes."
+    },
+    {
+      "id": "no-implicit-completion",
+      "rule": "Absence of error is not completion; completion is positively asserted by validation predicate."
+    },
+    {
+      "id": "deterministic-execution",
+      "rule": "Given the same starting state + inputs, execution traces are reproducible."
+    }
+  ],
+  "outcomes": [
+    "completed",
+    "interrupted",
+    "failed",
+    "blocked",
+    "escalated",
+    "abandoned"
+  ]
+}

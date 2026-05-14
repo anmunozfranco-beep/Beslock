@@ -1,0 +1,9 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Procedural Integrity Rules",
+  "rules": [
+    "Workflows MUST have non-empty steps with sequential 1..N indices.",
+    "Procedural-semantics MUST have non-empty normalized_steps; absent semantic_actions on every step => unresolved-action-references."
+  ]
+}

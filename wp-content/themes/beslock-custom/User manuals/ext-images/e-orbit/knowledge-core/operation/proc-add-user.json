@@ -1,0 +1,44 @@
+{
+  "id": "proc-add-user",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario -> Agregar usuario",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#add-user"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar usuario",
+  "steps": [
+    "Wake the lock panel.",
+    "Enter the menu.",
+    "Choose Agregar usuario.",
+    "Choose Agregar usuario again.",
+    "Select the credential type.",
+    "Complete the enrollment.",
+    "Save the result.",
+    "Test access."
+  ],
+  "validation_checks": [
+    "Access works.",
+    "The user understands how to use the credential.",
+    "No administrator privilege was assigned by mistake."
+  ]
+}

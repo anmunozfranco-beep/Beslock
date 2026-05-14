@@ -1,0 +1,11 @@
+# Ecosistema observado
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#3
+
+La fuente OEM menciona dos nombres de app en el mismo flujo:
+- `Tuya Smart APP` como app a descargar
+- `Smart Life APP` como interfaz de ejemplo para explicar funciones
+
+Regla editorial Beslock:
+- tratar ambas como parte del mismo ecosistema Tuya
+- no presentar Wi-Fi ni gateway cuando la fuente muestra claramente alta por Bluetooth

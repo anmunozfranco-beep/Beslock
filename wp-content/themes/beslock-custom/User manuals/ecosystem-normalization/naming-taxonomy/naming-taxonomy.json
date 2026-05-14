@@ -1,0 +1,69 @@
+{
+  "canonical_terms": [
+    {
+      "definition": "an emitted runtime artifact bundling retrieved nodes + manifest",
+      "deprecated_aliases": [
+        "bundle",
+        "envelope"
+      ],
+      "term": "package"
+    },
+    {
+      "definition": "an append-only declarative record describing a package, deployment, environment, composition, or governance event",
+      "term": "manifest"
+    },
+    {
+      "definition": "a single knowledge-core JSON record retrieved by the runtime",
+      "term": "node"
+    },
+    {
+      "definition": "a node at the lowest trust tier; never used in irreversible-adjacent contexts without escalation",
+      "term": "candidate"
+    },
+    {
+      "definition": "the append-only record bound to every operator action proving supervision occurred",
+      "owner": "HUMAN_OPERATIONS_GOVERNANCE",
+      "term": "supervision-receipt"
+    },
+    {
+      "definition": "a declared decision boundary in an executable workflow",
+      "term": "checkpoint"
+    },
+    {
+      "definition": "a declared infrastructure region with a fixed trust tier",
+      "owner": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+      "term": "trust-zone"
+    },
+    {
+      "definition": "a declared confidence weighting applied to a node (verified-oem, verified-internal, high, ocr-derived, medium, inferred-operational, low, candidate, unresolved, unknown)",
+      "owner": "RUNTIME_HARDENING_GOVERNANCE",
+      "term": "trust-tier"
+    },
+    {
+      "definition": "a bounded executable runtime composition (product × kinds × halt conditions)",
+      "owner": "REFERENCE_STACK_GOVERNANCE",
+      "term": "slice"
+    },
+    {
+      "definition": "a declared assembly of canonical-stack modules for a specific environment",
+      "term": "composition"
+    },
+    {
+      "definition": "a human acting under a declared profile (runtime/reviewer/governance/escalation/oem/auditor)",
+      "term": "operator"
+    },
+    {
+      "definition": "an append-only NDJSON event stream emitted by the observability system",
+      "term": "channel"
+    }
+  ],
+  "kind": "naming-taxonomy",
+  "naming_prohibitions": [
+    "no synonym proliferation (one term, one meaning)",
+    "no abbreviation of canonical terms in schemas or doctrine",
+    "no informal aliases inside builder code or doctrine prose",
+    "no reuse of a canonical term with a different meaning in any layer",
+    "no introduction of new canonical terms without a doctrine entry"
+  ],
+  "schema": "ecosystem-normalization-governance/1.0"
+}

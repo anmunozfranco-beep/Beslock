@@ -1,0 +1,6 @@
+# Fuentes revisadas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#3
+
+- `e-Orbit_2.pdf` -> manual OEM corto de 17 paginas con portada, tabla de especificaciones, parametros de entorno, flujos locales de configuracion y bloques de app `Smart Life` / `Tuya`
+- `e-Orbit_1.xls` -> hoja de especificaciones `NF14` con materiales, capacidades, metodos de apertura, bateria, dimensiones, espesores de puerta, colores, idiomas y notas de resistencia al agua

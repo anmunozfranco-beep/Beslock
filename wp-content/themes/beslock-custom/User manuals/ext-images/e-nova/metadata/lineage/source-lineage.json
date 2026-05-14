@@ -1,0 +1,255 @@
+{
+  "product_slug": "e-nova",
+  "product_display": "e-Nova",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "entries": [
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova - AI image prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/e-Nova - AI image prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova - image generation matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/e-Nova - image generation matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova - implementation starter pack.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/automation/orchestrators/e-Nova - implementation starter pack.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova user manual - image-ready.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/manuals/e-Nova user manual - image-ready.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova user manual - review-draft.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/manuals/e-Nova user manual - review-draft.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Nova user manual.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/manuals/e-Nova user manual.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-Nova.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/product-images/e-Nova.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/e-nova-visual-profile.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/references/e-nova-visual-profile.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/notes.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/audit/legacy-pre-cutover-notes.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/ai-image-prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/ai-image-prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/image-generation-matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/image-generation-matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/visual-validation.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/validations/visual-validation.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/image-production-status.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/qa/image-production-status.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/audit/legacy-visual-system-product/README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/generated/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/audit/legacy-visual-system-product/generated-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/generated/e-nova-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/outputs/generated/e-nova-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-nova/generated/selected-assets-register.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/traceability/selected-assets-register.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/review-draft/e-nova-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/review-draft/e-nova-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/web-ready/e-nova-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/assets/e-nova/web-ready/e-nova-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-nova/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/audit/legacy-flat-files/assets-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/review-previews/e-nova-user-manual-review-draft.html",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/publishing/web/review-previews/e-nova-user-manual-review-draft.html",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

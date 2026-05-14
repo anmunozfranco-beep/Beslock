@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-expiration-time-78",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Expiration Time",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-78"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-expiration-time-78.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Learing code immediately. The clearing\n11-17-2023 13:00 >\nve\nand expiration time before you\ncan obtain the\nThe one-time password is obtained.\ny The clearing\ncode isnot\ndisplayed\nin\n2671847259",
+  "legacy_storage_bucket": "extracted-text"
+}

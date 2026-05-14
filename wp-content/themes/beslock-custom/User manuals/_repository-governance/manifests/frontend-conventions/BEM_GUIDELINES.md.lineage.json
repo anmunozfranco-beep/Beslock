@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/frontend-conventions/BEM_GUIDELINES.md",
+  "previous_path": "BEM_GUIDELINES.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "E",
+  "sub_label": "frontend-conventions",
+  "rationale": "Frontend convention doc. Relocated to governance manifests.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/frontend-conventions/BEM_GUIDELINES.md' 'BEM_GUIDELINES.md'"
+}

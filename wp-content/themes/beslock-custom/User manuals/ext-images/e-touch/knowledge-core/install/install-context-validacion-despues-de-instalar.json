@@ -1,0 +1,37 @@
+{
+  "id": "install-context-validacion-despues-de-instalar",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "Despues del montaje, valida:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#9"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-validacion-despues-de-instalar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "alineacion de rosetas y manijas",
+    "respuesta del area numerica integrada en la manija exterior",
+    "lectura de huella en la base circular exterior",
+    "apertura con administrador registrado",
+    "acceso por llave mecanica y respaldo `micro-USB`"
+  ],
+  "legacy_storage_bucket": "installation"
+}

@@ -1,0 +1,25 @@
+{
+  "blockers": [
+    "no-procedure-retrievable",
+    "mandatory-warning-not-attached",
+    "prerequisite-unverified",
+    "confidence-elevated-unsafe"
+  ],
+  "implementation": "runtime-implementation/runtime/assembly.py",
+  "invariants": [
+    "mandatory warnings cannot be suppressed",
+    "prerequisite gaps block guidance emission",
+    "adaptive precedence (knowledge-core>adaptive) is invariant",
+    "confidence is never elevated to compensate for missing inputs"
+  ],
+  "merges": [
+    "procedure-nodes",
+    "warning-nodes",
+    "prerequisite-records",
+    "troubleshooting-nodes",
+    "continuity-state",
+    "adaptation-record",
+    "escalation-predicate-result"
+  ],
+  "schema": "runtime-implementation-governance/1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/ENVIRONMENT_AND_INTEGRATION_GOVERNANCE/",
+  "doctrine_sections": [
+    "environment-philosophy",
+    "operational-isolation-doctrine",
+    "integration-governance-philosophy",
+    "trust-boundary-doctrine",
+    "sandboxing-philosophy",
+    "deployment-boundary-principles"
+  ],
+  "kind": "environment-governance-summary",
+  "layer_index": 25,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/environment-integration/",
+  "schema": "environment-integration-governance/1.0",
+  "subordinate_to_count": 25
+}

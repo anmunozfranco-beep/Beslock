@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-product-parameters-54",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Product Parameters",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-54"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Specifications",
+  "raw_text": "1.Number of fingerprints: 100\n2.Number\nof\npasswords:100\n3.Power supply:4 AAA 1.5V alkaline batteries\n4.Card:100",
+  "storage_bucket": "extracted-text"
+}

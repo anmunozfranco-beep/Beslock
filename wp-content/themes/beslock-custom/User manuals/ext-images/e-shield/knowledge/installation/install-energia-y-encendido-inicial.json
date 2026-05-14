@@ -1,0 +1,45 @@
+{
+  "id": "install-energia-y-encendido-inicial",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Para la puesta en marcha:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "instala 4 baterias AA nuevas"
+    },
+    {
+      "n": 2,
+      "text": "activa el panel exterior y confirma respuesta del teclado"
+    },
+    {
+      "n": 3,
+      "text": "si no hay energia disponible, usa respaldo USB solo como alimentacion temporal de emergencia"
+    },
+    {
+      "n": 4,
+      "text": "si el equipo llega con datos previos, usa el boton interno `SET` y sigue el flujo de voz del equipo para restaurar el modo de fabrica"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

@@ -1,0 +1,45 @@
+{
+  "candidate_causes": [
+    "candidato pendiente de revisión OEM"
+  ],
+  "category": "connectivity-failures",
+  "channel_targets": [
+    "support",
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "diagnostic_questions": [
+    "¿se puede reproducir el síntoma de forma consistente?",
+    "¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?",
+    "¿hay eventos recientes (cambio de batería, reset, actualización)?"
+  ],
+  "escalation_required": true,
+  "extraction_lineage": [
+    "corpus-enrichment/troubleshooting-candidate/ts-connectivity-failures-candidate"
+  ],
+  "id": "ts-connectivity-failures-candidate",
+  "language": "es-CO",
+  "menu_path": "",
+  "next_actions": [
+    "elevar el caso al canal de revisión OEM antes de operar",
+    "registrar el síntoma observado en el log operacional"
+  ],
+  "ocr_dependency": "none",
+  "product": "e-touch",
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "fallo de conectividad bluetooth/wifi o gateway opcional",
+  "surface": "runtime-corpus",
+  "symptoms": [
+    "la app pierde la conexión durante la operación",
+    "la cerradura no aparece en el escaneo bluetooth",
+    "el gateway opcional no reporta estado"
+  ],
+  "type": "troubleshooting-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

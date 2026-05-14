@@ -1,0 +1,37 @@
+{
+  "id": "sup-e-prime-2-section-003",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Aging Hal A Hehe Ibo\" Lh Ars;",
+  "language": "es-CO",
+  "validation_status": "low-confidence-evidence-only",
+  "confidence": "ocr-very-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf#page=?",
+    "generated_manuals_supplemental/e-prime-2/manual.json#sections[2]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-prime-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "Aging Hal A Hehe Ibo\" Lh Ars;",
+  "page": "?",
+  "text": [
+    "BBAOAK : HR, BA. CK. MAR. MB) SSMANAR,"
+  ],
+  "ocr_avg_confidence": 26.9,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-prime-2"
+}

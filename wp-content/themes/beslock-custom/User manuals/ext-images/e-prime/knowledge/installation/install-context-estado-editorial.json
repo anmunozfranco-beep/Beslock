@@ -1,0 +1,29 @@
+{
+  "id": "install-context-estado-editorial",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "La base de instalacion ya esta suficientemente soportada por `e-Prime_1",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#14"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "confirmar el patron exacto de perforacion con una plantilla 1:1 si el proveedor la entrega",
+    "validar en producto real la capacidad total final cuando la ficha corta y el manual largo no coinciden"
+  ],
+  "storage_bucket": "installation"
+}

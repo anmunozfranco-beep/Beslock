@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "Método De Desbloqueo Huella Dactilar/Lave/App",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-14"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "App Instructions",
+  "raw_text": "Puerta de madera /puerta de oficina / puerta ultraestrecha/\nPuertas Aplicables puerta ecológica\n6. Uso Especial y Seguridad\n1. Modo Abierto Normal\nVerificación exterior: Cerradura de huella dactilar dos veces seguidas, verificar el\ndesbloqueo con huella dactilar una vez.\n2. Modo Cerrado Normal\nEn modo normalmente cerrado, solo se puede desbloquear con la huella dactilar\ndel usuario administrador o la APP, y se bloqueará automáticamente después\nde 5 segundos.\n3. Desbloqueo de Emergencia\n1. Desbloquear con llave\n2. Enchufe el cable de alimentación USB en el conector\n(para alimentación de emergencia)\n4.Recordatorio\n1, Guarde al menos una llave fuera de la puerta en caso de que la necesite.\n2. La luz indicadora parpadeara en rojo cuando la bateria este baja. y la energia\nrestante solo se utilizará para unas 50 veces para la cerradura de la puerta.\n3. Puede desbloquear la cerradura con una llave cuando la bateria esté agotada,\no usar su huella dactilar para alimentar la cerradura de la puerta a través del puerto\nmicro-USB.",
+  "storage_bucket": "extracted-text"
+}

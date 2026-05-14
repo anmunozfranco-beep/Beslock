@@ -1,0 +1,2041 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "categories": {
+    "duplicate-entity-within-product": 15,
+    "synonym-duplication": 41,
+    "bilingual-duplication": 15,
+    "non-conforming-id": 61,
+    "missing-prefix": 42,
+    "verb-out-of-registry": 26,
+    "cross-product-collision": 19,
+    "ambiguous-procedure-naming": 0
+  },
+  "items": {
+    "duplicate-entity-within-product": [
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_id": "administrator",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-administrador.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-administrator.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_id": "fingerprint",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-fingerprint.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-huella.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_id": "qr-pairing",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-qr-pairing.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-qr.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_id": "tuya-smart-app",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-smart-life.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tongtong-app.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tuya-smart.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tuya.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_id": "temporary-password",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-temporary-password.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-virtual-password.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "canonical_id": "tuya-smart-app",
+        "files": [
+          "ext-images/e-touch/knowledge-core/terminology/term-smart-life.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-tuya.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "add-administrator",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-add-administrator.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-agregar-un-administrador.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "add-user",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-add-user.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-agregar-un-usuario.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "change-language",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-cambiar-el-idioma.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-change-language.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "pair-with-app",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-conectar-la-cerradura-a-la-aplicacion.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-primeros-pasos.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-local-onboarding.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "ez-mode-pairing",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-pair-by-ez-mode.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-app-pairing-ez-mode.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "qr-pairing",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-pair-by-qr.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-vincular-por-qr.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-qr.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "register-fingerprint",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-register-fingerprint.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-registrar-una-huella.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "register-pin",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-register-pin.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-registrar-una-contrasena-o-pin.json"
+        ],
+        "severity": "high"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_id": "member-management",
+        "files": [
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-gestion-de-miembros.json",
+          "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-member-management.json"
+        ],
+        "severity": "high"
+      }
+    ],
+    "synonym-duplication": [
+      {
+        "domain": "terminology",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/terminology/term-administrador.json",
+        "found_slug": "administrador",
+        "canonical_slug": "administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/terminology/term-huella.json",
+        "found_slug": "huella",
+        "canonical_slug": "fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/terminology/term-qr.json",
+        "found_slug": "qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/terminology/term-reset.json",
+        "found_slug": "reset",
+        "canonical_slug": "factory-reset",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/terminology/term-tuya.json",
+        "found_slug": "tuya",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-administrador.json",
+        "found_slug": "administrador",
+        "canonical_slug": "administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-ez-mode.json",
+        "found_slug": "ez-mode",
+        "canonical_slug": "ez-mode-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-huella.json",
+        "found_slug": "huella",
+        "canonical_slug": "fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-qr.json",
+        "found_slug": "qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-reset.json",
+        "found_slug": "reset",
+        "canonical_slug": "factory-reset",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-smart-life.json",
+        "found_slug": "smart-life",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-tongtong-app.json",
+        "found_slug": "tongtong-app",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-tuya-smart.json",
+        "found_slug": "tuya-smart",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-tuya.json",
+        "found_slug": "tuya",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/terminology/term-virtual-password.json",
+        "found_slug": "virtual-password",
+        "canonical_slug": "temporary-password",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/terminology/term-administrador.json",
+        "found_slug": "administrador",
+        "canonical_slug": "administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/terminology/term-huella.json",
+        "found_slug": "huella",
+        "canonical_slug": "fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/terminology/term-qr.json",
+        "found_slug": "qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/terminology/term-tuya.json",
+        "found_slug": "tuya",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/terminology/term-administrador.json",
+        "found_slug": "administrador",
+        "canonical_slug": "administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/terminology/term-huella.json",
+        "found_slug": "huella",
+        "canonical_slug": "fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/terminology/term-administrador.json",
+        "found_slug": "administrador",
+        "canonical_slug": "administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/terminology/term-huella.json",
+        "found_slug": "huella",
+        "canonical_slug": "fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/terminology/term-reset.json",
+        "found_slug": "reset",
+        "canonical_slug": "factory-reset",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/terminology/term-smart-life.json",
+        "found_slug": "smart-life",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/terminology/term-tuya.json",
+        "found_slug": "tuya",
+        "canonical_slug": "tuya-smart-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-agregar-un-administrador.json",
+        "found_slug": "agregar-un-administrador",
+        "canonical_slug": "add-administrator",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-agregar-un-usuario.json",
+        "found_slug": "agregar-un-usuario",
+        "canonical_slug": "add-user",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-cambiar-el-idioma.json",
+        "found_slug": "cambiar-el-idioma",
+        "canonical_slug": "change-language",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-conectar-la-cerradura-a-la-aplicacion.json",
+        "found_slug": "conectar-la-cerradura-a-la-aplicacion",
+        "canonical_slug": "pair-with-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-primeros-pasos.json",
+        "found_slug": "primeros-pasos",
+        "canonical_slug": "pair-with-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-local-onboarding.json",
+        "found_slug": "local-onboarding",
+        "canonical_slug": "pair-with-app",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-pair-by-ez-mode.json",
+        "found_slug": "pair-by-ez-mode",
+        "canonical_slug": "ez-mode-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+        "found_slug": "alta-del-dispositivo-por-wi-fi-ez-mode",
+        "canonical_slug": "ez-mode-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-app-pairing-ez-mode.json",
+        "found_slug": "app-pairing-ez-mode",
+        "canonical_slug": "ez-mode-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-pair-by-qr.json",
+        "found_slug": "pair-by-qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-vincular-por-qr.json",
+        "found_slug": "vincular-por-qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-qr.json",
+        "found_slug": "alta-del-dispositivo-por-qr",
+        "canonical_slug": "qr-pairing",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-registrar-una-contrasena-o-pin.json",
+        "found_slug": "registrar-una-contrasena-o-pin",
+        "canonical_slug": "register-pin",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-registrar-una-huella.json",
+        "found_slug": "registrar-una-huella",
+        "canonical_slug": "register-fingerprint",
+        "severity": "medium"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-gestion-de-miembros.json",
+        "found_slug": "gestion-de-miembros",
+        "canonical_slug": "member-management",
+        "severity": "medium"
+      }
+    ],
+    "bilingual-duplication": [
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_slug": "tuya-smart-app",
+        "variants_present": [
+          "smart-life",
+          "tongtong-app",
+          "tuya",
+          "tuya-smart"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_slug": "fingerprint",
+        "variants_present": [
+          "fingerprint",
+          "huella"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_slug": "qr-pairing",
+        "variants_present": [
+          "qr",
+          "qr-pairing"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_slug": "temporary-password",
+        "variants_present": [
+          "temporary-password",
+          "virtual-password"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "terminology",
+        "product": "e-orbit",
+        "canonical_slug": "administrator",
+        "variants_present": [
+          "administrador",
+          "administrator"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "terminology",
+        "product": "e-touch",
+        "canonical_slug": "tuya-smart-app",
+        "variants_present": [
+          "smart-life",
+          "tuya"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "add-administrator",
+        "variants_present": [
+          "add-administrator",
+          "agregar-un-administrador"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "qr-pairing",
+        "variants_present": [
+          "alta-del-dispositivo-por-qr",
+          "pair-by-qr",
+          "vincular-por-qr"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "member-management",
+        "variants_present": [
+          "gestion-de-miembros",
+          "member-management"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "add-user",
+        "variants_present": [
+          "add-user",
+          "agregar-un-usuario"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "pair-with-app",
+        "variants_present": [
+          "conectar-la-cerradura-a-la-aplicacion",
+          "local-onboarding",
+          "primeros-pasos"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "change-language",
+        "variants_present": [
+          "cambiar-el-idioma",
+          "change-language"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "register-pin",
+        "variants_present": [
+          "register-pin",
+          "registrar-una-contrasena-o-pin"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "register-fingerprint",
+        "variants_present": [
+          "register-fingerprint",
+          "registrar-una-huella"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-orbit",
+        "canonical_slug": "ez-mode-pairing",
+        "variants_present": [
+          "alta-del-dispositivo-por-wi-fi-ez-mode",
+          "app-pairing-ez-mode",
+          "pair-by-ez-mode"
+        ],
+        "severity": "medium",
+        "note": "Both canonical and synonym artifacts present in the same product nucleus."
+      }
+    ],
+    "non-conforming-id": [
+      {
+        "domain": "entities",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "entities",
+        "product": "e-nova",
+        "file": "ext-images/e-nova/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "entities",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "entities",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "entities",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "entities",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/entities/legacy-manifest.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/workflows/wf-alta-desde-tuya-app.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/workflows/wf-qr-y-mini-programa-de-wechat.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/workflows/wf-secuencia-local-en-la-cerradura.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-alta-del-dispositivo-por-qr.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-app-pairing-ez-mode.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-app-pairing-qr.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-gestion-de-miembros.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-local-onboarding.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-member-management.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-remote-unlock-response.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/workflows/wf-temporary-password-generation.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/workflows/wf-alta-desde-la-app.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/workflows/wf-flujo-oem-base-de-vinculacion.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-agregar-la-cerradura.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-contrasenas-remotas.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-desbloqueo-por-bluetooth.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-ekeys-y-acceso-compartido.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-gateway-y-funciones-remotas.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-registro-e-inicio-de-sesion.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-tarjetas-rf-y-huellas-huellas.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-tarjetas-rf-y-huellas-tarjetas-rf.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/workflows/wf-tarjetas-rf-y-huellas.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "workflows",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-001.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-002.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-003.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-004.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-005.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-006.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-007.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-008.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-009.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-010.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-001.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-002.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/warnings/supplemental-candidates/sup-e-shield-1-warning-001.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "warnings",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/warnings/supplemental-candidates/sup-e-shield-1-warning-002.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/capabilities/cap-alcance-real-de-la-fuente.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/capabilities/cap-objetivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/capabilities/cap-alcance-real-de-la-fuente.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/capabilities/cap-map-verified.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/capabilities/cap-objetivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/capabilities/cap-fuente-y-alcance-real.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/capabilities/cap-objetivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/capabilities/cap-objetivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "capabilities",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/capabilities/cap-objetivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "specifications",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/specifications/hardware-nf14.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "troubleshooting",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/troubleshooting/ts-gestion-del-dispositivo.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-nova",
+        "file": "ext-images/e-nova/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      },
+      {
+        "domain": "provenance",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/provenance/oem-source-index.json",
+        "severity": "low",
+        "note": "Filename does not match the artifact prefix grammar."
+      }
+    ],
+    "missing-prefix": [
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-energia-e-inicializacion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-montar-panel-exterior-e-interior.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-preparar-la-puerta-y-el-cuerpo-del-cerrojo.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-usar-la-guia-de-instalacion-disponible.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-energia-e-inicializacion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-montar-el-panel-exterior-e-interior.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-preparar-la-puerta-y-el-cerrojo.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-usar-la-guia-de-instalacion-disponible.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-install-energia-y-encendido-inicial.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-install-montar-el-conjunto-exterior-e-interior.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-install-preparar-la-puerta.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-install-usar-la-plantilla-de-instalacion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/procedural-semantics/semantic-install-energia-y-cierre-del-montaje.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/procedural-semantics/semantic-install-rol-de-la-guia-oem-disponible.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "procedural-semantics",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/procedural-semantics/semantic-install-secuencia-base-de-instalacion.json",
+        "expected_prefixes": [
+          "semantic-proc-",
+          "semantic-wf-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-001.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-002.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-003.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-004.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-005.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-006.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-007.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-008.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-009.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/warnings/supplemental-candidates/sup-e-orbit-2-warning-010.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-001.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-002.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/warnings/supplemental-candidates/sup-e-shield-1-warning-001.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "warnings",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/warnings/supplemental-candidates/sup-e-shield-1-warning-002.json",
+        "expected_prefixes": [
+          "warning-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "specifications",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/specifications/hardware-nf14.json",
+        "expected_prefixes": [
+          "spec-",
+          "specification-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-nova",
+        "file": "ext-images/e-nova/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      },
+      {
+        "domain": "provenance",
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/provenance/oem-source-index.json",
+        "expected_prefixes": [
+          "prov-",
+          "provenance-"
+        ],
+        "severity": "low"
+      }
+    ],
+    "verb-out-of-registry": [
+      {
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-wf-alta-desde-tuya-app.json",
+        "first_token": "alta",
+        "english_token": "alta",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-flex",
+        "file": "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-wf-secuencia-local-en-la-cerradura.json",
+        "first_token": "secuencia",
+        "english_token": "secuencia",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-cambiar-el-idioma.json",
+        "first_token": "cambiar",
+        "english_token": "cambiar",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-change-language.json",
+        "first_token": "change",
+        "english_token": "change",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-conectar-la-cerradura-a-la-aplicacion.json",
+        "first_token": "conectar",
+        "english_token": "conectar",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-proc-primeros-pasos.json",
+        "first_token": "primeros",
+        "english_token": "primeros",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-qr.json",
+        "first_token": "alta",
+        "english_token": "alta",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-alta-del-dispositivo-por-wi-fi-ez-mode.json",
+        "first_token": "alta",
+        "english_token": "alta",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-app-pairing-ez-mode.json",
+        "first_token": "app",
+        "english_token": "app",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-app-pairing-qr.json",
+        "first_token": "app",
+        "english_token": "app",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-gestion-de-miembros.json",
+        "first_token": "gestion",
+        "english_token": "gestion",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-local-onboarding.json",
+        "first_token": "local",
+        "english_token": "local",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-member-management.json",
+        "first_token": "member",
+        "english_token": "member",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-remote-unlock-response.json",
+        "first_token": "remote",
+        "english_token": "remote",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-orbit",
+        "file": "ext-images/e-orbit/knowledge-core/procedural-semantics/semantic-wf-temporary-password-generation.json",
+        "first_token": "temporary",
+        "english_token": "temporary",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-wf-alta-desde-la-app.json",
+        "first_token": "alta",
+        "english_token": "alta",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-prime",
+        "file": "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-wf-flujo-oem-base-de-vinculacion.json",
+        "first_token": "flujo",
+        "english_token": "flujo",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-contrasenas-remotas.json",
+        "first_token": "contrasenas",
+        "english_token": "contrasenas",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-desbloqueo-por-bluetooth.json",
+        "first_token": "desbloqueo",
+        "english_token": "desbloqueo",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-ekeys-y-acceso-compartido.json",
+        "first_token": "ekeys",
+        "english_token": "ekeys",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-gateway-y-funciones-remotas.json",
+        "first_token": "gateway",
+        "english_token": "gateway",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-registro-e-inicio-de-sesion.json",
+        "first_token": "registro",
+        "english_token": "registro",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-tarjetas-rf-y-huellas-huellas.json",
+        "first_token": "tarjetas",
+        "english_token": "tarjetas",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-tarjetas-rf-y-huellas-tarjetas-rf.json",
+        "first_token": "tarjetas",
+        "english_token": "tarjetas",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-shield",
+        "file": "ext-images/e-shield/knowledge-core/procedural-semantics/semantic-wf-tarjetas-rf-y-huellas.json",
+        "first_token": "tarjetas",
+        "english_token": "tarjetas",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      },
+      {
+        "product": "e-touch",
+        "file": "ext-images/e-touch/knowledge-core/procedural-semantics/semantic-wf-flujo-oem-base-de-alta.json",
+        "first_token": "flujo",
+        "english_token": "flujo",
+        "severity": "low",
+        "note": "Leading procedure token is neither a canonical verb nor a known synonym."
+      }
+    ],
+    "cross-product-collision": [
+      {
+        "domain": "procedural-semantics",
+        "canonical_id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+          "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "procedural-semantics",
+        "canonical_id": "install-cambio-de-direccion",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion.json",
+          "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-cambio-de-direccion.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "procedural-semantics",
+        "canonical_id": "install-energia-e-inicializacion",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-energia-e-inicializacion.json",
+          "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-energia-e-inicializacion.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "procedural-semantics",
+        "canonical_id": "install-usar-la-guia-de-instalacion-disponible",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/procedural-semantics/semantic-install-usar-la-guia-de-instalacion-disponible.json",
+          "ext-images/e-prime/knowledge-core/procedural-semantics/semantic-install-usar-la-guia-de-instalacion-disponible.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "warnings",
+        "canonical_id": "limites-de-evidencia",
+        "products": [
+          "e-flex",
+          "e-prime",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/warnings/warning-limites-de-evidencia.json",
+          "ext-images/e-prime/knowledge-core/warnings/warning-limites-de-evidencia.json",
+          "ext-images/e-touch/knowledge-core/warnings/warning-limites-de-evidencia.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "warnings",
+        "canonical_id": "precauciones-clave",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/warnings/warning-precauciones-clave.json",
+          "ext-images/e-prime/knowledge-core/warnings/warning-precauciones-clave.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "capabilities",
+        "canonical_id": "alcance-real-de-la-fuente",
+        "products": [
+          "e-flex",
+          "e-orbit"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/capabilities/cap-alcance-real-de-la-fuente.json",
+          "ext-images/e-orbit/knowledge-core/capabilities/cap-alcance-real-de-la-fuente.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "capabilities",
+        "canonical_id": "objetivo",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime",
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/capabilities/cap-objetivo.json",
+          "ext-images/e-orbit/knowledge-core/capabilities/cap-objetivo.json",
+          "ext-images/e-prime/knowledge-core/capabilities/cap-objetivo.json",
+          "ext-images/e-shield/knowledge-core/capabilities/cap-objetivo.json",
+          "ext-images/e-touch/knowledge-core/capabilities/cap-objetivo.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "capabilities",
+        "canonical_id": "map",
+        "products": [
+          "e-flex",
+          "e-nova",
+          "e-orbit",
+          "e-prime",
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/capabilities/capability-map.json",
+          "ext-images/e-nova/knowledge-core/capabilities/capability-map.json",
+          "ext-images/e-orbit/knowledge-core/capabilities/capability-map.json",
+          "ext-images/e-prime/knowledge-core/capabilities/capability-map.json",
+          "ext-images/e-shield/knowledge-core/capabilities/capability-map.json",
+          "ext-images/e-touch/knowledge-core/capabilities/capability-map.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "2-4g",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-2-4g.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-2-4g.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "administrator",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime",
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-administrador.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-administrador.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-administrator.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-administrador.json",
+          "ext-images/e-shield/knowledge-core/terminology/term-administrador.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-administrador.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "fingerprint",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime",
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-huella.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-fingerprint.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-huella.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-huella.json",
+          "ext-images/e-shield/knowledge-core/terminology/term-huella.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-huella.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "pin",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime",
+          "e-shield"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-pin.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-pin.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-pin.json",
+          "ext-images/e-shield/knowledge-core/terminology/term-pin.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "qr-pairing",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-qr.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-qr-pairing.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-qr.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-qr.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "factory-reset",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-reset.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-reset.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-reset.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "tuya-smart-app",
+        "products": [
+          "e-flex",
+          "e-orbit",
+          "e-prime",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-tuya.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-smart-life.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tongtong-app.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tuya-smart.json",
+          "ext-images/e-orbit/knowledge-core/terminology/term-tuya.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-tuya.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-smart-life.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-tuya.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "wechat",
+        "products": [
+          "e-flex",
+          "e-prime"
+        ],
+        "files": [
+          "ext-images/e-flex/knowledge-core/terminology/term-wechat.json",
+          "ext-images/e-prime/knowledge-core/terminology/term-wechat.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "wi-fi",
+        "products": [
+          "e-orbit",
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-orbit/knowledge-core/terminology/term-wi-fi.json",
+          "ext-images/e-shield/knowledge-core/terminology/term-wi-fi.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-wi-fi.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      },
+      {
+        "domain": "terminology",
+        "canonical_id": "bluetooth",
+        "products": [
+          "e-shield",
+          "e-touch"
+        ],
+        "files": [
+          "ext-images/e-shield/knowledge-core/terminology/term-bluetooth.json",
+          "ext-images/e-touch/knowledge-core/terminology/term-bluetooth.json"
+        ],
+        "severity": "info",
+        "note": "Same canonical id appears in multiple products — candidate for shared-concept membership; verify intent matches before linking."
+      }
+    ],
+    "ambiguous-procedure-naming": []
+  },
+  "policy": "Conflicts are reported, not resolved. Editorial owns resolution."
+}

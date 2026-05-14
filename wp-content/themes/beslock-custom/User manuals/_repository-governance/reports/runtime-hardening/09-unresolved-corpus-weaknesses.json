@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "id": "candidate-records-not-yet-reviewed",
+      "impact": "all 132 records remain at `candidate-pending-review`; need human elevation",
+      "severity": "high"
+    },
+    {
+      "id": "no-oem-source-binding-on-candidates",
+      "impact": "candidate records carry no OEM source_refs yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-step continuity binding by incident is still unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "no-prerequisite-verification-store",
+      "impact": "prerequisite verification flag still defaults to false",
+      "severity": "high"
+    },
+    {
+      "id": "no-causal-traversal-engine",
+      "impact": "causal-graphs are retrievable but not yet traversed during reasoning",
+      "severity": "medium"
+    },
+    {
+      "id": "no-checkpoint-snapshot-store",
+      "impact": "continuity-checkpoints are declared but not yet snapshotted at runtime",
+      "severity": "medium"
+    },
+    {
+      "id": "no-confidence-elevation-workflow",
+      "impact": "no governed path to promote a candidate to ocr-derived/verified",
+      "severity": "medium"
+    },
+    {
+      "id": "no-ground-truth-test-set",
+      "impact": "semantic-recall numerics still unmeasured",
+      "severity": "medium"
+    }
+  ],
+  "kind": "unresolved-corpus-weaknesses",
+  "schema": "runtime-hardening-governance/1.0"
+}

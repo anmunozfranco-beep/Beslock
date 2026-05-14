@@ -1,0 +1,111 @@
+{
+  "id": "semantic-proc-add-administrator",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-add-administrator",
+  "language": "es-CO",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-add-administrator.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#add-administrator"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-add-administrator.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-add-administrator",
+  "source_entity_type": "procedure",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar administrador",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "Wake the lock panel.",
+      "semantic_actions": [
+        "lock"
+      ],
+      "matched_lexicon": [
+        "lock"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "Enter the menu.",
+      "semantic_actions": [
+        "enter-menu"
+      ],
+      "matched_lexicon": [
+        "enter-menu"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "Choose Agregar usuario.",
+      "semantic_actions": [
+        "enroll",
+        "select"
+      ],
+      "matched_lexicon": [
+        "enroll",
+        "select"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "Choose Agregar administrador.",
+      "semantic_actions": [
+        "select"
+      ],
+      "matched_lexicon": [
+        "select"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "Select the credential type.",
+      "semantic_actions": [
+        "select"
+      ],
+      "matched_lexicon": [
+        "select"
+      ]
+    },
+    {
+      "step_index": 6,
+      "raw_text": "Complete the enrollment.",
+      "semantic_actions": [
+        "enroll"
+      ],
+      "matched_lexicon": [
+        "enroll"
+      ]
+    },
+    {
+      "step_index": 7,
+      "raw_text": "Save the result.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 8,
+      "raw_text": "Test access immediately.",
+      "semantic_actions": [
+        "test"
+      ],
+      "matched_lexicon": [
+        "test"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

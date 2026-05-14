@@ -1,0 +1,38 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "Validation does not author knowledge; it observes and reports.",
+    "Operational integrity is a precondition for promotion to verified-truth.",
+    "Every validator is read-only; findings produce reports, not mutations.",
+    "Findings are typed (class), located (product+id+domain), and explainable.",
+    "Critical findings (unresolved-reference, lineage-break, promotion-without-evidence) have zero tolerance.",
+    "Validation is continuous; thresholds are governed, not negotiated.",
+    "Validation is subordinate to the knowledge-core and to LIFECYCLE_GOVERNANCE.",
+    "Future systems (RAG, chatbot, onboarding, troubleshooting) inherit validation results, never override them."
+  ],
+  "authority_areas": [
+    "procedural-integrity",
+    "workflow-executability",
+    "entity-consistency",
+    "graph-validation",
+    "experience-validation",
+    "retrieval-validation",
+    "maturity-validation",
+    "health-scoring",
+    "validation-philosophy",
+    "future-system-safety"
+  ],
+  "rules": [
+    "Workflows MUST have non-empty steps with sequential 1..N indices.",
+    "Procedural-semantics MUST have non-empty normalized_steps; absent semantic_actions on every step => unresolved-action-references.",
+    "Entities MUST have id matching `^[a-z0-9][a-z0-9-]*$` and at least one matched_surface_term.",
+    "Cross-product entity-id collisions are only permitted when the entity represents a shared concept (must be declared).",
+    "Every artifact MUST declare validation_status from the governed set.",
+    "Promoted/verified artifacts with confidence=low or ocr_dependency=full are unsafe-promotions.",
+    "Promoted/verified artifacts MUST have non-empty source_refs (no unresolved-evidence-leak).",
+    "Every artifact MUST declare channel_targets; chatbot+rag readiness is required for retrieval-promotion.",
+    "Cross-product canonical-term collisions in terminology require an explicit shared-terminology declaration.",
+    "All findings MUST be reproducible by re-running the validator against unchanged inputs (idempotency)."
+  ]
+}

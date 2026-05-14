@@ -1,0 +1,170 @@
+{
+  "product": "e-prime",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "edges": [
+    {
+      "from": "procedure:proc-requisitos-antes-de-vincular",
+      "to": "warning:warning-limites-de-evidencia",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-flujo-oem-base-de-vinculacion",
+      "to": "warning:warning-limites-de-evidencia",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-alta-desde-la-app",
+      "to": "warning:warning-limites-de-evidencia",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "procedure:proc-validacion-despues-del-alta",
+      "to": "warning:warning-limites-de-evidencia",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-flujo-oem-base-de-vinculacion",
+      "to": "glossary-term:term-tuya",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    },
+    {
+      "from": "workflow:wf-flujo-oem-base-de-vinculacion",
+      "to": "glossary-term:term-administrador",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    },
+    {
+      "from": "workflow:wf-alta-desde-la-app",
+      "to": "glossary-term:term-tuya",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    },
+    {
+      "from": "workflow:wf-alta-desde-la-app",
+      "to": "glossary-term:term-2-4g",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    },
+    {
+      "from": "installation-flow:install-context-objetivo",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-que-vas-a-instalar",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-compatibilidad-fisica-antes-de-perforar",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-que-necesitas-antes-de-empezar",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-usar-la-guia-de-instalacion-disponible",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-preparar-la-puerta-y-el-cerrojo",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-montar-el-panel-exterior-e-interior",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-cambio-de-direccion",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-energia-e-inicializacion",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-validacion-despues-de-instalar",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-relacion-con-el-paquete-documental",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-context-estado-editorial",
+      "to": "warning:warning-precauciones-clave",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "installation-flow:install-energia-e-inicializacion",
+      "to": "glossary-term:term-huella",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    }
+  ],
+  "edge_total": 23,
+  "policy": "Only adjacency- and text-match-inferred edges are emitted. Verified semantic edges must be authored in manual-overrides.json."
+}

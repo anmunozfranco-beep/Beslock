@@ -1,0 +1,15 @@
+{
+  "product": "e-orbit",
+  "domain_version": "1.0.0",
+  "released_on": "2026-05-13",
+  "status": "initial-domain-cutover",
+  "canonical_reference": "source-of-truth/product-images/e-Orbit.png",
+  "structured_knowledge_status": "bootstrapped-from-real-sources",
+  "visual_generation_policy": "ComfyUI only for future renders",
+  "publishing_status": "web review and image-ready assets migrated",
+  "known_open_items": [
+    "No validated ComfyUI workflow exports have been migrated yet.",
+    "Edge-mechanism reference remains blocked until the commercial lock-body family is confirmed.",
+    "Language codes and temporary-password variants still need hardware validation."
+  ]
+}

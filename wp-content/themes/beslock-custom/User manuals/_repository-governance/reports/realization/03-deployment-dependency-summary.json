@@ -1,0 +1,147 @@
+{
+  "by_kind": [
+    "cognition",
+    "continuity",
+    "decision",
+    "experience",
+    "governance",
+    "interop",
+    "knowledge-core",
+    "observability",
+    "reasoning",
+    "supervision"
+  ],
+  "dependencies": [
+    {
+      "id": "context-vector-emitter",
+      "kind": "cognition",
+      "required_by": [
+        "operational-copilot",
+        "procedural-assembly-runtime"
+      ]
+    },
+    {
+      "id": "confidence-tier-on-nodes",
+      "kind": "cognition",
+      "required_by": [
+        "operational-copilot",
+        "troubleshooting-runtime",
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "provenance-emitter",
+      "kind": "observability",
+      "required_by": [
+        "operational-copilot",
+        "onboarding-runtime",
+        "troubleshooting-runtime",
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "incident-id-emitter",
+      "kind": "continuity",
+      "required_by": [
+        "onboarding-runtime",
+        "troubleshooting-runtime",
+        "operational-copilot"
+      ]
+    },
+    {
+      "id": "checkpoint-registry",
+      "kind": "continuity",
+      "required_by": [
+        "onboarding-runtime",
+        "troubleshooting-runtime",
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "fallback-registry",
+      "kind": "decision",
+      "required_by": [
+        "operational-copilot",
+        "troubleshooting-runtime"
+      ]
+    },
+    {
+      "id": "intent-declaration-channel",
+      "kind": "interop",
+      "required_by": [
+        "onboarding-runtime",
+        "operational-copilot"
+      ]
+    },
+    {
+      "id": "supervision-receipt-emitter",
+      "kind": "supervision",
+      "required_by": [
+        "operational-copilot",
+        "onboarding-runtime",
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "schema-pin-enforcement",
+      "kind": "governance",
+      "required_by": [
+        "all"
+      ]
+    },
+    {
+      "id": "oem-channel-contract",
+      "kind": "interop",
+      "required_by": [
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "role-declaration-channel",
+      "kind": "supervision",
+      "required_by": [
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "hypothesis-store",
+      "kind": "reasoning",
+      "required_by": [
+        "troubleshooting-runtime"
+      ]
+    },
+    {
+      "id": "causal-edges-emitted",
+      "kind": "reasoning",
+      "required_by": [
+        "troubleshooting-runtime",
+        "operational-copilot"
+      ]
+    },
+    {
+      "id": "warning-corpus-complete",
+      "kind": "experience",
+      "required_by": [
+        "onboarding-runtime",
+        "troubleshooting-runtime",
+        "operational-copilot",
+        "administrator-assistant"
+      ]
+    },
+    {
+      "id": "symptom-corpus-≥10-per-product",
+      "kind": "knowledge-core",
+      "required_by": [
+        "troubleshooting-runtime"
+      ]
+    }
+  ],
+  "rules": [
+    "Dependencies are declared; ad-hoc dependencies are unsafe.",
+    "A runtime cannot be promoted past supervised-runtime phase while any declared dependency is unmet.",
+    "Cross-runtime dependencies follow the federation contracts; never invented at deployment time.",
+    "Governance dependencies (schema-pin-enforcement) bind every candidate.",
+    "Dependency satisfaction requires evidence (a passing report or a declared emitter)."
+  ],
+  "schema": "realization-and-deployment-governance/1.0"
+}

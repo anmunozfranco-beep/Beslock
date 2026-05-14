@@ -1,0 +1,111 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "dimensions": [
+    {
+      "id": "dim.procedural-density",
+      "definition": "Steps per minute of expected user time."
+    },
+    {
+      "id": "dim.memory-burden",
+      "definition": "Number of items the user must hold in working memory simultaneously."
+    },
+    {
+      "id": "dim.role-switching",
+      "definition": "Number of role transitions (admin↔user, app↔lock) the procedure forces."
+    },
+    {
+      "id": "dim.modality-switching",
+      "definition": "Transitions between physical, app and audio modalities."
+    },
+    {
+      "id": "dim.failure-cost",
+      "definition": "Cost of a single mis-step (e.g. lockout, data-loss, broken hardware)."
+    },
+    {
+      "id": "dim.recoverability",
+      "definition": "How easily an error is undone within the same flow."
+    },
+    {
+      "id": "dim.terminology-ambiguity",
+      "definition": "Density of synonyms or unfamiliar terms in the procedure surface."
+    }
+  ],
+  "per_procedure_load": [
+    {
+      "procedure": "procedure.factory-reset",
+      "load": "very-high",
+      "dominant": [
+        "dim.failure-cost",
+        "dim.recoverability"
+      ]
+    },
+    {
+      "procedure": "procedure.emergency-power",
+      "load": "very-high",
+      "dominant": [
+        "dim.failure-cost",
+        "dim.modality-switching"
+      ]
+    },
+    {
+      "procedure": "procedure.firmware-update",
+      "load": "high",
+      "dominant": [
+        "dim.failure-cost",
+        "dim.role-switching"
+      ]
+    },
+    {
+      "procedure": "procedure.pair-with-app",
+      "load": "high",
+      "dominant": [
+        "dim.modality-switching",
+        "dim.role-switching"
+      ]
+    },
+    {
+      "procedure": "procedure.register-fingerprint",
+      "load": "medium",
+      "dominant": [
+        "dim.procedural-density"
+      ]
+    },
+    {
+      "procedure": "procedure.add-administrator",
+      "load": "medium",
+      "dominant": [
+        "dim.role-switching"
+      ]
+    },
+    {
+      "procedure": "procedure.add-user",
+      "load": "medium",
+      "dominant": [
+        "dim.role-switching"
+      ]
+    },
+    {
+      "procedure": "procedure.register-pin",
+      "load": "low",
+      "dominant": [
+        "dim.memory-burden"
+      ]
+    },
+    {
+      "procedure": "procedure.unlock-pin",
+      "load": "low",
+      "dominant": []
+    },
+    {
+      "procedure": "procedure.unlock-fingerprint",
+      "load": "low",
+      "dominant": []
+    },
+    {
+      "procedure": "procedure.battery-replacement",
+      "load": "low",
+      "dominant": []
+    }
+  ]
+}

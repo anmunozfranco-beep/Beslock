@@ -1,0 +1,76 @@
+{
+  "high": [
+    "warning-corpus-thin",
+    "troubleshooting-corpus-thin",
+    "no-confidence-tier-on-most-nodes",
+    "no-checkpoint-registry",
+    "no-causal-edges-emitted",
+    "no-hypothesis-store",
+    "no-incident-id-emitter"
+  ],
+  "issues": [
+    {
+      "id": "warning-corpus-thin",
+      "impact": "warnings retrieval frequently empty; escalation-tier flips to escalating on destructive-adjacent flows",
+      "severity": "high"
+    },
+    {
+      "id": "troubleshooting-corpus-thin",
+      "impact": "troubleshooting-lookup flow degrades to escalation on most products",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-most-nodes",
+      "impact": "low-confidence-execution gating cannot bind precisely",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "battery-recovery checkpoint snapshots are placeholders",
+      "severity": "high"
+    },
+    {
+      "id": "no-causal-edges-emitted",
+      "impact": "troubleshooting traversal cannot follow causal chains",
+      "severity": "high"
+    },
+    {
+      "id": "no-hypothesis-store",
+      "impact": "troubleshooting/recovery hypotheses cannot persist",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-step continuity binding by incident is unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "no-replay-harness",
+      "impact": "deterministic replay from channels is supported but not yet harnessed",
+      "severity": "medium"
+    },
+    {
+      "id": "no-ground-truth-set",
+      "impact": "semantic-recall cannot be quantified beyond declared queries",
+      "severity": "medium"
+    },
+    {
+      "id": "no-operator-identity-channel",
+      "impact": "operator id is a free string; no identity verification",
+      "severity": "medium"
+    },
+    {
+      "id": "no-prerequisite-verification-store",
+      "impact": "prerequisites are surfaced but verification flag defaults to false",
+      "severity": "medium"
+    }
+  ],
+  "medium": [
+    "no-replay-harness",
+    "no-ground-truth-set",
+    "no-operator-identity-channel",
+    "no-prerequisite-verification-store"
+  ],
+  "schema": "runtime-implementation-governance/1.0",
+  "total": 11
+}

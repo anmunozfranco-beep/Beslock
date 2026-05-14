@@ -1,0 +1,71 @@
+{
+  "id": "semantic-wf-alta-desde-tuya-app",
+  "type": "procedural-semantics",
+  "product": "e-flex",
+  "summary": "Normalized semantic actions for wf-alta-desde-tuya-app",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/workflows/wf-alta-desde-tuya-app.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#6"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/workflows/wf-alta-desde-tuya-app.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-alta-desde-tuya-app",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "abre `TUYA APP`",
+      "semantic_actions": [
+        "open-app"
+      ],
+      "matched_lexicon": [
+        "open-app"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "agrega una nueva cerradura inteligente desde la categoria correcta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "confirma la red `2.4G`",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "sigue el asistente de la app hasta completar el enlace",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "valida que el equipo aparezca correctamente en la cuenta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

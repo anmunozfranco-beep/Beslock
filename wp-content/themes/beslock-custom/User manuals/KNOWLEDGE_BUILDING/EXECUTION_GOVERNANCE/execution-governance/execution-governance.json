@@ -1,0 +1,27 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "Execution is observed and modelled; the layer does not perform operations.",
+    "State transitions are explicit, validated, and provenance-attached.",
+    "Completion is positively asserted; absence of error is not completion.",
+    "Interruption is a first-class concept; recovery paths are declared, not improvised.",
+    "Failure classification is non-negotiable: recoverable vs unrecoverable.",
+    "Destructive operations require explicit-action confirmation and irreversibility warnings.",
+    "Unsafe sequences are blocked at composition time; the execution layer enforces the prohibition.",
+    "Execution governance is subordinate to knowledge-core, lifecycle, validation, access, composition.",
+    "Future execution consumers inherit execution contracts; contracts never bend to satisfy a consumer."
+  ],
+  "authority_areas": [
+    "state-models",
+    "flow-semantics",
+    "interruption-recovery",
+    "failure-states",
+    "intent-progression",
+    "confirmation-semantics",
+    "safe-execution",
+    "execution-governance",
+    "execution-risks",
+    "future-execution-readiness"
+  ]
+}

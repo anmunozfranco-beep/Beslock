@@ -1,0 +1,18 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "tier_count": 8,
+  "tiers": [
+    "verified",
+    "canonical",
+    "ocr-derived",
+    "inferred",
+    "low-confidence",
+    "deprecated",
+    "unresolved",
+    "transitional"
+  ],
+  "default_when_absent": "unresolved",
+  "required_field": "maturity",
+  "promotion_path": "ocr-derived → inferred → canonical → verified"
+}

@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-05-13T15:18:31Z",
+  "policy": "ComfyUI-only for all future product imagery, manuals, troubleshooting visuals, installation diagrams, and video generation.",
+  "prohibited_renderers": [
+    "midjourney",
+    "dall-e production pipelines",
+    "any external visual system"
+  ],
+  "required_inputs_per_product": {
+    "e-flex": "ext-images/e-flex/knowledge-core/visual/visual-semantic-map.json",
+    "e-nova": "ext-images/e-nova/knowledge-core/visual/visual-semantic-map.json",
+    "e-orbit": "ext-images/e-orbit/knowledge-core/visual/visual-semantic-map.json",
+    "e-prime": "ext-images/e-prime/knowledge-core/visual/visual-semantic-map.json",
+    "e-shield": "ext-images/e-shield/knowledge-core/visual/visual-semantic-map.json",
+    "e-touch": "ext-images/e-touch/knowledge-core/visual/visual-semantic-map.json"
+  },
+  "verified_workflow_reference": "tools/comfy/workflow_api.json.json (OpenAIGPTImage1 + LoadImage + SaveImage)"
+}

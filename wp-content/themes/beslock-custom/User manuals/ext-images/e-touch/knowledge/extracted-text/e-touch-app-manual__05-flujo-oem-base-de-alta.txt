@@ -1,0 +1,15 @@
+# Flujo OEM base de alta
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#5
+
+![Onboarding OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-01.png)
+
+La secuencia observada en el PDF es:
+1. abrir `Tuya Smart` o `Smart Life`
+2. tocar `Add device`
+3. entrar a `Security monitoring`
+4. elegir `Smart Door Lock`
+5. iniciar la distribucion Bluetooth
+6. despertar la cerradura tocando el keypad integrado o el lector de huella
+7. esperar a que el telefono detecte el equipo y confirmar el alta
+8. la cerradura emite dos avisos tipo `drip` cuando la vinculacion termina correctamente

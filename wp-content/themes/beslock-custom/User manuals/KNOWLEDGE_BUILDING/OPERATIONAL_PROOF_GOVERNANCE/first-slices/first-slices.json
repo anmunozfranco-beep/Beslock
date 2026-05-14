@@ -1,0 +1,176 @@
+{
+  "candidates": [
+    {
+      "blocking_risks": [],
+      "destructive_surface": false,
+      "id": "contextual-retrieval-proof",
+      "kind": "first executable slice",
+      "proof_eligible": true,
+      "scores": {
+        "operational-value": 4,
+        "runtime-risk-inverse": 5,
+        "validates-architecture": 5,
+        "validates-assembly": 4,
+        "validates-coherence": 4,
+        "validates-retrieval": 5
+      },
+      "soft_risks": [
+        "no-provenance-emitter"
+      ],
+      "supervision": "operator-observed (read-only outputs)",
+      "weighted_score": 4.5
+    },
+    {
+      "blocking_risks": [],
+      "destructive_surface": false,
+      "id": "procedural-assistance-proof",
+      "kind": "second executable slice",
+      "proof_eligible": true,
+      "scores": {
+        "operational-value": 4,
+        "runtime-risk-inverse": 4,
+        "validates-architecture": 5,
+        "validates-assembly": 5,
+        "validates-coherence": 5,
+        "validates-retrieval": 4
+      },
+      "soft_risks": [
+        "no-context-vector-emitter",
+        "no-confidence-tier-on-nodes"
+      ],
+      "supervision": "operator-observed; supervised when context vector absent",
+      "weighted_score": 4.45
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "destructive_surface": false,
+      "id": "onboarding-guidance-proof",
+      "kind": "deferred (supervised-pilot)",
+      "proof_eligible": false,
+      "scores": {
+        "operational-value": 4,
+        "runtime-risk-inverse": 3,
+        "validates-architecture": 4,
+        "validates-assembly": 4,
+        "validates-coherence": 4,
+        "validates-retrieval": 4
+      },
+      "soft_risks": [],
+      "supervision": "supervised end-to-end",
+      "weighted_score": 3.8
+    },
+    {
+      "blocking_risks": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "troubleshooting-guidance-proof",
+      "kind": "deferred (corpus-bound)",
+      "proof_eligible": false,
+      "scores": {
+        "operational-value": 5,
+        "runtime-risk-inverse": 2,
+        "validates-architecture": 4,
+        "validates-assembly": 4,
+        "validates-coherence": 3,
+        "validates-retrieval": 3
+      },
+      "soft_risks": [],
+      "supervision": "supervised end-to-end",
+      "weighted_score": 3.5
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "operational-recovery-assistance-proof",
+      "kind": "deferred (continuity-bound)",
+      "proof_eligible": false,
+      "scores": {
+        "operational-value": 4,
+        "runtime-risk-inverse": 2,
+        "validates-architecture": 4,
+        "validates-assembly": 4,
+        "validates-coherence": 4,
+        "validates-retrieval": 3
+      },
+      "soft_risks": [],
+      "supervision": "supervised end-to-end",
+      "weighted_score": 3.45
+    },
+    {
+      "blocking_risks": [
+        "destructive-surface-out-of-proof-scope",
+        "oem-channel-contract-missing",
+        "role-declaration-missing"
+      ],
+      "destructive_surface": true,
+      "id": "administrator-guidance-proof",
+      "kind": "deferred (destructive surface — out of scope for proof)",
+      "proof_eligible": false,
+      "scores": {
+        "operational-value": 3,
+        "runtime-risk-inverse": 1,
+        "validates-architecture": 3,
+        "validates-assembly": 3,
+        "validates-coherence": 3,
+        "validates-retrieval": 3
+      },
+      "soft_risks": [],
+      "supervision": "not eligible for proof",
+      "weighted_score": 2.6
+    }
+  ],
+  "criteria": [
+    {
+      "id": "operational-value",
+      "weight": 0.2
+    },
+    {
+      "id": "runtime-risk-inverse",
+      "weight": 0.2
+    },
+    {
+      "id": "validates-architecture",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-retrieval",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-assembly",
+      "weight": 0.15
+    },
+    {
+      "id": "validates-coherence",
+      "weight": 0.15
+    }
+  ],
+  "generated": "2026-05-13T21:05:02Z",
+  "kind": "first-slices",
+  "ranking": [
+    "contextual-retrieval-proof",
+    "procedural-assistance-proof",
+    "onboarding-guidance-proof",
+    "troubleshooting-guidance-proof",
+    "operational-recovery-assistance-proof",
+    "administrator-guidance-proof"
+  ],
+  "rules": [
+    "First executable slice MUST be read-only and have no blocking risks.",
+    "Destructive surfaces are out of scope for proof-of-value.",
+    "Soft risks degrade the slice to operator-observed mode but do not block.",
+    "Score updates require evidence; ad-hoc reweighting is unsafe.",
+    "Selected slice must validate retrieval + assembly + coherence simultaneously."
+  ],
+  "schema": "operational-proof-governance/1.0"
+}

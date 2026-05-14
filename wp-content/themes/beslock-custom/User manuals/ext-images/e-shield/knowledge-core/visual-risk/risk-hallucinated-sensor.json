@@ -1,0 +1,33 @@
+{
+  "id": "risk-hallucinated-sensor",
+  "type": "visual-risk",
+  "product": "e-shield",
+  "summary": "Marketing-style render shows a sensor the unit does not include, eroding trust at unboxing.",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/component-visibility/component-visibility-map.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::RISK_CATALOG"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "severity": "critical",
+  "trigger_components": [
+    "ic-card-zone"
+  ],
+  "failure_mode": "Marketing-style render shows a sensor the unit does not include, eroding trust at unboxing.",
+  "mitigation": "Future ComfyUI workflow MUST anchor the listed trigger_components against the OEM PNG references and refuse to render this asset if anchors are missing.",
+  "downstream_consumers": [
+    "comfyui",
+    "visual-qa"
+  ]
+}

@@ -1,0 +1,315 @@
+{
+  "product_slug": "e-touch",
+  "product_display": "e-Touch",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "entries": [
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch - AI image prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/prompts/e-Touch - AI image prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch - image generation matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/generation-matrices/e-Touch - image generation matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch - implementation starter pack.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/automation/orchestrators/e-Touch - implementation starter pack.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch - installation template standard.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/automation/orchestrators/e-Touch - installation template standard.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch - supplemental source review.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/specifications/e-Touch - supplemental source review.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch app manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch installation manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch user manual - image-ready.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/manuals/e-Touch user manual - image-ready.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch user manual - review-draft.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/manuals/e-Touch user manual - review-draft.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch user manual.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Touch_1.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-Touch.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/e-Touch.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/e-touch-visual-profile.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/references/e-touch-visual-profile.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/notes.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/audit/legacy-pre-cutover-notes.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/ai-image-prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/prompts/ai-image-prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/image-generation-matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/generation-matrices/image-generation-matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/visual-validation.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/validations/visual-validation.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/image-production-status.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/qa/image-production-status.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/audit/legacy-visual-system-product/README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/generated/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/audit/legacy-visual-system-product/generated-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/generated/e-touch-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/outputs/generated/e-touch-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/generated/e-touch-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/outputs/generated/e-touch-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/generated/e-touch-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/outputs/generated/e-touch-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-touch/generated/selected-assets-register.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/traceability/selected-assets-register.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/review-draft/e-touch-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/review-draft/e-touch-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/web-ready/e-touch-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/assets/e-touch/web-ready/e-touch-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/pdf-renders/e-touch-1/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/pdf-renders/e-touch-1/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/pdf-renders/e-touch-1/page-02.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/page-02.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-touch/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/audit/legacy-flat-files/assets-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/review-previews/e-touch-user-manual-review-draft.html",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/publishing/web/review-previews/e-touch-user-manual-review-draft.html",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

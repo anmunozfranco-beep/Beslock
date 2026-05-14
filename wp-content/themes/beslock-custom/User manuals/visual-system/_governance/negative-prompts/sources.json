@@ -1,0 +1,11 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "negative-prompts",
+  "title": "Consolidated negative-prompt registry",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "ext-images/<product>/visual-system/prompts/ai-image-prompts.md (all 6 products)",
+    "KNOWLEDGE_BUILDING/COMFY_GENERATION_GOVERNANCE.md (§4 prompt lineage)"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

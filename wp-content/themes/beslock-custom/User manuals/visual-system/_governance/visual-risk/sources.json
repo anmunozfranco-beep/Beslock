@@ -1,0 +1,12 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "visual-risk",
+  "title": "Visual risk model",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "ext-images/<product>/knowledge-core/visual-risk/risk-*.json (all 6 products)",
+    "ext-images/<product>/knowledge-core/visual-intent/intent-*.json",
+    "KNOWLEDGE_BUILDING/COMFY_GENERATION_GOVERNANCE.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

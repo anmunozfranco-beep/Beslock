@@ -1,0 +1,27 @@
+# Continuity Governance — Charter
+
+## Principles
+
+- the continuity layer preserves operational context across time; it never invents context
+- context is declared, scoped, observable, and append-only where applicable
+- interruption preserves checkpoints and provenance; never partial destructive state
+- destructive confirmations are non-inheritable; always re-confirmed at the boundary
+- inheritance never elevates confidence and never clears unresolved warnings or escalations
+- history is append-only; no silent edits; failed paths cannot be silently re-attempted
+- session-aware adaptations may shape presentation but never weaken safeguards
+- escalation never strips context; packages are read-only snapshots with provenance
+- subordinate to knowledge-core and to all 12 prior governance layers
+- future continuity consumers inherit these contracts; the continuity layer never bends them for a consumer
+
+## Authority Areas
+
+- timeline declarations and admissible transitions
+- context schema and scoping rules
+- interruption resume strategies and restoration steps
+- history record types, append-only invariants, and query patterns
+- session signals and adaptation rules
+- inheritance kinds and constraints
+- escalation package fields and handoff kinds
+- audit/provenance requirements for continuity
+- interaction contracts with adaptive, decision, and reasoning layers
+- future continuity-consumer gates

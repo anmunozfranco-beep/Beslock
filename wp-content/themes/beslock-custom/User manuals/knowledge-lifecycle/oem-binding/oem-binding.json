@@ -1,0 +1,77 @@
+{
+  "binding_kinds": [
+    {
+      "fields": [
+        "sha256",
+        "path_or_url",
+        "page",
+        "region_bbox",
+        "extract_lineage"
+      ],
+      "kind": "pdf"
+    },
+    {
+      "fields": [
+        "sha256",
+        "source_pdf_sha256",
+        "page",
+        "region_bbox",
+        "ocr_tool",
+        "ocr_confidence"
+      ],
+      "kind": "ocr-fragment"
+    },
+    {
+      "fields": [
+        "sha256",
+        "captured_from",
+        "captured_at",
+        "annotator",
+        "region_bbox"
+      ],
+      "kind": "screenshot"
+    },
+    {
+      "fields": [
+        "sha256",
+        "source_pdf_sha256",
+        "page_range",
+        "extract_lineage"
+      ],
+      "kind": "extracted-procedure"
+    },
+    {
+      "fields": [
+        "sha256",
+        "source_kind",
+        "source_ref",
+        "observed_failure_mode"
+      ],
+      "kind": "troubleshooting-evidence"
+    },
+    {
+      "fields": [
+        "sha256",
+        "source_kind",
+        "source_ref",
+        "irreversibility_flag"
+      ],
+      "kind": "warning-evidence"
+    }
+  ],
+  "binding_rules": [
+    "every binding record is content-addressed (sha256 of the source artifact)",
+    "every binding record is append-only; updates create a new binding with prior_binding_id",
+    "no binding may reference a non-existent or non-pinned source",
+    "OEM-verified state requires at least one binding of kind pdf | ocr-fragment | extracted-procedure",
+    "warning-evidence + troubleshooting-evidence bindings are required for those domains' OEM promotion",
+    "runtime exposes binding ids via the provenance manifest; the runtime never edits bindings"
+  ],
+  "kind": "oem-binding",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "traceable_trust_pipeline": [
+    "node -> oem_binding[] -> source artifact (sha256-pinned) -> declared origin",
+    "any break in the chain demotes the node to candidate and emits escalation",
+    "traceability is queryable; queries are read-only and bounded by knowledge-core scope"
+  ]
+}

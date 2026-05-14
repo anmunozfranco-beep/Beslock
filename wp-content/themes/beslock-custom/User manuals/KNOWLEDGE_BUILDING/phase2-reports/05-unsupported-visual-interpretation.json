@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "policy": "Phase 2 does not consume visual content. Visual interpretation entities are not produced by this extractor; they remain owned by visual-system/ and the canonical PNG truth source. Any OEM diagram interpretation must be authored manually with a `visual-constraint` envelope.",
+  "products": {
+    "e-flex": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    },
+    "e-nova": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    },
+    "e-orbit": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    },
+    "e-prime": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    },
+    "e-shield": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    },
+    "e-touch": {
+      "visual_constraint_entities": 0,
+      "note": "Visual-constraint emission deferred to visual-system pipeline."
+    }
+  }
+}

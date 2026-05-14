@@ -1,0 +1,27 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "constitutional_layer_ready": true,
+  "runtime_governance_ready": true,
+  "per_product_layer_ready_count": 5,
+  "per_product_layer_blocked": [
+    "e-nova (0 procedural semantics from Phase 3)"
+  ],
+  "execution_layer_blockers": [
+    "tools/comfy/workflow_api.json.json filename normalisation + workflow registry",
+    "negative-prompt component registry wiring into per-product prompts",
+    "model + sampler approval registry",
+    "automated tolerance + cross-product-contamination QA",
+    "per-channel publication spec (publication-constraints policy is currently a draft)"
+  ],
+  "ready_for": [
+    "constitutional reference and review",
+    "downstream platform documentation linking",
+    "future video / AR / chatbot extension authoring",
+    "next-phase implementation work that resolves the open conflicts"
+  ],
+  "not_ready_for": [
+    "mass Comfy orchestration (workflow registry + QA gates required first)",
+    "production image generation against unresolved conflicts"
+  ]
+}

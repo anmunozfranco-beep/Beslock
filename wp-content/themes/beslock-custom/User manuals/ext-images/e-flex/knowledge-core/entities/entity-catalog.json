@@ -1,0 +1,146 @@
+{
+  "id": "entity-catalog",
+  "type": "entity-catalog",
+  "product": "e-flex",
+  "summary": "Entities observed in e-flex OEM corpus",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "partial",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "support",
+    "onboarding"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_entity_catalog::ENTITY_VOCAB"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Vocabulary-anchored. An entity is only emitted when at least one OEM-source text fragment matches a curated surface phrase. No inference beyond surface presence.",
+  "entities": [
+    {
+      "id": "entity-fingerprint-sensor",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-keypad",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "keypad",
+        "panel"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-handle-exterior",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "handle",
+        "manija"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-lock-body",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "lock body",
+        "lock body"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-emergency-power",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "emergency power"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-mechanical-key",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "llave"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-buzzer",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "voice prompt"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-led-indicator",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "led"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-deadbolt",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "cerrojo"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-latch",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "latch",
+        "pestillo"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-ic-card-reader",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "ic card"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-tuya-app",
+      "kind": "software",
+      "matched_surface_terms": [
+        "tuya"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-administrator-user",
+      "kind": "role",
+      "matched_surface_terms": [
+        "administrator",
+        "administrador"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-regular-user",
+      "kind": "role",
+      "matched_surface_terms": [
+        "regular user",
+        "user"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "7 Conexión En Un Estado Unificadola Cerradura",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-6"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "2. Alinec el espacio en la S.Fije la manija de la 4. La instalación de la\nmanija de la cerradura cerradura trasera cerradura está completa\ntrasera con el espacio en\nel cuerpo de la cerradura\n2. Uso y Operación\n1. Registrar Huella Dactilar",
+  "legacy_storage_bucket": "extracted-text"
+}

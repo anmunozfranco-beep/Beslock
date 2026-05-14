@@ -1,0 +1,58 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "consumers": [
+    {
+      "system": "adaptive-onboarding",
+      "consumes": [
+        "onboarding-package",
+        "contextual-composition"
+      ],
+      "readiness_gate": "audience_scope authored per artifact"
+    },
+    {
+      "system": "contextual-assistant",
+      "consumes": [
+        "all packages",
+        "contextual-composition"
+      ],
+      "readiness_gate": "snapshot-hash on bundles + access-trace logging"
+    },
+    {
+      "system": "dynamic-manuals",
+      "consumes": [
+        "installation-package",
+        "publication-package"
+      ],
+      "readiness_gate": "maturity ≥ verified for included primitives"
+    },
+    {
+      "system": "troubleshooting-systems",
+      "consumes": [
+        "troubleshooting-package"
+      ],
+      "readiness_gate": "symptom corpus ≥ 10 per product"
+    },
+    {
+      "system": "semantic-publication",
+      "consumes": [
+        "publication-bundle (access layer)"
+      ],
+      "readiness_gate": "publication-neutral rules enforced + deprecation badges defined"
+    },
+    {
+      "system": "multimodal-assistance",
+      "consumes": [
+        "packages with visual-intent attached"
+      ],
+      "readiness_gate": "visual-risk classified + component-visibility declared"
+    },
+    {
+      "system": "future-visual-assistance",
+      "consumes": [
+        "visual-intent + visual-risk + component-visibility"
+      ],
+      "readiness_gate": "visual-risk reclassification freeze window in place"
+    }
+  ]
+}

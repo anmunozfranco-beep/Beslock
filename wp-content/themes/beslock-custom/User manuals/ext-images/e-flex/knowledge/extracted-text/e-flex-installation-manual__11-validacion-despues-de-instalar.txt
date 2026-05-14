@@ -1,0 +1,10 @@
+# Validacion despues de instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#11
+
+Antes de cerrar el trabajo, valida:
+- la manija opera sin friccion ni juego excesivo
+- el pestillo corre libre
+- el keypad y el panel despiertan correctamente
+- el boton `Reset` y el compartimiento de baterias quedan accesibles
+- la llave mecanica y la energia de emergencia siguen disponibles

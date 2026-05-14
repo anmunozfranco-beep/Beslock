@@ -1,0 +1,48 @@
+{
+  "hitl_invariants": [
+    "no HITL pattern allows silent override",
+    "no HITL pattern allows scope expansion",
+    "every HITL action is reversible by an equal-or-higher decision",
+    "every HITL action carries an operator identity + supervision-receipt",
+    "HITL is the default; autonomous bypass does not exist at any operator surface"
+  ],
+  "hitl_patterns": [
+    {
+      "effect": "slice halts at next safe checkpoint",
+      "id": "interruption",
+      "trigger": "operator-initiated halt"
+    },
+    {
+      "effect": "wait for approve|reject|demote",
+      "id": "approval-checkpoint",
+      "trigger": "declared checkpoint"
+    },
+    {
+      "effect": "route to escalation-supervisor",
+      "id": "escalation-intervention",
+      "trigger": "escalation-trace event"
+    },
+    {
+      "effect": "demote slice; halt; emit operational-audit-log",
+      "id": "unsafe-runtime-interruption",
+      "trigger": "safety predicate failure"
+    },
+    {
+      "effect": "logged with rationale; never silent",
+      "id": "operator-override",
+      "trigger": "operator decision contradicting recommendation"
+    },
+    {
+      "effect": "open consensus review; cap node tier until resolved",
+      "id": "reviewer-arbitration",
+      "trigger": "reviewer disagreement on a node"
+    },
+    {
+      "effect": "append-only event + 24h auditor co-signature",
+      "id": "governance-intervention",
+      "trigger": "governance-operator emergency action"
+    }
+  ],
+  "kind": "hitl-patterns",
+  "schema": "human-operations-governance/1.0"
+}

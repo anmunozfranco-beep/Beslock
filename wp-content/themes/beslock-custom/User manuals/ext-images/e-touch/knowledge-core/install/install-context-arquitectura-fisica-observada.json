@@ -1,0 +1,40 @@
+{
+  "id": "install-context-arquitectura-fisica-observada",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "e-Touch se instala como un conjunto compacto de rosetas circulares y manijas, no como una cerradura de placa larga",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#3"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-arquitectura-fisica-observada.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "`front handle`",
+    "`rear handle`",
+    "`rear cover with battery`",
+    "`deadbolt`",
+    "`connecting pipe` largo y corto",
+    "tornillos de fijacion y tapa",
+    "`E-key`",
+    "buckle cover y piezas de montaje"
+  ],
+  "legacy_storage_bucket": "installation"
+}

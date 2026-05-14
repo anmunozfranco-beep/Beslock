@@ -1,0 +1,42 @@
+{
+  "id": "proc-change-language",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "observed numeric flow",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#change-language"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "local-device",
+  "menu_path": "observed numeric flow",
+  "steps": [
+    "Wake the panel.",
+    "Enter 888#.",
+    "Enter the language system.",
+    "Select the target language.",
+    "Use 3009# for Spanish only if the commercial build confirms it.",
+    "Confirm the change when prompted."
+  ],
+  "validation_checks": [
+    "The language actually changes.",
+    "The user understands the menu.",
+    "The lock still responds normally."
+  ]
+}

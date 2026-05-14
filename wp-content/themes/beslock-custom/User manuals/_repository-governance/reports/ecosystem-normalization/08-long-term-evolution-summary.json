@@ -1,0 +1,19 @@
+{
+  "future_commitments": [
+    "new products are added to the per-product knowledge-core under ext-images/<product>/; no new architecture is spawned",
+    "new OEM manuals enter via the OEM ingestion environment + dual-review binding (layers 23, 25)",
+    "new runtime domains extend ALLOWED_DOMAINS in config.py; CONFIDENCE_WEIGHTS extends only via governance action",
+    "future deployment slices are declared compositions of canonical-stack modules (layer 26); no new module categories",
+    "future reviewer ecosystems are partitioned by scope (layers 22, 23); revocation remains first-class",
+    "future multimodal systems subscribe to existing observability channels (layers 25, 26); no parallel channels"
+  ],
+  "future_invariants": [
+    "no future growth introduces a new macro-governance mega-layer",
+    "no future growth renames a schema in place",
+    "no future growth dissolves a prior layer's scope",
+    "no future growth introduces a canonical term with a new meaning",
+    "no future growth bypasses canonical-references"
+  ],
+  "kind": "long-term-evolution-summary",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

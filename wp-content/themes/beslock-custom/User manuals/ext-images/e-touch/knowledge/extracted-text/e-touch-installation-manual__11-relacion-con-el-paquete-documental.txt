@@ -1,0 +1,9 @@
+# Relacion con el paquete documental
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#11
+
+Este documento convive con:
+- `e-Touch user manual - image-ready.md`
+- `e-Touch app manual.md`
+- `e-Touch - installation template standard.md`
+- `e-Touch - supplemental source review.md`

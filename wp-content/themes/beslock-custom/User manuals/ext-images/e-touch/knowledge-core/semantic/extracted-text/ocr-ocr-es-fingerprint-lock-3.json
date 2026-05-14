@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-es-fingerprint-lock-3",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Es Fingerprint Lock",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-3"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-es-fingerprint-lock-3.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "To improve the quality survivalwith innovative technology, to create the world's most outstanding, most innovative products",
+  "legacy_storage_bucket": "extracted-text"
+}

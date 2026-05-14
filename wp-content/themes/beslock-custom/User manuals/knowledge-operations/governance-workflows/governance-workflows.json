@@ -1,0 +1,49 @@
+{
+  "emergency_demotion_rules": [
+    "emergency demotion is an append-only event with severity, scope, and rationale",
+    "emergency demotion fans out via declared lineage edges only",
+    "emergency demotion never deletes; it only changes future retrievals",
+    "emergency demotion requires governance-operator + auditor co-signature within 24 hours",
+    "emergency demotion is reviewable; reversal is a separate governed event"
+  ],
+  "governance_operator_guardrails": [
+    "may not author or approve their own records",
+    "may not extend their own scope or tier_ceiling",
+    "all actions are co-indexed in review-audit + governance-audit logs",
+    "all actions are reversible by governance review"
+  ],
+  "kind": "governance-workflows",
+  "schema": "knowledge-operations-governance/1.0",
+  "workflows": [
+    {
+      "actor": "governance-operator",
+      "id": "governance-escalation",
+      "trigger": "blocking queue item or runtime escalation-trace event"
+    },
+    {
+      "actor": "governance-operator",
+      "id": "unsafe-knowledge-intervention",
+      "trigger": "node demoted by safety-predicate failure"
+    },
+    {
+      "actor": "governance-operator + reviewer",
+      "id": "runtime-incident-review",
+      "trigger": "supervised run with safety demotion or replay drift"
+    },
+    {
+      "actor": "auditor",
+      "id": "operational-audit-review",
+      "trigger": "scheduled or on-demand audit of review-audit log"
+    },
+    {
+      "actor": "governance-operator + dual-review",
+      "id": "disputed-knowledge-handling",
+      "trigger": "node at state=disputed"
+    },
+    {
+      "actor": "governance-operator",
+      "id": "emergency-demotion",
+      "trigger": "operational incident or contradiction detected"
+    }
+  ]
+}

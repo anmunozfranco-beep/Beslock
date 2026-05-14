@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-e-ebled-42",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "E-Ebled",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-42"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "mode.\nBe\n3.Create/delete the door opening mode.\nGe)",
+  "storage_bucket": "extracted-text"
+}

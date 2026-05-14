@@ -1,0 +1,18 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/ecosystem-normalization/governance-deduplication/",
+  "contradiction_findings_count": 1,
+  "doctrine_roots_count": 33,
+  "kind": "governance-deduplication-summary",
+  "layered_ownership_resolutions": [
+    "execution-stack",
+    "knowledge-stack",
+    "deployment-stack",
+    "ecosystem-stack",
+    "human-stack",
+    "intelligence-stack",
+    "platform-foundation"
+  ],
+  "rewrites_performed": 0,
+  "rules_count": 5,
+  "schema": "ecosystem-normalization-governance/1.0"
+}

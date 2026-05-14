@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "Funciones/Rendimiento Parámetros Observaciones",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Configuration",
+  "raw_text": "Tensión de Funcionamiento 334 2v Tensión Nonimal 3 7V\n(1) Detección de bateria baja, avisos de\nTensión de Alarma 3.540 1v voz locales (2) Desbloqueo mas de 50\nveces después de la alarma de baja\ntensión\nConsumo de Energia en Sueño Profundo <30uA\n‘Consumo de Energia Estático . (1) Método de medición: Crédito de",
+  "storage_bucket": "extracted-text"
+}

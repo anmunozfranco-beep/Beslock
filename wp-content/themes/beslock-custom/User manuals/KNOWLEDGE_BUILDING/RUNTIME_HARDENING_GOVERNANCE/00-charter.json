@@ -1,0 +1,140 @@
+{
+  "bound_corpus_surfaces": [
+    "troubleshooting-expanded",
+    "warnings-expanded",
+    "continuity-checkpoints",
+    "causal-graphs",
+    "confidence-tiers"
+  ],
+  "bound_modules": [
+    {
+      "change": "ALLOWED_DOMAINS extended; CONFIDENCE_WEIGHTS table added",
+      "path": "runtime-implementation/runtime/config.py"
+    },
+    {
+      "change": "KIND_DOMAINS extended; confidence-weighted scoring; candidate_only manifest field",
+      "path": "runtime-implementation/runtime/retrieval.py"
+    },
+    {
+      "change": "candidate-only escalation triggers wired in",
+      "path": "runtime-implementation/runtime/assembly.py"
+    },
+    {
+      "change": "new module — deterministic replay harness",
+      "path": "runtime-implementation/runtime/replay.py"
+    },
+    {
+      "change": "new `replay` subcommand",
+      "path": "runtime-implementation/cli.py"
+    },
+    {
+      "change": "new tests for domains, weights, candidate disclosure, replay determinism",
+      "path": "runtime-implementation/testing/test_hardening.py"
+    },
+    {
+      "change": "doctrine note for retrieval hardening",
+      "path": "runtime-implementation/runtime-hardening/retrieval-quality/README.md"
+    },
+    {
+      "change": "doctrine note for replay validation",
+      "path": "runtime-implementation/runtime-hardening/replay-validation/README.md"
+    },
+    {
+      "change": "additive supplemental corpus builder (idempotent)",
+      "path": "tools/corpus_enrichment.py"
+    }
+  ],
+  "candidate_record_counts": {
+    "_grand_total": 132,
+    "_totals": {
+      "causal-graphs": 6,
+      "confidence-tiers": 6,
+      "continuity-checkpoints": 36,
+      "troubleshooting-expanded": 42,
+      "warnings-expanded": 42
+    },
+    "e-flex": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-nova": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-orbit": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-prime": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-shield": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-touch": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    }
+  },
+  "generated": "2026-05-13T21:39:36Z",
+  "kind": "charter",
+  "principles": [
+    "This layer hardens the runtime; it does not extend the architecture.",
+    "Hardening is additive and non-destructive over per-product knowledge-core.",
+    "Operational density is increased through declared candidate records, never fabricated truth.",
+    "Every candidate record carries `validation_status: candidate-pending-review` and `confidence: candidate`.",
+    "Confidence weighting is declarative; candidate nodes cannot outrank verified nodes on equal token overlap.",
+    "Replay is deterministic by node-id-set parity, not by timing or score arithmetic.",
+    "Macro-governance expansion remains suspended; this is the second and final implementation-track layer of Phase 27.",
+    "All hardening is subordinate to knowledge-core and to all twenty prior layers."
+  ],
+  "schema": "runtime-hardening-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION"
+  ],
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

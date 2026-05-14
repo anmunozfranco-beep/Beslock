@@ -1,0 +1,25 @@
+# Tarjetas RF y huellas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9
+
+La fuente muestra dos modulos paralelos: `Tarjetas RF` y `Gestion de huellas`.
+
+
+## Tarjetas RF
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.1
+
+1. entra a `Tarjetas RF`
+2. toca `Agregar tarjetas RF`
+3. define nombre y tiempo de vigencia
+4. acerca la tarjeta a la cerradura para completar el enlace
+
+
+## Huellas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.2
+
+1. entra al modulo de huellas
+2. inicia el alta
+3. apoya el dedo `4 veces` segun la guia OEM
+4. valida el desbloqueo despues del registro

@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-sword-iron-make-on-demad-7",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Sword Iron(Make On Demad)",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-7"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-sword-iron-make-on-demad-7.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Front Panel and Lock Body Installation Steps:\n1. Adjust the latch direction: Change the direction of the lock body's latch according to the door opening method.\n2. Lock body installation: Insert the lock body into the pre-drilled installation hole and tighten the lock body\nmounting screws.\n3. Front panel installation:\nAdjust the handle direction according to the door opening direction;\nInstall and tighten the mounting studs on the front panel, and insert the handle spring into the rear panel;\nInsert the square spindle from the accessory pack into the square hole of the lock body (cut the spindle to fit the\nactual door thickness);\nThread the data connection cable through the door hole from the upper mounting stud, align the handle's square\nhole with the spindle, and press the front panel assembly firmly against the door surface;\nConnect the data connection cable to the socket on the rear panel;\nAlign the rear panel handle's square hole with the spindle, align the lock bar with the lock body's bar hole, and\npress the rear panel assembly firmly against the inner door surface;\nTighten the panel mounting screws until the panel can be moved with slight force. If it's not smooth, adjust the\npanel. Once the latch moves smoothly, fully tighten the panel mounting screws;\nInstall the batteries and attempt to unlock using fingerprint or by entering the initial password for verification. If\nthe latch movement is not smooth, repeat step . If verification is successful, install the battery cover to complete\nthe installation.\n⼆.产品布局：",
+  "legacy_storage_bucket": "extracted-text"
+}

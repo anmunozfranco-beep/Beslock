@@ -1,0 +1,10 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Experience Validation Rules",
+  "rules": [
+    "Procedure ids referenced by EXPERIENCE_GOVERNANCE MUST resolve to a knowledge-core artifact.",
+    "Every product MUST have a non-empty warning corpus.",
+    "Every product MUST have \u22651 procedural-semantics artifact."
+  ]
+}

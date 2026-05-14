@@ -1,0 +1,39 @@
+{
+  "generated": "2026-05-14T02:38:34Z",
+  "kind": "charter",
+  "principles": [
+    "This layer governs how candidate operational knowledge becomes trusted operational knowledge.",
+    "Knowledge evolution is reversible, append-only, and human-supervised by default.",
+    "No knowledge is auto-promoted; every promotion crosses a declared gate with a declared reviewer.",
+    "Every promotion is reversible; rollback is recorded, never silent.",
+    "OEM verification is the highest tier achievable without operational evidence.",
+    "Operationally-proven status requires both OEM verification and replay-validated supervised runs.",
+    "Disputes do not silently resolve; they cap derived trust until reviewed.",
+    "All knowledge evolution is subordinate to provenance and to all 21 prior governance layers."
+  ],
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING"
+  ]
+}

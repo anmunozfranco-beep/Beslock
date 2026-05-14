@@ -1,0 +1,45 @@
+{
+  "flows": [
+    {
+      "id": "intra→inter",
+      "next": "propagate to ecosystem escalation registry; receiver runtime acquires read-only handoff",
+      "trigger": "tier-3 threshold crossed inside a runtime"
+    },
+    {
+      "id": "runtime→runtime",
+      "next": "supervised handoff with continuity snapshot + 12-field escalation package",
+      "trigger": "source runtime declares the receiver runtime as the next handler"
+    },
+    {
+      "id": "ecosystem→OEM",
+      "next": "federated OEM handoff; orchestration locks to read-only at all involved runtimes",
+      "trigger": "tier-4/5 reached and OEM channel contract exists"
+    },
+    {
+      "id": "ecosystem→human",
+      "next": "supervised human handoff; orchestration locks to read-only at source",
+      "trigger": "tier-3+ with no declared receiver runtime"
+    },
+    {
+      "id": "continuity-preserving",
+      "next": "continuity snapshot must precede handoff; restoration plan attached",
+      "trigger": "any escalation"
+    },
+    {
+      "id": "ecosystem-broadcast",
+      "next": "all federated runtimes lock to read-only until receiver acknowledges",
+      "trigger": "tier-5 with cross-runtime impact"
+    }
+  ],
+  "generated": "2026-05-13T20:43:33Z",
+  "kind": "escalation",
+  "rules": [
+    "Escalation tier is monotonic across runtimes; receivers may raise but never lower.",
+    "Escalation crossings carry the 12-field escalation package + continuity snapshot ref.",
+    "Tier-4/5 escalations require a declared receiver (OEM channel or human); otherwise queue + lock.",
+    "Escalation events are append-only across the ecosystem.",
+    "An ecosystem-broadcast at tier-5 locks every involved runtime to read-only.",
+    "OEM federation requires the OEM channel contract; absent, escalations queue and orchestration locks."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

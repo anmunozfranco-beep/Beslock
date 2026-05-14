@@ -1,0 +1,18 @@
+[
+  {
+    "id": "warning-limites-de-evidencia",
+    "summary": "- la fuente OEM disponible no detalla una guia extensa de modulos internos",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "warning-precauciones-clave",
+    "summary": "Segun la fuente corta en espanol:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#12"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

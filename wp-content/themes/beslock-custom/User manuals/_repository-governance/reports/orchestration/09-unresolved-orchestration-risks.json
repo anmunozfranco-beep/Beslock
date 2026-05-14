@@ -1,0 +1,100 @@
+{
+  "high": [
+    "no-orchestration-trace-emitter",
+    "no-contract-violation-channel",
+    "no-supervision-receipt-emitter",
+    "no-checkpoint-registry",
+    "no-fallback-registry",
+    "no-context-vector-emitter",
+    "no-confidence-tier-on-nodes",
+    "no-provenance-emitter",
+    "no-incident-id-emitter",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap",
+    "oem-channel-contract-missing"
+  ],
+  "medium": [
+    "no-causal-edges-emitted",
+    "no-hypothesis-store",
+    "schema-pin-not-enforced"
+  ],
+  "risks": [
+    {
+      "id": "no-orchestration-trace-emitter",
+      "impact": "loops not observable; replay impossible",
+      "severity": "high"
+    },
+    {
+      "id": "no-contract-violation-channel",
+      "impact": "violations cannot be surfaced as runtime errors",
+      "severity": "high"
+    },
+    {
+      "id": "no-supervision-receipt-emitter",
+      "impact": "supervision-boundary crossings not auditable",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "interruption-recovery degrades to restart-from-safe-state",
+      "severity": "high"
+    },
+    {
+      "id": "no-fallback-registry",
+      "impact": "alternative-path resolution unavailable in coordination",
+      "severity": "high"
+    },
+    {
+      "id": "no-context-vector-emitter",
+      "impact": "context-acquisition + adaptive-guidance loops degrade",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "impact": "decisioning + reasoning + uncertainty handling all degrade",
+      "severity": "high"
+    },
+    {
+      "id": "no-provenance-emitter",
+      "impact": "orchestration cannot satisfy auditability requirements",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-session orchestration binding unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "impact": "troubleshooting orchestration cannot be released on most products",
+      "severity": "high"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "impact": "guidance orchestration with mandatory-warning surface gated on affected products",
+      "severity": "high"
+    },
+    {
+      "id": "oem-channel-contract-missing",
+      "impact": "tier-4/5 escalation orchestration cannot complete",
+      "severity": "high"
+    },
+    {
+      "id": "no-causal-edges-emitted",
+      "impact": "reasoning-loop traces cannot enumerate edges traversed",
+      "severity": "medium"
+    },
+    {
+      "id": "no-hypothesis-store",
+      "impact": "hypotheses do not survive interruption-recovery",
+      "severity": "medium"
+    },
+    {
+      "id": "schema-pin-not-enforced",
+      "impact": "orchestration may proceed under mismatched schemas",
+      "severity": "medium"
+    }
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "total": 15
+}

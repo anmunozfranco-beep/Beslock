@@ -1,0 +1,9 @@
+# Secuencia local en la cerradura
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#5
+
+La fuente OEM resume este flujo local:
+1. despierta la pantalla con `*+#`
+2. verifica la informacion del administrador
+3. presiona `2` para `wireless settings`
+4. presiona `1` para `add network`

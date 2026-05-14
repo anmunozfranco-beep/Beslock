@@ -1,0 +1,15 @@
+# Modulos opcionales del sistema
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#11
+
+La fuente OCR tambien muestra estos bloques:
+- gestion de asistencia
+- configuracion del sistema
+- informacion de cuenta
+- usuarios del dispositivo
+- grupo de dispositivos
+- transferir derechos de administrador
+- servicio al cliente
+
+No todos estos modulos tienen que aparecer en todas las versiones o regiones de la app.
+Deben presentarse en Beslock como funciones condicionales sujetas a la version instalada.

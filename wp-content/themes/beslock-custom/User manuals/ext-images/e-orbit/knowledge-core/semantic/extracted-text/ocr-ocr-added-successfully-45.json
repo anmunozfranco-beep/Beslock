@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-added-successfully-45",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Added Successfully",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-45"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-added-successfully-45.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "- After entering the \"Add device\" page, keep waiting, go to the smart door lock operation, let it enter the\nnetwork mode.\n- If the power distribution fails, you can select \"Switch the power distribution mode\" or select the hotspot\nmode. Connect to the Wi-Fi hotspot starting with SmartLife, and configure the network according to the instructions of the mobile phone.\nNote: Some device hotspot names may be user-defined\nCamera &",
+  "legacy_storage_bucket": "extracted-text"
+}

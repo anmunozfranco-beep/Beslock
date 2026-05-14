@@ -1,0 +1,10 @@
+# Precauciones clave
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#12
+
+Segun la guia OEM:
+- no cuelgues objetos en la manija
+- aplica presion moderada al registrar huellas
+- cambia las baterias con regularidad para evitar fugas
+- despues de la primera alerta de bateria baja aun puede haber alrededor de `100` aperturas, pero conviene reemplazar pilas cuanto antes
+- tras `5` intentos incorrectos consecutivos, el equipo puede bloquearse durante varios minutos

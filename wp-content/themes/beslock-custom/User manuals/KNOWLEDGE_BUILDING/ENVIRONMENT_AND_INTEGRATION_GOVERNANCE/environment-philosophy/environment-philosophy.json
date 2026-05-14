@@ -1,0 +1,10 @@
+{
+  "kind": "environment-philosophy",
+  "principles": [
+    "Environments are declared facts, not emergent states.",
+    "Environments inherit nothing implicitly; trust is per-environment.",
+    "Environments are reversible: deprecation, quarantine, and retirement are first-class.",
+    "Environments exist to serve governance, not to bypass it."
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

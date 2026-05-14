@@ -1,0 +1,67 @@
+{
+  "generated": "2026-05-13T21:12:10Z",
+  "kind": "retrieval-pipeline",
+  "kinds": [
+    {
+      "id": "operational-procedures",
+      "validation": [
+        "completeness-required-steps",
+        "provenance-attachment"
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "validation": [
+        "coverage-symptom",
+        "coverage-causal",
+        "provenance-attachment"
+      ]
+    },
+    {
+      "id": "warnings",
+      "validation": [
+        "mandatory-warnings-attached",
+        "severity-stamped",
+        "provenance-attachment"
+      ]
+    },
+    {
+      "id": "onboarding",
+      "validation": [
+        "coverage",
+        "provenance-attachment"
+      ]
+    },
+    {
+      "id": "escalation",
+      "validation": [
+        "retrievability",
+        "12-field-shape",
+        "provenance-attachment"
+      ]
+    },
+    {
+      "id": "adaptive-guidance",
+      "validation": [
+        "precedence-respected",
+        "no-confidence-elevation",
+        "provenance-attachment"
+      ]
+    }
+  ],
+  "rules": [
+    "Pipeline is read-only; mutations are out of scope for the prototype.",
+    "Predicate failures gate emission; ambiguity is surfaced, not silently resolved.",
+    "Pipeline outputs bind to a run-id + slice-id and are append-only.",
+    "Pipeline cannot retroactively alter prior emissions."
+  ],
+  "schema": "prototype-runtime-governance/1.0",
+  "stages": [
+    "intent-bind",
+    "access-pattern-resolve",
+    "fetch-read-only",
+    "validate-predicates",
+    "attach-provenance-manifest",
+    "emit-retrieval-package"
+  ]
+}

@@ -1,0 +1,15 @@
+# Arquitectura fisica observada
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#3
+
+e-Touch se instala como un conjunto compacto de rosetas circulares y manijas, no como una cerradura de placa larga.
+
+El PDF suplementario confirma estos componentes:
+- `front handle`
+- `rear handle`
+- `rear cover with battery`
+- `deadbolt`
+- `connecting pipe` largo y corto
+- tornillos de fijacion y tapa
+- `E-key`
+- buckle cover y piezas de montaje

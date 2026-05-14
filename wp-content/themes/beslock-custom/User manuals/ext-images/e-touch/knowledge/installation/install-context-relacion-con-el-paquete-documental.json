@@ -1,0 +1,31 @@
+{
+  "id": "install-context-relacion-con-el-paquete-documental",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "Este documento convive con:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "`e-Touch user manual - image-ready.md`",
+    "`e-Touch app manual.md`",
+    "`e-Touch - installation template standard.md`",
+    "`e-Touch - supplemental source review.md`"
+  ],
+  "storage_bucket": "installation"
+}

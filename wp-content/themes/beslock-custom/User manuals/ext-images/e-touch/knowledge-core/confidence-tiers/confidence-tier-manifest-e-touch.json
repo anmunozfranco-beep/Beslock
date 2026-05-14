@@ -1,0 +1,76 @@
+{
+  "channel_targets": [
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "default_tier_per_kind": {
+    "adaptive-guidance": "inferred-operational",
+    "battery-recovery": "candidate",
+    "escalation": "inferred-operational",
+    "fingerprint-enrollment": "ocr-derived",
+    "onboarding": "ocr-derived",
+    "operational-procedures": "ocr-derived",
+    "pairing": "ocr-derived",
+    "troubleshooting": "candidate",
+    "warnings": "ocr-derived"
+  },
+  "extraction_lineage": [
+    "corpus-enrichment/confidence-tier-manifest/confidence-tier-manifest-e-touch"
+  ],
+  "id": "confidence-tier-manifest-e-touch",
+  "language": "es-CO",
+  "menu_path": "",
+  "ocr_dependency": "none",
+  "product": "e-touch",
+  "runtime_ranking_weight": {
+    "candidate": 0.4,
+    "inferred-operational": 0.65,
+    "ocr-derived": 0.85,
+    "unresolved": 0.1,
+    "verified-internal": 0.95,
+    "verified-oem": 1.0
+  },
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "manifiesto de tiers de confianza usado por el runtime para ranking y disclosure",
+  "surface": "runtime-corpus",
+  "tiers": [
+    {
+      "description": "verificado contra documentación OEM oficial",
+      "id": "verified-oem",
+      "rank": 5
+    },
+    {
+      "description": "verificado por revisión interna sobre fuente OEM",
+      "id": "verified-internal",
+      "rank": 4
+    },
+    {
+      "description": "extraído por OCR a partir de manual original; pendiente de revisión",
+      "id": "ocr-derived",
+      "rank": 3
+    },
+    {
+      "description": "guía operacional inferida; requiere validación humana",
+      "id": "inferred-operational",
+      "rank": 2
+    },
+    {
+      "description": "candidato pendiente de revisión; no apto para producción",
+      "id": "candidate",
+      "rank": 1
+    },
+    {
+      "description": "ambigüedad no resuelta; el runtime debe escalar",
+      "id": "unresolved",
+      "rank": 0
+    }
+  ],
+  "type": "confidence-tier-manifest",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

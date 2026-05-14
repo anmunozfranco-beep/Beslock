@@ -1,0 +1,73 @@
+{
+  "id": "semantic-proc-cambiar-el-idioma",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-cambiar-el-idioma",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-cambiar-el-idioma.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-cambiar-el-idioma.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-cambiar-el-idioma",
+  "source_entity_type": "procedure",
+  "surface": "local-device",
+  "menu_path": "",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "activa el panel",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "ingresa `888#`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "entra al sistema de idioma",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "selecciona el idioma deseado",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "para español, usa `3009#` si corresponde a tu versión",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "confirma el cambio si el sistema lo solicita",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

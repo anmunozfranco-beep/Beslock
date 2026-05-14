@@ -1,0 +1,57 @@
+{
+  "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+  "type": "procedural-semantics",
+  "product": "e-flex",
+  "summary": "Normalized semantic actions for install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.2"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "empuja el interruptor de cambio hacia arriba",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "presiona el pestillo",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "gira el pestillo `180°`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "completa el apriete final del tornillo de direccion",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

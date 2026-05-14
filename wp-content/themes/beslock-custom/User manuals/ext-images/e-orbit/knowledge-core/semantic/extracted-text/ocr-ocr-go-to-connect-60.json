@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-go-to-connect-60",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Go To Connect",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-60"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-go-to-connect-60.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "2, Remote unlocking\n- Visitors ring the doorbell, the user's\nmobile phone can receive a remote\nunlock request.\n- Click the adaptive broadcast button\nto talk to the visitor.\n- Slide the release button to the right\nfor remote unlocking.\n3, Record query",
+  "legacy_storage_bucket": "extracted-text"
+}

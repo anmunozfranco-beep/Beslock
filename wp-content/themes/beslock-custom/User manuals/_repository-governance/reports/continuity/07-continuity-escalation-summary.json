@@ -1,0 +1,44 @@
+{
+  "schema": "continuity-governance/1.0",
+  "generated_at": "2026-05-13T19:34:40+00:00",
+  "package_fields": [
+    "incident-id",
+    "product-id + serial-or-identifier (when declared)",
+    "current operational-state-vector",
+    "active timeline + last completed stage",
+    "decision-trace-ref",
+    "reasoning-chain-ref",
+    "open hypotheses + lifecycle-state",
+    "open warnings + acknowledgement state",
+    "history references (failed paths, attempted recoveries)",
+    "confidence summary (tier counts)",
+    "OEM-required flags",
+    "provenance bundle"
+  ],
+  "rules": [
+    "escalation never strips context; it summarizes with provenance",
+    "escalation packages are read-only snapshots; receivers cannot mutate the originating context",
+    "OEM handoff requires a complete escalation package including OEM-required flags",
+    "support handoff preserves the incident-id; child sessions inherit by reference",
+    "unresolved-history must be propagated, never silently closed",
+    "escalation package generation is deterministic from declared inputs"
+  ],
+  "handoff_kinds": [
+    {
+      "id": "tier-2-handoff",
+      "audience": "advanced/installer/administrator"
+    },
+    {
+      "id": "tier-3-handoff",
+      "audience": "vendor/dealer support"
+    },
+    {
+      "id": "tier-4-handoff",
+      "audience": "OEM technical support"
+    },
+    {
+      "id": "tier-5-handoff",
+      "audience": "OEM RMA / replacement"
+    }
+  ]
+}

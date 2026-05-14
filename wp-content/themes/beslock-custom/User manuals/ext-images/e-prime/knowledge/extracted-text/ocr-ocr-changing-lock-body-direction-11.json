@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-changing-lock-body-direction-11",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Changing Lock Body Direction",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "II. Product Layout:\n■ Opening Methods: Multiple options including fingerprint, password, IC card, mechanical key,\nWeChat mini-program, etc., offering you a unique door-opening experience (specific configuration\nmay vary based on the actual product);\n■ Fingerprint: Utilizes advanced semiconductor sensors, 360-degree recognition angle, wide\nfingerprint capture area, high resolution, effectively preventing fake fingerprints;\n■ Password: Employs fashionable and advanced touchscreen button technology, allowing addition of\nup to 12 irrelevant digits before and after the correct password, effectively preventing awkward\nsituations when entering passwords in the presence of others;\n■ Dual Verification Mode: Can set combinations of two among fingerprint, password, and card for\nverification to unlock. Once set, only when two users verify simultaneously can the door be opened,\nsuitable for special occasions;\n■ User Management: Administrators have the highest authority (regular users can only open and close\nthe door), can edit lock settings, up to 9 administrators (can be fingerprint, password, card), total\ncapacity of 100 users;\n■ Alarm Functions: The device has anti-pry alarm, low voltage alarm, and error attempt alarm;\n■ Backup Power Supply: When batteries are depleted, a 5V power bank can be used for emergency\npower supply;\nIII. Precautions:\n1. After installing a new lock, perform initialization to clear any fingerprints entered during\ninstallation and debugging;\n2. The handle is a crucial component for opening and closing the door. Its flexibility directly\naffects the use of the door lock. Therefore, please refrain from hanging objects on the handle.\n3. When registering fingerprints, apply moderate finger pressure. Please avoid pressing too\nhard to prevent damage to the fingerprint scanner.\n4. The battery should not be used for an extended period. It is generally recommended to\nreplace the battery at least once every six months; otherwise, battery leakage may damage the\nsmart lock.\n5. This lock uses four AA (1.5V) high-performance alkaline batteries. When you receive the\nfirst \"Low battery, please replace\" warning, depending on the battery capacity, you can still\nopen the door approximately 100 times. At this point, you should replace the batteries\npromptly to avoid inconvenience due to battery depletion.\n6. After five consecutive incorrect inputs using any combination of fingerprint, card, or\npassword, an alarm will sound. The device will emit an alarm tone, and the door lock will be\ninoperable for 90 seconds.\nIV. User Guide:\n█\u0001Initialization Procedure:\nRemove the battery cover and press the \"SET\" button next to the battery co\nmpartment on the back panel for 5 seconds. A voice prompt will confirm \"I\nnitialization successful\".\n█\u0001Administrator Setup:",
+  "storage_bucket": "extracted-text"
+}

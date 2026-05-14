@@ -1,0 +1,87 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "levels": [
+    {
+      "id": "evidence",
+      "rank": 0,
+      "description": "Raw OEM source or extracted artifact; not citable as truth."
+    },
+    {
+      "id": "semantic-candidate",
+      "rank": 1,
+      "description": "Inferred semantic shape; speculative; never user-facing."
+    },
+    {
+      "id": "normalized-artifact",
+      "rank": 2,
+      "description": "Conforms to ontology and id rules; safe for internal cross-reference."
+    },
+    {
+      "id": "canonical-knowledge",
+      "rank": 3,
+      "description": "One authoritative representation; safe for retrieval indexing."
+    },
+    {
+      "id": "verified-truth",
+      "rank": 4,
+      "description": "Human/OEM-verified; safe for safety-critical surfaces and onboarding."
+    }
+  ],
+  "criteria": [
+    {
+      "from": "evidence",
+      "to": "semantic-candidate",
+      "requires": [
+        "source-traceability",
+        "extraction-method-recorded"
+      ]
+    },
+    {
+      "from": "semantic-candidate",
+      "to": "normalized-artifact",
+      "requires": [
+        "ontology-conformance",
+        "id-format-valid",
+        "terminology-aligned"
+      ]
+    },
+    {
+      "from": "normalized-artifact",
+      "to": "canonical-knowledge",
+      "requires": [
+        "duplicate-resolution",
+        "synonym-merge",
+        "bilingual-merge",
+        "cross-product-collision-resolved"
+      ]
+    },
+    {
+      "from": "canonical-knowledge",
+      "to": "verified-truth",
+      "requires": [
+        "human-review-pass OR oem-confirmation",
+        "evidence-link",
+        "no-open-debt-of-blocking-class"
+      ]
+    }
+  ],
+  "authorities": [
+    {
+      "level": "semantic-candidate",
+      "authority": "automated-pipeline"
+    },
+    {
+      "level": "normalized-artifact",
+      "authority": "automated-pipeline + ontology-validator"
+    },
+    {
+      "level": "canonical-knowledge",
+      "authority": "automated-pipeline + canonicalization-resolver"
+    },
+    {
+      "level": "verified-truth",
+      "authority": "human-reviewer OR OEM-confirmation"
+    }
+  ]
+}

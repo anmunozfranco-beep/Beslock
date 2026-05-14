@@ -1,0 +1,86 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "stable_surfaces": [
+    {
+      "id": "artifact-id-surface",
+      "guarantee": "ids are stable across versions; supersession recorded via lineage"
+    },
+    {
+      "id": "schema-surface",
+      "guarantee": "schemas are semver-versioned per LIFECYCLE_GOVERNANCE"
+    },
+    {
+      "id": "provenance-surface",
+      "guarantee": "every artifact carries source_refs + extraction_lineage"
+    },
+    {
+      "id": "context-bundle-surface",
+      "guarantee": "deterministic given (profile, inputs, knowledge-core snapshot)"
+    },
+    {
+      "id": "retrieval-chunk-surface",
+      "guarantee": "stable chunk ids; chunk content reproducible from canonical artifact"
+    },
+    {
+      "id": "channel-target-surface",
+      "guarantee": "channel_targets array declares opt-in surfaces (chatbot/rag/web/pdf/...)"
+    }
+  ],
+  "determinism_rules": [
+    "Same inputs + same knowledge-core snapshot => byte-identical context bundle.",
+    "Bundle generation records knowledge-core snapshot hash (future: integrate with lifecycle versioning).",
+    "Non-deterministic enrichments (e.g. ML embeddings) live OUTSIDE the access layer.",
+    "Lineage-safe: a bundle re-issued after artifact supersession explicitly references the new version + records the previous bundle hash."
+  ],
+  "consumption_gates": [
+    {
+      "consumer": "RAG",
+      "requires": [
+        "maturity ≥ canonical",
+        "lineage-break tolerance = 0",
+        "channel_targets includes 'rag'"
+      ]
+    },
+    {
+      "consumer": "semantic-API",
+      "requires": [
+        "stable artifact-ids",
+        "schema-surface pinned",
+        "access-trace logging"
+      ]
+    },
+    {
+      "consumer": "vector-retrieval",
+      "requires": [
+        "retrieval-chunk-surface",
+        "deterministic chunk boundaries",
+        "provenance per chunk"
+      ]
+    },
+    {
+      "consumer": "contextual-assistant",
+      "requires": [
+        "context-bundle-surface",
+        "audience-scope mandatory",
+        "warning-injection enforced"
+      ]
+    },
+    {
+      "consumer": "multimodal-system",
+      "requires": [
+        "visual-bundle available",
+        "visual-risk classified",
+        "component-visibility declared"
+      ]
+    },
+    {
+      "consumer": "adaptive-onboarding",
+      "requires": [
+        "onboarding-bundle by audience",
+        "cognitive-load-map present",
+        "interruption budget honoured"
+      ]
+    }
+  ]
+}

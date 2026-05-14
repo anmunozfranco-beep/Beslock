@@ -1,0 +1,15 @@
+{
+  "channels": [
+    "reasoning-trace",
+    "retrieval-trace",
+    "escalation-trace",
+    "continuity-trace",
+    "orchestration-trace",
+    "operational-audit-log"
+  ],
+  "format": "append-only NDJSON",
+  "implementation": "runtime-implementation/runtime/observability.py",
+  "log_dir": "runtime-implementation/observability/logs/",
+  "replay": "deterministic from captured channels alone",
+  "schema": "runtime-implementation-governance/1.0"
+}

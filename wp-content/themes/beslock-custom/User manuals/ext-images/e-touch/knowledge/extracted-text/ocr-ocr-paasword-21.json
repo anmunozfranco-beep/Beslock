@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-paasword-21",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Paasword",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-21"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "password according to the prompt.",
+  "storage_bucket": "extracted-text"
+}

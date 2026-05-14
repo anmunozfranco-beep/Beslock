@@ -1,0 +1,12 @@
+{
+  "flows": [
+    "intra→inter",
+    "runtime→runtime",
+    "ecosystem→OEM",
+    "ecosystem→human",
+    "continuity-preserving",
+    "ecosystem-broadcast"
+  ],
+  "rules": 6,
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

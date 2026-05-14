@@ -1,0 +1,31 @@
+{
+  "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "Valida estas condiciones antes de montar:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#4"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "el producto usa cuerpo de cerradura y paneles delantero/trasero separados",
+    "el eje cuadrado debe sobresalir entre `10 y 30 mm` desde la superficie de la puerta",
+    "si el saliente real no cae en ese rango, el husillo debe recortarse o pedirse a medida",
+    "confirma mano de apertura y sentido de pestillo antes de fijar paneles"
+  ],
+  "storage_bucket": "installation"
+}

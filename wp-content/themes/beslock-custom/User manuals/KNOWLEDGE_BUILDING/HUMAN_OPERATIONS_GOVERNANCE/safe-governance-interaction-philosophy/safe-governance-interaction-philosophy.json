@@ -1,0 +1,10 @@
+{
+  "kind": "safe-governance-interaction-philosophy",
+  "principles": [
+    "Governance interaction is dual-audited; no governance action is single-eyed.",
+    "Governance interaction respects the no-self-approval rule.",
+    "Governance interaction never silently expands scope.",
+    "Governance interaction always carries an explicit rationale."
+  ],
+  "schema": "human-operations-governance/1.0"
+}

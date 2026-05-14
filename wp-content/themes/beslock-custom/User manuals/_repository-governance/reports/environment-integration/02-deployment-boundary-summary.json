@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/environment-governance/deployment-boundaries/",
+  "boundaries": [
+    "runtime-boundary",
+    "deployment-isolation",
+    "cognition-isolation",
+    "reviewer-isolation",
+    "escalation-isolation",
+    "provenance-isolation",
+    "operational-segmentation"
+  ],
+  "invariants_count": 5,
+  "kind": "deployment-boundary-summary",
+  "schema": "environment-integration-governance/1.0"
+}

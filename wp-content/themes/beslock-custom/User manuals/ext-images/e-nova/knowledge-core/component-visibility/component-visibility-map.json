@@ -1,0 +1,56 @@
+{
+  "id": "component-visibility-map",
+  "type": "component-visibility-map",
+  "product": "e-nova",
+  "summary": "Components that must stay geometrically accurate in future Comfy renders for e-nova",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/capabilities/capability-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/entities/entity-catalog.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-29300-portale-ein-go-10.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-5-veces-despues-de-abrir-la-puerta-8.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-funciones-rendimiento-parametros-observaciones-12.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-nano-cerradura-pomo-inteligente-1.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-1-2.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-2-3.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-3-4.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-4-5.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/ocr-draft-index.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::COMPONENT_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "components": [
+    {
+      "component_id": "fingerprint-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "huella"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/product-images/"
+    }
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "Future ComfyUI workflows MUST consume the trusted_visual_reference PNGs as anchor inputs for any of these components. No generative inference of component position, count, sensor type, keypad layout, or handle direction is allowed."
+}

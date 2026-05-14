@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-set-the-bey-29",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Set The Bey",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-29"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Ses\nae is —\neae\nto install the batte\nkey in the rear handle hole for 1 seconds., the\neee\neee om\nfingerprint headlamp is on, press the fingerprint 5\nsing woardng to the\nnro",
+  "storage_bucket": "extracted-text"
+}

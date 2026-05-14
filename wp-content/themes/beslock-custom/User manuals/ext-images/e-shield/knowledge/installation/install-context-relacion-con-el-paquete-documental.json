@@ -1,0 +1,31 @@
+{
+  "id": "install-context-relacion-con-el-paquete-documental",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Dentro del estandar Beslock para e-Shield, este documento convive con:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "`e-Shield user manual - image-ready.md`",
+    "`e-Shield - installation template standard.md`",
+    "`e-Shield - supplemental source review.md`",
+    "manual de app normalizado"
+  ],
+  "storage_bucket": "installation"
+}

@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/hitl-patterns/",
+  "invariants_count": 5,
+  "kind": "hitl-pattern-summary",
+  "patterns": [
+    "interruption",
+    "approval-checkpoint",
+    "escalation-intervention",
+    "unsafe-runtime-interruption",
+    "operator-override",
+    "reviewer-arbitration",
+    "governance-intervention"
+  ],
+  "schema": "human-operations-governance/1.0"
+}

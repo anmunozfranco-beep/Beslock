@@ -1,0 +1,19 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/corpus-maturity/",
+  "dimensions": [
+    "operational-readiness",
+    "troubleshooting-maturity",
+    "warning-maturity",
+    "continuity-maturity",
+    "retrieval-readiness",
+    "runtime-trustworthiness"
+  ],
+  "kind": "corpus-maturity-summary",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "tiers": [
+    "nascent",
+    "emerging",
+    "operational",
+    "mature"
+  ]
+}

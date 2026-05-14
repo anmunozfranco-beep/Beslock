@@ -1,0 +1,51 @@
+{
+  "schema": "reasoning-governance/1.0",
+  "generated_at": "2026-05-13T19:21:43+00:00",
+  "conflict_types": [
+    {
+      "id": "evidence-conflict",
+      "description": "two evidence nodes disagree on the same claim"
+    },
+    {
+      "id": "procedure-conflict",
+      "description": "two procedures prescribe contradictory steps for the same situation"
+    },
+    {
+      "id": "predicate-conflict",
+      "description": "two validation predicates yield opposite results on the same state"
+    },
+    {
+      "id": "state-conflict",
+      "description": "current state cannot match the precondition of any eligible branch"
+    },
+    {
+      "id": "intent-conflict",
+      "description": "declared intent contradicts current operational state"
+    },
+    {
+      "id": "recovery-signal-conflict",
+      "description": "recovery indicators disagree (e.g., partial success + failure flag)"
+    },
+    {
+      "id": "authority-conflict",
+      "description": "two layers claim authority over the same decision"
+    }
+  ],
+  "resolution_rules": [
+    "no conflict may be resolved silently",
+    "evidence-conflict at verified-truth tier escalates to OEM (P0 procedures)",
+    "procedure-conflict requires composition-layer disambiguation (declared owner)",
+    "predicate-conflict halts the chain and emits validation-finding",
+    "state-conflict requires recovery-reasoning or escalation",
+    "intent-conflict requires ask-disambiguation (non-destructive) or escalate",
+    "authority-conflict resolves by the declared layer ordering (knowledge-core wins; adaptive/decision/reasoning never override)",
+    "every conflict event is recorded for knowledge-health intake"
+  ],
+  "unsafe_indicators": [
+    "abductive conclusion presented as verified",
+    "chain crossing an unsafe state without escalation",
+    "consequence claimed without declared causal link",
+    "recovery asserted without checkpoint anchor",
+    "destructive recommendation under low/ambiguous confidence"
+  ]
+}

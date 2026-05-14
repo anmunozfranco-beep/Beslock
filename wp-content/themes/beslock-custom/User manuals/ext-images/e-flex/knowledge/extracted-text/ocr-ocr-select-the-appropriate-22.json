@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-select-the-appropriate-22",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "Select The Appropriate",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-22"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "App Instructions",
+  "raw_text": "number key to complete\nsettings as per actual\nusage requirements",
+  "storage_bucket": "extracted-text"
+}

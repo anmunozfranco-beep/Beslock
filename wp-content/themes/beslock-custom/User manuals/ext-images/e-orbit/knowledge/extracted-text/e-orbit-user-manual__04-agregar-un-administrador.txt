@@ -1,0 +1,55 @@
+# Agregar un administrador
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4
+
+
+
+
+## Qué necesitas antes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4.1
+
+- la cerradura está encendida
+- el panel responde al activarlo
+- tienes acceso al menú del sistema
+- ya definiste quién será el administrador principal
+
+
+## Ruta de menú
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4.2
+
+**Agregar usuario → Agregar administrador**
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4.3
+
+1. activa el panel de la cerradura
+2. entra al menú
+3. selecciona **Agregar usuario**
+4. selecciona **Agregar administrador**
+5. elige el método de acceso que vas a registrar
+6. completa el proceso siguiendo las indicaciones del sistema
+7. guarda el registro
+8. prueba inmediatamente el acceso creado
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4.4
+
+Para el administrador principal, deja como mínimo un PIN, una huella y, si es posible, un método adicional de respaldo.
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4.5
+
+- el acceso funciona correctamente
+- la persona puede entrar sin dificultad
+- la cerradura sigue respondiendo con normalidad
+- existe al menos un método de respaldo
+
+---

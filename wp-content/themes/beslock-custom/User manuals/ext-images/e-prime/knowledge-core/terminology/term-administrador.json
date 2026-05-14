@@ -1,0 +1,37 @@
+{
+  "id": "term-administrador",
+  "type": "glossary-term",
+  "product": "e-prime",
+  "summary": "Usuario con permisos de gestión.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-administrador.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "administrador",
+  "oem_variants": [
+    "administrador",
+    "administrator",
+    "admin"
+  ],
+  "definition": "Usuario con permisos de gestión.",
+  "legacy_storage_bucket": "terminology"
+}

@@ -1,0 +1,14 @@
+{
+  "escalation_required_count": 6,
+  "prohibited_count": 11,
+  "safety_boundaries": [
+    "Knowledge-core remains the single source of truth across the federation.",
+    "Lifecycle P-tier gates are enforced at the federation boundary.",
+    "Visual-risk freeze contract applies at every federation boundary involving visual-assistance.",
+    "Irreversibility safeguards (two-token gate) are not bypassable via federation.",
+    "Provenance is mandatory at every cross-runtime crossing; unattributable messages are dropped."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "supervision_required_count": 5,
+  "unsafe_states_count": 7
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cap-objetivo",
+    "summary": "Explicar el flujo base de vinculacion de e-Flex con `TUYA APP` y la red `2",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "cap-alcance-real-de-la-fuente",
+    "summary": "La fuente OEM suplementaria muestra un flujo de alta corto y dos referencias de ecosistema:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

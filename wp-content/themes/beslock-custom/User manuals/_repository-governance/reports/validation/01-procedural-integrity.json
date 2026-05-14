@@ -1,0 +1,368 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "total_findings": 56,
+  "by_class": {
+    "empty-step-chain": 39,
+    "unresolved-action-references": 17
+  },
+  "per_product": {
+    "e-flex": {
+      "empty-step-chain": 10,
+      "unresolved-action-references": 5
+    },
+    "e-orbit": {
+      "empty-step-chain": 2
+    },
+    "e-prime": {
+      "unresolved-action-references": 5,
+      "empty-step-chain": 9
+    },
+    "e-shield": {
+      "unresolved-action-references": 6,
+      "empty-step-chain": 8
+    },
+    "e-touch": {
+      "unresolved-action-references": 1,
+      "empty-step-chain": 10
+    }
+  },
+  "findings": [
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "wf-qr-y-mini-programa-de-wechat",
+      "domain": "workflows"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-flex",
+      "id": "semantic-install-montar-panel-exterior-e-interior",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-flex",
+      "id": "semantic-wf-secuencia-local-en-la-cerradura",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-estado-editorial",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-objetivo",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-que-vas-a-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "install-context-validacion-despues-de-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "operation"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-flex",
+      "id": "proc-validacion-despues-del-alta",
+      "domain": "operation"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-orbit",
+      "id": "install-context-decision-sobre-plantilla-de-instalacion",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-orbit",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "operation"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-prime",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-prime",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-prime",
+      "id": "semantic-install-cambio-de-direccion",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-prime",
+      "id": "semantic-install-montar-el-panel-exterior-e-interior",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-prime",
+      "id": "semantic-install-usar-la-guia-de-instalacion-disponible",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-estado-editorial",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-objetivo",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-que-vas-a-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "install-context-validacion-despues-de-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "operation"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-prime",
+      "id": "proc-validacion-despues-del-alta",
+      "domain": "operation"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-install-montar-el-conjunto-exterior-e-interior",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-install-preparar-la-puerta",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-wf-agregar-la-cerradura",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-wf-ekeys-y-acceso-compartido",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-wf-tarjetas-rf-y-huellas-tarjetas-rf",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-shield",
+      "id": "semantic-wf-tarjetas-rf-y-huellas",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-estado-editorial",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-objetivo",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-problemas-frecuentes-de-instalacion",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-que-vas-a-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-shield",
+      "id": "install-context-validacion-despues-de-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "unresolved-action-references",
+      "product": "e-touch",
+      "id": "semantic-install-rol-de-la-guia-oem-disponible",
+      "domain": "procedural-semantics"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-alta-tecnica-inicial-del-administrador",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-arquitectura-fisica-observada",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-compatibilidad-antes-de-montar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-estado-editorial",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-objetivo",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-problemas-y-cautelas-basicas",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "install-context-validacion-despues-de-instalar",
+      "domain": "install"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "proc-requisitos-antes-de-vincular",
+      "domain": "operation"
+    },
+    {
+      "class": "empty-step-chain",
+      "product": "e-touch",
+      "id": "proc-reset-y-recuperacion",
+      "domain": "operation"
+    }
+  ]
+}

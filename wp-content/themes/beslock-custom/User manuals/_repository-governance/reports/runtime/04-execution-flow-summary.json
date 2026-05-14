@@ -1,0 +1,79 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "flows": [
+    {
+      "id": "retrieval-execution-flow",
+      "steps": [
+        "receive query intent",
+        "validate against declared intents",
+        "resolve via ACCESS_AND_CONSUMPTION",
+        "apply consumption gates",
+        "emit retrieval provenance",
+        "return read-only result"
+      ]
+    },
+    {
+      "id": "contextual-assembly-execution-flow",
+      "steps": [
+        "receive request + context vector",
+        "apply ADAPTIVE precedence",
+        "compose via COMPOSITION rules",
+        "validate composition",
+        "emit assembly provenance",
+        "return assembled package"
+      ]
+    },
+    {
+      "id": "reasoning-invocation-flow",
+      "steps": [
+        "bind context",
+        "open reasoning chain",
+        "evaluate causal links + predicates",
+        "track hypotheses",
+        "terminate (concluded / inconclusive / escalated)",
+        "emit chain provenance"
+      ]
+    },
+    {
+      "id": "escalation-flow",
+      "steps": [
+        "detect trigger",
+        "monotonic tier increment",
+        "build escalation package via CONTINUITY",
+        "hand off (read-only)",
+        "append escalation-history",
+        "emit provenance"
+      ]
+    },
+    {
+      "id": "interruption-flow",
+      "steps": [
+        "detect interruption case",
+        "halt destructive boundaries",
+        "preserve checkpoints + provenance",
+        "emit interruption event",
+        "await resume / cancel / escalate"
+      ]
+    },
+    {
+      "id": "continuity-restoration-flow",
+      "steps": [
+        "load context schema",
+        "verify session+product",
+        "re-evaluate last predicate",
+        "re-acknowledge open warnings/escalations",
+        "verify checkpoint anchor",
+        "rebind hypotheses",
+        "emit restoration provenance"
+      ]
+    }
+  ],
+  "rules": [
+    "every flow declares its steps; runtime may not insert undeclared steps",
+    "every flow emits provenance at completion or failure",
+    "flows are reproducible from declared inputs",
+    "flows respect contract guarantees of the layers they invoke",
+    "destructive flows always include an explicit-action step"
+  ]
+}

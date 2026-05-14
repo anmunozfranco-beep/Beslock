@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-choose-the-screw-of-26",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Choose The Screw Of",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-26"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-choose-the-screw-of-26.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Registered Administrator:\nthe\ncorresponding\nAl\nstat and fix the door\n1. Short press setting key (s1): add administrator / user function, if the system has\nlength according to the\nanale\nregistered administrator (not for the first time), verify the administrator;\nand tiohien the sereurs\n2. Long press setting key (s1): force the system to initialization mode without verifying\noo\noo\nthe administrator;\n3. Open key s2: quick open / close open mode;",
+  "legacy_storage_bucket": "extracted-text"
+}

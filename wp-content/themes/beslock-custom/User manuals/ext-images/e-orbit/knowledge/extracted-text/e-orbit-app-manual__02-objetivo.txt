@@ -1,0 +1,5 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#2
+
+Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2.pdf` y como apoyo tecnico `e-Orbit_1.xls`.

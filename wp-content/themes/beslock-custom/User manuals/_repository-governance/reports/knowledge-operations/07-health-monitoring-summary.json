@@ -1,0 +1,16 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/health-monitoring/",
+  "degradation_response_rules_count": 4,
+  "discipline_rules_count": 4,
+  "indicators": [
+    "corpus-health-score",
+    "stale-knowledge-detection",
+    "retrieval-degradation",
+    "warning-coverage-gap",
+    "troubleshooting-coverage-gap",
+    "runtime-reliability",
+    "queue-back-pressure"
+  ],
+  "kind": "health-monitoring-summary",
+  "schema": "knowledge-operations-governance/1.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "warning-limites-de-evidencia",
+  "type": "warning",
+  "product": "e-prime",
+  "summary": "- la fuente OEM disponible no detalla una guia extensa de modulos internos",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#9"
+  ],
+  "extraction_lineage": [
+    "knowledge/warning/warning-limites-de-evidencia.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "severity": "caution",
+  "details": [
+    "la fuente OEM disponible no detalla una guia extensa de modulos internos",
+    "no hay suficiente evidencia aqui para describir historiales, usuarios remotos o automatizaciones avanzadas con el mismo nivel de certeza",
+    "la app debe presentarse en Beslock como `TUYA` con red `2.4G`, salvo que una validacion posterior del producto comercial confirme otra variante"
+  ],
+  "legacy_storage_bucket": "warning"
+}

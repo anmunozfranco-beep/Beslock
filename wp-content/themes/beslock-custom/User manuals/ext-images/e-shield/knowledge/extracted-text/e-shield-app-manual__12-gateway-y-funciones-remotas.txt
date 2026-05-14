@@ -1,0 +1,19 @@
+# Gateway y funciones remotas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#12
+
+e-Shield usa Bluetooth por defecto.
+El `Gateway` actua como puente hacia una red domestica WiFi para funciones remotas.
+
+La fuente OCR atribuye al Gateway estas capacidades:
+- gestion remota del reloj
+- consulta del historial de registros
+- borrado o modificacion remota de contrasenas
+
+Flujo base para agregar Gateway:
+1. entra al apartado `Gateway`
+2. toca `+`
+3. selecciona el modelo de Gateway
+4. introduce la clave WiFi y el nombre del Gateway
+5. sigue el asistente hasta completar el enlace
+6. vincula la cerradura al Gateway cuando aparezca dentro del alcance detectado

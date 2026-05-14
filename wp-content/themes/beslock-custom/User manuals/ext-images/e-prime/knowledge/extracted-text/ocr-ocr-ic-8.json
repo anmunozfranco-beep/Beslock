@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-ic-8",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "█\u0001开门⽅式：指纹、密码、Ic卡、机械钥匙、微信⼩程序等多种开门⽅式，",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "带给您不⼀样的开门体验（具体配置以实物为准）;\n█\u0001指纹：采⽤先进的半导体传感器，360度识别⾓度、指纹采集⾯⼴，\n分辨率⾼，有效防⽌假指纹;\n█\u0001密码：采⽤时尚先进的触屏按键技术,可在正确密码前后增加12位⽆关\n密码,有效防⽌多⼈同⾏时输密码的尴尬;\n█\u0001双重验证模式：可设定指纹,密码和卡⽚两两组合验证开锁，设定后只\n有两个⽤户同时验证才可开门，适⽤特殊场合；\n█\u0001⽤户管理：管理员享有最⾼权限(普通⽤户只能开关门操作),可对锁进⾏\n编辑设置，管理员数量为9个(可为指纹、密码、卡⽚),总容量300个；\n█\u0001报警功能：本机有防翘报警,低压报警,试错报警;",
+  "storage_bucket": "extracted-text"
+}

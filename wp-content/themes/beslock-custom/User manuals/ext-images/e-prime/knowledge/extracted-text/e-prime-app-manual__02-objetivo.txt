@@ -1,0 +1,5 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#2
+
+Explicar la vinculacion de e-Prime con red 2.4G y app movil a partir de la fuente OEM disponible, sin mezclar este flujo con el manual de uso ni con el manual de instalacion.

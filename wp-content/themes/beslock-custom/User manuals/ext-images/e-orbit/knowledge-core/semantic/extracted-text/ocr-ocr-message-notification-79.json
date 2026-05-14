@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-message-notification-79",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Message Notification",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-79"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-message-notification-79.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Select an unlimited password and click Add or the + sign in the top right corner; Select effective time and implementation time; Click to obtain the password, the system automatically generates a set of ten-digit password,",
+  "legacy_storage_bucket": "extracted-text"
+}

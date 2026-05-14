@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "id": "no-composition-manifest-emitter",
+      "impact": "compositions declared; runtime does not yet emit composition-manifests at startup",
+      "severity": "high"
+    },
+    {
+      "id": "no-interop-contract-registry",
+      "impact": "contracts declared; no registry validates that running modules satisfy a declared contract version",
+      "severity": "high"
+    },
+    {
+      "id": "no-slice-manifest-emitter",
+      "impact": "deployment slices declared; runtime does not yet emit slice-manifests at startup or at halts",
+      "severity": "high"
+    },
+    {
+      "id": "no-substitute-contract-tests",
+      "impact": "contracts asserted as testable; substitute conformance tests not yet written",
+      "severity": "medium"
+    },
+    {
+      "id": "no-topology-hash",
+      "impact": "operational-composition-manifest declares module_topology_hash; not yet computed at runtime",
+      "severity": "medium"
+    },
+    {
+      "id": "no-environment-lifecycle-store",
+      "impact": "environment-manifest declares lifecycle_state; no store records state per env id (carry-over from layer 25)",
+      "severity": "medium"
+    },
+    {
+      "id": "carry-overs-from-phases-28-31",
+      "impact": "no executable consoles, identity store, claim mediator, explanation renderer, reviewer registry, queue store, event log, OEM binding store, integration registry, sandbox harness, incident-trace channel; 132 candidates still await elevation",
+      "severity": "high"
+    }
+  ],
+  "kind": "unresolved-convergence-risks",
+  "schema": "reference-stack-governance/1.0"
+}

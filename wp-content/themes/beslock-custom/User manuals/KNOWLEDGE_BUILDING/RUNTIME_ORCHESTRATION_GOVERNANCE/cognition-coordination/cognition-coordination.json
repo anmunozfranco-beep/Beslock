@@ -1,0 +1,107 @@
+{
+  "contracts": [
+    {
+      "from": "retrieval",
+      "guarantee": "retrieval emits read-only nodes + provenance; composition consumes without mutation",
+      "id": "retrieval↔composition",
+      "to": "composition",
+      "violation": "retrieval emits writable references OR composition mutates retrieved content"
+    },
+    {
+      "from": "composition",
+      "guarantee": "composition exposes profiles; adaptive selects per declared precedence (safety>simplifying)",
+      "id": "composition↔adaptive",
+      "to": "adaptive",
+      "violation": "adaptive selects a profile that violates safety precedence"
+    },
+    {
+      "from": "adaptive",
+      "guarantee": "adaptive supplies context dimensions; reasoning may not invent dimensions",
+      "id": "adaptive↔reasoning",
+      "to": "reasoning",
+      "violation": "reasoning operates on undeclared dimensions"
+    },
+    {
+      "from": "reasoning",
+      "guarantee": "reasoning emits chain-record + termination outcome; decision requires both",
+      "id": "reasoning↔decision",
+      "to": "decision",
+      "violation": "decision proceeds without termination outcome"
+    },
+    {
+      "from": "decision",
+      "guarantee": "decision triggers escalation when tier threshold reached; escalation is monotonic",
+      "id": "decision↔escalation",
+      "to": "escalation",
+      "violation": "escalation downgraded or silently resolved"
+    },
+    {
+      "from": "decision",
+      "guarantee": "destructive decisions require role + high-confidence + explicit-action before execution accepts them",
+      "id": "decision↔execution",
+      "to": "execution",
+      "violation": "execution accepts destructive without explicit-action"
+    },
+    {
+      "from": "execution",
+      "guarantee": "execution emits checkpoint records; continuity persists append-only",
+      "id": "execution↔continuity",
+      "to": "continuity",
+      "violation": "execution mutates continuity history"
+    },
+    {
+      "from": "continuity",
+      "guarantee": "continuity supplies session signals + scope; retrieval rebinds without mutation",
+      "id": "continuity↔retrieval",
+      "to": "retrieval",
+      "violation": "retrieval mutates continuity-supplied scope"
+    },
+    {
+      "from": "escalation",
+      "guarantee": "escalation snapshots continuity and locks orchestration to read-only handoff",
+      "id": "escalation↔continuity",
+      "to": "continuity",
+      "violation": "continuity continues writing during handoff"
+    },
+    {
+      "from": "validation",
+      "guarantee": "validation predicates are read-only checks invokable by any loop",
+      "id": "validation↔all",
+      "to": "all",
+      "violation": "validation triggers a state mutation"
+    },
+    {
+      "from": "experience",
+      "guarantee": "experience-governance exposes warning levels + skill models; adaptive consumes read-only",
+      "id": "experience↔adaptive",
+      "to": "adaptive",
+      "violation": "adaptive elevates warning level beyond source"
+    },
+    {
+      "from": "lifecycle",
+      "guarantee": "lifecycle gates package release (P-tier); composition cannot bypass",
+      "id": "lifecycle↔composition",
+      "to": "composition",
+      "violation": "composition releases content above its P-tier"
+    },
+    {
+      "from": "knowledge-core",
+      "guarantee": "knowledge-core is the only source of truth; retrieval is read-only",
+      "id": "knowledge-core↔retrieval",
+      "to": "retrieval",
+      "violation": "retrieval emits a node not present in knowledge-core"
+    }
+  ],
+  "generated": "2026-05-13T20:29:18Z",
+  "kind": "cognition-coordination",
+  "rules": [
+    "Coordination contracts are bilateral and declared; runtime cannot invent new edges.",
+    "Coordination contract violations are runtime errors, not warnings.",
+    "Coordination is observable: every cross-contract message emits provenance.",
+    "Coordination preserves directionality (read-only into knowledge-core; append-only into continuity).",
+    "Coordination cannot bridge two systems via an undeclared intermediary.",
+    "Coordination never elevates confidence, never promotes P-tier, never reassigns role.",
+    "Coordination across destructive surfaces requires the explicit-action gate before message acceptance."
+  ],
+  "schema": "runtime-orchestration-governance/1.0"
+}

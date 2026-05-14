@@ -1,0 +1,157 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "pilots": [
+    {
+      "id": "onboarding-pilot",
+      "operator_constraints": [
+        "no autonomous progression",
+        "no skipped acknowledgements",
+        "no replay-bypass"
+      ],
+      "safety_boundaries": [
+        "sandbox env (layer 25)",
+        "candidate-only corpus surface",
+        "no production telemetry sinks"
+      ],
+      "scope": "supervised onboarding flows for one product at a time",
+      "supervision": "one accountable operator per session; receipts captured per layer-24 contract",
+      "trust_thresholds": {
+        "block_below": 0.3,
+        "escalate_below": 0.5,
+        "minimum_confidence": 0.6
+      }
+    },
+    {
+      "id": "troubleshooting-pilot",
+      "operator_constraints": [
+        "must declare hypothesis before action",
+        "must record observed outcome",
+        "must invoke replay on uncertainty"
+      ],
+      "safety_boundaries": [
+        "read-only against installed-base data",
+        "no remote actuation",
+        "session-scoped continuity only"
+      ],
+      "scope": "guided troubleshooting with replay-assisted reasoning",
+      "supervision": "operator + reviewer-on-call; both receipts captured",
+      "trust_thresholds": {
+        "block_below": 0.35,
+        "escalate_below": 0.55,
+        "minimum_confidence": 0.65
+      }
+    },
+    {
+      "id": "reviewer-workflow-pilot",
+      "operator_constraints": [
+        "one candidate at a time",
+        "decision rationale captured",
+        "no batch promotion"
+      ],
+      "safety_boundaries": [
+        "dual-review env (layer 25) for trust-boundary changes",
+        "audit trail mandatory"
+      ],
+      "scope": "reviewer elevation of pending candidates (132 outstanding)",
+      "supervision": "scoped reviewer role per layer-23; revocation first-class",
+      "trust_thresholds": {
+        "dual_review_required_for": [
+          "external",
+          "production-shadow"
+        ],
+        "single_reviewer_max_tier": "internal"
+      }
+    },
+    {
+      "id": "oem-ingestion-pilot",
+      "operator_constraints": [
+        "provenance complete or reject",
+        "no merge into trusted corpus until promoted"
+      ],
+      "safety_boundaries": [
+        "ingestion env only",
+        "candidate-tier on entry",
+        "no runtime exposure pre-promotion"
+      ],
+      "scope": "controlled OEM manual ingestion through the dual-review binding (layers 23 + 25)",
+      "supervision": "ingestion operator + content reviewer (cannot be same person)",
+      "trust_thresholds": {
+        "entry_tier": "candidate",
+        "promotion_requires": "dual-review + reviewer-of-scope"
+      }
+    },
+    {
+      "id": "escalation-handling-pilot",
+      "operator_constraints": [
+        "acknowledge within observation window",
+        "record disposition"
+      ],
+      "safety_boundaries": [
+        "no auto-escalation loops",
+        "termination after one operator hop"
+      ],
+      "scope": "controlled escalation path exercise across runtime → operator → reviewer",
+      "supervision": "escalation receiver named per channel; SLA observed not enforced",
+      "trust_thresholds": {
+        "escalate_on_confidence_below": 0.5,
+        "escalate_on_continuity_break": true
+      }
+    },
+    {
+      "id": "replay-assisted-review-pilot",
+      "operator_constraints": [
+        "replay must complete before decision",
+        "discrepancies recorded as findings"
+      ],
+      "safety_boundaries": [
+        "replay reads supplemental corpus only",
+        "skips synthetic empty packages",
+        "no live corpus mutation"
+      ],
+      "scope": "reviewers exercise replay (layer 22) to validate prior runtime decisions",
+      "supervision": "reviewer-of-scope; replay receipts captured",
+      "trust_thresholds": {
+        "replay_divergence_alert_threshold": 0.1
+      }
+    }
+  ],
+  "rules": [
+    "every pilot is supervised; no autonomous pilot may run",
+    "every pilot is sandboxed (layer-25 env tier appropriate to its scope)",
+    "every pilot is candidate-corpus-only unless reviewer-promoted (layer 23)",
+    "every pilot must produce supervision receipts (layer 24) before closing",
+    "no pilot may bypass replay (layer 22) when confidence falls below its declared escalate threshold",
+    "no pilot may auto-promote candidates; promotion is a separate reviewer act"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

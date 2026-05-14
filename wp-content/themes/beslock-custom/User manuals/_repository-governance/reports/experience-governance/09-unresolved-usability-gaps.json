@@ -1,0 +1,46 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "gaps": [
+    {
+      "id": "gap.per-product-journey-specialisation",
+      "severity": "medium",
+      "note": "Journey archetypes are platform-wide; per-product overrides not yet authored."
+    },
+    {
+      "id": "gap.troubleshooting-symptom-corpus",
+      "severity": "high",
+      "note": "Per-product symptom catalogue is mostly empty (only e-shield has any troubleshooting/ artifact)."
+    },
+    {
+      "id": "gap.onboarding-flow-instantiation-per-product",
+      "severity": "medium",
+      "note": "Onboarding flows are archetypes; per-product step content uses canonical procedure ids that themselves carry coverage gaps (e-nova)."
+    },
+    {
+      "id": "gap.priority-assignment-coverage",
+      "severity": "low",
+      "note": "Priority tiers cover canonical procedures only; per-product specialisations not yet tiered."
+    },
+    {
+      "id": "gap.cognitive-load-evidence",
+      "severity": "medium",
+      "note": "Cognitive load assignments are editorial estimates; no field evidence corpus yet."
+    },
+    {
+      "id": "gap.guidance-trigger-instrumentation",
+      "severity": "low",
+      "note": "Triggers declared, not yet wired to any consumer surface."
+    },
+    {
+      "id": "gap.maturity-field-backfill",
+      "severity": "high",
+      "note": "Carry-over from Phase 9 — required maturity field not yet on per-product artifacts."
+    },
+    {
+      "id": "gap.shared-concept-membership",
+      "severity": "medium",
+      "note": "Carry-over — shared-concept membership map is empty; experience layer cannot yet resolve concept→per-product artifact."
+    }
+  ]
+}

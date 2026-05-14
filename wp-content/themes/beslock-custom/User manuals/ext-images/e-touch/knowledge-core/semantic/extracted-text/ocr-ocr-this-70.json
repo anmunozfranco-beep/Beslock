@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-this-70",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "This",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-70"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-this-70.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "means successful.\nQ:What is the initial password if the fingerprint lock is restored to the factory setting?\nA: Initial password is \"123456\"#\nQ:How to do if the lock run out of the battery?\nA:Use the power bank to connect the USB port to charge then use of use the key toopen the door.\nQ:How to do if you forget the password?\nA:Use the fingerprint or key to unlocked the door and then restore the factory settingsto reset the password.",
+  "legacy_storage_bucket": "extracted-text"
+}

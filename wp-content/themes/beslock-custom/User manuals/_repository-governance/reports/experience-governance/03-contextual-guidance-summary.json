@@ -1,0 +1,10 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "trigger_count": 9,
+  "interrupting_triggers": [
+    "trigger.high-risk-procedure",
+    "trigger.warning-blocking"
+  ],
+  "interruption_budget": "≤2 hard interrupts per onboarding session"
+}

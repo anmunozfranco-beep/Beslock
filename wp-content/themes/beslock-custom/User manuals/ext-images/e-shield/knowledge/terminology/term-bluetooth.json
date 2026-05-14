@@ -1,0 +1,31 @@
+{
+  "id": "term-bluetooth",
+  "type": "glossary-term",
+  "product": "e-shield",
+  "summary": "Canal inalámbrico de corto alcance.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "canonical": "Bluetooth",
+  "oem_variants": [
+    "Bluetooth",
+    "BLE"
+  ],
+  "definition": "Canal inalámbrico de corto alcance.",
+  "storage_bucket": "terminology"
+}

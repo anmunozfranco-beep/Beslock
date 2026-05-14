@@ -1,0 +1,69 @@
+{
+  "contract_invariants": [
+    "every integration is governed by a declared trust contract; undeclared integrations are forbidden",
+    "no integration may write to canonical knowledge-core JSON",
+    "no integration may bypass supervision-receipt emission",
+    "no integration may suppress provenance or candidate-only markers for UX reasons",
+    "every integration is reversible; revocation is a first-class governance action"
+  ],
+  "integration_contracts": [
+    {
+      "escalation_obligation": "render path MUST surface candidate-only / unresolved markers verbatim",
+      "id": "wordpress",
+      "interaction_contract": "read-only via theme/template; no runtime invocation from PHP",
+      "provenance_guarantee": "every rendered fragment cites manifest_id + source_files[].sha256",
+      "supervision_contract": "all rendered packages carry a supervision-receipt id",
+      "trust_contract": "render-only consumer of knowledge-core JSON; no write path back"
+    },
+    {
+      "escalation_obligation": "responses MUST refuse to omit candidate_only when present",
+      "id": "retrieval-apis",
+      "interaction_contract": "request/response over declared schema; no streaming side effects",
+      "provenance_guarantee": "responses include provenance block before content block",
+      "supervision_contract": "every response carries supervision-receipt + manifest_id",
+      "trust_contract": "read-only against runtime channels"
+    },
+    {
+      "escalation_obligation": "checksum mismatch halts ingestion and emits an escalation-trace event",
+      "id": "oem-ingestion-systems",
+      "interaction_contract": "one-way: OEM source → ingestion env → staging; never directly to production",
+      "provenance_guarantee": "every ingested artifact records source url, sha256, fetched_at, fetched_by",
+      "supervision_contract": "OEM-reviewer dual-review on every binding",
+      "trust_contract": "semi-trusted; mirrors OEM sources via checksum-verified ingest"
+    },
+    {
+      "escalation_obligation": "consumers MUST forward unsafe-runtime events to escalation-console subscribers",
+      "id": "observability-systems",
+      "interaction_contract": "tail-based subscription; no back-channel mutation",
+      "provenance_guarantee": "events are immutable; consumers receive verbatim records",
+      "supervision_contract": "consumer identity is declared; no anonymous consumers",
+      "trust_contract": "read-only consumer of NDJSON channels"
+    },
+    {
+      "escalation_obligation": "consoles MUST surface escalation-trace events without delay",
+      "id": "operational-consoles",
+      "interaction_contract": "all actions go through declared decision sets per checkpoint",
+      "provenance_guarantee": "consoles render provenance before recommendation",
+      "supervision_contract": "every console action carries operator id + supervision-receipt",
+      "trust_contract": "operator-surfaces (layer 24); design-only here"
+    },
+    {
+      "escalation_obligation": "copilots MUST refuse to suggest at candidate-only + irreversible-adjacent context",
+      "id": "future-copilots",
+      "interaction_contract": "operator-led activation; per-checkpoint approval",
+      "provenance_guarantee": "copilots cite manifest_id + confidence tier alongside every suggestion",
+      "supervision_contract": "every copilot suggestion is logged + reversible",
+      "trust_contract": "supervised assistive surface; never autonomous"
+    },
+    {
+      "escalation_obligation": "modalities MUST honor halt and demote events from the runtime",
+      "id": "future-multimodal-runtimes",
+      "interaction_contract": "modalities subscribe to existing NDJSON channels; do not introduce parallel channels",
+      "provenance_guarantee": "every modality renders provenance and confidence in its native form",
+      "supervision_contract": "every modality declares its operator profile mapping",
+      "trust_contract": "subordinate to runtime governance; new modalities are channels, not new architecture"
+    }
+  ],
+  "kind": "integration-contracts",
+  "schema": "environment-integration-governance/1.0"
+}

@@ -1,0 +1,69 @@
+{
+  "product": "e-orbit",
+  "manifest_version": "1.0.0",
+  "generated_on": "2026-05-13",
+  "canonical_roots": {
+    "source_of_truth": "source-of-truth/",
+    "structured_knowledge": "structured-knowledge/",
+    "visual_system": "visual-system/",
+    "publishing": "publishing/",
+    "automation": "automation/",
+    "metadata": "metadata/"
+  },
+  "current_domain_assets": {
+    "source_of_truth": [
+      "source-of-truth/product-images/e-Orbit.png",
+      "source-of-truth/manuals/e-Orbit user manual.md",
+      "source-of-truth/manuals/e-Orbit app manual.md",
+      "source-of-truth/manuals/e-Orbit user manual.pdf",
+      "source-of-truth/manuals/e-Orbit_2.pdf",
+      "source-of-truth/manuals/e-Orbit - supplemental source review.md",
+      "source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+      "source-of-truth/specifications/e-Orbit_1.xls"
+    ],
+    "structured_knowledge": [
+      "structured-knowledge/manual.json",
+      "structured-knowledge/glossary.json",
+      "structured-knowledge/faq.json",
+      "structured-knowledge/workflows.json",
+      "structured-knowledge/features/capabilities.json",
+      "structured-knowledge/procedures/procedure-catalog.json",
+      "structured-knowledge/semantic-relations/knowledge-graph.json"
+    ],
+    "visual_system": [
+      "visual-system/references/e-orbit-visual-profile.md",
+      "visual-system/prompts/ai-image-prompts.md",
+      "visual-system/generation-matrices/image-generation-matrix.md",
+      "visual-system/validations/visual-validation.md",
+      "visual-system/qa/image-production-status.md",
+      "visual-system/outputs/generated/",
+      "visual-system/outputs/review-draft/",
+      "visual-system/outputs/web-ready/"
+    ],
+    "publishing": [
+      "publishing/web/manuals/e-Orbit user manual - review-draft.md",
+      "publishing/web/manuals/e-Orbit user manual - image-ready.md",
+      "publishing/web/assets/review-draft/",
+      "publishing/web/assets/web-ready/",
+      "publishing/web/review-previews/e-orbit-user-manual-review-draft.html"
+    ],
+    "automation": [
+      "automation/batch/pilot-wave-01.md",
+      "automation/batch/pilot-wave-01-variant-pack.md",
+      "automation/orchestrators/orchestration-manifest.json"
+    ],
+    "metadata": [
+      "metadata/versions/domain-version.json",
+      "metadata/lineage/source-lineage.json",
+      "metadata/traceability/selected-assets-register.md",
+      "metadata/audit/manual-validation-checklist.md",
+      "metadata/audit/notes.md",
+      "metadata/audit/legacy-flat-files/"
+    ]
+  },
+  "visual_generation_policy": {
+    "authorized_renderer": "ComfyUI",
+    "current_validated_workflow_exports": [],
+    "fallback_rule": "If exact identity preservation cannot be guaranteed by workflow conditioning, switch to deterministic compositing with the real product cutout."
+  }
+}

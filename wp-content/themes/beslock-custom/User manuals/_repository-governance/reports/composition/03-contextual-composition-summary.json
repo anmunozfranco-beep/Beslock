@@ -1,0 +1,143 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "dimensions": [
+    {
+      "id": "user-role",
+      "values": [
+        "beginner",
+        "installer",
+        "administrator",
+        "support-tier",
+        "maintenance-operator",
+        "advanced"
+      ]
+    },
+    {
+      "id": "operational-stage",
+      "values": [
+        "pre-install",
+        "install",
+        "first-use",
+        "routine-operation",
+        "maintenance",
+        "recovery"
+      ]
+    },
+    {
+      "id": "product-state",
+      "values": [
+        "unconfigured",
+        "paired-app",
+        "admin-set",
+        "users-enrolled",
+        "low-battery",
+        "lockout",
+        "factory-default"
+      ]
+    },
+    {
+      "id": "troubleshooting-state",
+      "values": [
+        "nominal",
+        "symptom-observed",
+        "tier1-active",
+        "tier3-escalated",
+        "vendor-escalated"
+      ]
+    },
+    {
+      "id": "onboarding-progress",
+      "values": [
+        "not-started",
+        "in-progress",
+        "completed",
+        "abandoned"
+      ]
+    },
+    {
+      "id": "confidence-level",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "id": "maturity-level",
+      "values": [
+        "normalized",
+        "canonicalized",
+        "verified",
+        "promoted"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "beginner-installer",
+      "user_role": "installer",
+      "operational_stage": "install",
+      "package": "installation-package",
+      "filters": {
+        "audience_scope": "installer",
+        "maturity_floor": "normalized"
+      }
+    },
+    {
+      "id": "first-time-end-user",
+      "user_role": "beginner",
+      "operational_stage": "first-use",
+      "package": "onboarding-package",
+      "filters": {
+        "audience_scope": "beginner",
+        "interruption_budget": 2
+      }
+    },
+    {
+      "id": "administrator-setup",
+      "user_role": "administrator",
+      "operational_stage": "first-use",
+      "package": "administrator-setup-package",
+      "filters": {
+        "audience_scope": "administrator"
+      }
+    },
+    {
+      "id": "maintenance-operator",
+      "user_role": "maintenance-operator",
+      "operational_stage": "maintenance",
+      "package": "maintenance-package",
+      "filters": {
+        "audience_scope": "maintenance"
+      }
+    },
+    {
+      "id": "support-tier-troubleshoot",
+      "user_role": "support-tier",
+      "operational_stage": "recovery",
+      "package": "troubleshooting-package",
+      "filters": {
+        "audience_scope": "troubleshooting",
+        "maturity_floor": "verified"
+      }
+    },
+    {
+      "id": "emergency-recovery",
+      "user_role": "beginner",
+      "operational_stage": "recovery",
+      "package": "recovery-package",
+      "filters": {
+        "audience_scope": "maintenance",
+        "guidance_intensity": "hard-interrupt"
+      }
+    }
+  ],
+  "rules": [
+    "Composition profile = (user_role, operational_stage, product_state, confidence_level, maturity_level).",
+    "Missing dimensions default to most restrictive: beginner / pre-install / unconfigured / low / verified.",
+    "Confidence-level=low forces an explicit confidence-warning attached to the assembled package.",
+    "Maturity-level upgrades narrow the candidate set; downgrades require an audit reason.",
+    "Composition is recomputed when any dimension changes; no stale composition surfaces."
+  ]
+}

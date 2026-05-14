@@ -1,0 +1,58 @@
+{
+  "id": "proc-cambiar-el-idioma",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "La extracción disponible muestra ingreso con `888#` y selección de español con `3009#`",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "local-device",
+  "menu_path": "",
+  "preconditions": [
+    "la cerradura está encendida",
+    "el panel responde al activarlo",
+    "el usuario tiene acceso al equipo"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "activa el panel"
+    },
+    {
+      "n": 2,
+      "text": "ingresa `888#`"
+    },
+    {
+      "n": 3,
+      "text": "entra al sistema de idioma"
+    },
+    {
+      "n": 4,
+      "text": "selecciona el idioma deseado"
+    },
+    {
+      "n": 5,
+      "text": "para español, usa `3009#` si corresponde a tu versión"
+    },
+    {
+      "n": 6,
+      "text": "confirma el cambio si el sistema lo solicita"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "configuration"
+}

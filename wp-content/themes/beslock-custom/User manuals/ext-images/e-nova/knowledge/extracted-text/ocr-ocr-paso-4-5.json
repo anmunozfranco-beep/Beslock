@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-paso-4-5",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "Paso 4",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-5"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "1. Ajuste la posición horizontal y vertical del\npomo de la cerradura inversa de acuerdo\ncon el estado horizontal y vertical de la barra\ny de conexión, para que el pomo y la barra de",
+  "storage_bucket": "extracted-text"
+}

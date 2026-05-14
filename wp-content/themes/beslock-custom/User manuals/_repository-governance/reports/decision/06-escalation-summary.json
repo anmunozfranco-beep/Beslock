@@ -1,0 +1,80 @@
+{
+  "schema": "decision-intelligence-governance/1.0",
+  "generated_at": "2026-05-13T19:16:08+00:00",
+  "tiers": [
+    {
+      "tier": 1,
+      "id": "self-service",
+      "audience": "end user"
+    },
+    {
+      "tier": 2,
+      "id": "advanced-self-service",
+      "audience": "advanced/installer/administrator"
+    },
+    {
+      "tier": 3,
+      "id": "support-required",
+      "audience": "vendor/dealer support"
+    },
+    {
+      "tier": 4,
+      "id": "vendor-intervention",
+      "audience": "OEM technical support"
+    },
+    {
+      "tier": 5,
+      "id": "rma-irrecoverable",
+      "audience": "OEM RMA / replacement"
+    }
+  ],
+  "triggers": [
+    {
+      "id": "validation-failure-x3",
+      "from": 1,
+      "to": 2
+    },
+    {
+      "id": "pairing-failed-x3",
+      "from": 2,
+      "to": 3
+    },
+    {
+      "id": "lockout-cycles-ge-2",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "id": "battery-replacement-failure",
+      "from": 2,
+      "to": 4
+    },
+    {
+      "id": "firmware-rollback-failure",
+      "from": 4,
+      "to": 5
+    },
+    {
+      "id": "irrecoverable-failure",
+      "from": "*",
+      "to": 5
+    },
+    {
+      "id": "conflicting-verified-truth",
+      "from": "*",
+      "to": 4
+    },
+    {
+      "id": "destructive-under-ambiguity",
+      "from": "*",
+      "to": 3
+    }
+  ],
+  "rules": [
+    "escalation is monotonic during a single incident (no silent demotion)",
+    "escalation cannot return to tier 1 without verified recovery (predicate)",
+    "irrecoverable failures emit RMA escalation; no 'retry' affordance",
+    "OEM intervention required for: firmware-bricked, conflicting verified-truth on P0, irrecoverable mid-destructive",
+    "escalation events carry provenance and operational state snapshot"
+  ]
+}

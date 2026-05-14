@@ -1,0 +1,71 @@
+{
+  "id": "semantic-install-usar-la-plantilla-de-instalacion",
+  "type": "procedural-semantics",
+  "product": "e-shield",
+  "summary": "Normalized semantic actions for install-usar-la-plantilla-de-instalacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/install/install-usar-la-plantilla-de-instalacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/install/install-usar-la-plantilla-de-instalacion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-usar-la-plantilla-de-instalacion",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "imprime el PDF original sin ajuste de escala",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "confirma si la hoja visible corresponde a apertura derecha o si debes espejarla para apertura izquierda",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "alinea la referencia de `LATERAL DE PUERTA` exactamente con el canto de la puerta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "respeta el retiro de borde visible de `60 mm`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "marca sobre la puerta solo despues de confirmar que la impresion no fue reducida ni ampliada",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

@@ -1,0 +1,28 @@
+# Cambio de direccion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9
+
+![Cambio de direccion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-03.png)
+
+
+## Cambio de direccion de la manija
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.1
+
+1. afloja el tornillo de cambio de direccion
+2. gira la manija `180°` hacia la parte superior de la cerradura
+3. gira el cambiador de direccion
+4. vuelve a apretar el tornillo
+
+
+## Cambio de direccion del cuerpo del pestillo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.2
+
+1. empuja el interruptor de cambio hacia arriba
+2. presiona el pestillo
+3. gira el pestillo `180°`
+4. completa el apriete final del tornillo de direccion
+
+Nota critica:
+- no retires los tornillos del orificio de la manija durante el cambio de direccion

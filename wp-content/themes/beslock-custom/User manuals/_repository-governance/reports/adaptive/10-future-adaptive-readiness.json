@@ -1,0 +1,66 @@
+{
+  "schema": "adaptive-operational-governance/1.0",
+  "generated_at": "2026-05-13T19:06:08+00:00",
+  "future_consumers": [
+    {
+      "id": "adaptive-onboarding-assistant",
+      "gates": [
+        "context-vector emitter",
+        "skill declaration channel",
+        "checkpoint registry per procedure"
+      ]
+    },
+    {
+      "id": "contextual-troubleshooting-assistant",
+      "gates": [
+        "symptom corpus >= 10 per product",
+        "retry-threshold telemetry channel",
+        "branch provenance logging"
+      ]
+    },
+    {
+      "id": "state-aware-chatbot-system",
+      "gates": [
+        "execution snapshot-hash on traces",
+        "intent declaration channel",
+        "confidence tier on nodes"
+      ]
+    },
+    {
+      "id": "adaptive-multimodal-guidance",
+      "gates": [
+        "visual-intent attached to physical-installation procedures",
+        "evidence-disclosure renderer contract"
+      ]
+    },
+    {
+      "id": "future-visual-assistance",
+      "gates": [
+        "visual-risk reclassification freeze in place",
+        "fallback registry for visual-unavailable contexts"
+      ]
+    },
+    {
+      "id": "contextual-operational-rendering",
+      "gates": [
+        "adaptation-effect contract honoured by renderer",
+        "non-removable safeguards enforced at render boundary"
+      ]
+    },
+    {
+      "id": "personalized-operational-assistance",
+      "gates": [
+        "per-user context vector with consent contract",
+        "skill model declared by host application"
+      ]
+    }
+  ],
+  "products": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

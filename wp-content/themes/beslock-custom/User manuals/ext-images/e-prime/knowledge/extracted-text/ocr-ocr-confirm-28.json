@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-confirm-28",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Confirm",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-28"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "whether to\ninitialize\nthe system,\n* to return,\n# to\nconfirm\n█\u0001User Settings:",
+  "storage_bucket": "extracted-text"
+}

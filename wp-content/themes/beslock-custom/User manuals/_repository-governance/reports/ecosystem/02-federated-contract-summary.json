@@ -1,0 +1,28 @@
+{
+  "by_kind": [
+    "context-exchange",
+    "continuity",
+    "escalation-exchange",
+    "inter-runtime",
+    "orchestration",
+    "publication",
+    "reasoning",
+    "schema",
+    "shared-cognition",
+    "visual"
+  ],
+  "contracts": [
+    "inter-runtime-base",
+    "context-exchange",
+    "escalation-exchange",
+    "reasoning-interoperability",
+    "orchestration-federation",
+    "shared-cognition-boundary",
+    "continuity-exchange",
+    "visual-federation",
+    "publication-federation",
+    "schema-pin-federation"
+  ],
+  "rules": 5,
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

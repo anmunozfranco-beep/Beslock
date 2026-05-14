@@ -1,0 +1,7 @@
+# Limites de evidencia
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#9
+
+- la fuente OEM disponible no detalla una guia extensa de modulos internos
+- no hay suficiente evidencia aqui para describir historiales, usuarios remotos o automatizaciones avanzadas con el mismo nivel de certeza
+- la app debe presentarse en Beslock como `TUYA` con red `2.4G`, salvo que una validacion posterior del producto comercial confirme otra variante

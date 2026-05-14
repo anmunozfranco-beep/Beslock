@@ -1,0 +1,45 @@
+{
+  "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "afloja el tornillo de cambio de direccion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.1"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "afloja el tornillo de cambio de direccion"
+    },
+    {
+      "n": 2,
+      "text": "gira la manija `180°` hacia la parte superior de la cerradura"
+    },
+    {
+      "n": 3,
+      "text": "gira el cambiador de direccion"
+    },
+    {
+      "n": 4,
+      "text": "vuelve a apretar el tornillo"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

@@ -1,0 +1,46 @@
+{
+  "by_pair": [
+    {
+      "retrieval": "composition"
+    },
+    {
+      "composition": "adaptive"
+    },
+    {
+      "adaptive": "reasoning"
+    },
+    {
+      "reasoning": "decision"
+    },
+    {
+      "decision": "escalation"
+    },
+    {
+      "decision": "execution"
+    },
+    {
+      "execution": "continuity"
+    },
+    {
+      "continuity": "retrieval"
+    },
+    {
+      "escalation": "continuity"
+    },
+    {
+      "validation": "all"
+    },
+    {
+      "experience": "adaptive"
+    },
+    {
+      "lifecycle": "composition"
+    },
+    {
+      "knowledge-core": "retrieval"
+    }
+  ],
+  "contracts": 13,
+  "rules": 7,
+  "schema": "runtime-orchestration-governance/1.0"
+}

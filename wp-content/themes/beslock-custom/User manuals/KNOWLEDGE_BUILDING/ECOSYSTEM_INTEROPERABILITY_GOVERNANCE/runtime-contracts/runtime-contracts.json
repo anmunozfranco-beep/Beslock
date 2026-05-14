@@ -1,0 +1,74 @@
+{
+  "contracts": [
+    {
+      "guarantee": "every cross-runtime message is signed with origin runtime id, schema version, and provenance manifest",
+      "id": "inter-runtime-base",
+      "kind": "inter-runtime",
+      "violation": "unsigned or unattributable cross-runtime message"
+    },
+    {
+      "guarantee": "context vectors exchanged read-only; receiver never mutates supplied context",
+      "id": "context-exchange",
+      "kind": "context-exchange",
+      "violation": "receiver mutates exchanged context"
+    },
+    {
+      "guarantee": "escalation tier is monotonic across runtime boundaries; receiver may raise but never lower",
+      "id": "escalation-exchange",
+      "kind": "escalation-exchange",
+      "violation": "receiver lowers escalation tier"
+    },
+    {
+      "guarantee": "chain-records cross runtime boundaries verbatim; receiver may extend, never edit",
+      "id": "reasoning-interoperability",
+      "kind": "reasoning",
+      "violation": "receiver edits chain-record"
+    },
+    {
+      "guarantee": "delegated orchestration step preserves the source runtime's supervision state; supervised stays supervised",
+      "id": "orchestration-federation",
+      "kind": "orchestration",
+      "violation": "delegation downgrades supervision"
+    },
+    {
+      "guarantee": "only declared cognition surfaces are shared; private cognition state stays inside its runtime",
+      "id": "shared-cognition-boundary",
+      "kind": "shared-cognition",
+      "violation": "private cognition state leaks across runtime boundary"
+    },
+    {
+      "guarantee": "continuity records cross runtime boundaries append-only; non-inheritable signals are filtered out",
+      "id": "continuity-exchange",
+      "kind": "continuity",
+      "violation": "non-inheritable signal (e.g. destructive-confirmation) crosses a runtime boundary"
+    },
+    {
+      "guarantee": "visual references cross runtime boundaries read-only; visual-risk freeze contract is honored",
+      "id": "visual-federation",
+      "kind": "visual",
+      "violation": "visual-assistance request triggers any rendering"
+    },
+    {
+      "guarantee": "publication requests honor lifecycle P-tier gates; un-promoted content is rejected",
+      "id": "publication-federation",
+      "kind": "publication",
+      "violation": "publication-runtime accepts content above its P-tier"
+    },
+    {
+      "guarantee": "all federated runtimes pin a compatible schema version; mismatch is a federation error",
+      "id": "schema-pin-federation",
+      "kind": "schema",
+      "violation": "federation proceeds under mismatched schema"
+    }
+  ],
+  "generated": "2026-05-13T20:43:33Z",
+  "kind": "runtime-contracts",
+  "rules": [
+    "Contracts are declared; runtimes cannot invent new contracts at runtime.",
+    "Contract violations are federation errors, not warnings.",
+    "Contracts preserve directionality (read-only / append-only / gated).",
+    "Contracts are versioned; receivers verify schema compatibility before acceptance.",
+    "Contracts cannot elevate confidence, promote P-tier, or reassign role across boundaries."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

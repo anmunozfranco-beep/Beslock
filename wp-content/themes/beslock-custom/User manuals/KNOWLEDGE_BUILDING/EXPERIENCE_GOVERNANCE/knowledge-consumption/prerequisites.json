@@ -1,0 +1,100 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "prerequisites": [
+    {
+      "concept": "procedure.unlock-pin",
+      "requires": [
+        "procedure.register-pin"
+      ]
+    },
+    {
+      "concept": "procedure.unlock-fingerprint",
+      "requires": [
+        "procedure.register-fingerprint"
+      ]
+    },
+    {
+      "concept": "procedure.register-fingerprint",
+      "requires": [
+        "procedure.add-administrator",
+        "concept.management-menu-access"
+      ]
+    },
+    {
+      "concept": "procedure.register-pin",
+      "requires": [
+        "procedure.add-administrator",
+        "concept.management-menu-access"
+      ]
+    },
+    {
+      "concept": "procedure.add-user",
+      "requires": [
+        "procedure.add-administrator"
+      ]
+    },
+    {
+      "concept": "procedure.add-administrator",
+      "requires": [
+        "procedure.first-power-on"
+      ]
+    },
+    {
+      "concept": "procedure.first-power-on",
+      "requires": [
+        "procedure.battery-installation"
+      ]
+    },
+    {
+      "concept": "procedure.pair-with-app",
+      "requires": [
+        "procedure.add-administrator",
+        "concept.companion-app-installed"
+      ]
+    },
+    {
+      "concept": "procedure.qr-pairing",
+      "requires": [
+        "procedure.pair-with-app"
+      ]
+    },
+    {
+      "concept": "procedure.ez-mode-pairing",
+      "requires": [
+        "procedure.pair-with-app"
+      ]
+    },
+    {
+      "concept": "procedure.factory-reset",
+      "requires": [
+        "concept.data-loss-acknowledgement"
+      ]
+    },
+    {
+      "concept": "procedure.firmware-update",
+      "requires": [
+        "procedure.pair-with-app",
+        "concept.stable-power-source"
+      ]
+    },
+    {
+      "concept": "procedure.battery-replacement",
+      "requires": [
+        "concept.battery-bay-access"
+      ]
+    },
+    {
+      "concept": "procedure.emergency-power",
+      "requires": [
+        "concept.9v-source-available"
+      ]
+    },
+    {
+      "concept": "procedure.member-management",
+      "requires": [
+        "procedure.pair-with-app"
+      ]
+    }
+  ]
+}

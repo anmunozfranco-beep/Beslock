@@ -1,0 +1,56 @@
+{
+  "items": [
+    {
+      "id": "no-executable-queue-store",
+      "impact": "review queues are modeled but not yet implemented as a real append-only store",
+      "severity": "high"
+    },
+    {
+      "id": "no-executable-workbench",
+      "impact": "reviewer workbench panels are modeled; no operator surface exists yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-executable-event-log",
+      "impact": "promotion/demotion/binding events have a schema but no real store",
+      "severity": "high"
+    },
+    {
+      "id": "no-reviewer-registry-impl",
+      "impact": "carry-over from Phase 28 — still unresolved",
+      "severity": "high"
+    },
+    {
+      "id": "no-oem-binding-store-impl",
+      "impact": "carry-over from Phase 28 — still unresolved",
+      "severity": "high"
+    },
+    {
+      "id": "no-health-indicator-computer",
+      "impact": "indicator definitions exist; no scheduled computer wired",
+      "severity": "medium"
+    },
+    {
+      "id": "no-emergency-demotion-cli",
+      "impact": "emergency demotion rules declared; no operator entry point",
+      "severity": "medium"
+    },
+    {
+      "id": "no-claim-expiry-scheduler",
+      "impact": "claim release semantics declared; no scheduler",
+      "severity": "medium"
+    },
+    {
+      "id": "no-source-aging-scheduler",
+      "impact": "source-aging stage declared; no schedule",
+      "severity": "medium"
+    },
+    {
+      "id": "candidate-records-still-await-elevation",
+      "impact": "carry-over: 132 Phase-27 candidates remain unreviewed",
+      "severity": "high"
+    }
+  ],
+  "kind": "unresolved-operational-maintenance-risks",
+  "schema": "knowledge-operations-governance/1.0"
+}

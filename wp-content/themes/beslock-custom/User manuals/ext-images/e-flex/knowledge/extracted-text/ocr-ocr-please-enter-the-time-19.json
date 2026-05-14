@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-please-enter-the-time-19",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "Please Enter The Time",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-19"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "20 Year__ Month__ Date\n__ Hour __ Minute\n1. Increase Volume\n2. Decrease Volume\n1. Chinese Voice\n2. English Voice",
+  "storage_bucket": "extracted-text"
+}

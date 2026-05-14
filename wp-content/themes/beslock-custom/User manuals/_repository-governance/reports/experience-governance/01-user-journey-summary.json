@@ -1,0 +1,67 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "journey_count": 9,
+  "criticality_distribution": {
+    "critical": 3,
+    "high": 4,
+    "medium": 2,
+    "low": 0
+  },
+  "journeys": [
+    {
+      "id": "journey.first-installation",
+      "label": "First installation",
+      "criticality": "critical",
+      "guidance_intensity": "high"
+    },
+    {
+      "id": "journey.first-unlock",
+      "label": "First unlock",
+      "criticality": "high",
+      "guidance_intensity": "medium"
+    },
+    {
+      "id": "journey.first-app-pairing",
+      "label": "First app pairing",
+      "criticality": "high",
+      "guidance_intensity": "high"
+    },
+    {
+      "id": "journey.administrator-setup",
+      "label": "Administrator setup",
+      "criticality": "high",
+      "guidance_intensity": "medium"
+    },
+    {
+      "id": "journey.user-enrolment",
+      "label": "User enrolment",
+      "criticality": "medium",
+      "guidance_intensity": "medium"
+    },
+    {
+      "id": "journey.battery-replacement",
+      "label": "Battery replacement",
+      "criticality": "medium",
+      "guidance_intensity": "low"
+    },
+    {
+      "id": "journey.emergency-recovery",
+      "label": "Emergency recovery",
+      "criticality": "critical",
+      "guidance_intensity": "very-high"
+    },
+    {
+      "id": "journey.factory-reset-recovery",
+      "label": "Factory reset recovery",
+      "criticality": "critical",
+      "guidance_intensity": "very-high"
+    },
+    {
+      "id": "journey.troubleshooting-escalation",
+      "label": "Troubleshooting escalation",
+      "criticality": "high",
+      "guidance_intensity": "high"
+    }
+  ]
+}

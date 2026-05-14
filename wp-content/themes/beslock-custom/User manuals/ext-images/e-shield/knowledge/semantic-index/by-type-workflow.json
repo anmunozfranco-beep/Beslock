@@ -1,0 +1,74 @@
+[
+  {
+    "id": "wf-registro-e-inicio-de-sesion",
+    "summary": "La fuente OEM indica que el usuario puede registrarse con telefono movil o correo electronico",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-agregar-la-cerradura",
+    "summary": "La primera vinculacion convierte al primer usuario en administrador original del equipo",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-ekeys-y-acceso-compartido",
+    "summary": "El administrador original puede enviar distintos tipos de eKey desde la app",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-contrasenas-remotas",
+    "summary": "La fuente OEM describe un modulo dedicado a contrasenas",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas",
+    "summary": "La fuente muestra dos modulos paralelos: `Tarjetas RF` y `Gestion de huellas`",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas-tarjetas-rf",
+    "summary": "entra a `Tarjetas RF",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.1"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas-huellas",
+    "summary": "entra al modulo de huellas",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-desbloqueo-por-bluetooth",
+    "summary": "La app permite abrir la cerradura desde el boton con icono de candado cuando estas dentro de alcance",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-gateway-y-funciones-remotas",
+    "summary": "e-Shield usa Bluetooth por defecto",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#12"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

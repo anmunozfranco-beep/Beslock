@@ -1,0 +1,9 @@
+# Mini-programa y QR
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#7
+
+La fuente tambien indica que el codigo QR puede escanearse con `WeChat` para usar el mini-programa de apertura.
+
+Regla editorial:
+- tratar este flujo como opcion OEM observada
+- no presentarlo como la unica experiencia de app si la implementacion comercial usa principalmente `TUYA`

@@ -1,0 +1,40 @@
+{
+  "source_pdf": "/Users/andresmunoz/Documents/GitHub/Beslock/wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+  "scanned_pdf": true,
+  "pages": 1,
+  "ocr_method": "pytesseract",
+  "avg_confidence": 55.6,
+  "sections": [
+    {
+      "title": "Plantilla De Instalacion",
+      "semantic_category": "General",
+      "content": [
+        "Modelo: TOCK XT - TWIN Utiliza este lado para apertura derecha",
+        "Parte interna de la puerta i \\ Parte externa de la puerta",
+        "| Distancia desde el borde i i Distancia desde el borde |",
+        "Utiliza esta plantilla de corte como guia para realizar las perforaciones Tock ® Lock",
+        "necesarias en tu puerta, asegurandote de seguir las medidas correctas."
+      ]
+    }
+  ],
+  "specifications": [
+    {
+      "name": "Modelo",
+      "value": "TOCK XT - TWIN Utiliza este lado para apertura derecha"
+    }
+  ],
+  "steps": [],
+  "app_instructions": [],
+  "troubleshooting": [],
+  "warnings": [],
+  "features": [],
+  "metadata": {
+    "generated_at": "2026-05-13T15:09:44.723856+00:00",
+    "downstream_use": [
+      "woocommerce",
+      "technical_manual",
+      "faq",
+      "installation_guide"
+    ]
+  }
+}

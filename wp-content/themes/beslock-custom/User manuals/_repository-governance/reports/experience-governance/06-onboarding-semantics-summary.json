@@ -1,0 +1,9 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "flow_count": 5,
+  "always_on_flow": "onboarding.safe-first-use",
+  "opt_in_flows": [
+    "onboarding.app"
+  ]
+}

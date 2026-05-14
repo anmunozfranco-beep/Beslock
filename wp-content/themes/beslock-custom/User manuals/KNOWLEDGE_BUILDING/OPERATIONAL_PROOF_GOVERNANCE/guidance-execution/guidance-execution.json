@@ -1,0 +1,56 @@
+{
+  "generated": "2026-05-13T21:05:02Z",
+  "kind": "guidance-execution",
+  "rules": [
+    "Guidance surfaces declare supervision posture, scope, and blockers.",
+    "Only surfaces with no blocking risks and no destructive surface are in scope for proof.",
+    "Guidance surfaces emit guidance-packages bound to a retrieval-package + adaptation-record.",
+    "Guidance surfaces never execute destructive operations during proof.",
+    "Guidance surfaces respect lifecycle P-tier gates and may not release un-promoted content."
+  ],
+  "schema": "operational-proof-governance/1.0",
+  "surfaces": [
+    {
+      "blocked_by": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "destructive": false,
+      "id": "executable-onboarding",
+      "in_scope_for_proof": false,
+      "kind": "onboarding",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "blocked_by": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive": false,
+      "id": "executable-troubleshooting",
+      "in_scope_for_proof": false,
+      "kind": "troubleshooting",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "blocked_by": [
+        "no-checkpoint-registry",
+        "no-causal-edges-emitted"
+      ],
+      "destructive": false,
+      "id": "executable-recovery",
+      "in_scope_for_proof": false,
+      "kind": "recovery",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "blocked_by": [],
+      "destructive": false,
+      "id": "executable-contextual-assistance",
+      "in_scope_for_proof": true,
+      "kind": "contextual",
+      "supervision": "operator-observed"
+    }
+  ]
+}

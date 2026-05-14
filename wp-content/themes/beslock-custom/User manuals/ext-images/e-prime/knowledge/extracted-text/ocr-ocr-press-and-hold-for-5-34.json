@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-press-and-hold-for-5-34",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Press And Hold For 5",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-34"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "seconds without\nreleasing\nvoice broadcast key\nOr initialize according to the operation by the Lock Settings.\n█\u0001Other Instructions:\n* Password anti-peeping function: When entering the password to open the door, input\nit in the following format: XXX password XXX. This allows you to add irrelevant digit\ns before and after the actual password, then press # to confirm. The correct password\nm ust be included within the entered sequence. The system will automatically exit if\nthere\n* After 5 consecutive incorrect password entries, the keyboard will be locked for 3 min\nutes. During this time, the system will not respond to any operations.\n's no operation for more than 10 seconds during any procedure.\n* When the voltage drops below 4.8V, an alarm will sound each time the lock is opene\nd. After this alarm begins, the door lock can be opened 100 more times. Beyond this li\nmit, the lock will be disabled. It is essential to replace the batteries before reaching thi s\nlimit.\nScan the QR code with WeChat to use the miniprogram for door opening.\nNote: The fingerprint lock time and administrator's numeric password must be set\nbefore use.",
+  "storage_bucket": "extracted-text"
+}

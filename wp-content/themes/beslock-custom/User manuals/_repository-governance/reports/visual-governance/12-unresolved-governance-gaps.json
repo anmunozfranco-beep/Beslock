@@ -1,0 +1,58 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "policy": "These gaps are NOT resolved by this phase. Each is recorded so the next governance pass (or a dedicated implementation phase) can pick them up explicitly.",
+  "count": 10,
+  "gaps": [
+    {
+      "id": "gap.negatives.component-registry-implementation",
+      "domain": "negative-prompts",
+      "summary": "Negative-prompt component registry is declared in this policy but NOT yet wired into product prompts or the manifest exporter."
+    },
+    {
+      "id": "gap.comfy.model-and-sampler-approval",
+      "domain": "comfy-contracts",
+      "summary": "No registry of approved AI models, samplers, schedulers, CFG ranges, step counts."
+    },
+    {
+      "id": "gap.qa.automated-tolerance-checks",
+      "domain": "visual-validation",
+      "summary": "Silhouette / component-position / sensor-count / keypad-grid / handle-orientation checks not implemented; only narrow heuristics in visual_generation.py score."
+    },
+    {
+      "id": "gap.publication.per-channel-spec",
+      "domain": "publication-constraints",
+      "summary": "Per-channel resolution / colour-space / format / alt-text schema undefined; FORMAT_DIMENSIONS hardcoded in visual_generation.py."
+    },
+    {
+      "id": "gap.mechanical.anchor-map-tooling",
+      "domain": "mechanical-consistency",
+      "summary": "component-visibility-map.json exists but no formal schema for derivation, refresh, or comparison tooling."
+    },
+    {
+      "id": "gap.rendering.edge-case-geometries",
+      "domain": "rendering-constraints",
+      "summary": "Variant-PNG handling (handed variants, procedure-specific exposed mechanics, transparent-panel reveals) is not documented."
+    },
+    {
+      "id": "gap.prompts.canonical-terminology-glossary",
+      "domain": "negative-prompts",
+      "summary": "Colombian-Spanish lock-component glossary is implied but not centralised; cross-language prompt rules undefined."
+    },
+    {
+      "id": "gap.lineage.run-record-schema",
+      "domain": "visual-lineage",
+      "summary": "Run-record JSON schema is described prosaically; no formal schema file or compliance checker."
+    },
+    {
+      "id": "gap.rag.visual-grounding-rules",
+      "domain": "visual-validation",
+      "summary": "RAG/chatbot trustworthiness scoring of visual artefacts undefined."
+    },
+    {
+      "id": "gap.qa.cross-product-contamination-scanner",
+      "domain": "visual-validation",
+      "summary": "Cross-product geometry leakage detection is a documented risk but has no automated scanner."
+    }
+  ]
+}

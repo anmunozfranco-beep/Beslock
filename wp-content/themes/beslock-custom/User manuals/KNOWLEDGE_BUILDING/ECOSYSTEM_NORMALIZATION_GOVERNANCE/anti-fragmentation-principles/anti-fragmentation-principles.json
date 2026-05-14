@@ -1,0 +1,10 @@
+{
+  "kind": "anti-fragmentation-principles",
+  "principles": [
+    "Fragmentation is the failure mode this layer exists to prevent.",
+    "Fragmentation is detected by audit, not by trust.",
+    "Fragmentation is resolved by canonical-references entries, not by deletion.",
+    "Fragmentation never justifies dissolving a prior layer's scope."
+  ],
+  "schema": "ecosystem-normalization-governance/1.0"
+}

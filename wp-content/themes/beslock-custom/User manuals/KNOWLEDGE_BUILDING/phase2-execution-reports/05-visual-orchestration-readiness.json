@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-05-13T15:18:31Z",
+  "products": {
+    "e-flex": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 2,
+      "matrix_count": 2,
+      "ready_for_comfy": true
+    },
+    "e-nova": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 2,
+      "matrix_count": 2,
+      "ready_for_comfy": true
+    },
+    "e-orbit": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 1,
+      "matrix_count": 1,
+      "ready_for_comfy": true
+    },
+    "e-prime": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 2,
+      "matrix_count": 2,
+      "ready_for_comfy": true
+    },
+    "e-shield": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 2,
+      "matrix_count": 2,
+      "ready_for_comfy": true
+    },
+    "e-touch": {
+      "trusted_png_count": 1,
+      "prompt_pack_count": 2,
+      "matrix_count": 2,
+      "ready_for_comfy": true
+    }
+  }
+}

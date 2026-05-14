@@ -1,0 +1,565 @@
+[
+  {
+    "id": "cap-objetivo",
+    "type": "capability",
+    "summary": "Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#2"
+    ]
+  },
+  {
+    "id": "wf-registro-e-inicio-de-sesion",
+    "type": "workflow",
+    "summary": "La fuente OEM indica que el usuario puede registrarse con telefono movil o correo electronico",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#4"
+    ]
+  },
+  {
+    "id": "wf-agregar-la-cerradura",
+    "type": "workflow",
+    "summary": "La primera vinculacion convierte al primer usuario en administrador original del equipo",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5"
+    ]
+  },
+  {
+    "id": "ts-gestion-del-dispositivo",
+    "type": "troubleshooting",
+    "summary": "Gestion del dispositivo",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6"
+    ]
+  },
+  {
+    "id": "wf-ekeys-y-acceso-compartido",
+    "type": "workflow",
+    "summary": "El administrador original puede enviar distintos tipos de eKey desde la app",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#7"
+    ]
+  },
+  {
+    "id": "wf-contrasenas-remotas",
+    "type": "workflow",
+    "summary": "La fuente OEM describe un modulo dedicado a contrasenas",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#8"
+    ]
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas",
+    "type": "workflow",
+    "summary": "La fuente muestra dos modulos paralelos: `Tarjetas RF` y `Gestion de huellas`",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9"
+    ]
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas-tarjetas-rf",
+    "type": "workflow",
+    "summary": "entra a `Tarjetas RF",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.1"
+    ]
+  },
+  {
+    "id": "wf-tarjetas-rf-y-huellas-huellas",
+    "type": "workflow",
+    "summary": "entra al modulo de huellas",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.2"
+    ]
+  },
+  {
+    "id": "wf-desbloqueo-por-bluetooth",
+    "type": "workflow",
+    "summary": "La app permite abrir la cerradura desde el boton con icono de candado cuando estas dentro de alcance",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#10"
+    ]
+  },
+  {
+    "id": "wf-gateway-y-funciones-remotas",
+    "type": "workflow",
+    "summary": "e-Shield usa Bluetooth por defecto",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#12"
+    ]
+  },
+  {
+    "id": "warning-advertencias-editoriales",
+    "type": "warning",
+    "summary": "- `TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#13"
+    ]
+  },
+  {
+    "id": "install-context-objetivo",
+    "type": "installation-flow",
+    "summary": "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2"
+    ]
+  },
+  {
+    "id": "install-context-que-vas-a-instalar",
+    "type": "installation-flow",
+    "summary": "e-Shield usa una arquitectura de cerradura dividida:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3"
+    ]
+  },
+  {
+    "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+    "type": "installation-flow",
+    "summary": "Valida estas condiciones antes de tocar la puerta:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4"
+    ]
+  },
+  {
+    "id": "install-context-que-necesitas-antes-de-empezar",
+    "type": "installation-flow",
+    "summary": "- plantilla impresa a escala `100%",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5"
+    ]
+  },
+  {
+    "id": "install-usar-la-plantilla-de-instalacion",
+    "type": "installation-flow",
+    "summary": "![Plantilla de instalacion de e-Shield](assets/e-shield/pdf-renders/e-shield-2/page-01",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+    ]
+  },
+  {
+    "id": "install-preparar-la-puerta",
+    "type": "installation-flow",
+    "summary": "La plantilla muestra un patron principal y perforaciones auxiliares",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7"
+    ]
+  },
+  {
+    "id": "install-montar-el-conjunto-exterior-e-interior",
+    "type": "installation-flow",
+    "summary": "Orden practico de montaje:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8"
+    ]
+  },
+  {
+    "id": "install-energia-y-encendido-inicial",
+    "type": "installation-flow",
+    "summary": "Para la puesta en marcha:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9"
+    ]
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "type": "installation-flow",
+    "summary": "Antes de entregar el equipo o pasar a configuracion de usuarios, valida esto:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10"
+    ]
+  },
+  {
+    "id": "install-context-problemas-frecuentes-de-instalacion",
+    "type": "installation-flow",
+    "summary": "### La plantilla no coincide con la puerta",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#11"
+    ]
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "type": "installation-flow",
+    "summary": "Dentro del estandar Beslock para e-Shield, este documento convive con:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12"
+    ]
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "type": "installation-flow",
+    "summary": "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13"
+    ]
+  },
+  {
+    "id": "term-pin",
+    "type": "glossary-term",
+    "summary": "Código numérico de acceso.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ]
+  },
+  {
+    "id": "term-huella",
+    "type": "glossary-term",
+    "summary": "Credencial biométrica dactilar.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ]
+  },
+  {
+    "id": "term-administrador",
+    "type": "glossary-term",
+    "summary": "Usuario con permisos de gestión.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ]
+  },
+  {
+    "id": "term-bluetooth",
+    "type": "glossary-term",
+    "summary": "Canal inalámbrico de corto alcance.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ]
+  },
+  {
+    "id": "term-wi-fi",
+    "type": "glossary-term",
+    "summary": "Canal inalámbrico de red local.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ]
+  },
+  {
+    "id": "ocr-ocr-manual-1",
+    "type": "extracted-text",
+    "summary": "Manual",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-1"
+    ]
+  },
+  {
+    "id": "ocr-ocr-instrucciones-de-instalacion-2",
+    "type": "extracted-text",
+    "summary": "Instrucciones De Instalación",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-2"
+    ]
+  },
+  {
+    "id": "ocr-ocr-configuracion-de-usuario-3",
+    "type": "extracted-text",
+    "summary": "Configuración De Usuario",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-3"
+    ]
+  },
+  {
+    "id": "ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient",
+    "type": "extracted-text",
+    "summary": "Ingrese Al Menú Principal Y Presione La Tecla Correspondiente A La Configuración Del",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-4"
+    ]
+  },
+  {
+    "id": "ocr-ocr-introduccion-5",
+    "type": "extracted-text",
+    "summary": "Introducción",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-5"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-1-informacie-de-la-cuenta-6",
+    "type": "extracted-text",
+    "summary": "9.1 Informacié~ De La Cuenta",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-6"
+    ]
+  },
+  {
+    "id": "ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7",
+    "type": "extracted-text",
+    "summary": "32 So Se Vee Ento A 9.5 Eliminar Cerradura",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-7"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-4-eliminar-10-2-manual-8",
+    "type": "extracted-text",
+    "summary": "4.4 Eliminar 10.2 Manual",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-8"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-7-corpartir-contrasena-9",
+    "type": "extracted-text",
+    "summary": "4.7 Corpartir Contraseña",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-9"
+    ]
+  },
+  {
+    "id": "ocr-ocr-1-1-inicio-de-sesion-correcto-10",
+    "type": "extracted-text",
+    "summary": "1.1 Inicio De Sesión Correcto",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-10"
+    ]
+  },
+  {
+    "id": "ocr-ocr-oui-ld-in-get-11",
+    "type": "extracted-text",
+    "summary": "Oui Ld In Get",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-11"
+    ]
+  },
+  {
+    "id": "ocr-ocr-2-1-anadir-nuevo-dispositivo-12",
+    "type": "extracted-text",
+    "summary": "2.1 Añadir Nuevo Dispositivo",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-12"
+    ]
+  },
+  {
+    "id": "ocr-ocr-2-2-actualizacion-de-cerraduras-13",
+    "type": "extracted-text",
+    "summary": "2.2 Actualización De Cerraduras",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-13"
+    ]
+  },
+  {
+    "id": "ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14",
+    "type": "extracted-text",
+    "summary": "2.3 Fecha Y Hora, Diagnóstico De Errores",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-14"
+    ]
+  },
+  {
+    "id": "ocr-ocr-2-4-administrador-autorizado-15",
+    "type": "extracted-text",
+    "summary": "2.4 Administrador Autorizado",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-15"
+    ]
+  },
+  {
+    "id": "ocr-ocr-3-1-gestion-de-llaves-16",
+    "type": "extracted-text",
+    "summary": "3.1 Gestión De Llaves",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-16"
+    ]
+  },
+  {
+    "id": "ocr-ocr-3-2-aviso-de-vencimiento-17",
+    "type": "extracted-text",
+    "summary": "3.2 Aviso De Vencimiento",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-17"
+    ]
+  },
+  {
+    "id": "ocr-ocr-3-3-busqueda-de-registro-de-accesos-18",
+    "type": "extracted-text",
+    "summary": "3.3 Búsqueda De Registro De Accesos",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-18"
+    ]
+  },
+  {
+    "id": "ocr-ocr-o-eres-19",
+    "type": "extracted-text",
+    "summary": ". O Eres",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-19"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-1-codigo-de-acceso-permanente-20",
+    "type": "extracted-text",
+    "summary": "4.1 Codigo De Acceso Permanente",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-20"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-2-codigo-de-acceso-temporal-21",
+    "type": "extracted-text",
+    "summary": "4.2 Código De Acceso Temporal",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-21"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-3-contrasena-de-un-solo-uso-22",
+    "type": "extracted-text",
+    "summary": "4.3 Contraseña De Un Solo Uso",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-22"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-5-codigo-de-acceso-ciclico-23",
+    "type": "extracted-text",
+    "summary": "4.5 Codigo De Acceso Ciclico",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-23"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-6-codigo-de-acceso-personalizado-24",
+    "type": "extracted-text",
+    "summary": "4.6 Código De Acceso Personalizado",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-24"
+    ]
+  },
+  {
+    "id": "ocr-ocr-4-7-compartir-contrasenas-25",
+    "type": "extracted-text",
+    "summary": "4.7 Compartir Contrasenas",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-25"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-see-traia-26",
+    "type": "extracted-text",
+    "summary": "9 See Traia?",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-26"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-1-informacion-de-la-cuenta-27",
+    "type": "extracted-text",
+    "summary": "9.1 Información De La Cuenta",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-27"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-2-usuarios-del-dispositivo-28",
+    "type": "extracted-text",
+    "summary": "9.2 Usuarios Del Dispositivo",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-28"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-3-grupo-de-dispositivos-29",
+    "type": "extracted-text",
+    "summary": "9.3 Grupo De Dispositivos",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-29"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-4-transferir-derechos-de-administrador-30",
+    "type": "extracted-text",
+    "summary": "9.4 Transferir Derechos De Administrador",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-30"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-5-eliminar-cuenta-ar-31",
+    "type": "extracted-text",
+    "summary": "9.5 Eliminar Cuenta Ar -",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-31"
+    ]
+  },
+  {
+    "id": "ocr-ocr-9-6-servicio-al-cliente-32",
+    "type": "extracted-text",
+    "summary": "9.6 Servicio Al Cliente",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-32"
+    ]
+  },
+  {
+    "id": "ocr-ocr-10-1-agregar-gateway-33",
+    "type": "extracted-text",
+    "summary": "10.1 Agregar Gateway",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-shield/manual.json#section-33"
+    ]
+  }
+]

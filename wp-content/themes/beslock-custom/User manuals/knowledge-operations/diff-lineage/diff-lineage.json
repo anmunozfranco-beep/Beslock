@@ -1,0 +1,43 @@
+{
+  "diff_kinds": [
+    {
+      "compares": "two versions of a node by id; structural + semantic field-level diff",
+      "kind": "node-diff"
+    },
+    {
+      "compares": "current vs prior_binding_id chain",
+      "kind": "binding-diff"
+    },
+    {
+      "compares": "tier transitions over time",
+      "kind": "trust-tier-diff"
+    },
+    {
+      "compares": "promotion/demotion event chain for a node",
+      "kind": "lineage-walk"
+    },
+    {
+      "compares": "binding chain from node to OEM source artifact",
+      "kind": "evidence-walk"
+    },
+    {
+      "compares": "rollback chain referencing original promotion ids",
+      "kind": "rollback-walk"
+    }
+  ],
+  "invariants": [
+    "diffs are deterministic and reproducible from append-only logs",
+    "lineage is never reconstructed; it is read directly from the event store",
+    "diffs do not mutate; they only report",
+    "diffs respect scope (per product, per domain); cross-product diffs are forbidden"
+  ],
+  "kind": "diff-lineage",
+  "lineage_views": [
+    "operational-history: chronological event stream per node",
+    "promotion-lineage: state transitions only",
+    "evidence-lineage: binding records only",
+    "rollback-lineage: demotions referencing promotions",
+    "trust-evolution-visualization: tier-over-time per node (data; no rendering layer)"
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

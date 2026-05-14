@@ -1,0 +1,393 @@
+{
+  "product_slug": "e-prime",
+  "product_display": "e-Prime",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "entries": [
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime - AI image prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/prompts/e-Prime - AI image prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime - image generation matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/generation-matrices/e-Prime - image generation matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime - implementation starter pack.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/automation/orchestrators/e-Prime - implementation starter pack.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime - installation template standard.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/automation/orchestrators/e-Prime - installation template standard.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime - supplemental source review.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/specifications/e-Prime - supplemental source review.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime app manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime installation manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime user manual - image-ready.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/manuals/e-Prime user manual - image-ready.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime user manual - review-draft.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/manuals/e-Prime user manual - review-draft.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime user manual.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime user manual.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime_1.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Prime_2.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-Prime.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/e-Prime.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/e-prime-visual-profile.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/references/e-prime-visual-profile.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/notes.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/audit/legacy-pre-cutover-notes.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/ai-image-prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/prompts/ai-image-prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/image-generation-matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/generation-matrices/image-generation-matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/visual-validation.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/validations/visual-validation.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/image-production-status.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/qa/image-production-status.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/audit/legacy-visual-system-product/README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/generated/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/audit/legacy-visual-system-product/generated-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/generated/e-prime-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/outputs/generated/e-prime-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/generated/e-prime-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/outputs/generated/e-prime-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/generated/e-prime-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/outputs/generated/e-prime-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-prime/generated/selected-assets-register.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/traceability/selected-assets-register.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/review-draft/e-prime-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/review-draft/e-prime-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/web-ready/e-prime-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/assets/e-prime/web-ready/e-prime-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-02.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-02.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-03.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-03.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-04.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-04.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-05.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-05.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-1/page-06.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-06.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-02.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-02.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-03.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-03.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-04.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-04.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-05.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-05.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-06.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-06.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/pdf-renders/e-prime-2/page-07.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-07.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-prime/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/audit/legacy-flat-files/assets-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/review-previews/e-prime-user-manual-review-draft.html",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/publishing/web/review-previews/e-prime-user-manual-review-draft.html",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

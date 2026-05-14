@@ -1,0 +1,23 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "stability_contracts": [
+    "index source patterns are governed",
+    "served fields are minimum surface",
+    "identifier grammar is governed",
+    "synonym expansion via canonical-terminology",
+    "maturity gates applied at consumer"
+  ],
+  "minimum_served_fields": [
+    "id",
+    "maturity",
+    "provenance",
+    "last_updated",
+    "channel_targets"
+  ],
+  "discoverability_paths": [
+    "direct id",
+    "shared-concept lookup",
+    "product-level enumeration"
+  ]
+}

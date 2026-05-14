@@ -1,0 +1,79 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "profiles": [
+    {
+      "id": "procedural-context",
+      "core": "by-procedure",
+      "expands": [
+        "prerequisites",
+        "warnings",
+        "referenced-entities",
+        "visual-intent"
+      ],
+      "filters": [
+        "maturity ≥ normalized",
+        "exclude deprecated"
+      ]
+    },
+    {
+      "id": "troubleshooting-context",
+      "core": "by-troubleshooting",
+      "expands": [
+        "recovery-path",
+        "escalation-tier",
+        "related-warnings"
+      ],
+      "filters": [
+        "maturity ≥ normalized",
+        "include verified preferred"
+      ]
+    },
+    {
+      "id": "onboarding-context",
+      "core": "by-onboarding",
+      "expands": [
+        "learning-path",
+        "guidance-triggers",
+        "cognitive-load-map"
+      ],
+      "filters": [
+        "audience-scoped",
+        "interruption-budget ≤ 2"
+      ]
+    },
+    {
+      "id": "publication-context",
+      "core": "by-domain",
+      "expands": [
+        "publication-intent",
+        "deprecation-badges",
+        "lineage"
+      ],
+      "filters": [
+        "maturity ≥ verified",
+        "exclude unresolved"
+      ]
+    },
+    {
+      "id": "provenance-context",
+      "core": "by-provenance",
+      "expands": [
+        "source_refs",
+        "extraction_lineage",
+        "version"
+      ],
+      "filters": [
+        "read-only"
+      ]
+    }
+  ],
+  "rules": [
+    "Every assembled context records: profile id, source artifact ids, applied filters, generation timestamp.",
+    "Warnings scoped to a procedure MUST be injected into procedural-context.",
+    "Prerequisites MUST be expanded transitively but capped at depth 3 to prevent runaway expansion.",
+    "Maturity-aware filtering is mandatory; consumers cannot opt out of safety filters.",
+    "Confidence-aware assembly: a context whose core artifact is `confidence=low` MUST emit a confidence-warning.",
+    "Provenance-aware assembly: every included artifact carries its source_refs into the bundle."
+  ]
+}

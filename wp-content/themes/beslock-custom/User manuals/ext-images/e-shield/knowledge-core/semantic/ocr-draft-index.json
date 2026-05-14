@@ -1,0 +1,35 @@
+{
+  "id": "ocr-draft-index",
+  "type": "ocr-draft-index",
+  "product": "e-shield",
+  "summary": "OCR-derived candidate index for e-shield (no normalized markdown source)",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-medium",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "support"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json",
+    "/home/runner/work/Beslock/Beslock/User manuals/e-Shield user manual.pdf"
+  ],
+  "extraction_lineage": [
+    "generated_manuals/e-shield/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "ocr_method": "pytesseract",
+  "ocr_pages": 20,
+  "ocr_avg_confidence": 84.9,
+  "section_count": 33,
+  "step_candidate_count": 3,
+  "warning_candidate_count": 2,
+  "app_instruction_candidate_count": 30,
+  "specification_candidate_count": 28,
+  "feature_candidate_count": 0,
+  "non_canonical": true,
+  "policy": "OCR-DERIVED DRAFTS: candidates may be promoted to verified entities only after a human reviews them against the OEM PDF."
+}

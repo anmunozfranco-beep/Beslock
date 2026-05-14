@@ -1,0 +1,10 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/ecosystem-normalization/schema-normalization/",
+  "detected_schemas_count": 31,
+  "kind": "schema-normalization-summary",
+  "overlap_findings_count": 5,
+  "renames_performed": 0,
+  "rules_count": 5,
+  "schema": "ecosystem-normalization-governance/1.0",
+  "schema_families_count": 7
+}

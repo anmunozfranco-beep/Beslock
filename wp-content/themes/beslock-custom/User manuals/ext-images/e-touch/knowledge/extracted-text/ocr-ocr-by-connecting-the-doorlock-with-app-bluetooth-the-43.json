@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-by-connecting-the-doorlock-with-app-bluetooth-the-43",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "By Connecting The Doorlock With App Bluetooth,The",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-43"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "App Instructions",
+  "raw_text": "administrator can create/delete the door opening for\nErge'pm\nother family members.",
+  "storage_bucket": "extracted-text"
+}

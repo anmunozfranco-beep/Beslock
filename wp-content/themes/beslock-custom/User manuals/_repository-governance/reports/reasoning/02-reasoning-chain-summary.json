@@ -1,0 +1,51 @@
+{
+  "schema": "reasoning-governance/1.0",
+  "generated_at": "2026-05-13T19:21:43+00:00",
+  "chain_types": [
+    {
+      "id": "sequential",
+      "description": "linear deduction across declared steps"
+    },
+    {
+      "id": "dependent",
+      "description": "later inferences depend on earlier verified outcomes"
+    },
+    {
+      "id": "branching",
+      "description": "chain forks at a declared decision point"
+    },
+    {
+      "id": "recovery",
+      "description": "chain re-enters at a checkpoint after failure"
+    },
+    {
+      "id": "troubleshooting",
+      "description": "chain advances by symptom-resolution branches"
+    },
+    {
+      "id": "deductive",
+      "description": "from declared facts and predicates to a conclusion"
+    },
+    {
+      "id": "abductive",
+      "description": "best-fit hypothesis among declared alternatives (always downgraded)"
+    }
+  ],
+  "rules": [
+    "every chain is reproducible from declared inputs (context vector + evidence)",
+    "every chain step records: predicate, inputs, evidence tier, confidence",
+    "chain steps cannot invent new procedure steps",
+    "abductive steps must be presented as 'likely', never 'verified'",
+    "chains terminate (no infinite reasoning; bounded by retry thresholds)",
+    "a chain that crosses an unsafe transition must be halted and escalated",
+    "chains preserve user intent; intent change requires a new chain with provenance link"
+  ],
+  "termination_outcomes": [
+    "concluded-verified",
+    "concluded-likely",
+    "inconclusive",
+    "blocked",
+    "escalated",
+    "abandoned"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "consumers": [
+    {
+      "id": "continuous-oem-ingestion",
+      "consumes": [
+        "lifecycle-stages",
+        "promotion-criteria",
+        "review-checkpoints"
+      ],
+      "readiness_gate": "OEM source-tracker present per product"
+    },
+    {
+      "id": "automated-semantic-enrichment",
+      "consumes": [
+        "promotion-criteria",
+        "ontology-conformance"
+      ],
+      "readiness_gate": "ontology version pinned + breaking-change detector active"
+    },
+    {
+      "id": "multilingual-expansion",
+      "consumes": [
+        "terminology axis",
+        "canonicalization rules"
+      ],
+      "readiness_gate": "bilingual-merge backlog cleared; alias registry active"
+    },
+    {
+      "id": "RAG-system",
+      "consumes": [
+        "canonical-knowledge",
+        "verified-truth",
+        "lineage links"
+      ],
+      "readiness_gate": "lineage-break tolerance = 0; promotion-without-evidence tolerance = 0"
+    },
+    {
+      "id": "troubleshooting-assistant",
+      "consumes": [
+        "troubleshooting tiers",
+        "symptom corpus",
+        "priority-assignments"
+      ],
+      "readiness_gate": "symptom corpus ≥ 10 per product"
+    },
+    {
+      "id": "onboarding-system",
+      "consumes": [
+        "onboarding-flows",
+        "guidance-triggers",
+        "cognitive-load-map"
+      ],
+      "readiness_gate": "per-product onboarding specialisation present"
+    },
+    {
+      "id": "future-visual-assistance",
+      "consumes": [
+        "visual-intent",
+        "visual-risk",
+        "component-visibility"
+      ],
+      "readiness_gate": "visual-risk reclassification freeze window in place"
+    },
+    {
+      "id": "future-publication-systems",
+      "consumes": [
+        "publication-intent",
+        "verified-truth",
+        "deprecation badges"
+      ],
+      "readiness_gate": "deprecation badge renderer specified at doctrine level"
+    }
+  ],
+  "non_negotiables": [
+    "provenance preserved on every artifact, every version, every transition",
+    "governance preserved across layer additions and revisions",
+    "semantic integrity preserved across promotion and deprecation",
+    "ontology coherence preserved across new products and new layers"
+  ],
+  "hard_exclusions": [
+    "no-pdf-generation",
+    "no-image-generation",
+    "no-chatbot-runtime",
+    "no-publication-system",
+    "no-frontend-experience",
+    "no-render-optimization"
+  ]
+}

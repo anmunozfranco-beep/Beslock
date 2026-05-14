@@ -1,0 +1,9 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "required_field": "maturity",
+  "default_when_absent": "unresolved",
+  "promotion_paths_count": 7,
+  "invariants_count": 5,
+  "doc": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/maturity-governance/maturity-governance.md"
+}

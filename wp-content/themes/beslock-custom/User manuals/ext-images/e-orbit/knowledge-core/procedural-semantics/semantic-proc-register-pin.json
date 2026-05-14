@@ -1,0 +1,99 @@
+{
+  "id": "semantic-proc-register-pin",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-register-pin",
+  "language": "es-CO",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-register-pin.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-pin"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-register-pin.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-register-pin",
+  "source_entity_type": "procedure",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar administrador or Agregar usuario",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "Enter Agregar usuario.",
+      "semantic_actions": [
+        "enroll"
+      ],
+      "matched_lexicon": [
+        "enroll"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "Choose the user type.",
+      "semantic_actions": [
+        "select"
+      ],
+      "matched_lexicon": [
+        "select"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "Select Contrasena.",
+      "semantic_actions": [
+        "select"
+      ],
+      "matched_lexicon": [
+        "select"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "Enter the PIN.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "Confirm the PIN.",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    },
+    {
+      "step_index": 6,
+      "raw_text": "Save the enrollment.",
+      "semantic_actions": [
+        "enroll"
+      ],
+      "matched_lexicon": [
+        "enroll"
+      ]
+    },
+    {
+      "step_index": 7,
+      "raw_text": "Test the credential.",
+      "semantic_actions": [
+        "test"
+      ],
+      "matched_lexicon": [
+        "test"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

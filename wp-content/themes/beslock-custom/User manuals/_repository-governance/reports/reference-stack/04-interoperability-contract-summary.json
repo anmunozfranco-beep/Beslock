@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/interoperability/",
+  "contracts": [
+    "runtime-contract",
+    "escalation-contract",
+    "provenance-contract",
+    "replay-contract",
+    "retrieval-contract",
+    "governance-contract",
+    "continuity-contract"
+  ],
+  "discipline_rules_count": 5,
+  "kind": "interoperability-contract-summary",
+  "schema": "reference-stack-governance/1.0"
+}

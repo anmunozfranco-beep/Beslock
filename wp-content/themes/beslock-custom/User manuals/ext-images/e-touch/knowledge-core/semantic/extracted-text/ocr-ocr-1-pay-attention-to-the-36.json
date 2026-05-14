@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-1-pay-attention-to-the-36",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "1 Pay Attention To The",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-36"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-1-pay-attention-to-the-36.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "This document takes Smart Life APP as an example to explain the functions of APP&door lock\npress the \"+\"icon to add the device.\ndirection of the lock\n5.Waiting for the device to be added,the door lock emits \"Drip\"twice, indicating that the device is successfully added.\ntongue\nwhen\nyou\npanel in detail\ninstalling\nII.Bluetooth\ndoor\nlock\npanel--homepage\nBluntooth fingerprint p...",
+  "legacy_storage_bucket": "extracted-text"
+}

@@ -1,0 +1,117 @@
+{
+  "schema": "adaptive-operational-governance/1.0",
+  "generated_at": "2026-05-13T19:06:08+00:00",
+  "dimension_count": 10,
+  "dimensions": [
+    {
+      "id": "user-role",
+      "values": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "installer",
+        "administrator",
+        "operator",
+        "maintenance"
+      ]
+    },
+    {
+      "id": "operational-mode",
+      "values": [
+        "normal",
+        "onboarding",
+        "troubleshooting",
+        "recovery",
+        "maintenance",
+        "degraded",
+        "emergency"
+      ]
+    },
+    {
+      "id": "lifecycle-stage",
+      "values": [
+        "pre-install",
+        "installing",
+        "configuring",
+        "operating",
+        "decommissioning"
+      ]
+    },
+    {
+      "id": "confidence-level",
+      "values": [
+        "verified-truth",
+        "inferred",
+        "ocr-derived",
+        "ambiguous",
+        "unverified"
+      ]
+    },
+    {
+      "id": "severity-level",
+      "values": [
+        "nominal",
+        "warning",
+        "blocked",
+        "unsafe",
+        "irrecoverable"
+      ]
+    },
+    {
+      "id": "recovery-status",
+      "values": [
+        "none",
+        "in-progress",
+        "succeeded",
+        "failed",
+        "escalated"
+      ]
+    },
+    {
+      "id": "onboarding-stage",
+      "values": [
+        "unboxed",
+        "physically-installed",
+        "powered",
+        "paired",
+        "enrolled",
+        "verified"
+      ]
+    },
+    {
+      "id": "environmental",
+      "values": [
+        "normal-power",
+        "low-battery",
+        "offline",
+        "noisy",
+        "physical-restricted-access"
+      ]
+    },
+    {
+      "id": "evidence-completeness",
+      "values": [
+        "complete",
+        "partial",
+        "missing",
+        "conflicting"
+      ]
+    },
+    {
+      "id": "intent-clarity",
+      "values": [
+        "explicit",
+        "inferred",
+        "ambiguous",
+        "missing"
+      ]
+    }
+  ],
+  "rules": [
+    "context dimensions are observed, never assumed",
+    "missing dimensions resolve to the safest value",
+    "dimension values must be declared (no free-form context)",
+    "multiple dimensions compose; no dimension overrides another silently",
+    "context vector must be reproducible from declared inputs"
+  ]
+}

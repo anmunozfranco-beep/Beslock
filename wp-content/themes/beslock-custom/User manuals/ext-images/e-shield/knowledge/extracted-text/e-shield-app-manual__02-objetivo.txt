@@ -1,0 +1,8 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#2
+
+Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion.
+
+La fuente OEM habla de la app `TECDOFY` y del uso opcional de `Gateway` para funciones remotas.
+Mientras no exista validacion directa en hardware y cuenta real, este documento debe leerse como manual de app normalizado con prudencia editorial.

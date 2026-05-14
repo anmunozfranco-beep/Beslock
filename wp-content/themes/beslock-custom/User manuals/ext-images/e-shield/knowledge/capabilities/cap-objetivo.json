@@ -1,0 +1,27 @@
+{
+  "id": "cap-objetivo",
+  "type": "capability",
+  "product": "e-shield",
+  "summary": "Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#2"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion.\n\nLa fuente OEM habla de la app `TECDOFY` y del uso opcional de `Gateway` para funciones remotas.\nMientras no exista validacion directa en hardware y cuenta real, este documento debe leerse como manual de app normalizado con prudencia editorial."
+  ],
+  "storage_bucket": "capabilities"
+}

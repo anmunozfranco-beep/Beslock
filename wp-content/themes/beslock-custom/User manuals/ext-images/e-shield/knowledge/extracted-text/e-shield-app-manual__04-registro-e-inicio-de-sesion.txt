@@ -1,0 +1,14 @@
+# Registro e inicio de sesion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#4
+
+La fuente OEM indica que el usuario puede registrarse con telefono movil o correo electronico.
+
+Flujo base:
+1. abre la app `TECDOFY`
+2. registra la cuenta con telefono o email
+3. confirma el codigo de verificacion
+4. inicia sesion y verifica la cuenta si cambias de telefono
+
+Validacion posterior:
+- confirma que la cuenta conserva los datos de la cerradura al iniciar sesion desde el telefono principal

@@ -1,0 +1,9 @@
+{
+  "escalation_required_states": 6,
+  "irreversibility_safeguards": 5,
+  "prohibited_actions": 15,
+  "schema": "runtime-orchestration-governance/1.0",
+  "supervision_required_states": 6,
+  "uncertainty_limits": 5,
+  "unsafe_combinations": 10
+}

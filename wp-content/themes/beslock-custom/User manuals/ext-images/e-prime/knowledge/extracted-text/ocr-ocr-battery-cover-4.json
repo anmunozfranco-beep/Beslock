@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-battery-cover-4",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Battery Cover",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-4"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Maintenance",
+  "raw_text": "⾯板与锁体安装步骤：\n1.调整锁⾆⽅向：根据开门⽅式更换锁体的锁⾆⽅向.\n2.锁体的安装:把锁体嵌⼊开好的锁体安装孔内,拧紧锁体安装螺丝.\n3.⾯板安装:\n①根据开门⽅向对锁具执⼿进⾏执⼿换向;\n②将安装螺柱安装到前⾯板上并将其拧紧,同时把执⼿塔簧塞进后⾯板;\n③把配件包中的⽅杆插⼊锁体的⽅孔内(⽅杆根据实际门厚进⾏裁剪);\n④数据连接线从上安装螺柱出的门孔穿过去,执⼿⽅孔与⽅杆对准,将前⾯板组\n件紧贴门⾯.\n⑤将数据连接线与后⾯板数据线插座对接.\n⑥后⾯板执⼿⽅孔对准⽅杆,锁尺对准锁体锁尺孔,将后⾯板组件紧贴内门⾯.\n⑦拧上⾯板安装螺丝直到⾯板稍微⽤⼒可挪动,若不顺畅则调整⾯板,锁⾆能顺\n畅活动后拧紧,⾯板安装螺丝\n⑧装上电池,尝试指纹开锁或者输⼊初始密码进⾏开锁验证,若锁⾆活动不顺畅\n则进⾏第⑦步,若验证没问题则将电池盖安装好,完成安装\n安装螺柱\n安装螺柱\n前⾯板组件\n锁尺(按需要长度裁剪)\n电池盖\n后⾯板组件\n安装螺丝",
+  "storage_bucket": "extracted-text"
+}

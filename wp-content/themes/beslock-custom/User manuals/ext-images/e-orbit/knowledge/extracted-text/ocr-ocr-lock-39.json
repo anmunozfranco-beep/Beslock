@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-lock-39",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Lock",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-39"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "(Zigbee)",
+  "storage_bucket": "extracted-text"
+}

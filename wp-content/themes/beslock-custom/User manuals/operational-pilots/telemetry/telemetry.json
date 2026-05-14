@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "rules": [
+    "telemetry is aggregate; per-operator identification requires reviewer-of-scope authorization",
+    "telemetry feeds are subordinate to layer-25 trust zones and layer-24 operator privacy",
+    "no telemetry stream may auto-trigger runtime mutation",
+    "telemetry retention is bounded; retention windows are governance-declared",
+    "telemetry exposure outside the pilot env requires promotion + provenance"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "streams": [
+    {
+      "id": "retrieval-confidence",
+      "metric": "distribution of top_score per (product, domain) per window",
+      "purpose": "detect corpus weakness"
+    },
+    {
+      "id": "runtime-uncertainty",
+      "metric": "fraction of decisions in escalate-band per session",
+      "purpose": "detect ambiguity zones"
+    },
+    {
+      "id": "escalation-propagation",
+      "metric": "depth and time-to-acknowledge of escalation chains",
+      "purpose": "detect overloaded receivers"
+    },
+    {
+      "id": "replay-frequency",
+      "metric": "replay invocations per session, per reviewer",
+      "purpose": "detect over- or under-use of replay"
+    },
+    {
+      "id": "reviewer-workload",
+      "metric": "candidates/day and time-to-decision per reviewer",
+      "purpose": "detect reviewer fatigue"
+    },
+    {
+      "id": "corpus-weakness-hotspots",
+      "metric": "joint (low retrieval-confidence × high escalation) per topic",
+      "purpose": "prioritize corpus enrichment"
+    },
+    {
+      "id": "operational-dead-ends",
+      "metric": "sessions terminated without resolution + topic clustering",
+      "purpose": "detect missing flows"
+    }
+  ],
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

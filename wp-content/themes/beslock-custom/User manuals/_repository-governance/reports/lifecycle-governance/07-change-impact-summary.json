@@ -1,0 +1,108 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "targets": [
+    "ontology",
+    "schemas",
+    "terminology",
+    "entities",
+    "procedures",
+    "workflows",
+    "warnings",
+    "capabilities",
+    "specifications",
+    "troubleshooting",
+    "procedural-semantics",
+    "visual-intent",
+    "visual-risk",
+    "publication-intent",
+    "component-visibility",
+    "provenance",
+    "retrieval-index",
+    "onboarding-flows",
+    "guidance-triggers",
+    "cognitive-load-map",
+    "priority-assignments",
+    "experience-charter"
+  ],
+  "rules": [
+    {
+      "change": "terminology rename without alias",
+      "propagates_to": [
+        "entities",
+        "procedures",
+        "workflows",
+        "warnings",
+        "retrieval-index",
+        "guidance-triggers"
+      ]
+    },
+    {
+      "change": "ontology field removed",
+      "propagates_to": [
+        "schemas",
+        "all knowledge-core domains",
+        "retrieval-index"
+      ]
+    },
+    {
+      "change": "procedure step reordered",
+      "propagates_to": [
+        "workflows",
+        "cognitive-load-map",
+        "onboarding-flows",
+        "guidance-triggers"
+      ]
+    },
+    {
+      "change": "warning removed",
+      "propagates_to": [
+        "procedures",
+        "workflows",
+        "publication-intent",
+        "experience-charter"
+      ]
+    },
+    {
+      "change": "entity superseded",
+      "propagates_to": [
+        "procedures",
+        "workflows",
+        "visual-intent",
+        "component-visibility",
+        "retrieval-index"
+      ]
+    },
+    {
+      "change": "priority tier change (P-level)",
+      "propagates_to": [
+        "onboarding-flows",
+        "guidance-triggers",
+        "review-checkpoints"
+      ]
+    },
+    {
+      "change": "visual-risk reclassification",
+      "propagates_to": [
+        "visual-intent",
+        "publication-intent",
+        "guidance-triggers"
+      ]
+    },
+    {
+      "change": "schema breaking change",
+      "propagates_to": [
+        "all knowledge-core domains",
+        "retrieval-index",
+        "review-checkpoints"
+      ]
+    }
+  ],
+  "procedure": [
+    "Detect change class (additive / corrective / breaking).",
+    "Resolve propagation set via IMPACT_RULES.",
+    "Generate change-impact-report listing every dependent artifact id.",
+    "Block promotion if any dependent artifact would enter unresolved/lineage-break state.",
+    "Attach the impact-report id to the version-bump record."
+  ]
+}

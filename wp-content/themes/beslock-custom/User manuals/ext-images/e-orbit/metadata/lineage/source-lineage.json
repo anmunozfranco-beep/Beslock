@@ -1,0 +1,115 @@
+{
+  "product": "e-orbit",
+  "lineage": [
+    {
+      "target": "source-of-truth/product-images/e-Orbit.png",
+      "origin": "ext-images/e-Orbit.png",
+      "migration_method": "moved",
+      "origin_retained": false
+    },
+    {
+      "target": "visual-system/references/e-orbit-visual-profile.md",
+      "origin": "ext-images/e-orbit/e-orbit-visual-profile.md",
+      "migration_method": "moved",
+      "origin_retained": false
+    },
+    {
+      "target": "metadata/audit/notes.md",
+      "origin": "ext-images/e-orbit/notes.md",
+      "migration_method": "moved",
+      "origin_retained": false
+    },
+    {
+      "target": "source-of-truth/manuals/e-Orbit user manual.md",
+      "origin": "User manuals/e-Orbit user manual.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "source-of-truth/manuals/e-Orbit app manual.md",
+      "origin": "User manuals/e-Orbit app manual.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "source-of-truth/manuals/e-Orbit user manual.pdf",
+      "origin": "User manuals/e-Orbit user manual.pdf",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "source-of-truth/manuals/e-Orbit_2.pdf",
+      "origin": "User manuals/e-Orbit_2.pdf",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "source-of-truth/specifications/e-Orbit_1.xls",
+      "origin": "User manuals/e-Orbit_1.xls",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "visual-system/prompts/ai-image-prompts.md",
+      "origin": "User manuals/visual-system/products/e-orbit/ai-image-prompts.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "visual-system/generation-matrices/image-generation-matrix.md",
+      "origin": "User manuals/visual-system/products/e-orbit/image-generation-matrix.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "visual-system/validations/visual-validation.md",
+      "origin": "User manuals/visual-system/products/e-orbit/visual-validation.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "visual-system/qa/image-production-status.md",
+      "origin": "User manuals/visual-system/products/e-orbit/image-production-status.md",
+      "migration_method": "copied and re-canonicalized",
+      "origin_retained": true
+    },
+    {
+      "target": "metadata/traceability/selected-assets-register.md",
+      "origin": "User manuals/visual-system/products/e-orbit/generated/selected-assets-register.md",
+      "migration_method": "copied and re-canonicalized",
+      "origin_retained": true
+    },
+    {
+      "target": "publishing/web/manuals/e-Orbit user manual - image-ready.md",
+      "origin": "User manuals/e-Orbit user manual - image-ready.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "publishing/web/manuals/e-Orbit user manual - review-draft.md",
+      "origin": "User manuals/e-Orbit user manual - review-draft.md",
+      "migration_method": "copied",
+      "origin_retained": true
+    },
+    {
+      "target": "structured-knowledge/manual.json",
+      "origin": [
+        "source-of-truth/manuals/e-Orbit user manual.md",
+        "source-of-truth/manuals/e-Orbit app manual.md",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ],
+      "migration_method": "derived",
+      "origin_retained": true
+    },
+    {
+      "target": "structured-knowledge/faq.json",
+      "origin": [
+        "source-of-truth/manuals/e-Orbit user manual.md",
+        "source-of-truth/manuals/e-Orbit app manual.md",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ],
+      "migration_method": "derived",
+      "origin_retained": true
+    }
+  ]
+}

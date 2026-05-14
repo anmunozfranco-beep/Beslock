@@ -1,0 +1,75 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "flows": [
+    {
+      "id": "onboarding.first-time-user",
+      "label": "First-time end user",
+      "branch_when": "no-admin-yet OR no-companion-app",
+      "steps": [
+        "safety-overview",
+        "battery-installation",
+        "first-power-on",
+        "set-administrator-pin",
+        "first-unlock",
+        "save-credentials-reminder"
+      ],
+      "exit_state": "User can unlock independently and knows recovery basics."
+    },
+    {
+      "id": "onboarding.installation",
+      "label": "Installation onboarding",
+      "branch_when": "physical-mount-required",
+      "steps": [
+        "identify-door-type",
+        "tools-checklist",
+        "mechanical-mount",
+        "wire-routing",
+        "verify-handle-orientation",
+        "test-without-power",
+        "first-power-on"
+      ],
+      "exit_state": "Hardware mounted and verified; ready for credential setup."
+    },
+    {
+      "id": "onboarding.app",
+      "label": "App onboarding",
+      "branch_when": "user-opts-into-companion-app",
+      "steps": [
+        "install-app",
+        "create-account",
+        "pair-with-app",
+        "verify-online-status",
+        "explore-member-management"
+      ],
+      "exit_state": "Lock visible in companion app; admin can manage remotely."
+    },
+    {
+      "id": "onboarding.admin",
+      "label": "Administrator onboarding",
+      "branch_when": "first-admin-or-admin-handover",
+      "steps": [
+        "set-administrator-pin",
+        "set-administrator-fingerprint",
+        "set-language",
+        "set-time-zone",
+        "review-member-policy",
+        "review-recovery-procedures"
+      ],
+      "exit_state": "Administrator fully provisioned and informed about recovery."
+    },
+    {
+      "id": "onboarding.safe-first-use",
+      "label": "Safe first use",
+      "branch_when": "always-after-installation",
+      "steps": [
+        "mechanical-key-test",
+        "first-unlock-test",
+        "lockout-behavior-explanation",
+        "low-battery-explanation",
+        "emergency-power-walkthrough"
+      ],
+      "exit_state": "User has been exposed to the four most common recovery scenarios before they are needed."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Que necesitas antes de empezar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#3
+
+- la cerradura debe estar instalada y energizada
+- el celular principal debe tener Bluetooth activo
+- la cerradura debe estar a corta distancia del telefono; la fuente OCR menciona hasta `8 metros` como referencia maxima
+- si vas a usar funciones remotas, necesitas un Gateway enlazado a WiFi

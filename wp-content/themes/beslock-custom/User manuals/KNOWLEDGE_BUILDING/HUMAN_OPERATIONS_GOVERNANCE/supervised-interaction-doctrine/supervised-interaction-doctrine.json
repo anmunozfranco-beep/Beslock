@@ -1,0 +1,10 @@
+{
+  "kind": "supervised-interaction-doctrine",
+  "principles": [
+    "Every interaction is bound to a supervision-receipt.",
+    "Every interaction is bound to an operator identity.",
+    "Every interaction is bound to a declared checkpoint and a declared decision set.",
+    "Every interaction is reversible by an equal-or-higher governance decision."
+  ],
+  "schema": "human-operations-governance/1.0"
+}

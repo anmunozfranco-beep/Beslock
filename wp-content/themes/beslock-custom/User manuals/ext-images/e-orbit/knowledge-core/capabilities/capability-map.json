@@ -1,0 +1,101 @@
+{
+  "id": "capability-map",
+  "type": "capability-map",
+  "product": "e-orbit",
+  "summary": "Capabilities surfaced from e-orbit OEM corpus (vocabulary-anchored)",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "partial",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "web",
+    "onboarding"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_capability_map::CAPABILITY_VOCAB"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Vocabulary-anchored. Capabilities are surfaced ONLY when the OEM corpus contains the matched phrase. No inference, no claims.",
+  "capabilities": [
+    {
+      "id": "cap-fingerprint-unlock",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ]
+    },
+    {
+      "id": "cap-pin-unlock",
+      "matched_surface_terms": [
+        "pin",
+        "contraseña",
+        "password"
+      ]
+    },
+    {
+      "id": "cap-ic-card-unlock",
+      "matched_surface_terms": [
+        "ic card",
+        "tarjeta"
+      ]
+    },
+    {
+      "id": "cap-face-unlock",
+      "matched_surface_terms": [
+        "face recognition",
+        "facial"
+      ]
+    },
+    {
+      "id": "cap-wifi-tuya-integration",
+      "matched_surface_terms": [
+        "tuya wifi",
+        "tuya"
+      ]
+    },
+    {
+      "id": "cap-emergency-unlock-usb",
+      "matched_surface_terms": [
+        "emergency power"
+      ]
+    },
+    {
+      "id": "cap-auto-lock",
+      "matched_surface_terms": [
+        "auto-lock"
+      ]
+    },
+    {
+      "id": "cap-low-battery-alert",
+      "matched_surface_terms": [
+        "low battery"
+      ]
+    },
+    {
+      "id": "cap-temporary-password",
+      "matched_surface_terms": [
+        "temporary password"
+      ]
+    },
+    {
+      "id": "cap-remote-unlock",
+      "matched_surface_terms": [
+        "remote unlock",
+        "desbloqueo remoto"
+      ]
+    },
+    {
+      "id": "cap-multi-language",
+      "matched_surface_terms": [
+        "language",
+        "idioma"
+      ]
+    }
+  ]
+}

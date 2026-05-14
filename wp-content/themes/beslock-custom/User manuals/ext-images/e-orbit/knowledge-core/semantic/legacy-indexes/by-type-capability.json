@@ -1,0 +1,34 @@
+[
+  {
+    "id": "cap-objetivo",
+    "summary": "Este documento conecta la implementación inicial del centro de ayuda de e-Orbit con el primer lote de imágenes generadas por IA",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "cap-objetivo",
+    "summary": "Determinar que aportan realmente `e-Orbit_1",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "cap-objetivo",
+    "summary": "Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "cap-alcance-real-de-la-fuente",
+    "summary": "Las fuentes nuevas soportan con bastante claridad:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

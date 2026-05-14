@@ -1,0 +1,85 @@
+{
+  "schema": "continuity-governance/1.0",
+  "generated_at": "2026-05-13T19:34:40+00:00",
+  "timeline_types": [
+    {
+      "id": "onboarding-timeline",
+      "stages": [
+        "unboxed",
+        "physically-installed",
+        "powered",
+        "paired",
+        "enrolled",
+        "verified"
+      ]
+    },
+    {
+      "id": "installation-timeline",
+      "stages": [
+        "site-survey",
+        "mounting",
+        "wiring",
+        "power-up",
+        "configuration",
+        "verified-install"
+      ]
+    },
+    {
+      "id": "troubleshooting-timeline",
+      "stages": [
+        "symptom-observed",
+        "hypothesis-proposed",
+        "diagnostic",
+        "resolution-attempt",
+        "outcome-evaluated"
+      ]
+    },
+    {
+      "id": "recovery-timeline",
+      "stages": [
+        "failure-detected",
+        "checkpoint-restored",
+        "retry-or-rollback",
+        "validation",
+        "restored-or-escalated"
+      ]
+    },
+    {
+      "id": "maintenance-timeline",
+      "stages": [
+        "scheduled-or-triggered",
+        "battery-or-firmware-action",
+        "verification",
+        "logged"
+      ]
+    },
+    {
+      "id": "escalation-timeline",
+      "stages": [
+        "tier-1",
+        "tier-2",
+        "tier-3",
+        "tier-4-vendor",
+        "tier-5-rma"
+      ]
+    },
+    {
+      "id": "degraded-operation-timeline",
+      "stages": [
+        "entered-degradation",
+        "fallback-active",
+        "monitoring",
+        "restoration-attempted",
+        "restored-or-halted"
+      ]
+    }
+  ],
+  "rules": [
+    "every timeline declares its stages and admissible transitions",
+    "stage transitions carry timestamps + provenance + confidence",
+    "no timeline may invent stages not declared in its model",
+    "timelines reference EXECUTION_GOVERNANCE state transitions; they do not duplicate them",
+    "concurrent timelines (e.g. troubleshooting during onboarding) are explicitly linked",
+    "a closed timeline cannot be silently reopened (only via declared continuation)"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "install-cambio-de-direccion",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "![Cambio de direccion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-05",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-cambio-de-direccion.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "afloja el tornillo de cambio de direccion"
+    },
+    {
+      "n": 2,
+      "text": "gira la manija `180°` hacia la parte superior de la cerradura"
+    },
+    {
+      "n": 3,
+      "text": "gira el cambiador de direccion"
+    },
+    {
+      "n": 4,
+      "text": "vuelve a apretar el tornillo"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

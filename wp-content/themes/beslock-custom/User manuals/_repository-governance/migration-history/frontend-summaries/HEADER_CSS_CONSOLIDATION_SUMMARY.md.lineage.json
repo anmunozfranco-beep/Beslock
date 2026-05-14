@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HEADER_CSS_CONSOLIDATION_SUMMARY.md",
+  "previous_path": "HEADER_CSS_CONSOLIDATION_SUMMARY.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "F",
+  "sub_label": "frontend-migration-summary-legacy",
+  "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HEADER_CSS_CONSOLIDATION_SUMMARY.md' 'HEADER_CSS_CONSOLIDATION_SUMMARY.md'"
+}

@@ -1,0 +1,9 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#12
+
+La guia suplementaria permite normalizar la instalacion de e-Touch con suficiente confianza.
+
+Sigue pendiente para un nivel tecnico mas alto:
+- plantilla 1:1 de perforacion
+- confirmacion fisica de espesores compatibles y de cualquier cota exacta no visible en el PDF corto

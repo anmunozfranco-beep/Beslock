@@ -1,0 +1,137 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "patterns": [
+    {
+      "id": "by-id",
+      "applies_to": [
+        "all"
+      ],
+      "shape": "(product, artifact_id) -> artifact",
+      "guarantees": [
+        "deterministic",
+        "lineage-attached"
+      ]
+    },
+    {
+      "id": "by-domain",
+      "applies_to": [
+        "all"
+      ],
+      "shape": "(product, domain) -> [artifact]",
+      "guarantees": [
+        "domain-bounded",
+        "ordered-by-priority"
+      ]
+    },
+    {
+      "id": "by-entity",
+      "applies_to": [
+        "entities"
+      ],
+      "shape": "(product, entity_id) -> {entity, references_in}",
+      "guarantees": [
+        "entity-graph-attached"
+      ]
+    },
+    {
+      "id": "by-procedure",
+      "applies_to": [
+        "procedures",
+        "install",
+        "operation"
+      ],
+      "shape": "(product, procedure_id) -> {procedure, prerequisites, warnings}",
+      "guarantees": [
+        "prerequisite-expanded",
+        "warning-injected"
+      ]
+    },
+    {
+      "id": "by-workflow",
+      "applies_to": [
+        "workflows"
+      ],
+      "shape": "(product, workflow_id) -> {workflow, actors, steps, dependencies}",
+      "guarantees": [
+        "actor-resolved",
+        "dependency-expanded"
+      ]
+    },
+    {
+      "id": "by-warning",
+      "applies_to": [
+        "warnings"
+      ],
+      "shape": "(product, warning_id) -> {warning, scoped_procedures}",
+      "guarantees": [
+        "scope-resolved"
+      ]
+    },
+    {
+      "id": "by-troubleshooting",
+      "applies_to": [
+        "troubleshooting"
+      ],
+      "shape": "(product, symptom) -> {tier, recovery_path, escalation}",
+      "guarantees": [
+        "tier-aware",
+        "escalation-attached"
+      ]
+    },
+    {
+      "id": "by-onboarding",
+      "applies_to": [
+        "workflows",
+        "procedural-semantics"
+      ],
+      "shape": "(product, audience) -> ordered onboarding bundle",
+      "guarantees": [
+        "audience-scoped",
+        "cognitive-load-aware"
+      ]
+    },
+    {
+      "id": "by-visual-intent",
+      "applies_to": [
+        "visual-intent",
+        "visual-risk",
+        "component-visibility"
+      ],
+      "shape": "(product, surface) -> visual descriptor",
+      "guarantees": [
+        "risk-classified",
+        "visibility-aware"
+      ]
+    },
+    {
+      "id": "by-governance",
+      "applies_to": [
+        "governance-doctrine"
+      ],
+      "shape": "(layer, area) -> doctrine document",
+      "guarantees": [
+        "revision-tagged"
+      ]
+    },
+    {
+      "id": "by-provenance",
+      "applies_to": [
+        "all"
+      ],
+      "shape": "artifact -> {source_refs, extraction_lineage, version}",
+      "guarantees": [
+        "read-only",
+        "complete-lineage"
+      ]
+    }
+  ],
+  "rules": [
+    "All access is read-only at this layer; no mutation surface is exposed.",
+    "Every access response carries provenance; provenance-stripped responses are forbidden.",
+    "Access by id is the canonical primitive; all other patterns reduce to it.",
+    "Access is scoped by (product, layer, audience) — global queries fan out, never collapse.",
+    "Access never returns deprecated artifacts without an explicit `include_deprecated=true` flag.",
+    "Access never returns unresolved-stage artifacts without an explicit `include_unresolved=true` flag."
+  ]
+}

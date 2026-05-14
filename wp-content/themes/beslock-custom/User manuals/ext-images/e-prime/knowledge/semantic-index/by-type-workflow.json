@@ -1,0 +1,18 @@
+[
+  {
+    "id": "wf-flujo-oem-base-de-vinculacion",
+    "summary": "Segun la fuente OCR, el flujo local de referencia es:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-alta-desde-la-app",
+    "summary": "La guia OEM no muestra todos los textos internos de la aplicacion, asi que Beslock debe describir el flujo asi:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

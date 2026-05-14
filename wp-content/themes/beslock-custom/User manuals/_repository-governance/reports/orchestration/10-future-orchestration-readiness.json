@@ -1,0 +1,60 @@
+{
+  "consumers": [
+    {
+      "gates": [
+        "context-vector emitter",
+        "confidence-tier-on-nodes",
+        "provenance emitter",
+        "supervised explicit-action gate"
+      ],
+      "id": "contextual-operational-copilot"
+    },
+    {
+      "gates": [
+        "checkpoint registry",
+        "intent declaration channel",
+        "predicate coverage on onboarding flows"
+      ],
+      "id": "onboarding-runtime"
+    },
+    {
+      "gates": [
+        "symptom corpus ≥ 10 per product",
+        "causal edges emitted",
+        "hypothesis store"
+      ],
+      "id": "troubleshooting-runtime"
+    },
+    {
+      "gates": [
+        "visual-risk freeze contract",
+        "visual-unavailable fallback",
+        "no-image-generation hard exclusion preserved"
+      ],
+      "id": "multimodal-cognition-system"
+    },
+    {
+      "gates": [
+        "visual provenance contract",
+        "no-rendering-runtime hard exclusion preserved"
+      ],
+      "id": "future-visual-assistance"
+    },
+    {
+      "gates": [
+        "ADAPTIVE precedence engine declared",
+        "skill-model emitter",
+        "warning-corpus complete on all products"
+      ],
+      "id": "adaptive-operational-orchestration"
+    }
+  ],
+  "doctrine": [
+    "All future orchestration consumers remain subordinate to knowledge-core.",
+    "All future orchestration consumers operate under declared contracts only.",
+    "All future orchestration consumers are gated by declared blocking risks until resolved.",
+    "All future orchestration consumers are supervised by default."
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "subordinate_to": "knowledge-core (forever)"
+}

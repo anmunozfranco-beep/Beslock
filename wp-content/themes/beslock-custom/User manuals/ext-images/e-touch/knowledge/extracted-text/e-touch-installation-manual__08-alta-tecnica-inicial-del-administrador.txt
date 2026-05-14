@@ -1,0 +1,10 @@
+# Alta tecnica inicial del administrador
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#8
+
+El PDF incluye un alta local inicial util para pruebas de instalacion:
+- pulsacion corta del boton de ajuste `s1` para agregar administrador o usuario
+- pulsacion larga de `s1` para forzar inicializacion del sistema
+- tecla `s2` para abrir o cerrar rapido el modo normalmente abierto
+
+En estado inicial, la guia indica que puede registrarse huella o password desde la parte interior para crear el primer administrador.

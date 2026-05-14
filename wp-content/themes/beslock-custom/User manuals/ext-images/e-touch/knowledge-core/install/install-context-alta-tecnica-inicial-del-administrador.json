@@ -1,0 +1,35 @@
+{
+  "id": "install-context-alta-tecnica-inicial-del-administrador",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "El PDF incluye un alta local inicial util para pruebas de instalacion:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#8"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-alta-tecnica-inicial-del-administrador.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "pulsacion corta del boton de ajuste `s1` para agregar administrador o usuario",
+    "pulsacion larga de `s1` para forzar inicializacion del sistema",
+    "tecla `s2` para abrir o cerrar rapido el modo normalmente abierto"
+  ],
+  "legacy_storage_bucket": "installation"
+}

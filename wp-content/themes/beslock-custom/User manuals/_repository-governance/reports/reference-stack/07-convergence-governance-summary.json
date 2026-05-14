@@ -1,0 +1,16 @@
+{
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/REFERENCE_STACK_GOVERNANCE/",
+  "doctrine_sections": [
+    "convergence-philosophy",
+    "canonical-assembly-doctrine",
+    "operational-stack-philosophy",
+    "interoperability-doctrine",
+    "deployment-composition-philosophy",
+    "ecosystem-convergence-principles"
+  ],
+  "kind": "convergence-governance-summary",
+  "layer_index": 26,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/reference-stack/",
+  "schema": "reference-stack-governance/1.0",
+  "subordinate_to_count": 26
+}

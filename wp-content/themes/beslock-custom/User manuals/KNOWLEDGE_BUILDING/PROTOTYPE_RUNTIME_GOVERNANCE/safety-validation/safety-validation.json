@@ -1,0 +1,49 @@
+{
+  "generated": "2026-05-13T21:12:10Z",
+  "kind": "safety-validation",
+  "predicates": [
+    {
+      "id": "hallucination-resistance",
+      "metric": "every emitted node is present in knowledge-core; no invented nodes/steps/edges"
+    },
+    {
+      "id": "no-unsafe-retrieval",
+      "metric": "no retrieval crosses safety-boundary set declared by RUNTIME_GOVERNANCE"
+    },
+    {
+      "id": "no-escalation-failure",
+      "metric": "every triggered escalation reaches a declared receiver state"
+    },
+    {
+      "id": "no-continuity-loss",
+      "metric": "every interruption produces checkpoint or degradation record (no silent loss)"
+    },
+    {
+      "id": "no-ambiguous-guidance",
+      "metric": "ambiguity is surfaced with candidate set; never silently picked"
+    },
+    {
+      "id": "no-low-confidence-execution",
+      "metric": "uncertain-confidence outputs do not advance to guidance emission without supervised review"
+    },
+    {
+      "id": "no-provenance-loss",
+      "metric": "every emitted package carries a provenance manifest"
+    },
+    {
+      "id": "no-supervision-loss",
+      "metric": "every supervised boundary carries a supervision receipt"
+    },
+    {
+      "id": "no-governance-bypass",
+      "metric": "no flow bypasses lifecycle P-tier, schema-pin, or any prior contract"
+    }
+  ],
+  "rules": [
+    "All safety predicates are mandatory throughout the prototype run.",
+    "Failure of any predicate immediately demotes the slice.",
+    "Validation results are append-only and signed.",
+    "Predicates are evaluated continuously, not only at completion."
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

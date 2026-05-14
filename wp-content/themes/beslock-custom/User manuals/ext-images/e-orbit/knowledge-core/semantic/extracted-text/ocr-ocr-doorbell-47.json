@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-doorbell-47",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Doorbell",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-47"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-doorbell-47.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "(Dual Band)",
+  "legacy_storage_bucket": "extracted-text"
+}

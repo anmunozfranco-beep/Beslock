@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-k-battery-x4-6",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "K-Battery X4",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Maintenance",
+  "raw_text": "Disclaimer: We have done our best to ensure that the information provided in this manual is correct and reliable, but we cannot",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,8 @@
+# Requisitos antes de vincular
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4
+
+- debe existir al menos un administrador en la cerradura
+- el telefono debe tener instalada `TUYA APP`
+- la red debe ser `2.4G`
+- debes estar junto a la cerradura para completar el proceso

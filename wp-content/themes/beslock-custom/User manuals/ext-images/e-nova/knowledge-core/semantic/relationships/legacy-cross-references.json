@@ -1,0 +1,8 @@
+{
+  "product": "e-nova",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "edges": [],
+  "edge_total": 0,
+  "policy": "Only adjacency- and text-match-inferred edges are emitted. Verified semantic edges must be authored in manual-overrides.json."
+}

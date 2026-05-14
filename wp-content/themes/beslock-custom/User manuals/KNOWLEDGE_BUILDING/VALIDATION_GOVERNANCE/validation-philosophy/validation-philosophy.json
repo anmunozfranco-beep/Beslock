@@ -1,0 +1,12 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Validation Philosophy",
+  "rules": [
+    "Read-only.",
+    "Idempotent.",
+    "Typed findings.",
+    "Zero-tolerance for critical classes.",
+    "Subordinate to knowledge-core and LIFECYCLE_GOVERNANCE."
+  ]
+}

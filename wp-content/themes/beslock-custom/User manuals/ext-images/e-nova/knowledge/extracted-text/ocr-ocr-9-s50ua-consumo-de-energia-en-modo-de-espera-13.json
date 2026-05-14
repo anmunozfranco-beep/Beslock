@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "9 S50Ua Consumo De Energia En Modo De Espera",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-13"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": ". . prolongado\nConsumo de Energia Dinámico S200mMA\nRequisitos de Humedad < 93% RH\nCapacidad de Huella Dactilar 20 (las primeras 3 son administradores y las 17 posteriores son\nusuarios regulares)\nMaterial del Producto Aleación de Aluminio + acero inoxidable\nFuente de Alimentación Bateria de litio ternaria de 400mAnh\nGrosor de Puerta Aplicable 35-55MM",
+  "storage_bucket": "extracted-text"
+}

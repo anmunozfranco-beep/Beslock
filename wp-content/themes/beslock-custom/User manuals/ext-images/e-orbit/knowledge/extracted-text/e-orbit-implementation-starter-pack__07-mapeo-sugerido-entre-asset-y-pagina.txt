@@ -1,0 +1,87 @@
+# Mapeo sugerido entre asset y página
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7
+
+
+
+
+## Hub
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.1
+
+- página: `/productos/e-orbit`
+- imagen principal: `e-orbit-hero-main.jpg`
+
+
+## Primeros pasos
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.2
+
+- página: `/productos/e-orbit/primeros-pasos`
+- imagen principal: `e-orbit-installed-context.jpg`
+
+
+## Agregar administrador
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.3
+
+- página: `/productos/e-orbit/usuarios/agregar-administrador`
+- imagen principal: `e-orbit-add-admin-action.jpg`
+
+
+## PIN
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.4
+
+- página: `/productos/e-orbit/uso/pin`
+- imagen principal: `e-orbit-pin-use.jpg`
+
+
+## Huella
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.5
+
+- página: `/productos/e-orbit/uso/huella`
+- imagen principal: `e-orbit-fingerprint-use.jpg`
+
+
+## Idioma
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.6
+
+- página: `/productos/e-orbit/configuracion/idioma`
+- imagen principal: `e-orbit-language-settings.jpg`
+
+
+## Agregar dispositivo en app
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.7
+
+- página: `/productos/e-orbit/app/agregar-dispositivo`
+- imagen principal: `e-orbit-app-add-device.jpg`
+
+
+## Vincular por QR
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.8
+
+- página: `/productos/e-orbit/app/vincular-por-qr`
+- imagen principal: `e-orbit-link-qr.jpg`
+
+
+## Troubleshooting de huella
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.9
+
+- página: `/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`
+- imagen principal: `e-orbit-troubleshoot-fingerprint.jpg`
+
+
+## Troubleshooting de app
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#7.10
+
+- página: `/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`
+- imagen principal: `e-orbit-troubleshoot-app-connection.jpg`
+
+---

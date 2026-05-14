@@ -1,0 +1,38 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "learning_paths": [
+    {
+      "id": "path.beginner",
+      "label": "Beginner — first 24 hours",
+      "ordered_concepts": [
+        "procedure.battery-installation",
+        "procedure.first-power-on",
+        "procedure.add-administrator",
+        "procedure.register-pin",
+        "procedure.unlock-pin"
+      ]
+    },
+    {
+      "id": "path.intermediate",
+      "label": "Intermediate — first week",
+      "ordered_concepts": [
+        "procedure.register-fingerprint",
+        "procedure.unlock-fingerprint",
+        "procedure.add-user",
+        "procedure.pair-with-app",
+        "procedure.qr-pairing"
+      ]
+    },
+    {
+      "id": "path.advanced",
+      "label": "Advanced — full ownership",
+      "ordered_concepts": [
+        "procedure.member-management",
+        "procedure.firmware-update",
+        "procedure.factory-reset",
+        "procedure.emergency-power"
+      ]
+    }
+  ]
+}

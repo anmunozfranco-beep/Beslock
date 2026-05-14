@@ -1,0 +1,29 @@
+{
+  "id": "install-context-estado-editorial",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "La base de instalacion queda suficientemente soportada por `e-Flex_1",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#14"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "una plantilla de perforacion 1:1 si el proveedor la entrega",
+    "validacion fisica del tiempo exacto de bloqueo y de cualquier password inicial que la guia corta mencione"
+  ],
+  "storage_bucket": "installation"
+}

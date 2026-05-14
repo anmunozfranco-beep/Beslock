@@ -1,0 +1,10 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#12
+
+Este manual de app queda normalizado como base operativa minima para e-Orbit.
+
+Sigue pendiente para una version final mas fuerte:
+- validacion del flujo exacto de red en hardware real
+- confirmacion de la variante principal de app a publicar
+- verificacion comercial de compatibilidad `Alexa` y de las variantes de password temporal

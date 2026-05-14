@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-05-13T15:40:35Z",
+  "products": {
+    "e-flex": {
+      "procedural_semantics": 9,
+      "components_anchored": 7,
+      "visual_intents": 6,
+      "visual_risks": 4,
+      "publication_routing_entries": 66,
+      "visual_orchestration_score": 0.817,
+      "ready_for_comfy_intent_consumption": true,
+      "blockers": []
+    },
+    "e-nova": {
+      "procedural_semantics": 0,
+      "components_anchored": 1,
+      "visual_intents": 1,
+      "visual_risks": 1,
+      "publication_routing_entries": 17,
+      "visual_orchestration_score": 0.069,
+      "ready_for_comfy_intent_consumption": false,
+      "blockers": [
+        "no procedural semantics (no procedure/workflow/installation entities had textual steps)"
+      ]
+    },
+    "e-orbit": {
+      "procedural_semantics": 24,
+      "components_anchored": 4,
+      "visual_intents": 7,
+      "visual_risks": 3,
+      "publication_routing_entries": 169,
+      "visual_orchestration_score": 0.738,
+      "ready_for_comfy_intent_consumption": true,
+      "blockers": []
+    },
+    "e-prime": {
+      "procedural_semantics": 9,
+      "components_anchored": 7,
+      "visual_intents": 5,
+      "visual_risks": 3,
+      "publication_routing_entries": 91,
+      "visual_orchestration_score": 0.778,
+      "ready_for_comfy_intent_consumption": true,
+      "blockers": []
+    },
+    "e-shield": {
+      "procedural_semantics": 13,
+      "components_anchored": 5,
+      "visual_intents": 6,
+      "visual_risks": 4,
+      "publication_routing_entries": 71,
+      "visual_orchestration_score": 0.757,
+      "ready_for_comfy_intent_consumption": true,
+      "blockers": []
+    },
+    "e-touch": {
+      "procedural_semantics": 4,
+      "components_anchored": 9,
+      "visual_intents": 5,
+      "visual_risks": 4,
+      "publication_routing_entries": 101,
+      "visual_orchestration_score": 0.852,
+      "ready_for_comfy_intent_consumption": true,
+      "blockers": []
+    }
+  }
+}

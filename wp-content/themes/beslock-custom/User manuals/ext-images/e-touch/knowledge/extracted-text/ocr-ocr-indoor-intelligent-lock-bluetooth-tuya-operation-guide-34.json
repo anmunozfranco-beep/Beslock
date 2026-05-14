@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-indoor-intelligent-lock-bluetooth-tuya-operation-guide-34",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Indoor Intelligent Lock Bluetooth Tuya Operation Guide",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-34"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "en\n= age\neo hB-- two",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/deployment-composition/",
+  "compositions": [
+    "local-supervised-stack",
+    "reviewer-stack",
+    "ingestion-stack",
+    "replay-stack",
+    "observability-stack",
+    "controlled-pilot-stack"
+  ],
+  "invariants_count": 5,
+  "kind": "deployment-composition-summary",
+  "schema": "reference-stack-governance/1.0"
+}

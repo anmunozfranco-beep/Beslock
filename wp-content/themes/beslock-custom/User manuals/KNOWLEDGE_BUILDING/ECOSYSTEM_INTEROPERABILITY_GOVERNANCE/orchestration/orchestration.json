@@ -1,0 +1,49 @@
+{
+  "generated": "2026-05-13T20:43:33Z",
+  "kind": "orchestration",
+  "patterns": [
+    "delegation (primary → delegated under preserved supervision)",
+    "handoff (primary → receiver with read-only lock at source)",
+    "broadcast (primary → all observers read-only)",
+    "co-execution (two runtimes execute disjoint loops on a shared incident-id)",
+    "escalation-handoff (primary → receiver under monotonic escalation contract)",
+    "degraded-federation (one runtime is L3+; primary downgrades the federation to read-only-only)",
+    "coexistence (multiple runtimes operate on disjoint scopes within one ecosystem-session)"
+  ],
+  "roles": [
+    {
+      "duty": "owns the active orchestration loop and is the source of truth for the current step",
+      "id": "primary-runtime"
+    },
+    {
+      "duty": "executes a delegated step under the primary's supervision posture",
+      "id": "delegated-runtime"
+    },
+    {
+      "duty": "consumes traces read-only; cannot mutate state",
+      "id": "observer-runtime"
+    },
+    {
+      "duty": "receives handoff (escalation or delegation) and acquires read-only state until acknowledged",
+      "id": "receiver-runtime"
+    },
+    {
+      "duty": "consumes packaging requests bound by lifecycle P-tier gates",
+      "id": "publication-runtime"
+    },
+    {
+      "duty": "owns append-only continuity state and serves all runtimes read-only",
+      "id": "continuity-runtime"
+    }
+  ],
+  "rules": [
+    "Roles are declared per orchestration loop; runtime cannot self-promote a role.",
+    "Delegation preserves supervision posture (supervised stays supervised).",
+    "Co-execution requires disjoint scopes; overlapping scopes require declared arbitration.",
+    "Degraded federation forces the federation level to the most degraded participant.",
+    "Coexistence cannot share private cognition state; only declared shared-context kinds cross boundaries.",
+    "Federated orchestration cannot create a destructive cross-runtime path.",
+    "Federated completion requires all participating runtimes to satisfy their declared completion conditions."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

@@ -1,0 +1,43 @@
+# Registrar una contraseña o PIN
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6
+
+
+
+
+## Ruta de menú
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6.1
+
+**Agregar usuario → Agregar administrador / Agregar usuario**
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6.2
+
+1. entra a **Agregar usuario**
+2. elige si vas a registrar un administrador o un usuario regular
+3. selecciona **Contraseña**
+4. ingresa la clave
+5. confírmala
+6. guarda el registro
+7. prueba el PIN
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6.3
+
+Evita claves obvias y no compartas el PIN principal del administrador.
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6.4
+
+- la clave abre correctamente
+- el usuario la recuerda
+- el sistema acepta el acceso de forma consistente
+
+---

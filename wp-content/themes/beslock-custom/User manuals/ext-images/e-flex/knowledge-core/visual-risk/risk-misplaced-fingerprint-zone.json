@@ -1,0 +1,33 @@
+{
+  "id": "risk-misplaced-fingerprint-zone",
+  "type": "visual-risk",
+  "product": "e-flex",
+  "summary": "User taps the wrong area during enrollment, enrollment fails, support ticket opens.",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/component-visibility/component-visibility-map.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::RISK_CATALOG"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "severity": "high",
+  "trigger_components": [
+    "fingerprint-zone"
+  ],
+  "failure_mode": "User taps the wrong area during enrollment, enrollment fails, support ticket opens.",
+  "mitigation": "Future ComfyUI workflow MUST anchor the listed trigger_components against the OEM PNG references and refuse to render this asset if anchors are missing.",
+  "downstream_consumers": [
+    "comfyui",
+    "visual-qa"
+  ]
+}

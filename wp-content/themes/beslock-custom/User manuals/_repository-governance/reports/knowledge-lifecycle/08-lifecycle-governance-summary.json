@@ -1,0 +1,16 @@
+{
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/KNOWLEDGE_LIFECYCLE_GOVERNANCE/",
+  "doctrine_sections": [
+    "trust-philosophy",
+    "operational-knowledge-evolution-doctrine",
+    "reviewer-governance-philosophy",
+    "reversible-promotion-philosophy",
+    "oem-verification-philosophy",
+    "operational-trust-principles"
+  ],
+  "kind": "lifecycle-governance-summary",
+  "layer_index": 22,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/knowledge-lifecycle/",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "subordinate_to_count": 22
+}

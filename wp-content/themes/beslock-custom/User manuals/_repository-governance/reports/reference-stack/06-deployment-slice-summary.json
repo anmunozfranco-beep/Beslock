@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/deployment-slices/",
+  "invariants_count": 5,
+  "kind": "deployment-slice-summary",
+  "schema": "reference-stack-governance/1.0",
+  "slices": [
+    "onboarding-only-runtime",
+    "troubleshooting-runtime",
+    "reviewer-runtime",
+    "governance-runtime",
+    "ingestion-runtime",
+    "replay-runtime"
+  ]
+}

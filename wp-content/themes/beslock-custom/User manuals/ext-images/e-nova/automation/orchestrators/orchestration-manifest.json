@@ -1,0 +1,10 @@
+{
+  "product_slug": "e-nova",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "starter_packs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/automation/orchestrators/e-Nova - implementation starter pack.md"
+  ],
+  "runs": []
+}

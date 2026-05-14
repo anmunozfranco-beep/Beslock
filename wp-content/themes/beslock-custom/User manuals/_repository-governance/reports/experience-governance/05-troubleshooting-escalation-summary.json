@@ -1,0 +1,7 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "tier_count": 6,
+  "symptom_category_count": 6,
+  "skip_rule": "≤2 tiers skippable with explicit user opt-in; data-loss tier requires acknowledgement."
+}

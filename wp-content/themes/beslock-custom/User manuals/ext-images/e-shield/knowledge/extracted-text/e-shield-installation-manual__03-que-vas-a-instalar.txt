@@ -1,0 +1,10 @@
+# Que vas a instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3
+
+e-Shield usa una arquitectura de cerradura dividida:
+- modulo exterior vertical con lector circular en la parte superior y keypad debajo
+- caja interior horizontal separada
+- cilindro de seguridad tipo Clase C
+- alimentacion principal con 4 baterias AA
+- respaldo de energia por USB

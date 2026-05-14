@@ -1,0 +1,20 @@
+{
+  "product_slug": "e-prime",
+  "product_display": "e-Prime",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "canonical_png": "ext-images/e-prime/source-of-truth/product-images/e-Prime.png",
+  "approved_sources": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime user manual.pdf"
+  ],
+  "publishing_surfaces": [],
+  "visual_system": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/generation-matrices/e-Prime - image generation matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/generation-matrices/image-generation-matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/prompts/ai-image-prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/prompts/e-Prime - AI image prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/qa/image-production-status.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/references/e-prime-visual-profile.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/validations/visual-validation.md"
+  ]
+}

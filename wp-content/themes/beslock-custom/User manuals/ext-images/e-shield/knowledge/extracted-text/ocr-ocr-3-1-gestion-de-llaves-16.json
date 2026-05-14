@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-3-1-gestion-de-llaves-16",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "3.1 Gestión De Llaves",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-16"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "El administrador original puede borrar, restablecer, enviar y modificar la eKey. Al\nmismo tiempo podrá buscar el registro de accegps a la cerradura\nbee te ales 7\nae 0 ¿ota regu cain quer\nBORMAR cole they!\nLeida Firmar",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "wf-app-pairing-ez-mode",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "Wi-Fi or EZ Mode fallback pairing",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#app-pairing-ez-mode"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "app",
+  "outcomes": [
+    "fallback-pairing-attempted"
+  ],
+  "preconditions": [
+    "QR pairing unavailable or failed",
+    "compatible Wi-Fi available",
+    "lock reset path accessible"
+  ],
+  "steps": [
+    "Open the lock Wi-Fi onboarding family.",
+    "Enter the Wi-Fi details.",
+    "Enter the reset-device flow.",
+    "Switch the app to EZ Mode.",
+    "Follow the alternative distribution or hotspot prompts."
+  ],
+  "validation_checks": [],
+  "authorized_visual_renderer": "ComfyUI"
+}

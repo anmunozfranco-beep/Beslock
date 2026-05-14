@@ -1,0 +1,13 @@
+# Alcance real de la fuente
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#3
+
+Las fuentes nuevas soportan con bastante claridad:
+- alta del dispositivo en `Smart Life` / `Tuya`
+- configuracion de red del equipo
+- desbloqueo remoto
+- consulta de registros
+- gestion de miembros
+- passwords temporales
+
+Tambien aparece `Tongtong APP` en la hoja tecnica, pero el flujo ilustrado del PDF esta centrado en `Smart Life`.

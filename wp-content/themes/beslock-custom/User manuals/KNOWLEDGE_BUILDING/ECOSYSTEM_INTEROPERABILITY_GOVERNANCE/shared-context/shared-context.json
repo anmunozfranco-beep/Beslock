@@ -1,0 +1,70 @@
+{
+  "generated": "2026-05-13T20:43:33Z",
+  "inheritable_signals": [
+    "context-vector",
+    "skill-model",
+    "open-warnings (acknowledged or not)",
+    "incident-id",
+    "session-id",
+    "active-package references (read-only)"
+  ],
+  "kind": "shared-context",
+  "non_inheritable_signals": [
+    "destructive-confirmation",
+    "irreversibility-acknowledgement",
+    "explicit-action-receipt",
+    "operator-identity (re-asserted per runtime)",
+    "supervised-resume token"
+  ],
+  "rules": [
+    "Shared context kinds are declared; ad-hoc shared state is forbidden.",
+    "Shared context is append-only or monotonic; in-place edits are unsafe.",
+    "Non-inheritable signals are filtered at the runtime boundary; receiver must re-acquire.",
+    "Confidence tier is immutable across boundaries; receivers may not elevate.",
+    "Shared context binds via incident-id (when emitter exists) or session-id (best-effort).",
+    "Shared context cannot mutate knowledge-core under any circumstances."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "shared_context_kinds": [
+    {
+      "id": "shared-operational-memory",
+      "mutability": "append-only",
+      "scope": "ecosystem-session"
+    },
+    {
+      "id": "shared-troubleshooting-context",
+      "mutability": "append-only",
+      "scope": "ecosystem-session + incident-id"
+    },
+    {
+      "id": "cross-runtime-continuity",
+      "mutability": "append-only",
+      "scope": "incident-id"
+    },
+    {
+      "id": "shared-escalation-state",
+      "mutability": "monotonic (tier only rises)",
+      "scope": "incident-id"
+    },
+    {
+      "id": "context-inheritance-record",
+      "mutability": "append-only; non-inheritable signals filtered",
+      "scope": "ecosystem-session"
+    },
+    {
+      "id": "federated-operational-session",
+      "mutability": "open/close lifecycle; no in-place edit",
+      "scope": "ecosystem-session"
+    },
+    {
+      "id": "shared-skill-model",
+      "mutability": "read-only inside a session",
+      "scope": "ecosystem-session"
+    },
+    {
+      "id": "shared-confidence-tier",
+      "mutability": "immutable across boundary",
+      "scope": "per-node"
+    }
+  ]
+}

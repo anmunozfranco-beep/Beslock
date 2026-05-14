@@ -1,0 +1,31 @@
+{
+  "id": "faq-should-language-codes-be-published-as-final",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "Should the observed language codes be treated as final publication truth?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "hardware-validation-required",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#7",
+    "source-of-truth/specifications/e-Orbit_1.xls",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "Should the observed language codes be treated as final publication truth?",
+  "answer": "No. The observed language codes are useful as candidate knowledge, but they still require visual or hardware confirmation before they become final commercial truth."
+}

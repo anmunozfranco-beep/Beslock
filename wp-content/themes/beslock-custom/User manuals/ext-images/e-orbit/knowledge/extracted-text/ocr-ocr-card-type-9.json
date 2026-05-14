@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-card-type-9",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Card Type",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "eight\nuser capacity\nTotal capacity of 250 sets: up\nto 100 fingerprints, up to 100\npasswords, up to 50 faces, and\nup to 100 cards. Administrator",
+  "storage_bucket": "extracted-text"
+}

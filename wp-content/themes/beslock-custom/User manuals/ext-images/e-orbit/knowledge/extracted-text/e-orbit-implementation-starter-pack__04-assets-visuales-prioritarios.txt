@@ -1,0 +1,20 @@
+# Assets visuales prioritarios
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#4
+
+Producir primero:
+
+1. `e-orbit-hero-main.jpg`
+2. `e-orbit-installed-context.jpg`
+3. `e-orbit-add-admin-action.jpg`
+4. `e-orbit-fingerprint-use.jpg`
+5. `e-orbit-language-settings.jpg`
+6. `e-orbit-app-add-device.jpg`
+7. `e-orbit-link-qr.jpg`
+
+Producir después:
+
+8. `e-orbit-pin-use.jpg`
+9. `e-orbit-troubleshoot-fingerprint.jpg`
+10. `e-orbit-troubleshoot-app-connection.jpg`
+11. `e-orbit-downloads-docs.jpg`

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-when-the-indicator-blinks-red-69",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "When The Indicator Blinks Red",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-69"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "light,stop the operation,the\nreset is successful\nEnter\"888\"+\"#\"\nand the\nindicator will blink red light\nA:Check the cable is it connect to the right way or it's loose,After this it's still can't work,normally it's the battery dead.\nIt needs to change the batteries(4*1.5V AAA battery),or\npull out the inner back cover and insert it again.\nQ:Which model of the door can install the fingerprint door lock ?\nA:There is no limit.If the door thickness more than 3.5cm-6.5cm then it can install.\nQ:How to restore the factory settings ?\nA:Long click the setting button 5s,the blue light will shinning and have the beesound, After 5s will have the red lighshinningandhaveavoiceremainder'initialsuccess\",",
+  "storage_bucket": "extracted-text"
+}

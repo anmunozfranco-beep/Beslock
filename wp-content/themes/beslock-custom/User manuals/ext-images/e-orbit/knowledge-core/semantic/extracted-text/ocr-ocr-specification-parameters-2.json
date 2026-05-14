@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-specification-parameters-2",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Specification Parameters",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-2"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-specification-parameters-2.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Specifications",
+  "raw_text": "one",
+  "legacy_storage_bucket": "extracted-text"
+}

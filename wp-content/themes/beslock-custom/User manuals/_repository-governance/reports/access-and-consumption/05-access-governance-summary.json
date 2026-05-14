@@ -1,0 +1,48 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "filters": [
+    {
+      "id": "maturity-floor",
+      "default": "normalized",
+      "stricter_for": [
+        "publication-bundle (verified)",
+        "RAG (canonical-knowledge)"
+      ]
+    },
+    {
+      "id": "deprecation-filter",
+      "default": "exclude",
+      "override": "include_deprecated=true (records audit reason)"
+    },
+    {
+      "id": "unresolved-isolation",
+      "default": "exclude",
+      "override": "include_unresolved=true (review-only surfaces)"
+    },
+    {
+      "id": "low-confidence-veil",
+      "default": "include-with-warning",
+      "stricter_for": [
+        "safety-critical surfaces -> exclude"
+      ]
+    },
+    {
+      "id": "provenance-required",
+      "default": "always",
+      "override": null
+    },
+    {
+      "id": "audience-scope",
+      "default": "explicit",
+      "override": null
+    }
+  ],
+  "rules": [
+    "Default access is safe-by-default; unsafe surfaces require explicit opt-in flags + audit trace.",
+    "Deprecated knowledge is accessible only via override; surfaces MUST render a deprecation badge.",
+    "Unresolved knowledge is isolated; never surfaces in retrieval-bundle by default.",
+    "Low-confidence artifacts surfaced to safety-critical consumers MUST be excluded, not just warned.",
+    "Every access call is loggable; access traces feed back into knowledge-health monitoring."
+  ]
+}

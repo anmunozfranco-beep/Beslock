@@ -1,0 +1,7 @@
+# Limites y cautelas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#11
+
+- la UI exacta puede variar entre `Smart Life`, `Tuya Smart` y variantes OEM
+- la fuente revisada no debe usarse para prometer cada etiqueta exacta de menu sin validacion en equipo real
+- la hoja tecnica menciona `Alexa`, pero esa compatibilidad debe confirmarse en la variante comercial concreta antes de destacarla en venta

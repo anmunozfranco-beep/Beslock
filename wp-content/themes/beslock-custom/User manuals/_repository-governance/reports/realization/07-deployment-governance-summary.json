@@ -1,0 +1,9 @@
+{
+  "cognition_deployment": 4,
+  "philosophy_principles": 5,
+  "prioritization": 5,
+  "proof_of_value": 4,
+  "safe_rollout": 4,
+  "schema": "realization-and-deployment-governance/1.0",
+  "staged_doctrine": 4
+}

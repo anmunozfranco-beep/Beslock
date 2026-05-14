@@ -1,0 +1,44 @@
+{
+  "channel_targets": [
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "extraction_lineage": [
+    "corpus-enrichment/continuity-checkpoint-candidate/ckpt-troubleshooting-candidate"
+  ],
+  "flow": "troubleshooting",
+  "id": "ckpt-troubleshooting-candidate",
+  "is_safe_interrupt_point": true,
+  "is_safe_resume_point": true,
+  "language": "es-CO",
+  "menu_path": "",
+  "non_inheritable_signals": [
+    "operator_one_time_token",
+    "ephemeral_session_secret"
+  ],
+  "ocr_dependency": "none",
+  "product": "e-prime",
+  "required_state_keys": [
+    "timeline_id",
+    "context_vector",
+    "last_step_id",
+    "operator_id",
+    "incident_id"
+  ],
+  "resume_preconditions": [
+    "operador autenticado",
+    "no hay advertencias bloqueantes pendientes",
+    "el estado físico de la cerradura coincide con el último checkpoint"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "punto de control de continuidad durante un flujo de diagnóstico",
+  "surface": "runtime-corpus",
+  "type": "continuity-checkpoint-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

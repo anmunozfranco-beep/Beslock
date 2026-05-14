@@ -1,0 +1,5 @@
+# Manual de instalacion normalizado para Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#1
+
+

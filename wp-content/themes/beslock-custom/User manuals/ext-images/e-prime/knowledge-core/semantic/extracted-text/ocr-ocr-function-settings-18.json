@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-function-settings-18",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Function Settings",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-18"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-function-settings-18.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Configuration",
+  "raw_text": "Press \"3\" for",
+  "legacy_storage_bucket": "extracted-text"
+}

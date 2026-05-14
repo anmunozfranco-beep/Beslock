@@ -1,0 +1,11 @@
+{
+  "philosophy_blocks": {
+    "escalation_philosophy": 4,
+    "observability_philosophy": 4,
+    "proof_methodology": 4,
+    "prototype_philosophy": 5,
+    "runtime_safety": 4,
+    "supervised_runtime": 4
+  },
+  "schema": "prototype-runtime-governance/1.0"
+}

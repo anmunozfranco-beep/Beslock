@@ -1,0 +1,60 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "The knowledge-core is the single source of truth; all other layers are subordinate.",
+    "Constitutional layers are additive; new layers must declare their subordination to knowledge-core.",
+    "New products integrate by inheriting ontology + governance + lifecycle, never by forking them.",
+    "Multimodal systems (visual, retrieval, onboarding, troubleshooting) consume knowledge; they never originate it.",
+    "Governance expansion is revision-numbered; revisions never silently rewrite past doctrine.",
+    "Ontology coherence is maintained by: shared vocabulary, shared id format, shared promotion gates.",
+    "Every new system declares its read/write surface against the knowledge-core lifecycle states it depends on.",
+    "Lineage preservation is non-negotiable across product additions, ontology revisions, and layer expansions."
+  ],
+  "new_product_integration": [
+    "Allocate product-id and per-product knowledge-core/ folder.",
+    "Run discovery → extraction → ocr-derived (where applicable) → inferred pipeline.",
+    "Apply ontology + terminology vocabulary; produce normalized artifacts.",
+    "Run canonicalization with cross-product collision detection.",
+    "Open review checkpoints; promote in priority order (P0 → P5).",
+    "Register product in priority-assignments, onboarding-flows, troubleshooting tiers.",
+    "Emit change-impact-report scoped to additive change."
+  ],
+  "layer_subordination": [
+    {
+      "layer": "VISUAL_GOVERNANCE",
+      "subordinate_to": "knowledge-core",
+      "may_originate": false
+    },
+    {
+      "layer": "KNOWLEDGE_CENTER",
+      "subordinate_to": "knowledge-core",
+      "may_originate": false,
+      "note": "indexes, never authors"
+    },
+    {
+      "layer": "SEMANTIC_GOVERNANCE",
+      "subordinate_to": "knowledge-core",
+      "may_originate": false
+    },
+    {
+      "layer": "EXPERIENCE_GOVERNANCE",
+      "subordinate_to": "knowledge-core",
+      "may_originate": false
+    },
+    {
+      "layer": "LIFECYCLE_GOVERNANCE",
+      "subordinate_to": "knowledge-core",
+      "may_originate": false,
+      "note": "governs evolution, not content"
+    }
+  ],
+  "products_in_scope": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

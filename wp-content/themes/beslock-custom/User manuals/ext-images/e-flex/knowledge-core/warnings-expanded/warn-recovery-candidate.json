@@ -1,0 +1,40 @@
+{
+  "candidate_text_es": "advertencias específicas a flujos de recuperación operacional",
+  "category": "recovery",
+  "channel_targets": [
+    "web",
+    "support",
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "extraction_lineage": [
+    "corpus-enrichment/warning-candidate/warn-recovery-candidate"
+  ],
+  "id": "warn-recovery-candidate",
+  "is_irreversible": false,
+  "is_safety_blocking": false,
+  "language": "es-CO",
+  "menu_path": "",
+  "must_be_attached_to_kinds": [
+    "onboarding",
+    "pairing",
+    "fingerprint-enrollment",
+    "battery-recovery",
+    "operational-procedures"
+  ],
+  "ocr_dependency": "none",
+  "operator_action_required": true,
+  "product": "e-flex",
+  "schema_version": "knowledge-core/1.0",
+  "severity": "medium",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "advertencias específicas a flujos de recuperación operacional",
+  "surface": "runtime-corpus",
+  "type": "warning-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

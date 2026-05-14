@@ -1,0 +1,147 @@
+{
+  "canonical_terms": [
+    "package",
+    "manifest",
+    "node",
+    "candidate",
+    "supervision-receipt",
+    "checkpoint",
+    "trust-zone",
+    "trust-tier",
+    "slice",
+    "composition",
+    "operator",
+    "channel"
+  ],
+  "contract_authorities": [
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE (layer 26) — packaging/",
+      "contract": "runtime-package-manifest"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — interoperability/",
+      "contract": "runtime-contract (retrieve)"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — interoperability/",
+      "contract": "escalation-contract"
+    },
+    {
+      "authority": "knowledge-core/1.0 + REFERENCE_STACK_GOVERNANCE",
+      "contract": "provenance-contract"
+    },
+    {
+      "authority": "RUNTIME_HARDENING_GOVERNANCE (layer 21) + REFERENCE_STACK_GOVERNANCE",
+      "contract": "replay-contract"
+    },
+    {
+      "authority": "RUNTIME_HARDENING_GOVERNANCE + REFERENCE_STACK_GOVERNANCE",
+      "contract": "retrieval-contract (Jaccard×weight)"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE",
+      "contract": "governance-contract"
+    },
+    {
+      "authority": "CONTINUITY_GOVERNANCE + REFERENCE_STACK_GOVERNANCE",
+      "contract": "continuity-contract"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — packaging/",
+      "contract": "deployment-manifest"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE (layer 25)",
+      "contract": "environment-manifest"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+      "contract": "integration-contracts (7)"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+      "contract": "trust-zone mapping"
+    },
+    {
+      "authority": "HUMAN_OPERATIONS_GOVERNANCE (layer 24)",
+      "contract": "supervision-receipt"
+    },
+    {
+      "authority": "HUMAN_OPERATIONS_GOVERNANCE",
+      "contract": "operator-identity field"
+    }
+  ],
+  "doctrine_ownership": [
+    {
+      "doctrines": [
+        "EXECUTION_GOVERNANCE",
+        "RUNTIME_GOVERNANCE",
+        "RUNTIME_ORCHESTRATION_GOVERNANCE",
+        "RUNTIME_IMPLEMENTATION_GOVERNANCE",
+        "PROTOTYPE_RUNTIME_GOVERNANCE",
+        "RUNTIME_HARDENING_GOVERNANCE"
+      ],
+      "id": "execution-stack",
+      "ownership": "EXECUTION = abstract execution model; RUNTIME = realization strategy; RUNTIME_ORCHESTRATION = supervised loop; RUNTIME_IMPLEMENTATION = real Python package; PROTOTYPE_RUNTIME = prototype slice; RUNTIME_HARDENING = supplemental corpus + replay"
+    },
+    {
+      "doctrines": [
+        "LIFECYCLE_GOVERNANCE",
+        "KNOWLEDGE_LIFECYCLE_GOVERNANCE",
+        "KNOWLEDGE_OPERATIONS_GOVERNANCE"
+      ],
+      "id": "knowledge-stack",
+      "ownership": "LIFECYCLE = content lifecycle; KNOWLEDGE_LIFECYCLE = trust lifecycle (candidate→trusted); KNOWLEDGE_OPERATIONS = operator tooling/workflows"
+    },
+    {
+      "doctrines": [
+        "REALIZATION_AND_DEPLOYMENT_GOVERNANCE",
+        "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+        "REFERENCE_STACK_GOVERNANCE"
+      ],
+      "id": "deployment-stack",
+      "ownership": "REALIZATION = value/sequencing; ENVIRONMENT_AND_INTEGRATION = trust zones + integration contracts; REFERENCE_STACK = canonical module composition"
+    },
+    {
+      "doctrines": [
+        "ECOSYSTEM_INTEROPERABILITY_GOVERNANCE",
+        "ECOSYSTEM_NORMALIZATION_GOVERNANCE"
+      ],
+      "id": "ecosystem-stack",
+      "ownership": "INTEROPERABILITY = cross-system contracts; NORMALIZATION = internal coherence + dedup"
+    },
+    {
+      "doctrines": [
+        "HUMAN_OPERATIONS_GOVERNANCE"
+      ],
+      "id": "human-stack",
+      "ownership": "single owner of operator UX, HITL, explainability, ergonomics"
+    },
+    {
+      "doctrines": [
+        "ADAPTIVE_OPERATIONAL_GOVERNANCE",
+        "DECISION_INTELLIGENCE_GOVERNANCE",
+        "REASONING_GOVERNANCE",
+        "CONTINUITY_GOVERNANCE"
+      ],
+      "id": "intelligence-stack",
+      "ownership": "ADAPTIVE = context adaptation; DECISION = branching/confidence; REASONING = causality/uncertainty; CONTINUITY = sessions/snapshots"
+    },
+    {
+      "doctrines": [
+        "VISUAL",
+        "KNOWLEDGE_CENTER",
+        "SEMANTIC",
+        "EXPERIENCE",
+        "ACCESS_AND_CONSUMPTION",
+        "COMPOSITION",
+        "OPERATIONAL_PROOF"
+      ],
+      "id": "platform-foundation",
+      "ownership": "foundational layers; each owns its declared scope; no overlap"
+    }
+  ],
+  "generated": "2026-05-14T03:24:36Z",
+  "kind": "canonical-references",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

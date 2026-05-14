@@ -1,0 +1,49 @@
+{
+  "id": "install-usar-la-plantilla-de-instalacion",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "![Plantilla de instalacion de e-Shield](assets/e-shield/pdf-renders/e-shield-2/page-01",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "imprime el PDF original sin ajuste de escala"
+    },
+    {
+      "n": 2,
+      "text": "confirma si la hoja visible corresponde a apertura derecha o si debes espejarla para apertura izquierda"
+    },
+    {
+      "n": 3,
+      "text": "alinea la referencia de `LATERAL DE PUERTA` exactamente con el canto de la puerta"
+    },
+    {
+      "n": 4,
+      "text": "respeta el retiro de borde visible de `60 mm`"
+    },
+    {
+      "n": 5,
+      "text": "marca sobre la puerta solo despues de confirmar que la impresion no fue reducida ni ampliada"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

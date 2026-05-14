@@ -1,0 +1,44 @@
+{
+  "id": "proc-add-administrator",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario -> Agregar administrador",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#add-administrator"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar administrador",
+  "steps": [
+    "Wake the lock panel.",
+    "Enter the menu.",
+    "Choose Agregar usuario.",
+    "Choose Agregar administrador.",
+    "Select the credential type.",
+    "Complete the enrollment.",
+    "Save the result.",
+    "Test access immediately."
+  ],
+  "validation_checks": [
+    "Access works correctly.",
+    "The user can enter without difficulty.",
+    "A backup credential exists."
+  ]
+}

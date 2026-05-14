@@ -1,0 +1,29 @@
+2026-05-13 17:09:59 [INFO] === Processing: e-Prime_2.pdf ===
+2026-05-13 17:09:59 [DEBUG] Dependency status: {'pymupdf': True, 'pytesseract': True, 'pdf2image': True, 'pillow': True, 'ocrmypdf': True, 'tesseract': True, 'pdftoppm': True}
+2026-05-13 17:09:59 [INFO] Detecting PDF type...
+2026-05-13 17:09:59 [INFO] PDF type: scanned | pages=7 | text_chars=2400
+2026-05-13 17:09:59 [DEBUG] Running: ocrmypdf --skip-text --optimize 1 -l spa+eng /Users/andresmunoz/Documents/GitHub/Beslock/wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-prime-2/e-Prime_2.searchable.pdf
+2026-05-13 17:10:00 [WARNING] ocrmypdf failed (rc=3): OCR engine does not have language data for the following requested languages: 
+spa
+Please install the appropriate language data for your OCR engine.
+
+See the online documentation for instructions:
+    https://ocrmypdf.readthedocs.io/en/latest/languages.html
+
+Note: most languages are identified by a 3-letter ISO 639-2 Code.
+For example, English is 'eng', German is 'deu', and Spanish is 'spa'.
+Simplified Chinese is 'chi_sim' and Traditional Chinese is 'chi_tra'.
+2026-05-13 17:10:00 [INFO] Running fallback pdf2image+pytesseract OCR on e-Prime_2.pdf...
+2026-05-13 17:10:00 [DEBUG] Converting PDF to images with pdf2image at 300 DPI
+2026-05-13 17:10:01 [DEBUG] OCR page 1/7
+2026-05-13 17:10:02 [DEBUG] OCR page 2/7
+2026-05-13 17:10:06 [DEBUG] OCR page 3/7
+2026-05-13 17:10:08 [DEBUG] OCR page 4/7
+2026-05-13 17:10:11 [DEBUG] OCR page 5/7
+2026-05-13 17:10:12 [DEBUG] OCR page 6/7
+2026-05-13 17:10:14 [DEBUG] OCR page 7/7
+2026-05-13 17:10:16 [INFO] pytesseract OCR complete: 7 pages, avg_conf=26.9%
+2026-05-13 17:10:16 [INFO] Raw text: 2848 characters after cleaning
+2026-05-13 17:10:16 [INFO] Structure: sections=16 specs=2 steps=0 warnings=0 features=0 app=0
+2026-05-13 17:10:16 [INFO] Outputs written to: /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-prime-2
+2026-05-13 17:10:16 [INFO] ✓ e-Prime_2.pdf: scanned=True pages=7 avg_confidence=26.9% method=pytesseract

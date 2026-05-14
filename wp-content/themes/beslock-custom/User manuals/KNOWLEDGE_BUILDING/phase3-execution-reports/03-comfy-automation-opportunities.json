@@ -1,0 +1,314 @@
+{
+  "generated_at": "2026-05-13T15:40:35Z",
+  "opportunities": [
+    {
+      "product": "e-flex",
+      "intent_id": "intent-app-pairing",
+      "summary": "Show the user the app pairing flow without ambiguity.",
+      "critical_components": [],
+      "user_risk_level": "medium",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-app-pairing.json"
+    },
+    {
+      "product": "e-flex",
+      "intent_id": "intent-emergency-unlock",
+      "summary": "Show the emergency unlock paths (USB-C power, mechanical key) when batteries are dead.",
+      "critical_components": [
+        "mechanical-key-slot"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-emergency-unlock.json"
+    },
+    {
+      "product": "e-flex",
+      "intent_id": "intent-fingerprint-enrollment",
+      "summary": "Show the user where and how to place their finger during enrollment.",
+      "critical_components": [
+        "fingerprint-zone"
+      ],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-fingerprint-enrollment.json"
+    },
+    {
+      "product": "e-flex",
+      "intent_id": "intent-installation-assistance",
+      "summary": "Help an installer mount the lock correctly the first time.",
+      "critical_components": [
+        "deadbolt",
+        "exterior-handle",
+        "latch",
+        "lock-body"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-installation-assistance.json"
+    },
+    {
+      "product": "e-flex",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-flex",
+      "intent_id": "intent-warning-visualisation",
+      "summary": "Visualise OEM warnings so they are unmissable.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/visual-intent/intent-warning-visualisation.json"
+    },
+    {
+      "product": "e-nova",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-app-pairing",
+      "summary": "Show the user the app pairing flow without ambiguity.",
+      "critical_components": [
+        "camera-cluster"
+      ],
+      "user_risk_level": "medium",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-app-pairing.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-emergency-unlock",
+      "summary": "Show the emergency unlock paths (USB-C power, mechanical key) when batteries are dead.",
+      "critical_components": [
+        "emergency-usb-port"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-emergency-unlock.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-fingerprint-enrollment",
+      "summary": "Show the user where and how to place their finger during enrollment.",
+      "critical_components": [
+        "fingerprint-zone"
+      ],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-fingerprint-enrollment.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-installation-assistance",
+      "summary": "Help an installer mount the lock correctly the first time.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-installation-assistance.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-reset-procedure",
+      "summary": "Visualise the factory-reset procedure, including the irreversible nature.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-reset-procedure.json"
+    },
+    {
+      "product": "e-orbit",
+      "intent_id": "intent-warning-visualisation",
+      "summary": "Visualise OEM warnings so they are unmissable.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/visual-intent/intent-warning-visualisation.json"
+    },
+    {
+      "product": "e-prime",
+      "intent_id": "intent-app-pairing",
+      "summary": "Show the user the app pairing flow without ambiguity.",
+      "critical_components": [],
+      "user_risk_level": "medium",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/visual-intent/intent-app-pairing.json"
+    },
+    {
+      "product": "e-prime",
+      "intent_id": "intent-fingerprint-enrollment",
+      "summary": "Show the user where and how to place their finger during enrollment.",
+      "critical_components": [
+        "fingerprint-zone"
+      ],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/visual-intent/intent-fingerprint-enrollment.json"
+    },
+    {
+      "product": "e-prime",
+      "intent_id": "intent-installation-assistance",
+      "summary": "Help an installer mount the lock correctly the first time.",
+      "critical_components": [
+        "deadbolt",
+        "exterior-handle",
+        "latch",
+        "lock-body"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/visual-intent/intent-installation-assistance.json"
+    },
+    {
+      "product": "e-prime",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-prime",
+      "intent_id": "intent-warning-visualisation",
+      "summary": "Visualise OEM warnings so they are unmissable.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/visual-intent/intent-warning-visualisation.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-app-pairing",
+      "summary": "Show the user the app pairing flow without ambiguity.",
+      "critical_components": [
+        "keypad"
+      ],
+      "user_risk_level": "medium",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-app-pairing.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-emergency-unlock",
+      "summary": "Show the emergency unlock paths (USB-C power, mechanical key) when batteries are dead.",
+      "critical_components": [
+        "mechanical-key-slot"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-emergency-unlock.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-fingerprint-enrollment",
+      "summary": "Show the user where and how to place their finger during enrollment.",
+      "critical_components": [
+        "fingerprint-zone"
+      ],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-fingerprint-enrollment.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-installation-assistance",
+      "summary": "Help an installer mount the lock correctly the first time.",
+      "critical_components": [
+        "latch"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-installation-assistance.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-shield",
+      "intent_id": "intent-warning-visualisation",
+      "summary": "Visualise OEM warnings so they are unmissable.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/visual-intent/intent-warning-visualisation.json"
+    },
+    {
+      "product": "e-touch",
+      "intent_id": "intent-emergency-unlock",
+      "summary": "Show the emergency unlock paths (USB-C power, mechanical key) when batteries are dead.",
+      "critical_components": [
+        "mechanical-key-slot"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/visual-intent/intent-emergency-unlock.json"
+    },
+    {
+      "product": "e-touch",
+      "intent_id": "intent-fingerprint-enrollment",
+      "summary": "Show the user where and how to place their finger during enrollment.",
+      "critical_components": [
+        "fingerprint-zone"
+      ],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P1",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/visual-intent/intent-fingerprint-enrollment.json"
+    },
+    {
+      "product": "e-touch",
+      "intent_id": "intent-installation-assistance",
+      "summary": "Help an installer mount the lock correctly the first time.",
+      "critical_components": [
+        "deadbolt",
+        "exterior-handle",
+        "latch",
+        "lock-body"
+      ],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/visual-intent/intent-installation-assistance.json"
+    },
+    {
+      "product": "e-touch",
+      "intent_id": "intent-onboarding-overview",
+      "summary": "Provide a single overview image that introduces the lock anatomy to new owners.",
+      "critical_components": [],
+      "user_risk_level": "low",
+      "visual_assistance_priority": "P2",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/visual-intent/intent-onboarding-overview.json"
+    },
+    {
+      "product": "e-touch",
+      "intent_id": "intent-warning-visualisation",
+      "summary": "Visualise OEM warnings so they are unmissable.",
+      "critical_components": [],
+      "user_risk_level": "high",
+      "visual_assistance_priority": "P0",
+      "knowledge_core_anchor_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/visual-intent/intent-warning-visualisation.json"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2
+
+Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield.
+
+Este documento no reemplaza la plantilla impresa ni una validacion fisica en banco.
+Su funcion es ordenar el proceso y separar lo que ya esta soportado por fuente OEM de lo que aun debe confirmarse en equipo real.

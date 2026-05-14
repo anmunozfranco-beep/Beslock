@@ -1,0 +1,10 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#12
+
+Este manual de app queda normalizado como base operativa minima para e-Touch.
+
+Antes de una version final para cliente conviene validar:
+- nombre exacto de la app que se publicara en soporte
+- si `Smart Life` y `Tuya Smart` se mantendran como equivalentes en la implementacion comercial
+- subtipos reales de passwords temporales disponibles

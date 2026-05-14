@@ -1,0 +1,50 @@
+{
+  "id": "intent-warning-visualisation",
+  "type": "visual-intent",
+  "product": "e-orbit",
+  "summary": "Visualise OEM warnings so they are unmissable.",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/component-visibility/component-visibility-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/procedural-semantics/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::INTENT_TEMPLATES"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "semantic_objective": "Visualise OEM warnings so they are unmissable.",
+  "procedure_linkage_subdomain": "warnings",
+  "procedure_linkage_tokens": [],
+  "critical_components": [],
+  "mandatory_visible_elements": [],
+  "forbidden_visual_deviations": [
+    "fabricated sensors not in component-visibility-map",
+    "wrong handle direction",
+    "incorrect keypad layout",
+    "fictional product variants",
+    "stylised humans (per visual-system reset 2026-05-13)"
+  ],
+  "user_risk_level": "high",
+  "visual_assistance_priority": "P0",
+  "target_publication_channels": [
+    "pdf",
+    "web",
+    "support",
+    "onboarding",
+    "chatbot"
+  ],
+  "anchor_evidence": [
+    "knowledge-core/warnings/ has 10 entities"
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "This intent only describes WHAT must be communicated. Visual generation is deferred to a future ComfyUI workflow that MUST honour critical_components and forbidden_visual_deviations."
+}

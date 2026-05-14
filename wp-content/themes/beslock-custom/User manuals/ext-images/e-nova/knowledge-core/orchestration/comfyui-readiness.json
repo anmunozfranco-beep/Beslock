@@ -1,0 +1,33 @@
+{
+  "id": "comfyui-readiness",
+  "type": "orchestration-readiness",
+  "product": "e-nova",
+  "language": "en",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": [
+    "All visual generation is ComfyUI-only.",
+    "No Midjourney, no DALL-E production pipelines, no external visual systems.",
+    "No hallucinated geometry. No fake product variants.",
+    "Comfy prompts MUST cite a `visual/visual-semantic-map.json` trusted reference."
+  ],
+  "downstream_consumers": [
+    "comfy-prompts",
+    "comfy-workflows",
+    "visual-qa",
+    "chatbot-answers",
+    "future-pdfs",
+    "future-websites",
+    "onboarding-systems",
+    "installation-diagrams",
+    "troubleshooting-visuals",
+    "video-generation"
+  ],
+  "knowledge_core_consumes": [
+    "ext-images/e-nova/knowledge-core/visual/visual-semantic-map.json",
+    "ext-images/e-nova/knowledge-core/capabilities/capability-map.json",
+    "ext-images/e-nova/knowledge-core/entities/entity-catalog.json",
+    "ext-images/e-nova/knowledge-core/specifications/"
+  ]
+}

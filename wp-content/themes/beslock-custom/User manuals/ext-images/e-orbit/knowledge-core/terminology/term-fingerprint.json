@@ -1,0 +1,32 @@
+{
+  "id": "term-fingerprint",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "fingerprint",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#6",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "term": "fingerprint",
+  "definition": "Biometric credential captured through repeated contact on the sensor until the lock confirms the enrollment.",
+  "domain": "credentials",
+  "verified_layer": "structured-knowledge"
+}

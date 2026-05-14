@@ -1,0 +1,13 @@
+# Decision sobre plantilla de instalacion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#8
+
+Con estas fuentes no es seguro crear una plantilla de instalacion real.
+
+Motivo:
+- no hay cotas de perforacion
+- no hay centros de agujeros ni backset detallado
+- no hay escala de impresion ni dibujo de corte
+- las dimensiones generales del cuerpo no alcanzan para derivar una drilling template confiable
+
+Si mas adelante aparece un esquema con posiciones de perforacion, cotas funcionales y referencia de escala, Beslock si podria derivar un anexo tecnico o normalizar la plantilla OEM correspondiente.

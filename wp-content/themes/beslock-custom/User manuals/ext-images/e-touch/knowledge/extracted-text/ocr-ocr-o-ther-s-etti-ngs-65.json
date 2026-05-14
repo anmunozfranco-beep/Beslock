@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-o-ther-s-etti-ngs-65",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "O Ther S Etti Ngs",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-65"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "1.Two Ways to Reset and Delete All the Users\nMethod 1:",
+  "storage_bucket": "extracted-text"
+}

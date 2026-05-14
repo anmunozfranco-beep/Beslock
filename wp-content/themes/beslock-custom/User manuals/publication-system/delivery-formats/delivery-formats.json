@@ -1,0 +1,99 @@
+{
+  "formats": [
+    {
+      "id": "markdown",
+      "lossless": true,
+      "purpose": "primary canonical publication output",
+      "renderer_constraints": [
+        "no executable scripts",
+        "no inline HTML beyond declared subset"
+      ]
+    },
+    {
+      "id": "web",
+      "lossless": false,
+      "purpose": "browser-consumable publication",
+      "renderer_constraints": [
+        "no client-side mutation of canonical content",
+        "must preserve provenance citations"
+      ]
+    },
+    {
+      "id": "structured-runtime",
+      "lossless": true,
+      "purpose": "runtime-consumable JSON for assembled responses",
+      "renderer_constraints": [
+        "schema = publication-output/1.0 (declared in this layer)",
+        "MUST embed provenance + confidence band"
+      ]
+    },
+    {
+      "id": "pdf-ready",
+      "lossless": false,
+      "purpose": "print-fidelity export",
+      "renderer_constraints": [
+        "no interactive elements",
+        "explicit page-break markers",
+        "warnings retained verbatim"
+      ]
+    },
+    {
+      "id": "support-article",
+      "lossless": true,
+      "purpose": "support-agent knowledge article",
+      "renderer_constraints": [
+        "scenario/diagnosis/resolution structure required",
+        "internal notes section required"
+      ]
+    },
+    {
+      "id": "visual-prompt",
+      "lossless": true,
+      "purpose": "MODELING ONLY — declarative input to a future visual pipeline",
+      "renderer_constraints": [
+        "text declaration only — generates no image",
+        "subordinate to VISUAL governance + dual-review env (layer 25)"
+      ]
+    }
+  ],
+  "generated_at": "2026-05-14T03:42:21Z",
+  "rules": [
+    "no format may add semantic content beyond what assembly produced",
+    "lossy formats MUST disclose what is lost (e.g. interactivity, color fidelity)",
+    "structured-runtime is the source-of-truth format; all other formats are derived from it",
+    "visual-prompt format is declarative; this layer does NOT execute visual generation",
+    "every format embeds provenance + confidence at minimum"
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

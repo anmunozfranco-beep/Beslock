@@ -1,0 +1,13 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "visual-validation",
+  "title": "Visual validation contracts",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "visual-system/shared/generation-guides/review-checklist.md",
+    "ext-images/<product>/visual-system/validations/visual-validation.md",
+    "ext-images/<product>/knowledge-core/component-visibility/component-visibility-map.json",
+    "tools/visual_generation.py (score subcommand)"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

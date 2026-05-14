@@ -1,0 +1,32 @@
+{
+  "id": "term-reset",
+  "type": "glossary-term",
+  "product": "e-flex",
+  "summary": "Acción o botón de inicialización.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "canonical": "Reset",
+  "oem_variants": [
+    "Reset",
+    "RESET",
+    "reinicio"
+  ],
+  "definition": "Acción o botón de inicialización.",
+  "storage_bucket": "terminology"
+}

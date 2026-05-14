@@ -1,0 +1,35 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "immutable_attributes": [
+    "silhouette",
+    "component-count and component-positions",
+    "sensor positions and count",
+    "keypad grid (rows, columns, spacing)",
+    "screen position / size / aspect",
+    "indicator-LED positions",
+    "handle geometry and mounting orientation",
+    "visible mounting hardware (screws, bezels, gaskets)",
+    "material identity per visible region",
+    "brand marks, logos, certifications visible in canonical PNG"
+  ],
+  "tolerances": {
+    "position_drift_px_at_1024_ref": 4,
+    "rotation_drift_deg": 1,
+    "scale_drift_pct": 1,
+    "material_region_drift_px": 0
+  },
+  "per_product_anchor_maps_present": {
+    "e-flex": true,
+    "e-nova": true,
+    "e-orbit": true,
+    "e-prime": true,
+    "e-shield": true,
+    "e-touch": true
+  },
+  "canonical_policy": "visual-system/_governance/mechanical-consistency/policy.md",
+  "blockers": [
+    "anchor-map derivation tooling missing (gap.mechanical.anchor-map-tooling)",
+    "automated tolerance checker missing (gap.qa.automated-tolerance-checks)"
+  ]
+}

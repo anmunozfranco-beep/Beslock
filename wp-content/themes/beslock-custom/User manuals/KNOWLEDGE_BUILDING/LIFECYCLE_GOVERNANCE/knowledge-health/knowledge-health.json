@@ -1,0 +1,63 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "indicators": [
+    {
+      "id": "stale-procedure",
+      "severity": "medium",
+      "detection": "promoted artifact unchanged > review-cycle and no recent OEM source"
+    },
+    {
+      "id": "orphan-entity",
+      "severity": "medium",
+      "detection": "entity referenced by no procedure / workflow / capability"
+    },
+    {
+      "id": "unresolved-reference",
+      "severity": "high",
+      "detection": "reference target id not present in canonical set"
+    },
+    {
+      "id": "maturity-inconsistency",
+      "severity": "medium",
+      "detection": "promoted artifact whose dependencies are still semantic-candidate"
+    },
+    {
+      "id": "duplicated-semantic",
+      "severity": "high",
+      "detection": "two canonical artifacts with overlapping intent (synonym/bilingual collision)"
+    },
+    {
+      "id": "governance-conflict",
+      "severity": "high",
+      "detection": "two doctrine docs assert contradictory rules in the same authority area"
+    },
+    {
+      "id": "ontology-fragmentation",
+      "severity": "high",
+      "detection": "domain referenced with diverging field shapes across products"
+    },
+    {
+      "id": "low-confidence-overload",
+      "severity": "medium",
+      "detection": "ratio of ocr-derived/inferred content above per-product threshold"
+    },
+    {
+      "id": "lineage-break",
+      "severity": "critical",
+      "detection": "deprecated/superseded artifact missing successor link"
+    },
+    {
+      "id": "promotion-without-evidence",
+      "severity": "critical",
+      "detection": "verified-truth artifact missing source provenance"
+    }
+  ],
+  "thresholds": {
+    "low_confidence_ratio_max": 0.35,
+    "stale_procedure_review_cycle_days": 365,
+    "orphan_entity_grace_days": 90,
+    "lineage_break_tolerance": 0,
+    "promotion_without_evidence_tolerance": 0
+  }
+}

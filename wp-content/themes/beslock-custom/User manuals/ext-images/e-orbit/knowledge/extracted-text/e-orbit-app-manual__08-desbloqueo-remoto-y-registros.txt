@@ -1,0 +1,9 @@
+# Desbloqueo remoto y registros
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#8
+
+Segun el PDF:
+- cuando un visitante pulsa el timbre, el telefono puede recibir una solicitud de desbloqueo remoto
+- la app permite hablar con el visitante
+- el desbloqueo remoto se completa deslizando el control de apertura
+- eventos como timbre, usuario ilegal, bateria baja y desbloqueo pueden revisarse en registros

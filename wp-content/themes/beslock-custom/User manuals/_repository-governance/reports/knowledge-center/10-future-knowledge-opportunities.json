@@ -1,0 +1,39 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "opportunities": [
+    {
+      "id": "opp.maturity-backfill",
+      "value": "Promotes the maturity model from doctrine to enforced policy."
+    },
+    {
+      "id": "opp.shared-concept-tagging",
+      "value": "Unlocks all cross-product queries and platform intelligence."
+    },
+    {
+      "id": "opp.troubleshooting-build-out",
+      "value": "Highest user-facing impact; reduces support burden directly."
+    },
+    {
+      "id": "opp.embeddings-layer",
+      "value": "Enables semantic search and RAG without re-architecting the knowledge core."
+    },
+    {
+      "id": "opp.multilingual-publication",
+      "value": "es-CO baseline + BCP-47 variants; large addressable surface."
+    },
+    {
+      "id": "opp.voice-and-ar-surfaces",
+      "value": "Reuse procedural-semantics + component-visibility without new schemas."
+    },
+    {
+      "id": "opp.automated-qa-for-knowledge",
+      "value": "Maturity + lineage rules are machine-checkable; CI hooks are a small step."
+    },
+    {
+      "id": "opp.field-evidence-channel",
+      "value": "A controlled inbound channel for support-record evidence with explicit trust rules."
+    }
+  ],
+  "subordination_rule": "Every opportunity remains subordinate to the knowledge core. None of them originates knowledge."
+}

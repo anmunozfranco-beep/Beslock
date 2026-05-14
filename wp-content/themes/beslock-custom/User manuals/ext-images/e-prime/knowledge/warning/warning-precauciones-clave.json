@@ -1,0 +1,32 @@
+{
+  "id": "warning-precauciones-clave",
+  "type": "warning",
+  "product": "e-prime",
+  "summary": "Segun la fuente corta en espanol:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "severity": "caution",
+  "details": [
+    "no cuelgues objetos en la manija",
+    "no presiones en exceso el lector de huellas al registrar usuarios",
+    "reemplaza las baterias al menos una vez cada seis meses para reducir riesgo de fuga",
+    "tras la primera alerta de bateria baja todavia puede haber alrededor de `100` aperturas disponibles, pero conviene cambiar las pilas de inmediato",
+    "despues de `5` intentos incorrectos consecutivos la cerradura puede quedar inoperable durante `90 segundos`"
+  ],
+  "storage_bucket": "warning"
+}

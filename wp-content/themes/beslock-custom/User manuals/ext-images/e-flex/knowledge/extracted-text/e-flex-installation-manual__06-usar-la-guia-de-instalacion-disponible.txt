@@ -1,0 +1,12 @@
+# Usar la guia de instalacion disponible
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#6
+
+![Guia de instalacion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-02.png)
+
+La fuente nueva aporta una guia de montaje, no una plantilla 1:1 de perforacion.
+
+Reglas de uso:
+1. usa el PDF para secuencia, orientacion y despiece
+2. no derives perforaciones finales a escala real desde una captura del PDF
+3. confirma la mano de apertura antes de cambiar direccion de manija o pestillo

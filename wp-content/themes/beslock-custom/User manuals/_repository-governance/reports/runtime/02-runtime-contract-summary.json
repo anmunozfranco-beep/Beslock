@@ -1,0 +1,212 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "contracts": [
+    {
+      "id": "knowledge-core-access-contract",
+      "between": [
+        "runtime",
+        "knowledge-core"
+      ],
+      "operations": [
+        "read"
+      ],
+      "guarantees": [
+        "addressable nodes",
+        "verified-truth flag honoured",
+        "OEM-required flag honoured",
+        "no mutation"
+      ]
+    },
+    {
+      "id": "retrieval-contract",
+      "between": [
+        "runtime",
+        "ACCESS_AND_CONSUMPTION"
+      ],
+      "operations": [
+        "query-by-intent",
+        "assemble-package"
+      ],
+      "guarantees": [
+        "declared query intents only",
+        "stable surfaces",
+        "consumption gates enforced"
+      ]
+    },
+    {
+      "id": "composition-contract",
+      "between": [
+        "runtime",
+        "COMPOSITION"
+      ],
+      "operations": [
+        "assemble",
+        "validate-rules"
+      ],
+      "guarantees": [
+        "declared assembly rules",
+        "declared primitives only",
+        "no improvised composition"
+      ]
+    },
+    {
+      "id": "adaptive-contract",
+      "between": [
+        "runtime",
+        "ADAPTIVE_OPERATIONAL"
+      ],
+      "operations": [
+        "apply-context-vector",
+        "select-adaptation"
+      ],
+      "guarantees": [
+        "declared triggers + effects",
+        "precedence honoured",
+        "non-removable safeguards"
+      ]
+    },
+    {
+      "id": "decision-contract",
+      "between": [
+        "runtime",
+        "DECISION_INTELLIGENCE"
+      ],
+      "operations": [
+        "select-option-at-decision-point"
+      ],
+      "guarantees": [
+        "declared options/predicates",
+        "destructive requires explicit-action + role + high-confidence",
+        "provenance emitted"
+      ]
+    },
+    {
+      "id": "reasoning-contract",
+      "between": [
+        "runtime",
+        "REASONING"
+      ],
+      "operations": [
+        "build-chain",
+        "track-hypothesis"
+      ],
+      "guarantees": [
+        "abductive presented as 'likely'",
+        "uncertainty propagation",
+        "chain termination",
+        "provenance emitted"
+      ]
+    },
+    {
+      "id": "execution-contract",
+      "between": [
+        "runtime",
+        "EXECUTION"
+      ],
+      "operations": [
+        "observe-state",
+        "evaluate-predicate"
+      ],
+      "guarantees": [
+        "declared transitions only",
+        "validation predicates required for completion",
+        "destructive requires explicit-action"
+      ]
+    },
+    {
+      "id": "continuity-contract",
+      "between": [
+        "runtime",
+        "CONTINUITY"
+      ],
+      "operations": [
+        "snapshot-context",
+        "restore-context",
+        "append-history",
+        "build-escalation-package"
+      ],
+      "guarantees": [
+        "append-only history",
+        "non-inheritable destructive-confirmation",
+        "OEM-required flag preservation"
+      ]
+    },
+    {
+      "id": "validation-contract",
+      "between": [
+        "runtime",
+        "VALIDATION"
+      ],
+      "operations": [
+        "read-findings",
+        "report-runtime-events"
+      ],
+      "guarantees": [
+        "read-only on findings",
+        "events feed knowledge-health intake"
+      ]
+    },
+    {
+      "id": "lifecycle-contract",
+      "between": [
+        "runtime",
+        "LIFECYCLE"
+      ],
+      "operations": [
+        "respect-promotion-tier"
+      ],
+      "guarantees": [
+        "P0 promotion requires OEM-confirmation",
+        "no runtime promotion bypass"
+      ]
+    },
+    {
+      "id": "experience-contract",
+      "between": [
+        "runtime",
+        "EXPERIENCE"
+      ],
+      "operations": [
+        "read-experience-shape"
+      ],
+      "guarantees": [
+        "UX semantics observed; presentation never weakens safeguards"
+      ]
+    },
+    {
+      "id": "semantic-contract",
+      "between": [
+        "runtime",
+        "SEMANTIC + KNOWLEDGE_CENTER"
+      ],
+      "operations": [
+        "resolve-concept"
+      ],
+      "guarantees": [
+        "shared-concept ownership respected; cross-product collisions surface as ambiguity"
+      ]
+    },
+    {
+      "id": "visual-contract",
+      "between": [
+        "runtime",
+        "VISUAL_GOVERNANCE"
+      ],
+      "operations": [
+        "read-visual-spec"
+      ],
+      "guarantees": [
+        "visual-risk classification observed; no generation"
+      ]
+    }
+  ],
+  "rules": [
+    "every contract declares operations + guarantees + provenance requirements",
+    "runtime may not invent operations beyond declared contracts",
+    "contracts are read-only with respect to upstream layers (no upstream mutation)",
+    "contract violations are runtime errors, not warnings",
+    "contracts are versioned by schema; runtime pins a schema version"
+  ],
+  "count": 13
+}

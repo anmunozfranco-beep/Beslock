@@ -1,0 +1,53 @@
+# Agregar un usuario
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5
+
+
+
+
+## Qué necesitas antes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5.1
+
+- la cerradura está encendida
+- ya existe al menos un administrador configurado
+- sabes qué método de acceso vas a registrar
+
+
+## Ruta de menú
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5.2
+
+**Agregar usuario → Agregar usuario**
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5.3
+
+1. activa el panel de la cerradura
+2. entra al menú
+3. selecciona **Agregar usuario**
+4. elige **Agregar usuario**
+5. selecciona el método de acceso
+6. completa el registro
+7. guarda el cambio
+8. prueba el acceso
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5.4
+
+Agrega un usuario a la vez y valida su acceso antes de continuar con el siguiente.
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5.5
+
+- el acceso funciona correctamente
+- la persona sabe cómo usarlo
+- el usuario no quedó registrado como administrador por error
+
+---

@@ -1,0 +1,36 @@
+{
+  "id": "install-context-relacion-con-el-paquete-documental",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Dentro del paquete Beslock de e-Flex, este documento convive con:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#13"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-relacion-con-el-paquete-documental.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "`e-Flex user manual - image-ready.md`",
+    "`e-Flex app manual.md`",
+    "`e-Flex - installation template standard.md`",
+    "`e-Flex - supplemental source review.md`"
+  ],
+  "legacy_storage_bucket": "installation"
+}

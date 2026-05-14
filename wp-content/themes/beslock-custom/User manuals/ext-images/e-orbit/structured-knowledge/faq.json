@@ -1,0 +1,92 @@
+{
+  "product": "e-orbit",
+  "faq": [
+    {
+      "id": "which-app-is-primary",
+      "question": "Which app should Beslock present as the primary e-Orbit app flow?",
+      "answer": "Present Smart Life or Tuya as the primary observed flow. Tongtong remains an OEM-mentioned variant that still requires commercial confirmation before it becomes the main route.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#3"
+      ]
+    },
+    {
+      "id": "does-it-need-gateway",
+      "question": "Does e-Orbit need an additional gateway for Wi-Fi onboarding?",
+      "answer": "The OEM specification sheet states that the product uses integrated Tuya WiFi and does not require an additional gateway for the observed onboarding path.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#4",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    {
+      "id": "how-many-phones-configure-network",
+      "question": "Can more than one mobile phone configure the lock network at the same time?",
+      "answer": "No. The current source set says network configuration only supports one mobile phone at a time, and a new network configuration can clear the prior distribution.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#4"
+      ]
+    },
+    {
+      "id": "how-to-pair-by-qr",
+      "question": "How does the QR onboarding flow work?",
+      "answer": "Open Smart Life, add a device from Camera&Lock, choose the observed Wi-Fi video lock family, select the network, place the lock in pairing mode, then present the QR from the phone to the lock camera and wait for confirmation.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#5",
+        "source-of-truth/manuals/e-Orbit user manual.md#9"
+      ]
+    },
+    {
+      "id": "what-if-qr-fails",
+      "question": "What should support suggest if QR pairing fails?",
+      "answer": "Adjust one variable at a time such as brightness, distance, or lighting. If the QR route still fails, use the EZ Mode fallback instead of treating both pairing modes as the same workflow.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#9",
+        "source-of-truth/manuals/e-Orbit app manual.md#6"
+      ]
+    },
+    {
+      "id": "what-if-fingerprint-fails",
+      "question": "What is the baseline response when the lock does not recognize a fingerprint?",
+      "answer": "Clean and dry the finger, retry with natural placement, and re-enroll the fingerprint if the problem continues. Administrators should keep a second fingerprint as backup when possible.",
+      "confidence": "document-supported",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#6",
+        "source-of-truth/manuals/e-Orbit user manual.md#10"
+      ]
+    },
+    {
+      "id": "are-temporary-passwords-supported",
+      "question": "Are temporary passwords supported?",
+      "answer": "Yes. The OEM app source clearly shows one-time and unlimited temporary passwords. More temporary-password variants may exist, but they still require validation on commercial hardware.",
+      "confidence": "partial-document-evidence",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#9"
+      ]
+    },
+    {
+      "id": "should-language-codes-be-published-as-final",
+      "question": "Should the observed language codes be treated as final publication truth?",
+      "answer": "No. The observed language codes are useful as candidate knowledge, but they still require visual or hardware confirmation before they become final commercial truth.",
+      "confidence": "hardware-validation-required",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#7",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    {
+      "id": "is-alexa-confirmed",
+      "question": "Can Alexa compatibility be published as a confirmed commercial claim?",
+      "answer": "Not yet. Alexa is mentioned in the OEM specification sheet, but the current editorial guidance says that compatibility still needs confirmation on the commercial variant before it is promoted in sales or support content.",
+      "confidence": "commercial-validation-required",
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls",
+        "source-of-truth/manuals/e-Orbit app manual.md#10"
+      ]
+    }
+  ]
+}

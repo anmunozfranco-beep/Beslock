@@ -1,0 +1,59 @@
+{
+  "generated": "2026-05-13T21:12:10Z",
+  "kind": "production-transition",
+  "rules": [
+    "Transitions are sequential; no skipping.",
+    "Each transition carries explicit exit criteria and demotion triggers.",
+    "Promotion requires a documented exit decision with provenance.",
+    "Demotion requires no decision; it is the safe response to anomalies.",
+    "All transitions remain subordinate to knowledge-core."
+  ],
+  "schema": "prototype-runtime-governance/1.0",
+  "transitions": [
+    {
+      "demotion_triggers": [
+        "safety predicate failure",
+        "contract violation",
+        "operator demotion"
+      ],
+      "exit_criteria": [
+        "all retrieval predicates pass for the slice",
+        "all safety predicates pass continuously",
+        "no contract violation observed",
+        "operator-signed prototype report exists"
+      ],
+      "from": "prototype",
+      "to": "supervised-pilot"
+    },
+    {
+      "demotion_triggers": [
+        "unresolved escalation",
+        "rollback failure",
+        "operator demotion"
+      ],
+      "exit_criteria": [
+        "bounded user population success criteria met",
+        "incident review clean",
+        "rollback path verified end-to-end"
+      ],
+      "from": "supervised-pilot",
+      "to": "controlled-operational-deployment"
+    },
+    {
+      "demotion_triggers": [
+        "regression",
+        "observability red",
+        "post-deployment finding",
+        "operator demotion"
+      ],
+      "exit_criteria": [
+        "regression suite green",
+        "ecosystem observability green",
+        "kill-switch verified",
+        "post-deployment review clean"
+      ],
+      "from": "controlled-operational-deployment",
+      "to": "future-production-cognition-runtime"
+    }
+  ]
+}

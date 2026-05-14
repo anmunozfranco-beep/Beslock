@@ -1,0 +1,106 @@
+{
+  "product": "e-prime",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "totals": {
+    "entities": 65,
+    "capabilities": 2,
+    "operation": 2,
+    "workflows": 2,
+    "warning": 2,
+    "installation": 14,
+    "terminology": 7,
+    "ocr-evidence": 36
+  },
+  "by_type": {
+    "capability": [
+      "cap-objetivo",
+      "cap-fuente-y-alcance-real"
+    ],
+    "procedure": [
+      "proc-requisitos-antes-de-vincular",
+      "proc-validacion-despues-del-alta"
+    ],
+    "workflow": [
+      "wf-flujo-oem-base-de-vinculacion",
+      "wf-alta-desde-la-app"
+    ],
+    "warning": [
+      "warning-limites-de-evidencia",
+      "warning-precauciones-clave"
+    ],
+    "installation-flow": [
+      "install-context-objetivo",
+      "install-context-que-vas-a-instalar",
+      "install-context-compatibilidad-fisica-antes-de-perforar",
+      "install-context-que-necesitas-antes-de-empezar",
+      "install-usar-la-guia-de-instalacion-disponible",
+      "install-preparar-la-puerta-y-el-cerrojo",
+      "install-montar-el-panel-exterior-e-interior",
+      "install-cambio-de-direccion",
+      "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura",
+      "install-energia-e-inicializacion",
+      "install-context-validacion-despues-de-instalar",
+      "install-context-relacion-con-el-paquete-documental",
+      "install-context-estado-editorial"
+    ],
+    "glossary-term": [
+      "term-tuya",
+      "term-wechat",
+      "term-2-4g",
+      "term-qr",
+      "term-pin",
+      "term-huella",
+      "term-administrador"
+    ],
+    "extracted-text": [
+      "ocr-ocr-z-1",
+      "ocr-ocr-user-manual-for-z-serials-2",
+      "ocr-ocr-battery-compartment-3",
+      "ocr-ocr-battery-cover-4",
+      "ocr-ocr-the-length-of-the-5",
+      "ocr-ocr-for-door-6",
+      "ocr-ocr-sword-iron-make-on-demad-7",
+      "ocr-ocr-ic-8",
+      "ocr-ocr-5v-9",
+      "ocr-ocr-do-not-remove-the-10",
+      "ocr-ocr-changing-lock-body-direction-11",
+      "ocr-ocr-wake-up-the-screen-by-12",
+      "ocr-ocr-ic-card-13",
+      "ocr-ocr-after-successful-operation-pr-14",
+      "ocr-ocr-in-normal-status-15",
+      "ocr-ocr-wake-up-the-screen-by-16",
+      "ocr-ocr-after-adding-an-administrator-17",
+      "ocr-ocr-function-settings-18",
+      "ocr-ocr-after-successful-operation-19",
+      "ocr-ocr-settings-20",
+      "ocr-ocr-settings-21",
+      "ocr-ocr-select-the-appropriate-22",
+      "ocr-ocr-enter-time-23",
+      "ocr-ocr-hour-minute-24",
+      "ocr-ocr-select-the-appropriate-25",
+      "ocr-ocr-select-the-26",
+      "ocr-ocr-in-normal-status-27",
+      "ocr-ocr-confirm-28",
+      "ocr-ocr-wake-up-the-screen-by-29",
+      "ocr-ocr-after-adding-an-administrator-30",
+      "ocr-ocr-after-successful-operation-press-31",
+      "ocr-ocr-enter-the-fingerprint-password-32",
+      "ocr-ocr-after-successful-operation-press-33",
+      "ocr-ocr-press-and-hold-for-5-34",
+      "ocr-ocr-doodle-app-download-installation-and-door-35",
+      "ocr-ocr-sweep-36"
+    ]
+  }
+}

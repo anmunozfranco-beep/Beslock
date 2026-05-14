@@ -1,0 +1,9 @@
+# Que vas a instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#3
+
+e-Prime es una cerradura de placa larga y delgada con:
+- panel exterior brillante con keypad en la zona superior
+- manija recta centrada con aro azul en el hub
+- inserto oval inferior en la cara frontal
+- panel interior con compartimiento de baterias, perilla interior y boton `SET`

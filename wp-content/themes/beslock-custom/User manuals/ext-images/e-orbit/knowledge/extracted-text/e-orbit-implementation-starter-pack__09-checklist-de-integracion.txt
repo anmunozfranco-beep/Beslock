@@ -1,0 +1,15 @@
+# Checklist de integración
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#9
+
+Usar esta lista antes de conectar las imágenes al sitio:
+
+- [ ] El archivo existe
+- [ ] La imagen es visualmente clara
+- [ ] La imagen corresponde a la página esperada
+- [ ] La imagen no depende de texto generado correcto
+- [ ] El recorte funciona para el uso previsto
+- [ ] El nombre de archivo es consistente
+- [ ] El asset está optimizado para web si hace falta
+
+---

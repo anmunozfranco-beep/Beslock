@@ -1,0 +1,14 @@
+# Gestion del dispositivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6
+
+La app permite operaciones de mantenimiento y administracion cercana por Bluetooth.
+
+Incluye, segun la fuente OCR:
+- actualizacion de la cerradura
+- calibracion de fecha y hora
+- diagnostico de errores
+- autorizacion de administrador adicional
+
+Regla practica:
+- realiza estas operaciones con el telefono junto a la cerradura cuando la fuente hable de Bluetooth local

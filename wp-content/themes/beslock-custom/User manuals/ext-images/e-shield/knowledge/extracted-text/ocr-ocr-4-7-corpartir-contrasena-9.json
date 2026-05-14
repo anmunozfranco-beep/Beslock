@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-4-7-corpartir-contrasena-9",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "4.7 Corpartir Contraseña",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "1. Resgistro e inicio de sesión\nLos ususarios pueden registrar su cuenta a través del\nteléfono móvil o del correo electrónico El código de\nverificación se enviará al teléfono móvil o al correo ara --.\nelectrónico del usuario y el registro se realizará\ncorrectamente tras la verificación. mn e\nSi ha olvidado su contraseña, puede ir a la página de\ncontraseña para restablecerla. Cuando se inicia sesión en\nun nuevo teléfono movil. es necesario verificar la cuenta. 2\nUna vez verificada, podrá iniciar sesión. y\nTodos los datos se pueden ver y utilizar en el nuevo\nteléfono móvil Y",
+  "storage_bucket": "extracted-text"
+}

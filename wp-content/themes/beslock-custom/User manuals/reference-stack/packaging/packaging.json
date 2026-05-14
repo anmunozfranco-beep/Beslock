@@ -1,0 +1,74 @@
+{
+  "kind": "packaging",
+  "packaging_invariants": [
+    "every manifest is append-only; manifests are never edited in place",
+    "every manifest carries an id and a generated_at timestamp",
+    "every manifest references the parent manifest it composes (if any)",
+    "no manifest may omit provenance, candidate-only, or supervision fields when applicable",
+    "manifests are the basis for replay; reproducibility depends on manifest fidelity"
+  ],
+  "packaging_standards": [
+    {
+      "fields": [
+        "package_id",
+        "manifest_id",
+        "source_files[]",
+        "extra{candidate_only?, empty?}",
+        "supervision_receipt"
+      ],
+      "id": "runtime-package-manifest"
+    },
+    {
+      "fields": [
+        "composition_id",
+        "module_ids[]",
+        "environment_id",
+        "trust_zone_id",
+        "supervision_level"
+      ],
+      "id": "module-assembly-manifest"
+    },
+    {
+      "fields": [
+        "deployment_id",
+        "composition_id",
+        "environment_id",
+        "started_at",
+        "started_by",
+        "scope"
+      ],
+      "id": "deployment-manifest"
+    },
+    {
+      "fields": [
+        "environment_id",
+        "trust_level",
+        "supervision_level",
+        "isolation",
+        "lifecycle_state"
+      ],
+      "id": "environment-manifest"
+    },
+    {
+      "fields": [
+        "governance_event_id",
+        "actor",
+        "decision",
+        "rationale",
+        "dual_audit?",
+        "audit_co_signature?"
+      ],
+      "id": "governance-manifest"
+    },
+    {
+      "fields": [
+        "composition_id",
+        "module_topology_hash",
+        "interop_contract_versions{}",
+        "trust_zone_map{}"
+      ],
+      "id": "operational-composition-manifest"
+    }
+  ],
+  "schema": "reference-stack-governance/1.0"
+}

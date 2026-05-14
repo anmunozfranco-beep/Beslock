@@ -1,0 +1,15 @@
+# Agregar la cerradura
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5
+
+La primera vinculacion convierte al primer usuario en administrador original del equipo.
+
+Secuencia recomendada:
+1. toca el boton `+` para agregar una cerradura
+2. selecciona el tipo de dispositivo correcto
+3. activa el teclado o panel de la cerradura para entrar en modo de configuracion
+4. sigue el flujo de alta desde la app
+5. acepta o cambia el nombre del dispositivo
+
+Nota editorial:
+La fuente indica que una cerradura ya vinculada debe eliminarse primero de la app anterior antes de registrarse de nuevo.

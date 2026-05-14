@@ -1,0 +1,66 @@
+{
+  "id": "install-secuencia-base-de-instalacion",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "Segun la guia visual OEM:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#6"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-secuencia-base-de-instalacion.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "pasa el eje cuadrado junto con el cableado por el cuerpo de la cerradura"
+    },
+    {
+      "n": 2,
+      "text": "ajusta la posicion del orificio segun la posicion real del lock body"
+    },
+    {
+      "n": 3,
+      "text": "selecciona los tornillos segun el grosor de la puerta y aprietalos"
+    },
+    {
+      "n": 4,
+      "text": "abre la tapa de baterias para preparar la alimentacion interior"
+    },
+    {
+      "n": 5,
+      "text": "instala el `deadbolt`"
+    },
+    {
+      "n": 6,
+      "text": "instala y fija la manija en la puerta"
+    },
+    {
+      "n": 7,
+      "text": "conecta el puerto del circuito del lock"
+    },
+    {
+      "n": 8,
+      "text": "aprieta los tornillos y asegura la tapa de baterias"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

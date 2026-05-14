@@ -1,0 +1,95 @@
+{
+  "kind": "executable-workflows",
+  "schema": "human-operations-governance/1.0",
+  "workflow_invariants": [
+    "every workflow step is a declared checkpoint with a declared decision set",
+    "every workflow halt is a declared, observable event — never a silent stall",
+    "every workflow emits an append-only orchestration-trace record",
+    "no workflow may auto-resume after a halt without an operator decision",
+    "no workflow may bypass its declared checkpoints under any condition"
+  ],
+  "workflows": [
+    {
+      "checkpoints": [
+        "pre-emission",
+        "post-emission"
+      ],
+      "halts_on": [
+        "safety-demote"
+      ],
+      "id": "onboarding-execution",
+      "primary_actor": "runtime-operator"
+    },
+    {
+      "checkpoints": [
+        "pre-emission",
+        "candidate-only-disclosure"
+      ],
+      "halts_on": [
+        "candidate-only + irreversible-adjacent"
+      ],
+      "id": "troubleshooting-execution",
+      "primary_actor": "runtime-operator"
+    },
+    {
+      "checkpoints": [
+        "accept-handoff",
+        "route-decision",
+        "post-route"
+      ],
+      "halts_on": [
+        "unresolved disagreement"
+      ],
+      "id": "escalation-review",
+      "primary_actor": "escalation-supervisor"
+    },
+    {
+      "checkpoints": [
+        "evidence-pull",
+        "approve-or-reject",
+        "post-audit"
+      ],
+      "halts_on": [
+        "missing-binding"
+      ],
+      "id": "candidate-review",
+      "primary_actor": "reviewer"
+    },
+    {
+      "checkpoints": [
+        "binding-attached",
+        "dual-review",
+        "post-supersession"
+      ],
+      "halts_on": [
+        "dual-review-disagreement"
+      ],
+      "id": "oem-verification",
+      "primary_actor": "oem-reviewer"
+    },
+    {
+      "checkpoints": [
+        "target-confirm",
+        "fanout-preview",
+        "post-rollback"
+      ],
+      "halts_on": [
+        "fanout-exceeds-declared-scope"
+      ],
+      "id": "rollback-handling",
+      "primary_actor": "governance-maintainer"
+    },
+    {
+      "checkpoints": [
+        "incident-claim",
+        "replay-validate",
+        "finding-emit"
+      ],
+      "halts_on": [
+        "replay-drift-exceeds-floor"
+      ],
+      "id": "runtime-incident-review",
+      "primary_actor": "operational-auditor"
+    }
+  ]
+}

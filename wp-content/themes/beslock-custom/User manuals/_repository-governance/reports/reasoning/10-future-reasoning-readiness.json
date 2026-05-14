@@ -1,0 +1,61 @@
+{
+  "schema": "reasoning-governance/1.0",
+  "generated_at": "2026-05-13T19:21:43+00:00",
+  "future_consumers": [
+    {
+      "id": "reasoning-aware-troubleshooting-assistant",
+      "gates": [
+        "symptom corpus >= 10/product",
+        "causal edges emitted",
+        "hypothesis store contract"
+      ]
+    },
+    {
+      "id": "adaptive-onboarding-system",
+      "gates": [
+        "onboarding-stage emitter",
+        "predicate coverage on onboarding procedures",
+        "context-vector emitter"
+      ]
+    },
+    {
+      "id": "operational-decision-support-system",
+      "gates": [
+        "decision provenance log",
+        "reasoning provenance log",
+        "per-node confidence"
+      ]
+    },
+    {
+      "id": "contextual-operational-copilot",
+      "gates": [
+        "context-vector emitter",
+        "execution snapshot-hash",
+        "hypothesis store contract",
+        "intent declaration channel"
+      ]
+    },
+    {
+      "id": "multimodal-reasoning-system",
+      "gates": [
+        "visual-intent attached to physical-installation procedures",
+        "evidence-disclosure renderer contract"
+      ]
+    },
+    {
+      "id": "future-visual-assistance",
+      "gates": [
+        "visual-risk reclassification freeze",
+        "fallback registry for visual-unavailable contexts"
+      ]
+    }
+  ],
+  "products": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

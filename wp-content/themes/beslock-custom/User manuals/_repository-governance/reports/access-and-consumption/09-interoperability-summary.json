@@ -1,0 +1,84 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "targets": [
+    {
+      "system": "chatbot",
+      "consumes": [
+        "retrieval-bundle",
+        "context-assembly.troubleshooting",
+        "context-assembly.procedural"
+      ],
+      "guarantees_required": [
+        "provenance per chunk",
+        "disambiguation-set support"
+      ]
+    },
+    {
+      "system": "onboarding",
+      "consumes": [
+        "onboarding-bundle",
+        "context-hierarchies.beginner|installer|administrator"
+      ],
+      "guarantees_required": [
+        "cognitive-load-aware",
+        "interruption budget"
+      ]
+    },
+    {
+      "system": "troubleshooting",
+      "consumes": [
+        "troubleshooting-bundle"
+      ],
+      "guarantees_required": [
+        "tier-aware escalation",
+        "warning injection"
+      ]
+    },
+    {
+      "system": "publication",
+      "consumes": [
+        "publication-bundle"
+      ],
+      "guarantees_required": [
+        "maturity ≥ verified",
+        "deprecation badges"
+      ]
+    },
+    {
+      "system": "visual-assistance",
+      "consumes": [
+        "visual-bundle"
+      ],
+      "guarantees_required": [
+        "visual-risk classified",
+        "component-visibility declared"
+      ]
+    },
+    {
+      "system": "multilingual",
+      "consumes": [
+        "terminology by-domain",
+        "context-assembly with language scope"
+      ],
+      "guarantees_required": [
+        "bilingual variants resolved",
+        "shared-terminology declared"
+      ]
+    }
+  ],
+  "invariants": [
+    "provenance preserved across all interop boundaries",
+    "governance preserved (no consumer overrides access-governance defaults silently)",
+    "validation integrity preserved (consumers receive validation-passed artifacts only by default)",
+    "ontology coherence preserved (cross-product collisions resolved before exposure)"
+  ],
+  "products_in_scope": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

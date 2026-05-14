@@ -1,0 +1,10 @@
+{
+  "kind": "trust-boundary-doctrine",
+  "principles": [
+    "Trust is declared per-zone; it is never inherited.",
+    "Trust is asymmetric: higher-trust never imports from lower-trust without verification.",
+    "Trust is observable: every crossing emits an event.",
+    "Trust is revocable: any zone may be demoted by governance action."
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

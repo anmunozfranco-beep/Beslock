@@ -1,0 +1,28 @@
+# Problemas frecuentes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#11
+
+
+
+
+## La cerradura no reconoce la huella
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#11.1
+
+- limpia y seca el dedo
+- vuelve a apoyar la huella de forma natural
+- si sigue fallando, registra nuevamente la huella
+- si es administrador, deja una segunda huella de respaldo
+
+
+## La cerradura no conecta a la app
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#11.2
+
+- verifica que la cerradura esté encendida
+- confirma que el equipo sigue en modo de vinculación
+- revisa que elegiste la categoría correcta en Smart Life
+- confirma el nombre y la contraseña de la red si aplica
+- intenta nuevamente el proceso
+
+---

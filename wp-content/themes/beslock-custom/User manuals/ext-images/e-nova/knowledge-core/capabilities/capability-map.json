@@ -1,0 +1,52 @@
+{
+  "id": "capability-map",
+  "type": "capability-map",
+  "product": "e-nova",
+  "summary": "Capabilities surfaced from e-nova OEM corpus (vocabulary-anchored)",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "partial",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "web",
+    "onboarding"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_capability_map::CAPABILITY_VOCAB"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Vocabulary-anchored. Capabilities are surfaced ONLY when the OEM corpus contains the matched phrase. No inference, no claims.",
+  "capabilities": [
+    {
+      "id": "cap-fingerprint-unlock",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ]
+    },
+    {
+      "id": "cap-bluetooth-pairing",
+      "matched_surface_terms": [
+        "bluetooth"
+      ]
+    },
+    {
+      "id": "cap-wifi-tuya-integration",
+      "matched_surface_terms": [
+        "tuya"
+      ]
+    },
+    {
+      "id": "cap-emergency-unlock-mechanical-key",
+      "matched_surface_terms": [
+        "llave"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/governance-workflows/",
+  "emergency_demotion_rules_count": 5,
+  "guardrails_count": 4,
+  "kind": "governance-workflow-summary",
+  "schema": "knowledge-operations-governance/1.0",
+  "workflows": [
+    "governance-escalation",
+    "unsafe-knowledge-intervention",
+    "runtime-incident-review",
+    "operational-audit-review",
+    "disputed-knowledge-handling",
+    "emergency-demotion"
+  ]
+}

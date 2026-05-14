@@ -1,0 +1,80 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "risks": [
+    {
+      "id": "no-context-vector-emitter",
+      "severity": "high",
+      "summary": "context-acquisition stage cannot bind without an upstream emitter",
+      "cross_ref": "adaptive + continuity"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "severity": "high",
+      "summary": "uncertainty propagation, decision confidence, reasoning chains all depend on per-node confidence not yet emitted",
+      "cross_ref": "knowledge-core/provenance"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "severity": "high",
+      "summary": "interruption + recovery flows degrade to restart-from-safe-state",
+      "cross_ref": "execution + continuity + decision"
+    },
+    {
+      "id": "no-fallback-registry",
+      "severity": "high",
+      "summary": "alternative-path execution flows cannot resolve targets",
+      "cross_ref": "adaptive + decision"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "severity": "high",
+      "summary": "history queries and escalation packages cannot bind across sessions",
+      "cross_ref": "continuity"
+    },
+    {
+      "id": "no-provenance-emitter",
+      "severity": "high",
+      "summary": "runtime requires upstream provenance emission for replay determinism",
+      "cross_ref": "execution/snapshot-hash + decision + reasoning + continuity"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "severity": "high",
+      "summary": "guidance-package for troubleshooting cannot be released on 5/6 products",
+      "cross_ref": "validation/maturity"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "severity": "high",
+      "summary": "mandatory-warning surface cannot fire on 2 products at runtime",
+      "cross_ref": "validation/warnings"
+    },
+    {
+      "id": "oem-channel-contract-missing",
+      "severity": "high",
+      "summary": "tier-4/5 handoff cannot complete without OEM channel contract",
+      "cross_ref": "decision/escalation + continuity/handoff"
+    },
+    {
+      "id": "no-causal-edges-emitted",
+      "severity": "medium",
+      "summary": "reasoning-invocation flow degrades when causal edges are not addressable",
+      "cross_ref": "reasoning/causality"
+    },
+    {
+      "id": "no-hypothesis-store",
+      "severity": "medium",
+      "summary": "reasoning flow cannot persist hypotheses across resume",
+      "cross_ref": "reasoning/hypothesis-tracking"
+    },
+    {
+      "id": "schema-version-pinning-not-enforced",
+      "severity": "medium",
+      "summary": "runtime must pin schema versions; no upstream pin contract yet",
+      "cross_ref": "this layer / contracts"
+    }
+  ],
+  "count": 12,
+  "high_count": 9
+}

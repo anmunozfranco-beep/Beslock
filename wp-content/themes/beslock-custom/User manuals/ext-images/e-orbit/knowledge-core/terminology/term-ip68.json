@@ -1,0 +1,37 @@
+{
+  "id": "term-ip68",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "Clasificación de protección ambiental.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-ip68.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "IP68",
+  "oem_variants": [
+    "IP68"
+  ],
+  "definition": "Clasificación de protección ambiental.",
+  "legacy_storage_bucket": "terminology"
+}

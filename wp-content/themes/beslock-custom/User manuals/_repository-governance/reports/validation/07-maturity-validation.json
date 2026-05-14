@@ -1,0 +1,85 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "distribution": {
+    "extraction-pending-review": 322,
+    "normalized": 73,
+    "inferred-but-unverified": 270,
+    "verified": 40
+  },
+  "per_product_distribution": {
+    "e-flex": {
+      "extraction-pending-review": 69,
+      "normalized": 16,
+      "inferred-but-unverified": 32
+    },
+    "e-nova": {
+      "extraction-pending-review": 6,
+      "inferred-but-unverified": 14
+    },
+    "e-orbit": {
+      "extraction-pending-review": 58,
+      "normalized": 19,
+      "inferred-but-unverified": 80,
+      "verified": 40
+    },
+    "e-prime": {
+      "extraction-pending-review": 65,
+      "normalized": 14,
+      "inferred-but-unverified": 36
+    },
+    "e-shield": {
+      "extraction-pending-review": 75,
+      "normalized": 10,
+      "inferred-but-unverified": 33
+    },
+    "e-touch": {
+      "extraction-pending-review": 49,
+      "normalized": 14,
+      "inferred-but-unverified": 75
+    }
+  },
+  "total_findings": 6,
+  "by_class": {
+    "missing-validation-status": 6
+  },
+  "findings_sample": [
+    {
+      "class": "missing-validation-status",
+      "product": "e-flex",
+      "id": "oem-source-index-e-flex",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-validation-status",
+      "product": "e-nova",
+      "id": "oem-source-index-e-nova",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-validation-status",
+      "product": "e-orbit",
+      "id": "oem-source-index-e-orbit",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-validation-status",
+      "product": "e-prime",
+      "id": "oem-source-index-e-prime",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-validation-status",
+      "product": "e-shield",
+      "id": "oem-source-index-e-shield",
+      "domain": "provenance"
+    },
+    {
+      "class": "missing-validation-status",
+      "product": "e-touch",
+      "id": "oem-source-index-e-touch",
+      "domain": "provenance"
+    }
+  ],
+  "findings_truncated_to": 6
+}

@@ -1,0 +1,96 @@
+{
+  "bound_implementation": [
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/config.py",
+      "responsibility": "paths, products, slice declaration, in-scope guard"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/provenance.py",
+      "responsibility": "manifest builder, content hashing"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/retrieval.py",
+      "responsibility": "scored retrieval over knowledge-core"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/assembly.py",
+      "responsibility": "procedure + warnings + prerequisites + troubleshooting + continuity + adaptive merge"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/supervision.py",
+      "responsibility": "review checkpoints, decisions, supervision receipts"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/safety.py",
+      "responsibility": "continuous safety predicates"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/observability.py",
+      "responsibility": "append-only NDJSON channels"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/flows.py",
+      "responsibility": "six declared supervised flows"
+    },
+    {
+      "kind": "entrypoint",
+      "path": "runtime-implementation/cli.py",
+      "responsibility": "supervised CLI"
+    },
+    {
+      "kind": "tests",
+      "path": "runtime-implementation/testing/test_flows.py",
+      "responsibility": "real unittest suite (14 tests)"
+    }
+  ],
+  "generated": "2026-05-13T21:22:51Z",
+  "kind": "charter",
+  "principles": [
+    "This layer binds the real executable runtime under `runtime-implementation/`.",
+    "The runtime is read-only over knowledge-core; mutations are out of scope.",
+    "The runtime is supervised by default; operator approval is mandatory at declared checkpoints.",
+    "Every emitted package carries a provenance manifest with SHA-256 source hashes.",
+    "Every cognition boundary emits a supervision receipt.",
+    "Failure of any safety predicate demotes the slice; demotion is the safe response.",
+    "The runtime cannot promote P-tier, elevate confidence, or alter prior governance layers.",
+    "Hard exclusions bind the implementation: no autonomous agents, no production deployment, no images, no PDFs, no large frontend, no perf optimization.",
+    "Macro-governance expansion is suspended; this is the implementation track.",
+    "All implementation remains subordinate to the governed knowledge-core forever."
+  ],
+  "schema": "runtime-implementation-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME"
+  ],
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

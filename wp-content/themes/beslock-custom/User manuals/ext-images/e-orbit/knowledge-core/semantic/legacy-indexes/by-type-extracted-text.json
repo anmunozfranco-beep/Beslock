@@ -1,0 +1,642 @@
+[
+  {
+    "id": "ocr-ocr-smart-lock-manual-1",
+    "summary": "Smart Lock Manual",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-specification-parameters-2",
+    "summary": "Specification Parameters",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-comparison-mode-3",
+    "summary": "Comparison Mode",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-self-learning-capacitive-press-4",
+    "summary": "Self Learning Capacitive Press",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-acquisition-head-resolution-5",
+    "summary": "Acquisition Head Resolution",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-rejection-rate-6",
+    "summary": "Rejection Rate",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-fake-admission-rate-7",
+    "summary": "Fake Admission Rate",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-fingerprint-collection-range-8",
+    "summary": "Fingerprint Collection Range",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-card-type-9",
+    "summary": "Card Type",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-id-range-010-249-10",
+    "summary": "Id Range 010-249",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-scroll-600-strip-11",
+    "summary": "Scroll 600 Strip",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-number-of-door-openings-12",
+    "summary": "Number Of Door Openings",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-dynamic-power-13",
+    "summary": "Dynamic Power",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-static-power-14",
+    "summary": "Static Power",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-verification-time-15",
+    "summary": "Verification Time",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-15"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-touch-sensing-16",
+    "summary": "Touch Sensing",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-16"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-oled-17",
+    "summary": "Oled",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-17"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-extemal-emergency-power-supply-fr-display-screen-18",
+    "summary": "Extemal Emergency Power Supply Fr Display Screen",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-18"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-antistatic-ability-19",
+    "summary": "Antistatic Ability",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-19"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-15-rh-93-rh-20",
+    "summary": "15%Rh~ 93%Rh",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-20"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-touch-panel-21",
+    "summary": "Wake Up Touch Panel",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-21"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-please-enter-the-password-22",
+    "summary": "Please Enter The Password,",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-22"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-deletion-23",
+    "summary": "After Successful Deletion,",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-23"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-id-to-be-deleted-24",
+    "summary": "Id To Be Deleted",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-24"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-anada-25",
+    "summary": "Añada",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-25"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-networkty-26",
+    "summary": "After Successful Networkty",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-26"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-es-es-27",
+    "summary": "Es) Es",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-27"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-mentes-28",
+    "summary": "=> Mentes",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-28"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-confirm-the-restoration-of-factory-29",
+    "summary": "Confirm The Restoration Of Factory",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-29"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-loam-30",
+    "summary": "Loam",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-30"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-enter-the-time-you-want-to-query-31",
+    "summary": "Enter The Time You Want To Query",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-31"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-app-operation-32",
+    "summary": "App Operation",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-32"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-doorbell-33",
+    "summary": "Doorbell",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-33"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-lock-34",
+    "summary": "Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-34"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-lock-35",
+    "summary": "Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-35"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-video-lock-36",
+    "summary": "Video Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-36"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-camera-37",
+    "summary": "Camera",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-37"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-bird-feeder-38",
+    "summary": "Bird Feeder",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-38"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-lock-39",
+    "summary": "Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-39"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-no-prompts-40",
+    "summary": "No Prompts",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-40"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-41",
+    "summary": "Scan The Qr Code With The Door Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-41"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-42",
+    "summary": "Scan The Qr Code With The Door Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-42"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-connecting-device-43",
+    "summary": "Connecting Device",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-43"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-scan-44",
+    "summary": "Scan",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-44"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-added-successfully-45",
+    "summary": "Added Successfully",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-45"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-camera-46",
+    "summary": "Camera",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-46"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-doorbell-47",
+    "summary": "Doorbell",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-47"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-connecting-device-48",
+    "summary": "Connecting Device",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-48"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ble-49",
+    "summary": "(Ble)",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-49"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-camera-50",
+    "summary": "Camera",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-50"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-bird-feeder-51",
+    "summary": "Bird Feeder",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-51"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-lock-52",
+    "summary": "Lock",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-52"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-l8t-rd-53",
+    "summary": "@ L8T-Rd",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-53"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-add-device-54",
+    "summary": "Add Device",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-54"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-status-of-the-indicator-light-or-55",
+    "summary": "Select The Status Of The Indicator Light Or",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-55"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-check-if-the-device-has-been-reset-and-56",
+    "summary": "Check If The Device Has Been Reset And",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-56"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-connect-your-mobile-phone-to-57",
+    "summary": "Connect Your Mobile Phone To",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-57"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-connect-your-phone-to-the-hotspot-shown-58",
+    "summary": "9 Connect Your Phone To The Hotspot Shown",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-58"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-y-sl-xxxx-59",
+    "summary": "Y Sl-Xxxx",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-59"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-go-to-connect-60",
+    "summary": "Go To Connect",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-60"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-messages-such-as-doorbell-push-61",
+    "summary": "Messages Such As Doorbell Push,",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-61"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-1-days-62",
+    "summary": "1 Days",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-62"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-online-offline-password-63",
+    "summary": "Online/Offline Password",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-63"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ea-ed-64",
+    "summary": "Ea -Ed",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-64"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-logs-65",
+    "summary": "Logs",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-65"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-member-management-66",
+    "summary": "Member Management",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-66"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-user-details-67",
+    "summary": "User Details",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-67"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-8-card-68",
+    "summary": "8 Card",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-68"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-o-face-69",
+    "summary": "O Face",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-69"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-any-unlock-with-card10-70",
+    "summary": "Any Unlock With Card10",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-70"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-save-71",
+    "summary": "Save",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-71"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-user-details-72",
+    "summary": "User Details",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-72"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-o-face-73",
+    "summary": "O Face",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-73"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-user-details-74",
+    "summary": "User Details",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-74"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-o-face-75",
+    "summary": "O Face",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-75"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-temporary-password-76",
+    "summary": "Temporary Password",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-76"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-offline-password-77",
+    "summary": "Offline Password",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-77"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-expiration-time-78",
+    "summary": "Expiration Time",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-78"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-message-notification-79",
+    "summary": "Message Notification",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-79"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-expiration-time-80",
+    "summary": "Expiration Time",
+    "source_refs": [
+      "generated_manuals/e-orbit/manual.json#section-80"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

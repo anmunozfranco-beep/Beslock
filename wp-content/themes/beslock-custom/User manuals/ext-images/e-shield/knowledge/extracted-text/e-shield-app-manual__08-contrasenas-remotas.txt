@@ -1,0 +1,24 @@
+# Contrasenas remotas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#8
+
+La fuente OEM describe un modulo dedicado a contrasenas.
+
+Tipos visibles en OCR:
+- permanente
+- temporal
+- de un solo uso
+- ciclica
+- personalizada
+
+Flujo base:
+1. entra a `Contrasenas`
+2. toca `Enviar codigo de acceso`
+3. selecciona el tipo de codigo
+4. completa nombre y vigencia
+5. genera el codigo
+6. ingresa el codigo en la cerradura y confirma con `#` para registrarlo en el equipo
+
+Notas utiles:
+- un codigo permanente o temporal nuevo debe usarse dentro de las primeras `24 horas` para quedar activo
+- la contrasena de un solo uso se describe como valida durante `6 horas`

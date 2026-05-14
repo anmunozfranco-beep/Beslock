@@ -1,0 +1,17 @@
+# eKeys y acceso compartido
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#7
+
+El administrador original puede enviar distintos tipos de eKey desde la app.
+
+Tipos visibles en la fuente:
+- temporal
+- permanente
+- de un solo uso
+
+Uso recomendado:
+1. entra al modulo `eKeys`
+2. toca `Enviar eKey`
+3. elige el tipo de vigencia
+4. completa los datos del usuario receptor
+5. envia la llave y valida su vigencia en el historial

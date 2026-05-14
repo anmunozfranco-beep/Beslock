@@ -1,0 +1,89 @@
+{
+  "criteria": [
+    "no destructive surface",
+    "no blocking proof risks for the slice",
+    "all four validators activated: architecture + retrieval + assembly + coherence",
+    "operator review checkpoints declared and supervisable",
+    "demotion path declared"
+  ],
+  "deferred_slices": [
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "destructive_surface": false,
+      "id": "onboarding-guidance-proof"
+    },
+    {
+      "blocking_risks": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "troubleshooting-guidance-proof"
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "operational-recovery-assistance-proof"
+    },
+    {
+      "blocking_risks": [
+        "destructive-surface-out-of-proof-scope",
+        "oem-channel-contract-missing",
+        "role-declaration-missing"
+      ],
+      "destructive_surface": true,
+      "id": "administrator-guidance-proof"
+    }
+  ],
+  "doctrine": "no slice is realised while any declared blocking-risk for that slice remains unresolved",
+  "primary_first_runtime_proof": {
+    "blocking_risks": [],
+    "destructive_surface": false,
+    "id": "contextual-retrieval-proof",
+    "kind": "first executable slice",
+    "proof_eligible": true,
+    "scores": {
+      "operational-value": 4,
+      "runtime-risk-inverse": 5,
+      "validates-architecture": 5,
+      "validates-assembly": 4,
+      "validates-coherence": 4,
+      "validates-retrieval": 5
+    },
+    "soft_risks": [
+      "no-provenance-emitter"
+    ],
+    "supervision": "operator-observed (read-only outputs)",
+    "weighted_score": 4.5
+  },
+  "schema": "operational-proof-governance/1.0",
+  "secondary_first_runtime_proof": {
+    "blocking_risks": [],
+    "destructive_surface": false,
+    "id": "procedural-assistance-proof",
+    "kind": "second executable slice",
+    "proof_eligible": true,
+    "scores": {
+      "operational-value": 4,
+      "runtime-risk-inverse": 4,
+      "validates-architecture": 5,
+      "validates-assembly": 5,
+      "validates-coherence": 5,
+      "validates-retrieval": 4
+    },
+    "soft_risks": [
+      "no-context-vector-emitter",
+      "no-confidence-tier-on-nodes"
+    ],
+    "supervision": "operator-observed; supervised when context vector absent",
+    "weighted_score": 4.45
+  }
+}

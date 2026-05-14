@@ -1,0 +1,14 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "visual-style-policy",
+  "title": "Global visual style policy",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "visual-system/shared/visual-rules/manual-image-reset-policy.md",
+    "visual-system/shared/visual-rules/realism-vs-schematic.md",
+    "visual-system/shared/visual-rules/ai-limitations.md",
+    "visual-system/README.md",
+    "KNOWLEDGE_BUILDING/COMFY_GENERATION_GOVERNANCE.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

@@ -1,0 +1,13 @@
+# Gestion de miembros
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#9
+
+La guia OEM muestra `Gestion de miembros` con este flujo general:
+1. entrar a la seccion de miembros
+2. usar `+` para agregar otros miembros
+3. introducir el nombre del miembro
+4. entrar a la informacion del miembro
+5. gestionar el modo de desbloqueo
+6. vincular el numero de usuario correspondiente
+
+La nota OEM aclara que el `codigo de usuario` se genera al agregar la cerradura.

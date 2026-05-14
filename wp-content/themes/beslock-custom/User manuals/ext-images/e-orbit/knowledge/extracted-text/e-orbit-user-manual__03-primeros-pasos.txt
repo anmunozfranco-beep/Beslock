@@ -1,0 +1,20 @@
+# Primeros pasos
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3
+
+Antes de empezar, verifica lo siguiente:
+
+- la cerradura está correctamente instalada
+- la puerta abre y cierra sin forzar
+- el panel responde al activarlo
+- ya definiste quién será el administrador principal
+
+Orden recomendado de configuración:
+1. crear el administrador principal
+2. registrar un PIN
+3. registrar una huella
+4. probar los accesos registrados
+5. revisar configuraciones básicas
+6. conectar la cerradura a la app si aplica
+
+---

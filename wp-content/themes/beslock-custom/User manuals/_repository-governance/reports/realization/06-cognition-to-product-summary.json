@@ -1,0 +1,43 @@
+{
+  "contracts": [
+    "Transition contracts narrow authority; they may never widen it.",
+    "Transition contracts preserve all hard exclusions verbatim.",
+    "Transition contracts are versioned via schema-pin federation.",
+    "Transition contracts cannot promote P-tier or elevate confidence at the boundary.",
+    "Transition contracts cannot bypass lifecycle P-tier gates.",
+    "Transition contracts are subject to demotion and rollback at any stage."
+  ],
+  "schema": "realization-and-deployment-governance/1.0",
+  "targets": [
+    {
+      "from": "contextual-retrieval + procedural-assembly",
+      "id": "operational-products",
+      "narrowing": "read-only retrieval surfaces"
+    },
+    {
+      "from": "any read-only slice",
+      "id": "runtime-services",
+      "narrowing": "stable APIs bound by access patterns"
+    },
+    {
+      "from": "onboarding-runtime",
+      "id": "onboarding-systems",
+      "narrowing": "supervised flows + checkpoints"
+    },
+    {
+      "from": "troubleshooting-runtime",
+      "id": "troubleshooting-systems",
+      "narrowing": "supervised flows + hypothesis lifecycle"
+    },
+    {
+      "from": "operational-copilot",
+      "id": "contextual-assistants",
+      "narrowing": "supervised contextual guidance, no destructive surface"
+    },
+    {
+      "from": "any + visual-assistance contract (gated)",
+      "id": "multimodal-operational-ecosystems",
+      "narrowing": "no image generation; visual-risk freeze contract honored"
+    }
+  ]
+}

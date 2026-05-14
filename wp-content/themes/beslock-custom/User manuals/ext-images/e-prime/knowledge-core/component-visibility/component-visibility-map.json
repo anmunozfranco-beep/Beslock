@@ -1,0 +1,213 @@
+{
+  "id": "component-visibility-map",
+  "type": "component-visibility-map",
+  "product": "e-prime",
+  "summary": "Components that must stay geometrically accurate in future Comfy renders for e-prime",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/capabilities/cap-fuente-y-alcance-real.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/capabilities/cap-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/capabilities/capability-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/entities/entity-catalog.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-compatibilidad-fisica-antes-de-perforar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-estado-editorial.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-que-necesitas-antes-de-empezar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-que-vas-a-instalar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-relacion-con-el-paquete-documental.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-context-validacion-despues-de-instalar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-energia-e-inicializacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-montar-el-panel-exterior-e-interior.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-preparar-la-puerta-y-el-cerrojo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/operation/proc-requisitos-antes-de-vincular.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/operation/proc-validacion-despues-del-alta.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-section-001.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-section-002.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-section-003.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-step-001.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-step-002.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-001.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-002.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-003.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-004.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-005.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-006.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-007.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-008.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-009.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-010.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-011.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-012.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-013.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-014.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-015.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-2-section-016.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-5v-9.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-adding-an-administrator-17.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-adding-an-administrator-30.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-19.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-pr-14.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-press-31.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-press-33.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-battery-compartment-3.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-battery-cover-4.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-changing-lock-body-direction-11.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-confirm-28.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-do-not-remove-the-10.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-doodle-app-download-installation-and-door-35.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-enter-the-fingerprint-password-32.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-enter-time-23.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-for-door-6.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-function-settings-18.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-hour-minute-24.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-ic-8.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-ic-card-13.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-in-normal-status-15.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-in-normal-status-27.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-press-and-hold-for-5-34.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-26.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-appropriate-22.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-appropriate-25.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-settings-20.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-settings-21.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-sweep-36.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-sword-iron-make-on-demad-7.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-the-length-of-the-5.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-user-manual-for-z-serials-2.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-12.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-16.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-29.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-z-1.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/ocr-draft-index.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-2-4g.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-administrador.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-huella.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-pin.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-qr.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-tuya.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/terminology/term-wechat.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-001.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/warnings/supplemental-candidates/sup-e-prime-1-warning-002.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/warnings/warning-limites-de-evidencia.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/warnings/warning-precauciones-clave.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/workflows/wf-alta-desde-la-app.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/workflows/wf-flujo-oem-base-de-vinculacion.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::COMPONENT_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "components": [
+    {
+      "component_id": "fingerprint-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-energia-e-inicializacion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-enter-the-fingerprint-password-32.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-section-002.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "ic-card-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "ic card"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-ic-card-13.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "exterior-handle",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "manija"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-montar-el-panel-exterior-e-interior.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-step-001.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "deadbolt",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "cerrojo"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-preparar-la-puerta-y-el-cerrojo.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "latch",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "pestillo"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-montar-el-panel-exterior-e-interior.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-preparar-la-puerta-y-el-cerrojo.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text-supplemental/sup-e-prime-1-step-001.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "lock-body",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "lock body"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-changing-lock-body-direction-11.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "battery-compartment",
+      "kind": "power",
+      "matched_surface_terms": [
+        "battery"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-battery-compartment-3.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/extracted-text/ocr-ocr-battery-cover-4.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/"
+    }
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "Future ComfyUI workflows MUST consume the trusted_visual_reference PNGs as anchor inputs for any of these components. No generative inference of component position, count, sensor type, keypad layout, or handle direction is allowed."
+}

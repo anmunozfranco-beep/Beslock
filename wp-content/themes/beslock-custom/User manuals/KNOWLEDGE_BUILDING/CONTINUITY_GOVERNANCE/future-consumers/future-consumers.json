@@ -1,0 +1,63 @@
+{
+  "schema": "continuity-governance/1.0",
+  "generated_at": "2026-05-13T19:34:40+00:00",
+  "future_consumers": [
+    {
+      "id": "persistent-troubleshooting-assistant",
+      "gates": [
+        "context store contract",
+        "incident-id emitter",
+        "history append-only contract",
+        "hypothesis store contract"
+      ]
+    },
+    {
+      "id": "long-running-onboarding-system",
+      "gates": [
+        "onboarding-timeline emitter",
+        "context store contract",
+        "session-id <-> user-identity contract"
+      ]
+    },
+    {
+      "id": "session-aware-operational-copilot",
+      "gates": [
+        "context store contract",
+        "session-signal emitter",
+        "decision provenance log",
+        "reasoning provenance log"
+      ]
+    },
+    {
+      "id": "adaptive-multimodal-continuity-system",
+      "gates": [
+        "visual-intent attached to physical-installation procedures",
+        "evidence-disclosure renderer contract",
+        "context store contract"
+      ]
+    },
+    {
+      "id": "future-visual-assistance",
+      "gates": [
+        "visual-risk reclassification freeze",
+        "fallback registry for visual-unavailable contexts"
+      ]
+    },
+    {
+      "id": "operational-memory-system",
+      "gates": [
+        "context store contract",
+        "history append-only contract",
+        "OEM-required flag preservation contract"
+      ]
+    }
+  ],
+  "products": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

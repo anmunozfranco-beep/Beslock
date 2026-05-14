@@ -1,0 +1,45 @@
+{
+  "candidate_causes": [
+    "candidato pendiente de revisión OEM"
+  ],
+  "category": "app-synchronization-issues",
+  "channel_targets": [
+    "support",
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "diagnostic_questions": [
+    "¿se puede reproducir el síntoma de forma consistente?",
+    "¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?",
+    "¿hay eventos recientes (cambio de batería, reset, actualización)?"
+  ],
+  "escalation_required": true,
+  "extraction_lineage": [
+    "corpus-enrichment/troubleshooting-candidate/ts-app-synchronization-issues-candidate"
+  ],
+  "id": "ts-app-synchronization-issues-candidate",
+  "language": "es-CO",
+  "menu_path": "",
+  "next_actions": [
+    "elevar el caso al canal de revisión OEM antes de operar",
+    "registrar el síntoma observado en el log operacional"
+  ],
+  "ocr_dependency": "none",
+  "product": "e-shield",
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "la app no refleja cambios realizados en la cerradura o viceversa",
+  "surface": "runtime-corpus",
+  "symptoms": [
+    "las credenciales nuevas no aparecen en la app",
+    "los logs de la cerradura no se sincronizan",
+    "los cambios de configuración no se aplican"
+  ],
+  "type": "troubleshooting-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}
