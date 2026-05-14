@@ -1,0 +1,88 @@
+{
+  "auto_apply": false,
+  "constitutional_layer_index": 38,
+  "explanation_required": true,
+  "impacted_layers": {
+    "lineage": [
+      "identity-resolution",
+      "lineage-governance"
+    ],
+    "manuals": [
+      "semantic-domain",
+      "publication",
+      "linguistic"
+    ],
+    "specifications": [
+      "semantic-domain",
+      "publication",
+      "runtime"
+    ],
+    "unknown": [],
+    "visual-identity": [
+      "identity-resolution",
+      "publication"
+    ]
+  },
+  "purpose": "Deterministic answer-builders for the 6 routing-consultation question kinds. Every answer ships with a reasoning chain.",
+  "questions": [
+    {
+      "answer_builder": "from intake-inference-routing",
+      "id": "where-does-this-file-go"
+    },
+    {
+      "answer_builder": "from intake-inference-evidence-class",
+      "id": "what-class-of-evidence"
+    },
+    {
+      "answer_builder": "from intake-inference-trust-tier",
+      "id": "trust-tier"
+    },
+    {
+      "answer_builder": "from evidence-class -> role-table",
+      "id": "operational-role"
+    },
+    {
+      "answer_builder": "from domain -> impacted-layers",
+      "id": "downstream-impact"
+    },
+    {
+      "answer_builder": "from domain -> refresh-pipeline-set",
+      "id": "refresh-impact"
+    }
+  ],
+  "refresh_set": {
+    "lineage": [
+      "lineage-refresh",
+      "propagation-refresh"
+    ],
+    "manuals": [
+      "extraction-refresh",
+      "linguistic-refresh",
+      "html-regeneration",
+      "publication-refresh"
+    ],
+    "specifications": [
+      "extraction-refresh",
+      "propagation-refresh",
+      "publication-refresh"
+    ],
+    "unknown": [],
+    "visual-identity": [
+      "extraction-refresh",
+      "publication-refresh"
+    ]
+  },
+  "reviewer_must_confirm": true,
+  "role_table": {
+    "evidence-bundle": "bundle-staging",
+    "operator-note": "operator-context",
+    "structured-data": "structured-input",
+    "third-party": "auxiliary-source",
+    "unclassified": "unclassified",
+    "vendor-document": "manuals-content",
+    "vendor-image": "visual-asset",
+    "vendor-spec-sheet": "specifications",
+    "vendor-video": "visual-asset"
+  },
+  "schema": "executable-operational-bindings/1.0"
+}

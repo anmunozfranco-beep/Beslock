@@ -1,0 +1,51 @@
+/* Beslock Operational Console — exec layer (phase 45 / layer 38) */
+.oc-body--exec { background: #0e1726; color: #e9eef6; }
+.oc-body--exec .oc-header { background: #0a1320; border-bottom: 1px solid #1f2a3d; }
+.oc-body--exec .oc-banner--exec {
+  background: #1b2438; color: #d8e1f1; border: 1px solid #2c3a55;
+  padding: 0.6rem 1rem; margin: 0.5rem 1rem; border-radius: 6px;
+}
+.oc-tag--exec { background: #2b6cb0; color: #fff; padding: 0 .4rem; border-radius: 3px; font-size: .7rem; }
+.oc-nav__item--exec { color: #8ab4f8; }
+.oc-exec { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1rem; }
+.oc-exec--single { grid-template-columns: 1fr; }
+.oc-exec__panel {
+  background: #111c2e; border: 1px solid #1f2a3d; border-radius: 8px;
+  padding: 1rem; min-height: 200px;
+}
+.oc-exec__panel h3 { margin-top: 0; color: #f5d27a; }
+.oc-exec__row { display: flex; gap: .75rem; margin: .5rem 0; flex-wrap: wrap; align-items: center; }
+.oc-exec__row label { display: inline-flex; flex-direction: column; gap: .15rem; font-size: .85rem; }
+.oc-exec__row input, .oc-exec__row select, .oc-exec__row textarea {
+  background: #0a1320; color: #e9eef6; border: 1px solid #2c3a55;
+  border-radius: 4px; padding: .35rem .5rem; font: inherit; min-width: 14rem;
+}
+.oc-exec__row textarea { width: 100%; min-height: 4rem; }
+.oc-exec__btn {
+  background: #2b6cb0; color: #fff; border: 1px solid #2b6cb0;
+  padding: .4rem .9rem; border-radius: 4px; cursor: pointer; font: inherit;
+}
+.oc-exec__btn:hover { background: #1f5286; }
+.oc-exec__btn--ghost { background: transparent; color: #8ab4f8; border-color: #2b6cb0; }
+.oc-exec__btn--warn { background: #b04a2b; border-color: #b04a2b; }
+.oc-exec__pre {
+  background: #0a1320; color: #b9d0f0; border: 1px solid #1f2a3d;
+  border-radius: 4px; padding: .75rem; font-size: .8rem;
+  max-height: 360px; overflow: auto; white-space: pre-wrap; word-break: break-word;
+}
+.oc-exec__chain { background: #0a1320; border-left: 3px solid #f5d27a; padding: .5rem .75rem; }
+.oc-exec__chain ol { margin: .25rem 0 .25rem 1.25rem; }
+.oc-exec__warn { color: #f5b16a; font-weight: 600; }
+.oc-exec__ok   { color: #8be9a3; font-weight: 600; }
+.oc-exec__kbd  { background: #0a1320; border: 1px solid #2c3a55; border-radius: 3px; padding: 0 .35rem; font-family: monospace; font-size: .8rem; }
+.oc-exec__viz { background: #0a1320; border: 1px solid #1f2a3d; border-radius: 4px; }
+.oc-exec__viz svg { display: block; width: 100%; height: 320px; }
+.oc-exec__viz svg .node-rect { fill: #1b2438; stroke: #2b6cb0; }
+.oc-exec__viz svg .node-text { fill: #e9eef6; font: 11px sans-serif; }
+.oc-exec__viz svg .edge-line { stroke: #5a86c7; stroke-width: 1; fill: none; marker-end: url(#arrow); }
+.oc-exec__list { list-style: none; padding: 0; margin: .5rem 0; }
+.oc-exec__list li { background: #0a1320; padding: .35rem .5rem; border-left: 2px solid #2b6cb0; margin: .25rem 0; font-size: .85rem; }
+.oc-exec__indicator { font-size: .8rem; color: #8be9a3; }
+.oc-exec__indicator--unsaved { color: #f5b16a; }
+.oc-exec__hint { color: #8ab4f8; font-size: .8rem; }
+@media (max-width: 900px) { .oc-exec { grid-template-columns: 1fr; } }

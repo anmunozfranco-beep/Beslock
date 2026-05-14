@@ -1,0 +1,100 @@
+{
+  "auto_apply": false,
+  "constitutional_layer_index": 38,
+  "explanation_required": true,
+  "purpose": "Deterministic heuristics applied by the intake engine. Heuristics are explanatory; reviewer override is always available.",
+  "reviewer_must_confirm": true,
+  "rules": [
+    {
+      "evidence": "extension",
+      "id": "R-FMT-1",
+      "if": "extension in format-table",
+      "then": "set format from table"
+    },
+    {
+      "evidence": "fallback",
+      "id": "R-FMT-2",
+      "if": "extension not in format-table",
+      "then": "set format=unknown"
+    },
+    {
+      "evidence": "format-table",
+      "id": "R-EVD-1",
+      "if": "format known",
+      "then": "set evidence-class to default"
+    },
+    {
+      "evidence": "filename",
+      "id": "R-EVD-2",
+      "if": "filename contains 'spec'",
+      "then": "suggest evidence-class=vendor-spec-sheet"
+    },
+    {
+      "evidence": "filename",
+      "id": "R-EVD-3",
+      "if": "filename contains 'manual'",
+      "then": "suggest evidence-class=vendor-document"
+    },
+    {
+      "evidence": "evidence-class-table",
+      "id": "R-TRS-1",
+      "if": "evidence-class set",
+      "then": "set trust-tier to class default"
+    },
+    {
+      "evidence": "filename",
+      "id": "R-TRS-2",
+      "if": "filename contains 'oem'",
+      "then": "suggest trust-tier=tier-1"
+    },
+    {
+      "evidence": "filename",
+      "id": "R-PRD-1",
+      "if": "filename matches product slug",
+      "then": "suggest product-scope"
+    },
+    {
+      "evidence": "format-category",
+      "id": "R-DOM-1",
+      "if": "format=structured",
+      "then": "suggest domain=specifications"
+    },
+    {
+      "evidence": "format-category",
+      "id": "R-DOM-2",
+      "if": "format=image",
+      "then": "suggest domain=visual-identity"
+    },
+    {
+      "evidence": "evidence-class",
+      "id": "R-RTG-1",
+      "if": "evidence-class=vendor-document",
+      "then": "suggest routing=manuals/<product>/"
+    },
+    {
+      "evidence": "evidence-class",
+      "id": "R-RTG-2",
+      "if": "evidence-class=vendor-spec-sheet",
+      "then": "suggest routing=specs/<product>/"
+    },
+    {
+      "evidence": "evidence-class",
+      "id": "R-RTG-3",
+      "if": "evidence-class=vendor-image",
+      "then": "suggest routing=visual-identity/<product>/"
+    },
+    {
+      "evidence": "domain",
+      "id": "R-AFX-1",
+      "if": "domain=specifications",
+      "then": "affected-domains += [specifications, publication]"
+    },
+    {
+      "evidence": "domain",
+      "id": "R-AFX-2",
+      "if": "domain=visual-identity",
+      "then": "affected-domains += [visual-identity, publication]"
+    }
+  ],
+  "schema": "executable-operational-bindings/1.0"
+}

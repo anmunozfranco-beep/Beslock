@@ -1,0 +1,50 @@
+{
+  "actions": [
+    {
+      "id": "dry-run",
+      "mutates": false,
+      "produces": "dry-run-report-draft"
+    },
+    {
+      "id": "approve",
+      "mutates": false,
+      "produces": "refresh-approval-draft"
+    },
+    {
+      "id": "reject",
+      "mutates": false,
+      "produces": "refresh-rejection-draft"
+    },
+    {
+      "id": "partial-rebuild",
+      "mutates": false,
+      "produces": "partial-rebuild-draft"
+    }
+  ],
+  "auto_apply": false,
+  "constitutional_layer_index": 38,
+  "isolation_rules": [
+    "scope=product MUST NOT cascade to portfolio without explicit reviewer escalation",
+    "scope=runtime MUST NOT cascade to publication without explicit reviewer escalation",
+    "approval drafts include the full reasoning chain and the impacted-layers set"
+  ],
+  "purpose": "Deterministic rules for assembling refresh proposal drafts. Builders never trigger rebuilds.",
+  "reviewer_must_confirm": true,
+  "schema": "executable-operational-bindings/1.0",
+  "scopes": [
+    "product",
+    "domain",
+    "publication",
+    "runtime",
+    "portfolio"
+  ],
+  "stale_classes": [
+    "stale-extraction",
+    "stale-propagation",
+    "stale-publication",
+    "stale-linguistic",
+    "stale-html",
+    "stale-runtime",
+    "stale-lineage"
+  ]
+}

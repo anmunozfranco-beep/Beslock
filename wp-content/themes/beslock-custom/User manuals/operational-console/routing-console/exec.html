@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Routing (exec) — Beslock Operational Console (executable)</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <link rel="stylesheet" href="../assets/exec/exec.css" />
+  <meta name="governance-layer" content="38" />
+  <meta name="governance-schema" content="executable-operational-bindings/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+  <meta name="network-calls" content="false" />
+</head>
+<body class="oc-body oc-body--exec">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console <span class="oc-tag oc-tag--exec">EXEC</span></div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../exec.html">Exec Dashboard</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../intake-console/exec.html">Intake (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../routing-console/exec.html">Routing (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../refresh-console/exec.html">Refresh (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../reconciliation-console/exec.html">Reconciliation (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../publication-console/exec.html">Publication (exec)</a>
+      <a class="oc-nav__item oc-nav__item--exec" href="../governance-console/exec.html">Governance (exec)</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 38 — executable bindings, draft-only">L38</div>
+  </header>
+  <div class="oc-banner oc-banner--exec" role="status" aria-live="polite">
+    <strong>Executable layer.</strong> Runs locally from the file system. Every action emits an append-only <em>draft manifest</em>. No knowledge-core, source-of-truth, runtime, publication or governance state is ever mutated by this UI.
+  </div>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Routing consultation (executable) <span class="oc-tag oc-tag--exec">L38</span></h1>
+      <p>Pick a file. The console answers six routing questions deterministically, each with its reasoning chain. Reviewer is the only authority.</p>
+    </section>
+    <section class="oc-exec">
+      <article class="oc-exec__panel">
+        <h3>1 · Local file</h3>
+        <div class="oc-exec__row"><label>Pick file <input id="file-input" type="file" /></label></div>
+        <pre class="oc-exec__pre" id="file-meta">no file selected</pre>
+      </article>
+      <article class="oc-exec__panel">
+        <h3>2 · Six answers</h3>
+        <ul class="oc-exec__list" id="answers"></ul>
+      </article>
+      <article class="oc-exec__panel oc-exec--single" style="grid-column: 1 / -1;">
+        <h3>3 · Reviewer decision</h3>
+        <div class="oc-exec__row">
+          <label>Reviewer disposition
+            <select id="disp"><option value="accept-all">accept all proposals</option><option value="accept-with-overrides">accept with overrides</option><option value="reject">reject all proposals</option></select>
+          </label>
+          <label style="flex:1"><span>Reviewer notes</span><textarea id="notes"></textarea></label>
+        </div>
+        <div class="oc-exec__row">
+          <button class="oc-exec__btn" id="emit">Emit routing-consultation-draft</button>
+          <button class="oc-exec__btn oc-exec__btn--ghost" id="export">Export draft (.json)</button>
+          <span id="indicator" class="oc-exec__indicator">no draft</span>
+        </div>
+        <pre class="oc-exec__pre" id="draft-preview">—</pre>
+      </article>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let inferred = null, answers = null, lastDraft = null;
+        Promise.all([window.OC.IntakeEngine.loadTables(), window.OC.RoutingEngine.load()]).catch(function () {
+          window.OC.UX.showWarning("file-meta", "Rule tables failed to load (file:// fetch may be blocked).");
+        });
+        document.getElementById("file-input").addEventListener("change", function (e) {
+          const f = e.target.files && e.target.files[0]; if (!f) return;
+          const r = window.OC.IntakeEngine.infer(f); inferred = r;
+          document.getElementById("file-meta").textContent = JSON.stringify(r.meta, null, 2);
+          answers = window.OC.RoutingEngine.answer(r.inferred);
+          const ul = document.getElementById("answers");
+          ul.innerHTML = "";
+          answers.forEach(function (a) {
+            const li = document.createElement("li");
+            li.innerHTML = "<strong>" + a.question + ":</strong> " + (Array.isArray(a.answer) ? a.answer.join(", ") || "(none)" : a.answer) + "<br><span class='oc-exec__hint'>" + a.reasoning + "</span>";
+            ul.appendChild(li);
+          });
+          window.OC.UX.setIndicator("indicator", "answers ready — emit draft to record reviewer disposition", "unsaved");
+        });
+        document.getElementById("emit").addEventListener("click", function () {
+          if (!answers) { alert("Pick a file first."); return; }
+          lastDraft = window.OC.Drafts.record("routing-consultation-draft", {
+            meta: inferred.meta,
+            inferred: inferred.inferred,
+            answers: answers,
+            disposition: document.getElementById("disp").value,
+            reviewer_notes: document.getElementById("notes").value,
+          }, inferred.reasoning_chain);
+          window.OC.Drafts.preview("draft-preview", lastDraft);
+          window.OC.UX.setIndicator("indicator", "draft appended " + lastDraft.draft_id.slice(0,8), "ok");
+        });
+        document.getElementById("export").addEventListener("click", function () {
+          if (!lastDraft) return; window.OC.Drafts.exportDownload("routing-draft-" + lastDraft.draft_id.slice(0,8) + ".json", lastDraft);
+        });
+      });
+    </script>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required · Append-only</span>
+    <span>No SaaS · No cloud · No backend · No autonomous agents · No ML · No telemetry · No network calls</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+  <script src="../assets/exec/state.js" defer></script>
+  <script src="../assets/exec/drafts.js" defer></script>
+  <script src="../assets/exec/intake-engine.js" defer></script>
+  <script src="../assets/exec/routing-engine.js" defer></script>
+  <script src="../assets/exec/ux.js" defer></script>
+</body>
+</html>

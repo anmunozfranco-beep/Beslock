@@ -1,0 +1,74 @@
+{
+  "auto_classifies": false,
+  "constitutional_layer_index": 38,
+  "extensions": {
+    ".csv": {
+      "category": "structured",
+      "default_evidence_class": "vendor-spec-sheet",
+      "format": "csv"
+    },
+    ".docx": {
+      "category": "document",
+      "default_evidence_class": "vendor-document",
+      "format": "docx"
+    },
+    ".jpeg": {
+      "category": "image",
+      "default_evidence_class": "vendor-image",
+      "format": "jpg"
+    },
+    ".jpg": {
+      "category": "image",
+      "default_evidence_class": "vendor-image",
+      "format": "jpg"
+    },
+    ".json": {
+      "category": "structured",
+      "default_evidence_class": "structured-data",
+      "format": "json"
+    },
+    ".mov": {
+      "category": "video",
+      "default_evidence_class": "vendor-video",
+      "format": "mov"
+    },
+    ".mp4": {
+      "category": "video",
+      "default_evidence_class": "vendor-video",
+      "format": "mp4"
+    },
+    ".pdf": {
+      "category": "document",
+      "default_evidence_class": "vendor-document",
+      "format": "pdf"
+    },
+    ".png": {
+      "category": "image",
+      "default_evidence_class": "vendor-image",
+      "format": "png"
+    },
+    ".webp": {
+      "category": "image",
+      "default_evidence_class": "vendor-image",
+      "format": "webp"
+    },
+    ".xlsx": {
+      "category": "structured",
+      "default_evidence_class": "vendor-spec-sheet",
+      "format": "xlsx"
+    },
+    ".zip": {
+      "category": "archive",
+      "default_evidence_class": "evidence-bundle",
+      "format": "zip"
+    }
+  },
+  "fallback": {
+    "category": "unknown",
+    "default_evidence_class": "unclassified",
+    "format": "unknown"
+  },
+  "purpose": "Deterministic mapping of file extensions to recognised intake formats. Used by the executable intake engine to classify uploaded files.",
+  "reviewer_override_supported": true,
+  "schema": "executable-operational-bindings/1.0"
+}

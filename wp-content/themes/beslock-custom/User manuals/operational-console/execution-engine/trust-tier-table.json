@@ -1,0 +1,28 @@
+{
+  "auto_promotion": false,
+  "constitutional_layer_index": 38,
+  "purpose": "Declared trust tiers. The intake engine *suggests* a tier from format + filename heuristics. The reviewer is the only authority.",
+  "schema": "executable-operational-bindings/1.0",
+  "tiers": [
+    {
+      "id": "tier-1",
+      "label": "OEM-authoritative",
+      "promotes_without_review": false
+    },
+    {
+      "id": "tier-2",
+      "label": "Vendor-authoritative",
+      "promotes_without_review": false
+    },
+    {
+      "id": "tier-3",
+      "label": "Operator-curated",
+      "promotes_without_review": false
+    },
+    {
+      "id": "tier-4",
+      "label": "Unclassified / unknown",
+      "promotes_without_review": false
+    }
+  ]
+}
