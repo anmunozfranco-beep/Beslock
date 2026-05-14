@@ -1,0 +1,81 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "semantic-propagation",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "Worked examples per propagation mode.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "examples": [
+    {
+      "domain": "shared-app",
+      "explanation": "All 6 locks inherit the shared pairing flow from the portfolio source.",
+      "field": "pairing-flow",
+      "mode": "inherit"
+    },
+    {
+      "domain": "specifications",
+      "explanation": "e-shield overrides portfolio default IP44 with verified IP55 from OEM datasheet.",
+      "field": "ip-rating",
+      "mode": "override"
+    },
+    {
+      "domain": "connectivity",
+      "explanation": "e-touch rejects zigbee as not-applicable; reviewer attests.",
+      "field": "zigbee",
+      "mode": "reject"
+    },
+    {
+      "domain": "authentication",
+      "explanation": "e-nova extends authentication with a product-specific subfield not in portfolio schema.",
+      "field": "vein-recognition",
+      "mode": "extend"
+    }
+  ],
+  "id": "propagation-examples"
+}

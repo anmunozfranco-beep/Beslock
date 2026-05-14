@@ -1,0 +1,75 @@
+{
+  "auto_mutates_source_truth": false,
+  "auto_propagates_across_canonicals": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 36,
+  "executable": false,
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "modeling_only": true,
+  "rules": [
+    {
+      "id": "smallest-sufficient-scope",
+      "rule": "The dependency-resolver must select the smallest scope that satisfies the change-set."
+    },
+    {
+      "id": "scope-isolation",
+      "rule": "A product-scope rebuild may not write to fragments owned by another canonical product."
+    },
+    {
+      "id": "domain-scope-respects-propagation-modes",
+      "rule": "Domain-scope rebuilds must honour layer-34 propagation modes (inherit/override/reject/extend)."
+    },
+    {
+      "id": "publication-scope-requires-canonical-resolution",
+      "rule": "Publication-scope rebuilds must resolve canonical_id via layer-35 before rendering."
+    },
+    {
+      "id": "runtime-scope-follows-publication",
+      "rule": "Runtime-scope rebuilds may only run on the slice already covered by a fresh publication."
+    },
+    {
+      "id": "portfolio-scope-requires-reviewer",
+      "rule": "Portfolio-scope rebuilds always require reviewer authorization."
+    }
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance"
+  ],
+  "updated_at": "2026-05-14T10:31:18Z"
+}

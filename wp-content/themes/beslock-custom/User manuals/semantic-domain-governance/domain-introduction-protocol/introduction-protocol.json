@@ -1,0 +1,110 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "domain-introduction-protocol",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "9-step protocol for introducing a new semantic domain without breaking governance.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "id": "domain-introduction-protocol",
+  "rejection_rules": [
+    "Reject if the domain mutates a prior layer.",
+    "Reject if the domain overlaps an existing domain without explicit deprecation governance.",
+    "Reject if the domain has no evidence_class anchor.",
+    "Reject if the domain has no intake route.",
+    "Reject if the domain proposes autonomous behaviour, ML, or embeddings."
+  ],
+  "step_count": 9,
+  "steps": [
+    {
+      "id": "1-declare-intent",
+      "output": "intent statement + non-overlap rationale vs existing domains",
+      "question": "What operational meaning does the proposed domain capture?"
+    },
+    {
+      "id": "2-classify-scope",
+      "output": "scope assignment (binary)",
+      "question": "Is the domain product-level or portfolio-level?"
+    },
+    {
+      "id": "3-anchor-evidence-classes",
+      "output": "evidence_class_anchors (>=1)",
+      "question": "Which layer-32 evidence classes feed this domain?"
+    },
+    {
+      "id": "4-bind-to-intake",
+      "output": "intake_route declaration",
+      "question": "Which layer-33 intake routes deliver artefacts to this domain?"
+    },
+    {
+      "id": "5-declare-subdomains",
+      "output": "subdomain list with non-overlap statement",
+      "question": "What subdomains partition the domain?"
+    },
+    {
+      "id": "6-declare-interop",
+      "output": "interop edges added to domain-interoperability/",
+      "question": "Which existing domains does this domain interoperate with?"
+    },
+    {
+      "id": "7-declare-downstream",
+      "output": "downstream_consumers list",
+      "question": "Which downstream consumers (publication, warnings, support) read this domain?"
+    },
+    {
+      "id": "8-non-mutation-attestation",
+      "output": "MUST attest 'no'; otherwise reject and escalate.",
+      "question": "Does the domain require any change to prior layers?"
+    },
+    {
+      "id": "9-register",
+      "output": "append-only entry; lineage event emitted",
+      "question": "Has the domain been registered in semantic-domain-catalog.json?"
+    }
+  ]
+}

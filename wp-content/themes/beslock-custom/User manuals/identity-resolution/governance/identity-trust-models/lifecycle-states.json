@@ -1,0 +1,151 @@
+{
+  "auto_promotion_policy": "AUTO-PROMOTION IS FORBIDDEN. Every transition requires a declared trigger and reviewer attestation.",
+  "envelope": {
+    "auto_promotes_unresolved_identities": false,
+    "bypasses_reviewer_governance": false,
+    "constitutional_layer_index": 35,
+    "introduces_autonomous_agents": false,
+    "introduces_face_or_image_recognition": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "identity-trust-models",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "identity-resolution-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance",
+      "semantic-domain-governance"
+    ],
+    "summary": "Six-state identity lifecycle with declared transitions.",
+    "updated_at": "2026-05-14T10:24:18Z"
+  },
+  "id": "identity-lifecycle-states",
+  "state_count": 6,
+  "states": [
+    {
+      "definition": "Identity link proposed by intake; awaiting reviewer triage.",
+      "exit_to": [
+        "probable",
+        "deprecated"
+      ],
+      "id": "candidate"
+    },
+    {
+      "definition": "Reviewer has triaged; ≥1 evidence source supports the link, but <2 independent sources or pending verification.",
+      "exit_to": [
+        "validated",
+        "deprecated"
+      ],
+      "id": "probable"
+    },
+    {
+      "definition": "≥2 independent evidence sources + reviewer attestation; safe for downstream consumption.",
+      "exit_to": [
+        "canonical",
+        "superseded",
+        "deprecated"
+      ],
+      "id": "validated"
+    },
+    {
+      "definition": "Validated and elevated to ecosystem-stable identity; persisted in canonical-products/.",
+      "exit_to": [
+        "superseded",
+        "deprecated"
+      ],
+      "id": "canonical"
+    },
+    {
+      "definition": "Closed-to-new-intake; record retained for lineage.",
+      "exit_to": [],
+      "id": "deprecated"
+    },
+    {
+      "definition": "Replaced by a newer identity; supersession chain emitted.",
+      "exit_to": [],
+      "id": "superseded"
+    }
+  ],
+  "transition_count": 9,
+  "transitions": [
+    {
+      "from": "candidate",
+      "to": "probable",
+      "trigger": "reviewer-triage"
+    },
+    {
+      "from": "candidate",
+      "to": "deprecated",
+      "trigger": "reviewer-rejection"
+    },
+    {
+      "from": "probable",
+      "to": "validated",
+      "trigger": "reviewer-attestation + 2nd-evidence"
+    },
+    {
+      "from": "probable",
+      "to": "deprecated",
+      "trigger": "reviewer-rejection"
+    },
+    {
+      "from": "validated",
+      "to": "canonical",
+      "trigger": "reviewer-elevation"
+    },
+    {
+      "from": "validated",
+      "to": "superseded",
+      "trigger": "newer-identity-validated"
+    },
+    {
+      "from": "validated",
+      "to": "deprecated",
+      "trigger": "reviewer-deprecation"
+    },
+    {
+      "from": "canonical",
+      "to": "superseded",
+      "trigger": "platform-or-variant-replacement"
+    },
+    {
+      "from": "canonical",
+      "to": "deprecated",
+      "trigger": "reviewer-deprecation"
+    }
+  ]
+}

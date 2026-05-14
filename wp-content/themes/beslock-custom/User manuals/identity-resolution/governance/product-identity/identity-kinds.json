@@ -1,0 +1,101 @@
+{
+  "envelope": {
+    "auto_promotes_unresolved_identities": false,
+    "bypasses_reviewer_governance": false,
+    "constitutional_layer_index": 35,
+    "introduces_autonomous_agents": false,
+    "introduces_face_or_image_recognition": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "product-identity",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "identity-resolution-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance",
+      "semantic-domain-governance"
+    ],
+    "summary": "Seven canonical identity kinds and their uniqueness/mutability rules.",
+    "updated_at": "2026-05-14T10:24:18Z"
+  },
+  "id": "identity-kinds",
+  "kind_count": 7,
+  "kinds": [
+    {
+      "definition": "Ecosystem-stable identity for the product (e.g., e-nova).",
+      "id": "canonical-identity",
+      "mutability": "append-only; rename requires deprecation governance",
+      "uniqueness": "exactly-one-per-product"
+    },
+    {
+      "definition": "Manufacturer/factory identity (e.g., model code SB-1).",
+      "id": "oem-identity",
+      "mutability": "append-only; alias additions allowed",
+      "uniqueness": "may map to multiple commercial identities"
+    },
+    {
+      "definition": "Public-facing label sold to end users.",
+      "id": "commercial-identity",
+      "mutability": "append-only",
+      "uniqueness": "one canonical label per region; aliases allowed"
+    },
+    {
+      "definition": "Identity used by a third-party reseller (white-label, distributor).",
+      "id": "reseller-identity",
+      "mutability": "append-only",
+      "uniqueness": "many-per-canonical; provenance bound to reseller"
+    },
+    {
+      "definition": "Distinguishes hardware/firmware variants of the same canonical product.",
+      "id": "variant-identity",
+      "mutability": "append-only; supersession permitted",
+      "uniqueness": "many-per-canonical"
+    },
+    {
+      "definition": "Shared OEM platform (e.g., Tuya BLE platform v3) underpinning multiple products.",
+      "id": "platform-identity",
+      "mutability": "append-only",
+      "uniqueness": "many-canonicals-per-platform"
+    },
+    {
+      "definition": "Region-specific identity (regulatory, language, SKU).",
+      "id": "regional-identity",
+      "mutability": "append-only",
+      "uniqueness": "many-per-canonical"
+    }
+  ]
+}

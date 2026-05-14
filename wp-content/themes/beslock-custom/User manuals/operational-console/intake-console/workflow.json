@@ -1,0 +1,186 @@
+{
+  "auto_approves_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 37,
+  "emits_draft_manifests_to": "operational-console/manifests/intake-drafts/",
+  "executable": false,
+  "id": "intake-workflow",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "promotion_path": "out-of-band reviewer protocol",
+  "schema": "operational-console-governance/1.0",
+  "steps": [
+    {
+      "hint": "Operator selects a local file. The console reads filename + size only.",
+      "id": "upload-document",
+      "index": 1,
+      "title": "Upload document"
+    },
+    {
+      "hint": "MIME / extension inferred deterministically; no content parsing.",
+      "id": "detect-format",
+      "index": 2,
+      "title": "Detect format"
+    },
+    {
+      "hint": "Default class proposed from layer-32 evidence taxonomy; operator can override.",
+      "id": "infer-evidence-class",
+      "index": 3,
+      "title": "Infer evidence class"
+    },
+    {
+      "hint": "Suggested e-orbit/e-prime/e-flex/e-touch/e-shield/e-nova/portfolio-level.",
+      "id": "infer-product-scope",
+      "index": 4,
+      "title": "Infer product scope"
+    },
+    {
+      "hint": "Default trust tier from layer-33 trust rules; never auto-promoted.",
+      "id": "infer-trust-level",
+      "index": 5,
+      "title": "Infer trust level"
+    },
+    {
+      "hint": "Layer-33 routing-policy lookup; operator confirms.",
+      "id": "suggest-routing",
+      "index": 6,
+      "title": "Suggest routing destination"
+    },
+    {
+      "hint": "Layer-34 domain map + layer-35 identity links.",
+      "id": "suggest-affected-domains",
+      "index": 7,
+      "title": "Suggest affected domains/products"
+    },
+    {
+      "hint": "Operator may revise any inferred field with a reason field.",
+      "id": "operator-re-evaluation",
+      "index": 8,
+      "title": "Operator re-evaluation"
+    },
+    {
+      "hint": "Override is recorded as part of the draft manifest, not silently applied.",
+      "id": "operator-override",
+      "index": 9,
+      "title": "Operator override"
+    },
+    {
+      "hint": "Emits an intake-draft manifest; nothing ingested yet.",
+      "id": "confirm-ingestion",
+      "index": 10,
+      "title": "Confirm ingestion"
+    },
+    {
+      "hint": "Layer-36 pipelines proposed for downstream invalidation.",
+      "id": "propose-refresh-plan",
+      "index": 11,
+      "title": "Propose refresh plan"
+    },
+    {
+      "hint": "Reviewer authorization required for promotion; the console only proposes.",
+      "id": "approve-or-skip-refresh",
+      "index": 12,
+      "title": "Approve or skip refresh"
+    }
+  ],
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance"
+  ],
+  "supported_formats": [
+    {
+      "evidence_class_default": "official-document",
+      "id": "pdf",
+      "label": "PDF"
+    },
+    {
+      "evidence_class_default": "structured-spreadsheet",
+      "id": "xlsx",
+      "label": "XLSX"
+    },
+    {
+      "evidence_class_default": "structured-spreadsheet",
+      "id": "csv",
+      "label": "CSV"
+    },
+    {
+      "evidence_class_default": "structured-data",
+      "id": "json",
+      "label": "JSON"
+    },
+    {
+      "evidence_class_default": "raster-image",
+      "id": "png",
+      "label": "PNG"
+    },
+    {
+      "evidence_class_default": "raster-image",
+      "id": "jpg",
+      "label": "JPG"
+    },
+    {
+      "evidence_class_default": "raster-image",
+      "id": "webp",
+      "label": "WebP"
+    },
+    {
+      "evidence_class_default": "video-evidence",
+      "id": "mp4",
+      "label": "MP4"
+    },
+    {
+      "evidence_class_default": "video-evidence",
+      "id": "mov",
+      "label": "MOV"
+    },
+    {
+      "evidence_class_default": "bundle-archive",
+      "id": "zip",
+      "label": "ZIP"
+    },
+    {
+      "evidence_class_default": "narrative-document",
+      "id": "docx",
+      "label": "DOCX"
+    }
+  ],
+  "updated_at": "2026-05-14T10:43:38Z",
+  "uses_cloud": false
+}

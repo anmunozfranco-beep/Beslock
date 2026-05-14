@@ -1,0 +1,94 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "semantic-propagation",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "Four-mode semantic propagation policy: inherit / override / reject / extend.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "id": "propagation-modes",
+  "mode_count": 4,
+  "modes": [
+    {
+      "definition": "Child product adopts the portfolio-level value verbatim.",
+      "id": "inherit",
+      "lineage": "ingestion-lineage entry refers to portfolio source by id",
+      "preconditions": [
+        "Portfolio-level value exists",
+        "No product-level override declared"
+      ]
+    },
+    {
+      "definition": "Child product replaces the portfolio-level value with a product-specific value.",
+      "id": "override",
+      "lineage": "override-lineage event emitted; portfolio source retained as superseded reference",
+      "preconditions": [
+        "Product-level evidence exists with trust >= portfolio source",
+        "Override is declared explicitly with rationale"
+      ]
+    },
+    {
+      "definition": "Child product declares the portfolio-level value as not-applicable.",
+      "id": "reject",
+      "lineage": "reject-lineage event emitted; field marked not-applicable",
+      "preconditions": [
+        "Explicit reject-rationale provided",
+        "Reviewer-class attestation present"
+      ]
+    },
+    {
+      "definition": "Child product adds product-specific subfields not present at portfolio level.",
+      "id": "extend",
+      "lineage": "extension-lineage event emitted; portfolio schema unchanged",
+      "preconditions": [
+        "New subfield does not collide with an existing portfolio subfield",
+        "Extension is anchored to a layer-32 evidence class"
+      ]
+    }
+  ]
+}

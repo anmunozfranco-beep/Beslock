@@ -1,0 +1,80 @@
+{
+  "copilot_contract": [
+    "Copilot MAY suggest reconciliations; it MUST NOT register identities.",
+    "Copilot MUST surface uncertainty as 'requires-review', never as autonomous decision.",
+    "Copilot MUST NOT cross ecosystem boundaries when proposing matches.",
+    "Copilot MUST cite persistent-memory entries when proposing an alias resolution."
+  ],
+  "envelope": {
+    "auto_promotes_unresolved_identities": false,
+    "bypasses_reviewer_governance": false,
+    "constitutional_layer_index": 35,
+    "introduces_autonomous_agents": false,
+    "introduces_face_or_image_recognition": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "future-runtime-readiness",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "identity-resolution-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance",
+      "semantic-domain-governance"
+    ],
+    "summary": "Read-only consumption contract for future runtime, publication, and copilot consumers.",
+    "updated_at": "2026-05-14T10:24:18Z"
+  },
+  "id": "identity-future-runtime-readiness",
+  "non_mutation_attestation": "All contracts are declarative; no consumer is invoked here.",
+  "publication_contract": [
+    "Publication MUST resolve every product reference to a canonical_id via identity-resolution.",
+    "Publication MUST cite the persistent-memory record id when emitting an aliased mention.",
+    "Publication MUST NOT render values associated with 'candidate' or 'probable' identities.",
+    "Publication MUST honour deprecation/supersession state and surface successor identity when present."
+  ],
+  "runtime_contract": [
+    "Runtime MAY read canonical-products/ and persistent-memory store (read-only).",
+    "Runtime MUST NOT mutate any identity artefact.",
+    "Runtime MUST surface confidence_state when displaying alias resolutions.",
+    "Runtime MUST defer to reviewer-validations for any contested alias."
+  ],
+  "specification_fusion_contract": [
+    "Specification fusion MUST operate on canonical_id, not on aliases.",
+    "Specification fusion MUST honour layer-34 propagation modes.",
+    "Specification fusion MUST refuse to fuse data across distinct canonical_ids without reviewer attestation."
+  ]
+}

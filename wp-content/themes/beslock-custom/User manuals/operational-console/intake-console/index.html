@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intake — Beslock Operational Console</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <meta name="governance-layer" content="37" />
+  <meta name="governance-schema" content="operational-console-governance/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+</head>
+<body class="oc-body" data-mock="../mock-data/pending-intake.json">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console</div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 37 — modeling-only">L37</div>
+  </header>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Evidence Intake</h1>
+      <p>Twelve-step governed intake workflow. Every step is a proposal; nothing is committed automatically.</p>
+    </section>
+    <div class="oc-banner">Reviewer authorization is required for promotion. The console only emits an <em>intake-draft</em> manifest.</div>
+    <section class="oc-section oc-card">
+      <h2>Workflow</h2>
+      <div class="oc-step">
+        <div class="oc-step__index">01</div>
+        <div>
+          <div class="oc-step__title">Upload document <span class="oc-tag">upload-document</span></div>
+          <div class="oc-step__hint">Operator selects a local file. The console reads filename + size only.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">02</div>
+        <div>
+          <div class="oc-step__title">Detect format <span class="oc-tag">detect-format</span></div>
+          <div class="oc-step__hint">MIME / extension inferred deterministically; no content parsing.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">03</div>
+        <div>
+          <div class="oc-step__title">Infer evidence class <span class="oc-tag">infer-evidence-class</span></div>
+          <div class="oc-step__hint">Default class proposed from layer-32 evidence taxonomy; operator can override.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">04</div>
+        <div>
+          <div class="oc-step__title">Infer product scope <span class="oc-tag">infer-product-scope</span></div>
+          <div class="oc-step__hint">Suggested e-orbit/e-prime/e-flex/e-touch/e-shield/e-nova/portfolio-level.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">05</div>
+        <div>
+          <div class="oc-step__title">Infer trust level <span class="oc-tag">infer-trust-level</span></div>
+          <div class="oc-step__hint">Default trust tier from layer-33 trust rules; never auto-promoted.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">06</div>
+        <div>
+          <div class="oc-step__title">Suggest routing destination <span class="oc-tag">suggest-routing</span></div>
+          <div class="oc-step__hint">Layer-33 routing-policy lookup; operator confirms.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">07</div>
+        <div>
+          <div class="oc-step__title">Suggest affected domains/products <span class="oc-tag">suggest-affected-domains</span></div>
+          <div class="oc-step__hint">Layer-34 domain map + layer-35 identity links.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">08</div>
+        <div>
+          <div class="oc-step__title">Operator re-evaluation <span class="oc-tag">operator-re-evaluation</span></div>
+          <div class="oc-step__hint">Operator may revise any inferred field with a reason field.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">09</div>
+        <div>
+          <div class="oc-step__title">Operator override <span class="oc-tag">operator-override</span></div>
+          <div class="oc-step__hint">Override is recorded as part of the draft manifest, not silently applied.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">10</div>
+        <div>
+          <div class="oc-step__title">Confirm ingestion <span class="oc-tag">confirm-ingestion</span></div>
+          <div class="oc-step__hint">Emits an intake-draft manifest; nothing ingested yet.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">11</div>
+        <div>
+          <div class="oc-step__title">Propose refresh plan <span class="oc-tag">propose-refresh-plan</span></div>
+          <div class="oc-step__hint">Layer-36 pipelines proposed for downstream invalidation.</div>
+        </div>
+      </div>
+      <div class="oc-step">
+        <div class="oc-step__index">12</div>
+        <div>
+          <div class="oc-step__title">Approve or skip refresh <span class="oc-tag">approve-or-skip-refresh</span></div>
+          <div class="oc-step__hint">Reviewer authorization required for promotion; the console only proposes.</div>
+        </div>
+      </div>
+    </section>
+    <section class="oc-grid oc-grid--2">
+      <article class="oc-card">
+        <h2>Supported formats</h2>
+        <ul class="oc-list">
+          <li><span>PDF</span><span class="oc-tag oc-tag--accent">official-document</span></li>
+          <li><span>XLSX</span><span class="oc-tag oc-tag--accent">structured-spreadsheet</span></li>
+          <li><span>CSV</span><span class="oc-tag oc-tag--accent">structured-spreadsheet</span></li>
+          <li><span>JSON</span><span class="oc-tag oc-tag--accent">structured-data</span></li>
+          <li><span>PNG</span><span class="oc-tag oc-tag--accent">raster-image</span></li>
+          <li><span>JPG</span><span class="oc-tag oc-tag--accent">raster-image</span></li>
+          <li><span>WebP</span><span class="oc-tag oc-tag--accent">raster-image</span></li>
+          <li><span>MP4</span><span class="oc-tag oc-tag--accent">video-evidence</span></li>
+          <li><span>MOV</span><span class="oc-tag oc-tag--accent">video-evidence</span></li>
+          <li><span>ZIP</span><span class="oc-tag oc-tag--accent">bundle-archive</span></li>
+          <li><span>DOCX</span><span class="oc-tag oc-tag--accent">narrative-document</span></li>
+        </ul>
+      </article>
+      <article class="oc-card">
+        <h2>Pending intake (mock)</h2>
+        <pre id="oc-mock-dump" class="oc-pre">loading…</pre>
+      </article>
+    </section>
+    <section class="oc-section oc-card">
+      <h2>Proposed intake-draft</h2>
+      <p>Click below to render the JSON payload that would be filed under <code>manifests/intake-drafts/</code>. Promotion still requires a reviewer.</p>
+      <button data-propose="intake-draft" data-target="oc-intake-draft" data-source="oc-mock-dump">Propose intake-draft</button>
+      <pre id="oc-intake-draft" class="oc-pre">// nothing proposed yet</pre>
+    </section>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required</span>
+    <span>No SaaS · No cloud · No autonomous agents · No auto-approval</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+</body>
+</html>

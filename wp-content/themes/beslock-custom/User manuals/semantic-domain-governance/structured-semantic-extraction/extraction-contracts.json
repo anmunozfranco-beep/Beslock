@@ -1,0 +1,110 @@
+{
+  "anti_ml_attestation": [
+    "No model is invoked at any extraction step.",
+    "No embeddings are computed.",
+    "No probabilistic mapping between cells and fields is performed.",
+    "Ambiguous cells halt extraction and require human reviewer resolution."
+  ],
+  "contract_count": 5,
+  "contracts": [
+    {
+      "contract": "spreadsheet",
+      "format": "xlsx",
+      "output": "structured rows {product, domain, subdomain, field, value, unit, source}",
+      "rules": [
+        "Header row MUST exist",
+        "Each cell maps to one declared spec field",
+        "Multi-product matrices use one column per product"
+      ]
+    },
+    {
+      "contract": "spreadsheet",
+      "format": "csv",
+      "output": "structured rows (same shape as xlsx)",
+      "rules": [
+        "Header row MUST exist",
+        "Delimiter declared explicitly"
+      ]
+    },
+    {
+      "contract": "json",
+      "format": "json",
+      "output": "domain-typed records",
+      "rules": [
+        "Schema MUST be cited",
+        "No silent type coercion"
+      ]
+    },
+    {
+      "contract": "yaml",
+      "format": "yaml",
+      "output": "domain-typed records",
+      "rules": [
+        "Schema MUST be cited",
+        "Anchors and aliases preserved as evidence"
+      ]
+    },
+    {
+      "contract": "structured-document",
+      "format": "markdown-table",
+      "output": "structured rows; ambiguous cells flagged",
+      "rules": [
+        "Table MUST have a header row",
+        "Cells parsed only when fully delimited"
+      ]
+    }
+  ],
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "structured-semantic-extraction",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "Per-format structured extraction contracts. Pure parsing rules; no ML, no inference.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "id": "structured-extraction-contracts"
+}

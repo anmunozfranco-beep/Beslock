@@ -1,0 +1,117 @@
+{
+  "anti_ml_attestation": [
+    "No image recognition model is invoked.",
+    "No embeddings are computed.",
+    "No face or biometric processing is performed.",
+    "All feature values originate from human annotation or trusted-PNG metadata."
+  ],
+  "envelope": {
+    "auto_promotes_unresolved_identities": false,
+    "bypasses_reviewer_governance": false,
+    "constitutional_layer_index": 35,
+    "introduces_autonomous_agents": false,
+    "introduces_face_or_image_recognition": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "visual-identity",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "identity-resolution-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance",
+      "semantic-domain-governance"
+    ],
+    "summary": "Declarative geometry features used for non-ML visual identity matching.",
+    "updated_at": "2026-05-14T10:24:18Z"
+  },
+  "feature_count": 5,
+  "features": [
+    {
+      "extraction_method": "human-annotated or trusted-PNG metadata",
+      "id": "fingerprint-placement",
+      "kind": "categorical",
+      "values": [
+        "top",
+        "centre",
+        "bottom",
+        "side",
+        "absent"
+      ]
+    },
+    {
+      "extraction_method": "human-annotated",
+      "id": "keypad-topology",
+      "kind": "categorical",
+      "values": [
+        "3x4-numeric",
+        "3x4-numeric-plus-fn",
+        "circular-touch",
+        "absent"
+      ]
+    },
+    {
+      "extraction_method": "human-annotated",
+      "id": "handle-geometry",
+      "kind": "categorical",
+      "values": [
+        "lever",
+        "knob",
+        "thumb-turn",
+        "smart-bolt",
+        "padlock-shackle"
+      ]
+    },
+    {
+      "extraction_method": "from declared specifications",
+      "id": "dimensional-overlap",
+      "kind": "ranged",
+      "values_format": "{length_mm, width_mm, depth_mm} with tolerance"
+    },
+    {
+      "extraction_method": "human-annotated",
+      "id": "indicator-layout",
+      "kind": "categorical",
+      "values": [
+        "led-ring",
+        "single-led",
+        "rgb-strip",
+        "absent"
+      ]
+    }
+  ],
+  "id": "geometry-feature-schema"
+}

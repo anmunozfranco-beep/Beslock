@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — Beslock Operational Console</title>
+  <link rel="stylesheet" href="assets/console.css" />
+  <meta name="governance-layer" content="37" />
+  <meta name="governance-schema" content="operational-console-governance/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+</head>
+<body class="oc-body">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console</div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="index.html">Dashboard</a>
+      <a class="oc-nav__item" href="intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="reports-console/index.html">Reports</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 37 — modeling-only">L37</div>
+  </header>
+  <main class="oc-main">
+    <section class="oc-section">
+      <h1>Human Governed Knowledge Operations Console</h1>
+      <p>Repo-native, local-first, reviewer-authoritative. The console proposes; reviewers decide.</p>
+    </section>
+    <div class="oc-banner">This console is <strong>modeling-only</strong>. Every action emits a <em>draft manifest</em>; no governance state, source-of-truth, runtime or publication is ever mutated from the UI.</div>
+    <section class="oc-grid oc-grid--3">
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Intake</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Upload, classify, route and propose refresh for new evidence.</p>
+        <p><a class="oc-link" href="intake-console/index.html">Open Intake →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Routing</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>“Where should this file go?” — consultation only, never auto-routed.</p>
+        <p><a class="oc-link" href="routing-console/index.html">Open Routing →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Refresh</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Inspect detected changes and propose dry-run / approve / partial / reject.</p>
+        <p><a class="oc-link" href="refresh-console/index.html">Open Refresh →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Reconciliation</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Review OEM ↔ commercial mappings, aliases and visual identity matches.</p>
+        <p><a class="oc-link" href="reconciliation-console/index.html">Open Reconciliation →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Publication</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Visibility into generated HTML, stale outputs and publication lineage.</p>
+        <p><a class="oc-link" href="publication-console/index.html">Open Publication →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Governance</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Trust levels, propagation warnings, lineage integrity, governance conflicts.</p>
+        <p><a class="oc-link" href="governance-console/index.html">Open Governance →</a></p>
+      </article>
+      <article class="oc-card">
+        <div class="oc-card__title"><h2>Reports</h2><span class="oc-tag oc-tag--accent">L37</span></div>
+        <p>Browse all governance reports across thirty-seven layers.</p>
+        <p><a class="oc-link" href="reports-console/index.html">Open Reports →</a></p>
+      </article>
+    </section>
+    <section class="oc-section">
+      <h2>Governance posture</h2>
+      <ul class="oc-list">
+        <li>Layer <span class="oc-tag oc-tag--accent">37</span></li>
+        <li>Subordinate chain length <span class="oc-tag">36</span></li>
+        <li>Auto-approval <span class="oc-tag oc-tag--ok">disabled</span></li>
+        <li>Source-truth mutation <span class="oc-tag oc-tag--ok">forbidden</span></li>
+        <li>Network calls <span class="oc-tag oc-tag--ok">none</span></li>
+        <li>Reviewer authorization <span class="oc-tag oc-tag--warn">required for every promotion</span></li>
+      </ul>
+    </section>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required</span>
+    <span>No SaaS · No cloud · No autonomous agents · No auto-approval</span>
+  </footer>
+  <script src="assets/console.js" defer></script>
+</body>
+</html>

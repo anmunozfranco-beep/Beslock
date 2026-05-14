@@ -1,0 +1,139 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 34,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "specifications-governance",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "semantic-domain-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance"
+    ],
+    "summary": "Governance skeleton for the specifications domain — does NOT touch knowledge-core.",
+    "updated_at": "2026-05-14T10:08:20Z"
+  },
+  "field_count": 38,
+  "id": "specifications-domain-skeleton",
+  "intake_binding": {
+    "evidence_class": "specification-evidence",
+    "ingestion_contracts": [
+      "spreadsheet",
+      "pdf",
+      "json",
+      "yaml"
+    ],
+    "route": "product-level/<product>/specifications/",
+    "trust_minimum": "verified-structured-export"
+  },
+  "non_mutation_attestation": [
+    "This skeleton declares structure only.",
+    "It does NOT create files inside any per-product knowledge-core/specifications/ directory.",
+    "It does NOT promote any spec value to publication."
+  ],
+  "products_in_scope": [
+    "e-orbit",
+    "e-prime",
+    "e-flex",
+    "e-touch",
+    "e-shield",
+    "e-nova"
+  ],
+  "subdomain_count": 9,
+  "subdomains": {
+    "authentication": [
+      "fingerprint",
+      "pin",
+      "card",
+      "app",
+      "physical-key"
+    ],
+    "certifications": [
+      "safety",
+      "emc",
+      "environmental",
+      "regional-marks"
+    ],
+    "connectivity": [
+      "bluetooth",
+      "wifi",
+      "zigbee",
+      "matter",
+      "rs485"
+    ],
+    "dimensional": [
+      "length",
+      "width",
+      "depth",
+      "door-thickness-range"
+    ],
+    "electrical": [
+      "voltage",
+      "current",
+      "power",
+      "battery"
+    ],
+    "environmental": [
+      "operating-temperature",
+      "humidity",
+      "ip-rating",
+      "uv-exposure"
+    ],
+    "materials": [
+      "body",
+      "fasteners",
+      "finish",
+      "seal"
+    ],
+    "mechanical": [
+      "weight",
+      "torque",
+      "actuation-force",
+      "wear-class"
+    ],
+    "operational-limits": [
+      "thermal",
+      "cycle-life",
+      "duty",
+      "current-limit"
+    ]
+  }
+}
