@@ -1,0 +1,135 @@
+{
+  "schema": "publication-quality-governance/1.0",
+  "layer": "readability",
+  "summary": "Per-section readability standards for governed manuals.",
+  "generated_at": "2026-05-14T04:57:59+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "audience_filter_applied": false,
+  "out_of_scope": [
+    "visual generation",
+    "prompt generation",
+    "frontend styling",
+    "production deployment",
+    "autonomous writing",
+    "new cognition architecture"
+  ],
+  "dimensions": {
+    "sentence_density": {
+      "definition": "average words per sentence within a procedural step",
+      "target_band_words": [
+        6,
+        18
+      ],
+      "hard_cap_words": 24,
+      "rationale": "longer sentences inflate cognitive load and hide branching conditions"
+    },
+    "instruction_granularity": {
+      "definition": "atomicity of each instruction step",
+      "rule": "one verb, one observable outcome, one decision boundary per step",
+      "anti_pattern": "compound steps joined by 'and then' or commas hiding multiple actions"
+    },
+    "procedural_clarity": {
+      "definition": "operator can predict the next state before performing the step",
+      "required_elements_per_step": [
+        "action_verb",
+        "target_object",
+        "expected_observation"
+      ]
+    },
+    "operator_comprehension": {
+      "definition": "operator with stated audience profile can execute without external clarification",
+      "evidence_artifact": "audience-readability profile applied at render time"
+    },
+    "navigation_simplicity": {
+      "definition": "operator can locate any procedure in <= 2 hops from product index",
+      "structural_rule": "index -> section page -> entity"
+    }
+  },
+  "per_section_standards": {
+    "onboarding": {
+      "max_steps_per_procedure": 12,
+      "preconditions_required": true,
+      "outcomes_required": true,
+      "warning_density_max_per_step": 1,
+      "tone": "instructional, second-person, present tense"
+    },
+    "installation": {
+      "max_steps_per_procedure": 15,
+      "preconditions_required": true,
+      "tooling_disclosure_required": true,
+      "irreversibility_warning_required": true,
+      "tone": "imperative, second-person, present tense, no idioms"
+    },
+    "troubleshooting": {
+      "structure": "symptom -> diagnostic_questions -> next_actions -> escalation",
+      "max_diagnostic_questions": 5,
+      "next_action_must_be_actionable": true,
+      "tone": "diagnostic, neutral, no blame"
+    },
+    "warnings": {
+      "must_state": [
+        "consequence",
+        "trigger_condition",
+        "operator_action"
+      ],
+      "tone": "direct, factual, no euphemism",
+      "irreversibility_must_be_explicit": true
+    },
+    "operational_guidance": {
+      "max_steps_per_procedure": 10,
+      "tone": "instructional, second-person, present tense"
+    },
+    "quick_start": {
+      "max_total_steps": 7,
+      "must_link_to_full_procedure": true,
+      "must_disclose_skipped_safety_content": true,
+      "tone": "concise, second-person, present tense"
+    }
+  },
+  "scoring_signals": [
+    "step_count_vs_section_max",
+    "avg_words_per_step_vs_band",
+    "missing_preconditions_when_required",
+    "missing_outcomes_when_required",
+    "warning_density_per_step",
+    "compound_verb_count_per_step",
+    "ambiguous_pronoun_count_per_step"
+  ],
+  "scoring_policy": "advisory at render time; not a publishing gate (gate lives in publication-and-delivery-governance)"
+}

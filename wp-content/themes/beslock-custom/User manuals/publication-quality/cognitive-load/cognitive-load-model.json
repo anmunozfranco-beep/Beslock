@@ -1,0 +1,102 @@
+{
+  "schema": "publication-quality-governance/1.0",
+  "layer": "cognitive-load",
+  "summary": "Models progressive disclosure, chunk sizing, repetition elimination, ambiguity minimisation.",
+  "generated_at": "2026-05-14T04:57:59+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "audience_filter_applied": false,
+  "out_of_scope": [
+    "visual generation",
+    "prompt generation",
+    "frontend styling",
+    "production deployment",
+    "autonomous writing",
+    "new cognition architecture"
+  ],
+  "progressive_disclosure": {
+    "rule": "show only what is needed at the current decision boundary; defer details to expandable sub-sections or linked pages",
+    "rendering_signals": [
+      "short_summary",
+      "expand_link",
+      "deferred_block"
+    ],
+    "anti_pattern": "front-loading every safety, edge case and exception before the first step"
+  },
+  "chunk_sizing": {
+    "step_chunk_max_steps": 7,
+    "rationale": "Miller-bound chunking keeps a single sequence within working memory",
+    "overflow_policy": "split into named sub-procedures; do not silently grow the list"
+  },
+  "repetition_elimination": {
+    "rule": "an identical instruction MUST appear once per procedure; repeated occurrences indicate a missing shared block",
+    "exception": "safety-critical instructions may repeat at each irreversibility boundary"
+  },
+  "ambiguity_minimisation": {
+    "forbidden_constructs": [
+      "ambiguous pronouns ('it', 'this') without clear antecedent in same sentence",
+      "vague quantifiers ('a few', 'some', 'usually') in steps",
+      "conditional steps without explicit branch ('if needed')",
+      "passive voice in instructions ('the lock should be paired')"
+    ],
+    "required_constructs": [
+      "explicit subject + verb + object",
+      "explicit branch outcomes ('if X, do A; otherwise do B')",
+      "explicit observable confirmation"
+    ]
+  },
+  "operational_clarity": {
+    "rule": "every step must answer: what to do, on what, expected result, what counts as failure"
+  },
+  "step_isolation": {
+    "rule": "a step's success or failure must be observable BEFORE the next step begins",
+    "anti_pattern": "compound steps that only become observable after the entire block"
+  },
+  "interruption_reduction": {
+    "rule": "do not interleave unrelated content (marketing, version notes, glossary) inside a procedural block",
+    "exception": "warnings tied to the next step (per sequencing model) are not interruptions"
+  },
+  "cognitive_signals_for_renderer": [
+    "chunk_overflow_step_count",
+    "repeated_instruction_count",
+    "ambiguous_pronoun_count",
+    "passive_voice_count",
+    "interleaved_unrelated_block_count",
+    "missing_branch_resolution_count"
+  ]
+}

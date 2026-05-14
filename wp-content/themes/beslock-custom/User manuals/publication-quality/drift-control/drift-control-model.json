@@ -1,0 +1,95 @@
+{
+  "schema": "publication-quality-governance/1.0",
+  "layer": "drift-control",
+  "summary": "Detects redundancy, duplication, divergence, conflict, and publication drift across renderable knowledge.",
+  "generated_at": "2026-05-14T04:57:59+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "audience_filter_applied": false,
+  "out_of_scope": [
+    "visual generation",
+    "prompt generation",
+    "frontend styling",
+    "production deployment",
+    "autonomous writing",
+    "new cognition architecture"
+  ],
+  "detectors": {
+    "repeated_procedural_blocks": {
+      "signal": "two procedures share >= 80% of normalized step text",
+      "action": "promote shared block to a named sub-procedure; replace with reference"
+    },
+    "duplicated_warnings": {
+      "signal": "two warnings share >= 90% of normalized text after lowercasing and whitespace normalisation",
+      "action": "merge in knowledge-core (NOT in renderer); record provenance lineage of merged sources"
+    },
+    "semantic_redundancy": {
+      "signal": "two entities have distinct ids but produce indistinguishable rendered output for same audience profile",
+      "action": "flag as redundancy candidate; reviewer must resolve"
+    },
+    "procedural_divergence": {
+      "signal": "two procedures targeting the same `summary` produce different step sequences",
+      "action": "raise divergence defect; do not auto-pick a winner"
+    },
+    "conflicting_instructions": {
+      "signal": "step A asserts X; step B asserts ¬X; both reachable in same flow",
+      "action": "P0 defect; block publication for the affected flow until resolved in knowledge-core"
+    },
+    "publication_drift": {
+      "signal": "rendered HTML byte-checksum differs from manifest's recorded source-ref checksums beyond renderer-version delta",
+      "action": "re-render required; rendered HTML is stale"
+    }
+  },
+  "drift_classes": [
+    "stale-render",
+    "stale-source",
+    "stale-renderer-version",
+    "audience-profile-drift",
+    "subordinate-chain-drift"
+  ],
+  "non_deletion_rule": "drift control NEVER deletes from knowledge-core; it only flags for reviewer action",
+  "no_renderer_authored_merging": "renderer must not silently merge or de-duplicate; only knowledge-core edits resolve drift",
+  "drift_signals_for_renderer": [
+    "repeated_block_count",
+    "duplicated_warning_count",
+    "semantic_redundancy_count",
+    "procedural_divergence_count",
+    "conflicting_instruction_count",
+    "publication_drift_flag"
+  ]
+}

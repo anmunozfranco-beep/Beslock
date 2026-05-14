@@ -1,0 +1,160 @@
+{
+  "schema": "publication-quality-governance/1.0",
+  "layer": "audience-readability",
+  "summary": "Per-audience readability rendering profiles. Selection is declarative; renderer applies one profile at a time.",
+  "generated_at": "2026-05-14T04:57:59+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "audience_filter_applied": false,
+  "out_of_scope": [
+    "visual generation",
+    "prompt generation",
+    "frontend styling",
+    "production deployment",
+    "autonomous writing",
+    "new cognition architecture"
+  ],
+  "profiles": {
+    "end-user": {
+      "tone": "friendly, second-person, no jargon",
+      "max_steps_per_procedure": 10,
+      "include": [
+        "preconditions",
+        "outcomes",
+        "P0/P1 warnings",
+        "next-actions on failure"
+      ],
+      "exclude": [
+        "internal IDs",
+        "OEM source citations",
+        "candidate-status disclosures",
+        "menu-path code blocks unless essential"
+      ],
+      "default_section_visibility": [
+        "onboarding",
+        "operational-guidance",
+        "warnings (P0/P1 only)",
+        "quick-start"
+      ]
+    },
+    "installer": {
+      "tone": "imperative, technical, terse",
+      "max_steps_per_procedure": 15,
+      "include": [
+        "tooling list",
+        "preconditions",
+        "irreversibility warnings",
+        "post-install verification"
+      ],
+      "exclude": [
+        "marketing copy",
+        "end-user friendly framings"
+      ],
+      "default_section_visibility": [
+        "installation",
+        "warnings (irreversible)",
+        "troubleshooting (install failures)"
+      ]
+    },
+    "operator": {
+      "tone": "operational, neutral, present tense",
+      "max_steps_per_procedure": 12,
+      "include": [
+        "preconditions",
+        "outcomes",
+        "all warnings",
+        "escalation paths"
+      ],
+      "exclude": [],
+      "default_section_visibility": [
+        "onboarding",
+        "operational-guidance",
+        "warnings",
+        "troubleshooting"
+      ]
+    },
+    "reviewer": {
+      "tone": "auditable, exhaustive, neutral",
+      "max_steps_per_procedure": "unbounded",
+      "include": [
+        "everything",
+        "internal IDs",
+        "confidence pills",
+        "validation_status pills",
+        "source_refs",
+        "extraction_lineage",
+        "candidate flags"
+      ],
+      "exclude": [],
+      "default_section_visibility": [
+        "all sections including candidates and pending-review"
+      ],
+      "default_profile_for_phase_36_renderer": true
+    },
+    "support-agent": {
+      "tone": "diagnostic, neutral, fast-scan",
+      "max_steps_per_procedure": 10,
+      "include": [
+        "symptoms",
+        "diagnostic_questions",
+        "next_actions",
+        "escalation cues",
+        "warnings (P0/P1)"
+      ],
+      "exclude": [
+        "marketing copy",
+        "long-form onboarding narrative"
+      ],
+      "default_section_visibility": [
+        "troubleshooting",
+        "warnings",
+        "operational-guidance"
+      ]
+    }
+  },
+  "selection_rule": "exactly one profile applied per render pass; profile name recorded in publication-metadata",
+  "non_visibility_is_not_deletion": "audience filtering hides; knowledge-core never loses content",
+  "current_renderer_profile": "reviewer (per phase 36 default)",
+  "audience_signals_for_renderer": [
+    "profile_id",
+    "filtered_entity_count",
+    "filtered_section_count",
+    "untranslatable_jargon_count",
+    "tone_violation_count"
+  ]
+}

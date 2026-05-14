@@ -1,0 +1,120 @@
+{
+  "schema": "publication-quality-governance/1.0",
+  "layer": "flow-coherence",
+  "summary": "Defines coherent end-to-end flows across rendered manual pages.",
+  "generated_at": "2026-05-14T04:57:59+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "audience_filter_applied": false,
+  "out_of_scope": [
+    "visual generation",
+    "prompt generation",
+    "frontend styling",
+    "production deployment",
+    "autonomous writing",
+    "new cognition architecture"
+  ],
+  "flows": {
+    "onboarding": {
+      "stages": [
+        "unbox",
+        "physical-prep",
+        "app-install",
+        "pairing",
+        "primary-credential-enrolment",
+        "verification"
+      ],
+      "exit_criterion": "operator can perform a successful unlock with the enrolled credential",
+      "must_link_to": [
+        "installation",
+        "warnings (low-battery, irreversible enrolment)",
+        "troubleshooting (pairing, enrolment)"
+      ]
+    },
+    "installation": {
+      "stages": [
+        "site-survey",
+        "tooling-prep",
+        "mounting",
+        "wiring-or-mechanical-engagement",
+        "power-on",
+        "post-install-verification"
+      ],
+      "exit_criterion": "lock powers on and responds to first credential challenge",
+      "must_link_to": [
+        "onboarding",
+        "warnings (irreversible install)",
+        "troubleshooting (install failures)"
+      ]
+    },
+    "troubleshooting": {
+      "stages": [
+        "symptom-capture",
+        "diagnostic-questions",
+        "candidate-causes",
+        "next-actions",
+        "escalation-or-resolution"
+      ],
+      "exit_criterion": "operator either resolves the issue or escalates with a captured diagnostic packet",
+      "must_link_to": [
+        "operational-guidance",
+        "warnings (recurrence)",
+        "recovery (if irreversible)"
+      ]
+    }
+  },
+  "continuity_awareness": {
+    "rule": "every flow must declare its entry preconditions and exit guarantees",
+    "renderer_signal": "missing_entry_or_exit_declaration"
+  },
+  "escalation_aware_navigation": {
+    "rule": "any escalation cue must link to the corresponding human-operations channel",
+    "fallback_rule": "if no channel reference exists, surface as readability gap"
+  },
+  "operational_recovery_continuity": {
+    "rule": "after any failure path, the operator must be returned to a known-good resumption point or a final 'do not proceed' state",
+    "anti_pattern": "open-ended failure with no resumption guidance"
+  },
+  "coherence_signals_for_renderer": [
+    "missing_flow_entry_declaration",
+    "missing_flow_exit_declaration",
+    "broken_inter_flow_link",
+    "unbacked_escalation_cue",
+    "open_ended_failure_path"
+  ]
+}
