@@ -1,0 +1,101 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "intake-safety-governance",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "Block-on-detection intake safety rules.",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "global_invariants": [
+    "Detection emits an audit event; block_action MUST be respected.",
+    "Safety rules are subordinate to layer-32 conflict policy.",
+    "Block actions never silently rewrite an artefact; they require human action."
+  ],
+  "id": "intake-safety-rules",
+  "risk_count": 8,
+  "risks": [
+    {
+      "block_action": "BLOCK placement; require supersedes-relation or rejection.",
+      "detection": "sha256 collision OR same logical artefact across paths",
+      "id": "evidence-duplication"
+    },
+    {
+      "block_action": "BLOCK placement; route via intake-pipeline.",
+      "detection": "artefact placed outside any defined product-level/portfolio-level/shared-ecosystem folder",
+      "id": "routing-chaos"
+    },
+    {
+      "block_action": "BLOCK placement; split or re-route via intake-consultation.",
+      "detection": "artefact placed under wrong product OR mixing multiple products' content under one product folder",
+      "id": "cross-product-contamination"
+    },
+    {
+      "block_action": "BLOCK placement; default to lowest plausible and escalate.",
+      "detection": "trust tier not assignable from provenance",
+      "id": "trust-ambiguity"
+    },
+    {
+      "block_action": "BLOCK placement; relocate under portfolio-level/.",
+      "detection": "portfolio-level artefact placed under a single product folder",
+      "id": "misplaced-portfolio-evidence"
+    },
+    {
+      "block_action": "BLOCK promotion; require lineage repair before reviewer-validation.",
+      "detection": "ingestion-lineage event missing OR upstream artefact unreachable",
+      "id": "broken-lineage"
+    },
+    {
+      "block_action": "BLOCK placement; split into per-purpose artefacts.",
+      "detection": "single artefact carries content belonging to two or more scopes/classes",
+      "id": "mixed-purpose-not-split"
+    },
+    {
+      "block_action": "BLOCK promotion; mark lifecycle state correctly.",
+      "detection": "OCR-extracted content ingested without 'ocr-derived' lifecycle state",
+      "id": "ocr-derived-not-flagged"
+    }
+  ]
+}

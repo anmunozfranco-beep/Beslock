@@ -1,0 +1,214 @@
+{
+  "entries": [
+    {
+      "default_class": "procedural-evidence",
+      "extensions": [
+        ".pdf"
+      ],
+      "format": "pdf",
+      "ingestion_contract": "pdf",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "procedural-evidence",
+      "extensions": [
+        ".docx"
+      ],
+      "format": "docx",
+      "ingestion_contract": "docx",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "specification-evidence",
+      "extensions": [
+        ".xls",
+        ".xlsx"
+      ],
+      "format": "xlsx",
+      "ingestion_contract": "spreadsheet",
+      "scope_default": "portfolio-level"
+    },
+    {
+      "default_class": "specification-evidence",
+      "extensions": [
+        ".csv"
+      ],
+      "format": "csv",
+      "ingestion_contract": "spreadsheet",
+      "scope_default": "portfolio-level"
+    },
+    {
+      "default_class": "visual-evidence",
+      "extensions": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".webp"
+      ],
+      "format": "raster-image",
+      "ingestion_contract": "raster-image",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "operational-evidence",
+      "extensions": [
+        ".mp4",
+        ".mov",
+        ".webm"
+      ],
+      "format": "video",
+      "ingestion_contract": "video",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "specification-evidence",
+      "extensions": [
+        ".json"
+      ],
+      "format": "json",
+      "ingestion_contract": "json",
+      "scope_default": "varies"
+    },
+    {
+      "default_class": "mechanical-evidence",
+      "extensions": [
+        ".svg",
+        ".dxf",
+        ".dwg",
+        ".step",
+        ".stp"
+      ],
+      "format": "vector-or-cad",
+      "ingestion_contract": "vector-or-cad",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "visual-evidence",
+      "extensions": [
+        ".png",
+        ".jpg"
+      ],
+      "format": "screenshot",
+      "ingestion_contract": "raster-image",
+      "scope_default": "shared-ecosystem (when from shared app)"
+    },
+    {
+      "default_class": "field-evidence",
+      "extensions": [
+        ".zip",
+        ".tar",
+        ".tgz"
+      ],
+      "format": "support-archive",
+      "ingestion_contract": "n/a — MUST be unpacked then re-classified per file",
+      "scope_default": "product-level OR portfolio (split required)"
+    },
+    {
+      "default_class": "specification-evidence",
+      "extensions": [
+        ".pdf",
+        ".xlsx"
+      ],
+      "format": "catalog",
+      "ingestion_contract": "pdf-or-spreadsheet",
+      "scope_default": "portfolio-level"
+    },
+    {
+      "default_class": "specification-evidence",
+      "extensions": [
+        ".xlsx",
+        ".csv"
+      ],
+      "format": "comparison-matrix",
+      "ingestion_contract": "spreadsheet",
+      "scope_default": "portfolio-level"
+    },
+    {
+      "default_class": "firmware-evidence",
+      "extensions": [
+        ".md",
+        ".txt",
+        ".pdf"
+      ],
+      "format": "firmware-doc",
+      "ingestion_contract": "md-or-txt-or-pdf",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "procedural-evidence",
+      "extensions": [
+        ".txt"
+      ],
+      "format": "txt",
+      "ingestion_contract": "txt",
+      "scope_default": "product-level"
+    },
+    {
+      "default_class": "procedural-evidence",
+      "extensions": [
+        ".md"
+      ],
+      "format": "md",
+      "ingestion_contract": "md",
+      "scope_default": "product-level"
+    }
+  ],
+  "entry_count": 15,
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "evidence-taxonomy",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "Operator-facing taxonomy mapping format → default class + scope + contract.",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "id": "evidence-taxonomy",
+  "rules": [
+    "Defaults are starting points; intake-consultation may override.",
+    "Support-archives must be unpacked and re-classified per inner file.",
+    "JSON scope is intentionally 'varies' — depends on payload semantics.",
+    "Screenshots default to shared-ecosystem when sourced from the shared app."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "consultation_questions": [
+    "What is the operator's INTENT for this file?",
+    "Did this file originate from an OEM channel, installer, support, or unknown source?",
+    "Does this file describe one product, multiple products, or the shared app?",
+    "Does this file contain mixed-purpose content that should be split?",
+    "Does this file supersede an existing artefact? If so, which?",
+    "Is OCR required? If yes, the artefact must enter as 'ocr-derived'.",
+    "Which reviewer classes need to sign off before promotion?",
+    "Which downstream publications, warnings, or workflows are likely affected?"
+  ],
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "intake-consultation",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "Reviewer-facing consultation protocol.",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "id": "intake-consultation-protocol",
+  "output_contract": {
+    "must_block_when": [
+      "scope_unresolved",
+      "evidence_class_unresolved",
+      "trust_tier_unresolved",
+      "duplicate_unresolved",
+      "mixed_purpose_not_split"
+    ],
+    "must_produce": [
+      "evidence_class",
+      "scope",
+      "product_or_null",
+      "destination_path",
+      "ingestion_contract",
+      "trust_tier",
+      "initial_lifecycle_state",
+      "reviewer_classes",
+      "downstream_impact_notes",
+      "lineage_event:ingestion-lineage"
+    ]
+  },
+  "trigger_conditions": [
+    "scope is ambiguous (product vs portfolio vs shared)",
+    "evidence class is ambiguous (mixed-purpose artefact)",
+    "trust tier cannot be assigned from provenance alone",
+    "potential duplicate detected by intake-safety",
+    "potential cross-product contamination detected",
+    "potential lineage break detected (no upstream artefact)"
+  ]
+}

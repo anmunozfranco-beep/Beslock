@@ -1,0 +1,114 @@
+{
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "intake-routing",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "Canonical 10-step intake decision pipeline.",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "id": "intake-pipeline",
+  "step_count": 10,
+  "steps": [
+    {
+      "decides": "which ingestion contract applies (layer-32 ingestion-contracts)",
+      "id": "1-identify-format",
+      "question": "What is the file's format and extension?"
+    },
+    {
+      "decides": "primary class from layer-32 evidence-classes.json",
+      "id": "2-classify-evidence-class",
+      "question": "Which evidence class does the artefact fall into?"
+    },
+    {
+      "decides": "destination subtree under product-level/ vs portfolio-level/",
+      "id": "3-determine-scope",
+      "question": "Is this product-level, portfolio-level, or shared-ecosystem?"
+    },
+    {
+      "decides": "concrete <product>/ subdirectory",
+      "id": "4-identify-product-binding",
+      "question": "If product-level, which product does it bind to?"
+    },
+    {
+      "decides": "publishability and downstream propagation",
+      "id": "5-assign-trust-tier",
+      "question": "What is the trust tier per layer-32 evidence-trust-model?"
+    },
+    {
+      "decides": "ingest-vs-supersede-vs-reject (handled by intake-safety)",
+      "id": "6-detect-duplicates",
+      "question": "Is this artefact already represented by another (sha256 or supersedes target)?"
+    },
+    {
+      "decides": "raw-ingested (default); ocr-derived if extraction is OCR",
+      "id": "7-assign-lifecycle-state",
+      "question": "What is the initial lifecycle state?"
+    },
+    {
+      "decides": "ingestion-lineage entry minimum; reviewer-lineage planned",
+      "id": "8-record-lineage",
+      "question": "Which lineage events must be emitted?"
+    },
+    {
+      "decides": "downstream-impact note attached to lineage",
+      "id": "9-anticipate-downstream-impact",
+      "question": "Which publications, warnings, or workflows may this artefact affect?"
+    },
+    {
+      "decides": "operational-/visual-/installation-/support-/engineering-reviewer",
+      "id": "10-assign-reviewer",
+      "question": "Which reviewer class must validate before promotion?"
+    }
+  ],
+  "subordinate_references": {
+    "conflict_policy": "source-truth-governance/evidence-conflict-governance/conflict-kinds.json",
+    "evidence_classes": "source-truth-governance/evidence-classification/evidence-classes.json",
+    "ingestion_contracts": "source-truth-governance/ingestion-contracts/_index.json",
+    "lifecycle": "source-truth-governance/ingestion-lifecycle/lifecycle-model.json",
+    "lineage_schema": "source-truth-governance/multimodal-lineage/lineage-schema.json",
+    "trust_model": "source-truth-governance/evidence-trust-model.json"
+  }
+}

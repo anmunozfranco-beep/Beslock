@@ -1,0 +1,111 @@
+{
+  "domain_count": 11,
+  "domains": [
+    {
+      "domain": "knowledge-core",
+      "operator_question": "Where does the meaning live?",
+      "purpose": "canonical, publishable, per-product semantic entries"
+    },
+    {
+      "domain": "structured-knowledge",
+      "operator_question": "Where do structured exports live?",
+      "purpose": "reviewer-validated structured derivatives"
+    },
+    {
+      "domain": "source-of-truth",
+      "operator_question": "Where does the original file live?",
+      "purpose": "raw OEM and field artefacts (never mutated)"
+    },
+    {
+      "domain": "publication-system",
+      "operator_question": "Where does the produced manual live?",
+      "purpose": "rendered publications + manifests + previews"
+    },
+    {
+      "domain": "publication-quality",
+      "operator_question": "Where do we govern HOW it reads?",
+      "purpose": "readability, sequencing, cognitive-load doctrine"
+    },
+    {
+      "domain": "linguistic-governance",
+      "operator_question": "Where do we govern WORDS at render time?",
+      "purpose": "Colombian operational Spanish renderers + doctrine"
+    },
+    {
+      "domain": "source-truth-governance",
+      "operator_question": "Where do we govern incoming evidence?",
+      "purpose": "evidence classes, contracts, trust, lineage, lifecycle (layer 32)"
+    },
+    {
+      "domain": "source-of-truth-governance",
+      "operator_question": "Where do we route a new file?",
+      "purpose": "intake routing, navigation, intake-safety (layer 33)"
+    },
+    {
+      "domain": "_repository-governance/reports",
+      "operator_question": "Where do we read what a layer did?",
+      "purpose": "every layer's 10-section reports"
+    },
+    {
+      "domain": "KNOWLEDGE_BUILDING",
+      "operator_question": "Where do we read WHY a layer exists?",
+      "purpose": "constitutional doctrine roots per layer"
+    },
+    {
+      "domain": "runtime-implementation",
+      "operator_question": "Where does the runtime live?",
+      "purpose": "Python runtime; never modified by governance phases"
+    }
+  ],
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "operational-navigation",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "Top-level ecosystem navigation map.",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "id": "operational-navigation-map"
+}

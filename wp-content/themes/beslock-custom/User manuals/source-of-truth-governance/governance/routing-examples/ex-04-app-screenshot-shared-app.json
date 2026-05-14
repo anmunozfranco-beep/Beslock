@@ -1,0 +1,72 @@
+{
+  "decisions": {
+    "destination": "source-of-truth/portfolio-level/shared-app-ecosystems/screenshots/app-pairing-step-3.png",
+    "downstream_impact": [
+      "operation/pairing across all products"
+    ],
+    "evidence_class": "visual-evidence",
+    "ingestion_contract": "raster-image",
+    "lifecycle_state": "raw-ingested",
+    "product": null,
+    "reviewer": "visual-reviewer",
+    "scope": "shared-ecosystem",
+    "trust_tier": "verified-structured-export"
+  },
+  "envelope": {
+    "builds_frontend": false,
+    "constitutional_layer_index": 33,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_autonomous_agents": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "routing-examples",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "intake-and-navigation-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance"
+    ],
+    "summary": "ex-04-app-screenshot-shared-app",
+    "updated_at": "2026-05-14T05:44:49Z"
+  },
+  "id": "ex-04-app-screenshot-shared-app",
+  "input": {
+    "filename": "app-pairing-step-3.png",
+    "format": "png",
+    "operator_intent": "screenshot of shared app pairing step 3",
+    "received_from": "app team"
+  }
+}
