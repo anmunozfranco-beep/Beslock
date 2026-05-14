@@ -192,3 +192,77 @@
 /* phase 59 — production hardening, corpus validation & final reviewer readiness closure additions */
 /* Phase 59 intentionally introduces ZERO presentation rules. */
 /* Hardening + convergence; consumers own all presentation. */
+
+/* ---- Reviewer Workspace (UX compression layer over Phases 52/54/55/56/57/58/59) ---- */
+.oc-body--rwx { background: #0e1726; color: #e4ecf7; }
+.oc-rwx {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  align-items: start;
+}
+.oc-rwx__left, .oc-rwx__center, .oc-rwx__right { display: flex; flex-direction: column; gap: 12px; }
+.oc-rwx__panel {
+  background: #111c2e;
+  border: 1px solid #1f2c45;
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.oc-rwx__panel h3 {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #f5d27a;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.oc-rwx__center-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 4px 4px 0 4px;
+}
+.oc-rwx__center-header h2 { margin: 0; font-size: 16px; color: #f5d27a; }
+.oc-rwx__status {
+  font-size: 12px; padding: 2px 10px; border-radius: 999px;
+  background: #1f2c45; color: #cfd6e2;
+}
+.oc-rwx__status[data-status="analyzed"] { background: #2b6cb0; color: #fff; }
+.oc-rwx__status[data-status="accepted"] { background: #2f6f4f; color: #8be9a3; }
+.oc-rwx__status[data-status="empty"]    { background: #2a2f3d; color: #8a93a4; }
+.oc-rwx__meta { display: grid; grid-template-columns: 80px 1fr; gap: 4px 8px; margin: 8px 0 0 0; font-size: 12px; }
+.oc-rwx__meta dt { color: #8a93a4; }
+.oc-rwx__meta dd { margin: 0; color: #e4ecf7; word-break: break-all; }
+.oc-rwx__lineage { list-style: decimal inside; padding: 0; margin: 0; font-size: 12px; line-height: 1.6; }
+.oc-rwx__lineage li { color: #cfd6e2; }
+.oc-rwx__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+  margin: 8px 0;
+}
+.oc-rwx__grid label {
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 12px; color: #cfd6e2;
+}
+.oc-rwx__grid input[type="number"] {
+  background: #0e1726; color: #e4ecf7; border: 1px solid #2a3953; border-radius: 4px;
+  padding: 6px 8px; font-size: 13px;
+}
+.oc-rwx__field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: #cfd6e2; }
+.oc-rwx__field textarea {
+  background: #0e1726; color: #e4ecf7; border: 1px solid #2a3953; border-radius: 4px;
+  padding: 6px 8px; font-size: 13px; font-family: inherit; resize: vertical;
+}
+.oc-rwx__panel--actions { display: flex; flex-direction: column; gap: 6px; }
+.oc-rwx__panel--actions hr { border: 0; border-top: 1px solid #1f2c45; margin: 6px 0; }
+.oc-rwx__btn-primary { background: #2b6cb0; color: #fff; font-weight: 600; }
+.oc-rwx__btn-primary[disabled] { background: #2a3953; color: #6c7a90; cursor: not-allowed; }
+.oc-rwx__guarantees { font-size: 12px; color: #cfd6e2; margin: 0; padding-left: 18px; line-height: 1.6; }
+.oc-rwx__advanced { list-style: none; padding: 0; margin: 6px 0 0 0; font-size: 12px; }
+.oc-rwx__advanced li { padding: 2px 0; }
+.oc-body--rwx .oc-exec__pre {
+  background: #0a121f; color: #cfd6e2; max-height: 240px; overflow: auto;
+  font-size: 11px; padding: 8px; border-radius: 4px; border: 1px solid #1f2c45;
+}
+@media (max-width: 1100px) {
+  .oc-rwx { grid-template-columns: 1fr; }
+}
