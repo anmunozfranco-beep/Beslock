@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "PC-1",
+      "rule": "every page continuity manifest MUST cite composition_id and the ordered page_index sequence."
+    },
+    {
+      "id": "PC-2",
+      "rule": "page numbering MUST be contiguous starting from 1; gaps BLOCK publication."
+    },
+    {
+      "id": "PC-3",
+      "rule": "continuation_of links MUST form an acyclic chain; cycles BLOCK publication."
+    },
+    {
+      "id": "PC-4",
+      "rule": "every section_id referenced by the composition MUST appear on at least one page; orphan sections BLOCK publication."
+    },
+    {
+      "id": "PC-5",
+      "rule": "every block citing an asset_id MUST resolve against an existing layer-43 asset record; orphan visuals BLOCK composition approval."
+    },
+    {
+      "id": "PC-6",
+      "rule": "missing section lineage (section_id without grounding/synthesis chain) BLOCKS publication-ready."
+    }
+  ],
+  "schema": "page-continuity-rules/1.0"
+}

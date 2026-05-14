@@ -1,0 +1,200 @@
+{
+  "consoles": [
+    "publication-composition-console",
+    "layout-review-console",
+    "responsive-preview-console",
+    "page-continuity-console",
+    "multimodal-sequence-console",
+    "composition-integrity-console",
+    "publication-assembly-console"
+  ],
+  "constitutional_layer_index": 44,
+  "generated_at": "2026-05-14T15:36:08Z",
+  "js_assets": [
+    "pc-composition-engine.js",
+    "pc-layout-engine.js",
+    "pc-sequence-engine.js",
+    "pc-responsive-engine.js",
+    "pc-continuity-engine.js",
+    "pc-assembly-engine.js",
+    "pc-review-engine.js",
+    "pc-lifecycle-engine.js",
+    "pc-integrity-engine.js"
+  ],
+  "lifecycle_edges": [
+    [
+      "draft",
+      "composed"
+    ],
+    [
+      "composed",
+      "review-required"
+    ],
+    [
+      "composed",
+      "draft"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "composed"
+    ],
+    [
+      "reviewer-approved",
+      "publication-ready"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-ready",
+      "superseded"
+    ],
+    [
+      "publication-ready",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "lifecycle_states": [
+    "composed",
+    "deprecated",
+    "draft",
+    "publication-ready",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "lifecycle_terminal_states": [
+    "deprecated"
+  ],
+  "manual_kinds": [
+    "procedural",
+    "troubleshooting",
+    "specification-heavy",
+    "comparison",
+    "warning-centric",
+    "multimodal-responsive",
+    "oem-derived",
+    "generated-visual"
+  ],
+  "new_event_stores": [
+    "composition-events",
+    "layout-events",
+    "sequence-events",
+    "responsive-render-events",
+    "page-continuity-events",
+    "publication-assembly-events",
+    "layout-review-events",
+    "composition-lifecycle-events",
+    "composition-integrity-events"
+  ],
+  "posture": {
+    "append_only_lineage": true,
+    "browser_surfaces_never_write_filesystem": true,
+    "deterministic": true,
+    "fail_closed_on_broken_responsive_parity": true,
+    "fail_closed_on_missing_evidence_trace": true,
+    "fail_closed_on_missing_section_lineage": true,
+    "fail_closed_on_orphan_visual": true,
+    "fail_closed_on_unresolved_continuity_gap": true,
+    "fail_closed_on_warning_placement_violation": true,
+    "no_autonomous_layout_generation": true,
+    "no_autonomous_publication_approval": true,
+    "no_browser_side_filesystem_mutation": true,
+    "no_cloud_rendering": true,
+    "no_daemon_no_watcher_no_scheduler": true,
+    "no_hidden_section_reordering": true,
+    "no_live_publication_overwrite": true,
+    "no_ml_governance_decisions": true,
+    "no_probabilistic_composition": true,
+    "no_saas_dependency": true,
+    "reviewer_authoritative": true,
+    "writes_only_into_publication_composition_runtime_tree": true,
+    "writes_to_live_publication_tree": false,
+    "writes_to_visual_generation_runtime_tree": false,
+    "writes_to_visual_publication_builds_tree": false
+  },
+  "report_slug": "04-responsive-render-summary",
+  "responsive_breakpoints": [
+    "mobile",
+    "tablet",
+    "desktop",
+    "print"
+  ],
+  "rule_tables": [
+    "publication-composition-rules.json",
+    "page-layout-rules.json",
+    "multimodal-sequence-rules.json",
+    "responsive-render-rules.json",
+    "page-continuity-rules.json",
+    "publication-assembly-rules.json",
+    "layout-review-rules.json",
+    "composition-lifecycle-rules.json",
+    "composition-integrity-rules.json"
+  ],
+  "schema": "governance-report/1.0",
+  "section_roles": [
+    "overview",
+    "warning",
+    "specification",
+    "procedural",
+    "troubleshooting",
+    "comparison",
+    "evidence-trace",
+    "appendix"
+  ],
+  "subordinate_to": [
+    "knowledge-core-doctrine",
+    "governance-source-of-truth-doctrine",
+    "runtime-evidence-and-trust-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-doctrine",
+    "governed-transactional-execution-and-recovery-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance"
+  ],
+  "title": "Responsive render parity summary."
+}

@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "IN-1",
+      "rule": "missing section lineage BLOCKS publication-ready."
+    },
+    {
+      "id": "IN-2",
+      "rule": "unresolved continuity gaps BLOCK publication."
+    },
+    {
+      "id": "IN-3",
+      "rule": "orphan visual blocks (asset_id with no layer-43 record) BLOCK composition approval."
+    },
+    {
+      "id": "IN-4",
+      "rule": "warning-placement violations BLOCK rendering."
+    },
+    {
+      "id": "IN-5",
+      "rule": "broken responsive parity BLOCKS publication-ready."
+    },
+    {
+      "id": "IN-6",
+      "rule": "missing evidence trace on a section BLOCKS section approval."
+    },
+    {
+      "id": "IN-7",
+      "rule": "hidden section insertion is FORBIDDEN; integrity scan reports any section_id present in a page_layout that is not declared in the composition."
+    },
+    {
+      "id": "IN-8",
+      "rule": "silent layout mutation is FORBIDDEN; sha256 of every recorded manifest is verified on replay."
+    }
+  ],
+  "schema": "composition-integrity-rules/1.0"
+}

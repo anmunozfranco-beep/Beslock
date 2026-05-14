@@ -142,3 +142,34 @@ The visual-generation-runtime tree is isolated from:
 - the layer-42 visual-publication-builds tree,
 - OEM source assets,
 - knowledge-core, governance, runtime-implementation, runtime-manifests payloads.
+
+
+## phase 51 — governed multimodal publication composition & page orchestration
+
+Layer 44. Subordinate to layer 43 (governed-visual-generation-and-deterministic-asset-production-governance).
+
+Mutation is performed exclusively by `tools/governed_publication_composition_executor.py --confirm`.
+Subcommands (`--kind`):
+
+- `composition-draft` — record a reviewer-authored composition draft (synthesis_id + section_order + manual_kind).
+- `page-layout` — record a reviewer-authored page layout (deterministic block list, role-typed).
+- `multimodal-sequence` — record a procedural / troubleshooting / comparison sequence with reviewer-declared ordering.
+- `responsive-layout` — record per-block parity across mobile/tablet/desktop/print (warnings cannot be omitted).
+- `page-continuity` — record a continuity scan: page-index contiguity, orphan sections, orphan visuals.
+- `publication-assembly` — record a deterministic page-layout assembly with sha256 of the manifest.
+- `layout-review` — record a reviewer's page-level decision (approve / request-changes / reject + cited_rule_ids).
+- `composition-lifecycle-transition` — advance composition through draft → composed → review-required → reviewer-approved → publication-ready → {superseded → deprecated}.
+- `composition-integrity` — record a reviewer-led integrity scan (orphan visuals, warning placement, responsive parity, hidden-section detection).
+
+Every command:
+- requires reviewer attribution,
+- is fail-closed on missing section lineage / orphan visuals / warning-placement violations / broken responsive parity / illegal lifecycle transitions / hidden section insertion,
+- appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
+- writes only into `operational-console/publication-composition-runtime/` subtrees.
+
+The publication-composition-runtime tree is isolated from:
+- the live publication tree,
+- the layer-42 visual-publication-builds tree,
+- the layer-43 visual-generation-runtime tree,
+- OEM source assets,
+- knowledge-core, governance, runtime-implementation, runtime-manifests payloads.

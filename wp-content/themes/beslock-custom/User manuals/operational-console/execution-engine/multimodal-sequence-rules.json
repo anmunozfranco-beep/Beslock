@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "SQ-1",
+      "rule": "every multimodal sequence MUST cite composition_id and an ordered list of step entries."
+    },
+    {
+      "id": "SQ-2",
+      "rule": "procedural step indices MUST be contiguous starting from 1; gaps BLOCK composition approval."
+    },
+    {
+      "id": "SQ-3",
+      "rule": "every step that cites an image MUST cite its grounding_id; missing grounding is fail-closed."
+    },
+    {
+      "id": "SQ-4",
+      "rule": "troubleshooting flows MUST escalate from low-severity to high-severity; reverse-escalation is FORBIDDEN."
+    },
+    {
+      "id": "SQ-5",
+      "rule": "comparison sequences MUST contain >= 2 entries with deterministic display_order."
+    },
+    {
+      "id": "SQ-6",
+      "rule": "multimodal density balancing MUST respect reviewer-declared image:text ratio ceiling per sequence."
+    }
+  ],
+  "schema": "multimodal-sequence-rules/1.0"
+}

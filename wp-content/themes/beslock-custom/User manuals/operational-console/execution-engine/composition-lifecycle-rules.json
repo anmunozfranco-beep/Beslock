@@ -1,0 +1,80 @@
+{
+  "constitutional_layer_index": 44,
+  "edges": [
+    [
+      "draft",
+      "composed"
+    ],
+    [
+      "composed",
+      "review-required"
+    ],
+    [
+      "composed",
+      "draft"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "composed"
+    ],
+    [
+      "reviewer-approved",
+      "publication-ready"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-ready",
+      "superseded"
+    ],
+    [
+      "publication-ready",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "LC-1",
+      "rule": "reviewer attribution required on every state transition."
+    },
+    {
+      "id": "LC-2",
+      "rule": "publication-ready requires composition reviewer-approved AND continuity passed AND responsive parity verified AND no blocking integrity findings."
+    },
+    {
+      "id": "LC-3",
+      "rule": "terminal state (deprecated) is immutable."
+    },
+    {
+      "id": "LC-4",
+      "rule": "transitions are append-only; declared from_state MUST equal actual replayed state."
+    },
+    {
+      "id": "LC-5",
+      "rule": "publication-ready -> superseded MUST cite successor_composition_id (publication structure supersedence)."
+    }
+  ],
+  "schema": "composition-lifecycle-rules/1.0",
+  "states": [
+    "composed",
+    "deprecated",
+    "draft",
+    "publication-ready",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "terminal_states": [
+    "deprecated"
+  ]
+}
