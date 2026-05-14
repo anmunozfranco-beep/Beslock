@@ -1,0 +1,30 @@
+{
+  "rule_family": "consumer-payload-bundle",
+  "rules": [
+    {
+      "id": "CB-1",
+      "rule": "bundle_id required and unique"
+    },
+    {
+      "id": "CB-2",
+      "rule": "deployment_package_id MUST resolve"
+    },
+    {
+      "id": "CB-3",
+      "rule": "consumer_payload_sha256 MUST be derived deterministically from the bundled artifact pointers"
+    },
+    {
+      "id": "CB-4",
+      "rule": "bundle_state begins 'sealed'; supersession via new bundle_id with prior_bundle_id pointer"
+    },
+    {
+      "id": "CB-5",
+      "rule": "bundle is presentation-neutral pointer manifest; downstream consumers own all rendering"
+    },
+    {
+      "id": "CB-6",
+      "rule": "lineage_pointers preserve stabilization_id / canonical IDs / deployment_package_id"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

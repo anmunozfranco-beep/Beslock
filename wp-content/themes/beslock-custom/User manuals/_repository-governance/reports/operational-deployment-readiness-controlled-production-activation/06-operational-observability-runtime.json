@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 50,
+  "report": "06-operational-observability-runtime",
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0",
+  "title": "Operational observability runtime"
+}

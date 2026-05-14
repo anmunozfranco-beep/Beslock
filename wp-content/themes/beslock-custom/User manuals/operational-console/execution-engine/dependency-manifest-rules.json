@@ -1,0 +1,30 @@
+{
+  "rule_family": "dependency-manifest",
+  "rules": [
+    {
+      "id": "DM-1",
+      "rule": "dependency_manifest_id required and unique"
+    },
+    {
+      "id": "DM-2",
+      "rule": "deployment_package_id MUST resolve"
+    },
+    {
+      "id": "DM-3",
+      "rule": "dependencies MUST enumerate {kind, id, sha256_pointer} entries"
+    },
+    {
+      "id": "DM-4",
+      "rule": "every dependency MUST refer to an existing artifact (canonical entity, canonical procedure, stabilization, normalization table, etc.)"
+    },
+    {
+      "id": "DM-5",
+      "rule": "dependency_manifest_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "DM-6",
+      "rule": "no cloud / package-registry / runtime-fetch dependencies — local artifact pointers only"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

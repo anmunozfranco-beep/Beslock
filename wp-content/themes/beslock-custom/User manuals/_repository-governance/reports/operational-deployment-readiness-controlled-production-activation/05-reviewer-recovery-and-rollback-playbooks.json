@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 50,
+  "report": "05-reviewer-recovery-and-rollback-playbooks",
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0",
+  "title": "Reviewer recovery and rollback playbooks"
+}

@@ -1,0 +1,34 @@
+{
+  "rule_family": "reviewer-playbook",
+  "rules": [
+    {
+      "id": "RP-1",
+      "rule": "playbook_id required and unique"
+    },
+    {
+      "id": "RP-2",
+      "rule": "playbook_kind enum required"
+    },
+    {
+      "id": "RP-3",
+      "rule": "steps MUST be a non-empty ordered list of {step_id, action, expected_outcome}"
+    },
+    {
+      "id": "RP-4",
+      "rule": "playbooks are pointer-only references to existing dispatches; no autonomous execution embedded"
+    },
+    {
+      "id": "RP-5",
+      "rule": "presentation keys forbidden recursively"
+    },
+    {
+      "id": "RP-6",
+      "rule": "playbook_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "RP-7",
+      "rule": "reviewer attribution mandatory; append-only; supersession via prior_playbook_id pointer"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

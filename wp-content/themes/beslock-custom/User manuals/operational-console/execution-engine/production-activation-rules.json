@@ -1,0 +1,46 @@
+{
+  "rule_family": "production-activation",
+  "rules": [
+    {
+      "id": "PA-1",
+      "rule": "activation_id required and unique"
+    },
+    {
+      "id": "PA-2",
+      "rule": "package_id MUST resolve and MUST be in 'export-ready' lifecycle state"
+    },
+    {
+      "id": "PA-3",
+      "rule": "stabilization_id MUST resolve to an existing Phase 55 export stabilization"
+    },
+    {
+      "id": "PA-4",
+      "rule": "from_state and to_state MUST be in the activation states enum"
+    },
+    {
+      "id": "PA-5",
+      "rule": "(from_state -> to_state) MUST be in the explicit allowed transitions table"
+    },
+    {
+      "id": "PA-6",
+      "rule": "transition to 'production-approved' requires a passing readiness-audit reference (Phase 56)"
+    },
+    {
+      "id": "PA-7",
+      "rule": "transition to 'production-active' requires a passing deployment-verification reference (Phase 57)"
+    },
+    {
+      "id": "PA-8",
+      "rule": "transition to 'rollback-candidate' requires a recovery_playbook_id reference"
+    },
+    {
+      "id": "PA-9",
+      "rule": "activation is APPEND-ONLY: each transition is a new lifecycle record; prior state never mutated; no overwrite semantics"
+    },
+    {
+      "id": "PA-10",
+      "rule": "reviewer attribution mandatory"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "rule_family": "deployment-package",
+  "rules": [
+    {
+      "id": "DP-1",
+      "rule": "deployment_package_id required and unique"
+    },
+    {
+      "id": "DP-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "DP-3",
+      "rule": "stabilization_id MUST resolve to an existing Phase 55 export stabilization"
+    },
+    {
+      "id": "DP-4",
+      "rule": "stable_export_sha256 MUST exactly match the stabilization's stable_export_sha256"
+    },
+    {
+      "id": "DP-5",
+      "rule": "deployment_package_sha256 deterministic over canonical JSON of the manifest"
+    },
+    {
+      "id": "DP-6",
+      "rule": "package is POINTER-only; consumer payload bundles are produced separately"
+    },
+    {
+      "id": "DP-7",
+      "rule": "lineage_pointers MUST preserve canonical IDs and stable IDs"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}
