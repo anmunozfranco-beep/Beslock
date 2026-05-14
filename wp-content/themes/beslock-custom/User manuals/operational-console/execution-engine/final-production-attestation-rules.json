@@ -1,0 +1,26 @@
+{
+  "rule_family": "final-production-attestation",
+  "rules": [
+    {
+      "id": "FPA-1",
+      "rule": "attestation_id required and unique"
+    },
+    {
+      "id": "FPA-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "FPA-3",
+      "rule": "readiness_audit_id, verification_id, proof_id, rehearsal_id, handoff_id MUST all resolve"
+    },
+    {
+      "id": "FPA-4",
+      "rule": "reviewer attribution mandatory; reviewer_conclusion (string) required"
+    },
+    {
+      "id": "FPA-5",
+      "rule": "attestation_sha256 deterministic over canonical JSON; append-only"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

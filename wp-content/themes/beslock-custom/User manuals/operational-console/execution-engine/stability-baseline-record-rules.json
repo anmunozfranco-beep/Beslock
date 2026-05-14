@@ -1,0 +1,22 @@
+{
+  "rule_family": "stability-baseline-record",
+  "rules": [
+    {
+      "id": "SBR-1",
+      "rule": "baseline_id required and unique"
+    },
+    {
+      "id": "SBR-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "SBR-3",
+      "rule": "baseline_hashes are re-derived for: stable-export-hash (Phase 55), deployment-package-hash (Phase 57), readiness-audit-hash (Phase 56), reproducibility-proof-hash (Phase 58, optional)"
+    },
+    {
+      "id": "SBR-4",
+      "rule": "baseline_sha256 deterministic over canonical JSON of {package_id, baseline_hashes}; append-only"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

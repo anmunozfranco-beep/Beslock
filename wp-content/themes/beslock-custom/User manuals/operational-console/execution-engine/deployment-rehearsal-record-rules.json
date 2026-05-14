@@ -1,0 +1,34 @@
+{
+  "rule_family": "deployment-rehearsal-record",
+  "rules": [
+    {
+      "id": "DRR-1",
+      "rule": "rehearsal_id required and unique"
+    },
+    {
+      "id": "DRR-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "DRR-3",
+      "rule": "checklist_id MUST resolve to a Phase 58 deployment-checklist"
+    },
+    {
+      "id": "DRR-4",
+      "rule": "outcomes count MUST equal checklist item count; outcomes MUST cover every item_id exactly once"
+    },
+    {
+      "id": "DRR-5",
+      "rule": "outcome enum: pass | fail | skipped"
+    },
+    {
+      "id": "DRR-6",
+      "rule": "rehearsal records deterministic outcomes ONLY; no live deployment, no live activation"
+    },
+    {
+      "id": "DRR-7",
+      "rule": "rehearsal_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

@@ -1,0 +1,26 @@
+{
+  "rule_family": "operational-maturity-report",
+  "rules": [
+    {
+      "id": "OMR-1",
+      "rule": "report_id required and unique"
+    },
+    {
+      "id": "OMR-2",
+      "rule": "dimensions MUST be a non-empty subset of allowed maturity dimensions"
+    },
+    {
+      "id": "OMR-3",
+      "rule": "reviewer_conclusion (string) required — reviewer-authored, NOT AI-generated"
+    },
+    {
+      "id": "OMR-4",
+      "rule": "no AI readiness claims; no autonomous scoring; aggregated counts only"
+    },
+    {
+      "id": "OMR-5",
+      "rule": "report_sha256 deterministic over canonical JSON; append-only"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

@@ -1,0 +1,26 @@
+{
+  "rule_family": "corpus-stress-validation",
+  "rules": [
+    {
+      "id": "CSV-1",
+      "rule": "validation_id required and unique"
+    },
+    {
+      "id": "CSV-2",
+      "rule": "package_ids MUST be a non-empty list of resolvable package_ids"
+    },
+    {
+      "id": "CSV-3",
+      "rule": "validation is pointer-only deterministic — no upstream mutation"
+    },
+    {
+      "id": "CSV-4",
+      "rule": "validation_sha256 deterministic over canonical JSON of the per-package counts snapshot"
+    },
+    {
+      "id": "CSV-5",
+      "rule": "presentation/probabilistic/translation/telemetry keys forbidden"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

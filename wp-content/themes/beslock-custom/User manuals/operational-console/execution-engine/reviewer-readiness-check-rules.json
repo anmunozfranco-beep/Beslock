@@ -1,0 +1,26 @@
+{
+  "rule_family": "reviewer-readiness-check",
+  "rules": [
+    {
+      "id": "RRC-1",
+      "rule": "check_id required and unique"
+    },
+    {
+      "id": "RRC-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "RRC-3",
+      "rule": "areas MUST be a non-empty subset of {onboarding, deployment, rollback, handoff, audit}"
+    },
+    {
+      "id": "RRC-4",
+      "rule": "deterministic checklist; for each area record satisfied=true/false with pointer-only evidence; reviewer-readable"
+    },
+    {
+      "id": "RRC-5",
+      "rule": "check_sha256 deterministic over canonical JSON; no AI scoring"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

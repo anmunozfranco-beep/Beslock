@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 52,
+  "report": "04-operational-regression-scan-runtime",
+  "schema": "production-hardening-corpus-validation/1.0",
+  "title": "Operational regression scan runtime"
+}
