@@ -1,0 +1,26 @@
+{
+  "rule_family": "runtime-navigation-index",
+  "rules": [
+    {
+      "id": "NI-1",
+      "rule": "index_id required and unique"
+    },
+    {
+      "id": "NI-2",
+      "rule": "entries MUST be a non-empty ordered list of {label, runtime_path, kind}"
+    },
+    {
+      "id": "NI-3",
+      "rule": "every runtime_path MUST exist on disk under operational-console/ (deterministic; failure-closed)"
+    },
+    {
+      "id": "NI-4",
+      "rule": "navigation is pointer-only; index does NOT mirror or copy upstream content"
+    },
+    {
+      "id": "NI-5",
+      "rule": "index_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

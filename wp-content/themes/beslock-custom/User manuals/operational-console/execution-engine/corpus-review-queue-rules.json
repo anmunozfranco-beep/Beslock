@@ -1,0 +1,30 @@
+{
+  "rule_family": "corpus-review-queue",
+  "rules": [
+    {
+      "id": "CQ-1",
+      "rule": "queue_id required and unique"
+    },
+    {
+      "id": "CQ-2",
+      "rule": "queue_kind enum required"
+    },
+    {
+      "id": "CQ-3",
+      "rule": "entries MUST be a non-empty ordered list of {entry_id, package_id, reason, governing_artifact_pointer}"
+    },
+    {
+      "id": "CQ-4",
+      "rule": "every package_id MUST resolve; governing_artifact_pointer MUST be a {kind, id} dict referencing an existing artifact"
+    },
+    {
+      "id": "CQ-5",
+      "rule": "ordering is reviewer-supplied only; NO automatic prioritization, NO probabilistic ranking, NO AI scoring; rank/score/priority keys forbidden"
+    },
+    {
+      "id": "CQ-6",
+      "rule": "queue_sha256 deterministic over canonical JSON; reviewer attribution mandatory"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

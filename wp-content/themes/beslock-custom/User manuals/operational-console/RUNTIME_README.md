@@ -329,3 +329,28 @@ Consumer boundary inherited from Phase 53 (presentation-neutral).
   writes ONLY into the layer's own runtime tree.
 - this is the operational activation layer that transforms the Phase 47–56 substrate
   into a deployable reviewer-operated production system.
+
+## phase 58 — reviewer operational ergonomics, guided runtime workflows & production usability closure
+
+- schema: `reviewer-operational-ergonomics-convergence/1.0`
+- constitutional layer: 51 (CONVERGENCE — not constitutional expansion)
+- storage tree: `operational-console/reviewer-operational-runtime/`
+- 10 storage subdirs: guided-workflows, onboarding-sequences, deployment-checklists,
+  operational-diagnostics, runtime-navigation-indexes, corpus-review-queues,
+  operational-confidence-summaries, reproducibility-proofs, reviewer-session-records,
+  production-handoff-records.
+- 10 dispatch kinds: reviewer-guided-workflow, onboarding-sequence-publish,
+  deployment-checklist-publish, operational-diagnostics-summary, runtime-navigation-index,
+  corpus-review-queue, operational-confidence-summary, reproducibility-proof,
+  reviewer-session-record, production-handoff-record.
+- posture: reviewer operability + operational ergonomics + deployment repeatability +
+  deterministic reproducibility + onboarding clarity over architectural growth;
+  pointer-only operational views; deterministic only; NO embeddings; NO vector DBs;
+  NO probabilistic inference; NO ML / LLMs / MT; NO autonomous agents;
+  NO autonomous prioritization; NO behavior tracking; NO analytics;
+  NO telemetry; NO dashboards; NO operational automation;
+  NO hidden runtime mutation; reviewer-authoritative; lineage-preserving;
+  presentation-neutral; writes ONLY into the layer's own runtime tree.
+- this is the reviewer operational ergonomics convergence layer that makes the
+  Phase 47–57 production-ready substrate easier, safer, faster, and clearer for
+  human operators WITHOUT new architectural complexity.

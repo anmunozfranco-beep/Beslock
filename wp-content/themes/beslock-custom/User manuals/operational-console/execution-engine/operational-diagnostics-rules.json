@@ -1,0 +1,30 @@
+{
+  "rule_family": "operational-diagnostics",
+  "rules": [
+    {
+      "id": "OD-1",
+      "rule": "diagnostics_id required and unique"
+    },
+    {
+      "id": "OD-2",
+      "rule": "scope enum: package | manual | corpus"
+    },
+    {
+      "id": "OD-3",
+      "rule": "for scope='package' or scope='manual', the corresponding id MUST resolve"
+    },
+    {
+      "id": "OD-4",
+      "rule": "diagnostics is a deterministic snapshot derived from upstream append-only stores; NO live polling, NO streaming, NO dashboards"
+    },
+    {
+      "id": "OD-5",
+      "rule": "diagnostics_sha256 deterministic over canonical JSON of the snapshot"
+    },
+    {
+      "id": "OD-6",
+      "rule": "telemetry / dashboard / streaming / behavior-tracking / analytics keys forbidden"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

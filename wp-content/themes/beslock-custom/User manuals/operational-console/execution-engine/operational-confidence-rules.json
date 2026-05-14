@@ -1,0 +1,26 @@
+{
+  "rule_family": "operational-confidence",
+  "rules": [
+    {
+      "id": "CF-1",
+      "rule": "confidence_id required and unique"
+    },
+    {
+      "id": "CF-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "CF-3",
+      "rule": "summary aggregates pointer-only references for: readiness audits (Phase 56), deployment verifications (Phase 57), export stability guarantees (Phase 56), robustness records (Phase 56), multilingual normalization tables (Phase 56)"
+    },
+    {
+      "id": "CF-4",
+      "rule": "confidence_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "CF-5",
+      "rule": "presentation/telemetry/dashboard keys forbidden"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

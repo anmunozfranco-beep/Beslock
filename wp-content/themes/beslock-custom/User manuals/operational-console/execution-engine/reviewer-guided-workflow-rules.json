@@ -1,0 +1,34 @@
+{
+  "rule_family": "reviewer-guided-workflow",
+  "rules": [
+    {
+      "id": "RG-1",
+      "rule": "workflow_id required and unique"
+    },
+    {
+      "id": "RG-2",
+      "rule": "workflow_kind enum required"
+    },
+    {
+      "id": "RG-3",
+      "rule": "steps MUST be a non-empty ordered list of {step_id, action, expected_outcome, runtime_reference}"
+    },
+    {
+      "id": "RG-4",
+      "rule": "every runtime_reference MUST be an existing runtime artifact id or runtime path under operational-console/"
+    },
+    {
+      "id": "RG-5",
+      "rule": "presentation keys forbidden recursively"
+    },
+    {
+      "id": "RG-6",
+      "rule": "no orchestration execution embedded; pointer-only step descriptions"
+    },
+    {
+      "id": "RG-7",
+      "rule": "workflow_sha256 deterministic over canonical JSON; reviewer attribution mandatory"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}
