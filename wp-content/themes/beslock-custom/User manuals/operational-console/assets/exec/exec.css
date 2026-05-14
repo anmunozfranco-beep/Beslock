@@ -173,3 +173,7 @@
 .oc-mp-orphan { background: #fee; padding: 0.3rem; border-left: 4px solid #c00; }
 .oc-mp-export-ok { color: #060; }
 .oc-mp-export-mismatch { color: #c00; font-weight: bold; }
+
+/* phase 54 — unified operational manual runtime closure additions */
+/* operational consoles inherit existing exec.css surfaces; no presentation rules added. */
+/* (consumer-boundary doctrine: this layer adds zero CSS rules.) */

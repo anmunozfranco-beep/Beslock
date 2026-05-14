@@ -254,3 +254,19 @@ The manual-semantic-packaging-runtime tree is isolated from:
 Nothing in this surface uses CSS, layouts, breakpoints, typography, responsive
 logic, UI frameworks, embeddings, vector databases, autonomous LLM reasoning,
 cloud APIs, SaaS, telemetry, watchers, daemons, or background workers.
+
+## phase 54 — unified operational intake, semantic consolidation & manual runtime closure
+
+Layer 47. Schema `unified-operational-manual-runtime-closure/1.0`.
+
+**Operational convergence pivot.** Closes the first end-to-end
+reviewer-driven manual-generation loop by wiring existing governance
+(Phase 46 FS, Phase 47 transactional runtime, Phase 49 grounding,
+Phase 52 extraction, Phase 53 packaging) into a single deterministic flow:
+
+    upload → analyze → approve → refresh → semantic-bank →
+    synthesize → detect-visual-support → prompt-package → export-finalize
+
+Storage: `manual-runtime-closure/` (single isolated tree).
+Dispatch kinds: `intake-analyze`, `intake-reanalyze`, `intake-approve`, `refresh-propagate`, `semantic-bank-snapshot`, `manual-synthesize`, `visual-support-detect`, `prompt-package-generate`, `export-finalize`.
+Consumer boundary inherited from Phase 53 (presentation-neutral).

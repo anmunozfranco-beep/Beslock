@@ -1,0 +1,30 @@
+{
+  "rule_family": "semantic-bank",
+  "rules": [
+    {
+      "id": "SB-1",
+      "text": "snapshot_id required and unique"
+    },
+    {
+      "id": "SB-2",
+      "text": "snapshot aggregates ONLY existing extraction/packaging artifacts (no inference)"
+    },
+    {
+      "id": "SB-3",
+      "text": "aggregation is deterministic — sorted by stable IDs"
+    },
+    {
+      "id": "SB-4",
+      "text": "snapshot records snapshot_sha256 over canonical aggregation"
+    },
+    {
+      "id": "SB-5",
+      "text": "snapshot is append-only — never mutates the aggregated sources"
+    },
+    {
+      "id": "SB-6",
+      "text": "snapshot preserves lineage_pointers, evidence_refs, grounding_refs, reviewer_states"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

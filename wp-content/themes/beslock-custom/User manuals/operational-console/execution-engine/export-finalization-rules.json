@@ -1,0 +1,30 @@
+{
+  "rule_family": "export-finalization",
+  "rules": [
+    {
+      "id": "EF-1",
+      "text": "finalization_id required and unique"
+    },
+    {
+      "id": "EF-2",
+      "text": "package_id must resolve to a Phase 53 manual-package in lifecycle state 'export-ready'"
+    },
+    {
+      "id": "EF-3",
+      "text": "consumer_payload is presentation-neutral and renderer-agnostic"
+    },
+    {
+      "id": "EF-4",
+      "text": "presentation/layout/CSS/typography keys forbidden in consumer_payload"
+    },
+    {
+      "id": "EF-5",
+      "text": "finalization records consumer_payload_sha256 deterministically"
+    },
+    {
+      "id": "EF-6",
+      "text": "finalization is append-only and reviewer-attributed"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

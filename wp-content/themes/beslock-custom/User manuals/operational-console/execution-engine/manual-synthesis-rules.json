@@ -1,0 +1,34 @@
+{
+  "rule_family": "manual-synthesis",
+  "rules": [
+    {
+      "id": "MS-1",
+      "text": "synthesis_id required and unique"
+    },
+    {
+      "id": "MS-2",
+      "text": "snapshot_id must resolve to an existing semantic-bank snapshot"
+    },
+    {
+      "id": "MS-3",
+      "text": "target_manual_id and target_product_id required"
+    },
+    {
+      "id": "MS-4",
+      "text": "synthesis aggregates entities by canonical section kinds (no LLM rewriting, no probabilistic inference)"
+    },
+    {
+      "id": "MS-5",
+      "text": "every synthesized procedural step must reference at least one evidence_id or grounding_id"
+    },
+    {
+      "id": "MS-6",
+      "text": "synthesis is reviewer-authoritative and append-only"
+    },
+    {
+      "id": "MS-7",
+      "text": "presentation/layout/CSS/typography keys forbidden in synthesis payload"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

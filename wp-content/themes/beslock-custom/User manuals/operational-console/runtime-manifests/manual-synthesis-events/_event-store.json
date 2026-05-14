@@ -1,0 +1,6 @@
+{
+  "append_only": true,
+  "events": [],
+  "schema": "unified-operational-manual-runtime-closure/1.0",
+  "store": "manual-synthesis-events"
+}

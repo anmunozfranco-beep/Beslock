@@ -1,0 +1,38 @@
+{
+  "rule_family": "intake-analysis",
+  "rules": [
+    {
+      "id": "IA-1",
+      "text": "evidence_id required and resolves to existing evidence reference"
+    },
+    {
+      "id": "IA-2",
+      "text": "evidence_kind must be one of ['video', 'image', 'pdf', 'xls', 'xlsx', 'csv', 'json', 'yaml', 'doc', 'docx']"
+    },
+    {
+      "id": "IA-3",
+      "text": "inferred_product_id required"
+    },
+    {
+      "id": "IA-4",
+      "text": "inferred_semantic_domains must be a list (may be empty only if rationale provided)"
+    },
+    {
+      "id": "IA-5",
+      "text": "inferred_downstream_impacts must be a list"
+    },
+    {
+      "id": "IA-6",
+      "text": "analysis records analysis_sha256 over canonical content"
+    },
+    {
+      "id": "IA-7",
+      "text": "no autonomous approval — analysis state always begins 'pending-review'"
+    },
+    {
+      "id": "IA-8",
+      "text": "presentation/layout/CSS/typography keys forbidden in analysis payload"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}
