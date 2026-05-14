@@ -78,11 +78,6 @@
     <!-- RIGHT: reviewer actions + attestation -->
     <aside class="oc-rwx__right">
       <section class="oc-rwx__panel oc-rwx__panel--actions">
-        <button class="oc-exec__btn oc-rwx__btn-fs" id="rwx-authorize">&#128274; authorize runtime tree</button>
-        <label class="oc-rwx__ai-toggle">
-          <input type="checkbox" id="rwx-ai-toggle" />
-          <span>// enable AI augmentation (advisory-only)</span>
-        </label>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>&#9654; analyze</button>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>&#10003; accept</button>
         <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>&#8634; re-analyze</button>
@@ -101,6 +96,16 @@
         </div>
         <textarea id="rwx-sum-notes" rows="2" placeholder="// reviewer notes (optional)"></textarea>
         <textarea id="rwx-conclusion" rows="2" placeholder="// reviewer conclusion (required for accept)"></textarea>
+      </section>
+
+      <section class="oc-rwx__panel">
+        <details>
+          <summary>// operational modes</summary>
+          <label class="oc-rwx__ai-toggle">
+            <input type="checkbox" id="rwx-ai-toggle" />
+            <span>// enable AI semantic sensing (advisory-only)</span>
+          </label>
+        </details>
       </section>
 
       <section class="oc-rwx__panel">
@@ -136,6 +141,41 @@
     </aside>
   </main>
 
+  <!-- ============================================================== -->
+  <!-- Phase 62.5: runtime-native authorization escalation modal       -->
+  <!--                                                                  -->
+  <!-- This dialog is NOT a setup/configuration screen. It is opened     -->
+  <!-- ONLY when the runtime itself detects missing scoped authority    -->
+  <!-- during an operational request (analyze persistence, accept       -->
+  <!-- commit). It must read as an operational authority escalation,    -->
+  <!-- not as SaaS onboarding or admin configuration.                   -->
+  <!-- ============================================================== -->
+  <div id="rwx-auth-modal" class="oc-rwx__auth-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="rwx-auth-modal-title">
+    <div class="oc-rwx__auth-modal__backdrop"></div>
+    <div class="oc-rwx__auth-modal__panel" role="document">
+      <div class="oc-rwx__auth-modal__rule">// runtime authorization escalation</div>
+      <h2 id="rwx-auth-modal-title" class="oc-rwx__auth-modal__title">Runtime Authorization Required</h2>
+      <p class="oc-rwx__auth-modal__lede">
+        The operational runtime requires reviewer-authorized scoped
+        filesystem access in order to:
+      </p>
+      <ul class="oc-rwx__auth-modal__list">
+        <li>persist append-only lineage</li>
+        <li>commit operational envelopes</li>
+        <li>copy source evidence</li>
+        <li>write AI advisory artifacts</li>
+      </ul>
+      <p class="oc-rwx__auth-modal__note">
+        No arbitrary filesystem access is requested. Authority remains
+        restricted to the reviewer-selected runtime tree.
+      </p>
+      <div class="oc-rwx__auth-modal__actions">
+        <button class="oc-exec__btn oc-rwx__auth-modal__cancel" id="rwx-auth-cancel" type="button">Cancel Runtime Authorization</button>
+        <button class="oc-exec__btn oc-rwx__auth-modal__grant"  id="rwx-auth-grant"  type="button">Grant Scoped Runtime Access</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="oc-footer">
     <span>Repo-native · Local-first · Reviewer-required · Append-only</span>
     <span>No SaaS · No backend · No autonomous agents · No ML · No telemetry · No network</span>
@@ -170,7 +210,6 @@
       const elBtnAccept = $('rwx-accept');
       const elBtnReanalyze = $('rwx-reanalyze');
       const elBtnExport = $('rwx-export-bundle');
-      const elBtnAuthorize = $('rwx-authorize');
       const elFsState = $('rwx-fs-state');
       const elAiToggle = $('rwx-ai-toggle');
       const elBundlePreview = $('rwx-bundle-preview');
@@ -277,10 +316,10 @@
         const typed = elReviewer.value.trim();
         const hasReviewer = !!(committedReviewer() || typed);
         const running = !!analysisCtl || acceptInFlight;
-        const FST = window.OC && window.OC.FSTree;
-        const fsAuth = !!(FST && FST.isAuthorized());
+        // Phase 62.5: Accept no longer requires pre-existing fs authorization;
+        // clicking it triggers a runtime-native escalation modal when needed.
         elBtnAnalyze.disabled = running || !(hasReviewer && selectedFile);
-        elBtnAccept.disabled = running || !(cur && cur.status === 'analyzed' && fsAuth);
+        elBtnAccept.disabled = running || !(cur && cur.status === 'analyzed');
         elBtnReanalyze.disabled = running || !cur;
         elBtnExport.disabled = running || !cur;
         refreshReviewerState();
@@ -295,17 +334,14 @@
         if (!FST.isSupported()) {
           elFsState.dataset.state = 'unsupported';
           elFsState.textContent = 'fs: api unavailable';
-          elBtnAuthorize.disabled = true;
           return;
         }
         if (FST.isAuthorized()) {
           elFsState.dataset.state = 'auth';
           elFsState.textContent = 'fs: ' + FST.rootName() + '/';
-          elBtnAuthorize.textContent = '↻ re-authorize tree (' + FST.rootName() + ')';
         } else {
           elFsState.dataset.state = 'unauth';
           elFsState.textContent = 'fs: unauthorized';
-          elBtnAuthorize.textContent = '🔒 authorize runtime tree';
         }
       }
       function refreshStatus() {
@@ -553,39 +589,119 @@
         try {
           if (elReviewer.value.trim()) State.setReviewer(elReviewer.value.trim());
           if (analysisCtl) return;
-          startStagedAnalyze(null);
+          // Phase 62.5: runtime detects missing scoped authority and
+          // escalates BEFORE the analysis pass. Reviewer grant resumes the
+          // run automatically; reviewer denial allows the in-memory pass
+          // to continue, but Accept will re-escalate when persistence is
+          // ultimately required.
+          ensureRuntimeAuthorization('analyze').then(function () {
+            startStagedAnalyze(null);
+          });
         } catch (e) {
           appendStreamLine('[' + nowStamp() + '] [runtime] analyze failed: ' + e.message,
             'oc-rwx__stream-line--error');
         }
       });
 
-      elBtnAuthorize.addEventListener('click', function () {
+      // ---- Phase 62.5: runtime-native authorization escalation -----------
+      //
+      // Authorization is NOT a setup step. The runtime itself detects the
+      // moment scoped authority is required and escalates inline through
+      // a runtime-native modal. The reviewer remains the explicit grantor;
+      // the runtime never silently requests permissions, never auto-selects
+      // a folder, never bypasses the picker.
+      const elAuthModal  = $('rwx-auth-modal');
+      const elAuthGrant  = $('rwx-auth-grant');
+      const elAuthCancel = $('rwx-auth-cancel');
+      let authEscalationResolver = null;
+
+      function openAuthEscalation() {
+        return new Promise(function (resolve) {
+          authEscalationResolver = resolve;
+          elAuthModal.hidden = false;
+          elAuthModal.setAttribute('aria-hidden', 'false');
+          // Defer focus until after the dialog paints.
+          setTimeout(function () { try { elAuthGrant.focus(); } catch (_) {} }, 0);
+        });
+      }
+      function closeAuthEscalation() {
+        elAuthModal.hidden = true;
+        elAuthModal.setAttribute('aria-hidden', 'true');
+      }
+      function resolveAuthEscalation(result) {
+        const r = authEscalationResolver;
+        authEscalationResolver = null;
+        closeAuthEscalation();
+        if (r) r(result);
+      }
+
+      // ensureRuntimeAuthorization() is the single inline gate used by
+      // every operational request that requires persistence. It always
+      // resolves (never rejects) so callers can branch on authorization
+      // outcome without try/catch noise.
+      function ensureRuntimeAuthorization(phaseHint) {
         const FST = window.OC && window.OC.FSTree;
         if (!FST) {
-          appendStreamLine('[' + nowStamp() + '] [fs] fs-tree module unavailable', 'oc-rwx__stream-line--error');
-          return;
+          appendStreamLine('[' + nowStamp() + '] [fs] fs-tree module unavailable',
+            'oc-rwx__stream-line--error');
+          return Promise.resolve(false);
         }
+        if (FST.isAuthorized()) return Promise.resolve(true);
         if (!FST.isSupported()) {
-          appendStreamLine('[' + nowStamp() + '] [fs] file system access api unavailable in this browser',
+          appendStreamLine('[' + nowStamp() + '] [runtime] file system access api unavailable in this browser',
             'oc-rwx__stream-line--error');
           appendStreamLine('  use a chromium-based browser (chrome, edge) over https or localhost',
             'oc-rwx__stream-line--meta');
-          return;
+          return Promise.resolve(false);
         }
-        appendStreamLine('[' + nowStamp() + '] [fs] requesting reviewer-authorized runtime tree…',
-          'oc-rwx__stream-line--meta');
-        FST.authorize().then(function () {
-          appendStreamLine('[' + nowStamp() + '] [fs] runtime tree authorized: ' + FST.rootName() + '/',
-            'oc-rwx__stream-line--complete');
-          appendStreamLine('  scope: writes confined to this subtree (append-only)',
+        // Operational escalation triad — narrated as runtime detection,
+        // not as a configuration prompt.
+        appendStreamLine('[' + nowStamp() + '] [runtime] append-only persistence unavailable',
+          'oc-rwx__stream-line--runtime');
+        appendStreamLine('[' + nowStamp() + '] [runtime] scoped runtime authority required',
+          'oc-rwx__stream-line--runtime');
+        appendStreamLine('[' + nowStamp() + '] [runtime] reviewer authorization pending',
+          'oc-rwx__stream-line--runtime');
+        return openAuthEscalation().then(function (granted) {
+          if (granted) {
+            appendStreamLine('[' + nowStamp() + '] [fs] runtime tree authorized: ' + FST.rootName() + '/',
+              'oc-rwx__stream-line--complete');
+            appendStreamLine('[' + nowStamp() + '] [fs] scoped append-only persistence active',
+              'oc-rwx__stream-line--complete');
+            appendStreamLine('[' + nowStamp() + '] [fs] reviewer-authorized runtime boundary established',
+              'oc-rwx__stream-line--complete');
+            refreshFsState();
+            refreshButtons();
+            return true;
+          }
+          appendStreamLine('[' + nowStamp() + '] [runtime] authorization denied',
+            'oc-rwx__stream-line--error');
+          appendStreamLine('[' + nowStamp() + '] [runtime] persistence operations unavailable',
+            'oc-rwx__stream-line--error');
+          appendStreamLine('[' + nowStamp() + '] [runtime] runtime remains read-only',
             'oc-rwx__stream-line--meta');
           refreshFsState();
           refreshButtons();
-        }).catch(function (err) {
-          appendStreamLine('[' + nowStamp() + '] [fs] authorization aborted: ' + (err.message || err),
-            'oc-rwx__stream-line--error');
+          return false;
         });
+      }
+
+      elAuthGrant.addEventListener('click', function () {
+        const FST = window.OC && window.OC.FSTree;
+        if (!FST) { resolveAuthEscalation(false); return; }
+        // The reviewer's explicit grant inside the modal triggers the
+        // browser's native directory picker. The picker is the actual
+        // authorization moment; the modal is the operational framing.
+        FST.authorize().then(function () {
+          resolveAuthEscalation(true);
+        }).catch(function () {
+          // Picker dismissed or permission denied at the browser level —
+          // treat as authorization denial.
+          resolveAuthEscalation(false);
+        });
+      });
+      elAuthCancel.addEventListener('click', function () {
+        resolveAuthEscalation(false);
       });
 
       elBtnAccept.addEventListener('click', function () {
@@ -596,15 +712,18 @@
           appendStreamLine('[' + nowStamp() + '] [runtime] no analyzed workflow present', 'oc-rwx__stream-line--error');
           return;
         }
+        // Phase 62.5: if scoped authority is missing at accept time the
+        // runtime escalates inline via the authorization modal. On grant,
+        // accept resumes automatically. On denial, accept stops cleanly.
+        ensureRuntimeAuthorization('accept').then(function (authorized) {
+          if (!authorized) return;
+          performAccept(cur);
+        });
+      });
+
+      function performAccept(cur) {
         const FST = window.OC && window.OC.FSTree;
-        if (!FST || !FST.isAuthorized()) {
-          appendStreamLine('[' + nowStamp() + '] [runtime] accept blocked', 'oc-rwx__stream-line--error');
-          appendStreamLine('[' + nowStamp() + '] [runtime] no authorized runtime tree present',
-            'oc-rwx__stream-line--error');
-          appendStreamLine('[' + nowStamp() + '] [reviewer] runtime tree authorization required',
-            'oc-rwx__stream-line--error');
-          return;
-        }
+        if (!FST || !FST.isAuthorized()) return; // defensive; escalation already handled this
         const Findings = window.OC && window.OC.ReviewerFindings;
         const product = Findings ? Findings.inferredProduct(cur.file || selectedFile || {}) : 'unspecified';
         cur.summary = readSummary();
@@ -653,7 +772,7 @@
           acceptInFlight = false;
           refreshAll();
         });
-      });
+      }
 
       elBtnReanalyze.addEventListener('click', function () {
         try {
@@ -684,11 +803,15 @@
       refreshAll();
 
       // Phase 61: attempt to restore previously authorized runtime tree.
+      // Phase 62.5: restoration is silent on failure; an absent or
+      // unrestorable scoped authority is not announced. The runtime will
+      // escalate inline via the authorization modal at the next
+      // operational request that requires persistence.
       const FST = window.OC && window.OC.FSTree;
       if (FST && FST.isSupported()) {
         FST.restore().then(function (ok) {
           if (ok) {
-            appendStreamLine('[' + nowStamp() + '] [fs] restored authorized runtime tree: ' + FST.rootName() + '/',
+            appendStreamLine('[' + nowStamp() + '] [fs] persisted scoped authority restored: ' + FST.rootName() + '/',
               'oc-rwx__stream-line--meta');
           }
           refreshFsState();
