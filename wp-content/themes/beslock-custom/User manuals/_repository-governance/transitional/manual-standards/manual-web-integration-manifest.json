@@ -1,0 +1,450 @@
+{
+  "generated_at": "2026-05-13",
+  "status": "ready",
+  "products": [
+    {
+      "slug": "e-flex",
+      "manual_file": "e-Flex user manual - image-ready.md",
+      "asset_root": "assets/e-flex/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-flex/web-ready/e-flex-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-flex/web-ready/e-flex-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "crear-el-administrador-principal",
+          "asset": "assets/e-flex/web-ready/e-flex-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-una-contrasena-o-pin",
+          "asset": "assets/e-flex/web-ready/e-flex-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-una-huella",
+          "asset": "assets/e-flex/web-ready/e-flex-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-basicos-e-idioma",
+          "asset": "assets/e-flex/web-ready/e-flex-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-tuya-y-operacion-remota",
+          "asset": "assets/e-flex/web-ready/e-flex-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-tuya-y-operacion-remota",
+          "asset": "assets/e-flex/web-ready/e-flex-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-flex/web-ready/e-flex-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-flex/web-ready/e-flex-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "descargas-y-documentacion",
+          "asset": "assets/e-flex/web-ready/e-flex-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "slug": "e-nova",
+      "manual_file": "e-Nova user manual - image-ready.md",
+      "asset_root": "assets/e-nova/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-puesta-en-marcha",
+          "asset": "assets/e-nova/web-ready/e-nova-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-puesta-en-marcha",
+          "asset": "assets/e-nova/web-ready/e-nova-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "alta-inicial-del-administrador",
+          "asset": "assets/e-nova/web-ready/e-nova-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "vincular-la-cerradura-por-bluetooth",
+          "asset": "assets/e-nova/web-ready/e-nova-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "vincular-la-cerradura-por-bluetooth",
+          "asset": "assets/e-nova/web-ready/e-nova-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-huellas-desde-la-app",
+          "asset": "assets/e-nova/web-ready/e-nova-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "flujo-condicional-de-contrasena-o-acceso-alterno",
+          "asset": "assets/e-nova/web-ready/e-nova-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-condicionales-e-idioma",
+          "asset": "assets/e-nova/web-ready/e-nova-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "recuperacion-y-solucion-de-problemas",
+          "asset": "assets/e-nova/web-ready/e-nova-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "recuperacion-y-solucion-de-problemas",
+          "asset": "assets/e-nova/web-ready/e-nova-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "descargas-y-soporte",
+          "asset": "assets/e-nova/web-ready/e-nova-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "slug": "e-orbit",
+      "manual_file": "ext-images/e-orbit/publishing/web/manuals/e-Orbit user manual - image-ready.md",
+      "asset_root": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "agregar-un-administrador",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-una-contrasena-o-pin",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-huella-y-otros-accesos",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-e-idioma",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-qr-y-gestion-remota",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-qr-y-gestion-remota",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "descargas-y-documentacion",
+          "asset": "ext-images/e-orbit/publishing/web/assets/e-orbit/web-ready/e-orbit-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "slug": "e-prime",
+      "manual_file": "e-Prime user manual - image-ready.md",
+      "asset_root": "assets/e-prime/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-preparacion-inicial",
+          "asset": "assets/e-prime/web-ready/e-prime-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-preparacion-inicial",
+          "asset": "assets/e-prime/web-ready/e-prime-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "crear-administrador",
+          "asset": "assets/e-prime/web-ready/e-prime-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-un-pin",
+          "asset": "assets/e-prime/web-ready/e-prime-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-huella-y-metodos-complementarios",
+          "asset": "assets/e-prime/web-ready/e-prime-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-basicos-e-idioma",
+          "asset": "assets/e-prime/web-ready/e-prime-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-tuya-y-validacion-remota",
+          "asset": "assets/e-prime/web-ready/e-prime-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-tuya-y-validacion-remota",
+          "asset": "assets/e-prime/web-ready/e-prime-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-prime/web-ready/e-prime-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-prime/web-ready/e-prime-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "descargas-y-documentacion",
+          "asset": "assets/e-prime/web-ready/e-prime-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "slug": "e-shield",
+      "manual_file": "e-Shield user manual - image-ready.md",
+      "asset_root": "assets/e-shield/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-shield/web-ready/e-shield-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-shield/web-ready/e-shield-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "agregar-administrador",
+          "asset": "assets/e-shield/web-ready/e-shield-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-pin-o-contrasena",
+          "asset": "assets/e-shield/web-ready/e-shield-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "registrar-huellas-y-tarjetas",
+          "asset": "assets/e-shield/web-ready/e-shield-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-del-sistema-e-idioma",
+          "asset": "assets/e-shield/web-ready/e-shield-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-y-gateway",
+          "asset": "assets/e-shield/web-ready/e-shield-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "app-y-gateway",
+          "asset": "assets/e-shield/web-ready/e-shield-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-shield/web-ready/e-shield-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "solucion-de-problemas",
+          "asset": "assets/e-shield/web-ready/e-shield-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "descargas-y-documentacion",
+          "asset": "assets/e-shield/web-ready/e-shield-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    },
+    {
+      "slug": "e-touch",
+      "manual_file": "e-Touch user manual - image-ready.md",
+      "asset_root": "assets/e-touch/web-ready/",
+      "status": "ready",
+      "sections": [
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-touch/web-ready/e-touch-hero-main.webp",
+          "role": "published-hero",
+          "status": "ready"
+        },
+        {
+          "name": "vista-general-y-primeros-pasos",
+          "asset": "assets/e-touch/web-ready/e-touch-installed-context.webp",
+          "role": "published-context",
+          "status": "ready"
+        },
+        {
+          "name": "alta-de-administrador",
+          "asset": "assets/e-touch/web-ready/e-touch-add-admin-action.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "uso-de-pin-integrado",
+          "asset": "assets/e-touch/web-ready/e-touch-pin-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "huella-y-miembros-desde-la-app",
+          "asset": "assets/e-touch/web-ready/e-touch-fingerprint-use.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "huella-y-miembros-desde-la-app",
+          "asset": "assets/e-touch/web-ready/e-touch-app-add-device.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "huella-y-miembros-desde-la-app",
+          "asset": "assets/e-touch/web-ready/e-touch-link-qr.webp",
+          "role": "published-app-support",
+          "status": "ready"
+        },
+        {
+          "name": "ajustes-e-idioma-en-flujos-condicionales",
+          "asset": "assets/e-touch/web-ready/e-touch-language-settings.webp",
+          "role": "published-manual-support",
+          "status": "ready"
+        },
+        {
+          "name": "soporte-energia-de-emergencia-y-diagnostico",
+          "asset": "assets/e-touch/web-ready/e-touch-troubleshoot-fingerprint.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "soporte-energia-de-emergencia-y-diagnostico",
+          "asset": "assets/e-touch/web-ready/e-touch-troubleshoot-app-connection.webp",
+          "role": "published-troubleshooting-support",
+          "status": "ready"
+        },
+        {
+          "name": "soporte-energia-de-emergencia-y-diagnostico",
+          "asset": "assets/e-touch/web-ready/e-touch-downloads-docs.webp",
+          "role": "published-downloads-support",
+          "status": "ready"
+        }
+      ]
+    }
+  ]
+}

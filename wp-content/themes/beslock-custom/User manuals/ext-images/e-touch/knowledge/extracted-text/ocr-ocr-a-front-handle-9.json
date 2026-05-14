@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-a-front-handle-9",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "A-Front Handle",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "final interpretation of the entire contents of this manual is the right of the Company. The functions described in this statement",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,58 @@
+{
+  "id": "wf-agregar-la-cerradura",
+  "type": "workflow",
+  "product": "e-shield",
+  "summary": "La primera vinculacion convierte al primer usuario en administrador original del equipo",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5"
+  ],
+  "extraction_lineage": [
+    "knowledge/workflows/wf-agregar-la-cerradura.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device",
+    "user"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "toca el boton `+` para agregar una cerradura"
+    },
+    {
+      "n": 2,
+      "text": "selecciona el tipo de dispositivo correcto"
+    },
+    {
+      "n": 3,
+      "text": "activa el teclado o panel de la cerradura para entrar en modo de configuracion"
+    },
+    {
+      "n": 4,
+      "text": "sigue el flujo de alta desde la app"
+    },
+    {
+      "n": 5,
+      "text": "acepta o cambia el nombre del dispositivo"
+    }
+  ],
+  "preconditions": [],
+  "legacy_storage_bucket": "workflows"
+}

@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/ergonomics/",
+  "discipline_rules_count": 4,
+  "kind": "ergonomics-summary",
+  "principles": [
+    "cognitive-load-reduction",
+    "operational-fatigue-prevention",
+    "escalation-fatigue",
+    "reviewer-overload",
+    "ambiguity-minimization",
+    "guided-operational-sequencing"
+  ],
+  "schema": "human-operations-governance/1.0"
+}

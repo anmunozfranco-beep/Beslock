@@ -1,0 +1,37 @@
+{
+  "id": "manifest-e-orbit",
+  "type": "knowledge-core-manifest",
+  "product": "e-orbit",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "subdomain_counts": {
+    "install": 1,
+    "operation": 25,
+    "workflows": 9,
+    "troubleshooting": 0,
+    "warnings": 10,
+    "terminology": 20,
+    "entities": 2,
+    "capabilities": 4,
+    "specifications": 1,
+    "semantic": 110,
+    "provenance": 1,
+    "visual": 1,
+    "orchestration": 2
+  },
+  "subdomains": [
+    "install",
+    "operation",
+    "workflows",
+    "troubleshooting",
+    "warnings",
+    "terminology",
+    "entities",
+    "capabilities",
+    "specifications",
+    "semantic",
+    "provenance",
+    "visual",
+    "orchestration"
+  ]
+}

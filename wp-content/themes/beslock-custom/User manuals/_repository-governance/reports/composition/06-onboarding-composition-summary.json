@@ -1,0 +1,49 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "flows": [
+    {
+      "id": "first-time-user",
+      "always_on": true,
+      "audience_scope": "beginner",
+      "package": "onboarding-package",
+      "interruption_budget": 2
+    },
+    {
+      "id": "installer-onboarding",
+      "always_on": false,
+      "audience_scope": "installer",
+      "package": "installation-package",
+      "interruption_budget": 2
+    },
+    {
+      "id": "administrator-onboarding",
+      "always_on": false,
+      "audience_scope": "administrator",
+      "package": "administrator-setup-package",
+      "interruption_budget": 1
+    },
+    {
+      "id": "app-onboarding",
+      "always_on": false,
+      "audience_scope": "beginner",
+      "package": "onboarding-package",
+      "interruption_budget": 2,
+      "scope": "mobile-app workflows only"
+    },
+    {
+      "id": "safe-operational-activation",
+      "always_on": true,
+      "audience_scope": "beginner",
+      "package": "onboarding-package",
+      "interruption_budget": 2,
+      "non_skippable": true
+    }
+  ],
+  "rules": [
+    "Always-on flows are non-skippable; their inclusion is enforced by the composition layer, not the consumer.",
+    "Interruption budget is hard-capped per session; exceeding it is a composition error.",
+    "Onboarding flows compose with cognitive-load-map; very-high-load procedures MUST chunk + confirm.",
+    "Audience scope is enforced; mismatched audience composition is rejected."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "destructive_models": [],
+  "models": 10,
+  "rules": 7,
+  "runtime_kinds": [
+    "onboarding-runtime",
+    "troubleshooting-runtime",
+    "retrieval-runtime",
+    "operational-copilot",
+    "visual-assistance-runtime",
+    "publication-runtime",
+    "continuity-system"
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

@@ -1,0 +1,22 @@
+{
+  "consumed_by": "retrieval scoring (Jaccard * confidence-weight)",
+  "domain": "confidence-tiers",
+  "kind": "confidence-tier-summary",
+  "records_per_product": {
+    "e-flex": 1,
+    "e-nova": 1,
+    "e-orbit": 1,
+    "e-prime": 1,
+    "e-shield": 1,
+    "e-touch": 1
+  },
+  "schema": "runtime-hardening-governance/1.0",
+  "tiers": [
+    "verified-oem (1.00)",
+    "verified-internal (0.95)",
+    "ocr-derived (0.85)",
+    "inferred-operational (0.65)",
+    "candidate (0.40)",
+    "unresolved (0.10)"
+  ]
+}

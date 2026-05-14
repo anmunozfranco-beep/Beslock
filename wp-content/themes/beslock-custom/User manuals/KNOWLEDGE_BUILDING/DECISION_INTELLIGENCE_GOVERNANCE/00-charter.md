@@ -1,0 +1,27 @@
+# Decision Intelligence Governance — Charter
+
+## Principles
+
+- the decision layer selects among declared options; it never invents options
+- decisions are deterministic given the declared context vector + evidence
+- destructive decisions require high confidence + explicit-action + role eligibility
+- ambiguity is named, never silently resolved
+- escalation is monotonic and observable
+- preferred > alternative > fallback > degraded > emergency > escalation
+- improvisation is forbidden; absence of a registered path => block + escalate
+- decision provenance is auditable (inputs, predicate, selected option, confidence)
+- subordinate to knowledge-core and to all ten prior governance layers
+- future decision consumers inherit these contracts; the decision layer never bends them for a consumer
+
+## Authority Areas
+
+- decision-point declarations
+- branch type definitions and branching rules
+- decision-confidence semantics
+- path-class declarations and prioritization rules
+- ambiguity classification and resolution paths
+- escalation tiers, triggers, and monotonicity
+- recommendation kinds and ranking rules
+- audit/provenance requirements
+- interaction contracts with adaptive layer
+- future decision-consumer gates

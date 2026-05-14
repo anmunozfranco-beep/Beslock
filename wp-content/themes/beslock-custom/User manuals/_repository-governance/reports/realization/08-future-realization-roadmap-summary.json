@@ -1,0 +1,74 @@
+{
+  "doctrine": [
+    "All future runtime realization remains subordinate to knowledge-core.",
+    "All future runtime realization preserves the hard exclusions of every prior layer.",
+    "All future runtime realization is staged, supervised, and evidence-gated.",
+    "All future runtime realization may be demoted at any time."
+  ],
+  "roadmap": [
+    {
+      "gates": [
+        "checkpoint-registry",
+        "intent-declaration-channel",
+        "warning-corpus-complete"
+      ],
+      "id": "onboarding-runtimes",
+      "stage_target": "supervised-runtime"
+    },
+    {
+      "gates": [
+        "symptom-corpus-≥10-per-product",
+        "causal-edges-emitted",
+        "hypothesis-store"
+      ],
+      "id": "troubleshooting-ecosystems",
+      "stage_target": "operational-pilot"
+    },
+    {
+      "gates": [
+        "context-vector-emitter",
+        "confidence-tier-on-nodes",
+        "provenance-emitter",
+        "supervision-receipt-emitter"
+      ],
+      "id": "contextual-copilots",
+      "stage_target": "supervised-runtime"
+    },
+    {
+      "gates": [
+        "visual-risk-freeze-contract",
+        "visual-unavailable-fallback",
+        "no-image-generation hard exclusion preserved"
+      ],
+      "id": "multimodal-operational-systems",
+      "stage_target": "deferred"
+    },
+    {
+      "gates": [
+        "ADAPTIVE-precedence-engine",
+        "skill-model-emitter",
+        "warning-corpus-complete"
+      ],
+      "id": "adaptive-operational-assistants",
+      "stage_target": "supervised-runtime"
+    },
+    {
+      "gates": [
+        "visual-provenance-contract",
+        "no-rendering-runtime hard exclusion preserved"
+      ],
+      "id": "future-visual-assistance",
+      "stage_target": "deferred"
+    },
+    {
+      "gates": [
+        "all interop contracts active",
+        "ecosystem observability green",
+        "schema-pin-federation enforced"
+      ],
+      "id": "federated-cognition-runtimes",
+      "stage_target": "controlled-production"
+    }
+  ],
+  "schema": "realization-and-deployment-governance/1.0"
+}

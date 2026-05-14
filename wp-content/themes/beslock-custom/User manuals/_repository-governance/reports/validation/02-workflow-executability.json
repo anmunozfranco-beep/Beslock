@@ -1,0 +1,110 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "total_findings": 13,
+  "by_class": {
+    "non-terminating-workflow": 1,
+    "no-troubleshooting-corpus": 5,
+    "no-workflows-for-product": 1,
+    "missing-actors": 6
+  },
+  "per_product": {
+    "e-flex": {
+      "workflows": 3,
+      "with_actors": 3,
+      "with_preconditions": 0,
+      "with_channel_targets": 3
+    },
+    "e-nova": {
+      "workflows": 0,
+      "with_actors": 0,
+      "with_preconditions": 0,
+      "with_channel_targets": 0
+    },
+    "e-orbit": {
+      "workflows": 9,
+      "with_actors": 3,
+      "with_preconditions": 6,
+      "with_channel_targets": 9
+    },
+    "e-prime": {
+      "workflows": 2,
+      "with_actors": 2,
+      "with_preconditions": 0,
+      "with_channel_targets": 2
+    },
+    "e-shield": {
+      "workflows": 9,
+      "with_actors": 9,
+      "with_preconditions": 0,
+      "with_channel_targets": 9
+    },
+    "e-touch": {
+      "workflows": 1,
+      "with_actors": 1,
+      "with_preconditions": 0,
+      "with_channel_targets": 1
+    }
+  },
+  "findings": [
+    {
+      "class": "non-terminating-workflow",
+      "product": "e-flex",
+      "id": "wf-qr-y-mini-programa-de-wechat"
+    },
+    {
+      "class": "no-troubleshooting-corpus",
+      "product": "e-flex"
+    },
+    {
+      "class": "no-workflows-for-product",
+      "product": "e-nova"
+    },
+    {
+      "class": "no-troubleshooting-corpus",
+      "product": "e-nova"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-app-pairing-ez-mode"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-app-pairing-qr"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-local-onboarding"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-member-management"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-remote-unlock-response"
+    },
+    {
+      "class": "missing-actors",
+      "product": "e-orbit",
+      "id": "wf-temporary-password-generation"
+    },
+    {
+      "class": "no-troubleshooting-corpus",
+      "product": "e-orbit"
+    },
+    {
+      "class": "no-troubleshooting-corpus",
+      "product": "e-prime"
+    },
+    {
+      "class": "no-troubleshooting-corpus",
+      "product": "e-touch"
+    }
+  ]
+}

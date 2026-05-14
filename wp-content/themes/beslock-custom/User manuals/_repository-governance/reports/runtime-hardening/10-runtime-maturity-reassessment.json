@@ -1,0 +1,67 @@
+{
+  "architecture_status": "SUFFICIENTLY MATURE (unchanged)",
+  "candidate_record_counts": {
+    "_grand_total": 132,
+    "_totals": {
+      "causal-graphs": 6,
+      "confidence-tiers": 6,
+      "continuity-checkpoints": 36,
+      "troubleshooting-expanded": 42,
+      "warnings-expanded": 42
+    },
+    "e-flex": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-nova": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-orbit": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-prime": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-shield": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    },
+    "e-touch": {
+      "causal-graphs": 1,
+      "confidence-tiers": 1,
+      "continuity-checkpoints": 6,
+      "troubleshooting-expanded": 7,
+      "warnings-expanded": 7
+    }
+  },
+  "kind": "runtime-maturity-reassessment",
+  "next_natural_track": "candidate-record review workflow + OEM source-binding ingestion",
+  "operational_density_status": "MATERIALLY INCREASED (132 candidate records added)",
+  "remaining_bottleneck": "human review and elevation of candidate records to ocr-derived / verified tiers",
+  "retrieval_status": "HARDENED (confidence-weighted, supplemental-aware)",
+  "schema": "runtime-hardening-governance/1.0",
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  },
+  "validation_status": "DETERMINISTIC REPLAY AVAILABLE"
+}

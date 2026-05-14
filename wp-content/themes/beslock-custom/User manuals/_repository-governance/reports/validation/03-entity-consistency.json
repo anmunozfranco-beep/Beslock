@@ -1,0 +1,178 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "total_findings": 0,
+  "by_class": {
+    "cross-product-entity-collision": 15
+  },
+  "per_product": {
+    "e-flex": {
+      "declared_entities": 14
+    },
+    "e-nova": {
+      "declared_entities": 9
+    },
+    "e-orbit": {
+      "declared_entities": 14
+    },
+    "e-prime": {
+      "declared_entities": 14
+    },
+    "e-shield": {
+      "declared_entities": 11
+    },
+    "e-touch": {
+      "declared_entities": 14
+    }
+  },
+  "cross_product_collisions": [
+    {
+      "entity_id": "entity-fingerprint-sensor",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-keypad",
+      "products": [
+        "e-flex",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-handle-exterior",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-lock-body",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-emergency-power",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-shield"
+      ]
+    },
+    {
+      "entity_id": "entity-mechanical-key",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-buzzer",
+      "products": [
+        "e-flex",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-led-indicator",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-deadbolt",
+      "products": [
+        "e-flex",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-latch",
+      "products": [
+        "e-flex",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-ic-card-reader",
+      "products": [
+        "e-flex",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-tuya-app",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-administrator-user",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-regular-user",
+      "products": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ]
+    },
+    {
+      "entity_id": "entity-temporary-password",
+      "products": [
+        "e-orbit",
+        "e-touch"
+      ]
+    }
+  ],
+  "findings": []
+}

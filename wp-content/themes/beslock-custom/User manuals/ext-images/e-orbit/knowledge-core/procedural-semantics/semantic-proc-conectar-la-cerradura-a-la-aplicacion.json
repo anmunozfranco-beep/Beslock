@@ -1,0 +1,67 @@
+{
+  "id": "semantic-proc-conectar-la-cerradura-a-la-aplicacion",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-conectar-la-cerradura-a-la-aplicacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-conectar-la-cerradura-a-la-aplicacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-conectar-la-cerradura-a-la-aplicacion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-conectar-la-cerradura-a-la-aplicacion",
+  "source_entity_type": "procedure",
+  "surface": "mobile-app",
+  "menu_path": "",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "abre **Smart Life**",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "pulsa **Agregar dispositivo** o el símbolo **+**",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "entra a la categoría correspondiente",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "elige la opción de cerradura adecuada",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "sigue el flujo de vinculación",
+      "semantic_actions": [
+        "pair"
+      ],
+      "matched_lexicon": [
+        "pair"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

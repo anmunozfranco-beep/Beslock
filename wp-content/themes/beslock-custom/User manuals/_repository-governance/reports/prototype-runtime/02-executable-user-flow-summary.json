@@ -1,0 +1,130 @@
+{
+  "flows": [
+    {
+      "evidence": [
+        "intent-id",
+        "retrieval-package-id",
+        "assembly-package-id",
+        "guidance-package-id",
+        "supervision-receipt-id"
+      ],
+      "id": "onboarding-flow",
+      "in_scope": true,
+      "kind": "onboarding",
+      "steps": [
+        "intent declared",
+        "retrieval-package built",
+        "assembly-package built",
+        "supervised guidance emitted",
+        "operator confirms completion"
+      ],
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "evidence": [
+        "prereq-record",
+        "warning-record",
+        "guidance-package-id",
+        "supervision-receipt-id"
+      ],
+      "id": "first-pairing-flow",
+      "in_scope": true,
+      "kind": "onboarding",
+      "steps": [
+        "pairing prerequisites surfaced",
+        "warnings stamped",
+        "guidance emitted",
+        "operator confirms outcome"
+      ],
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "evidence": [
+        "prereq-record",
+        "warning-record",
+        "guidance-package-id",
+        "supervision-receipt-id"
+      ],
+      "id": "fingerprint-enrollment-flow",
+      "in_scope": true,
+      "kind": "onboarding",
+      "steps": [
+        "enrollment prerequisites surfaced",
+        "warnings stamped",
+        "guidance emitted",
+        "operator confirms outcome"
+      ],
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "evidence": [
+        "symptom-id",
+        "retrieval-package-id",
+        "chain-record-id",
+        "guidance-package-id"
+      ],
+      "id": "troubleshooting-lookup-flow",
+      "in_scope": true,
+      "kind": "troubleshooting",
+      "steps": [
+        "symptom declared",
+        "diagnostic nodes retrieved",
+        "causal edges traversed (when present)",
+        "supervised guidance emitted"
+      ],
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "evidence": [
+        "prereq-record",
+        "warning-record",
+        "checkpoint-record",
+        "guidance-package-id"
+      ],
+      "id": "battery-recovery-flow",
+      "in_scope": true,
+      "kind": "recovery",
+      "steps": [
+        "recovery prerequisites surfaced",
+        "warnings stamped",
+        "checkpoint snapshot taken (when registry present)",
+        "supervised guidance emitted"
+      ],
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "evidence": [
+        "predicate-id",
+        "continuity-snapshot-id",
+        "escalation-package-id",
+        "handoff-record-id"
+      ],
+      "id": "escalation-handling-flow",
+      "in_scope": true,
+      "kind": "escalation",
+      "steps": [
+        "escalation predicate evaluated",
+        "continuity snapshot taken",
+        "12-field escalation package built",
+        "handoff record emitted"
+      ],
+      "supervision": "supervised end-to-end"
+    }
+  ],
+  "in_scope": [
+    "onboarding-flow",
+    "first-pairing-flow",
+    "fingerprint-enrollment-flow",
+    "troubleshooting-lookup-flow",
+    "battery-recovery-flow",
+    "escalation-handling-flow"
+  ],
+  "rules": [
+    "All prototype flows are read-only; destructive operations are out of scope.",
+    "Flows declare steps and evidence keys; unobserved evidence invalidates the run.",
+    "Flows emit guidance only after the operator has reviewed the assembly-package.",
+    "Flows that cannot satisfy mandatory warnings cannot emit guidance.",
+    "Flows respect confidence tiers; uncertain outputs are gated and labeled."
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

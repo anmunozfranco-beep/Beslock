@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-9-4-transferir-derechos-de-administrador-30",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9.4 Transferir Derechos De Administrador",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-30"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-9-4-transferir-derechos-de-administrador-30.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "El administrador original puede transferir la cerradura a otros usuarios. Solo el administrador\noriginal podrá transferirla. Después de introducir la cuenta a la que se desee transferir el dominio,\nrecibirá un código de verificación. Si se introduce el código de forma correcta. la transferencia\nconcluirá exitosamente.\no La cuenta que desee tramas” + debera ser a cuerla del adrunistrador or g “a\nDan aer",
+  "legacy_storage_bucket": "extracted-text"
+}

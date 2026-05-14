@@ -1,0 +1,42 @@
+{
+  "id": "proc-pair-by-ez-mode",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Smart Life -> Camera&Lock -> Lock (Wi-Fi) -> Reset the device -> EZ Mode",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-ez-mode"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "app",
+  "menu_path": "Smart Life -> Camera&Lock -> Lock (Wi-Fi) -> Reset the device -> EZ Mode",
+  "steps": [
+    "Open the Wi-Fi lock flow.",
+    "Enter the target network details.",
+    "Enter Reset the device.",
+    "Switch the app to EZ Mode.",
+    "Use the fallback distribution flow.",
+    "If needed, follow the hotspot guidance shown by the app."
+  ],
+  "validation_checks": [
+    "Fallback mode actually starts.",
+    "The app indicates device discovery or progress.",
+    "The lock appears in the app when the flow succeeds."
+  ]
+}

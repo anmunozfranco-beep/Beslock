@@ -1,0 +1,100 @@
+{
+  "high": [
+    "no-evidence-channel",
+    "no-provenance-emitter",
+    "no-supervision-receipt-emitter",
+    "no-context-vector-emitter",
+    "no-confidence-tier-on-nodes",
+    "no-checkpoint-registry",
+    "no-causal-edges-emitted",
+    "no-hypothesis-store",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap",
+    "no-incident-id-emitter"
+  ],
+  "medium": [
+    "no-ground-truth-set",
+    "no-anomaly-channel",
+    "no-proof-report-template",
+    "no-replay-harness"
+  ],
+  "risks": [
+    {
+      "id": "no-evidence-channel",
+      "impact": "proof slices cannot be evidence-gated",
+      "severity": "high"
+    },
+    {
+      "id": "no-provenance-emitter",
+      "impact": "no slice can produce audit-grade evidence",
+      "severity": "high"
+    },
+    {
+      "id": "no-supervision-receipt-emitter",
+      "impact": "supervised boundaries cannot be audited",
+      "severity": "high"
+    },
+    {
+      "id": "no-context-vector-emitter",
+      "impact": "procedural-assistance proof degrades",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "impact": "low-confidence-execution predicate cannot bind",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "continuity proof flows degrade; recovery proofs deferred",
+      "severity": "high"
+    },
+    {
+      "id": "no-causal-edges-emitted",
+      "impact": "reasoning-trace proof flow cannot enumerate edges",
+      "severity": "high"
+    },
+    {
+      "id": "no-hypothesis-store",
+      "impact": "troubleshooting and recovery proofs cannot persist hypotheses",
+      "severity": "high"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "impact": "troubleshooting proof not eligible on most products",
+      "severity": "high"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "impact": "warning-surface proof gated on affected products",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-step continuity binding unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "no-ground-truth-set",
+      "impact": "semantic-recall predicate cannot be evaluated quantitatively",
+      "severity": "medium"
+    },
+    {
+      "id": "no-anomaly-channel",
+      "impact": "post-anomaly review checkpoint not formalized",
+      "severity": "medium"
+    },
+    {
+      "id": "no-proof-report-template",
+      "impact": "operator-signed proof report not standardized",
+      "severity": "medium"
+    },
+    {
+      "id": "no-replay-harness",
+      "impact": "proof runs cannot be deterministically replayed",
+      "severity": "medium"
+    }
+  ],
+  "schema": "operational-proof-governance/1.0",
+  "total": 15
+}

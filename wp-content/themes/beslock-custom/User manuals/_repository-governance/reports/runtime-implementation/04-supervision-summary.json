@@ -1,0 +1,29 @@
+{
+  "advancing_decisions": [
+    "approve"
+  ],
+  "blocking_decisions": [
+    "reject",
+    "demote"
+  ],
+  "checkpoints": [
+    "pre-emission",
+    "post-emission",
+    "pre-handoff",
+    "pre-completion",
+    "post-anomaly"
+  ],
+  "decisions": [
+    "approve",
+    "reject",
+    "request-more-info",
+    "escalate",
+    "demote"
+  ],
+  "implementation": "runtime-implementation/runtime/supervision.py",
+  "non_relaxable": [
+    "safety-preserving adaptations",
+    "irreversibility warnings"
+  ],
+  "schema": "runtime-implementation-governance/1.0"
+}

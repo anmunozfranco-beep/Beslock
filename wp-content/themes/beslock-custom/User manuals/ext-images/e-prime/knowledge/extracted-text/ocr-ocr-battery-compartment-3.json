@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-battery-compartment-3",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Battery Compartment",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Maintenance",
+  "raw_text": "Note: Please keep the interior of the front and rear panels clean during installation",
+  "storage_bucket": "extracted-text"
+}

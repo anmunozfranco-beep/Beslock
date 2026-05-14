@@ -1,0 +1,56 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "interruption_types": [
+    {
+      "id": "user-pause",
+      "user_initiated": true,
+      "safe": true,
+      "resume_strategy": "resume-from-last-step"
+    },
+    {
+      "id": "user-cancel",
+      "user_initiated": true,
+      "safe": true,
+      "resume_strategy": "rollback-to-checkpoint"
+    },
+    {
+      "id": "session-timeout",
+      "user_initiated": false,
+      "safe": true,
+      "resume_strategy": "resume-from-last-checkpoint"
+    },
+    {
+      "id": "device-disconnect",
+      "user_initiated": false,
+      "safe": false,
+      "resume_strategy": "rollback-to-checkpoint OR escalate"
+    },
+    {
+      "id": "power-loss-mid-step",
+      "user_initiated": false,
+      "safe": false,
+      "resume_strategy": "safe-restart-from-initial OR emergency-recovery"
+    },
+    {
+      "id": "validation-failure",
+      "user_initiated": false,
+      "safe": false,
+      "resume_strategy": "retry-step OR escalate"
+    },
+    {
+      "id": "external-error",
+      "user_initiated": false,
+      "safe": false,
+      "resume_strategy": "retry-or-escalate-with-cause"
+    }
+  ],
+  "recovery_rules": [
+    "Every procedure declares ≥1 checkpoint as a safe re-entry anchor.",
+    "Rollback never partially applies a destructive step; either the destructive step completes fully or it never began.",
+    "Restart from initial state requires explicit user re-confirmation if any destructive step had previously begun.",
+    "Recovery from `pairing-failed`, `enrollment-failed`, `lockout` returns to the prior safe state, never directly to a terminal state.",
+    "Power-loss during destructive procedures (factory-reset, firmware-upgrade) requires emergency-recovery; never auto-resume.",
+    "Recovery traces preserve provenance: original procedure id, interruption cause, recovery path taken."
+  ]
+}

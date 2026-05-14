@@ -1,0 +1,10 @@
+{
+  "checkpoints": 6,
+  "completion_states": 4,
+  "degradation_levels": 6,
+  "interruption_states": 7,
+  "recovery_states": 4,
+  "schema": "runtime-orchestration-governance/1.0",
+  "states": 17,
+  "transitions": 25
+}

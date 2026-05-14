@@ -1,0 +1,53 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "triggers": [
+    {
+      "id": "trigger.first-time-procedure",
+      "rule": "Surface step-by-step guidance the first time a user attempts a procedure.",
+      "intensity": "high"
+    },
+    {
+      "id": "trigger.high-risk-procedure",
+      "rule": "Surface confirmation + explicit risk note before factory-reset, firmware-update, emergency-power.",
+      "intensity": "very-high",
+      "interrupts_flow": true
+    },
+    {
+      "id": "trigger.failure-prone-step",
+      "rule": "Inline visual reinforcement on steps with documented failure modes.",
+      "intensity": "medium"
+    },
+    {
+      "id": "trigger.warning-blocking",
+      "rule": "Hard interrupt (modal-equivalent) for safety + data-loss + lockout warnings.",
+      "intensity": "very-high",
+      "interrupts_flow": true
+    },
+    {
+      "id": "trigger.warning-non-blocking",
+      "rule": "Inline banner for low-battery, weak-wifi, suboptimal-but-allowed states.",
+      "intensity": "low"
+    },
+    {
+      "id": "trigger.troubleshooting-escalation",
+      "rule": "Offer escalation path after N failed self-diagnosis attempts.",
+      "intensity": "high"
+    },
+    {
+      "id": "trigger.onboarding-branch",
+      "rule": "Branch onboarding when role choice is detected (admin vs user, app-paired vs local-only).",
+      "intensity": "medium"
+    },
+    {
+      "id": "trigger.contextual-visual",
+      "rule": "Surface a visual when component-visibility map indicates the step references a non-obvious component.",
+      "intensity": "medium"
+    },
+    {
+      "id": "trigger.cross-product-divergence",
+      "rule": "Surface a divergence note when the procedure differs from the platform default for this product.",
+      "intensity": "low"
+    }
+  ]
+}

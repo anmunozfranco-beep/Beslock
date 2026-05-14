@@ -1,0 +1,33 @@
+{
+  "id": "install-context-objetivo",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-objetivo.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield.\n\nEste documento no reemplaza la plantilla impresa ni una validacion fisica en banco.\nSu funcion es ordenar el proceso y separar lo que ya esta soportado por fuente OEM de lo que aun debe confirmarse en equipo real."
+  ],
+  "legacy_storage_bucket": "installation"
+}

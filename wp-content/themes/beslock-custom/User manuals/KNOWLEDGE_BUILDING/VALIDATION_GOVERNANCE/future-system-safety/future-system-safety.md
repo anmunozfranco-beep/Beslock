@@ -1,0 +1,10 @@
+# Future System Safety Gates
+
+## Rules
+
+- `chatbot` requires: maturity.unsafe-promotions=0, graph.unresolved-reference=0, retrieval.missing-channel-targets=0
+- `onboarding-assistant` requires: procedural.empty-step-chain=0, experience.warning-corpus-empty per product=0
+- `troubleshooting-assistant` requires: troubleshooting corpus per product ≥ 1, graph.unresolved-reference=0
+- `dynamic-publication` requires: maturity.unresolved-evidence-leak=0, publication-intent present per product
+- `multimodal-guidance` requires: visual-intent present, visual-risk classified, component-visibility declared
+- `future-visual-assistance` requires: visual-risk reclassification freeze, graph orphan-node ratio reviewed

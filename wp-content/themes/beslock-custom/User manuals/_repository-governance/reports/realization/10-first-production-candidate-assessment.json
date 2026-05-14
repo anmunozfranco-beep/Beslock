@@ -1,0 +1,65 @@
+{
+  "criteria": [
+    "no blocking realization risks for the candidate",
+    "no destructive surface (or destructive surface fully gated by two-token + role + OEM contract)",
+    "evidence channel + provenance emitter + supervision receipt emitter present (for stages ≥ assisted-runtime)",
+    "all upstream constitutional layer contracts honored",
+    "rollback path defined (checkpoint registry) for stages ≥ supervised-runtime"
+  ],
+  "deferred_candidates": [
+    {
+      "blocking_risks": [
+        "no-context-vector-emitter",
+        "no-confidence-tier-on-nodes",
+        "no-provenance-emitter"
+      ],
+      "destructive_surface": false,
+      "id": "operational-copilot"
+    },
+    {
+      "blocking_risks": [
+        "no-checkpoint-registry",
+        "no-intent-declaration-channel"
+      ],
+      "destructive_surface": false,
+      "id": "onboarding-runtime"
+    },
+    {
+      "blocking_risks": [
+        "thin-troubleshooting-corpus",
+        "no-causal-edges-emitted",
+        "no-hypothesis-store"
+      ],
+      "destructive_surface": false,
+      "id": "troubleshooting-runtime"
+    },
+    {
+      "blocking_risks": [
+        "oem-channel-contract-missing",
+        "role-declaration-missing",
+        "no-checkpoint-registry"
+      ],
+      "destructive_surface": true,
+      "id": "administrator-assistant"
+    }
+  ],
+  "doctrine": "no slice is realised while any declared blocking-risk for that slice remains unresolved",
+  "primary_first_production_candidate": {
+    "id": "contextual-retrieval",
+    "soft_risks": [
+      "no-provenance-emitter"
+    ],
+    "stage_target": "prototype",
+    "weighted_score": 4.7
+  },
+  "schema": "realization-and-deployment-governance/1.0",
+  "secondary_first_production_candidate": {
+    "id": "procedural-assembly-runtime",
+    "soft_risks": [
+      "no-context-vector-emitter",
+      "no-confidence-tier-on-nodes"
+    ],
+    "stage_target": "prototype",
+    "weighted_score": 4.1
+  }
+}

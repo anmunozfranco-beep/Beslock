@@ -1,0 +1,15 @@
+{
+  "changes": [
+    "ALLOWED_DOMAINS extended with the 5 supplemental domains",
+    "CONFIDENCE_WEIGHTS table introduced (verified-oem=1.0 .. unresolved=0.10)",
+    "KIND_DOMAINS routes troubleshooting/warnings/escalation/battery-recovery through supplemental folders",
+    "scoring = Jaccard(query, node) * CONFIDENCE_WEIGHTS[node.confidence]",
+    "manifest carries extra.candidate_only when top-K is candidate/unresolved only",
+    "assembly raises procedure-candidate-only and troubleshooting-candidate-only triggers"
+  ],
+  "config": "runtime-implementation/runtime/config.py",
+  "doctrine": "runtime-implementation/runtime-hardening/retrieval-quality/README.md",
+  "kind": "retrieval-hardening-summary",
+  "module": "runtime-implementation/runtime/retrieval.py",
+  "schema": "runtime-hardening-governance/1.0"
+}

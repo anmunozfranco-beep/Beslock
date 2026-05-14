@@ -1,0 +1,59 @@
+{
+  "domains": [
+    {
+      "id": "corpus-maintenance",
+      "responsibility": "keep per-product knowledge-core healthy: stale review, supersession, retention"
+    },
+    {
+      "id": "review-operations",
+      "responsibility": "operate the review queues; assign, track, audit"
+    },
+    {
+      "id": "promotion-operations",
+      "responsibility": "execute promotion/demotion events through declared lifecycle gates"
+    },
+    {
+      "id": "oem-ingestion",
+      "responsibility": "intake OEM artifacts, stage OCR, attach bindings"
+    },
+    {
+      "id": "runtime-maintenance",
+      "responsibility": "monitor runtime channels, replay drift, escalation rate"
+    },
+    {
+      "id": "governance-maintenance",
+      "responsibility": "maintain reviewer registry, scope, revocation, audit-trail integrity"
+    }
+  ],
+  "invariants": [
+    "every operation produces an append-only event",
+    "no operation mutates canonical knowledge-core JSON in-place",
+    "no operation may bypass declared lifecycle gates",
+    "no operation may run autonomously without an actor identity",
+    "every operation references a supervision-receipt"
+  ],
+  "kind": "ops-model",
+  "roles": [
+    {
+      "role": "reviewer",
+      "scope": "per-domain, per-product approval"
+    },
+    {
+      "role": "oem-reviewer",
+      "scope": "binding artifact verification"
+    },
+    {
+      "role": "operator",
+      "scope": "supervised runtime execution"
+    },
+    {
+      "role": "governance-operator",
+      "scope": "registry, scope, revocation, emergency demotion"
+    },
+    {
+      "role": "auditor",
+      "scope": "read-only audit trail inspection"
+    }
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

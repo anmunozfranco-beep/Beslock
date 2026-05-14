@@ -1,0 +1,83 @@
+{
+  "generated": "2026-05-13T20:53:48Z",
+  "kind": "vertical-slices",
+  "rules": [
+    "First slice MUST be read-only and have no blocking risks.",
+    "Each slice declares supervision posture, exit criteria, and provenance requirements.",
+    "Slices are sequenced by safety + readiness, not by value alone.",
+    "A slice may not advance to the next staged-rollout phase until its exit criteria are satisfied with evidence.",
+    "Deferred slices remain deferred until every declared blocking risk is resolved."
+  ],
+  "schema": "realization-and-deployment-governance/1.0",
+  "slices": [
+    {
+      "candidate": "contextual-retrieval",
+      "exit_criteria": [
+        "declared query intents resolvable",
+        "stable surfaces enumerated",
+        "consumption gates enforceable read-side",
+        "provenance manifest attached to each retrieval-package"
+      ],
+      "id": "slice-A-read-only-retrieval",
+      "kind": "first-runtime / proof-of-value",
+      "supervision": "unsupervised (read-only)"
+    },
+    {
+      "candidate": "procedural-assembly-runtime",
+      "exit_criteria": [
+        "ADAPTIVE precedence engine declared (or safest-default fallback active)",
+        "COMPOSITION assembly rules enforced",
+        "adaptation provenance stamped"
+      ],
+      "id": "slice-B-procedural-assembly",
+      "kind": "second proof-of-value",
+      "supervision": "unsupervised (read-only outputs); supervised when context vector absent"
+    },
+    {
+      "candidate": "onboarding-runtime",
+      "exit_criteria": [
+        "checkpoint registry available",
+        "intent declaration channel available",
+        "predicate coverage on onboarding flows ≥ declared threshold"
+      ],
+      "id": "slice-C-supervised-onboarding-pilot",
+      "kind": "supervised pilot (gated)",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "candidate": "operational-copilot",
+      "exit_criteria": [
+        "context-vector emitter available",
+        "confidence-tier-on-nodes available",
+        "provenance emitter available",
+        "explicit-action gate available for any future destructive extension"
+      ],
+      "id": "slice-D-supervised-copilot-pilot",
+      "kind": "supervised pilot (gated)",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "candidate": "troubleshooting-runtime",
+      "exit_criteria": [
+        "symptom corpus ≥ 10 per product",
+        "causal edges emitted",
+        "hypothesis store available"
+      ],
+      "id": "slice-E-troubleshooting-controlled-pilot",
+      "kind": "deferred (corpus-bound)",
+      "supervision": "supervised end-to-end"
+    },
+    {
+      "candidate": "administrator-assistant",
+      "exit_criteria": [
+        "OEM channel contract available",
+        "role declaration channel available",
+        "checkpoint registry available",
+        "two-token irreversibility gate operationally available"
+      ],
+      "id": "slice-F-administrator-controlled-trial",
+      "kind": "deferred (destructive surface; requires OEM channel)",
+      "supervision": "supervised + two-token irreversibility gate"
+    }
+  ]
+}

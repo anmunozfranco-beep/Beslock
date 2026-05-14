@@ -1,0 +1,9 @@
+# Que necesitas antes de empezar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5
+
+- plantilla impresa a escala `100%`
+- acceso a la cara interior, exterior y canto de la puerta
+- herramientas compatibles con las perforaciones marcadas en la plantilla
+- baterias AA nuevas para la prueba inicial
+- llave mecanica de respaldo para validacion final

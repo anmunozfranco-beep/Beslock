@@ -1,0 +1,14 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "comfy-contracts",
+  "title": "ComfyUI contracts (only authorised renderer)",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "KNOWLEDGE_BUILDING/COMFY_GENERATION_GOVERNANCE.md",
+    "_repository-governance/manifests/visual-orchestration-doc/VISUAL_GENERATION_AUTOMATION.md",
+    "tools/comfy/workflow_api.json.json",
+    "tools/visual_generation.py",
+    "ext-images/<product>/automation/orchestrators/orchestration-manifest.json"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

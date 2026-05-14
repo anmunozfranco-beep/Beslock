@@ -1,0 +1,197 @@
+{
+  "id": "publication-intent-map",
+  "type": "publication-intent-map",
+  "product": "e-nova",
+  "summary": "Channel routing for every publishable knowledge-core asset of e-nova",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::CHANNEL_ROUTING"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "routing": [
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/entities/entity-catalog.json",
+      "entity_id": "entity-catalog",
+      "entity_type": "entity-catalog",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "chatbot",
+        "rag",
+        "comfyui"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/capabilities/capability-map.json",
+      "entity_id": "capability-map",
+      "entity_type": "capability-map",
+      "validation_status": "extraction-pending-review",
+      "channels": [
+        "web",
+        "chatbot",
+        "rag",
+        "comfyui"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-29300-portale-ein-go-10.json",
+      "entity_id": "ocr-ocr-29300-portale-ein-go-10",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l.json",
+      "entity_id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-5-veces-despues-de-abrir-la-puerta-8.json",
+      "entity_id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6.json",
+      "entity_id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13.json",
+      "entity_id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9.json",
+      "entity_id": "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav.json",
+      "entity_id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-funciones-rendimiento-parametros-observaciones-12.json",
+      "entity_id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14.json",
+      "entity_id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-nano-cerradura-pomo-inteligente-1.json",
+      "entity_id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-1-2.json",
+      "entity_id": "ocr-ocr-paso-1-2",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-2-3.json",
+      "entity_id": "ocr-ocr-paso-2-3",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-3-4.json",
+      "entity_id": "ocr-ocr-paso-3-4",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/extracted-text/ocr-ocr-paso-4-5.json",
+      "entity_id": "ocr-ocr-paso-4-5",
+      "entity_type": "extracted-text",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    },
+    {
+      "entity_ref": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/ocr-draft-index.json",
+      "entity_id": "ocr-draft-index",
+      "entity_type": "ocr-draft-index",
+      "validation_status": "inferred-but-unverified",
+      "channels": [
+        "rag"
+      ]
+    }
+  ],
+  "channel_totals": {
+    "chatbot": 2,
+    "rag": 17,
+    "comfyui": 2,
+    "web": 1
+  },
+  "demotion_rules": {
+    "low-confidence-evidence-only": "rag-only",
+    "low-confidence-evidence": "rag-only",
+    "inferred-but-unverified": "rag + chatbot + support only",
+    "extraction-pending-review": "default channels (per CHANNEL_ROUTING)",
+    "verified": "default channels (per CHANNEL_ROUTING)"
+  },
+  "policy": "Channel routing is advisory metadata. Actual PDF/web/chatbot pipelines must read this map; nothing is published from this layer directly."
+}

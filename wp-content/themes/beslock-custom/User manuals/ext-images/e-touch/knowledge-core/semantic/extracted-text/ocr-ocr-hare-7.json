@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-hare-7",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Hare",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-7"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-hare-7.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "fully guarantee errors before and during printing. Sometimes we in order to improve the\nperformance, reliability and safety of components and systems, may upgrade the product, which may be somewhat\ninconsistent with the contents of the manual, but does not affect the actual operation, if there is\na change is not known, please",
+  "legacy_storage_bucket": "extracted-text"
+}

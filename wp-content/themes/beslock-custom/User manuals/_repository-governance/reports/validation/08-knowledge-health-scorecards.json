@@ -1,0 +1,60 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "scorecards": {
+    "e-flex": {
+      "items": 118,
+      "domains_covered": 13,
+      "completeness": 0.867,
+      "consistency": 0.322,
+      "validation_confidence": 0.136,
+      "operational_usability": 0.667,
+      "semantic_coherence": 0.0
+    },
+    "e-nova": {
+      "items": 21,
+      "domains_covered": 7,
+      "completeness": 0.467,
+      "consistency": 0.238,
+      "validation_confidence": 0.0,
+      "operational_usability": 0.0,
+      "semantic_coherence": 0.0
+    },
+    "e-orbit": {
+      "items": 198,
+      "domains_covered": 13,
+      "completeness": 0.867,
+      "consistency": 0.429,
+      "validation_confidence": 0.298,
+      "operational_usability": 0.333,
+      "semantic_coherence": 0.214
+    },
+    "e-prime": {
+      "items": 116,
+      "domains_covered": 13,
+      "completeness": 0.867,
+      "consistency": 0.302,
+      "validation_confidence": 0.121,
+      "operational_usability": 1.0,
+      "semantic_coherence": 0.071
+    },
+    "e-shield": {
+      "items": 119,
+      "domains_covered": 13,
+      "completeness": 0.867,
+      "consistency": 0.345,
+      "validation_confidence": 0.084,
+      "operational_usability": 1.0,
+      "semantic_coherence": 0.0
+    },
+    "e-touch": {
+      "items": 139,
+      "domains_covered": 13,
+      "completeness": 0.867,
+      "consistency": 0.201,
+      "validation_confidence": 0.101,
+      "operational_usability": 1.0,
+      "semantic_coherence": 0.0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "constraints": [
+    "read-only over knowledge-core",
+    "supervised by default; no autonomy",
+    "no production deployment, no chatbot, no PDF, no image, no large frontend",
+    "subordinate to knowledge-core and to all nineteen prior governance layers"
+  ],
+  "evidence": [
+    "14-test unittest suite passes (real tests over real knowledge-core)",
+    "supervised CLI executes onboarding flow on e-prime end-to-end",
+    "supervised CLI executes troubleshooting-lookup flow end-to-end",
+    "all six observability channels emit append-only NDJSON",
+    "every emitted package carries a provenance manifest with SHA-256 hashes",
+    "operator approval gate is enforced (reject/demote are blocking)"
+  ],
+  "executable_today": true,
+  "first_slice": "contextual-onboarding + troubleshooting-retrieval",
+  "next_actions": [
+    "expand troubleshooting + warning corpora on e-flex/e-nova/e-orbit/e-shield/e-touch",
+    "wire confidence-tier emitter onto knowledge-core nodes",
+    "introduce checkpoint registry for battery-recovery flow",
+    "introduce causal-edges + hypothesis store for troubleshooting flow",
+    "introduce replay harness from observability channels"
+  ],
+  "schema": "runtime-implementation-governance/1.0",
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

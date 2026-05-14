@@ -1,0 +1,9 @@
+# Recomendación final
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#12
+
+Este manual funciona como base operativa de uso. Antes de publicación final, conviene complementarlo con:
+- capturas reales del equipo
+- capturas reales de la app
+- validación técnica de rutas y códigos
+- maquetación final con imágenes

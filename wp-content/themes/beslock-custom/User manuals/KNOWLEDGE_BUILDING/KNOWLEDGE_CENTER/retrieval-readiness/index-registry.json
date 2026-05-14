@@ -1,0 +1,49 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "indexes": [
+    {
+      "id": "entities.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/entities/**"
+    },
+    {
+      "id": "procedures.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/procedural-semantics/**"
+    },
+    {
+      "id": "warnings.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/warnings/**"
+    },
+    {
+      "id": "terminology.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/terminology/**"
+    },
+    {
+      "id": "capabilities.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/capabilities/**"
+    },
+    {
+      "id": "troubleshooting.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/troubleshooting/**"
+    },
+    {
+      "id": "visual-intent.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/visual-intent/**"
+    },
+    {
+      "id": "publication-intent.idx",
+      "source_pattern": "ext-images/<slug>/knowledge-core/publication-intent/**"
+    },
+    {
+      "id": "cross-concept.idx",
+      "source_pattern": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-graph/shared-concept-membership.json"
+    }
+  ],
+  "served_fields": [
+    "id",
+    "maturity",
+    "provenance",
+    "last_updated",
+    "channel_targets"
+  ]
+}

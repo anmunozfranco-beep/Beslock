@@ -1,0 +1,55 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "boundaries": [
+    {
+      "domain": "source-of-truth",
+      "owner": "ext-images/<slug>/source-of-truth/",
+      "scope": "OEM PDFs, OEM manuals, OEM product PNGs.",
+      "boundary": "Editorial content. Read-only outside ingest."
+    },
+    {
+      "domain": "evidence",
+      "owner": "ext-images/<slug>/source-of-truth/manuals/, generated_manuals/<slug>/",
+      "scope": "OCR text, page renders, raw extracted text.",
+      "boundary": "Append-only. Never edited in place."
+    },
+    {
+      "domain": "semantic-interpretation",
+      "owner": "ext-images/<slug>/knowledge-core/{entities,procedures,workflows,warnings,terminology,capabilities,specifications,troubleshooting}/",
+      "scope": "Structured semantic interpretation of evidence.",
+      "boundary": "Carries provenance pointers back to evidence."
+    },
+    {
+      "domain": "canonical-knowledge",
+      "owner": "ext-images/<slug>/knowledge-core/",
+      "scope": "Promoted, reviewed, indexed semantic artifacts.",
+      "boundary": "Only canonical artifacts may be served downstream."
+    },
+    {
+      "domain": "visual-semantics",
+      "owner": "ext-images/<slug>/knowledge-core/{visual-intent,visual-risk,component-visibility,publication-intent,procedural-semantics}/",
+      "scope": "Semantic descriptors that condition future visual generation.",
+      "boundary": "Authored from canonical knowledge; never invented at the visual layer."
+    },
+    {
+      "domain": "publication-semantics",
+      "owner": "ext-images/<slug>/knowledge-core/publication-intent/",
+      "scope": "Channel targets, formats, alt-text contracts.",
+      "boundary": "Publication-specific concerns live here, not in entities."
+    },
+    {
+      "domain": "governance",
+      "owner": "visual-system/_governance/ + KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/",
+      "scope": "Policy and doctrine.",
+      "boundary": "Governance never stores product knowledge."
+    },
+    {
+      "domain": "orchestration",
+      "owner": "tools/visual_generation.py + tools/comfy/ + ext-images/<slug>/automation/",
+      "scope": "Execution: workflows, runs, manifests.",
+      "boundary": "Reads canonical and visual semantics; writes only run records."
+    }
+  ],
+  "boundary_doc": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-domain-boundaries/domain-boundaries.md"
+}

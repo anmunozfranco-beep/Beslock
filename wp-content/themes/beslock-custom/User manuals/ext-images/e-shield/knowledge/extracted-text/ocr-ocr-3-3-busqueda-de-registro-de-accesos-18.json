@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-3-3-busqueda-de-registro-de-accesos-18",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "3.3 Búsqueda De Registro De Accesos",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-18"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Los perfiles de administración podrán e\nconsultar el registro de accesos de cada llave [a] a AN\nOo tata\n4. Gestión de contraseñas\nPara establecer una contraseña dirijase al apartado de “Contraseñas”, de clic al botón\ninferior de la pantalla “Enviar código de acceso”. Se desplegarán los diferentes tipos de\ncódigos. selecciones el desado y llene los datos correspondientes.\nUna vez llenados los datos del tipo de constraseña seleccionado se le mostrará en la\npantalla un código. el cual deberá introducir en la cerradura y presionar el botón “#” para que\nse registre\noo rmacigatenios | Inteem gerade codigo de ag Informa once id aude ap",
+  "storage_bucket": "extracted-text"
+}

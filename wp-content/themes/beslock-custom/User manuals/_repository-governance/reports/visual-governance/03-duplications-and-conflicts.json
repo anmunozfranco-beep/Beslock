@@ -1,0 +1,74 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "policy": "Conflicts reported, never silently resolved. Each entry carries a recommended resolution that is NOT executed in this phase.",
+  "count": 6,
+  "conflicts": [
+    {
+      "id": "conflict.negative-prompts.cross-product-duplication",
+      "summary": "neg.shared.anti-generic-lock is duplicated VERBATIM in all 6 product ai-image-prompts.md files despite different product geometries.",
+      "affected_paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/prompts/ai-image-prompts.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/ai-image-prompts.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/visual-system/prompts/ai-image-prompts.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/prompts/ai-image-prompts.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/prompts/ai-image-prompts.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/prompts/ai-image-prompts.md"
+      ],
+      "policy_pointer": "_governance/negative-prompts/registry.json#components.neg.shared.anti-generic-lock",
+      "resolution_recommended": "Each product must declare which sub-bullets apply and add product-specific negatives under neg.<product>.* component IDs. NOT performed in this phase."
+    },
+    {
+      "id": "conflict.image-class.assignment-implicit",
+      "summary": "schematic vs hybrid assignment per slot is documented in per-product matrices but not exposed in the orchestration manifest export contract; downstream readers cannot tell why a class was chosen.",
+      "affected_paths": [
+        "tools/visual_generation.py",
+        "_repository-governance/manifests/visual-orchestration-doc/VISUAL_GENERATION_AUTOMATION.md"
+      ],
+      "policy_pointer": "_governance/visual-style-policy/policy.md#class-assignment",
+      "resolution_recommended": "Add `image_class` and `class_rationale` fields to the per-slot manifest export. NOT performed in this phase."
+    },
+    {
+      "id": "conflict.blocked-slots.no-status-enum",
+      "summary": "IMG-012 is 'blocked-pending-OEM-validation' across e-orbit and e-shield matrices but no explicit status enum exists in the run-record / manifest schema.",
+      "affected_paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/image-generation-matrix.md"
+      ],
+      "policy_pointer": "_governance/visual-validation/policy.md#qa_gate_states",
+      "resolution_recommended": "Add `blocked-pending-oem-validation` to the QA gate states enum (already present in this policy). Manifest exporter NOT updated in this phase."
+    },
+    {
+      "id": "conflict.composite-vs-generate.unspecified-per-slot",
+      "summary": "PRODUCT_VISUAL_TRUTH.md §13 prefers compositing over generation for hero/multi-view scenarios; per-slot generation matrices do not declare `transformation_type`.",
+      "affected_paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/image-generation-matrix.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/visual-system/generation-matrices/image-generation-matrix.md"
+      ],
+      "policy_pointer": "_governance/comfy-contracts/policy.md#run_record_required_fields",
+      "resolution_recommended": "Add `transformation_type: generate|composite` to per-slot manifest. NOT performed in this phase."
+    },
+    {
+      "id": "conflict.workflow-filename.double-extension",
+      "summary": "tools/comfy/workflow_api.json.json has a known double-extension filename; documented as historical artifact in COMFY_GENERATION_GOVERNANCE.md §2.",
+      "affected_paths": [
+        "tools/comfy/workflow_api.json.json"
+      ],
+      "policy_pointer": "_governance/comfy-contracts/policy.md#authoritative_tooling",
+      "resolution_recommended": "Normalise in the workflow registry on first registry creation. NOT performed in this phase."
+    },
+    {
+      "id": "conflict.legacy-png.no-decommission-timeline",
+      "summary": "Compatibility PNGs at ext-images/ root (e-Flex.png, e-Nova.png, …) are 'scheduled for retirement' per multiple docs but no decommission timeline or check exists.",
+      "affected_paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/*.png"
+      ],
+      "policy_pointer": "_governance/truth-source/policy.md#fallback_surfaces_use_canonical_png",
+      "resolution_recommended": "Add automated check in repository_governance_audit.py classifying root-level legacy PNGs as decommission-pending. NOT performed in this phase."
+    }
+  ]
+}

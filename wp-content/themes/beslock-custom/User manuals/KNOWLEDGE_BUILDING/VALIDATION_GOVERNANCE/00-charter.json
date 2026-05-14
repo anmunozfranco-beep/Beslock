@@ -1,0 +1,26 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "Validation does not author knowledge; it observes and reports.",
+    "Operational integrity is a precondition for promotion to verified-truth.",
+    "Every validator is read-only; findings produce reports, not mutations.",
+    "Findings are typed (class), located (product+id+domain), and explainable.",
+    "Critical findings (unresolved-reference, lineage-break, promotion-without-evidence) have zero tolerance.",
+    "Validation is continuous; thresholds are governed, not negotiated.",
+    "Validation is subordinate to the knowledge-core and to LIFECYCLE_GOVERNANCE.",
+    "Future systems (RAG, chatbot, onboarding, troubleshooting) inherit validation results, never override them."
+  ],
+  "authority_areas": [
+    "procedural-integrity",
+    "workflow-executability",
+    "entity-consistency",
+    "graph-validation",
+    "experience-validation",
+    "retrieval-validation",
+    "maturity-validation",
+    "health-scoring",
+    "validation-philosophy",
+    "future-system-safety"
+  ]
+}

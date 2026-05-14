@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/visual-system-audits/visual-system-current-state-audit.md",
+  "previous_path": "wp-content/themes/beslock-custom/User manuals/visual-system-current-state-audit.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "C",
+  "sub_label": "visual-system-audit-draft",
+  "rationale": "Audit doc of the visual system. Relocated as transitional documentation only — no visual pipeline code is touched.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/visual-system-audits/visual-system-current-state-audit.md' 'wp-content/themes/beslock-custom/User manuals/visual-system-current-state-audit.md'"
+}

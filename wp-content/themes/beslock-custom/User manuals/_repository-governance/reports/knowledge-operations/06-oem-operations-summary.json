@@ -1,0 +1,16 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/oem-operations/",
+  "invariants_count": 5,
+  "kind": "oem-operations-summary",
+  "replacement_flow_steps": 5,
+  "schema": "knowledge-operations-governance/1.0",
+  "stages": [
+    "intake",
+    "ocr-staging",
+    "ingestion-validation",
+    "duplicate-detection",
+    "source-reconciliation",
+    "source-aging",
+    "oem-replacement"
+  ]
+}

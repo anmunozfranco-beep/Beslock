@@ -1,0 +1,39 @@
+{
+  "id": "ts-gestion-del-dispositivo",
+  "type": "troubleshooting",
+  "product": "e-shield",
+  "summary": "Gestion del dispositivo",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6"
+  ],
+  "extraction_lineage": [
+    "knowledge/troubleshooting/ts-gestion-del-dispositivo.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "symptoms": [
+    "La app permite operaciones de mantenimiento y administracion cercana por Bluetooth"
+  ],
+  "resolutions": [
+    "actualizacion de la cerradura",
+    "calibracion de fecha y hora",
+    "diagnostico de errores",
+    "autorizacion de administrador adicional",
+    "realiza estas operaciones con el telefono junto a la cerradura cuando la fuente hable de Bluetooth local"
+  ],
+  "legacy_storage_bucket": "troubleshooting"
+}

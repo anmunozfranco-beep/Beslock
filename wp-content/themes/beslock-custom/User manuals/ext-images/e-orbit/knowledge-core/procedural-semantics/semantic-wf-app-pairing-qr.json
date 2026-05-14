@@ -1,0 +1,95 @@
+{
+  "id": "semantic-wf-app-pairing-qr",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for wf-app-pairing-qr",
+  "language": "es-CO",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/workflows/wf-app-pairing-qr.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#app-pairing-qr"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/workflows/wf-app-pairing-qr.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-app-pairing-qr",
+  "source_entity_type": "workflow",
+  "surface": "app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "Open Smart Life and add a device from Camera&Lock.",
+      "semantic_actions": [
+        "lock",
+        "open-app"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "open-app"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "Choose the observed Wi-Fi video lock family.",
+      "semantic_actions": [
+        "lock",
+        "select",
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "select",
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "Select the target Wi-Fi network and enter the password.",
+      "semantic_actions": [
+        "select",
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "select",
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "Show the generated phone QR to the lock camera.",
+      "semantic_actions": [
+        "lock",
+        "show-qr"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "show-qr"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "Wait for the lock prompt and confirm success in the app.",
+      "semantic_actions": [
+        "lock",
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "confirm"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

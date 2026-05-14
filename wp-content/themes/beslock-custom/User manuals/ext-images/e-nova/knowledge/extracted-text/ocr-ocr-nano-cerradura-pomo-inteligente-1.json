@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "Nano Cerradura Pomo Inteligente",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-1"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "IMPORTADOR: FERNANDO DIAZ PADILLA\nCALLE 7 No. 1034-A ZONA INDUSTRIALC.P.44940 GUADALAJARA, JALISCO MEXICO\nRFC: DIPF650920752\nLista de Empaque\nDesembale el paquete del producto y compruebe si se incluyen\n+ los siguientes accesorios.\no da xo /\no ety Ni “\nPerilla de Doble Cierre\nPomo de la\nCerradura\nTrasera\nArea de\na . Ny Huella Dactilar\nCerradura\nCuerpo de la Frontal Interfaz de Suministro\nCerradura Cerradura iPatency —— de Energia de\nTrasera Emergencia\nAatenor: -\n1. Pasos de Instalación",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,17 @@
+# Aporte real del XLS
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#6
+
+La hoja `Sheet1` agrega datos tecnicos valiosos:
+- modelo `NF14`
+- material: `Aluminum Alloy + Tempered Glass`
+- metodos de apertura: reconocimiento facial, palma, huella, password, tarjeta IC y app
+- bateria recargable de `7.2V / 4200mAh`
+- `Tuya WiFi` integrado, sin gateway adicional
+- grosor de puerta aplicable: `38-120 mm`
+- cuerpo de cerradura estandar `6068`, con opcion `85 / 90`
+- dimensiones de panel frontal `425 x 69 x 49 mm` y panel trasero `430 x 70 x 70 mm`
+- compatibilidad declarada con `Alexa`
+- nota comercial importante: `IP68` solo por pedido especial; el panel trasero no es impermeable y se sugiere comunicar `IP66`
+
+Tambien agrega una tabla de cambio de idioma en Tuya mediante `888#` y codigos numericos por idioma.

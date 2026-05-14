@@ -1,0 +1,69 @@
+{
+  "rules": [
+    "Stages are sequential; no skipping a stage that produced state.",
+    "Each stage has explicit supervision posture and evidence requirements.",
+    "Promotion to the next stage requires a documented exit decision with provenance.",
+    "Demotion (to a prior stage) is always allowed and is the safe response to incidents.",
+    "Controlled production remains under continuous governance; it is never a terminal stage of governance."
+  ],
+  "schema": "realization-and-deployment-governance/1.0",
+  "stages": [
+    {
+      "destructive_allowed": false,
+      "evidence": [
+        "builder run",
+        "report files written",
+        "no blocking risks for the slice"
+      ],
+      "exit_to": "assisted-runtime",
+      "id": "prototype",
+      "supervision": "unsupervised allowed only for read-only slices"
+    },
+    {
+      "destructive_allowed": false,
+      "evidence": [
+        "loop traces",
+        "supervision receipts",
+        "provenance manifests on every step"
+      ],
+      "exit_to": "supervised-runtime",
+      "id": "assisted-runtime",
+      "supervision": "supervised by an operator at every boundary"
+    },
+    {
+      "destructive_allowed": "supervised-only with two-token gate",
+      "evidence": [
+        "loop + delegation + handoff traces",
+        "audit append-only log",
+        "no open warnings at completion"
+      ],
+      "exit_to": "operational-pilot",
+      "id": "supervised-runtime",
+      "supervision": "supervised end-to-end; explicit-action gate required for any destructive extension"
+    },
+    {
+      "destructive_allowed": "supervised-only with two-token gate",
+      "evidence": [
+        "proof-of-value report",
+        "incident review",
+        "no unresolved escalations",
+        "no contract violations"
+      ],
+      "exit_to": "controlled-production",
+      "id": "operational-pilot",
+      "supervision": "supervised; bounded user population; explicit success criteria"
+    },
+    {
+      "destructive_allowed": "supervised-only with two-token gate + audit",
+      "evidence": [
+        "controlled-rollout report",
+        "post-deployment review",
+        "regression suite green",
+        "ecosystem observability green"
+      ],
+      "exit_to": "(no further stage; remains under continuous governance)",
+      "id": "controlled-production",
+      "supervision": "supervised by SRE/operator on-call; defined kill-switch"
+    }
+  ]
+}

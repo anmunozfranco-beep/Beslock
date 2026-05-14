@@ -1,0 +1,32 @@
+{
+  "id": "term-administrator",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "administrator",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit user manual.md#3",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/glossary.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "term": "administrator",
+  "definition": "Primary privileged user that should be created first and should retain at least one backup credential.",
+  "domain": "local-device",
+  "verified_layer": "structured-knowledge"
+}

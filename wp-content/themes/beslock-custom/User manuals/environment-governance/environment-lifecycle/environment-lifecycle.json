@@ -1,0 +1,97 @@
+{
+  "kind": "environment-lifecycle",
+  "lifecycle_invariants": [
+    "every transition is a governance action with a declared actor and rationale",
+    "no environment may be silently retired; deprecation precedes retirement",
+    "no quarantined environment may resume active state without auditor co-signature",
+    "every transition emits an environment-lifecycle-trace event",
+    "tombstones are immutable; retired environments are never re-activated under the same id"
+  ],
+  "lifecycle_states": [
+    {
+      "description": "declared but not provisioned",
+      "id": "proposed"
+    },
+    {
+      "description": "infrastructure declared; not yet receiving traffic",
+      "id": "provisioned"
+    },
+    {
+      "description": "receiving traffic under declared supervision level",
+      "id": "active"
+    },
+    {
+      "description": "active with elevated audit; promotion or demotion pending",
+      "id": "under-review"
+    },
+    {
+      "description": "frozen at last state; reads only; no new writes",
+      "id": "deprecated"
+    },
+    {
+      "description": "isolated due to safety event; no traffic; replay-only access",
+      "id": "quarantined"
+    },
+    {
+      "description": "tombstoned; provenance retained; no infra; no surfaces",
+      "id": "retired"
+    }
+  ],
+  "lifecycle_transitions": [
+    {
+      "actor": "governance-maintainer",
+      "from": "proposed",
+      "requires": "charter approval + trust-zone assignment",
+      "to": "provisioned"
+    },
+    {
+      "actor": "governance-maintainer",
+      "from": "provisioned",
+      "requires": "promotion gates from layer 22 satisfied",
+      "to": "active"
+    },
+    {
+      "actor": "operational-auditor",
+      "from": "active",
+      "requires": "raised finding or health indicator threshold",
+      "to": "under-review"
+    },
+    {
+      "actor": "governance-maintainer + auditor co-sign",
+      "from": "under-review",
+      "requires": "finding closed; no open critical health indicators",
+      "to": "active"
+    },
+    {
+      "actor": "escalation-supervisor",
+      "from": "under-review",
+      "requires": "safety event or replay drift > floor",
+      "to": "quarantined"
+    },
+    {
+      "actor": "governance-maintainer",
+      "from": "active",
+      "requires": "successor environment in active state",
+      "to": "deprecated"
+    },
+    {
+      "actor": "governance-maintainer + auditor co-sign",
+      "from": "deprecated",
+      "requires": "no open references; provenance archived",
+      "to": "retired"
+    },
+    {
+      "actor": "governance-maintainer + auditor co-sign",
+      "from": "quarantined",
+      "requires": "incident closed; replay deterministic; rollback verified",
+      "to": "active"
+    },
+    {
+      "actor": "governance-maintainer + auditor co-sign",
+      "from": "quarantined",
+      "requires": "incident review complete; environment unrecoverable",
+      "to": "retired"
+    }
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

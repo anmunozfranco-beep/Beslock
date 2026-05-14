@@ -1,0 +1,68 @@
+{
+  "schema": "decision-intelligence-governance/1.0",
+  "generated_at": "2026-05-13T19:16:08+00:00",
+  "future_consumers": [
+    {
+      "id": "adaptive-operational-assistant",
+      "gates": [
+        "context-vector emitter",
+        "per-node confidence",
+        "checkpoint registry"
+      ]
+    },
+    {
+      "id": "troubleshooting-decision-system",
+      "gates": [
+        "symptom corpus >= 10 per product",
+        "branch provenance logging",
+        "retry-threshold telemetry"
+      ]
+    },
+    {
+      "id": "onboarding-decision-guidance",
+      "gates": [
+        "onboarding-stage emitter",
+        "skill-declaration channel",
+        "evidence disclosure contract"
+      ]
+    },
+    {
+      "id": "context-aware-chatbot-system",
+      "gates": [
+        "execution snapshot-hash",
+        "intent declaration channel",
+        "decision provenance log"
+      ]
+    },
+    {
+      "id": "multimodal-operational-assistance",
+      "gates": [
+        "visual-intent attached to physical-installation procedures",
+        "evidence-disclosure renderer contract"
+      ]
+    },
+    {
+      "id": "future-visual-assistance",
+      "gates": [
+        "visual-risk reclassification freeze",
+        "fallback registry for visual-unavailable"
+      ]
+    },
+    {
+      "id": "intelligent-escalation-system",
+      "gates": [
+        "OEM channel contract",
+        "monotonic escalation log",
+        "provenance with operational-state snapshot"
+      ]
+    }
+  ],
+  "products": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

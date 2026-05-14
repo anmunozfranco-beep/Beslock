@@ -1,0 +1,84 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "intents": [
+    "install",
+    "configure",
+    "unlock",
+    "pair-app",
+    "enrol-user",
+    "recover",
+    "troubleshoot",
+    "maintain",
+    "administer",
+    "factory-reset"
+  ],
+  "transitions": [
+    {
+      "from": "install",
+      "to": "configure",
+      "rationale": "post-install configuration kicks in"
+    },
+    {
+      "from": "configure",
+      "to": "pair-app",
+      "rationale": "post-config app pairing"
+    },
+    {
+      "from": "pair-app",
+      "to": "enrol-user",
+      "rationale": "post-pairing user enrolment"
+    },
+    {
+      "from": "enrol-user",
+      "to": "unlock",
+      "rationale": "credential available -> first unlock"
+    },
+    {
+      "from": "unlock",
+      "to": "maintain",
+      "rationale": "routine operation -> maintenance window"
+    },
+    {
+      "from": "maintain",
+      "to": "troubleshoot",
+      "rationale": "anomaly observed during maintenance"
+    },
+    {
+      "from": "troubleshoot",
+      "to": "recover",
+      "rationale": "recovery path identified"
+    },
+    {
+      "from": "recover",
+      "to": "unlock",
+      "rationale": "post-recovery resume operation"
+    },
+    {
+      "from": "recover",
+      "to": "factory-reset",
+      "rationale": "recovery requires reset"
+    },
+    {
+      "from": "factory-reset",
+      "to": "install",
+      "rationale": "post-reset re-installation/re-configuration"
+    },
+    {
+      "from": "administer",
+      "to": "enrol-user",
+      "rationale": "admin enrols new credential"
+    },
+    {
+      "from": "administer",
+      "to": "factory-reset",
+      "rationale": "admin initiates reset"
+    }
+  ],
+  "rules": [
+    "User intent is declarative; the execution layer never infers intent silently from behaviour.",
+    "Intent transitions are tracked; abrupt intent changes (e.g. troubleshoot -> install) require checkpoint recovery.",
+    "Intent and operational-state must remain consistent; mismatched pairs are a composition error.",
+    "Intent `factory-reset` automatically attaches hard-interrupting guidance triggers and irreversibility warnings."
+  ]
+}

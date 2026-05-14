@@ -1,0 +1,5 @@
+# Manual de instalacion normalizado para Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#1
+
+

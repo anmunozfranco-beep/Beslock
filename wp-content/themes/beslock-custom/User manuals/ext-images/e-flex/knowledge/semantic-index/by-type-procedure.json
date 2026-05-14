@@ -1,0 +1,18 @@
+[
+  {
+    "id": "proc-requisitos-antes-de-vincular",
+    "summary": "- debe existir al menos un administrador en la cerradura",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-validacion-despues-del-alta",
+    "summary": "Despues de enlazar el equipo:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

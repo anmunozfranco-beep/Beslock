@@ -1,0 +1,13 @@
+# Clasificacion del PDF por bloques
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#5
+
+| Bloque | Contenido real | Valor para Beslock | Decision editorial |
+|---|---|---|---|
+| Pagina 1 | portada y dibujo lineal del producto | medio | usar para reforzar silueta y proporciones del producto |
+| Paginas 2-3 | tabla de especificaciones, ambiente de trabajo, bateria, Micro USB, bloqueo por intentos | alto | usar para soporte tecnico, claims y cautelas editoriales |
+| Paginas 4-7 | alta de usuarios, password virtual, borrado, configuracion del sistema, idioma, red, autenticacion dual, reconocimiento | alto | usar para enriquecer manual de uso y conocimiento OEM de menus |
+| Paginas 8-10 | onboarding en `Smart Life`, alta por QR y por Wi-Fi / `EZ Mode` | alto | usar como base del manual de app normalizado |
+| Paginas 11, 14, 15 y 17 | capturas de apoyo con poco texto unico | medio-bajo | usar como apoyo visual, no como fuente principal de copy |
+| Paginas 12-13 | desbloqueo remoto, registros y gestion de miembros | alto | usar en manual de app y descripcion de funciones remotas |
+| Pagina 16 | passwords temporales de un solo uso e ilimitadas | alto | usar para documentar tipos de password temporales observados |

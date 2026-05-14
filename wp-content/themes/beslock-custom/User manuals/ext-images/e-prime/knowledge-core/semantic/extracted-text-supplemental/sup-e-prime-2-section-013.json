@@ -1,0 +1,44 @@
+{
+  "id": "sup-e-prime-2-section-013",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Resrerilera",
+  "language": "es-CO",
+  "validation_status": "low-confidence-evidence-only",
+  "confidence": "ocr-very-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf#page=?",
+    "generated_manuals_supplemental/e-prime-2/manual.json#sections[12]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-prime-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "Resrerilera",
+  "page": "?",
+  "text": [
+    "eS\" ATR",
+    "fe\" TAA B 2 Het #3\" BHRE fea ae E",
+    "LABS ARH im A BY",
+    "ZF BREE LGB LPRmiga 20 £ AB",
+    "3. EFA IRS VAR) 2RUEE at 3}",
+    "4A BMG Est",
+    "FREE ARK SETAE ARK SETAE ARK Si A BY)",
+    "AES OE EARS OE EARS OE se ABBY SY"
+  ],
+  "ocr_avg_confidence": 26.9,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-prime-2"
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>e-Shield - Review Preview</title>
+  <style>
+    :root {
+      --paper: #f6f1e6;
+      --ink: #13212e;
+      --muted: #5d6a73;
+      --frame: #dbcdb4;
+      --card: #fffdf8;
+      --accent: #7a3419;
+      --shadow: rgba(19, 33, 46, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(122, 52, 25, 0.10), transparent 28%),
+        linear-gradient(180deg, #f3ecdc 0%, var(--paper) 100%);
+    }
+    .shell {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .masthead {
+      background: rgba(255, 253, 248, 0.72);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(122, 52, 25, 0.15);
+      border-radius: 24px;
+      padding: 20px 22px;
+      box-shadow: 0 14px 40px var(--shadow);
+      margin-bottom: 28px;
+    }
+    .masthead a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .masthead p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--frame);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 18px 44px var(--shadow);
+    }
+    h1, h2 {
+      font-weight: 600;
+      line-height: 1.12;
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.3rem);
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-top: 30px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(219, 205, 180, 0.9);
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    p + p { margin-top: 12px; }
+    ul, ol {
+      margin: 14px 0 0 24px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      background: rgba(19, 33, 46, 0.06);
+      padding: 0.12rem 0.38rem;
+      border-radius: 6px;
+      font-size: 0.94em;
+    }
+    .manual-image {
+      margin: 24px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+    .manual-image img {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(19, 33, 46, 0.08);
+      background: #f4efe5;
+      box-shadow: 0 18px 34px rgba(19, 33, 46, 0.12);
+    }
+    .manual-image figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 640px) {
+      .shell { padding: 18px 14px 42px; }
+      article { padding: 22px 18px; border-radius: 22px; }
+      .masthead { padding: 16px 18px; border-radius: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="masthead">
+      <a href="index.html">Volver al indice de revision</a>
+      <p>Fuente: e-Shield user manual - review-draft.md</p>
+    </div>
+    <article>
+      <h1>e-Shield</h1>
+<h2>Borrador inicial para revision visual</h2>
+<p>Este borrador usa exclusivamente assets <code>review-draft</code> del reset visual 2026-05-13 para revisar la cobertura completa del manual antes de aprobacion final.</p>
+<h2>1. Introduccion</h2>
+<p>Este manual resume el uso principal de e-Shield con foco en documentacion practica y compatible con implementacion web.</p>
+<h2>2. Capacidades clave</h2>
+<ul><li>Conectividad: Bluetooth para gestion cercana y conexion Wi-Fi mediante gateway para funciones remotas.</li><li>Modos de apertura: huella dactilar, contrasena, tarjeta IC y llaves de respaldo.</li><li>Funciones remotas: sincronizacion, gestion remota de tarjetas y ajustes desde la aplicacion cuando existe gateway.</li><li>Capacidad: hasta 100 huellas, 100 tarjetas y 100 contrasenas.</li><li>Privacidad: contrasena virtual de hasta 16 digitos.</li><li>Seguridad: bloqueo por 90 segundos tras 5 errores y alerta de bateria baja.</li></ul>
+<h2>3. Vista general y primeros pasos</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-hero-main.webp" alt="Vista general de e-Shield" /><figcaption>Vista general de e-Shield</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-installed-context.webp" alt="Contexto instalado de e-Shield" /><figcaption>Contexto instalado de e-Shield</figcaption></figure>
+<p>Antes de configurar:</p>
+<ul><li>verifica que el modulo exterior y la caja interior trabajen como dos piezas distintas</li><li>instala las baterias AA y despierta el modulo exterior</li><li>define el administrador principal</li><li>valida la llave fisica de respaldo</li></ul>
+<h2>4. Agregar administrador</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-add-admin-action.webp" alt="Alta de administrador en e-Shield" /><figcaption>Alta de administrador en e-Shield</figcaption></figure>
+<p>El flujo recomendado para web es:</p>
+<ol><li>activar el teclado exterior</li><li>entrar al menu principal</li><li>abrir la configuracion de usuarios</li><li>seleccionar agregar administrador</li><li>registrar el metodo de acceso del administrador</li><li>guardar y probar el acceso</li></ol>
+<h2>5. Registrar PIN o contrasena</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-pin-use.webp" alt="Registro de PIN en e-Shield" /><figcaption>Registro de PIN en e-Shield</figcaption></figure>
+<p>Al documentarlo:</p>
+<ul><li>deja claro que el teclado esta en el modulo exterior vertical</li><li>evita mostrar una secuencia puntual como si fuera la clave oficial</li><li>recuerda probar la contrasena antes de cerrar el alta</li></ul>
+<h2>6. Registrar huellas y tarjetas</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-fingerprint-use.webp" alt="Registro de huella en e-Shield" /><figcaption>Registro de huella en e-Shield</figcaption></figure>
+<p>Para la web, resume este proceso asi:</p>
+<ol><li>entra al menu de usuarios</li><li>elige huella o tarjeta</li><li>sigue la captura o enrolamiento hasta la confirmacion</li><li>valida el acceso creado varias veces</li></ol>
+<h2>7. Ajustes del sistema e idioma</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-language-settings.webp" alt="Ajustes de e-Shield" /><figcaption>Ajustes de e-Shield</figcaption></figure>
+<p>Este recurso visual sirve para ajustes del sistema, idioma o configuraciones equivalentes. El texto tecnico o las rutas exactas deben permanecer en el contenido editorial, no dentro de la imagen.</p>
+<h2>8. App y gateway</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-app-add-device.webp" alt="Alta del dispositivo en e-Shield" /><figcaption>Alta del dispositivo en e-Shield</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-link-qr.webp" alt="Vinculacion contextual por QR en e-Shield" /><figcaption>Vinculacion contextual por QR en e-Shield</figcaption></figure>
+<p>Si la instalacion usa gateway, explica el flujo en dos capas:</p>
+<ul><li>gestion cercana por Bluetooth</li><li>funciones remotas y sincronizacion desde la app cuando el gateway esta activo</li></ul>
+<h2>9. Solucion de problemas</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-troubleshoot-fingerprint.webp" alt="Revision de huella en e-Shield" /><figcaption>Revision de huella en e-Shield</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-troubleshoot-app-connection.webp" alt="Revision de app en e-Shield" /><figcaption>Revision de app en e-Shield</figcaption></figure>
+<p>Usa este bloque para validar si el paquete visual comunica bien los dos tipos de falla mas comunes: biometria y conectividad remota.</p>
+<h2>10. Descargas y documentacion</h2>
+<figure class="manual-image"><img src="../assets/e-shield/review-draft/e-shield-downloads-docs.webp" alt="Soporte documental de e-Shield" /><figcaption>Soporte documental de e-Shield</figcaption></figure>
+<p>Esta imagen puede apoyar una futura seccion de ficha tecnica, instalacion y soporte comercial.</p>
+<h2>11. Estado del borrador</h2>
+<p>Este archivo es una version integral de revision. Los assets <code>review-draft</code> fueron reconstruidos bajo el reset visual 2026-05-13 y quedan listos para inspeccion antes de publicar el paquete final.</p>
+    </article>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Fuente y alcance real
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#3
+
+La fuente OCR disponible para app es breve.
+Su bloque util se resume en:
+- mini-programa de WeChat por QR
+- `Doodle` / `TUYA APP`
+- vinculacion de red `2.4G`
+- secuencia local sobre la cerradura para activar el alta en red
+
+Por eso este documento normaliza el flujo base, pero no pretende cubrir todos los modulos de la app.

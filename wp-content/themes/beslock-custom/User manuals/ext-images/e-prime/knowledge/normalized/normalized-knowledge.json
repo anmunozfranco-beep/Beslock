@@ -1,0 +1,1993 @@
+{
+  "product": "e-prime",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "entities": [
+    {
+      "id": "cap-objetivo",
+      "type": "capability",
+      "product": "e-prime",
+      "summary": "Explicar la vinculacion de e-Prime con red 2",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "Explicar la vinculacion de e-Prime con red 2.4G y app movil a partir de la fuente OEM disponible, sin mezclar este flujo con el manual de uso ni con el manual de instalacion."
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "cap-fuente-y-alcance-real",
+      "type": "capability",
+      "product": "e-prime",
+      "summary": "La fuente OCR disponible para app es breve",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "mini-programa de WeChat por QR",
+        "`Doodle` / `TUYA APP`",
+        "vinculacion de red `2.4G`",
+        "secuencia local sobre la cerradura para activar el alta en red"
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "proc-requisitos-antes-de-vincular",
+      "type": "procedure",
+      "product": "e-prime",
+      "summary": "- la cerradura debe tener al menos un administrador registrado",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "menu_path": "",
+      "preconditions": [],
+      "steps": [],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "wf-flujo-oem-base-de-vinculacion",
+      "type": "workflow",
+      "product": "e-prime",
+      "summary": "Segun la fuente OCR, el flujo local de referencia es:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device",
+        "user"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "en la cerradura, despierta la pantalla con `*+#`"
+        },
+        {
+          "n": 2,
+          "text": "verifica la informacion de administrador"
+        },
+        {
+          "n": 3,
+          "text": "presiona `2` para `wireless settings`"
+        },
+        {
+          "n": 4,
+          "text": "presiona `1` para `add network`"
+        },
+        {
+          "n": 5,
+          "text": "abre `TUYA APP` en el telefono"
+        },
+        {
+          "n": 6,
+          "text": "sigue el asistente de la app para completar la distribucion de red"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-alta-desde-la-app",
+      "type": "workflow",
+      "product": "e-prime",
+      "summary": "La guia OEM no muestra todos los textos internos de la aplicacion, asi que Beslock debe describir el flujo asi:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abre la app `TUYA`"
+        },
+        {
+          "n": 2,
+          "text": "elige agregar un nuevo dispositivo de cerradura inteligente"
+        },
+        {
+          "n": 3,
+          "text": "confirma la red `2.4G`"
+        },
+        {
+          "n": 4,
+          "text": "mantente cerca de la cerradura durante el proceso"
+        },
+        {
+          "n": 5,
+          "text": "completa el enlace y valida que el equipo aparezca en la cuenta"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "proc-validacion-despues-del-alta",
+      "type": "procedure",
+      "product": "e-prime",
+      "summary": "Despues de enlazar el equipo:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "menu_path": "",
+      "preconditions": [],
+      "steps": [],
+      "validation_checks": [],
+      "storage_bucket": "operation"
+    },
+    {
+      "id": "warning-limites-de-evidencia",
+      "type": "warning",
+      "product": "e-prime",
+      "summary": "- la fuente OEM disponible no detalla una guia extensa de modulos internos",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "severity": "caution",
+      "details": [
+        "la fuente OEM disponible no detalla una guia extensa de modulos internos",
+        "no hay suficiente evidencia aqui para describir historiales, usuarios remotos o automatizaciones avanzadas con el mismo nivel de certeza",
+        "la app debe presentarse en Beslock como `TUYA` con red `2.4G`, salvo que una validacion posterior del producto comercial confirme otra variante"
+      ],
+      "storage_bucket": "warning"
+    },
+    {
+      "id": "install-context-objetivo",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Ordenar la preparacion de puerta, el montaje de paneles y la validacion inicial de e-Prime usando las fuentes OEM disponibles sin mezclar instalacion con uso diario o app",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "Ordenar la preparacion de puerta, el montaje de paneles y la validacion inicial de e-Prime usando las fuentes OEM disponibles sin mezclar instalacion con uso diario o app."
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-que-vas-a-instalar",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "e-Prime es una cerradura de placa larga y delgada con:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "panel exterior brillante con keypad en la zona superior",
+        "manija recta centrada con aro azul en el hub",
+        "inserto oval inferior en la cara frontal",
+        "panel interior con compartimiento de baterias, perilla interior y boton `SET`"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Valida estas condiciones antes de montar:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "el producto usa cuerpo de cerradura y paneles delantero/trasero separados",
+        "el eje cuadrado debe sobresalir entre `10 y 30 mm` desde la superficie de la puerta",
+        "si el saliente real no cae en ese rango, el husillo debe recortarse o pedirse a medida",
+        "confirma mano de apertura y sentido de pestillo antes de fijar paneles"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "- guia OEM de instalacion disponible en `e-Prime_1",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "guia OEM de instalacion disponible en `e-Prime_1.pdf`",
+        "acceso a ambas caras y al canto de la puerta",
+        "herramientas compatibles con el cuerpo del cerrojo y los tornillos de montaje",
+        "4 pilas AA nuevas para la prueba inicial",
+        "llave mecanica de respaldo y acceso a fuente de 5V para emergencia"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-usar-la-guia-de-instalacion-disponible",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "![Guia de instalacion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-04",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "usa el PDF como referencia de secuencia y orientacion de piezas"
+        },
+        {
+          "n": 2,
+          "text": "no derives perforaciones finales a escala real desde una captura de este PDF"
+        },
+        {
+          "n": 3,
+          "text": "valida el sentido de apertura antes de cambiar direccion de manija o pestillo"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-preparar-la-puerta-y-el-cerrojo",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Secuencia base:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "ajusta la direccion del pestillo segun el metodo de apertura de la puerta"
+        },
+        {
+          "n": 2,
+          "text": "inserta el cuerpo del cerrojo en el hueco preparado"
+        },
+        {
+          "n": 3,
+          "text": "aprieta los tornillos de montaje del cuerpo del cerrojo"
+        },
+        {
+          "n": 4,
+          "text": "confirma que el pestillo corre libre antes de presentar los paneles"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-montar-el-panel-exterior-e-interior",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Orden practico de montaje:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "ajusta la direccion de la manija segun la apertura de la puerta"
+        },
+        {
+          "n": 2,
+          "text": "instala los pernos de montaje en el panel frontal y prepara el resorte de manija para el panel trasero"
+        },
+        {
+          "n": 3,
+          "text": "inserta el eje cuadrado y cortalo si el grosor real de la puerta lo exige"
+        },
+        {
+          "n": 4,
+          "text": "pasa el cable de datos por el orificio superior correspondiente"
+        },
+        {
+          "n": 5,
+          "text": "alinea el orificio cuadrado de la manija con el eje y presiona el panel frontal contra la puerta"
+        },
+        {
+          "n": 6,
+          "text": "conecta el cable de datos al panel trasero"
+        },
+        {
+          "n": 7,
+          "text": "alinea el panel trasero con el eje cuadrado y la barra de cerradura"
+        },
+        {
+          "n": 8,
+          "text": "aprieta los tornillos de montaje solo hasta poder corregir la alineacion fina"
+        },
+        {
+          "n": 9,
+          "text": "cuando el pestillo se mueva suavemente, completa el apriete final"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-cambio-de-direccion",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "![Cambio de direccion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-05",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "afloja el tornillo de cambio de direccion"
+        },
+        {
+          "n": 2,
+          "text": "gira la manija `180°` hacia la parte superior de la cerradura"
+        },
+        {
+          "n": 3,
+          "text": "gira el cambiador de direccion"
+        },
+        {
+          "n": 4,
+          "text": "vuelve a apretar el tornillo"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "afloja el tornillo de cambio de direccion",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "afloja el tornillo de cambio de direccion"
+        },
+        {
+          "n": 2,
+          "text": "gira la manija `180°` hacia la parte superior de la cerradura"
+        },
+        {
+          "n": 3,
+          "text": "gira el cambiador de direccion"
+        },
+        {
+          "n": 4,
+          "text": "vuelve a apretar el tornillo"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "empuja el interruptor de cambio hacia arriba",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "empuja el interruptor de cambio hacia arriba"
+        },
+        {
+          "n": 2,
+          "text": "presiona el pestillo"
+        },
+        {
+          "n": 3,
+          "text": "gira el pestillo `180°`"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-energia-e-inicializacion",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Para la prueba inicial:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "instala 4 pilas AA alcalinas de alto rendimiento"
+        },
+        {
+          "n": 2,
+          "text": "realiza la inicializacion para borrar datos de prueba de instalacion si el equipo es nuevo o ya fue manipulado"
+        },
+        {
+          "n": 3,
+          "text": "valida apertura por huella o por contrasena inicial solo como prueba tecnica local"
+        },
+        {
+          "n": 4,
+          "text": "coloca la tapa de baterias una vez que el movimiento mecanico y la verificacion sean correctos"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-validacion-despues-de-instalar",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Antes de cerrar el trabajo, valida:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "la manija trabaja sin friccion ni holgura excesiva",
+        "el pestillo corre libre y no roza",
+        "el panel exterior queda recto y estable",
+        "el panel interior no fuerza el cableado ni el eje cuadrado",
+        "la perilla interior, la llave mecanica y la energia de emergencia de `5V` siguen accesibles"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "warning-precauciones-clave",
+      "type": "warning",
+      "product": "e-prime",
+      "summary": "Segun la fuente corta en espanol:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "severity": "caution",
+      "details": [
+        "no cuelgues objetos en la manija",
+        "no presiones en exceso el lector de huellas al registrar usuarios",
+        "reemplaza las baterias al menos una vez cada seis meses para reducir riesgo de fuga",
+        "tras la primera alerta de bateria baja todavia puede haber alrededor de `100` aperturas disponibles, pero conviene cambiar las pilas de inmediato",
+        "despues de `5` intentos incorrectos consecutivos la cerradura puede quedar inoperable durante `90 segundos`"
+      ],
+      "storage_bucket": "warning"
+    },
+    {
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "Dentro del paquete Beslock de e-Prime, este documento convive con:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "`e-Prime user manual - image-ready.md`",
+        "`e-Prime - installation template standard.md`",
+        "`e-Prime - supplemental source review.md`",
+        "manual de app normalizado"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-estado-editorial",
+      "type": "installation-flow",
+      "product": "e-prime",
+      "summary": "La base de instalacion ya esta suficientemente soportada por `e-Prime_1",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#14"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "confirmar el patron exacto de perforacion con una plantilla 1:1 si el proveedor la entrega",
+        "validar en producto real la capacidad total final cuando la ficha corta y el manual largo no coinciden"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "term-tuya",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Plataforma OEM de aplicación móvil.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "TUYA",
+      "oem_variants": [
+        "TUYA",
+        "TUYA APP",
+        "Tuya"
+      ],
+      "definition": "Plataforma OEM de aplicación móvil.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-wechat",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Plataforma china de mini-programas usada como canal OEM.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "WeChat",
+      "oem_variants": [
+        "WeChat"
+      ],
+      "definition": "Plataforma china de mini-programas usada como canal OEM.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-2-4g",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Banda de red Wi-Fi requerida.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "2.4G",
+      "oem_variants": [
+        "2.4G",
+        "2.4 GHz",
+        "2.4Ghz"
+      ],
+      "definition": "Banda de red Wi-Fi requerida.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-qr",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Código gráfico de provisión.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "QR",
+      "oem_variants": [
+        "QR",
+        "código QR",
+        "codigo QR"
+      ],
+      "definition": "Código gráfico de provisión.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-pin",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Código numérico de acceso.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "PIN",
+      "oem_variants": [
+        "PIN",
+        "contraseña",
+        "contrasena",
+        "Contrasena"
+      ],
+      "definition": "Código numérico de acceso.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-huella",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Credencial biométrica dactilar.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "huella",
+      "oem_variants": [
+        "huella",
+        "fingerprint"
+      ],
+      "definition": "Credencial biométrica dactilar.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-administrador",
+      "type": "glossary-term",
+      "product": "e-prime",
+      "summary": "Usuario con permisos de gestión.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "administrador",
+      "oem_variants": [
+        "administrador",
+        "administrator",
+        "admin"
+      ],
+      "definition": "Usuario con permisos de gestión.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "ocr-ocr-z-1",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Z系列⽤户⼿册",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "⼀、产品布局：\n注：安装时请保持前后⾯板内部清洁\n前⾯板\n后⾯板\n内执⼿\n电池盒\n反锁旋钮\n固定螺丝孔\n复位按键\n联⽹模块(选配)\n电池盖\n数字密码按键\n刷卡区域\n指纹识别区\n外执⼿\n应急电源\n机械钥匙",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-user-manual-for-z-serials-2",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "User Manual For Z Serials",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "Ⅰ.Product Layout:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-battery-compartment-3",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Battery Compartment",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Maintenance",
+      "raw_text": "Note: Please keep the interior of the front and rear panels clean during installation",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-battery-cover-4",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Battery Cover",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Maintenance",
+      "raw_text": "⾯板与锁体安装步骤：\n1.调整锁⾆⽅向：根据开门⽅式更换锁体的锁⾆⽅向.\n2.锁体的安装:把锁体嵌⼊开好的锁体安装孔内,拧紧锁体安装螺丝.\n3.⾯板安装:\n①根据开门⽅向对锁具执⼿进⾏执⼿换向;\n②将安装螺柱安装到前⾯板上并将其拧紧,同时把执⼿塔簧塞进后⾯板;\n③把配件包中的⽅杆插⼊锁体的⽅孔内(⽅杆根据实际门厚进⾏裁剪);\n④数据连接线从上安装螺柱出的门孔穿过去,执⼿⽅孔与⽅杆对准,将前⾯板组\n件紧贴门⾯.\n⑤将数据连接线与后⾯板数据线插座对接.\n⑥后⾯板执⼿⽅孔对准⽅杆,锁尺对准锁体锁尺孔,将后⾯板组件紧贴内门⾯.\n⑦拧上⾯板安装螺丝直到⾯板稍微⽤⼒可挪动,若不顺畅则调整⾯板,锁⾆能顺\n畅活动后拧紧,⾯板安装螺丝\n⑧装上电池,尝试指纹开锁或者输⼊初始密码进⾏开锁验证,若锁⾆活动不顺畅\n则进⾏第⑦步,若验证没问题则将电池盖安装好,完成安装\n安装螺柱\n安装螺柱\n前⾯板组件\n锁尺(按需要长度裁剪)\n电池盖\n后⾯板组件\n安装螺丝",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-the-length-of-the-5",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "The Length Of The",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "square spindle\nprotruding from\nthe door surface\nshould be\nbetween 10 to\n30mm",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-for-door-6",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "For Door",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "thicknesses\nexceeding the\nspecified range\nof spindle\nprotrusion, a\ncustom-length\nspindle should\nbe ordered or the\nexisting spindle\nshould be\ntrimmed\naccordingly",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-sword-iron-make-on-demad-7",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Sword Iron(Make On Demad)",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Front Panel and Lock Body Installation Steps:\n1. Adjust the latch direction: Change the direction of the lock body's latch according to the door opening method.\n2. Lock body installation: Insert the lock body into the pre-drilled installation hole and tighten the lock body\nmounting screws.\n3. Front panel installation:\nAdjust the handle direction according to the door opening direction;\nInstall and tighten the mounting studs on the front panel, and insert the handle spring into the rear panel;\nInsert the square spindle from the accessory pack into the square hole of the lock body (cut the spindle to fit the\nactual door thickness);\nThread the data connection cable through the door hole from the upper mounting stud, align the handle's square\nhole with the spindle, and press the front panel assembly firmly against the door surface;\nConnect the data connection cable to the socket on the rear panel;\nAlign the rear panel handle's square hole with the spindle, align the lock bar with the lock body's bar hole, and\npress the rear panel assembly firmly against the inner door surface;\nTighten the panel mounting screws until the panel can be moved with slight force. If it's not smooth, adjust the\npanel. Once the latch moves smoothly, fully tighten the panel mounting screws;\nInstall the batteries and attempt to unlock using fingerprint or by entering the initial password for verification. If\nthe latch movement is not smooth, repeat step . If verification is successful, install the battery cover to complete\nthe installation.\n⼆.产品布局：",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-ic-8",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "█\u0001开门⽅式：指纹、密码、Ic卡、机械钥匙、微信⼩程序等多种开门⽅式，",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "带给您不⼀样的开门体验（具体配置以实物为准）;\n█\u0001指纹：采⽤先进的半导体传感器，360度识别⾓度、指纹采集⾯⼴，\n分辨率⾼，有效防⽌假指纹;\n█\u0001密码：采⽤时尚先进的触屏按键技术,可在正确密码前后增加12位⽆关\n密码,有效防⽌多⼈同⾏时输密码的尴尬;\n█\u0001双重验证模式：可设定指纹,密码和卡⽚两两组合验证开锁，设定后只\n有两个⽤户同时验证才可开门，适⽤特殊场合；\n█\u0001⽤户管理：管理员享有最⾼权限(普通⽤户只能开关门操作),可对锁进⾏\n编辑设置，管理员数量为9个(可为指纹、密码、卡⽚),总容量300个；\n█\u0001报警功能：本机有防翘报警,低压报警,试错报警;",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-5v-9",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "█\u0001备⽤供电：当电池耗尽时,使⽤5V移动电源即可对门锁应急供电;",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "三.注意事项：\n1.新锁安装后,应进⾏恢复初始化操作,清空因安装调试时录⼊的指纹;\n把⼿换向\n锁体换向\n1.松开执⼿换向螺丝；\n2.将执⼿沿锁具上⽅旋转180°\n3.旋转换向器\n4.固定换向螺丝完成换向\n1.往上拨动换向拨⽚；\n2.斜⾆按进去;\n3.旋转斜⾆180°换向;",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-do-not-remove-the-10",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Do Not Remove The",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "handle hole screws when\nchanging direction.\n1. Loosen the handle direction change screw;\n2. Rotate the handle 180° towards the top of the\nlock;\n3. Rotate the direction changer;\n4. Tighten the direction change screw to complete\nthe process.\n1. Push the direction change switch upwards;\n2. Press in the latch bolt;\n3. Rotate the latch bolt 180° to change direction;",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-changing-lock-body-direction-11",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Changing Lock Body Direction",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "II. Product Layout:\n■ Opening Methods: Multiple options including fingerprint, password, IC card, mechanical key,\nWeChat mini-program, etc., offering you a unique door-opening experience (specific configuration\nmay vary based on the actual product);\n■ Fingerprint: Utilizes advanced semiconductor sensors, 360-degree recognition angle, wide\nfingerprint capture area, high resolution, effectively preventing fake fingerprints;\n■ Password: Employs fashionable and advanced touchscreen button technology, allowing addition of\nup to 12 irrelevant digits before and after the correct password, effectively preventing awkward\nsituations when entering passwords in the presence of others;\n■ Dual Verification Mode: Can set combinations of two among fingerprint, password, and card for\nverification to unlock. Once set, only when two users verify simultaneously can the door be opened,\nsuitable for special occasions;\n■ User Management: Administrators have the highest authority (regular users can only open and close\nthe door), can edit lock settings, up to 9 administrators (can be fingerprint, password, card), total\ncapacity of 100 users;\n■ Alarm Functions: The device has anti-pry alarm, low voltage alarm, and error attempt alarm;\n■ Backup Power Supply: When batteries are depleted, a 5V power bank can be used for emergency\npower supply;\nIII. Precautions:\n1. After installing a new lock, perform initialization to clear any fingerprints entered during\ninstallation and debugging;\n2. The handle is a crucial component for opening and closing the door. Its flexibility directly\naffects the use of the door lock. Therefore, please refrain from hanging objects on the handle.\n3. When registering fingerprints, apply moderate finger pressure. Please avoid pressing too\nhard to prevent damage to the fingerprint scanner.\n4. The battery should not be used for an extended period. It is generally recommended to\nreplace the battery at least once every six months; otherwise, battery leakage may damage the\nsmart lock.\n5. This lock uses four AA (1.5V) high-performance alkaline batteries. When you receive the\nfirst \"Low battery, please replace\" warning, depending on the battery capacity, you can still\nopen the door approximately 100 times. At this point, you should replace the batteries\npromptly to avoid inconvenience due to battery depletion.\n6. After five consecutive incorrect inputs using any combination of fingerprint, card, or\npassword, an alarm will sound. The device will emit an alarm tone, and the door lock will be\ninoperable for 90 seconds.\nIV. User Guide:\n█\u0001Initialization Procedure:\nRemove the battery cover and press the \"SET\" button next to the battery co\nmpartment on the back panel for 5 seconds. A voice prompt will confirm \"I\nnitialization successful\".\n█\u0001Administrator Setup:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-wake-up-the-screen-by-12",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Wake Up The Screen By",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "pressing \"*+#\"",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-ic-card-13",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Ic Card",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Press \"4\" to add administrator\ninformation; you can register\nfingerprint, password, or card",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-operation-pr-14",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Successful Operation, Pr",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-14"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "ess \"*\" to return to the previo\nus level or continue adding a\ndministrators",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-in-normal-status-15",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "In Normal Status",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-15"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "\"*\" functions as Return/Exit/Delete key\n\"#\" functions as Confirm/Enter/Repeat v\noice broadcast key\n█\u0001Lock Settings:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-wake-up-the-screen-by-16",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Wake Up The Screen By",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-16"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "pressing \"*+#\"",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-adding-an-administrator-17",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Adding An Administrator,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-17"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "verification is required each time\nto access function management\nPress \"1\" for",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-function-settings-18",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Function Settings",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-18"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "Press \"3\" for",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-operation-19",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Successful Operation,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-19"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "press \"*\" to return to the p\nrevious level or continue\nwith other operations\nPress \"2\" for Volume",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-settings-20",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Settings",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-20"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "Press \"3\" to enter Lock Settings\nPress \"4\" for More",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-settings-21",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Settings",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-21"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "1. Enable Always Open Mode\n2. Enable Dual Verify\n3. Enable Anti-pry Alarm\n4. Enable mute\n1. Chinese Voice\n1.Volume Up\n2.Volume Down\n2. English Voice",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-select-the-appropriate-22",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Select The Appropriate",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-22"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "App Instructions",
+      "raw_text": "number key to complete\nsettings as per actual\nusage requirements",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-enter-time-23",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Enter Time",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-23"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Input \"Year",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-hour-minute-24",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Hour Minute",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-24"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "\", * to\ndelete, # to\nconfirm",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-select-the-appropriate-25",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Select The Appropriate",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-25"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "App Instructions",
+      "raw_text": "number key to complete\nsettings as per actual\nusage requirements",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-select-the-26",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Select The",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-26"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "appropriate\nnumber key to\ncomplete\nsettings as per\nactual\nusage\nrequirements",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-in-normal-status-27",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "In Normal Status",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-27"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "\"*\" functions as Return/Exit/Delete key\n\"#\" functions as Confirm/Enter/Repeat vo\nice broadcast key\n1. Time Setting\n2. Initialize System",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-confirm-28",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Confirm",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-28"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "whether to\ninitialize\nthe system,\n* to return,\n# to\nconfirm\n█\u0001User Settings:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-wake-up-the-screen-by-29",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Wake Up The Screen By",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-29"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "pressing \"*+#\"",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-adding-an-administrator-30",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Adding An Administrator,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-30"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "verification is required each time to\naccess function management\nPress \"1\" to add user infor\nmation; you can register fin\ngerprint, password, or card\nPress \"2\" to delete user inf\normation",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-operation-press-31",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Successful Operation, Press",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-31"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "\"*\" to return to the previous level\nor continue adding regular users",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-enter-the-fingerprint-password-32",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Enter The Fingerprint, Password,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-32"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "or card of the user to be deleted",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-after-successful-operation-press-33",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "After Successful Operation, Press",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-33"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "\"*\" to return to the previous level\nor continue deleting users\n█\u0001Restore Factory Settings:\nIn normal status:\n\"*\" functions as Return/Exit/Delete key\n\"#\" functions as Confirm/Enter/Repeat",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-press-and-hold-for-5-34",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Press And Hold For 5",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-34"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "seconds without\nreleasing\nvoice broadcast key\nOr initialize according to the operation by the Lock Settings.\n█\u0001Other Instructions:\n* Password anti-peeping function: When entering the password to open the door, input\nit in the following format: XXX password XXX. This allows you to add irrelevant digit\ns before and after the actual password, then press # to confirm. The correct password\nm ust be included within the entered sequence. The system will automatically exit if\nthere\n* After 5 consecutive incorrect password entries, the keyboard will be locked for 3 min\nutes. During this time, the system will not respond to any operations.\n's no operation for more than 10 seconds during any procedure.\n* When the voltage drops below 4.8V, an alarm will sound each time the lock is opene\nd. After this alarm begins, the door lock can be opened 100 more times. Beyond this li\nmit, the lock will be disabled. It is essential to replace the batteries before reaching thi s\nlimit.\nScan the QR code with WeChat to use the miniprogram for door opening.\nNote: The fingerprint lock time and administrator's numeric password must be set\nbefore use.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-doodle-app-download-installation-and-door-35",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Doodle App Download Installation And Door",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-35"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Installation",
+      "raw_text": "lock distribution network (2.4G)",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-sweep-36",
+      "type": "extracted-text",
+      "product": "e-prime",
+      "summary": "Sweep",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-prime/manual.json#section-36"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. A smart lock must have at least one administrator added\nbefore it can be connected to the network.\n2. On the smart lock, press \"*+#\" to verify administrator information press\n\"2\" for wireless settings press \"1\" to add network.\n3. Download and install the \"TUYA\" APP on your smartphone, then follow\nthe instructions in the image below.",
+      "storage_bucket": "extracted-text"
+    }
+  ]
+}

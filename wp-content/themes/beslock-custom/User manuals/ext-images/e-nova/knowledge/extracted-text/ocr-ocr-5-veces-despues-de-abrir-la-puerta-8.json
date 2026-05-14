@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "5 Veces Después De Abrir La Puerta.",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "3. Operaciones relacionadas con Tuya Smart\nNota: Si no hay ningún usuario registrado, cualquier huella dactilar puede\ndesbloquearlo.\n1. Descargue la Tuya Smart App desde el Mobile App Market (Mercado de\nAplicaciones Móviles)\n1. Descargue la Tuya Smart App desde el Mobile App Market (Mercado de\nAplicaciones Móviles)\n2. Abra el Bluetooth y la Ubicación del teléfono, y abra la Tuya Smart App\na + < Añad r disoosrtivo or\nFavoritos ocu tio abe Re = few sinh dae sonar a Begin oem\nAñadir manusimente\n1. Haga clic en \"Agregar Dispositivo\"\ny comience a conectar\nrad mo\nUs) Corpa, Cane\n(2) MA nea\n2. Conectando 3. Conexión exitosa 4. Ingrese a la página de\ninicio para agregar usuarios\noa e aida\nSEM 10 que quiere deseniazrar este\nIFDOSIVO y 1 mpar los catos?\nFingerprint 4 ns\nCars eae Ca\no: Contra do Ayuda\nCard Ansde a Laval de mo\nActual rac on de . pon\n5. Agregue o elimine miembros 6. Elimine el dispositivo 7. Confirmar desvinculación\no modifique nombres 1. Desvincular\n2. Desvincular y borrar daros\n4. Restablecimiento de Fábrica\nCómo restablecer y eliminar todos los usuarios\nMétodo 1.",
+  "storage_bucket": "extracted-text"
+}

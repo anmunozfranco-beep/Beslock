@@ -1,0 +1,351 @@
+{
+  "product_slug": "e-flex",
+  "product_display": "e-Flex",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "entries": [
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex - AI image prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/prompts/e-Flex - AI image prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex - image generation matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/generation-matrices/e-Flex - image generation matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex - implementation starter pack.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/automation/orchestrators/e-Flex - implementation starter pack.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex - installation template standard.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/automation/orchestrators/e-Flex - installation template standard.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex - supplemental source review.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/specifications/e-Flex - supplemental source review.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex app manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex installation manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex user manual - image-ready.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/manuals/e-Flex user manual - image-ready.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex user manual - review-draft.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/manuals/e-Flex user manual - review-draft.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex user manual.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Flex_1.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-Flex.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/e-Flex.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/e-flex-visual-profile.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/references/e-flex-visual-profile.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/notes.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/audit/legacy-pre-cutover-notes.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/ai-image-prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/prompts/ai-image-prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/image-generation-matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/generation-matrices/image-generation-matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/visual-validation.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/validations/visual-validation.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/image-production-status.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/qa/image-production-status.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/audit/legacy-visual-system-product/README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/generated/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/audit/legacy-visual-system-product/generated-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/generated/e-flex-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/outputs/generated/e-flex-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/generated/e-flex-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/outputs/generated/e-flex-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/generated/e-flex-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/visual-system/outputs/generated/e-flex-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-flex/generated/selected-assets-register.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/traceability/selected-assets-register.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/review-draft/e-flex-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/review-draft/e-flex-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/web-ready/e-flex-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/assets/e-flex/web-ready/e-flex-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-02.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-02.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-03.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-03.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-04.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-04.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-05.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-05.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-06.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-06.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-07.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-07.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/pdf-renders/e-flex-1/page-08.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-08.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-flex/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/audit/legacy-flat-files/assets-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/review-previews/e-flex-user-manual-review-draft.html",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/publishing/web/review-previews/e-flex-user-manual-review-draft.html",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

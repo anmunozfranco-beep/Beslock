@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-antistatic-ability-19",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Antistatic Ability",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-19"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "28KV (contact) >\n15KV(Non-contact type)\nnineteen\nstorage temperature\n-25°C ~ 80°C\ntwenty\noperation temperature\n-25°C ~ 70°C\ntwenty-one\nambient humidity",
+  "storage_bucket": "extracted-text"
+}

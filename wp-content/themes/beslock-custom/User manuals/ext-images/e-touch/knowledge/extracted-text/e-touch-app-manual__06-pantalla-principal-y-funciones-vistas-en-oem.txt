@@ -1,0 +1,14 @@
+# Pantalla principal y funciones vistas en OEM
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#6
+
+El OCR y la pagina suplementaria muestran estas familias de funciones:
+- `Unlocking Record`
+- `Smart Linkage`
+- `Settings`
+- gestion de miembros de familia y otros miembros
+- gestion de huellas
+- gestion de passwords
+- passwords temporales u offline
+
+La pagina debe presentar estas funciones como capacidades OEM observadas, no como promesa exacta de cada build comercial.

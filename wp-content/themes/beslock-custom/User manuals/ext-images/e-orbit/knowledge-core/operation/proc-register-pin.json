@@ -1,0 +1,43 @@
+{
+  "id": "proc-register-pin",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario -> Agregar administrador or Agregar usuario",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-pin"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar administrador or Agregar usuario",
+  "steps": [
+    "Enter Agregar usuario.",
+    "Choose the user type.",
+    "Select Contrasena.",
+    "Enter the PIN.",
+    "Confirm the PIN.",
+    "Save the enrollment.",
+    "Test the credential."
+  ],
+  "validation_checks": [
+    "The credential opens correctly.",
+    "The user remembers the credential.",
+    "The system accepts the credential consistently."
+  ]
+}

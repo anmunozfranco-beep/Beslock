@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-4-7-compartir-contrasenas-25",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "4.7 Compartir Contrasenas",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-25"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Los usuarios podrán compartir las contraseñas Pri\nque deseen a otros usuanos a través de sms. Comparte\nemail, whatsapp. etc En este . °\n5. Gestion de tarjetas RF\nPara agregar una tarjeta primero deberá dirigirse al apartado \"Tarjetas RF”, dar click en el botón\ninferior “Agregar tarjetas RF”. seleccionar el tiempo que desea activa la tarjeta RF. ponerle un\nnombre y presionar “Ok”\nPomo tens Lian\nO arega Torero RE\nLa cerradura le pedirá que coloque la tarjeta RF cerca del teclado. al quedar enlazada\ncorrectamente la cerradura le avisará. Finalmente. podrá modificar el nombre y ver los registros\nde la tarjeta desde la aplicación.\no La hoscor de em sor remola ce larjetas se muestra en caso de que exmla ia Gateway, sero s “o \"ay, e elemento se\nvar are oc. lo\n6. Gestión de huellas\nLa gestión de huellas dactilares es similar a la gestión de tarjetas RF. Para poder guardarla\ncorrectamente deberá presionar en 4 ocasiones la huella en el lector. Tras añadir una huella\ndactilar, podrá utilizarla para desbloquear la puerta\n7. Desbloqueo por Bluetooth\nLos usuarios de la aplicación podrán bloquear la\ncerradura a través de Bluetooth y también podrán\nenviar ekeys a cualquier persona\nTambién podrá desbloquear la cerradura a través de\nla aplicación haciendo clic en el botón con el símbolo\nde candado. mur\nO E B.eloolr bene un a carece de Brrelros favor de ut Zarla api cacor XxX\ndentro ce rango\n8. Gestión de asistencia\nLa aplicación cuenta con un control de acceso que también podrá utilizarse para la gestión de\nasistencia de las empresas La aplicación contiene funciones de gestión de empleados,\nestadisticas de asistencia y más\nTodas las cerraduras de puerta 3.0 tienen funciones de asistencia. La función de asistencia de\nla cerradura estará deshabilitada de forma predeterminada. El usuario podrá activarla o\ndesactivarla desde la aplicación en el apartado de configuración",
+  "storage_bucket": "extracted-text"
+}

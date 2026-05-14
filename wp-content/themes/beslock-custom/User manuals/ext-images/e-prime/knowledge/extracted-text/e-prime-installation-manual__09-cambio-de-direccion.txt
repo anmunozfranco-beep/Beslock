@@ -1,0 +1,27 @@
+# Cambio de direccion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9
+
+![Cambio de direccion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-05.png)
+
+
+## Cambio de direccion de la manija
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.1
+
+1. afloja el tornillo de cambio de direccion
+2. gira la manija `180°` hacia la parte superior de la cerradura
+3. gira el cambiador de direccion
+4. vuelve a apretar el tornillo
+
+
+## Cambio de direccion del cuerpo de cerradura
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.2
+
+1. empuja el interruptor de cambio hacia arriba
+2. presiona el pestillo
+3. gira el pestillo `180°`
+
+Nota critica:
+- no retires los tornillos del orificio de la manija al cambiar la direccion

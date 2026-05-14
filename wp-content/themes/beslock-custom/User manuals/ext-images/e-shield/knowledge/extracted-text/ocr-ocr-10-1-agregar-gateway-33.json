@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-10-1-agregar-gateway-33",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "10.1 Agregar Gateway",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-33"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "A Haga clic en “IM” de la esquina supenor izquierda y diríjase al\napartado “Gateway”\nB Para agregar el Gateway a la aplicación, haga clic en el “+” de\nla esquina superior derecha\nC Seleccione el Gateway que posee e introdu/a su clave de WiF 1 sna de\ny el nombre que desee ponerle al Gateway. después presione ON\n“siguiente”.\nD Siga las instrucciones de la aplicación para completar el enlace\nde any\nTras un breve penodo de tiempo, podrá visualizar los dispositivos que se encuentran cerca del\nalcance del Gateway. Una vez que la cerradura esté vinculada al Gateway, podrá ser gestionada\na través de este\nNem ore ve\nCato O)\nNa tee ge Salma\nAQ'egado exrtosamente",
+  "storage_bucket": "extracted-text"
+}

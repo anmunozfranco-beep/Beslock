@@ -1,0 +1,24 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "experience_priority_assignments_checked": 0,
+  "total_findings": 3,
+  "by_class": {
+    "onboarding-no-procedural-semantics": 1,
+    "warning-corpus-empty": 2
+  },
+  "findings": [
+    {
+      "class": "onboarding-no-procedural-semantics",
+      "product": "e-nova"
+    },
+    {
+      "class": "warning-corpus-empty",
+      "product": "e-nova"
+    },
+    {
+      "class": "warning-corpus-empty",
+      "product": "e-orbit"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "Knowledge evolves; lineage does not break.",
+    "Every artifact has a lifecycle stage; no artifact is stage-less.",
+    "Promotion is gated, evidenced, and reviewed; never implicit.",
+    "Deprecation is recorded, never silent; archival is the only terminal state.",
+    "Versioning is explicit on every axis; breaking changes emit impact reports.",
+    "Health monitoring is continuous; critical indicators have zero tolerance.",
+    "Human review is mandatory at verified-truth and at safety-critical promotions.",
+    "Knowledge debt is named, owned, and closed only by an explicit event.",
+    "Governance is additive and subordinate to the knowledge-core."
+  ],
+  "authority_areas": [
+    "lifecycle-stages",
+    "promotion-governance",
+    "deprecation-governance",
+    "versioning-governance",
+    "knowledge-health",
+    "review-governance",
+    "change-impact",
+    "knowledge-debt",
+    "long-term-architecture",
+    "future-readiness"
+  ]
+}

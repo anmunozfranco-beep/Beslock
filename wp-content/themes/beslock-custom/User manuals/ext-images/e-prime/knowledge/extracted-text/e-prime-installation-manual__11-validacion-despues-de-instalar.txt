@@ -1,0 +1,10 @@
+# Validacion despues de instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#11
+
+Antes de cerrar el trabajo, valida:
+- la manija trabaja sin friccion ni holgura excesiva
+- el pestillo corre libre y no roza
+- el panel exterior queda recto y estable
+- el panel interior no fuerza el cableado ni el eje cuadrado
+- la perilla interior, la llave mecanica y la energia de emergencia de `5V` siguen accesibles

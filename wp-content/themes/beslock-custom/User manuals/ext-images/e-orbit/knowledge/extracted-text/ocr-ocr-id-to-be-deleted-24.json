@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-id-to-be-deleted-24",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Id To Be Deleted",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-24"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Delete Success\"\n3.System settings\n(1) datetime settings\nVoice announcement:\"Please\nenter the datetime\" (input\ntime format is: year month\nhour minute)\nAfter successful networking, voice broadcast:\n\"Success\"\n3.System\n1.datetime\nsettings\nsettings\n(2) Installation settings\n@Door opening direction setting\n3.System settings\n2.Installation settings\n1.Opening direction [L]\nNote: The direction of opening the door is in the direction of opening the lock outside the door.\n@Auto-lock\n3.System settings\n2.Installation settings\n2.Delayed lock [N]\nNote: Delayed locking refers to setting a fixed anti lock time. Users can choose the locking time: 10S, 15S, 20S,\n30S, 60S, 1205.\n@Lock settings\n-Tamper Alarm\n3.System\n2.Installation\nTam\n3.Lock settings\n1.Tamper Alarm [N\nsettings\nsettings\nIN]\nNote: After activating the anti tamper alarm, if the door lock is tampered with, the system will issue an alarm\nprompt: \"Illegal user, illegal intrusion, owner notified\". If the device is connected to the network, it will push\nalarm information to the phone.\n-Motor Torque\n3.System\n2.Installation\nmE\n> e ~~ pe\nNote: Motor torque is specific to the strength of the motor's torque.\n-Lock back time\n3.System\n2.Installation\n3.Lock settings\n4.Dwell Alert [20s]\nNote: Within 1 minute, if\na human body is detected for a total of 20 seconds, a stay alarm will be triggered.\nThe pushed network devices will not receive sound and light alarms by default.\n@Face recognition settings\n-Lock back time\n3.System\n2.Installation\n4.Face recogni-\n1.Auto Detect [Y]\nsettings\nsettings\ntion settings\nNote: 1. Classification of human sensory function:\n-Human body sensing [off]: The intelligent door lock will not engage in human body sensing in standby\nmode.\n-Human body sensing [intelligence]: The intelligent door lock will not engage in human body sensing when\nthe door is opened.\n-Human body sensing [open]: In any state, the intelligent door lock will undergo human body sensing.\n2.lf there are 10 consecutive awakenings and no facial recognition is detected, human sensing will be turned\noff by default for 5 minutes.\n2.-Detection distance\n3.System\n2.Installation\niti\n2Detection distance [M\nNote:Detection distance[Near]: About 30~50cm; Detection distance[Medium]: 50~70cm; Detection distance[Far]: 70~80cm.\n(3) Function settings\n@Network configuration",
+  "storage_bucket": "extracted-text"
+}

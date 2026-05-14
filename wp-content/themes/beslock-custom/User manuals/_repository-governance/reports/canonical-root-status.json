@@ -1,0 +1,19 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:59:53Z",
+  "target_root_directories": [
+    "ext-images/",
+    "KNOWLEDGE_BUILDING/",
+    "_repository-governance/",
+    "shared/",
+    "runtime/"
+  ],
+  "remaining_root_md_or_json": [
+    "README.md"
+  ],
+  "expected_remaining": [
+    "README.md"
+  ],
+  "is_clean": true,
+  "notes": "Target directories ext-images/, KNOWLEDGE_BUILDING/, _repository-governance/ currently live under wp-content/themes/beslock-custom/User manuals/ (canonical Beslock layer). shared/ and runtime/ are deferred to a separate phase and are not created here."
+}

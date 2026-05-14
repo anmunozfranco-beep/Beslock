@@ -1,0 +1,6 @@
+# Renders generados
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#4
+
+- `pdf-renders/e-orbit-2/page-01.png` a `pdf-renders/e-orbit-2/page-17.png`
+- `pdf-renders/e-orbit-2/contact-sheet.png`

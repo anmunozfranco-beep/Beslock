@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:59:53Z",
+  "planned_moves": 31,
+  "executed_moves": 31,
+  "skipped_moves": 0,
+  "failed_moves": 0,
+  "remaining_loose_root_md_or_json": [
+    "README.md"
+  ],
+  "score": 1.0,
+  "interpretation": "1.0 = every planned md/json move executed. <1.0 means some moves were skipped (collision or source missing) and require manual review."
+}

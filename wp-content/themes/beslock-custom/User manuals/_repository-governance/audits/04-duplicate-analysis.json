@@ -1,0 +1,1358 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:46:30Z",
+  "policy": "Duplicates are reported only — never silently merged. Conflicting manifests must be reconciled by a human.",
+  "duplicate_groups": [
+    {
+      "md5": "7329598ef1c71f43a7a3458df21f8cce",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260511T222642Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T223305Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T223445Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T223458Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T224208Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T224805Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T224819Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260511T225131Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T060234Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T062359Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T063933Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T162416Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T180033Z/manifest.snapshot.json"
+      ],
+      "count": 13
+    },
+    {
+      "md5": "6dd1c8c2994bdf43dcde25d5700f645a",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/README.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/README.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/README.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/README.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/README.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/README.md"
+      ],
+      "count": 6
+    },
+    {
+      "md5": "3e2d394c2090f95d5c5f37b82697f493",
+      "paths": [
+        "output/visual-generation/manifests/e-flex-generation-manifest.json",
+        "output/visual-generation/runs/e-flex/20260512T212919Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-flex/20260512T213321Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-flex/20260512T214807Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-flex/20260512T230727Z/manifest.snapshot.json"
+      ],
+      "count": 5
+    },
+    {
+      "md5": "c6a82c971bb4a2b1e18743faa7da53e3",
+      "paths": [
+        "output/visual-generation/manifests/e-orbit-generation-manifest.json",
+        "output/visual-generation/runs/e-orbit/20260512T213342Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T220606Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-orbit/20260512T235523Z/manifest.snapshot.json"
+      ],
+      "count": 4
+    },
+    {
+      "md5": "52f8efbde052f5c13409c39573974948",
+      "paths": [
+        "output/visual-generation/manifests/e-prime-generation-manifest.json",
+        "output/visual-generation/runs/e-prime/20260512T213353Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-prime/20260512T221426Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-prime/20260513T001212Z/manifest.snapshot.json"
+      ],
+      "count": 4
+    },
+    {
+      "md5": "31bdae5398b3fd3917e8b5cdf043ddb3",
+      "paths": [
+        "output/visual-generation/manifests/e-touch-generation-manifest.json",
+        "output/visual-generation/runs/e-touch/20260512T213404Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-touch/20260512T222234Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-touch/20260513T005523Z/manifest.snapshot.json"
+      ],
+      "count": 4
+    },
+    {
+      "md5": "c364bd91e8d842954a57c99aeb738b19",
+      "paths": [
+        "output/visual-generation/manifests/e-shield-generation-manifest.json",
+        "output/visual-generation/runs/e-shield/20260512T213331Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-shield/20260512T215756Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-shield/20260513T003334Z/manifest.snapshot.json"
+      ],
+      "count": 4
+    },
+    {
+      "md5": "33cea0f6153d518ebd49bbc8c37604f7",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260511T224819Z/candidates/e-orbit-hero-main/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260511T225131Z/candidates/e-orbit-hero-main/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T060234Z/candidates/e-orbit-hero-main/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T062359Z/candidates/e-orbit-hero-main/v01/workflow.rendered.json"
+      ],
+      "count": 4
+    },
+    {
+      "md5": "9a7fc05c901a55dcd1be1035aca1fe65",
+      "paths": [
+        "output/visual-generation/manifests/e-nova-generation-manifest.json",
+        "output/visual-generation/runs/e-nova/20260512T201850Z/manifest.snapshot.json",
+        "output/visual-generation/runs/e-nova/20260512T232915Z/manifest.snapshot.json"
+      ],
+      "count": 3
+    },
+    {
+      "md5": "c292f076a99cc1809f4b693619a62a71",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/repo_portfolio/products.json",
+        "wp-content/themes/beslock-custom/products.json",
+        "wp-content/themes/beslock-custom/repo_portfolio/products.json"
+      ],
+      "count": 3
+    },
+    {
+      "md5": "c06da42ed0158402a66ba45f09e0a7e8",
+      "paths": [
+        "output/visual-generation/runs/e-prime/20260512T213353Z/candidates/e-prime-add-admin-action/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-prime/20260512T221426Z/candidates/e-prime-add-admin-action/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2ac584d548b84ac0ef6ad9c3f266d050",
+      "paths": [
+        "output/visual-generation/runs/e-prime/20260512T213353Z/candidates/e-prime-add-admin-action/v03/workflow.rendered.json",
+        "output/visual-generation/runs/e-prime/20260512T221426Z/candidates/e-prime-add-admin-action/v03/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "538deb50810d0e76a42385d53b664896",
+      "paths": [
+        "output/visual-generation/runs/e-prime/20260512T213353Z/candidates/e-prime-add-admin-action/v02/workflow.rendered.json",
+        "output/visual-generation/runs/e-prime/20260512T221426Z/candidates/e-prime-add-admin-action/v02/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c84c97450495d22e1b44b01eea1edfee",
+      "paths": [
+        "output/visual-generation/runs/e-prime/20260512T213353Z/candidates/e-prime-pin-use/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-prime/20260512T221426Z/candidates/e-prime-pin-use/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "5bd4b06c854fa4e6c2514ad296d1ce7f",
+      "paths": [
+        "output/visual-generation/runs/e-touch/20260512T213404Z/candidates/e-touch-add-admin-action/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-touch/20260512T222234Z/candidates/e-touch-add-admin-action/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "aafb57b359e8912e2d1dff4ae62d25d3",
+      "paths": [
+        "output/visual-generation/runs/e-touch/20260512T213404Z/candidates/e-touch-add-admin-action/v03/workflow.rendered.json",
+        "output/visual-generation/runs/e-touch/20260512T222234Z/candidates/e-touch-add-admin-action/v03/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e97b9afd3c29f55001d63321d04777c0",
+      "paths": [
+        "output/visual-generation/runs/e-touch/20260512T213404Z/candidates/e-touch-add-admin-action/v02/workflow.rendered.json",
+        "output/visual-generation/runs/e-touch/20260512T222234Z/candidates/e-touch-add-admin-action/v02/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f4b0a2c76777796c3461c84239f70e60",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260512T213342Z/candidates/e-orbit-add-admin-action/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T220606Z/candidates/e-orbit-add-admin-action/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "d98709885a1124d6532954d9fb09f212",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260512T213342Z/candidates/e-orbit-add-admin-action/v03/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T220606Z/candidates/e-orbit-add-admin-action/v03/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "81135473b5ce9e5ce464836537fb44fa",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260512T213342Z/candidates/e-orbit-add-admin-action/v02/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T220606Z/candidates/e-orbit-add-admin-action/v02/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e28c778279eca09b4921c8ef3fb38258",
+      "paths": [
+        "output/visual-generation/runs/e-orbit/20260512T213342Z/candidates/e-orbit-pin-use/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-orbit/20260512T220606Z/candidates/e-orbit-pin-use/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "8c8eaf8364018b1437c16ec0486e897e",
+      "paths": [
+        "output/visual-generation/runs/e-shield/20260512T213331Z/candidates/e-shield-add-admin-action/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-shield/20260512T215756Z/candidates/e-shield-add-admin-action/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "5cba715daf45110c7f4fdc0097ae4ad2",
+      "paths": [
+        "output/visual-generation/runs/e-shield/20260512T213331Z/candidates/e-shield-add-admin-action/v03/workflow.rendered.json",
+        "output/visual-generation/runs/e-shield/20260512T215756Z/candidates/e-shield-add-admin-action/v03/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "eeb014ce03f2c095347abeb67ac7aa0b",
+      "paths": [
+        "output/visual-generation/runs/e-shield/20260512T213331Z/candidates/e-shield-add-admin-action/v02/workflow.rendered.json",
+        "output/visual-generation/runs/e-shield/20260512T215756Z/candidates/e-shield-add-admin-action/v02/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "28f1db6304426459663f4c7c53cb375d",
+      "paths": [
+        "output/visual-generation/runs/e-shield/20260512T213331Z/candidates/e-shield-pin-use/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-shield/20260512T215756Z/candidates/e-shield-pin-use/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "cd29518121188cd585317364b12c340a",
+      "paths": [
+        "output/visual-generation/runs/e-flex/20260512T213321Z/candidates/e-flex-language-settings/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-flex/20260512T214807Z/candidates/e-flex-language-settings/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "faeec0231b74f7c346472a1cb7edd5f9",
+      "paths": [
+        "output/visual-generation/runs/e-flex/20260512T213321Z/candidates/e-flex-pin-use/v01/workflow.rendered.json",
+        "output/visual-generation/runs/e-flex/20260512T214807Z/candidates/e-flex-pin-use/v01/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "806379a7490f21ec27a02033d54f90e7",
+      "paths": [
+        "output/visual-generation/runs/e-flex/20260512T213321Z/candidates/e-flex-pin-use/v03/workflow.rendered.json",
+        "output/visual-generation/runs/e-flex/20260512T214807Z/candidates/e-flex-pin-use/v03/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "0287271847bc88ce0915d4d240b1196d",
+      "paths": [
+        "output/visual-generation/runs/e-flex/20260512T213321Z/candidates/e-flex-pin-use/v02/workflow.rendered.json",
+        "output/visual-generation/runs/e-flex/20260512T214807Z/candidates/e-flex-pin-use/v02/workflow.rendered.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "67442c5615eba73d105c0715c6620850",
+      "paths": [
+        "wp-content/index.php",
+        "wp-content/themes/index.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e1018fd257111d607c53356c593523ec",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/index.php",
+        "wp-content/themes/beslock-custom/index.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "fae6c8a7229a942c86737662fc3b77c0",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/HEADER-FIX.md",
+        "wp-content/themes/beslock-custom/HEADER-FIX.md"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "17d6738c764de15a688634584601a1cd",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/page.php",
+        "wp-content/themes/beslock-custom/page.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "51475837c4968b15c7b1afd4abc208c1",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/front-page.php",
+        "wp-content/themes/beslock-custom/front-page.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "698bedd6d10dbb3e2e90c47e248172a5",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e873e6f754b149e6eb5abe64924ba17b",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "9d086c6338d34fadecc21a23b65c8614",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-installation-flow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-installation-flow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "9a5b479892346ef64bff8f561d6521bf",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-procedure.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-procedure.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "86131969f884d06bad68420d995273a5",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-glossary-term.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-glossary-term.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4be623c056cb6a0f13d428f939c106e7",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-warning.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-warning.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "d679cb74454715f27f5d7456dabad857",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-workflow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-workflow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "dce494a8d67920952e505f04d6b9d206",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "5064debf1e72b03c1ddddbfccde51920",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/legacy-indexes/by-type-capability.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/semantic-index/by-type-capability.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e843269721366ffc18fdfc6847f4fecc",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "86bd9da8c91030560be070b376b08da7",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3d8cf2fa275f9e373a2e1fe61f0839ae",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3d24bb804f873b79cc1fb587ac344f9d",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c460ee10b96d42b9e8a46d1d93fd2ef6",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4823ae6dbd5b0025250f7514ffaf694b",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "827c57299d16701ec06f5b32c2b33277",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3b4964eedbd85b1e5f722840ac110986",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "a744466decb6fe9ca5178d61ff03c595",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4c855f4a19a93dad7a8c144e80294ef0",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "32c510f9c16b1abf338bc5f1f741d8be",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "062c77dc6904248b93282a447f5bcf38",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-installation-flow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-installation-flow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4ff33cf17d2cc6d36f12ea0e7b9868fe",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-procedure.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-procedure.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6377e80f13444fa05fb996dc327e83da",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-glossary-term.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-glossary-term.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6afa34f10c1491148bd596f6b3c18e96",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-warning.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-warning.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4b3d541832e8532cb2a89bbcf7ca6833",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-workflow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-workflow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4261a4ce3df64ad582d757f836f818b9",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2331b0aeae6e94efd38c2c5f3aa958aa",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/legacy-indexes/by-type-capability.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/semantic-index/by-type-capability.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "49cca6802fccf117eb565a3fe458f07e",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "bebe691a8534e284a1b3ddbc0b3a396d",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "381741d5a4ca6bc38ac207905bfce4e9",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6479c9e9d7664a645fdb2fd760299638",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "dac67c01d4bd8fb23b91e3efdbfd09af",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f2666afb0450bd012c071fe62f274833",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4ec84775557ab8b55a2a2e6b36e79dd3",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-installation-flow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-installation-flow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "9e780d15fcf8e0c89248e170f2acc79a",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-procedure.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-procedure.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "1f14de3891ea76c7d8cafd4616caa191",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-glossary-term.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-glossary-term.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "939242b7f60c09e6ba33fa13fbbd4811",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-troubleshooting.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-troubleshooting.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "25cf97b19a0e4226649b3d80cb31a721",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-workflow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-workflow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3e0edd8aae3a9999eaced110b469b2e5",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "098576517dccd1b12f4978b22e3ba84b",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/legacy-indexes/by-type-capability.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/semantic-index/by-type-capability.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "27a3b23ddb2f8b9d98b0795f06c9e5b8",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "a1710c3fd9d63727f0ea8756b4cc0524",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c572499f02b241df286a7a2bdcbca251",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/semantic/relationships/legacy-legacy-structured-knowledge-reconciliation.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/relationships/legacy-structured-knowledge-reconciliation.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "bf75145e7d4524273ecf408f744b9554",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f4c5114d6dda6dfb4f887180c812b99b",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/metadata/audit/legacy-visual-system-product/image-production-status.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/visual-system/qa/image-production-status.md"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "94bd60c71cacfcbdc369d37376e7b08e",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/metadata/audit/legacy-visual-system-product/generated/selected-assets-register.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/metadata/traceability/selected-assets-register.md"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6e1401303a3fa8ad988353f528dd75ad",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "ffb9e22fde06220a9b9b2dc38da7444a",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "fcf8a6b2a03352503c41899838d827c9",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-installation-flow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-installation-flow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "55f2763de9c8a50bd85310ca3099707a",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-glossary-term.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-glossary-term.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "9dcf9769af253674cd74a5b2bfc2ff18",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-troubleshooting.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-troubleshooting.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "516794caee63e143cbbf4dbc8545ba3b",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-warning.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-warning.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3e45a817bb27361af4459b482436a079",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-workflow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-workflow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "19280bfef6ca761311136c79e3e07448",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "41d556a603f2b7c498fc077749cbb3d8",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/legacy-indexes/by-type-capability.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/semantic-index/by-type-capability.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "89728f8c348a8d96833ae49f058ee4cf",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6ecb4884cbccb6912b8a6161ab0e06f9",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "ff745dfa2f185b213e55660a764332c0",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4297647b94d1afc9d6a45cfe9dddf430",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-normalized.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/normalized/normalized-knowledge.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "7e4c552ecdd7c54136880392883e9efc",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-extracted-text.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-extracted-text.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "5dc5da28d1cfb70103d1b5762b52fd8a",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-installation-flow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-installation-flow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "78dcf57db78cbbf5ad9568d69366fc04",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-procedure.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-procedure.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "12f7e8b80d9e77e903cf5b4fa2159262",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-glossary-term.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-glossary-term.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "7181126a82dfb32219d173344bdf31c7",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-warning.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-warning.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "86666493c608dd0cf020e8e88923125f",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-workflow.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-workflow.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "d9e6acaf6f117da9e14cc27478103a93",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/index.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/index.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "86015f1a0f3b748ff5c12dab7a09167d",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/legacy-indexes/by-type-capability.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/semantic-index/by-type-capability.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "7b0244f33568056b7eb063c388d8ebc4",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/relationships/legacy-cross-references.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/relationships/cross-references.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "df3e8c9b5b5456c02e9d65e229b13376",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/relationships/legacy-manual-overrides.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/relationships/manual-overrides.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "cc4c001156610205b7e10bdfd4c755c4",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/entities/legacy-manifest.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge/entities/manifest.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "22a401c8db04fe45d245aaea4e9a1c79",
+      "paths": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "987d3732b1a7b7cb99844e3b74f7ac2a",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cart-item-data.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cart-item-data.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "18840c0ed8287ae7c3c9e2c759ca0f49",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cart.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cart.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3d943e3871073cd5cdd28c9312f00bb8",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cart-shipping.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cart-shipping.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2121fe7243134721dcedd422c89a6b75",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cart-empty.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cart-empty.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c2d2dfbd483f75224706fa00a91af8a3",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/shipping-calculator.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/shipping-calculator.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "114c0affba23d8320ef34c7eaa00f4a5",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cart-totals.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cart-totals.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "b173723517f236bd51449024bfcece45",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/mini-cart.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/mini-cart.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "0376771596a2d11547a79b75d5116e53",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/cross-sells.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/cross-sells.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3931064f46a8691674c68bf9b75169bf",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/woocommerce/cart/proceed-to-checkout-button.php",
+        "wp-content/themes/beslock-custom/woocommerce/cart/proceed-to-checkout-button.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "84bc35b923e3dde2a60d382927bee3d6",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/cleanup-kadence.php",
+        "wp-content/themes/beslock-custom/inc/cleanup-kadence.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2cde55738367acaaa1de2f8b173abd75",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/woocommerce.php",
+        "wp-content/themes/beslock-custom/inc/woocommerce.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "7fe2a2b556e149829ebefb70f19968ea",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/enqueue-assets.php",
+        "wp-content/themes/beslock-custom/inc/enqueue-assets.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "b1701e860eb21bdb9fb0aaa9ca5a5941",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/debug.php",
+        "wp-content/themes/beslock-custom/inc/debug.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "49d5f0906dba3849e3b5a1dbb018cae2",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/header-widget.php",
+        "wp-content/themes/beslock-custom/inc/header-widget.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "ab6d1cc94b5ef19db1b4cde0c17ba81e",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/admin-tools.php",
+        "wp-content/themes/beslock-custom/inc/admin-tools.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "bd9f88379870f10cc6f6755acad62a5f",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/woocommerce/cart.php",
+        "wp-content/themes/beslock-custom/inc/woocommerce/cart.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "ff447198840bdcb87a095753186cc2b4",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/woocommerce/product-hooks.php",
+        "wp-content/themes/beslock-custom/inc/woocommerce/product-hooks.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "61dabc9f45adde6d6181fa98a6cd843d",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/woocommerce/setup.php",
+        "wp-content/themes/beslock-custom/inc/woocommerce/setup.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "138cf5314963e15627eaed4fe0092025",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/core/setup.php",
+        "wp-content/themes/beslock-custom/inc/core/setup.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "1bb52c2a1a9d3ae79fdff14f46c811d9",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/features/product-features.php",
+        "wp-content/themes/beslock-custom/inc/features/product-features.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c1dc0e4d818ce8542f29627dafd67978",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/features/header.php",
+        "wp-content/themes/beslock-custom/inc/features/header.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "8d703253e0e64c0d0d21b84ff8e670f8",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/admin/importer.php",
+        "wp-content/themes/beslock-custom/inc/admin/importer.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2ce6d6aedb29da087a3c1ddb44ebd728",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/admin/tools.php",
+        "wp-content/themes/beslock-custom/inc/admin/tools.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "14ae2995b0f7903cfce2701f79d9dbc0",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/integrations/kadence-cleanup.php",
+        "wp-content/themes/beslock-custom/inc/integrations/kadence-cleanup.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f9d816c98d898e6ef7a17926c82a061c",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/inc/debug/debug.php",
+        "wp-content/themes/beslock-custom/inc/debug/debug.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "54a4c78dd13c3dc8f9b5db5925e86ef1",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/docs/feature-cleanup.md",
+        "wp-content/themes/beslock-custom/docs/feature-cleanup.md"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "1bd2498beef5ce696b1afc1d7fcb7dad",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/docs/BEM-hero-changes.md",
+        "wp-content/themes/beslock-custom/docs/BEM-hero-changes.md"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "1e4d17203cab1338a99765e4ed1599ee",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/template-parts/product-features.php",
+        "wp-content/themes/beslock-custom/template-parts/product-features.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "86aa3c0812f4f1901ce712c9e89a273c",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/template-parts/content/archive_hero.php",
+        "wp-content/themes/beslock-custom/template-parts/content/archive_hero.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "971a7287cfd51a1ff0fef56dddd5c124",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/template-parts/header/header-widget.php",
+        "wp-content/themes/beslock-custom/template-parts/header/header-widget.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6563d65b0eb031c6bde2ae851bdc2c34",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/scripts/fix-placeholder-images.php",
+        "wp-content/themes/beslock-custom/scripts/fix-placeholder-images.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "a4d80719557f83233bfbd8938640e343",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/scripts/apply_products_short_descriptions.php",
+        "wp-content/themes/beslock-custom/scripts/apply_products_short_descriptions.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "780b4da3de3e8ef8a2563cf40d38002f",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/scripts/CSV_portfolio_generator.php",
+        "wp-content/themes/beslock-custom/scripts/CSV_portfolio_generator.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f65327ddc17bd4a09f0b0930ed2fb06a",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/scripts/set_post_excerpts_from_products.php",
+        "wp-content/themes/beslock-custom/scripts/set_post_excerpts_from_products.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "02b5b0bb2d9cf9e15a48dd75d4b5aa92",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/scripts/run_carga_dry.php",
+        "wp-content/themes/beslock-custom/scripts/run_carga_dry.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "dfd79581909b23c15e3701172ee89280",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/templates/blocks/products-portfolio.php",
+        "wp-content/themes/beslock-custom/templates/blocks/products-portfolio.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "304bf900fa80435b81751dc27c491508",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/templates/blocks/discover.php",
+        "wp-content/themes/beslock-custom/templates/blocks/discover.php"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "a282da555b9bf3d111cc5e1246c6c73e",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/data/products.json",
+        "wp-content/themes/beslock-custom/data/products.json"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c6734660d605c1e5bfaa8c19b23bd057",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Layout-product.jpeg",
+        "wp-content/themes/beslock-custom/assets/images/Layout-product.jpeg"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "ff07360a32ecd082e4c53739a93807cf",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/discover.png",
+        "wp-content/themes/beslock-custom/assets/images/discover.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "a5c3d09705669e9bb14c1db15b39002e",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/e-orbit_.png",
+        "wp-content/themes/beslock-custom/assets/images/e-orbit_.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "c4dee72eda6c44ec332f437ad4bc23f1",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Favicon_Beslock.png",
+        "wp-content/themes/beslock-custom/assets/images/Favicon_Beslock.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "1699e1a76bda33bd4ee593bdfb189104",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/instal.png",
+        "wp-content/themes/beslock-custom/assets/images/instal.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "081f461ce2ce351a41ade56eb56de381",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/logo-white.png",
+        "wp-content/themes/beslock-custom/assets/images/logo-white.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "d46966f3802146a992e8e1a6955b58b9",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/logo-green.png",
+        "wp-content/themes/beslock-custom/assets/images/logo-green.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "2890bcbb84205e93f466049c92d43107",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Icons/Screenshot 2026-04-27 at 18.11.41.png",
+        "wp-content/themes/beslock-custom/assets/images/Icons/Screenshot 2026-04-27 at 18.11.41.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6ce650d139ce590a17cd87588cb22808",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-nova_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-nova_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "4b2f4e5f6629c8b19d54edaa6af801fe",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "7e88d29fe7faa9791a2ef7cd62b41c40",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-flex_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-flex_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "5a57d4365d7388a7f07266c293fb5454",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-shield_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-shield_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "b96a77b2b1c07e370f0d0cba8b8bef00",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-prime_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-prime_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "98c82cfda07ed9d9ea02f1ace08ceb69",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-touch_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-touch_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "d1a5894f0215de413f8a09cd0c1de235",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/e-orbit_hero.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/e-orbit_hero.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "cf6640a5e59448cab2beab71741055a5",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-touch_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-touch_d.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "e778153914b339d859b04928afe2aa88",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-orbit_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-orbit_d.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "f9db15fa77cd3a274f79fb36379ce679",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-shield_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-shield_d.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "6602454c645731e47ac1901b972859c2",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-prime_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-prime_d.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "9ff69d1303e3bf04655e1cbd4a14998d",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-nova_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-nova_d.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "dcd564f4e931042810c11f0dcb8f9aeb",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-orbit_d_2.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-orbit_d_2.png"
+      ],
+      "count": 2
+    },
+    {
+      "md5": "3139b9b2b2bc77e56bdce2a37c3337f9",
+      "paths": [
+        "wp-content/themes/beslock-custom-disabled/assets/images/Hero_develp/images_hero/images_hero_d/e-flex_d.png",
+        "wp-content/themes/beslock-custom/assets/images/Hero_develp/images_hero/images_hero_d/e-flex_d.png"
+      ],
+      "count": 2
+    }
+  ],
+  "duplicate_group_count": 165
+}

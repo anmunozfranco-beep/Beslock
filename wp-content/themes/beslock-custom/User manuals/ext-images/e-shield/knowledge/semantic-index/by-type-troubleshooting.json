@@ -1,0 +1,10 @@
+[
+  {
+    "id": "ts-gestion-del-dispositivo",
+    "summary": "Gestion del dispositivo",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

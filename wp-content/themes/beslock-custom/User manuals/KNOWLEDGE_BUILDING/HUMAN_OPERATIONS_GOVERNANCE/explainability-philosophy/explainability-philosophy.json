@@ -1,0 +1,10 @@
+{
+  "kind": "explainability-philosophy",
+  "principles": [
+    "Explanation is a first-class surface, not a footer.",
+    "Explanation is sourced from append-only logs, never from speculation.",
+    "Explanation surfaces declared fields, not narratives.",
+    "Explanation never conceals uncertainty to improve UX."
+  ],
+  "schema": "human-operations-governance/1.0"
+}

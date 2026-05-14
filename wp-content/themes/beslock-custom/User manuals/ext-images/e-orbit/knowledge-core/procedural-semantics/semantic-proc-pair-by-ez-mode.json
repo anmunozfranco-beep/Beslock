@@ -1,0 +1,79 @@
+{
+  "id": "semantic-proc-pair-by-ez-mode",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-pair-by-ez-mode",
+  "language": "es-CO",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-pair-by-ez-mode.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-ez-mode"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-pair-by-ez-mode.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-pair-by-ez-mode",
+  "source_entity_type": "procedure",
+  "surface": "app",
+  "menu_path": "Smart Life -> Camera&Lock -> Lock (Wi-Fi) -> Reset the device -> EZ Mode",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "Open the Wi-Fi lock flow.",
+      "semantic_actions": [
+        "lock",
+        "connect-wifi"
+      ],
+      "matched_lexicon": [
+        "lock",
+        "connect-wifi"
+      ]
+    },
+    {
+      "step_index": 2,
+      "raw_text": "Enter the target network details.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "Enter Reset the device.",
+      "semantic_actions": [
+        "reset"
+      ],
+      "matched_lexicon": [
+        "reset"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "Switch the app to EZ Mode.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "Use the fallback distribution flow.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "If needed, follow the hotspot guidance shown by the app.",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

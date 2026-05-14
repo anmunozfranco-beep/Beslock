@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/environment-governance/sandboxing/",
+  "invariants_count": 5,
+  "kind": "sandboxing-summary",
+  "patterns": [
+    "runtime-sandbox",
+    "unsafe-runtime-containment",
+    "escalation-quarantine",
+    "reviewer-safe-execution",
+    "provenance-safe-isolation",
+    "replay-safe-environment"
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

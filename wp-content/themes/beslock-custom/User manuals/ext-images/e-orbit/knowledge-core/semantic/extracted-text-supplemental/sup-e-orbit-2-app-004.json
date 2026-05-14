@@ -1,0 +1,34 @@
+{
+  "id": "sup-e-orbit-2-app-004",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "[app] -Seleccione WIFI e introduzca la contrasefia, haga clic en [Siguiente].",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-medium",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+    "generated_manuals_supplemental/e-orbit-2/manual.json#app_instructions[3]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-orbit-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "channel": "app",
+  "text": "-Seleccione WIFI e introduzca la contrasefia, haga clic en [Siguiente].",
+  "page": "?",
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-orbit-2"
+}

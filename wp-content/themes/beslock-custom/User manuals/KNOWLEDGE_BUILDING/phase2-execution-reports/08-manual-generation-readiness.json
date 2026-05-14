@@ -1,0 +1,44 @@
+{
+  "generated_at": "2026-05-13T15:18:31Z",
+  "products": {
+    "e-flex": {
+      "ready_for_manual_generation": false,
+      "blockers": [
+        "no specifications"
+      ]
+    },
+    "e-nova": {
+      "ready_for_manual_generation": false,
+      "blockers": [
+        "no install entities",
+        "no operation entities",
+        "no warning entities",
+        "no specifications",
+        "no workflows"
+      ]
+    },
+    "e-orbit": {
+      "ready_for_manual_generation": true,
+      "blockers": []
+    },
+    "e-prime": {
+      "ready_for_manual_generation": false,
+      "blockers": [
+        "no specifications"
+      ]
+    },
+    "e-shield": {
+      "ready_for_manual_generation": false,
+      "blockers": [
+        "no operation entities",
+        "no specifications"
+      ]
+    },
+    "e-touch": {
+      "ready_for_manual_generation": false,
+      "blockers": [
+        "no specifications"
+      ]
+    }
+  }
+}

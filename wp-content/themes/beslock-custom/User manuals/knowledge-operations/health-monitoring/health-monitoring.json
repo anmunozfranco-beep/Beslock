@@ -1,0 +1,68 @@
+{
+  "degradation_response_rules": [
+    "retrieval-degradation > declared floor → open governance-escalation",
+    "warning-coverage-gap detected → open warning-review queue items + escalation",
+    "queue back-pressure > declared ceiling → governance-operator notified, no auto-bypass",
+    "runtime-reliability drop → halt supervised promotions until reviewed"
+  ],
+  "health_discipline": [
+    "indicators are computed from append-only logs; they are reproducible",
+    "indicators are not thresholds for autonomous action; they feed governance review",
+    "indicators are exposed read-only; the dashboard layer is out of scope here",
+    "indicators are scoped per product and per domain; no global single-number health"
+  ],
+  "health_indicators": [
+    {
+      "id": "corpus-health-score",
+      "inputs": [
+        "mean tier_weight",
+        "stale ratio",
+        "candidate ratio"
+      ]
+    },
+    {
+      "id": "stale-knowledge-detection",
+      "inputs": [
+        "updated_at vs per-tier max_age",
+        "superseded source bindings"
+      ]
+    },
+    {
+      "id": "retrieval-degradation",
+      "inputs": [
+        "share of retrieval packages with no_results",
+        "share with candidate_only=True"
+      ]
+    },
+    {
+      "id": "warning-coverage-gap",
+      "inputs": [
+        "domains where warnings retrieval returns empty for declared canonical queries"
+      ]
+    },
+    {
+      "id": "troubleshooting-coverage-gap",
+      "inputs": [
+        "domains where troubleshooting retrieval is candidate-only or empty"
+      ]
+    },
+    {
+      "id": "runtime-reliability",
+      "inputs": [
+        "replay determinism rate",
+        "supervised-run demotion rate",
+        "escalation-trace declared-vs-surprise ratio"
+      ]
+    },
+    {
+      "id": "queue-back-pressure",
+      "inputs": [
+        "per-queue length",
+        "oldest-item age",
+        "claim-expiry rate"
+      ]
+    }
+  ],
+  "kind": "health-monitoring",
+  "schema": "knowledge-operations-governance/1.0"
+}

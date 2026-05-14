@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "products": {
+    "e-flex": [
+      "term-2-4g",
+      "term-administrador",
+      "term-huella",
+      "term-pin",
+      "term-qr",
+      "term-reset",
+      "term-tuya",
+      "term-wechat"
+    ],
+    "e-nova": [],
+    "e-orbit": [
+      "term-administrador",
+      "term-ez-mode",
+      "term-huella",
+      "term-ip66",
+      "term-ip68",
+      "term-pin",
+      "term-qr",
+      "term-reset",
+      "term-smart-life",
+      "term-tuya",
+      "term-wi-fi"
+    ],
+    "e-prime": [
+      "term-2-4g",
+      "term-administrador",
+      "term-huella",
+      "term-pin",
+      "term-qr",
+      "term-tuya",
+      "term-wechat"
+    ],
+    "e-shield": [
+      "term-administrador",
+      "term-bluetooth",
+      "term-huella",
+      "term-pin",
+      "term-wi-fi"
+    ],
+    "e-touch": [
+      "term-administrador",
+      "term-bluetooth",
+      "term-huella",
+      "term-reset",
+      "term-smart-life",
+      "term-tuya",
+      "term-wi-fi"
+    ]
+  },
+  "policy": "Glossary terms are mined from a fixed candidate vocabulary. Terms that surface in only one product are candidates for verification. Add new candidates in TERM_CANDIDATES."
+}

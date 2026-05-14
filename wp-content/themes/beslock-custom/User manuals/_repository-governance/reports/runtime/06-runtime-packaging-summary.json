@@ -1,0 +1,69 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "package_types": [
+    {
+      "id": "retrieval-package",
+      "consumers": [
+        "onboarding-systems",
+        "troubleshooting-systems",
+        "contextual-assistants",
+        "operational-copilots"
+      ],
+      "surface": "read-only"
+    },
+    {
+      "id": "assembly-package",
+      "consumers": [
+        "contextual-assistants",
+        "operational-copilots",
+        "future-visual-assistance"
+      ],
+      "surface": "read-only"
+    },
+    {
+      "id": "guidance-package",
+      "consumers": [
+        "onboarding-copilots",
+        "troubleshooting-assistants",
+        "operational-copilots"
+      ],
+      "surface": "read-only + supervised-confirmation"
+    },
+    {
+      "id": "escalation-package",
+      "consumers": [
+        "support-handoff",
+        "OEM-handoff"
+      ],
+      "surface": "read-only snapshot"
+    },
+    {
+      "id": "continuity-package",
+      "consumers": [
+        "session-aware-operational-copilots",
+        "operational-memory-systems"
+      ],
+      "surface": "read-only + supervised-resume"
+    },
+    {
+      "id": "multimodal-package (gated)",
+      "consumers": [
+        "multimodal-runtime-systems",
+        "future-visual-assistance"
+      ],
+      "surface": "read-only",
+      "gated_by": [
+        "visual-risk reclassification freeze",
+        "fallback registry for visual-unavailable"
+      ]
+    }
+  ],
+  "rules": [
+    "packages declare: surface (read-only / supervised), consumers, contracts honoured, schema version, gates",
+    "packages are immutable once emitted; updates produce a new package version",
+    "packages carry provenance manifests (which knowledge-core nodes contributed)",
+    "packages cannot include un-promoted content beyond declared tier",
+    "no package mixes read-only and executive surfaces in a single artefact"
+  ]
+}

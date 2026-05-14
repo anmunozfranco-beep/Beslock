@@ -1,0 +1,5 @@
+# Manual de app normalizado para Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#1
+
+

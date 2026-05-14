@@ -1,0 +1,10 @@
+{
+  "kind": "sandboxing-philosophy",
+  "principles": [
+    "Sandboxes exist to contain effects, not to permit them.",
+    "Sandboxes are reproducible; non-determinism is a defect.",
+    "Sandboxes may not write to higher-trust zones, ever.",
+    "Sandboxes are first-class operational artifacts; they are governed, not improvised."
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

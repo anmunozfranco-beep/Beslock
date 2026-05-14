@@ -1,0 +1,65 @@
+{
+  "id": "semantic-install-energia-e-inicializacion",
+  "type": "procedural-semantics",
+  "product": "e-prime",
+  "summary": "Normalized semantic actions for install-energia-e-inicializacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-energia-e-inicializacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#10"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/install/install-energia-e-inicializacion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-energia-e-inicializacion",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "instala 4 pilas AA alcalinas de alto rendimiento",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "realiza la inicializacion para borrar datos de prueba de instalacion si el equipo es nuevo o ya fue manipulado",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "valida apertura por huella o por contrasena inicial solo como prueba tecnica local",
+      "semantic_actions": [
+        "place-finger"
+      ],
+      "matched_lexicon": [
+        "place-finger"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "coloca la tapa de baterias una vez que el movimiento mecanico y la verificacion sean correctos",
+      "semantic_actions": [
+        "press"
+      ],
+      "matched_lexicon": [
+        "press"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

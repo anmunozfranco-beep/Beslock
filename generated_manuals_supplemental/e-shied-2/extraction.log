@@ -1,0 +1,23 @@
+2026-05-13 17:09:38 [INFO] === Processing: e-Shied_2.pdf ===
+2026-05-13 17:09:38 [DEBUG] Dependency status: {'pymupdf': True, 'pytesseract': True, 'pdf2image': True, 'pillow': True, 'ocrmypdf': True, 'tesseract': True, 'pdftoppm': True}
+2026-05-13 17:09:38 [INFO] Detecting PDF type...
+2026-05-13 17:09:38 [INFO] PDF type: scanned | pages=1 | text_chars=168
+2026-05-13 17:09:38 [DEBUG] Running: ocrmypdf --skip-text --optimize 1 -l spa+eng /Users/andresmunoz/Documents/GitHub/Beslock/wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-shied-2/e-Shied_2.searchable.pdf
+2026-05-13 17:09:40 [WARNING] ocrmypdf failed (rc=3): OCR engine does not have language data for the following requested languages: 
+spa
+Please install the appropriate language data for your OCR engine.
+
+See the online documentation for instructions:
+    https://ocrmypdf.readthedocs.io/en/latest/languages.html
+
+Note: most languages are identified by a 3-letter ISO 639-2 Code.
+For example, English is 'eng', German is 'deu', and Spanish is 'spa'.
+Simplified Chinese is 'chi_sim' and Traditional Chinese is 'chi_tra'.
+2026-05-13 17:09:40 [INFO] Running fallback pdf2image+pytesseract OCR on e-Shied_2.pdf...
+2026-05-13 17:09:40 [DEBUG] Converting PDF to images with pdf2image at 300 DPI
+2026-05-13 17:09:41 [DEBUG] OCR page 1/1
+2026-05-13 17:09:44 [INFO] pytesseract OCR complete: 1 pages, avg_conf=55.6%
+2026-05-13 17:09:44 [INFO] Raw text: 814 characters after cleaning
+2026-05-13 17:09:44 [INFO] Structure: sections=1 specs=1 steps=0 warnings=0 features=0 app=0
+2026-05-13 17:09:44 [INFO] Outputs written to: /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-shied-2
+2026-05-13 17:09:44 [INFO] ✓ e-Shied_2.pdf: scanned=True pages=1 avg_confidence=55.6% method=pytesseract

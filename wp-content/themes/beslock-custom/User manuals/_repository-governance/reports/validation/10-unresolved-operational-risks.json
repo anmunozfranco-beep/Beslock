@@ -1,0 +1,87 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "risks": [
+    {
+      "risk": "unresolved-action-references",
+      "count": 17,
+      "blocks": [
+        "procedural execution by assistants"
+      ]
+    },
+    {
+      "risk": "no-troubleshooting-corpus",
+      "count": 5,
+      "blocks": [
+        "troubleshooting-assistant per product"
+      ]
+    },
+    {
+      "risk": "warning-corpus-empty",
+      "count": 2,
+      "blocks": [
+        "safe-first-use onboarding"
+      ]
+    },
+    {
+      "risk": "missing-channel-targets",
+      "count": 417,
+      "blocks": [
+        "retrieval-promotion"
+      ]
+    },
+    {
+      "risk": "cross-product-entity-collision",
+      "count": 15,
+      "blocks": [
+        "cross-product canonicalization"
+      ]
+    }
+  ],
+  "future_safety_gates": [
+    {
+      "system": "chatbot",
+      "requires": [
+        "maturity.unsafe-promotions=0",
+        "graph.unresolved-reference=0",
+        "retrieval.missing-channel-targets=0"
+      ]
+    },
+    {
+      "system": "onboarding-assistant",
+      "requires": [
+        "procedural.empty-step-chain=0",
+        "experience.warning-corpus-empty per product=0"
+      ]
+    },
+    {
+      "system": "troubleshooting-assistant",
+      "requires": [
+        "troubleshooting corpus per product ≥ 1",
+        "graph.unresolved-reference=0"
+      ]
+    },
+    {
+      "system": "dynamic-publication",
+      "requires": [
+        "maturity.unresolved-evidence-leak=0",
+        "publication-intent present per product"
+      ]
+    },
+    {
+      "system": "multimodal-guidance",
+      "requires": [
+        "visual-intent present",
+        "visual-risk classified",
+        "component-visibility declared"
+      ]
+    },
+    {
+      "system": "future-visual-assistance",
+      "requires": [
+        "visual-risk reclassification freeze",
+        "graph orphan-node ratio reviewed"
+      ]
+    }
+  ]
+}

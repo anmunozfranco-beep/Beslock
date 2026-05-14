@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-2-1-anadir-nuevo-dispositivo-12",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "2.1 Añadir Nuevo Dispositivo",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "La cerradura debe añadirse a la aplicación antes de poder utilizarse Para esto sitúe\nel dispositivo móvil al lado de la cerradura\n1. Tocar el botón circular de “+” para agregar la\ncerradura\ny Tides ss dsposit os\n. oes 2. Seleccionar el tipo de dispositive que posee\nCeca Caviany\nDats Muerte 7 Cirdo\nCaza ds © Camana\npeed de su ota\n“emoto\nTea et lea pata al\nel tee ade\n3. Tocar el teclado de la cerradura para que entre\nen modo configuración y presionar siguiente en la\nF aplicación\nfete de\n4. Seleccionar el nombre predeterminado de su\ndispositivo\no Si es una cerradura que se ha añadido previamente a un dispositivo. se deberá eliminar\nprimero de la aplicación para registrarla de nuevo\n5. Cambiar el nombre del dispositivo a uno\nÓN deseado o dejar el nombre predeterminado\nAl terminar presionar “OK”\nO Al lira war. podrá gestora’ la cerradura con a aol cac ón, irc uyenco el ervio de ura llave, cortraseña etc\nLos datos ce nc al zación de la cerradura deben cargarse en la rea cuando asia esté cisporible para comolerar todo e\npraceso de agregar dispasr vo",
+  "storage_bucket": "extracted-text"
+}

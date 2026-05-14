@@ -1,0 +1,36 @@
+{
+  "id": "install-context-compatibilidad-antes-de-montar",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "Antes de fijar el conjunto:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#4"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-compatibilidad-antes-de-montar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "valida el sentido de apertura interior/exterior y la direccion del pestillo",
+    "confirma que la posicion del agujero se ajuste a la posicion real del cuerpo de cerradura",
+    "elige la longitud de tornilleria o separadores segun el grosor de la puerta",
+    "prepara el paso del eje cuadrado y del cableado antes de cerrar las manijas"
+  ],
+  "legacy_storage_bucket": "installation"
+}

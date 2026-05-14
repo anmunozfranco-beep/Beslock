@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/oem-binding/",
+  "binding_kinds": [
+    "pdf",
+    "ocr-fragment",
+    "screenshot",
+    "extracted-procedure",
+    "troubleshooting-evidence",
+    "warning-evidence"
+  ],
+  "binding_rules_count": 6,
+  "kind": "oem-binding-summary",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "traceable_trust_pipeline_steps": 3
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/installation-manual-template.md",
+  "previous_path": "wp-content/themes/beslock-custom/User manuals/installation-manual-template.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "fs-mv",
+  "tracked_in_git_before_move": false,
+  "category": "C",
+  "sub_label": "manual-standardization-draft",
+  "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision.",
+  "reversible": true,
+  "reversal_command": "mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/installation-manual-template.md' 'wp-content/themes/beslock-custom/User manuals/installation-manual-template.md'"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "If You Already Have An Existing Account,You Can Dick",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-23"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "\"Log in with an existing account\"to log in to the APP.",
+  "legacy_storage_bucket": "extracted-text"
+}

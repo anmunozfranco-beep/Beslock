@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-e-ek-8",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "E-Ek",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "understand! Our company will update the content regularly. If you have any questions, please call our company to answer .The\nQ Y",
+  "storage_bucket": "extracted-text"
+}

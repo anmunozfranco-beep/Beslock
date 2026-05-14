@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-messages-such-as-doorbell-push-61",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Messages Such As Doorbell Push,",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-61"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "illegal user, low battery, and unlocking can be queried in the log.\n4. Member management",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "term-pin",
+    "summary": "Código numérico de acceso.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-huella",
+    "summary": "Credencial biométrica dactilar.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-administrador",
+    "summary": "Usuario con permisos de gestión.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-bluetooth",
+    "summary": "Canal inalámbrico de corto alcance.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-wi-fi",
+    "summary": "Canal inalámbrico de red local.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+    ],
+    "validation_status": "normalized"
+  }
+]

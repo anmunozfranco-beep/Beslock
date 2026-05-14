@@ -1,0 +1,10 @@
+[
+  {
+    "id": "warning-advertencias-editoriales",
+    "summary": "- `TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#13"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

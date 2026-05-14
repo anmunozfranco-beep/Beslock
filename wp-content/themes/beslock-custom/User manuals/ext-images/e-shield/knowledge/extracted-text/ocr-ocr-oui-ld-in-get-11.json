@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-oui-ld-in-get-11",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Oui Ld In Get",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "A Pes CUT\n2. Gestión de cerraduras\nCuando se añade la cerradura, el primer usuario en agregarla\nse convierte en el administrador de la cerradura Esta solo se\npuede volver a añadir después de que el administrados actual - -\nhaya borrado la cerradura. La operación de borrar la ,\ncerradura debe realizarse por Bluetooth junto a la cerradura",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "5 Segundos.Entrara En El Estado De Recuperacion De Fabrica, La Luz Azul Del Cabezal",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "de la huella dactilar estara encendida permanentemente, la luz verde estara encendida\nal mismo tiempo. y el zumbador emitirá un pitido largo para indicar el éxito, y presione\ncualquier huella dactilar para borrar los datos dentro de 10 segundos.\n5. Parámetros del Producto",
+  "storage_bucket": "extracted-text"
+}

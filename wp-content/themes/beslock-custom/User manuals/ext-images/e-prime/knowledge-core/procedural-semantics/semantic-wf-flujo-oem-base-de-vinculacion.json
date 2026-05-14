@@ -1,0 +1,73 @@
+{
+  "id": "semantic-wf-flujo-oem-base-de-vinculacion",
+  "type": "procedural-semantics",
+  "product": "e-prime",
+  "summary": "Normalized semantic actions for wf-flujo-oem-base-de-vinculacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/workflows/wf-flujo-oem-base-de-vinculacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#5"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/knowledge-core/workflows/wf-flujo-oem-base-de-vinculacion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-flujo-oem-base-de-vinculacion",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "en la cerradura, despierta la pantalla con `*+#`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "verifica la informacion de administrador",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "presiona `2` para `wireless settings`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "presiona `1` para `add network`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 5,
+      "raw_text": "abre `TUYA APP` en el telefono",
+      "semantic_actions": [
+        "open-app"
+      ],
+      "matched_lexicon": [
+        "open-app"
+      ]
+    },
+    {
+      "step_index": 6,
+      "raw_text": "sigue el asistente de la app para completar la distribucion de red",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

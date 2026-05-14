@@ -1,0 +1,17 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/canonical-stack/",
+  "invariants_count": 5,
+  "kind": "canonical-stack-summary",
+  "modules": [
+    "retrieval-runtime",
+    "orchestration-runtime",
+    "escalation-runtime",
+    "provenance-system",
+    "replay-system",
+    "reviewer-operations",
+    "governance-operations",
+    "oem-ingestion-system",
+    "observability-system"
+  ],
+  "schema": "reference-stack-governance/1.0"
+}

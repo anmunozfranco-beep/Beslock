@@ -1,0 +1,35 @@
+{
+  "id": "term-wechat",
+  "type": "glossary-term",
+  "product": "e-flex",
+  "summary": "Plataforma china de mini-programas usada como canal OEM.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-wechat.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "WeChat",
+  "oem_variants": [
+    "WeChat"
+  ],
+  "definition": "Plataforma china de mini-programas usada como canal OEM.",
+  "legacy_storage_bucket": "terminology"
+}

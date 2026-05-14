@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-expiration-time-80",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Expiration Time",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-80"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-expiration-time-80.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "diately. The\nclearing\ncode\nis not displayed\nin",
+  "legacy_storage_bucket": "extracted-text"
+}

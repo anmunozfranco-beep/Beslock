@@ -1,0 +1,9 @@
+# Validacion despues del alta
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8
+
+Despues de enlazar el equipo:
+- confirma presencia del dispositivo en la app
+- valida una sincronizacion o lectura basica de estado
+- revisa que el equipo salga correctamente del modo de red abierto
+- si el flujo falla, repite la secuencia local con permisos de administrador

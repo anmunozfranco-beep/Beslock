@@ -1,0 +1,9 @@
+# Compatibilidad fisica antes de perforar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#4
+
+Valida estas condiciones antes de montar:
+- el montaje usa panel frontal, panel trasero y cuerpo de cerradura separados
+- el eje cuadrado debe sobresalir entre `10 y 30 mm` desde la superficie de la puerta
+- si el saliente real excede ese rango, el husillo debe recortarse o pedirse a medida
+- confirma mano de apertura y sentido del pestillo antes de fijar paneles

@@ -1,0 +1,11 @@
+# Desbloqueo por Bluetooth
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#10
+
+La app permite abrir la cerradura desde el boton con icono de candado cuando estas dentro de alcance.
+
+Uso recomendado:
+1. abre la pantalla del dispositivo
+2. verifica conexion Bluetooth activa
+3. toca el icono de candado para bloquear o desbloquear
+4. confirma respuesta fisica de la cerradura

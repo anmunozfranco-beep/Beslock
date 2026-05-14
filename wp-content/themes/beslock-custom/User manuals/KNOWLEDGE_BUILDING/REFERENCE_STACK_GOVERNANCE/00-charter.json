@@ -1,0 +1,42 @@
+{
+  "generated": "2026-05-14T03:12:03Z",
+  "kind": "charter",
+  "principles": [
+    "This layer governs how all prior modules converge into a coherent operational stack.",
+    "All modules are declared, contract-bound, and observability-traceable.",
+    "All compositions are declared; undeclared compositions are forbidden.",
+    "All deployment manifests are append-only and reproducible.",
+    "All convergence remains subordinate to provenance, supervision, trust-boundary, and isolation governance.",
+    "No production deployment is performed by this layer; this layer governs the conditions under which deployment may later be assembled.",
+    "Subordinate to knowledge-core and to all twenty-five prior governance layers."
+  ],
+  "schema": "reference-stack-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION"
+  ]
+}

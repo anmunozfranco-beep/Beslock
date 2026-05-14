@@ -1,0 +1,27 @@
+{
+  "id": "cap-objetivo",
+  "type": "capability",
+  "product": "e-flex",
+  "summary": "Explicar el flujo base de vinculacion de e-Flex con `TUYA APP` y la red `2",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#2"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "Explicar el flujo base de vinculacion de e-Flex con `TUYA APP` y la red `2.4G`, sin mezclarlo con instalacion mecanica ni con el manual de uso."
+  ],
+  "storage_bucket": "capabilities"
+}

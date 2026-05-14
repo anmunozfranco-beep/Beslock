@@ -1,0 +1,34 @@
+{
+  "id": "term-qr",
+  "type": "glossary-term",
+  "product": "e-orbit",
+  "summary": "Código gráfico de provisión.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "canonical": "QR",
+  "oem_variants": [
+    "QR",
+    "código QR",
+    "codigo QR"
+  ],
+  "definition": "Código gráfico de provisión.",
+  "storage_bucket": "terminology"
+}

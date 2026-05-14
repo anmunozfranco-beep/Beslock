@@ -1,0 +1,13 @@
+{
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/RUNTIME_HARDENING_GOVERNANCE/",
+  "kind": "runtime-hardening-governance-summary",
+  "layer_index": 21,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/runtime-hardening/",
+  "schema": "runtime-hardening-governance/1.0",
+  "subordinate_to_count": 21,
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

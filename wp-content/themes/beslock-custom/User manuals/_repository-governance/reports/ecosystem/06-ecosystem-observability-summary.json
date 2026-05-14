@@ -1,0 +1,25 @@
+{
+  "auditability_count": 6,
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "trace_fields": [
+    "ecosystem-session-id",
+    "incident-id (when emitter exists)",
+    "origin-runtime-id",
+    "destination-runtime-id (when applicable)",
+    "contract-id",
+    "schema-version",
+    "supervision-receipt-ref (when applicable)",
+    "provenance-manifest-ref",
+    "tier (for escalation-related traces)",
+    "timestamp (UTC)"
+  ],
+  "trace_kinds": [
+    "ecosystem-session-trace (one record per session open/close)",
+    "federation-message-trace (one record per cross-runtime message)",
+    "delegation-trace (one record per delegated step)",
+    "handoff-trace (one record per escalation/handoff)",
+    "shared-context-trace (one record per shared-context append or monotonic update)",
+    "schema-pin-trace (one record per schema-pin verification)",
+    "broadcast-trace (one record per ecosystem-broadcast)"
+  ]
+}

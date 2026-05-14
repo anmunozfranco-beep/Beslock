@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-introduccion-5",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Introducción",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-5"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Bienvenido al manual de configuración para la aplicación TECDOFY. En este manual, le\nguiaremos a través de los pasos necesarios para configurar y aprovechar al máximo todas las\nfunciones de la app.\nEs importante que, para conectar la aplicación correctamente a su dispositivo, éste se encuentre\nauna distancia máxima de 8 metros\nContenido\n1. Registro e inicio de sesión 5. Gestión de tarjetas\n1 1 Inicio de sesión correcto 6. Gestión de huellas\n2. Gestión de cerraduras 7. Desbloqueo por Bluetooth\n8. Gestión de asistencia",
+  "storage_bucket": "extracted-text"
+}

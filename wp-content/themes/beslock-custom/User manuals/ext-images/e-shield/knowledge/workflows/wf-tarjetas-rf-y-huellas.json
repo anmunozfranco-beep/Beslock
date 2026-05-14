@@ -1,0 +1,47 @@
+{
+  "id": "wf-tarjetas-rf-y-huellas",
+  "type": "workflow",
+  "product": "e-shield",
+  "summary": "La fuente muestra dos modulos paralelos: `Tarjetas RF` y `Gestion de huellas`",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entra a `Tarjetas RF`"
+    },
+    {
+      "n": 2,
+      "text": "toca `Agregar tarjetas RF`"
+    },
+    {
+      "n": 3,
+      "text": "define nombre y tiempo de vigencia"
+    },
+    {
+      "n": 4,
+      "text": "acerca la tarjeta a la cerradura para completar el enlace"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "adaptive-operational-governance/1.0",
+  "generated_at": "2026-05-13T19:06:08+00:00",
+  "risks": [
+    {
+      "id": "thin-troubleshooting-corpus",
+      "severity": "high",
+      "summary": "symptom-first branching has limited eligible paths on 5/6 products",
+      "cross_ref": "validation/maturity + execution/troubleshooting-readiness"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "severity": "high",
+      "summary": "escalation cannot fire 'mandatory-warning surface' on 2 products",
+      "cross_ref": "validation/warnings + execution/safeguards"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "severity": "high",
+      "summary": "confidence-aware guidance currently relies on heuristic mapping; per-node confidence not yet emitted by knowledge-core",
+      "cross_ref": "knowledge-core/provenance"
+    },
+    {
+      "id": "no-fallback-registry",
+      "severity": "high",
+      "summary": "degraded-mode substitution cannot resolve targets without a registered fallback list per procedure",
+      "cross_ref": "execution/fallback + composition"
+    },
+    {
+      "id": "context-vector-not-emitted",
+      "severity": "medium",
+      "summary": "context dimensions are modelled here but no upstream emitter populates them yet",
+      "cross_ref": "future runtime contract"
+    },
+    {
+      "id": "intent-clarity-detector-missing",
+      "severity": "medium",
+      "summary": "ambiguous-intent branch is contractual; no live detector",
+      "cross_ref": "execution/intent-rules"
+    },
+    {
+      "id": "skill-inference-undefined",
+      "severity": "medium",
+      "summary": "user-role assumed declared; inference path not modelled here by design",
+      "cross_ref": "future product-surface contract"
+    },
+    {
+      "id": "shared-concepts-undeclared",
+      "severity": "medium",
+      "summary": "cross-product collisions block uniform adaptation across the family",
+      "cross_ref": "validation/entity"
+    },
+    {
+      "id": "adaptation-precedence-conflicts",
+      "severity": "low",
+      "summary": "rare overlapping triggers may produce ambiguous order; precedence rules cover declared cases",
+      "cross_ref": "this layer / precedence"
+    }
+  ],
+  "count": 9,
+  "high_count": 4
+}

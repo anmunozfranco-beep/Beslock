@@ -1,0 +1,41 @@
+{
+  "generated": "2026-05-14T03:03:44Z",
+  "kind": "charter",
+  "principles": [
+    "This layer governs the environments and integrations through which the runtime may exist.",
+    "All environments are declared, trust-tiered, and supervision-bound.",
+    "All integrations are governed by declared trust contracts; undeclared integrations are forbidden.",
+    "All boundary crossings are events; none are silent.",
+    "All deployment remains subordinate to governance, provenance, supervision, and trust-boundary enforcement.",
+    "No production deployment is performed by this layer; this layer governs the conditions under which deployment may later occur.",
+    "Subordinate to knowledge-core and to all twenty-four prior governance layers."
+  ],
+  "schema": "environment-integration-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS"
+  ]
+}

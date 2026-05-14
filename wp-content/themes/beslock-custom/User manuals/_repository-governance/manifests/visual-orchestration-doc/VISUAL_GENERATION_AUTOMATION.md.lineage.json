@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/visual-orchestration-doc/VISUAL_GENERATION_AUTOMATION.md",
+  "previous_path": "VISUAL_GENERATION_AUTOMATION.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "fs-mv",
+  "tracked_in_git_before_move": false,
+  "category": "D",
+  "sub_label": "visual-orchestration-doc",
+  "rationale": "Documentation of the visual generation orchestrator. Relocated as a manifest reference only — no pipeline code is modified.",
+  "reversible": true,
+  "reversal_command": "mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/visual-orchestration-doc/VISUAL_GENERATION_AUTOMATION.md' 'VISUAL_GENERATION_AUTOMATION.md'"
+}

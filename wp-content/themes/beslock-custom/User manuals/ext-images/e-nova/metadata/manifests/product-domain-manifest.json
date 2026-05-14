@@ -1,0 +1,20 @@
+{
+  "product_slug": "e-nova",
+  "product_display": "e-Nova",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "canonical_png": "ext-images/e-nova/source-of-truth/product-images/e-Nova.png",
+  "approved_sources": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/manuals/e-Nova user manual.pdf"
+  ],
+  "publishing_surfaces": [],
+  "visual_system": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/e-Nova - image generation matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/image-generation-matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/ai-image-prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/e-Nova - AI image prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/qa/image-production-status.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/references/e-nova-visual-profile.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/validations/visual-validation.md"
+  ]
+}

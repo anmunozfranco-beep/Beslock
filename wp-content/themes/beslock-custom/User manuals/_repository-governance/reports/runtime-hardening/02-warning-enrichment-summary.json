@@ -1,0 +1,24 @@
+{
+  "categories_per_product": [
+    "operational",
+    "irreversible-operation",
+    "unsafe-state",
+    "installation",
+    "low-battery",
+    "recovery",
+    "escalation-required"
+  ],
+  "domain": "warnings-expanded",
+  "kind": "warning-enrichment-summary",
+  "records_per_product": {
+    "e-flex": 7,
+    "e-nova": 7,
+    "e-orbit": 7,
+    "e-prime": 7,
+    "e-shield": 7,
+    "e-touch": 7
+  },
+  "schema": "runtime-hardening-governance/1.0",
+  "total_records": 42,
+  "validation_status": "candidate-pending-review"
+}

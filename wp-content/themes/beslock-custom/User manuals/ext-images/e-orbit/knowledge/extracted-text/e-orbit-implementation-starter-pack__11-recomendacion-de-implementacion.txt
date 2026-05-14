@@ -1,0 +1,12 @@
+# Recomendación de implementación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#11
+
+Empezar la implementación ya con:
+- contenido estructurado
+- nombres de archivos definidos
+- assets IA producidos en paralelo
+
+Esto permite que frontend o CMS avancen sin esperar un paquete visual final perfecto.
+
+---

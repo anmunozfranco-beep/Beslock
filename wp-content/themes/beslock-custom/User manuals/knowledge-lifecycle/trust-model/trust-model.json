@@ -1,0 +1,74 @@
+{
+  "kind": "trust-model",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "stale_knowledge_detection": [
+    "stale = `updated_at` older than the per-tier max_age",
+    "stale = bound to a source artifact that has been superseded",
+    "stale = bound to a reviewer whose signoff scope has changed",
+    "detected stale records are queued for re-review, not silently kept"
+  ],
+  "trust_decay_rules": [
+    "OEM source supersession → all bound nodes demote to candidate pending re-review",
+    "stale OCR pipeline version (older than declared floor) → demote to candidate",
+    "reviewer revocation → records that reviewer signed alone revert to ocr-derived/inferred",
+    "operational-incident on a node in supervised use → demote one tier + open dispute",
+    "retention-period elapsed without re-validation → demote to candidate"
+  ],
+  "trust_tiers": [
+    {
+      "human_reviewed": false,
+      "oem_bound": false,
+      "runtime_use": "soft-escalation",
+      "tier": "candidate",
+      "weight": 0.4
+    },
+    {
+      "human_reviewed": false,
+      "oem_bound": false,
+      "runtime_use": "supervised-only",
+      "tier": "low-confidence",
+      "weight": 0.5
+    },
+    {
+      "human_reviewed": false,
+      "oem_bound": "partial",
+      "runtime_use": "supervised",
+      "tier": "ocr-derived",
+      "weight": 0.85
+    },
+    {
+      "human_reviewed": false,
+      "oem_bound": false,
+      "runtime_use": "supervised + traversal evidence",
+      "tier": "inferred",
+      "weight": 0.65
+    },
+    {
+      "human_reviewed": true,
+      "oem_bound": "partial",
+      "runtime_use": "supervised",
+      "tier": "reviewer-confirmed",
+      "weight": 0.92
+    },
+    {
+      "human_reviewed": true,
+      "oem_bound": true,
+      "runtime_use": "supervised primary",
+      "tier": "oem-verified",
+      "weight": 1.0
+    },
+    {
+      "human_reviewed": true,
+      "oem_bound": true,
+      "runtime_use": "supervised primary + replay-validated",
+      "tier": "operationally-proven",
+      "weight": 1.0
+    }
+  ],
+  "trust_transitions": [
+    "trust raises only through declared promotion gates",
+    "trust may decay (see decay rules) but never silently",
+    "trust inheritance: a derived node inherits the floor of its source tiers, not the ceiling",
+    "dispute propagation: a disputed source caps all derived nodes at `low-confidence` until resolved"
+  ]
+}

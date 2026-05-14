@@ -1,0 +1,93 @@
+{
+  "id": "semantic-wf-flujo-oem-base-de-alta",
+  "type": "procedural-semantics",
+  "product": "e-touch",
+  "summary": "Normalized semantic actions for wf-flujo-oem-base-de-alta",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#5"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/workflows/wf-flujo-oem-base-de-alta.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "wf-flujo-oem-base-de-alta",
+  "source_entity_type": "workflow",
+  "surface": "mobile-app",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "abrir `Tuya Smart` o `Smart Life`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "tocar `Add device`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 3,
+      "raw_text": "entrar a `Security monitoring`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "elegir `Smart Door Lock`",
+      "semantic_actions": [
+        "lock"
+      ],
+      "matched_lexicon": [
+        "lock"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "iniciar la distribucion Bluetooth",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "despertar la cerradura tocando el keypad integrado o el lector de huella",
+      "semantic_actions": [
+        "place-finger"
+      ],
+      "matched_lexicon": [
+        "place-finger"
+      ]
+    },
+    {
+      "step_index": 7,
+      "raw_text": "esperar a que el telefono detecte el equipo y confirmar el alta",
+      "semantic_actions": [
+        "confirm"
+      ],
+      "matched_lexicon": [
+        "confirm"
+      ]
+    },
+    {
+      "step_index": 8,
+      "raw_text": "la cerradura emite dos avisos tipo `drip` cuando la vinculacion termina correctamente",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

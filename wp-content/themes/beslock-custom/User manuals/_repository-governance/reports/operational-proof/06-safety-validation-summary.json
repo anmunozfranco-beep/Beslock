@@ -1,0 +1,52 @@
+{
+  "predicates": [
+    {
+      "id": "no-unsafe-operational-flow",
+      "metric": "no flow violates the declared safety-boundary set from RUNTIME_GOVERNANCE"
+    },
+    {
+      "id": "no-hallucination",
+      "metric": "every retrieved node is present in knowledge-core; no invented nodes; no invented steps"
+    },
+    {
+      "id": "no-escalation-failure",
+      "metric": "every triggered escalation reaches a declared receiver state (handed-off or queued+locked)"
+    },
+    {
+      "id": "no-continuity-loss",
+      "metric": "every interruption produces a checkpoint-or-degradation record; no silent loss"
+    },
+    {
+      "id": "no-retrieval-ambiguity-silent",
+      "metric": "ambiguity in retrieval is surfaced (never silently picked)"
+    },
+    {
+      "id": "no-low-confidence-execution",
+      "metric": "uncertain-confidence outputs do not advance to guidance emission without supervised review"
+    },
+    {
+      "id": "no-governance-bypass",
+      "metric": "no flow bypasses lifecycle P-tier gates, schema-pin, or any prior layer's contract"
+    },
+    {
+      "id": "no-irreversibility-bypass",
+      "metric": "irreversibility warnings are never downgraded; two-token gate is honored when destructive surfaces are touched (out of proof scope)"
+    },
+    {
+      "id": "no-provenance-loss",
+      "metric": "every emitted package carries a provenance manifest"
+    },
+    {
+      "id": "no-supervision-loss",
+      "metric": "every supervised boundary carries a supervision receipt"
+    }
+  ],
+  "rules": [
+    "All safety predicates are mandatory for any proof slice.",
+    "Failure of any safety predicate immediately demotes the slice.",
+    "Safety validation results are append-only and signed.",
+    "Safety predicates are evaluated continuously, not only at completion.",
+    "Safety validation cannot be retroactively assigned."
+  ],
+  "schema": "operational-proof-governance/1.0"
+}

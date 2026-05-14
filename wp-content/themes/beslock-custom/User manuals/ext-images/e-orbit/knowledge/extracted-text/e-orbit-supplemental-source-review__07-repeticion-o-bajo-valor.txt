@@ -1,0 +1,7 @@
+# Repeticion o bajo valor
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#7
+
+- la portada y varias capturas de app son utiles como apoyo visual, pero no deben tratarse como prueba exhaustiva del flujo comercial final
+- no hay pasos de montaje fisico, despiece, perforacion ni plantilla de corte en las nuevas fuentes
+- la UI exacta de app puede variar entre `Smart Life`, `Tuya Smart` y variantes de proveedor como `Tongtong`

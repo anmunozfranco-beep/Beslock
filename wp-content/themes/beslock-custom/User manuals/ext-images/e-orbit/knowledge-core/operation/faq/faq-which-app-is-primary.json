@@ -1,0 +1,30 @@
+{
+  "id": "faq-which-app-is-primary",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "Which app should Beslock present as the primary e-Orbit app flow?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "document-supported",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit app manual.md#3",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "Which app should Beslock present as the primary e-Orbit app flow?",
+  "answer": "Present Smart Life or Tuya as the primary observed flow. Tongtong remains an OEM-mentioned variant that still requires commercial confirmation before it becomes the main route."
+}

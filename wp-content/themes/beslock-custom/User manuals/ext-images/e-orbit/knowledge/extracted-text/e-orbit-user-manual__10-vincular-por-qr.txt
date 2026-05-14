@@ -1,0 +1,46 @@
+# Vincular por QR
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10
+
+
+
+
+## Qué necesitas antes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10.1
+
+- la app Smart Life está instalada
+- la cerradura está en modo de vinculación
+- el celular tiene suficiente brillo en pantalla
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10.2
+
+1. abre **Smart Life**
+2. entra a **Agregar dispositivo**
+3. selecciona la categoría correspondiente
+4. sigue el flujo hasta que la app muestre el código QR
+5. lleva la cerradura al modo de vinculación
+6. muestra el QR del celular frente al equipo
+7. espera la confirmación
+8. completa el proceso en la aplicación
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10.3
+
+Si el QR no se detecta en el primer intento, ajusta una sola variable a la vez: brillo, distancia o iluminación.
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10.4
+
+- el dispositivo aparece en la app
+- la conexión parece estable
+- puedes entrar al panel del dispositivo
+
+---

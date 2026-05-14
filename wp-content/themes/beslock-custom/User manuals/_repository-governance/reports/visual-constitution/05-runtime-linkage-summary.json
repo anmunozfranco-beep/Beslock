@@ -1,0 +1,10 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "constitutional_root": "KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/",
+  "runtime_root": "visual-system/_governance/",
+  "per_product_root_pattern": "ext-images/<slug>/{visual-system,knowledge-core}/",
+  "execution_root": "tools/visual_generation.py + tools/comfy/",
+  "linkage_map_file": "KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/hierarchy/runtime-linkage-map.json",
+  "guarantee": "No runtime file was modified by this promotion."
+}

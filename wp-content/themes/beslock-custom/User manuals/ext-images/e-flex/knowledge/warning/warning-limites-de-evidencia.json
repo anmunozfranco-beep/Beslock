@@ -1,0 +1,30 @@
+{
+  "id": "warning-limites-de-evidencia",
+  "type": "warning",
+  "product": "e-flex",
+  "summary": "- la guia corta no aporta un mapa completo de modulos internos de la app",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "severity": "caution",
+  "details": [
+    "la guia corta no aporta un mapa completo de modulos internos de la app",
+    "no hay suficiente evidencia aqui para prometer flujos avanzados de automatizacion o permisos remotos detallados",
+    "la experiencia de Beslock debe describirse como vinculacion `TUYA` sobre red `2.4G`, con mini-programa `WeChat` solo como apoyo OEM observado"
+  ],
+  "storage_bucket": "warning"
+}

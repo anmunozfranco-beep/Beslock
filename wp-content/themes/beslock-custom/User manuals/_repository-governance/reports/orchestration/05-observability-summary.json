@@ -1,0 +1,28 @@
+{
+  "auditability_count": 7,
+  "schema": "runtime-orchestration-governance/1.0",
+  "trace_fields": [
+    "incident-id (when emitter exists)",
+    "session-id",
+    "loop-id",
+    "step-id",
+    "from-state",
+    "to-state",
+    "contract-id (for contract-traces)",
+    "provenance-manifest-ref",
+    "confidence-tier (when applicable)",
+    "supervision-receipt-ref (when applicable)",
+    "timestamp (UTC)",
+    "schema-version (pinned)"
+  ],
+  "trace_kinds": [
+    "loop-trace (one record per orchestration loop iteration)",
+    "step-trace (one record per declared step within a loop)",
+    "contract-trace (one record per cognition-coordination message)",
+    "state-trace (one record per orchestration state transition)",
+    "checkpoint-trace (one record per checkpoint emission)",
+    "supervision-trace (one record per supervision-boundary crossing)",
+    "escalation-trace (one record per escalation event)"
+  ],
+  "transparency_count": 5
+}

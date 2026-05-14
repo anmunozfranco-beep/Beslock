@@ -1,0 +1,100 @@
+# Unresolved References Report
+
+Generated: 2026-05-13T14:03:27Z
+Files referencing now-migrated legacy paths: 95
+
+- tools/phase1_cutover.py → contains `User manuals/assets/`
+- output/visual-generation/manifests-reset-check-all/e-orbit-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check-all/e-prime-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check-all/e-touch-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check-all/e-shield-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check-all/e-nova-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check-all/e-flex-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-orbit-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-prime-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-touch-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-shield-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-nova-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests/e-flex-generation-manifest.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-prime/20260512T221426Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-prime/20260512T221426Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-prime/20260513T001212Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-prime/20260513T001212Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-prime/20260512T213353Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T192346Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T192346Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T192605Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T192605Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T232915Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T232915Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T201850Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-nova/20260512T201850Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260513T005523Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260513T005523Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260512T222234Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260512T222234Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260512T213404Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-touch/20260512T210859Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T224208Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T220606Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T220606Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T180033Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T180033Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T223458Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T060234Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T060234Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T063933Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T063933Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T222642Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T224805Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T224805Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T224819Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T223305Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T223305Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T223445Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T223445Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260511T225131Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T213342Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T162416Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T162416Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T235523Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T235523Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T062359Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-orbit/20260512T062359Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T192133Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T192133Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T215756Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T215756Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260513T003334Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260513T003334Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T183839Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T183839Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T210552Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T210552Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-shield/20260512T213331Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T213321Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T230727Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T230727Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T214807Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T214807Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T212919Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T212919Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T180852Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T180852Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T205941Z/manifest.snapshot.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/runs/e-flex/20260512T205941Z/run-summary.json → contains `User manuals/visual-system/products/`
+- output/visual-generation/manifests-reset-check/e-orbit-generation-manifest.json → contains `User manuals/visual-system/products/`
+- wp-content/themes/beslock-custom/User manuals/manual-standardization-current-state-audit.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/visual-system-current-state-audit.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/metadata/lineage/source-lineage.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/metadata/lineage/source-lineage.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/metadata/lineage/source-lineage.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/metadata/lineage/source-lineage.json → contains `User manuals/visual-system/products/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/lineage/source-lineage.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/metadata/lineage/source-lineage.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/REPOSITORY_BOUNDARIES.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/ARCHITECTURE_MIGRATION_MASTER_PROMPT.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/migrations/phase-1-cutover/moved-files-inventory.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/migrations/phase-1-cutover/missing-sources.md → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/migrations/phase-1-cutover/moved-files-inventory.json → contains `User manuals/assets/`
+- wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/migrations/phase-1-cutover/unresolved-references.md → contains `User manuals/assets/`

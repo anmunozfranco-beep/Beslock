@@ -1,0 +1,28 @@
+{
+  "id": "install-context-estado-editorial",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1.pdf` y la plantilla `e-Shied_2.pdf`.\n\nLa compatibilidad fisica, las medidas visibles y la arquitectura del hardware estan suficientemente soportadas para una base de instalacion normalizada.\nLa secuencia mecanica fina y cualquier combinacion exacta de teclas deben validarse sobre producto real antes de publicarse como instalacion definitiva para cliente final."
+  ],
+  "storage_bucket": "installation"
+}

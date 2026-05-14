@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/consoles/",
+  "console_design_rules_count": 6,
+  "consoles": [
+    "runtime-console",
+    "reviewer-console",
+    "escalation-console",
+    "governance-console",
+    "audit-console",
+    "continuity-console"
+  ],
+  "implementation_status": "design-only (no implementation in this layer)",
+  "kind": "console-model-summary",
+  "schema": "human-operations-governance/1.0"
+}

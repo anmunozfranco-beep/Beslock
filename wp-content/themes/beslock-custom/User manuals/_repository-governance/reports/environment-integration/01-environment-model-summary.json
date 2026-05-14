@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/environment-governance/environment-model/",
+  "environments": [
+    "local-supervised-runtime",
+    "staging-environment",
+    "controlled-pilot",
+    "future-production",
+    "oem-ingestion-environment",
+    "reviewer-operation-environment"
+  ],
+  "invariants_count": 5,
+  "kind": "environment-model-summary",
+  "schema": "environment-integration-governance/1.0"
+}

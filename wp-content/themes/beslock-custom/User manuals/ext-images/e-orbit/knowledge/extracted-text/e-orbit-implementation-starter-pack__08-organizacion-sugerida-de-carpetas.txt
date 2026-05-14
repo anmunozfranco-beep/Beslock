@@ -1,0 +1,27 @@
+# Organización sugerida de carpetas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#8
+
+Si más adelante el repositorio almacena las imágenes generadas, una estructura limpia podría ser:
+
+```text
+User manuals/
+├── e-Orbit user manual.pdf
+├── e-Orbit - image generation matrix.md
+├── e-Orbit - AI image prompts.md
+├── e-Orbit - implementation starter pack.md
+└── assets/
+    └── e-orbit/
+        ├── e-orbit-hero-main.jpg
+        ├── e-orbit-installed-context.jpg
+        ├── e-orbit-add-admin-action.jpg
+        ├── e-orbit-fingerprint-use.jpg
+        ├── e-orbit-language-settings.jpg
+        ├── e-orbit-app-add-device.jpg
+        ├── e-orbit-link-qr.jpg
+        ├── e-orbit-troubleshoot-fingerprint.jpg
+        ├── e-orbit-troubleshoot-app-connection.jpg
+        └── e-orbit-downloads-docs.jpg
+```
+
+---

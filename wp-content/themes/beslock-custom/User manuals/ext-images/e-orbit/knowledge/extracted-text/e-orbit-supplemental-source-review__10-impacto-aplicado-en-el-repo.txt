@@ -1,0 +1,11 @@
+# Impacto aplicado en el repo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#10
+
+- nuevo `e-Orbit app manual.md`
+- nuevo `e-Orbit - supplemental source review.md`
+- `e-Orbit user manual - image-ready.md` enriquecido
+- `ext-images/e-orbit/visual-system/references/e-orbit-visual-profile.md` reforzado
+- `e-Orbit - AI image prompts.md` reforzado
+- `e-Orbit - implementation starter pack.md` actualizado
+- matriz documental actualizada para reflejar `app manual` disponible y `installation/template` aun pendientes

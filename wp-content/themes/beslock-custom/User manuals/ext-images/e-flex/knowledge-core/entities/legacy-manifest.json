@@ -1,0 +1,577 @@
+[
+  {
+    "id": "cap-objetivo",
+    "type": "capability",
+    "summary": "Explicar el flujo base de vinculacion de e-Flex con `TUYA APP` y la red `2",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#2"
+    ]
+  },
+  {
+    "id": "cap-alcance-real-de-la-fuente",
+    "type": "capability",
+    "summary": "La fuente OEM suplementaria muestra un flujo de alta corto y dos referencias de ecosistema:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#3"
+    ]
+  },
+  {
+    "id": "proc-requisitos-antes-de-vincular",
+    "type": "procedure",
+    "summary": "- debe existir al menos un administrador en la cerradura",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4"
+    ]
+  },
+  {
+    "id": "wf-secuencia-local-en-la-cerradura",
+    "type": "workflow",
+    "summary": "La fuente OEM resume este flujo local:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#5"
+    ]
+  },
+  {
+    "id": "wf-alta-desde-tuya-app",
+    "type": "workflow",
+    "summary": "Una vez habilitado el modo de red en la cerradura:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#6"
+    ]
+  },
+  {
+    "id": "wf-qr-y-mini-programa-de-wechat",
+    "type": "workflow",
+    "summary": "La guia tambien indica que el QR puede escanearse con `WeChat` para usar el mini-programa de apertura",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#7"
+    ]
+  },
+  {
+    "id": "proc-validacion-despues-del-alta",
+    "type": "procedure",
+    "summary": "Despues de enlazar el equipo:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8"
+    ]
+  },
+  {
+    "id": "warning-limites-de-evidencia",
+    "type": "warning",
+    "summary": "- la guia corta no aporta un mapa completo de modulos internos de la app",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#9"
+    ]
+  },
+  {
+    "id": "install-context-objetivo",
+    "type": "installation-flow",
+    "summary": "Ordenar la preparacion de puerta, el montaje del cuerpo de cerradura y la validacion inicial de e-Flex usando la fuente OEM suplementaria disponible",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#2"
+    ]
+  },
+  {
+    "id": "install-context-que-vas-a-instalar",
+    "type": "installation-flow",
+    "summary": "e-Flex usa una arquitectura de placas largas frontal y trasera con:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#3"
+    ]
+  },
+  {
+    "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+    "type": "installation-flow",
+    "summary": "Valida estas condiciones antes de montar:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#4"
+    ]
+  },
+  {
+    "id": "install-context-que-necesitas-antes-de-empezar",
+    "type": "installation-flow",
+    "summary": "- guia OEM disponible en `e-Flex_1",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#5"
+    ]
+  },
+  {
+    "id": "install-usar-la-guia-de-instalacion-disponible",
+    "type": "installation-flow",
+    "summary": "![Guia de instalacion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-02",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#6"
+    ]
+  },
+  {
+    "id": "install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+    "type": "installation-flow",
+    "summary": "Secuencia base:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#7"
+    ]
+  },
+  {
+    "id": "install-montar-panel-exterior-e-interior",
+    "type": "installation-flow",
+    "summary": "Orden practico de montaje:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#8"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion",
+    "type": "installation-flow",
+    "summary": "![Cambio de direccion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-03",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+    "type": "installation-flow",
+    "summary": "afloja el tornillo de cambio de direccion",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.1"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+    "type": "installation-flow",
+    "summary": "empuja el interruptor de cambio hacia arriba",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.2"
+    ]
+  },
+  {
+    "id": "install-energia-e-inicializacion",
+    "type": "installation-flow",
+    "summary": "Para la prueba inicial:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#10"
+    ]
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "type": "installation-flow",
+    "summary": "Antes de cerrar el trabajo, valida:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#11"
+    ]
+  },
+  {
+    "id": "warning-precauciones-clave",
+    "type": "warning",
+    "summary": "Segun la guia OEM:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#12"
+    ]
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "type": "installation-flow",
+    "summary": "Dentro del paquete Beslock de e-Flex, este documento convive con:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#13"
+    ]
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "type": "installation-flow",
+    "summary": "La base de instalacion queda suficientemente soportada por `e-Flex_1",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#14"
+    ]
+  },
+  {
+    "id": "term-tuya",
+    "type": "glossary-term",
+    "summary": "Plataforma OEM de aplicación móvil.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-wechat",
+    "type": "glossary-term",
+    "summary": "Plataforma china de mini-programas usada como canal OEM.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-2-4g",
+    "type": "glossary-term",
+    "summary": "Banda de red Wi-Fi requerida.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-qr",
+    "type": "glossary-term",
+    "summary": "Código gráfico de provisión.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-pin",
+    "type": "glossary-term",
+    "summary": "Código numérico de acceso.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-huella",
+    "type": "glossary-term",
+    "summary": "Credencial biométrica dactilar.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-administrador",
+    "type": "glossary-term",
+    "summary": "Usuario con permisos de gestión.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "term-reset",
+    "type": "glossary-term",
+    "summary": "Acción o botón de inicialización.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+    ]
+  },
+  {
+    "id": "ocr-ocr-overview-1",
+    "type": "extracted-text",
+    "summary": "Overview",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-1"
+    ]
+  },
+  {
+    "id": "ocr-ocr-reset-button-2",
+    "type": "extracted-text",
+    "summary": "Reset Button",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-2"
+    ]
+  },
+  {
+    "id": "ocr-ocr-mechanical-key-3",
+    "type": "extracted-text",
+    "summary": "Mechanical Key",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-3"
+    ]
+  },
+  {
+    "id": "ocr-ocr-the-length-of-the-4",
+    "type": "extracted-text",
+    "summary": "The Length Of The",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-4"
+    ]
+  },
+  {
+    "id": "ocr-ocr-for-door-thicknesses-5",
+    "type": "extracted-text",
+    "summary": "For Door Thicknesses",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-5"
+    ]
+  },
+  {
+    "id": "ocr-ocr-changing-handle-direction-6",
+    "type": "extracted-text",
+    "summary": "Changing Handle Direction",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-6"
+    ]
+  },
+  {
+    "id": "ocr-ocr-do-not-remove-the-7",
+    "type": "extracted-text",
+    "summary": "Do Not Remove The",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-7"
+    ]
+  },
+  {
+    "id": "ocr-ocr-changing-lock-body-direction-8",
+    "type": "extracted-text",
+    "summary": "Changing Lock Body Direction",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-8"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-9",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-9"
+    ]
+  },
+  {
+    "id": "ocr-ocr-ic-card-10",
+    "type": "extracted-text",
+    "summary": "Ic Card",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-10"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-pr-11",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Pr",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-11"
+    ]
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-12",
+    "type": "extracted-text",
+    "summary": "In Normal Status",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-12"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-13",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-13"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-14",
+    "type": "extracted-text",
+    "summary": "After Adding An Administrator,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-14"
+    ]
+  },
+  {
+    "id": "ocr-ocr-function-settings-15",
+    "type": "extracted-text",
+    "summary": "Function Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-15"
+    ]
+  },
+  {
+    "id": "ocr-ocr-settings-16",
+    "type": "extracted-text",
+    "summary": "Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-16"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-17",
+    "type": "extracted-text",
+    "summary": "After Successful Operation,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-17"
+    ]
+  },
+  {
+    "id": "ocr-ocr-settings-18",
+    "type": "extracted-text",
+    "summary": "Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-18"
+    ]
+  },
+  {
+    "id": "ocr-ocr-please-enter-the-time-19",
+    "type": "extracted-text",
+    "summary": "Please Enter The Time",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-19"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-20",
+    "type": "extracted-text",
+    "summary": "Select The Appropriate",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-20"
+    ]
+  },
+  {
+    "id": "ocr-ocr-enter-time-21",
+    "type": "extracted-text",
+    "summary": "Enter Time",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-21"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-22",
+    "type": "extracted-text",
+    "summary": "Select The Appropriate",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-22"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-23",
+    "type": "extracted-text",
+    "summary": "Select The Appropriate",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-23"
+    ]
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-24",
+    "type": "extracted-text",
+    "summary": "In Normal Status",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-24"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-25",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-25"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-26",
+    "type": "extracted-text",
+    "summary": "After Adding An Administrator,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-26"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-27",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Press",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-27"
+    ]
+  },
+  {
+    "id": "ocr-ocr-enter-the-fingerprint-password-28",
+    "type": "extracted-text",
+    "summary": "Enter The Fingerprint, Password,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-28"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-29",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Press",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-29"
+    ]
+  },
+  {
+    "id": "ocr-ocr-press-and-hold-for-5-30",
+    "type": "extracted-text",
+    "summary": "Press And Hold For 5",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-30"
+    ]
+  },
+  {
+    "id": "ocr-ocr-doodle-app-download-installation-and-door-31",
+    "type": "extracted-text",
+    "summary": "Doodle App Download Installation And Door",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-31"
+    ]
+  },
+  {
+    "id": "ocr-ocr-sweep-32",
+    "type": "extracted-text",
+    "summary": "Sweep",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-flex/manual.json#section-32"
+    ]
+  }
+]

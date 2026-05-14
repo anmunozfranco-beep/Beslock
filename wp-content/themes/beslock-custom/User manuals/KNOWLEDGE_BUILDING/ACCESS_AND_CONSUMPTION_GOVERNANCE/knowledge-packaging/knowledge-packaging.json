@@ -1,0 +1,48 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "package_types": [
+    {
+      "id": "operational-bundle",
+      "purpose": "single procedure with all dependencies",
+      "shape": "{procedure, prerequisites, warnings, entities, visuals?}"
+    },
+    {
+      "id": "workflow-bundle",
+      "purpose": "single workflow ready for sequencing",
+      "shape": "{workflow, actors, steps, dependencies, channel_targets}"
+    },
+    {
+      "id": "troubleshooting-bundle",
+      "purpose": "symptom -> resolution path",
+      "shape": "{symptom, tier, steps, escalation}"
+    },
+    {
+      "id": "onboarding-bundle",
+      "purpose": "ordered audience-scoped flow",
+      "shape": "{audience, ordered_artifacts, guidance_triggers}"
+    },
+    {
+      "id": "publication-bundle",
+      "purpose": "publication-neutral artifact set",
+      "shape": "{publication_intent, ordered_artifacts, deprecation_badges, lineage}"
+    },
+    {
+      "id": "retrieval-bundle",
+      "purpose": "RAG-safe semantic chunk",
+      "shape": "{chunk_text, ids, provenance, channel_targets}"
+    },
+    {
+      "id": "visual-bundle",
+      "purpose": "visual descriptors for future assistance",
+      "shape": "{visual_intent, visual_risk, component_visibility}"
+    }
+  ],
+  "rules": [
+    "Packages are publication-neutral: they describe content, never rendering.",
+    "Every package declares: package_type, schema, generated_at, source_artifact_ids, maturity_floor.",
+    "Packages MUST be reproducible from the per-product knowledge-core; no orphan content.",
+    "Packages MUST NOT inline rendering instructions, fonts, layouts, or media binaries.",
+    "Retrieval bundles MUST carry stable retrieval-safe ids and provenance for every chunk."
+  ]
+}

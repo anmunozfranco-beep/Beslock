@@ -1,0 +1,36 @@
+{
+  "id": "install-context-que-vas-a-instalar",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "e-Prime es una cerradura de placa larga y delgada con:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#3"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-que-vas-a-instalar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "panel exterior brillante con keypad en la zona superior",
+    "manija recta centrada con aro azul en el hub",
+    "inserto oval inferior en la cara frontal",
+    "panel interior con compartimiento de baterias, perilla interior y boton `SET`"
+  ],
+  "legacy_storage_bucket": "installation"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "oem-source-index-e-touch",
+  "type": "oem-source-index",
+  "product": "e-touch",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/specifications/e-Touch - supplemental source review.md",
+      "ext": ".md",
+      "size_bytes": 3505,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "ext": ".md",
+      "size_bytes": 3986,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md",
+      "ext": ".md",
+      "size_bytes": 4133,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 10267284,
+      "md5": "6479c9e9d7664a645fdb2fd760299638",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)",
+      "duplicate_of": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf"
+      ]
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf",
+      "ext": ".pdf",
+      "size_bytes": 10267284,
+      "md5": "6479c9e9d7664a645fdb2fd760299638",
+      "semantic_pipeline_status": "not-ingested",
+      "duplicate_of": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch_1.pdf"
+      ]
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 204093,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/page-01.png",
+      "ext": ".png",
+      "size_bytes": 1211213,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/pdf-renders/e-touch-1/page-02.png",
+      "ext": ".png",
+      "size_bytes": 1660495,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/product-images/e-Touch.png",
+      "ext": ".png",
+      "size_bytes": 273138,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

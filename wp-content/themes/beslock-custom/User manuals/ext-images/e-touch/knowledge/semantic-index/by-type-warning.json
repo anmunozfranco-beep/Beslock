@@ -1,0 +1,10 @@
+[
+  {
+    "id": "warning-limites-de-evidencia",
+    "summary": "- la fuente no describe un flujo Wi-Fi ni una nube separada; el onboarding visible es Bluetooth",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#11"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

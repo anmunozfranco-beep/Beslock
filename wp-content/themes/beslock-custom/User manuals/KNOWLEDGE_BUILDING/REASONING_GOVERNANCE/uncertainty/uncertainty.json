@@ -1,0 +1,42 @@
+{
+  "schema": "reasoning-governance/1.0",
+  "generated_at": "2026-05-13T19:21:43+00:00",
+  "kinds": [
+    {
+      "id": "evidence-incomplete",
+      "treatment": "downgrade conclusions; require explicit acknowledgement"
+    },
+    {
+      "id": "evidence-missing",
+      "treatment": "block dependent conclusion; surface disclosure"
+    },
+    {
+      "id": "inferred-state",
+      "treatment": "label state as inferred; do not drive destructive ops"
+    },
+    {
+      "id": "ambiguous-input",
+      "treatment": "ask-disambiguation or withhold"
+    },
+    {
+      "id": "oem-required",
+      "treatment": "withhold and escalate to OEM channel"
+    },
+    {
+      "id": "low-confidence-path",
+      "treatment": "present as alternative-path, not preferred"
+    },
+    {
+      "id": "irreducible-uncertainty",
+      "treatment": "surface explicitly; never hide as a guess"
+    }
+  ],
+  "rules": [
+    "uncertainty is named, not hidden",
+    "uncertainty propagates: a chain step's confidence cannot exceed its inputs",
+    "destructive operations require high-confidence inputs along the entire chain",
+    "uncertainty disclosure is non-suppressible by adaptive presentation",
+    "OEM-required uncertainty cannot be resolved by inference",
+    "uncertainty events are recorded for knowledge-health intake"
+  ]
+}

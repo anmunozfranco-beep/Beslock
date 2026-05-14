@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/environment-governance/incident-containment/",
+  "invariants_count": 5,
+  "kind": "incident-containment-summary",
+  "patterns": [
+    "runtime-incident-isolation",
+    "escalation-containment",
+    "rollback-containment",
+    "provenance-breach-handling",
+    "unsafe-runtime-shutdown",
+    "replay-assisted-incident-review"
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

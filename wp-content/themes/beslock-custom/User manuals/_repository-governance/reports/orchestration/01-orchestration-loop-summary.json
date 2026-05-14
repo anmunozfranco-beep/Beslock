@@ -1,0 +1,18 @@
+{
+  "by_phase": {
+    "adaptive-guidance": "adaptive-guidance-loop",
+    "contextual-assembly": "contextual-assembly-loop",
+    "continuity-restoration": "continuity-restoration-loop",
+    "decisioning": "decisioning-loop",
+    "escalation": "escalation-loop",
+    "reasoning": "reasoning-loop",
+    "retrieval": "retrieval-loop",
+    "runtime-completion": "runtime-completion-loop"
+  },
+  "destructive_loops": [
+    "decisioning-loop"
+  ],
+  "loops": 8,
+  "rules": 6,
+  "schema": "runtime-orchestration-governance/1.0"
+}

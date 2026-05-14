@@ -1,0 +1,46 @@
+# Prototype Governance Doctrine
+
+Philosophy + doctrine for the prototype, supervised runtime, proof methodology, runtime safety, escalation, observability.
+
+## Prototype philosophy
+
+- A prototype is operational evidence at the smallest defensible scale.
+- A prototype is supervised, controlled, and demotable.
+- A prototype validates the architecture; it does not extend it.
+- A prototype remains subordinate to the governed knowledge-core forever.
+- A prototype is not a product, not a pilot, not a release.
+
+## Supervised-runtime doctrine
+
+- Supervision is the default; autonomy is out of scope.
+- Supervision boundaries are declared, gated, and audited.
+- Supervision overrides cannot relax safety-preserving adaptations.
+- Supervision receipts are append-only and provenance-signed.
+
+## Operational proof methodology
+
+- Define the smallest read-only slice that exercises retrieval + assembly + guidance.
+- Declare evidence per step; evidence is binding.
+- Run under operator observation with append-only traces.
+- Promote only on documented evidence; demote on any anomaly.
+
+## Runtime safety philosophy
+
+- Safety predicates are continuous, not terminal.
+- Failure demotes; it does not silently pass.
+- Irreversibility warnings cannot be downgraded.
+- Hallucination is treated as a halt event, not a quality issue.
+
+## Escalation philosophy
+
+- Escalation is monotonic; tier never decreases.
+- Escalation produces append-only records with continuity bindings.
+- Escalation locks the slice into a read-only handoff state.
+- Escalation is a safety mechanism, not a fallback for low quality.
+
+## Observability philosophy
+
+- What cannot be observed cannot be validated.
+- What cannot be replayed cannot be approved.
+- What cannot be demoted cannot be safely promoted.
+- Audit trails are append-only by construction.

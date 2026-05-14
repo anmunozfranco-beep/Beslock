@@ -1,0 +1,253 @@
+{
+  "channel_targets": [
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "edges": [
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-pairing-failures",
+      "to_cause": "cause-pairing-failures-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-enrollment-failures",
+      "to_cause": "cause-enrollment-failures-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-battery-issues",
+      "to_cause": "cause-battery-issues-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-connectivity-failures",
+      "to_cause": "cause-connectivity-failures-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-lock-state-inconsistencies",
+      "to_cause": "cause-lock-state-inconsistencies-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-administrator-access-recovery",
+      "to_cause": "cause-administrator-access-recovery-pending-review"
+    },
+    {
+      "confidence": "candidate",
+      "evidence": "candidate-pending-review",
+      "from_symptom": "sym-app-synchronization-issues",
+      "to_cause": "cause-app-synchronization-issues-pending-review"
+    }
+  ],
+  "extraction_lineage": [
+    "corpus-enrichment/causal-graph-candidate/causal-graph-e-orbit-candidate"
+  ],
+  "hypothesis_chains": [
+    {
+      "id": "hyp-pairing-failures-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-pairing-failures",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-enrollment-failures-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-enrollment-failures",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-battery-issues-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-battery-issues",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-connectivity-failures-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-connectivity-failures",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-lock-state-inconsistencies-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-lock-state-inconsistencies",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-administrator-access-recovery-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-administrator-access-recovery",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    },
+    {
+      "id": "hyp-app-synchronization-issues-candidate",
+      "ordered_hypotheses": [
+        {
+          "id": "h1",
+          "label": "verificar prerequisitos del flujo",
+          "status": "pending"
+        },
+        {
+          "id": "h2",
+          "label": "verificar estado físico de la cerradura",
+          "status": "pending"
+        },
+        {
+          "id": "h3",
+          "label": "verificar canal OEM / app sincronizada",
+          "status": "pending"
+        }
+      ],
+      "symptom": "sym-app-synchronization-issues",
+      "termination_outcomes": [
+        "resolved",
+        "escalated",
+        "halted"
+      ]
+    }
+  ],
+  "id": "causal-graph-e-orbit-candidate",
+  "language": "es-CO",
+  "menu_path": "",
+  "ocr_dependency": "none",
+  "product": "e-orbit",
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "grafo candidato de relaciones síntoma→causa para el runtime de troubleshooting",
+  "surface": "runtime-corpus",
+  "type": "causal-graph-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

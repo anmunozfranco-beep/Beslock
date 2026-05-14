@@ -1,0 +1,12 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "publication-constraints",
+  "title": "Publication-channel constraints (DRAFT — gap)",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "ext-images/<product>/knowledge-core/publication-intent/publication-intent-map.json",
+    "tools/visual_generation.py (FORMAT_DIMENSIONS hardcoded)",
+    "visual-system/shared/visual-rules/app-ui-policy.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

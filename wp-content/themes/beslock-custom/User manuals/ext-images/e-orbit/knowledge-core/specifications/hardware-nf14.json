@@ -1,0 +1,197 @@
+{
+  "id": "hardware-nf14",
+  "type": "hardware-specification",
+  "product": "e-orbit",
+  "summary": "OEM hardware specification sheet for e-Orbit (model NF14)",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/specifications/e-Orbit_1.xls"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/specifications/e-Orbit_1.xls"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "model": "NF14",
+  "spec_rows": [
+    {
+      "key": "Item",
+      "value": "Specifications（NF14）"
+    },
+    {
+      "key": "1. Material",
+      "value": "Aluminum Alloy + Tempered Glass"
+    },
+    {
+      "key": "2. User Capacity-Tuya",
+      "value": "Total: 250 user groups、• Fingerprint: up to 100 • Password: up to 100 • IC Card: up to 100\n•Face + Palm Vein: up to 50  • Fingerprint / Password / IC Card: 250 sets"
+    },
+    {
+      "key": "Tongtong",
+      "value": "•Face up to 100  • Fingerprint: up to 100 • Password: up to 100 • IC Card: up to 100"
+    },
+    {
+      "key": "3. Unlock Methods",
+      "value": "Face Recognition,Palm Vein， Fingerprint, Password, IC Card, Tuya Smart APP，Tongtong APP\nPassword length: 6-9 digits"
+    },
+    {
+      "key": "4. Remote & Backup Control",
+      "value": "Tuya Smart APP, Tongtong APP + Mechanical Key"
+    },
+    {
+      "key": "5. Fingerprint Sensor",
+      "value": "Semiconductor Fingerprint Sensor"
+    },
+    {
+      "key": "6. Lock Cylinder",
+      "value": "Grade C (High Security Level)"
+    },
+    {
+      "key": "7. Recognition Accuracy-Tuya",
+      "value": "• False Acceptance Rate (FAR): < 0.001%\n• False Rejection Rate (FRR): < 2%"
+    },
+    {
+      "key": "8. Lock Body",
+      "value": "Standard: 6068 Lock Body\nOptional: 85 / 90 Lock Body"
+    },
+    {
+      "key": "9. Power Supply",
+      "value": "7.2V Rechargeable Lithium Battery, 4200mAh"
+    },
+    {
+      "key": "10. Smart & Environmental Specs",
+      "value": "• WiFi Module: Tuya WiFi\n• Applicable Door Thickness: 38-120mm\n• Operating Temperature: -20℃ ~ 55℃\n• Static Current: ≤ 120µA\n• Dynamic Current: ≤ 4A"
+    },
+    {
+      "key": "11. Available Colors",
+      "value": "Matte Grey, Matte Black, Mocha Gold"
+    },
+    {
+      "key": "12. Dimensions & Weight",
+      "value": "• Front Panel: 425 × 69 × 49 mm\n• Rear Panel: 430 × 70 × 70 mm\n• Single Unit Size: 47 × 22.5 × 12 cm / 4.2 kg\n• Carton Size (6 units): 49 × 39 × 46.5 cm / 26 kg\n• Applicable Doors: Wooden Doors, Steel Doors, Entry Doors"
+    },
+    {
+      "key": "13. Supported Languages",
+      "value": "Tuya-22 Languages (including Simplified/Traditional Chinese, English, Spanish, Portuguese, French, Russian, Arabic, etc.)   Tongtong-2 Languages：Chinese、English"
+    },
+    {
+      "key": "14. Smart Assistant Compatibility",
+      "value": "Works with Alexa"
+    },
+    {
+      "key": "15.IP Waterproof Rating",
+      "value": "Actual grade: IP68   IP68 is available by custom order only.   Rear panel is not waterproof.\nSuggest inform customers as IP66"
+    },
+    {
+      "key": "Remark",
+      "value": "WiFi: Tuya WiFi / Tongtong WiFi，all built-in WiFi, no extra gateway needed。"
+    }
+  ],
+  "supported_language_codes": [
+    {
+      "code": "3000",
+      "name": "Chinese"
+    },
+    {
+      "code": "3001",
+      "name": "English"
+    },
+    {
+      "code": "3002",
+      "name": "Traditional Chinese"
+    },
+    {
+      "code": "3003",
+      "name": "Russian"
+    },
+    {
+      "code": "3004",
+      "name": "Vietnamese"
+    },
+    {
+      "code": "3005",
+      "name": "Korean"
+    },
+    {
+      "code": "3006",
+      "name": "Arabic"
+    },
+    {
+      "code": "3007",
+      "name": "Portuguese"
+    },
+    {
+      "code": "3008",
+      "name": "French"
+    },
+    {
+      "code": "3009",
+      "name": "Spanish"
+    },
+    {
+      "code": "3011",
+      "name": "Indonesian"
+    },
+    {
+      "code": "3012",
+      "name": "Thai"
+    },
+    {
+      "code": "3013",
+      "name": "Hebrew"
+    },
+    {
+      "code": "3014",
+      "name": "Turkish"
+    },
+    {
+      "code": "3015",
+      "name": "Italian"
+    },
+    {
+      "code": "3016",
+      "name": "Mongolian"
+    },
+    {
+      "code": "3017",
+      "name": "Uzbek"
+    },
+    {
+      "code": "3018",
+      "name": "Kazakh"
+    },
+    {
+      "code": "3019",
+      "name": "Serbian"
+    },
+    {
+      "code": "3020",
+      "name": "Korean (North Korea)"
+    },
+    {
+      "code": "3022",
+      "name": "Japanese"
+    },
+    {
+      "code": "3023",
+      "name": "Persian"
+    }
+  ],
+  "ingestion_method": "xlrd-deterministic",
+  "ingestion_caveats": [
+    "User-capacity counts in the OEM XLS reflect Tuya/Tongtong firmware tiers and have historically conflicted with the NX5 menu text — do not promote them as canonical without commercial confirmation.",
+    "IP rating row carries an OEM-side caveat: actual grade IP68 is custom-order; suggested customer-facing grade is IP66; rear panel is not waterproof."
+  ]
+}

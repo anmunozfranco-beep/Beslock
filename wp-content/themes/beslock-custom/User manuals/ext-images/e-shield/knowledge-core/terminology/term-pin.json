@@ -1,0 +1,38 @@
+{
+  "id": "term-pin",
+  "type": "glossary-term",
+  "product": "e-shield",
+  "summary": "Código numérico de acceso.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-pin.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "PIN",
+  "oem_variants": [
+    "PIN",
+    "contraseña",
+    "contrasena",
+    "Contrasena"
+  ],
+  "definition": "Código numérico de acceso.",
+  "legacy_storage_bucket": "terminology"
+}

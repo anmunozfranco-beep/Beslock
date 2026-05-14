@@ -1,0 +1,50 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "risks_count": 8,
+  "risks": [
+    {
+      "id": "risk.bilingual-duplication",
+      "severity": "medium",
+      "count": 15,
+      "note": "Concepts present in both English and Spanish artifact slugs in the same product nucleus."
+    },
+    {
+      "id": "risk.synonym-duplication",
+      "severity": "medium",
+      "count": 41,
+      "note": "Artifact local IDs are synonyms of canonical terms."
+    },
+    {
+      "id": "risk.duplicate-within-product",
+      "severity": "high",
+      "count": 15,
+      "note": "Two artifacts collapse to the same canonical id inside one product."
+    },
+    {
+      "id": "risk.maturity-field-absent",
+      "severity": "high",
+      "note": "maturity field is required by doctrine but most existing artifacts have not been backfilled."
+    },
+    {
+      "id": "risk.shared-concept-membership-empty",
+      "severity": "medium",
+      "note": "shared-concept-membership.json is specified but unpopulated; cross-product retrieval cannot run."
+    },
+    {
+      "id": "risk.discoverability-orphans-unaudited",
+      "severity": "low",
+      "note": "Orphan-detection audit not implemented yet; currently only declared as a contract."
+    },
+    {
+      "id": "risk.embeddings-strategy-missing",
+      "severity": "low",
+      "note": "Embedding model + store identity not declared; future RAG cannot freeze its surface."
+    },
+    {
+      "id": "risk.publication-channel-spec-draft",
+      "severity": "high",
+      "note": "Per-channel publication specs remain draft (carry-over from Phase 6)."
+    }
+  ]
+}

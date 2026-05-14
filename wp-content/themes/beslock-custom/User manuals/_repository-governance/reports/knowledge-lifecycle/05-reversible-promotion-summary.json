@@ -1,0 +1,8 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/reversibility/",
+  "invalidation_propagation_rules_count": 4,
+  "kind": "reversible-promotion-summary",
+  "rules_count": 4,
+  "runtime_safe_demotion_rules_count": 4,
+  "schema": "knowledge-lifecycle-governance/1.0"
+}

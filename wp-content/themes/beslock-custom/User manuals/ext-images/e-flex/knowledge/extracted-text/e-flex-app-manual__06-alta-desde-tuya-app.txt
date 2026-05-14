@@ -1,0 +1,10 @@
+# Alta desde TUYA APP
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#6
+
+Una vez habilitado el modo de red en la cerradura:
+1. abre `TUYA APP`
+2. agrega una nueva cerradura inteligente desde la categoria correcta
+3. confirma la red `2.4G`
+4. sigue el asistente de la app hasta completar el enlace
+5. valida que el equipo aparezca correctamente en la cuenta

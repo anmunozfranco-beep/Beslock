@@ -1,0 +1,40 @@
+{
+  "product": "e-orbit",
+  "nodes": [
+    {"id": "product:e-orbit", "type": "product", "label": "e-Orbit"},
+    {"id": "source:user-manual", "type": "source", "label": "Normalized user manual"},
+    {"id": "source:app-manual", "type": "source", "label": "Normalized app manual"},
+    {"id": "source:oem-pdf", "type": "source", "label": "OEM app manual PDF"},
+    {"id": "source:oem-xls", "type": "source", "label": "OEM specification sheet"},
+    {"id": "feature:wifi", "type": "feature", "label": "Integrated Tuya WiFi"},
+    {"id": "feature:remote-unlock", "type": "feature", "label": "Remote unlock"},
+    {"id": "feature:temporary-passwords", "type": "feature", "label": "Temporary passwords"},
+    {"id": "feature:multimethod-access", "type": "feature", "label": "Multiple access methods"},
+    {"id": "procedure:add-administrator", "type": "procedure", "label": "Add administrator"},
+    {"id": "procedure:qr-pairing", "type": "procedure", "label": "QR pairing"},
+    {"id": "procedure:ez-mode-pairing", "type": "procedure", "label": "EZ Mode pairing"},
+    {"id": "visual:upper-sensor-cluster", "type": "visual-constraint", "label": "Upper sensor cluster"},
+    {"id": "visual:fingerprint-on-handle", "type": "visual-constraint", "label": "Fingerprint sensor on handle"},
+    {"id": "publishing:web-manual", "type": "publishing-surface", "label": "Web manual"},
+    {"id": "automation:comfyui", "type": "automation-policy", "label": "ComfyUI only renderer"}
+  ],
+  "edges": [
+    {"from": "product:e-orbit", "to": "source:user-manual", "type": "documented_by"},
+    {"from": "product:e-orbit", "to": "source:app-manual", "type": "documented_by"},
+    {"from": "product:e-orbit", "to": "source:oem-pdf", "type": "supported_by"},
+    {"from": "product:e-orbit", "to": "source:oem-xls", "type": "supported_by"},
+    {"from": "product:e-orbit", "to": "feature:wifi", "type": "supports"},
+    {"from": "product:e-orbit", "to": "feature:remote-unlock", "type": "supports"},
+    {"from": "product:e-orbit", "to": "feature:temporary-passwords", "type": "supports"},
+    {"from": "product:e-orbit", "to": "feature:multimethod-access", "type": "supports"},
+    {"from": "product:e-orbit", "to": "visual:upper-sensor-cluster", "type": "must_preserve"},
+    {"from": "product:e-orbit", "to": "visual:fingerprint-on-handle", "type": "must_preserve"},
+    {"from": "procedure:add-administrator", "to": "feature:multimethod-access", "type": "configures"},
+    {"from": "procedure:qr-pairing", "to": "feature:wifi", "type": "activates"},
+    {"from": "procedure:ez-mode-pairing", "to": "feature:wifi", "type": "fallback_for"},
+    {"from": "feature:remote-unlock", "to": "publishing:web-manual", "type": "published_to"},
+    {"from": "feature:temporary-passwords", "to": "publishing:web-manual", "type": "published_to"},
+    {"from": "visual:upper-sensor-cluster", "to": "automation:comfyui", "type": "must_be_preserved_in"},
+    {"from": "visual:fingerprint-on-handle", "to": "automation:comfyui", "type": "must_be_preserved_in"}
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-hare-7",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Hare",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "fully guarantee errors before and during printing. Sometimes we in order to improve the\nperformance, reliability and safety of components and systems, may upgrade the product, which may be somewhat\ninconsistent with the contents of the manual, but does not affect the actual operation, if there is\na change is not known, please",
+  "storage_bucket": "extracted-text"
+}

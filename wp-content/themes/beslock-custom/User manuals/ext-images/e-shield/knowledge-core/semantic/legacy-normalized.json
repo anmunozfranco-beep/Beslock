@@ -1,0 +1,2017 @@
+{
+  "product": "e-shield",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "entities": [
+    {
+      "id": "cap-objetivo",
+      "type": "capability",
+      "product": "e-shield",
+      "summary": "Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "details": [
+        "Explicar el flujo principal de la app asociada a e-Shield sin mezclarlo con el manual de uso ni con el manual de instalacion.\n\nLa fuente OEM habla de la app `TECDOFY` y del uso opcional de `Gateway` para funciones remotas.\nMientras no exista validacion directa en hardware y cuenta real, este documento debe leerse como manual de app normalizado con prudencia editorial."
+      ],
+      "storage_bucket": "capabilities"
+    },
+    {
+      "id": "wf-registro-e-inicio-de-sesion",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "La fuente OEM indica que el usuario puede registrarse con telefono movil o correo electronico",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device",
+        "user"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abre la app `TECDOFY`"
+        },
+        {
+          "n": 2,
+          "text": "registra la cuenta con telefono o email"
+        },
+        {
+          "n": 3,
+          "text": "confirma el codigo de verificacion"
+        },
+        {
+          "n": 4,
+          "text": "inicia sesion y verifica la cuenta si cambias de telefono"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-agregar-la-cerradura",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "La primera vinculacion convierte al primer usuario en administrador original del equipo",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device",
+        "user"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "toca el boton `+` para agregar una cerradura"
+        },
+        {
+          "n": 2,
+          "text": "selecciona el tipo de dispositivo correcto"
+        },
+        {
+          "n": 3,
+          "text": "activa el teclado o panel de la cerradura para entrar en modo de configuracion"
+        },
+        {
+          "n": 4,
+          "text": "sigue el flujo de alta desde la app"
+        },
+        {
+          "n": 5,
+          "text": "acepta o cambia el nombre del dispositivo"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "ts-gestion-del-dispositivo",
+      "type": "troubleshooting",
+      "product": "e-shield",
+      "summary": "Gestion del dispositivo",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "symptoms": [
+        "La app permite operaciones de mantenimiento y administracion cercana por Bluetooth"
+      ],
+      "resolutions": [
+        "actualizacion de la cerradura",
+        "calibracion de fecha y hora",
+        "diagnostico de errores",
+        "autorizacion de administrador adicional",
+        "realiza estas operaciones con el telefono junto a la cerradura cuando la fuente hable de Bluetooth local"
+      ],
+      "storage_bucket": "troubleshooting"
+    },
+    {
+      "id": "wf-ekeys-y-acceso-compartido",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "El administrador original puede enviar distintos tipos de eKey desde la app",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "user"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra al modulo `eKeys`"
+        },
+        {
+          "n": 2,
+          "text": "toca `Enviar eKey`"
+        },
+        {
+          "n": 3,
+          "text": "elige el tipo de vigencia"
+        },
+        {
+          "n": 4,
+          "text": "completa los datos del usuario receptor"
+        },
+        {
+          "n": 5,
+          "text": "envia la llave y valida su vigencia en el historial"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-contrasenas-remotas",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "La fuente OEM describe un modulo dedicado a contrasenas",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra a `Contrasenas`"
+        },
+        {
+          "n": 2,
+          "text": "toca `Enviar codigo de acceso`"
+        },
+        {
+          "n": 3,
+          "text": "selecciona el tipo de codigo"
+        },
+        {
+          "n": 4,
+          "text": "completa nombre y vigencia"
+        },
+        {
+          "n": 5,
+          "text": "genera el codigo"
+        },
+        {
+          "n": 6,
+          "text": "ingresa el codigo en la cerradura y confirma con `#` para registrarlo en el equipo"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-tarjetas-rf-y-huellas",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "La fuente muestra dos modulos paralelos: `Tarjetas RF` y `Gestion de huellas`",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra a `Tarjetas RF`"
+        },
+        {
+          "n": 2,
+          "text": "toca `Agregar tarjetas RF`"
+        },
+        {
+          "n": 3,
+          "text": "define nombre y tiempo de vigencia"
+        },
+        {
+          "n": 4,
+          "text": "acerca la tarjeta a la cerradura para completar el enlace"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-tarjetas-rf-y-huellas-tarjetas-rf",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "entra a `Tarjetas RF",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra a `Tarjetas RF`"
+        },
+        {
+          "n": 2,
+          "text": "toca `Agregar tarjetas RF`"
+        },
+        {
+          "n": 3,
+          "text": "define nombre y tiempo de vigencia"
+        },
+        {
+          "n": 4,
+          "text": "acerca la tarjeta a la cerradura para completar el enlace"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-tarjetas-rf-y-huellas-huellas",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "entra al modulo de huellas",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#9.2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "user",
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra al modulo de huellas"
+        },
+        {
+          "n": 2,
+          "text": "inicia el alta"
+        },
+        {
+          "n": 3,
+          "text": "apoya el dedo `4 veces` segun la guia OEM"
+        },
+        {
+          "n": 4,
+          "text": "valida el desbloqueo despues del registro"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-desbloqueo-por-bluetooth",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "La app permite abrir la cerradura desde el boton con icono de candado cuando estas dentro de alcance",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "mobile-app",
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "abre la pantalla del dispositivo"
+        },
+        {
+          "n": 2,
+          "text": "verifica conexion Bluetooth activa"
+        },
+        {
+          "n": 3,
+          "text": "toca el icono de candado para bloquear o desbloquear"
+        },
+        {
+          "n": 4,
+          "text": "confirma respuesta fisica de la cerradura"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "wf-gateway-y-funciones-remotas",
+      "type": "workflow",
+      "product": "e-shield",
+      "summary": "e-Shield usa Bluetooth por defecto",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "mobile-app",
+      "actors": [
+        "device"
+      ],
+      "steps": [
+        {
+          "n": 1,
+          "text": "entra al apartado `Gateway`"
+        },
+        {
+          "n": 2,
+          "text": "toca `+`"
+        },
+        {
+          "n": 3,
+          "text": "selecciona el modelo de Gateway"
+        },
+        {
+          "n": 4,
+          "text": "introduce la clave WiFi y el nombre del Gateway"
+        },
+        {
+          "n": 5,
+          "text": "sigue el asistente hasta completar el enlace"
+        },
+        {
+          "n": 6,
+          "text": "vincula la cerradura al Gateway cuando aparezca dentro del alcance detectado"
+        }
+      ],
+      "preconditions": [],
+      "storage_bucket": "workflows"
+    },
+    {
+      "id": "warning-advertencias-editoriales",
+      "type": "warning",
+      "product": "e-shield",
+      "summary": "- `TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "severity": "caution",
+      "details": [
+        "`TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+        "la app y los nombres exactos de botones pueden variar por version",
+        "si la operacion depende de Bluetooth local, no debe describirse como flujo remoto puro",
+        "las funciones de asistencia, grupos o soporte deben marcarse como opcionales cuando no haya prueba de version activa"
+      ],
+      "storage_bucket": "warning"
+    },
+    {
+      "id": "install-context-objetivo",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield.\n\nEste documento no reemplaza la plantilla impresa ni una validacion fisica en banco.\nSu funcion es ordenar el proceso y separar lo que ya esta soportado por fuente OEM de lo que aun debe confirmarse en equipo real."
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-que-vas-a-instalar",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "e-Shield usa una arquitectura de cerradura dividida:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "modulo exterior vertical con lector circular en la parte superior y keypad debajo",
+        "caja interior horizontal separada",
+        "cilindro de seguridad tipo Clase C",
+        "alimentacion principal con 4 baterias AA",
+        "respaldo de energia por USB"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Valida estas condiciones antes de tocar la puerta:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "grosor compatible de puerta: `30 a 110 mm`",
+        "tipos de puerta declarados por la fuente OEM: hierro, acero inoxidable o patio",
+        "mano de apertura correcta segun la plantilla impresa",
+        "espacio suficiente para que la caja interior horizontal quede alineada y no choque con marcos, vidrios o herrajes cercanos"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "- plantilla impresa a escala `100%",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "plantilla impresa a escala `100%`",
+        "acceso a la cara interior, exterior y canto de la puerta",
+        "herramientas compatibles con las perforaciones marcadas en la plantilla",
+        "baterias AA nuevas para la prueba inicial",
+        "llave mecanica de respaldo para validacion final"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-usar-la-plantilla-de-instalacion",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "![Plantilla de instalacion de e-Shield](assets/e-shield/pdf-renders/e-shield-2/page-01",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "imprime el PDF original sin ajuste de escala"
+        },
+        {
+          "n": 2,
+          "text": "confirma si la hoja visible corresponde a apertura derecha o si debes espejarla para apertura izquierda"
+        },
+        {
+          "n": 3,
+          "text": "alinea la referencia de `LATERAL DE PUERTA` exactamente con el canto de la puerta"
+        },
+        {
+          "n": 4,
+          "text": "respeta el retiro de borde visible de `60 mm`"
+        },
+        {
+          "n": 5,
+          "text": "marca sobre la puerta solo despues de confirmar que la impresion no fue reducida ni ampliada"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-preparar-la-puerta",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "La plantilla muestra un patron principal y perforaciones auxiliares",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "fija temporalmente la plantilla en la cara correcta de la puerta"
+        },
+        {
+          "n": 2,
+          "text": "marca centros y contornos sin mover la hoja"
+        },
+        {
+          "n": 3,
+          "text": "perfora de forma controlada y limpia las rebabas"
+        },
+        {
+          "n": 4,
+          "text": "revisa desde ambos lados que el paso del cilindro y del cuerpo exterior quede libre"
+        },
+        {
+          "n": 5,
+          "text": "valida que el canto de la puerta permita el recorrido del pestillo sin rozamiento"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-montar-el-conjunto-exterior-e-interior",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Orden practico de montaje:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "presenta el cuerpo exterior manteniendo el lector arriba y el keypad debajo"
+        },
+        {
+          "n": 2,
+          "text": "pasa el cilindro y los elementos de union por las perforaciones ya validadas"
+        },
+        {
+          "n": 3,
+          "text": "presenta la caja interior horizontal desde la cara interna"
+        },
+        {
+          "n": 4,
+          "text": "alinea ambos cuerpos sin torsion ni inclinacion"
+        },
+        {
+          "n": 5,
+          "text": "ajusta la fijacion de forma gradual y alternada para no descentrar el conjunto"
+        },
+        {
+          "n": 6,
+          "text": "comprueba que el pestillo semiautomatico y el conjunto de cierre trabajen sin forzar la puerta"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-energia-y-encendido-inicial",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Para la puesta en marcha:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "preconditions": [],
+      "steps": [
+        {
+          "n": 1,
+          "text": "instala 4 baterias AA nuevas"
+        },
+        {
+          "n": 2,
+          "text": "activa el panel exterior y confirma respuesta del teclado"
+        },
+        {
+          "n": 3,
+          "text": "si no hay energia disponible, usa respaldo USB solo como alimentacion temporal de emergencia"
+        },
+        {
+          "n": 4,
+          "text": "si el equipo llega con datos previos, usa el boton interno `SET` y sigue el flujo de voz del equipo para restaurar el modo de fabrica"
+        }
+      ],
+      "validation_checks": [],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-validacion-despues-de-instalar",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Antes de entregar el equipo o pasar a configuracion de usuarios, valida esto:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "la puerta cierra y abre sin roce anormal",
+        "el cuerpo exterior queda vertical y la caja interior queda estable",
+        "el teclado despierta y responde al tacto",
+        "la llave mecanica abre y cierra correctamente",
+        "el puerto USB de emergencia sigue accesible",
+        "el boton interior y el pestillo responden sin retrasos ni holguras anormales"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-problemas-frecuentes-de-instalacion",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "### La plantilla no coincide con la puerta",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "revisa escala de impresion al `100%`",
+        "confirma mano de apertura correcta",
+        "no reconstruyas cotas a ojo desde una captura de pantalla",
+        "revisa alineacion entre cuerpo exterior, caja interior y eje del pestillo",
+        "confirma que no haya rebabas o desviacion en la perforacion principal",
+        "verifica polaridad y carga de las 4 baterias AA",
+        "usa USB solo como prueba de energia de emergencia",
+        "confirma que el conector interno no haya quedado forzado durante el montaje"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Dentro del estandar Beslock para e-Shield, este documento convive con:",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "`e-Shield user manual - image-ready.md`",
+        "`e-Shield - installation template standard.md`",
+        "`e-Shield - supplemental source review.md`",
+        "manual de app normalizado"
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "install-context-estado-editorial",
+      "type": "installation-flow",
+      "product": "e-shield",
+      "summary": "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1",
+      "language": "es-CO",
+      "validation_status": "extraction-pending-review",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "surface": "physical-installation",
+      "notes": [
+        "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1.pdf` y la plantilla `e-Shied_2.pdf`.\n\nLa compatibilidad fisica, las medidas visibles y la arquitectura del hardware estan suficientemente soportadas para una base de instalacion normalizada.\nLa secuencia mecanica fina y cualquier combinacion exacta de teclas deben validarse sobre producto real antes de publicarse como instalacion definitiva para cliente final."
+      ],
+      "storage_bucket": "installation"
+    },
+    {
+      "id": "term-pin",
+      "type": "glossary-term",
+      "product": "e-shield",
+      "summary": "Código numérico de acceso.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "PIN",
+      "oem_variants": [
+        "PIN",
+        "contraseña",
+        "contrasena",
+        "Contrasena"
+      ],
+      "definition": "Código numérico de acceso.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-huella",
+      "type": "glossary-term",
+      "product": "e-shield",
+      "summary": "Credencial biométrica dactilar.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "huella",
+      "oem_variants": [
+        "huella",
+        "fingerprint"
+      ],
+      "definition": "Credencial biométrica dactilar.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-administrador",
+      "type": "glossary-term",
+      "product": "e-shield",
+      "summary": "Usuario con permisos de gestión.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "administrador",
+      "oem_variants": [
+        "administrador",
+        "administrator",
+        "admin"
+      ],
+      "definition": "Usuario con permisos de gestión.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-bluetooth",
+      "type": "glossary-term",
+      "product": "e-shield",
+      "summary": "Canal inalámbrico de corto alcance.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "Bluetooth",
+      "oem_variants": [
+        "Bluetooth",
+        "BLE"
+      ],
+      "definition": "Canal inalámbrico de corto alcance.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "term-wi-fi",
+      "type": "glossary-term",
+      "product": "e-shield",
+      "summary": "Canal inalámbrico de red local.",
+      "language": "es-CO",
+      "validation_status": "normalized",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "canonical": "Wi-Fi",
+      "oem_variants": [
+        "Wi-Fi",
+        "WiFi",
+        "WIFI"
+      ],
+      "definition": "Canal inalámbrico de red local.",
+      "storage_bucket": "terminology"
+    },
+    {
+      "id": "ocr-ocr-manual-1",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Manual",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "IAS DEN E:",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-instrucciones-de-instalacion-2",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Instrucciones De Instalación",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Installation",
+      "raw_text": "nes aos\n1. Definición de términos y teclas de función\nAdministrador: Se refiere a las huellas dactilares, contraseñas y tarjetas de los usuarios con\nprivilegios de gestión.\nInformación de usuario: Datos registrados (huellas, contraseñas y tarjetas) tanto de\nadministradores como de usuarios regulares.\nTecla *: Tecla de borrar o retroceder. Al ingresar una contraseña, púlsela para borrar el\núltimo digito.\nTecla #: Tecla de confirmación, acceso al menú de funciones o timbre.\n2. Restaurar ajustes de fábrica\nMantenga presionado el botón interno SET en el panel posterior.\nLa voz indicará: \"Para restaurar los ajustes de fábrica, presione # para confirmar o * para cancelar\".\nPresione 4 y el sistema se reiniciará al modo de fábrica.\nNota: En estado de fábrica, cualquier huella o contraseña puede abrir la cerradura.\nEl restablecimiento no borrará los parámetros de dirección de giro ni de torsión ya configurados.\n3. Aviso de batería baja\nCuando la bateria sea inferior al 25%, el sistema emitirá el aviso: \"Bateria baja, por favor\nreemplace las baterías\". Tras el aviso, podrá abrir la cerradura unas 50 veces más, pero se\nrecomienda cargarla o cambiar las pilas de inmediato.\n4. Alimentación de emergencia por USB\nSi la batería se agota, conecte una bateria externa (Power Bank) al puerto USB mediante un\ncable de datos para suministrar energía de emergencia. Una vez conectado, tardará unos 30\nsegundos en permitir el desbloqueo.\n5. Alarma por usuario ilegal\nSi se ingresa una huella, contraseña o tarjeta incorrecta S veces consecutivas, el sistema\ndirá: \"Usuario ilegal, intrusión ilegal, el propietario ha sido notificado\" y se bloqueará por 90\nsegundos. Durante este tiempo, la cerradura no responderá a ninguna operación.\n6. Contraseña virtual\nAl abrir con contraseña, puede añadir números aleatorios antes y después de su código real\n(siempre que el total no supere los 16 dígitos). Presione “#\" al finalizar para confirmar.\nEsto evita que terceros memoricen su código real.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-configuracion-de-usuario-3",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Configuración De Usuario",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "1. Añadir contraseña de administrador por primera vez\n- Active la pantalla táctil, presione * y luego #. La voz dirá: \"Por favor, ingrese la información\ndel administrador\".\n- Ingrese la contraseña inicial 123456 y presione #.\n- Presione * para volver.\n2. Acceso al menú principal\n- Active la pantalla, presione * y luego #. Verifique la identidad del administrador.\nDentro del menú, la voz indicará: \"Presione 1 para Ajustes de Administrador, 2 para Ajustes de\nUsuario, 3 para Ajustes del Sistema, 4 para Restaurar ajustes de fábrica y * para salir\".\n3. Añadir un Administrador (Tecla 1)\nEn el menú principal, presione 1. La voz dirá: \"Ingrese contraseña, huella o tarjeta a añadir\".\nHuella: Coloque el dedo en el sensor. Al aviso \"Presione de nuevo\", repita el proceso 3 veces\n(varie ligeramente la posición para mejor lectura).\nContraseña: Ingrese de 6 a 8 digitos y presione #. Repita la contraseña y presione #.\nTarjeta: Acerque la tarjeta al área de lectura IC.\nMáximo: 10 administradores.\n4.Añadir un Usuario Regular (Tecla 2)\nSiga el mismo proceso que para el administrador.\nMáximo: 240 usuarios (incluyendo hasta 40 usuarios de huella dactilar).\n5. Eliminar usuario por número\n“Eliminar usuario\".\nSiga las instrucciones de voz para seleccionar el ID a eliminar.\n6. Restaurar ajustes de fábrica (Vía Menú)\nIngrese al menú principal y presione 4. Ingrese la contraseña de administrador para\nconfirmar.\nAtención: Se borrarán todos los datos de usuario. Opere con precaución.\n7. Ajustes del Sistema",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Ingrese Al Menú Principal Y Presione La Tecla Correspondiente A La Configuración Del",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "sistema (idioma, volumen, etc.) según las indicaciones de voz.\nModelo: NXS-L\nMaterial: Aluminio + Hierro inoxidable\nTamaño frontal: 145*58*50\nTamaño posterior: 130*110*SO\nGrosor de puerta aplicable: 30-110 mm\nTipo de puerta: Puerta de hierro /acero inoxidable / patio\nTipo de cilindro: Cilindro de cerradura Clase C\nTipo de pestillo: Acero inoxidable 304\nTipo de mortaja: Semiautomatica\nVida util: 100,000 veces\nCapacidad de huellas dactilares: 100 unidades (9 administradores / 91 usuarios)\nCapacidad de tarjetas: 100 unidades (9 administradores / 91 usuarios)\nCapacidad de contraseñas: 100 unidades (9 administradores / 91 usuarios)\nLongitud de la contraseña: 6-8 digitos\nLlave: 2 llaves de latón\nTasa de falso reconocimiento: <0.001%\nTasa de falso rechazo: <0.1%\nTemperatura de funcionamiento: -10°C a 68°C\nCorriente de funcionamiento: <200 mA\nHumedad de funcionamiento: 20%-93% RH\nVoltaje de alimentación: 4.8-6.5V\nFuente de alimentación: 4 baterías AA\nSuministro de energía de emergencia: USB\nCilindro de cerradura nivel C de inserción directa: y\nAnti-seguimiento y\nProtección contra interferencias electromagnéticas V\nAnti-espiado: Vv\nContraseña virtual para prevenir mirones: Vv\nLea atentamente el manual antes de la instalación y guárdelo en un lugar seguro.\nConsulte a agentes comerciales y profesionales para obtener información no incluida en\neste manual",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-introduccion-5",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Introducción",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Bienvenido al manual de configuración para la aplicación TECDOFY. En este manual, le\nguiaremos a través de los pasos necesarios para configurar y aprovechar al máximo todas las\nfunciones de la app.\nEs importante que, para conectar la aplicación correctamente a su dispositivo, éste se encuentre\nauna distancia máxima de 8 metros\nContenido\n1. Registro e inicio de sesión 5. Gestión de tarjetas\n1 1 Inicio de sesión correcto 6. Gestión de huellas\n2. Gestión de cerraduras 7. Desbloqueo por Bluetooth\n8. Gestión de asistencia",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-1-informacie-de-la-cuenta-6",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.1 Informacié~ De La Cuenta",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "3. Gestión de llaves 9.2 Usuar os de dispositivo",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-32-so-se-vee-ento-a-9-5-eliminar-cerradura-7",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "32 So Se Vee Ento A 9.5 Eliminar Cerradura",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "a squeda de registro de accesos\nsau sat 9.6 Servicio al cliente\n4. Gestion de contrasenas\n10. Gestión de Gateway",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-4-eliminar-10-2-manual-8",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.4 Eliminar 10.2 Manual",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "4 5 Cóoigo acceso cic ico Y",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-7-corpartir-contrasena-9",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.7 Corpartir Contraseña",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. Resgistro e inicio de sesión\nLos ususarios pueden registrar su cuenta a través del\nteléfono móvil o del correo electrónico El código de\nverificación se enviará al teléfono móvil o al correo ara --.\nelectrónico del usuario y el registro se realizará\ncorrectamente tras la verificación. mn e\nSi ha olvidado su contraseña, puede ir a la página de\ncontraseña para restablecerla. Cuando se inicia sesión en\nun nuevo teléfono movil. es necesario verificar la cuenta. 2\nUna vez verificada, podrá iniciar sesión. y\nTodos los datos se pueden ver y utilizar en el nuevo\nteléfono móvil Y",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-1-1-inicio-de-sesion-correcto-10",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "1.1 Inicio De Sesión Correcto",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "La primera vez que utilice la aplicación de la cerradura, $1 no hay datos previos de la cerradura,\nla página de inicio mostrará el botón para añadir la cerradura Si ya hay alguna cerradura o llave\nen la cuenta se mostrará la información de la cerradura",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-oui-ld-in-get-11",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "Oui Ld In Get",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "A Pes CUT\n2. Gestión de cerraduras\nCuando se añade la cerradura, el primer usuario en agregarla\nse convierte en el administrador de la cerradura Esta solo se\npuede volver a añadir después de que el administrados actual - -\nhaya borrado la cerradura. La operación de borrar la ,\ncerradura debe realizarse por Bluetooth junto a la cerradura",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-2-1-anadir-nuevo-dispositivo-12",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "2.1 Añadir Nuevo Dispositivo",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "La cerradura debe añadirse a la aplicación antes de poder utilizarse Para esto sitúe\nel dispositivo móvil al lado de la cerradura\n1. Tocar el botón circular de “+” para agregar la\ncerradura\ny Tides ss dsposit os\n. oes 2. Seleccionar el tipo de dispositive que posee\nCeca Caviany\nDats Muerte 7 Cirdo\nCaza ds © Camana\npeed de su ota\n“emoto\nTea et lea pata al\nel tee ade\n3. Tocar el teclado de la cerradura para que entre\nen modo configuración y presionar siguiente en la\nF aplicación\nfete de\n4. Seleccionar el nombre predeterminado de su\ndispositivo\no Si es una cerradura que se ha añadido previamente a un dispositivo. se deberá eliminar\nprimero de la aplicación para registrarla de nuevo\n5. Cambiar el nombre del dispositivo a uno\nÓN deseado o dejar el nombre predeterminado\nAl terminar presionar “OK”\nO Al lira war. podrá gestora’ la cerradura con a aol cac ón, irc uyenco el ervio de ura llave, cortraseña etc\nLos datos ce nc al zación de la cerradura deben cargarse en la rea cuando asia esté cisporible para comolerar todo e\npraceso de agregar dispasr vo",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-2-2-actualizacion-de-cerraduras-13",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "2.2 Actualización De Cerraduras",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "El usuario puede actualizar la cerradura desde el apartado de “Configuración” en la aplicación\nLa actualizacion debe realizarse a través de Bluetooth situando el dispositivo móvil junto a la\ncerradura\nNo hay actualizaciones",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "2.3 Fecha Y Hora, Diagnóstico De Errores",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-14"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Troubleshooting",
+      "raw_text": "De contar con un disporitivo Gateway, el rela; se calibrará en primer lugar a través del mismo. Si\nno se cuenta con este dispositivo, será necesario calibrarlo mediante el Bluetooth del teléfono\nmóvil\nEl diagnóstico de errores tiene como objetivo a a tia ta\nayudar a analizar los problemas del sistema Debe noe es ae aad\nrealizarse a través de Bluetooth situando el A\ndispositivo móvil junto a la cerradura ° Ñ\nini A = TECDOF",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-2-4-administrador-autorizado-15",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "2.4 Administrador Autorizado",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-15"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Suena Parcioal - .\nSolo el administrador original puede autorizar la\nclave. Para agregar a un administrador autorizado\ndirijase al apartado de \"Administrador autonzado”\neee corts cate o\nPresionar el botón de “Crear Administrador” y colocar los datos correspondientes del usuario que\nse convertirá en Administrador Autorizado. para finalizar dar clic en enviar\ne wens ced Denia gral nro\nO crew agruraseracor Rete a SME\n@® El usLao autorizado bodrá v sualizar en su aolicac ón la interfaz de admirist-ador\nPuede enviar claves a otros. contraseñas. etc Sir embargo, e adminusteagor aulonzado no podra dar de\nata más peri es de aaministrac ón\n3. Gestión de llaves\nEl administrador original tiene los máximos derechos administrativos de la cerradura\nAdicionalmente podrá gestionar la vigencia de una eKey que esté a punto de caducar\n1. Dirigirse al apartado de “eKeys” y hacer clic en el botón de\n“Enviar e Key” al inferior de la pantalla. e\nOke akey\n2. Seleccionar el tipo de eKey que se quiera enviar. llenar los datos del usuario al que se\nle proporcionará la eKey y hacer clicl en “Enviar”\nTerror Aerea Ur me ads Tp Dean a Cte\nTipos de Keys a a braco ane te\n- Key temporal: Sera vara curarte el\nnempo espeul caso eg deter E\n- «Key permanente: Podrá ull arse ce\n- 0Koy de un solo uso. Se borrará Uta ved be\null aca,",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-3-1-gestion-de-llaves-16",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "3.1 Gestión De Llaves",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-16"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "El administrador original puede borrar, restablecer, enviar y modificar la eKey. Al\nmismo tiempo podrá buscar el registro de accegps a la cerradura\nbee te ales 7\nae 0 ¿ota regu cain quer\nBORMAR cole they!\nLeida Firmar",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-3-2-aviso-de-vencimiento-17",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "3.2 Aviso De Vencimiento",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-17"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "En la aplicación se podrá visualizar mediante dos colores la fecha limite de las llaves\nproporcionadas a otros usuarios. Cuando aparezca de color amarillo significará que está\na punto de expirar. Cuando se torne de color rojo significa que la llave ha expirado.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-3-3-busqueda-de-registro-de-accesos-18",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "3.3 Búsqueda De Registro De Accesos",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-18"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Los perfiles de administración podrán e\nconsultar el registro de accesos de cada llave [a] a AN\nOo tata\n4. Gestión de contraseñas\nPara establecer una contraseña dirijase al apartado de “Contraseñas”, de clic al botón\ninferior de la pantalla “Enviar código de acceso”. Se desplegarán los diferentes tipos de\ncódigos. selecciones el desado y llene los datos correspondientes.\nUna vez llenados los datos del tipo de constraseña seleccionado se le mostrará en la\npantalla un código. el cual deberá introducir en la cerradura y presionar el botón “#” para que\nse registre\noo rmacigatenios | Inteem gerade codigo de ag Informa once id aude ap",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-o-eres-19",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": ". O Eres",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-19"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "A heats we Ceesoe ea wie: pees\nhot sm. star sete\n(y) swe a went ma\noops user\nOo Ya establecida la contraseña en la cerradura. poara mod ‘car el cod go. NoMdre, vempo de valices.\nelimiraria, etc",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-1-codigo-de-acceso-permanente-20",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.1 Codigo De Acceso Permanente",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-20"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Cuando se estableza una nueva contraseña es\npermanente, esta deberá utilizarse en las 24 horas a\nsiguientes a su generación; de lo contrario, caducará -\nautomaticamente SUR LES SU Pt",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-2-codigo-de-acceso-temporal-21",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.2 Código De Acceso Temporal",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-21"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "El cóódigo de acceso temporal tendrá una fecha de Poca a a\ncaducidad determinada. siendo de un minimo de una\nhora y máximo de tres años. Si el periodo de validez es mer: ees\ninferior a unaño, la hora podrá configurarse de forma weer a tea SEEN Ge\nexacta (AAAA-MM-DD) (hh:mm); si el periodo de\nvalidez es superior a un año. la exactitud será mensual were o j\n(AAAAMM) O ot as anette\nCuando se ingrese un nuevo codigo temporal. este A AR\ndeberá utilizarse en un plazo de 24 horas para dejarlo\nactivo, de lo contrario. caducará automáticamente",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-3-contrasena-de-un-solo-uso-22",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.3 Contraseña De Un Solo Uso",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-22"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Operation",
+      "raw_text": "Esta contraseña únicamente podrá utilizarse una vez y Cn Cement ane mtcre cane\nestara disponible durante 6 horas. cee .\nSeer eens\n4.4 Eliminar\nEl apartado de Eliminar se utiliza para borrar todos los Cente oe 49 rem Seg NOS\ncódigos de acceso que la cerradura ha establecido. y .\nque están disponibles durante 24 horas °",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-5-codigo-de-acceso-ciclico-23",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.5 Codigo De Acceso Ciclico",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-23"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Lema cn Pein Gra be\nLa contraseña ciclica se puede reutilizar dentro de un —\nperiodo de tiempo especifico, incluyendo el tipo diario, o CC\nel tipo de dia de la semana, el tipo de fin de semana, Mode\netc Potato los ra",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-6-codigo-de-acceso-personalizado-24",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.6 Código De Acceso Personalizado",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-24"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Ber aete Terie mn Deal sate Y\nEl usuario puede establecer las contraseñas y pe cave ©\nel periodo de validez que desee",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-4-7-compartir-contrasenas-25",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "4.7 Compartir Contrasenas",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-25"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Los usuarios podrán compartir las contraseñas Pri\nque deseen a otros usuanos a través de sms. Comparte\nemail, whatsapp. etc En este . °\n5. Gestion de tarjetas RF\nPara agregar una tarjeta primero deberá dirigirse al apartado \"Tarjetas RF”, dar click en el botón\ninferior “Agregar tarjetas RF”. seleccionar el tiempo que desea activa la tarjeta RF. ponerle un\nnombre y presionar “Ok”\nPomo tens Lian\nO arega Torero RE\nLa cerradura le pedirá que coloque la tarjeta RF cerca del teclado. al quedar enlazada\ncorrectamente la cerradura le avisará. Finalmente. podrá modificar el nombre y ver los registros\nde la tarjeta desde la aplicación.\no La hoscor de em sor remola ce larjetas se muestra en caso de que exmla ia Gateway, sero s “o \"ay, e elemento se\nvar are oc. lo\n6. Gestión de huellas\nLa gestión de huellas dactilares es similar a la gestión de tarjetas RF. Para poder guardarla\ncorrectamente deberá presionar en 4 ocasiones la huella en el lector. Tras añadir una huella\ndactilar, podrá utilizarla para desbloquear la puerta\n7. Desbloqueo por Bluetooth\nLos usuarios de la aplicación podrán bloquear la\ncerradura a través de Bluetooth y también podrán\nenviar ekeys a cualquier persona\nTambién podrá desbloquear la cerradura a través de\nla aplicación haciendo clic en el botón con el símbolo\nde candado. mur\nO E B.eloolr bene un a carece de Brrelros favor de ut Zarla api cacor XxX\ndentro ce rango\n8. Gestión de asistencia\nLa aplicación cuenta con un control de acceso que también podrá utilizarse para la gestión de\nasistencia de las empresas La aplicación contiene funciones de gestión de empleados,\nestadisticas de asistencia y más\nTodas las cerraduras de puerta 3.0 tienen funciones de asistencia. La función de asistencia de\nla cerradura estará deshabilitada de forma predeterminada. El usuario podrá activarla o\ndesactivarla desde la aplicación en el apartado de configuración",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-see-traia-26",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9 See Traia?",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-26"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "eee , wore\npa Mee a tee\neg arta nga wae tens\n9. Configuración del sistema\nEn la configuracuón del sistema. se incluye el interruptor de toque para abrir. gestión de grupo,\ngestión de Gateway, configuración de seguridad, recordatorios, asi como la transferencia de\nadministración de la cerradura\no E ajuste de toca: para apar determina si se p.cde aber la puera tocando a cerradura",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-1-informacion-de-la-cuenta-27",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.1 Información De La Cuenta",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-27"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "En este apartado podrá modificar toda la información\nrelacionada a su usuario como el nombre. avatar, email e coe \"\nreiniciar la contraseña. establecer las preguntas de et\nseguridad, etc\nPa dra .",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-2-usuarios-del-dispositivo-28",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.2 Usuarios Del Dispositivo",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-28"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "Para visualizar la información de los usuarios del\ndispositivo, dirijase a la configuración de la aplicación y\nhaga clic en el apartado \"Usuarios del dispositivo”. Aquí\naparecerá el nombre de usuario y su número de teléfono\nO Haga cic en el clero que desea ve” para obleres a información de la cerradura de a puerta",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-3-grupo-de-dispositivos-29",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.3 Grupo De Dispositivos",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-29"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "En caso de tener un gran número de dispositivos enlazados, podrá utilizar el apartado “Grupo de\ndispositivos” situado en la configuración y presionando el ícono “+” de la esquina superior\nderecha para organizarlos mediante carpetas.\nhen tae arm tenes oe\nO Para e me rar un grupo o modi car 5. “ome, cesiizar a la 29. esca junto al “ombre",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-4-transferir-derechos-de-administrador-30",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.4 Transferir Derechos De Administrador",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-30"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "El administrador original puede transferir la cerradura a otros usuarios. Solo el administrador\noriginal podrá transferirla. Después de introducir la cuenta a la que se desee transferir el dominio,\nrecibirá un código de verificación. Si se introduce el código de forma correcta. la transferencia\nconcluirá exitosamente.\no La cuenta que desee tramas” + debera ser a cuerla del adrunistrador or g “a\nDan aer",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-5-eliminar-cuenta-ar-31",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.5 Eliminar Cuenta Ar -",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-31"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "mu «le rar? ‘\nSi la cerradura presenta fallas podrá eliminaria Ta = .\ndirectamente desde la configuración de la en\naplicación o Oe ears .\nsentis ine Ñ\norga ame .",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-6-servicio-al-cliente-32",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "9.6 Servicio Al Cliente",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-32"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "El usuario puede consultar todos los contactos de servicio al cliente para resolver cualquier duda\nFi TOS\nSito web oficial were SOUL OST\nEn este apartado puede comprobar que la aplicación se encuentre en su última versión de\nactualización\n10. Gestión de Gateway\nLa cerradura cuenta con conexión Bluetooth de forma predeterminada, sin embargo no contará con conectividad WiFi El Gateway fungira\ncomo puente entre la cerradura y una red doméstica de WiFi. A través\ndel Gateway, el usuario podrá administrar remotamente el reloj y\nvisualizar el historial de registros\nAdicionalmente, también podrá borrar y modificar contraseñas a DO\ndistancia.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-10-1-agregar-gateway-33",
+      "type": "extracted-text",
+      "product": "e-shield",
+      "summary": "10.1 Agregar Gateway",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-shield/manual.json#section-33"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "A Haga clic en “IM” de la esquina supenor izquierda y diríjase al\napartado “Gateway”\nB Para agregar el Gateway a la aplicación, haga clic en el “+” de\nla esquina superior derecha\nC Seleccione el Gateway que posee e introdu/a su clave de WiF 1 sna de\ny el nombre que desee ponerle al Gateway. después presione ON\n“siguiente”.\nD Siga las instrucciones de la aplicación para completar el enlace\nde any\nTras un breve penodo de tiempo, podrá visualizar los dispositivos que se encuentran cerca del\nalcance del Gateway. Una vez que la cerradura esté vinculada al Gateway, podrá ser gestionada\na través de este\nNem ore ve\nCato O)\nNa tee ge Salma\nAQ'egado exrtosamente",
+      "storage_bucket": "extracted-text"
+    }
+  ]
+}

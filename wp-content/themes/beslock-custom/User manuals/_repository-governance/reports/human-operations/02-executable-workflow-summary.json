@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/workflows/",
+  "kind": "executable-workflow-summary",
+  "schema": "human-operations-governance/1.0",
+  "workflow_invariants_count": 5,
+  "workflows": [
+    "onboarding-execution",
+    "troubleshooting-execution",
+    "escalation-review",
+    "candidate-review",
+    "oem-verification",
+    "rollback-handling",
+    "runtime-incident-review"
+  ]
+}

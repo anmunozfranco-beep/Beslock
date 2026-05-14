@@ -1,0 +1,79 @@
+{
+  "environment_invariants": [
+    "every environment declares a trust level, a supervision level, and an isolation guarantee",
+    "no environment ever inherits trust from another environment",
+    "no environment ever shares write paths with a higher-trust environment",
+    "no environment ever bypasses the supervision level declared by the layer above it",
+    "no environment runs without an append-only log destination"
+  ],
+  "environments": [
+    {
+      "constraints": [
+        "single operator",
+        "append-only logs to local disk",
+        "no outbound writes"
+      ],
+      "id": "local-supervised-runtime",
+      "isolation": "process-local; no network egress required",
+      "supervision_level": "full HITL on every checkpoint",
+      "trust_level": "high (operator-bounded)"
+    },
+    {
+      "constraints": [
+        "synthetic OEM bindings",
+        "no live OEM writes",
+        "no production knowledge-core writes"
+      ],
+      "id": "staging-environment",
+      "isolation": "dedicated staging trust-zone; no cross-env reads",
+      "supervision_level": "full HITL + dual-review on promotions",
+      "trust_level": "medium"
+    },
+    {
+      "constraints": [
+        "bounded operator pool",
+        "slice-level kill-switch",
+        "fixed product subset"
+      ],
+      "id": "controlled-pilot",
+      "isolation": "pilot trust-zone; no governance-console exposure",
+      "supervision_level": "full HITL + escalation-supervisor on slice-halt",
+      "trust_level": "medium (scoped)"
+    },
+    {
+      "constraints": [
+        "MUST satisfy all promotion gates from layer 22",
+        "MUST satisfy all health indicators from layer 23",
+        "MUST satisfy all operator-readiness items from layer 24"
+      ],
+      "id": "future-production",
+      "isolation": "production trust-zone; one-way ingress for OEM evidence",
+      "supervision_level": "full HITL + dual-review + auditor co-signature for emergency actions",
+      "trust_level": "governed (declared, not active)"
+    },
+    {
+      "constraints": [
+        "read-only OEM source mirrors",
+        "checksum-verified ingest",
+        "no runtime emission from this env"
+      ],
+      "id": "oem-ingestion-environment",
+      "isolation": "ingestion trust-zone; outputs only to staging",
+      "supervision_level": "OEM-reviewer dual-review",
+      "trust_level": "semi-trusted"
+    },
+    {
+      "constraints": [
+        "per-reviewer concurrent claim ceiling",
+        "no production demotion writes",
+        "all actions emit supervision-receipt"
+      ],
+      "id": "reviewer-operation-environment",
+      "isolation": "reviewer trust-zone; read-only against runtime channels",
+      "supervision_level": "reviewer claim + queue ceiling",
+      "trust_level": "high (reviewer-bounded)"
+    }
+  ],
+  "kind": "environment-model",
+  "schema": "environment-integration-governance/1.0"
+}

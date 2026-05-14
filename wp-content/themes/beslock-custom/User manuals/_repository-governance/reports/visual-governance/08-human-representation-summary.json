@@ -1,0 +1,28 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "rule": "No faces. No bodies. Hands ONLY when a procedure requires touch context.",
+  "allowed_subjects": [
+    "hand silhouette",
+    "single finger pointing at interaction zone",
+    "schematic touch indicator"
+  ],
+  "forbidden_subjects": [
+    "human face",
+    "human body",
+    "portrait",
+    "crowd",
+    "lifestyle scene",
+    "emotional gesture",
+    "realistic hand photograph"
+  ],
+  "trigger_procedures_allowed": [
+    "installation",
+    "button-press",
+    "fingerprint-enrolment",
+    "pairing",
+    "unlocking",
+    "operation-guidance"
+  ],
+  "canonical_policy": "visual-system/_governance/human-interaction-policy/policy.md"
+}

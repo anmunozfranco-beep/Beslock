@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cap-objetivo",
+    "summary": "Explicar la vinculacion de e-Prime con red 2",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "cap-fuente-y-alcance-real",
+    "summary": "La fuente OCR disponible para app es breve",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

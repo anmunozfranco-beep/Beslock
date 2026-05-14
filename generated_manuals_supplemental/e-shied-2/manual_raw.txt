@@ -1,0 +1,35 @@
+Plantilla de instalacion
+Modelo: TOCK XT - TWIN Utiliza este lado para apertura derecha
+i} (
+. 1 I
+Parte interna de la puerta i \ Parte externa de la puerta
+I {
+1 | 1 ;
+| I > |
+I I
+| Distancia desde el borde i i Distancia desde el borde |
+| 60 mm a | 60 mm |
+| | rr | |
+925mm _ | | Ad | | 25mm
+| | 1 > 1 |
+@6mm I a TN I 6mm a 6mm I an a I o6mm
+-— AIP I= pile — - ; -— AIF Io pike - -
+’ . | ,? |
+“top> , i | ‘ | >| O 19 ; r | ‘\ ;
+¢ \ 1 1 o \
+rs Sat en eI rr 12 -pot+t--sS.J dT \ 1 51 lo ‘ | '
+‘. | ao O| “"T ; 9 ‘ ao
+~~. JL-- 32mm o! lo ~~J--- @32mm
+2-@- Ilmm l rom | 1,2 |
+) Qy ri 12 |
+o! Ad 1
+| o | | ° |
+Oo Cc
+| fe) | | Is |
+fe)
+| 3S! | a l
+8! l
+| 1*
+' '
+Utiliza esta plantilla de corte como guia para realizar las perforaciones Tock ® Lock
+necesarias en tu puerta, asegurandote de seguir las medidas correctas.

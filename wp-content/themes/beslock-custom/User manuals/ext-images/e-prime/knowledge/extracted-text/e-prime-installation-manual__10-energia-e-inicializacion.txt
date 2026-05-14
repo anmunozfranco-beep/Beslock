@@ -1,0 +1,9 @@
+# Energia e inicializacion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#10
+
+Para la prueba inicial:
+1. instala 4 pilas AA alcalinas de alto rendimiento
+2. realiza la inicializacion para borrar datos de prueba de instalacion si el equipo es nuevo o ya fue manipulado
+3. valida apertura por huella o por contrasena inicial solo como prueba tecnica local
+4. coloca la tapa de baterias una vez que el movimiento mecanico y la verificacion sean correctos

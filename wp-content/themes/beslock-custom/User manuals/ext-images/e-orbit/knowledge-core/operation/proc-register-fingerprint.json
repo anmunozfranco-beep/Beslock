@@ -1,0 +1,44 @@
+{
+  "id": "proc-register-fingerprint",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario -> Agregar administrador or Agregar usuario",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-fingerprint"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario -> Agregar administrador or Agregar usuario",
+  "steps": [
+    "Enter the menu.",
+    "Choose Agregar usuario.",
+    "Choose the user type.",
+    "Select Huella.",
+    "Place the finger when prompted.",
+    "Lift and place the same finger repeatedly.",
+    "Wait for confirmation.",
+    "Test the fingerprint."
+  ],
+  "validation_checks": [
+    "Fingerprint reading is stable.",
+    "Access works multiple times in a row.",
+    "The user can place the finger naturally."
+  ]
+}

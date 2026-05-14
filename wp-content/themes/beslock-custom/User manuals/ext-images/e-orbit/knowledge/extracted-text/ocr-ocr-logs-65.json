@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-logs-65",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Logs",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-65"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "-Select the user number to be bound and click OK\nNote: Account number - User code generated when the door lock is added.",
+  "storage_bucket": "extracted-text"
+}

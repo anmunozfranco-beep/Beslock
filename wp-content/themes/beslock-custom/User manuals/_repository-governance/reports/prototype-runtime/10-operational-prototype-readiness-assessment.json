@@ -1,0 +1,136 @@
+{
+  "blocking_emitters_required_for_execution": [
+    "no-evidence-channel-emitter",
+    "no-provenance-emitter",
+    "no-supervision-receipt-emitter",
+    "no-context-vector-emitter",
+    "no-confidence-tier-on-nodes",
+    "no-checkpoint-registry",
+    "no-causal-edges-emitted",
+    "no-hypothesis-store",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap",
+    "no-incident-id-emitter"
+  ],
+  "criteria": [
+    "first slice declared and read-only",
+    "all six runtime layers declared with provenance contracts",
+    "all six prototype flows declared with evidence keys",
+    "retrieval pipeline declared with predicate validation",
+    "supervision posture declared and gated",
+    "safety predicates declared and continuously evaluated",
+    "observability channels declared and append-only",
+    "transition path declared with demotion triggers"
+  ],
+  "doctrine": "the prototype is fully modeled; execution requires the declared evidence emitters to exist and be wired",
+  "eligible_flows_in_prototype_scope": [
+    "onboarding-flow",
+    "first-pairing-flow",
+    "fingerprint-enrollment-flow",
+    "troubleshooting-lookup-flow",
+    "battery-recovery-flow",
+    "escalation-handling-flow"
+  ],
+  "execution_eligible_today": false,
+  "first_slice": "contextual-onboarding + troubleshooting-retrieval",
+  "modeling_complete": true,
+  "recommended_first_run_slice": "contextual-retrieval-proof (per Phase 24 first-runtime proof)",
+  "risk_high": [
+    "no-evidence-channel-emitter",
+    "no-provenance-emitter",
+    "no-supervision-receipt-emitter",
+    "no-context-vector-emitter",
+    "no-confidence-tier-on-nodes",
+    "no-checkpoint-registry",
+    "no-causal-edges-emitted",
+    "no-hypothesis-store",
+    "thin-troubleshooting-corpus",
+    "warning-corpus-gap",
+    "no-incident-id-emitter"
+  ],
+  "risk_medium": [
+    "no-replay-harness",
+    "no-ground-truth-set",
+    "no-operator-identity-channel",
+    "no-prototype-report-template"
+  ],
+  "risk_total": 15,
+  "risks": [
+    {
+      "id": "no-evidence-channel-emitter",
+      "impact": "evidence keys cannot be physically produced",
+      "severity": "high"
+    },
+    {
+      "id": "no-provenance-emitter",
+      "impact": "no package can be audit-signed",
+      "severity": "high"
+    },
+    {
+      "id": "no-supervision-receipt-emitter",
+      "impact": "supervision boundaries cannot be audited",
+      "severity": "high"
+    },
+    {
+      "id": "no-context-vector-emitter",
+      "impact": "assembly degrades; guidance gated",
+      "severity": "high"
+    },
+    {
+      "id": "no-confidence-tier-on-nodes",
+      "impact": "low-confidence-execution predicate cannot bind",
+      "severity": "high"
+    },
+    {
+      "id": "no-checkpoint-registry",
+      "impact": "battery-recovery + continuity-trace degrade",
+      "severity": "high"
+    },
+    {
+      "id": "no-causal-edges-emitted",
+      "impact": "troubleshooting traversal cannot be exercised",
+      "severity": "high"
+    },
+    {
+      "id": "no-hypothesis-store",
+      "impact": "troubleshooting/recovery hypotheses cannot persist",
+      "severity": "high"
+    },
+    {
+      "id": "thin-troubleshooting-corpus",
+      "impact": "troubleshooting-lookup not eligible on most products",
+      "severity": "high"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "impact": "warning-stamping gated on affected products",
+      "severity": "high"
+    },
+    {
+      "id": "no-incident-id-emitter",
+      "impact": "cross-step continuity binding unavailable",
+      "severity": "high"
+    },
+    {
+      "id": "no-replay-harness",
+      "impact": "deterministic replay not yet possible",
+      "severity": "medium"
+    },
+    {
+      "id": "no-ground-truth-set",
+      "impact": "semantic-recall cannot be quantified",
+      "severity": "medium"
+    },
+    {
+      "id": "no-operator-identity-channel",
+      "impact": "override records cannot bind operator identity",
+      "severity": "medium"
+    },
+    {
+      "id": "no-prototype-report-template",
+      "impact": "operator-signed report not standardized",
+      "severity": "medium"
+    }
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

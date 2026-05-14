@@ -1,0 +1,53 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "archetypes": [
+    {
+      "id": "archetype.pairing",
+      "members": [
+        "pair-with-app",
+        "qr-pairing",
+        "ez-mode-pairing"
+      ]
+    },
+    {
+      "id": "archetype.enrolment",
+      "members": [
+        "register-fingerprint",
+        "register-pin",
+        "add-administrator",
+        "add-user"
+      ]
+    },
+    {
+      "id": "archetype.recovery",
+      "members": [
+        "factory-reset",
+        "emergency-power",
+        "battery-replacement"
+      ]
+    },
+    {
+      "id": "archetype.operational",
+      "members": [
+        "unlock-pin",
+        "unlock-fingerprint",
+        "unlock-app",
+        "unlock-mechanical"
+      ]
+    },
+    {
+      "id": "archetype.maintenance",
+      "members": [
+        "firmware-update",
+        "battery-replacement"
+      ]
+    }
+  ],
+  "promotion_rule": "Promote a concept to shared once observed in ≥2 products with reviewer-confirmed semantic equivalence.",
+  "anti_contamination_rules": [
+    "No silent inheritance of fields between products",
+    "No per-product cross-references except via shared concept IDs",
+    "Borrowed text requires reviewer note + product-specific provenance"
+  ]
+}

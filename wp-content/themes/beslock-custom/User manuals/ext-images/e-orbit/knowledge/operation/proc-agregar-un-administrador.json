@@ -1,0 +1,67 @@
+{
+  "id": "proc-agregar-un-administrador",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario → Agregar administrador",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario → Agregar administrador",
+  "preconditions": [
+    "la cerradura está encendida",
+    "el panel responde al activarlo",
+    "tienes acceso al menú del sistema",
+    "ya definiste quién será el administrador principal"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "activa el panel de la cerradura"
+    },
+    {
+      "n": 2,
+      "text": "entra al menú"
+    },
+    {
+      "n": 3,
+      "text": "selecciona **Agregar usuario**"
+    },
+    {
+      "n": 4,
+      "text": "selecciona **Agregar administrador**"
+    },
+    {
+      "n": 5,
+      "text": "elige el método de acceso que vas a registrar"
+    },
+    {
+      "n": 6,
+      "text": "completa el proceso siguiendo las indicaciones del sistema"
+    },
+    {
+      "n": 7,
+      "text": "guarda el registro"
+    },
+    {
+      "n": 8,
+      "text": "prueba inmediatamente el acceso creado"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "operation"
+}

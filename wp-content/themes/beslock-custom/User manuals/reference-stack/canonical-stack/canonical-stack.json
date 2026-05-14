@@ -1,0 +1,58 @@
+{
+  "canonical_stack": [
+    {
+      "id": "retrieval-runtime",
+      "module": "runtime-implementation/runtime/retrieval.py",
+      "responsibility": "kind→domain routing, Jaccard scoring, confidence weighting, candidate-only marker"
+    },
+    {
+      "id": "orchestration-runtime",
+      "module": "runtime-implementation/runtime/flows.py + runtime/assembly.py",
+      "responsibility": "supervised flow composition, package assembly, escalation evaluation"
+    },
+    {
+      "id": "escalation-runtime",
+      "module": "runtime-implementation/runtime/assembly.py (_evaluate_escalation) + escalation-trace channel",
+      "responsibility": "trigger evaluation, halt semantics, candidate-only routing"
+    },
+    {
+      "id": "provenance-system",
+      "module": "ext-images/<product>/knowledge-core/**/*.json + manifest_id + source_files[].sha256",
+      "responsibility": "write-once provenance records; read-only into all sandboxes"
+    },
+    {
+      "id": "replay-system",
+      "module": "runtime-implementation/runtime/replay.py + cli.py replay subcommand",
+      "responsibility": "deterministic re-execution against frozen orchestration-trace"
+    },
+    {
+      "id": "reviewer-operations",
+      "module": "knowledge-operations/reviewer-workbench/ + review-queues/ (design-only, layer 23)",
+      "responsibility": "queue, claim, evidence, decision, audit"
+    },
+    {
+      "id": "governance-operations",
+      "module": "knowledge-operations/governance-workflows/ + KNOWLEDGE_BUILDING/* (design-only)",
+      "responsibility": "scope assignment, revocation, dual-audit, emergency intervention"
+    },
+    {
+      "id": "oem-ingestion-system",
+      "module": "knowledge-operations/oem-operations/ + ingestion env (design-only)",
+      "responsibility": "checksum-verified ingest, dual-review binding, supersession"
+    },
+    {
+      "id": "observability-system",
+      "module": "runtime-implementation/runtime/channels.py (NDJSON channels)",
+      "responsibility": "append-only event streams: orchestration, retrieval, escalation, continuity, replay, incident"
+    }
+  ],
+  "kind": "canonical-stack",
+  "schema": "reference-stack-governance/1.0",
+  "stack_invariants": [
+    "every module declares its responsibility, its inputs, and its outputs",
+    "no module owns provenance writes except the governance pipeline",
+    "no module emits effects outside its declared responsibility",
+    "every module is traceable end-to-end via the observability system",
+    "every module is replaceable by a substitute that satisfies the same contract"
+  ]
+}

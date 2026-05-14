@@ -1,0 +1,11 @@
+# Relacion con el paquete documental
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#13
+
+Dentro del paquete Beslock de e-Prime, este documento convive con:
+- `e-Prime user manual - image-ready.md`
+- `e-Prime - installation template standard.md`
+- `e-Prime - supplemental source review.md`
+
+Documento aun pendiente en forma dedicada:
+- manual de app normalizado

@@ -1,0 +1,66 @@
+{
+  "id": "proc-registrar-una-huella",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "local-device",
+  "menu_path": "Agregar usuario → Agregar administrador / Agregar usuario",
+  "preconditions": [
+    "el dedo está limpio y seco",
+    "la cerradura responde normalmente",
+    "el usuario puede apoyar el dedo con comodidad"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entra al menú"
+    },
+    {
+      "n": 2,
+      "text": "selecciona **Agregar usuario**"
+    },
+    {
+      "n": 3,
+      "text": "elige el tipo de usuario"
+    },
+    {
+      "n": 4,
+      "text": "selecciona **Huella**"
+    },
+    {
+      "n": 5,
+      "text": "coloca el dedo sobre el lector cuando el sistema lo indique"
+    },
+    {
+      "n": 6,
+      "text": "retira y vuelve a colocar el mismo dedo las veces necesarias"
+    },
+    {
+      "n": 7,
+      "text": "espera la confirmación"
+    },
+    {
+      "n": 8,
+      "text": "prueba la huella"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "operation"
+}

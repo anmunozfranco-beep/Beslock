@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "El Registro De Huellas Dactilares Solo Se Puede Hacer A Través De Bluetooth,",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "App Instructions",
+  "raw_text": "y necesita descargar la Tuya Smart APP en su telefono móvil.\nPara enlazar el dispositivo con el teléfono movil, es necesario tocar para\ndespertar el dispositivo antes de que se pueda buscar el dispositivo Bluetooth:\nuna vez enlazado, no necesita tocar el dispositivo para conectarse directamente.\n2. Operación del Pomo Mecánico\n(1) Gire el pomo interior de la puerta verticalmente y mantengalo abierto\n(Modo Normal Abierto):Cuando la cerradura esta en el estado normalmente abierto,\nQuando está en modo normalmente abierto.deberá tocar el sensor dos veces dentr\no de 3 segundos. Luego.realice una verificación adicional para desbloquear.\n2. Operación del Pomo Mecánico\n(2 ) Cuando el pomo interior de la puerta gira a la posición horizontal, realiza el\nanti-bloqueo/doble cierre; En modo anti-bloqueo, solo la huella dactilar del\nadministrador puede desbloquear. Después de desbloquear (apertura automática).\nespere 5 segundos para que se bloquee automáticamente.\n(3) Cuando el pomo de la cerradura de la puerta se gira a la posición\nhorizontal y se bloquea. la cerradura se puede abrir normalmente desde cl interior,\n3. Restaurar Configuración de Fábrica\n(1) Los datos se pueden vaciar a través de la aplicación Tuya\n(2 ) Operacion local:\nGire el pomo 5 veces en 5 segundos. La luz azul permanecerá encendida indicando\nel modo de restablecimiento. Toque el sensor con cualquier dedo dentro de 10\nsegundos para borrar los datos. Ezumbador emitira un pitido largo para confirmar el\nrestablecimiento.\n4. Definición de Luces y Zumbadores\n(1) Si la identificación es exitosa, la luz verde se encenderá y el zumbador\nemitirá 1 sonido:\n(2) Si la identificación falla, la luz roja parpadeará 3 veces y el zumbador emitirá\n2 sonidos;\n(3) La luz roja estará encendida durante la carga. y la luz verde estará encendida\ncuando esté completamente cargada:2 sonidos:\n(4 ) Alarma de baja potencia: cuando la energia es baja. la luz roja parpadeara",
+  "storage_bucket": "extracted-text"
+}

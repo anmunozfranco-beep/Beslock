@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "products": {
+    "e-flex": [
+      "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4).",
+      "Procedure proc-validacion-despues-del-alta has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8)."
+    ],
+    "e-nova": [],
+    "e-orbit": [
+      "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5)."
+    ],
+    "e-prime": [
+      "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#4).",
+      "Procedure proc-validacion-despues-del-alta has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#8)."
+    ],
+    "e-shield": [],
+    "e-touch": [
+      "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#4).",
+      "Procedure proc-reset-y-recuperacion has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#10)."
+    ]
+  },
+  "policy": "Procedures listed here had no extractable numbered steps. They likely require manual review of the OEM source before being marked verified."
+}

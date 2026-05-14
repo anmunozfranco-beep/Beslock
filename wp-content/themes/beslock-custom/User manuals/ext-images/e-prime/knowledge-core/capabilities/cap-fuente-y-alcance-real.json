@@ -1,0 +1,35 @@
+{
+  "id": "cap-fuente-y-alcance-real",
+  "type": "capability",
+  "product": "e-prime",
+  "summary": "La fuente OCR disponible para app es breve",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#3"
+  ],
+  "extraction_lineage": [
+    "knowledge/capabilities/cap-fuente-y-alcance-real.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "details": [
+    "mini-programa de WeChat por QR",
+    "`Doodle` / `TUYA APP`",
+    "vinculacion de red `2.4G`",
+    "secuencia local sobre la cerradura para activar el alta en red"
+  ],
+  "legacy_storage_bucket": "capabilities"
+}

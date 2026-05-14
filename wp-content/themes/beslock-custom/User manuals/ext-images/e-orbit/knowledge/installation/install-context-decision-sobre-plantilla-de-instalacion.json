@@ -1,0 +1,31 @@
+{
+  "id": "install-context-decision-sobre-plantilla-de-instalacion",
+  "type": "installation-flow",
+  "product": "e-orbit",
+  "summary": "Con estas fuentes no es seguro crear una plantilla de instalacion real",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "no hay cotas de perforacion",
+    "no hay centros de agujeros ni backset detallado",
+    "no hay escala de impresion ni dibujo de corte",
+    "las dimensiones generales del cuerpo no alcanzan para derivar una drilling template confiable"
+  ],
+  "storage_bucket": "installation"
+}

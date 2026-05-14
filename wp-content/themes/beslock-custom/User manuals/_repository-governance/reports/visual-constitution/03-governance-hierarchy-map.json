@@ -1,0 +1,36 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "levels": [
+    {
+      "level": 1,
+      "name": "Canonical doctrine",
+      "root": "KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/",
+      "role": "constitutional / architectural / conceptual"
+    },
+    {
+      "level": 2,
+      "name": "Runtime governance",
+      "root": "visual-system/_governance/",
+      "role": "operational, modular, runtime-oriented"
+    },
+    {
+      "level": 3,
+      "name": "Per-product implementation",
+      "root": "ext-images/<slug>/{visual-system,knowledge-core}/",
+      "role": "local prompts, profiles, semantic JSON"
+    },
+    {
+      "level": 4,
+      "name": "Execution / orchestration",
+      "root": "tools/visual_generation.py + tools/comfy/ + ext-images/<slug>/automation/",
+      "role": "ComfyUI runtime + run records"
+    }
+  ],
+  "resolution_rules": [
+    "Doctrine changes propagate downward (Level 1 → 2 → 3 → 4).",
+    "Runtime rules contradicting doctrine are out of policy and must be reverted.",
+    "Per-product implementations contradicting runtime rules are out of policy.",
+    "Execution-layer behaviour contradicting per-product implementation is a bug."
+  ]
+}

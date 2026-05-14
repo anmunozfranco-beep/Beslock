@@ -1,0 +1,55 @@
+{
+  "id": "proc-conectar-la-cerradura-a-la-aplicacion",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "La app asociada para este proyecto es **Smart Life**",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9"
+  ],
+  "extraction_lineage": [
+    "knowledge/operation/proc-conectar-la-cerradura-a-la-aplicacion.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "mobile-app",
+  "menu_path": "",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abre **Smart Life**"
+    },
+    {
+      "n": 2,
+      "text": "pulsa **Agregar dispositivo** o el símbolo **+**"
+    },
+    {
+      "n": 3,
+      "text": "entra a la categoría correspondiente"
+    },
+    {
+      "n": 4,
+      "text": "elige la opción de cerradura adecuada"
+    },
+    {
+      "n": 5,
+      "text": "sigue el flujo de vinculación"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "operation"
+}

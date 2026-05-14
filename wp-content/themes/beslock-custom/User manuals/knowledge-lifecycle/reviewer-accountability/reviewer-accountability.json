@@ -1,0 +1,42 @@
+{
+  "approval_provenance_fields": [
+    "approval_id",
+    "node_id",
+    "prior_state",
+    "new_state",
+    "reviewer_id",
+    "co_reviewer_id (nullable)",
+    "evidence_binding_ids[]",
+    "rationale",
+    "supervision_receipt_id",
+    "timestamp_iso"
+  ],
+  "critical_operation_signoff": [
+    "irreversible-operation records require:",
+    "  - dual-review (two distinct reviewer_ids, distinct sessions)",
+    "  - operator co-signature (operator_id + supervision-receipt)",
+    "  - explicit escalation_policy on the node",
+    "  - explicit reversibility statement (or declared irreversibility)"
+  ],
+  "disagreement_handling": [
+    "disagreement is recorded as a `disagreement-event` with both rationales",
+    "disagreement does not silently resolve — it routes to consensus or escalation review",
+    "an unresolved disagreement caps the node at its prior tier",
+    "repeated disagreement on the same node opens a `disputed` state"
+  ],
+  "kind": "reviewer-accountability",
+  "review_audit_trail_rules": [
+    "every approval emits an append-only `review-audit/1.0` record",
+    "audit records are co-indexed by node_id and reviewer_id",
+    "audit records are immutable; corrections are new records that supersede the prior id",
+    "audit records carry the supervision-receipt id so runtime + governance share a single proof chain"
+  ],
+  "reviewer_identity_fields": [
+    "reviewer_id (stable, governance-issued)",
+    "scope[] (domains + products the reviewer may approve)",
+    "tier_ceiling (max tier this reviewer may approve unilaterally)",
+    "active_since / revoked_at",
+    "signoff_key_fingerprint (for receipt signing — declared, not implemented as crypto here)"
+  ],
+  "schema": "knowledge-lifecycle-governance/1.0"
+}

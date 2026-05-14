@@ -1,0 +1,8 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13
+
+Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1.pdf` y la plantilla `e-Shied_2.pdf`.
+
+La compatibilidad fisica, las medidas visibles y la arquitectura del hardware estan suficientemente soportadas para una base de instalacion normalizada.
+La secuencia mecanica fina y cualquier combinacion exacta de teclas deben validarse sobre producto real antes de publicarse como instalacion definitiva para cliente final.

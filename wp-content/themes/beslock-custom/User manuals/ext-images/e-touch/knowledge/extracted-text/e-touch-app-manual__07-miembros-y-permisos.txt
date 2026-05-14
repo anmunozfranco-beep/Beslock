@@ -1,0 +1,10 @@
+# Miembros y permisos
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#7
+
+La guia distingue entre `family member` y `other member`.
+
+Uso editorial recomendado:
+- explicar que el administrador decide permisos y ventanas de tiempo
+- explicar que un miembro puede perder acceso cuando expira el periodo asignado
+- no prometer cada etiqueta exacta de UI sin validacion sobre hardware real

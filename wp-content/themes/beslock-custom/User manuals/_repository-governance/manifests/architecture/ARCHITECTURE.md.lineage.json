@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/architecture/ARCHITECTURE.md",
+  "previous_path": "ARCHITECTURE.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "E",
+  "sub_label": "architecture",
+  "rationale": "Repository-wide architecture doc. Relocated to governance manifests.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/manifests/architecture/ARCHITECTURE.md' 'ARCHITECTURE.md'"
+}

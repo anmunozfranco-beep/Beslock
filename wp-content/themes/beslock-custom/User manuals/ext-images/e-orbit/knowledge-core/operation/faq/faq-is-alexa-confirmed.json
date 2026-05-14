@@ -1,0 +1,31 @@
+{
+  "id": "faq-is-alexa-confirmed",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "Can Alexa compatibility be published as a confirmed commercial claim?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "commercial-validation-required",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/specifications/e-Orbit_1.xls",
+    "source-of-truth/manuals/e-Orbit app manual.md#10",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "Can Alexa compatibility be published as a confirmed commercial claim?",
+  "answer": "Not yet. Alexa is mentioned in the OEM specification sheet, but the current editorial guidance says that compatibility still needs confirmation on the commercial variant before it is promoted in sales or support content."
+}

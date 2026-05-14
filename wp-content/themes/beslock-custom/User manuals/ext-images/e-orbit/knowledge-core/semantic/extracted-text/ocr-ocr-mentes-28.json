@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-mentes-28",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "=> Mentes",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-28"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-mentes-28.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "settings\n=> Lo\n2 VolumelH]\n(Dual authentication\n3.System settings\n3.Installation settings\n3. Dual authentication [N]\nNote:Dual authenticationOnly for ordinary key unlocking, two different ordinary user keys must be verified\nto successfully unlock, and administrator users can directly unlock.\n(4) Factory reset",
+  "legacy_storage_bucket": "extracted-text"
+}

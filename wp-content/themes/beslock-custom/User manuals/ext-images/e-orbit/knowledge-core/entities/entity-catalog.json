@@ -1,0 +1,150 @@
+{
+  "id": "entity-catalog",
+  "type": "entity-catalog",
+  "product": "e-orbit",
+  "summary": "Entities observed in e-orbit OEM corpus",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "partial",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "support",
+    "onboarding"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_entity_catalog::ENTITY_VOCAB"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Vocabulary-anchored. An entity is only emitted when at least one OEM-source text fragment matches a curated surface phrase. No inference beyond surface presence.",
+  "entities": [
+    {
+      "id": "entity-fingerprint-sensor",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-keypad",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "keypad",
+        "teclado",
+        "panel"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-lock-body",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "6068"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-emergency-power",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "emergency power"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-buzzer",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "voice prompt"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-led-indicator",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "led",
+        "indicator"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-ic-card-reader",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "ic card",
+        "tarjeta"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-face-recognition",
+      "kind": "hardware",
+      "matched_surface_terms": [
+        "face recognition",
+        "facial",
+        "rostro"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-tuya-app",
+      "kind": "software",
+      "matched_surface_terms": [
+        "tuya",
+        "tuya smart",
+        "smart life"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-tongtong-app",
+      "kind": "software",
+      "matched_surface_terms": [
+        "tongtong"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-administrator-user",
+      "kind": "role",
+      "matched_surface_terms": [
+        "administrator",
+        "administrador"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-regular-user",
+      "kind": "role",
+      "matched_surface_terms": [
+        "usuario",
+        "user"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-temporary-password",
+      "kind": "feature",
+      "matched_surface_terms": [
+        "temporary password"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    },
+    {
+      "id": "entity-auto-lock",
+      "kind": "feature",
+      "matched_surface_terms": [
+        "auto-lock"
+      ],
+      "evidence_corpus": "normalized-manuals + spec-review + ocr-fallback + supplemental-ocr"
+    }
+  ]
+}

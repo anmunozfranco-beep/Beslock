@@ -1,0 +1,34 @@
+{
+  "id": "install-context-estado-editorial",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "La guia suplementaria permite normalizar la instalacion de e-Touch con suficiente confianza",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#12"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-estado-editorial.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "plantilla 1:1 de perforacion",
+    "confirmacion fisica de espesores compatibles y de cualquier cota exacta no visible en el PDF corto"
+  ],
+  "legacy_storage_bucket": "installation"
+}

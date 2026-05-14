@@ -1,0 +1,57 @@
+{
+  "id": "intent-fingerprint-enrollment",
+  "type": "visual-intent",
+  "product": "e-touch",
+  "summary": "Show the user where and how to place their finger during enrollment.",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/component-visibility/component-visibility-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/procedural-semantics/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::INTENT_TEMPLATES"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "semantic_objective": "Show the user where and how to place their finger during enrollment.",
+  "procedure_linkage_subdomain": null,
+  "procedure_linkage_tokens": [
+    "place-finger",
+    "enroll"
+  ],
+  "critical_components": [
+    "fingerprint-zone"
+  ],
+  "mandatory_visible_elements": [
+    "fingerprint-zone"
+  ],
+  "forbidden_visual_deviations": [
+    "fabricated sensors not in component-visibility-map",
+    "wrong handle direction",
+    "incorrect keypad layout",
+    "fictional product variants",
+    "stylised humans (per visual-system reset 2026-05-13)"
+  ],
+  "user_risk_level": "low",
+  "visual_assistance_priority": "P1",
+  "target_publication_channels": [
+    "pdf",
+    "web",
+    "support",
+    "onboarding",
+    "chatbot"
+  ],
+  "anchor_evidence": [
+    "procedural-semantics tokens present: ['place-finger']"
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "This intent only describes WHAT must be communicated. Visual generation is deferred to a future ComfyUI workflow that MUST honour critical_components and forbidden_visual_deviations."
+}

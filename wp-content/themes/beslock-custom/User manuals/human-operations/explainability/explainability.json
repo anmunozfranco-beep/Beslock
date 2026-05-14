@@ -1,0 +1,68 @@
+{
+  "explainability_invariants": [
+    "explanation is sourced from append-only logs, never from speculation",
+    "explanation always precedes the recommendation in the operator surface",
+    "explanation is reproducible: same logs → same explanation",
+    "explanation does not editorialize: it surfaces declared fields, not narratives",
+    "explanation never conceals uncertainty to improve operator UX"
+  ],
+  "explainability_patterns": [
+    {
+      "id": "retrieval-reasoning",
+      "shows": [
+        "query tokens",
+        "matched node tokens",
+        "Jaccard score",
+        "confidence weight",
+        "final score"
+      ]
+    },
+    {
+      "id": "escalation-trigger",
+      "shows": [
+        "trigger id",
+        "underlying signal",
+        "rule that fired",
+        "next required actor"
+      ]
+    },
+    {
+      "id": "confidence-disclosure",
+      "shows": [
+        "per-node tier",
+        "tier weight",
+        "candidate_only flag",
+        "human-review status"
+      ]
+    },
+    {
+      "id": "provenance-inspection",
+      "shows": [
+        "manifest_id",
+        "source_files[].sha256",
+        "extract_lineage",
+        "binding chain"
+      ]
+    },
+    {
+      "id": "continuity-visualization",
+      "shows": [
+        "checkpoint timeline",
+        "current snapshot id",
+        "resume points",
+        "last continuity-trace event"
+      ]
+    },
+    {
+      "id": "operational-uncertainty",
+      "shows": [
+        "ambiguous=True",
+        "no-results",
+        "candidate-only",
+        "missing-prerequisite"
+      ]
+    }
+  ],
+  "kind": "explainability",
+  "schema": "human-operations-governance/1.0"
+}

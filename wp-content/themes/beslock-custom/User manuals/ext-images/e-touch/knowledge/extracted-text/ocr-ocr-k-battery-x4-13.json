@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-k-battery-x4-13",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "K-Battery X4",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-13"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Maintenance",
+  "raw_text": "A) (88) O] (0) e (o\ncnc\n| «trick lock\n000\npo ey screw of front and",
+  "storage_bucket": "extracted-text"
+}

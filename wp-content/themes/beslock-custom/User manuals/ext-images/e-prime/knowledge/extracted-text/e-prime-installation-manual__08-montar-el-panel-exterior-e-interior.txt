@@ -1,0 +1,14 @@
+# Montar el panel exterior e interior
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#8
+
+Orden practico de montaje:
+1. ajusta la direccion de la manija segun la apertura de la puerta
+2. instala los pernos de montaje en el panel frontal y prepara el resorte de manija para el panel trasero
+3. inserta el eje cuadrado y cortalo si el grosor real de la puerta lo exige
+4. pasa el cable de datos por el orificio superior correspondiente
+5. alinea el orificio cuadrado de la manija con el eje y presiona el panel frontal contra la puerta
+6. conecta el cable de datos al panel trasero
+7. alinea el panel trasero con el eje cuadrado y la barra de cerradura
+8. aprieta los tornillos de montaje solo hasta poder corregir la alineacion fina
+9. cuando el pestillo se mueva suavemente, completa el apriete final

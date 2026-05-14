@@ -1,0 +1,13 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "visual-lineage",
+  "title": "Visual lineage / provenance",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "KNOWLEDGE_BUILDING/PROVENANCE_AND_LINEAGE.md",
+    "KNOWLEDGE_BUILDING/COMFY_GENERATION_GOVERNANCE.md (§3 reproducibility, §7 storage)",
+    "_repository-governance/manifests/visual-orchestration-doc/VISUAL_GENERATION_AUTOMATION.md",
+    "ext-images/<product>/automation/runs/"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

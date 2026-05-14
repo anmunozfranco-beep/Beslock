@@ -1,0 +1,55 @@
+{
+  "id": "wf-contrasenas-remotas",
+  "type": "workflow",
+  "product": "e-shield",
+  "summary": "La fuente OEM describe un modulo dedicado a contrasenas",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entra a `Contrasenas`"
+    },
+    {
+      "n": 2,
+      "text": "toca `Enviar codigo de acceso`"
+    },
+    {
+      "n": 3,
+      "text": "selecciona el tipo de codigo"
+    },
+    {
+      "n": 4,
+      "text": "completa nombre y vigencia"
+    },
+    {
+      "n": 5,
+      "text": "genera el codigo"
+    },
+    {
+      "n": 6,
+      "text": "ingresa el codigo en la cerradura y confirma con `#` para registrarlo en el equipo"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

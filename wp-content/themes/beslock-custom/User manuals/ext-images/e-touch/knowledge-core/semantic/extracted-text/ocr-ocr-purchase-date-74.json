@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-purchase-date-74",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Purchase Date",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-74"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-purchase-date-74.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Install date |",
+  "legacy_storage_bucket": "extracted-text"
+}

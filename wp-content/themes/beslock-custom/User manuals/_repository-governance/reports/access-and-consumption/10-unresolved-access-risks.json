@@ -1,0 +1,50 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "risks": [
+    {
+      "id": "channel-targets-coverage-gap",
+      "severity": "high",
+      "description": "Many artifacts lack channel_targets; retrieval-bundle synthesis is constrained.",
+      "ref": "validation/06-retrieval-validation.json"
+    },
+    {
+      "id": "shared-concepts-undeclared",
+      "severity": "high",
+      "description": "Cross-product entity/terminology collisions detected without shared-concept registry; access fan-out cannot deduplicate.",
+      "ref": "validation/03-entity-consistency.json"
+    },
+    {
+      "id": "troubleshooting-corpus-thin",
+      "severity": "high",
+      "description": "5/6 products have no troubleshooting artifacts; troubleshooting-bundle synthesis blocked per product.",
+      "ref": "validation/02-workflow-executability.json"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "severity": "high",
+      "description": "2 products have empty warning corpus; procedural-context warning-injection cannot fire.",
+      "ref": "validation/05-experience-validation.json"
+    },
+    {
+      "id": "maturity-floor-population",
+      "severity": "medium",
+      "description": "Most artifacts are extraction-pending-review; canonical/verified pool is small (~7%); RAG gating excludes the majority."
+    },
+    {
+      "id": "snapshot-hash-not-emitted",
+      "severity": "medium",
+      "description": "Bundles do not yet carry knowledge-core snapshot hash; deterministic re-issue requires future lifecycle integration."
+    },
+    {
+      "id": "audience-scope-not-declared",
+      "severity": "medium",
+      "description": "Per-artifact audience-scope assignments are not yet authored; hierarchy filtering relies on heuristics."
+    },
+    {
+      "id": "disambiguation-set-untested",
+      "severity": "low",
+      "description": "Disambiguation contract is declared but not exercised against a real query corpus."
+    }
+  ]
+}

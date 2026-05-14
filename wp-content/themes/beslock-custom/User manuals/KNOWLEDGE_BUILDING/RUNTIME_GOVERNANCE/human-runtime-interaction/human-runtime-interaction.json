@@ -1,0 +1,37 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "model": [
+    {
+      "id": "supervision-boundary",
+      "rule": "destructive operations are supervised: explicit-action by an authorised human is mandatory"
+    },
+    {
+      "id": "override-semantics",
+      "rule": "human override may relax simplifying adaptations but never safety-preserving ones"
+    },
+    {
+      "id": "escalation-handoff",
+      "rule": "escalation handoff is human-receiving; the runtime cannot resolve OEM-required events"
+    },
+    {
+      "id": "operator-intervention-points",
+      "rule": "declared at: confirmation steps, ambiguity resolutions, recovery decisions, escalation tiers"
+    },
+    {
+      "id": "approval-checkpoints",
+      "rule": "destructive steps and irreversible operations require approval checkpoints with provenance"
+    },
+    {
+      "id": "uncertainty-signaling",
+      "rule": "runtime must signal confidence + disclosure to the human surface; never silently assert"
+    }
+  ],
+  "rules": [
+    "the runtime is supervised by default; autonomous behaviour is not modelled here",
+    "humans may approve, reject, request more information, or escalate",
+    "human approval is recorded with identity (when declared) and provenance",
+    "human override events feed knowledge-health intake",
+    "no human override may downgrade an irreversibility warning"
+  ]
+}

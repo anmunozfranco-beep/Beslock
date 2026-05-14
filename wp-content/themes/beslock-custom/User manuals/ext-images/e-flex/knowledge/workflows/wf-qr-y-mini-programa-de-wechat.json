@@ -1,0 +1,30 @@
+{
+  "id": "wf-qr-y-mini-programa-de-wechat",
+  "type": "workflow",
+  "product": "e-flex",
+  "summary": "La guia tambien indica que el QR puede escanearse con `WeChat` para usar el mini-programa de apertura",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app"
+  ],
+  "steps": [],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

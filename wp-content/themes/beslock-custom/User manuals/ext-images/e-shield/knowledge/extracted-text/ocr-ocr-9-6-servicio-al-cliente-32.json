@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-9-6-servicio-al-cliente-32",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9.6 Servicio Al Cliente",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-32"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "El usuario puede consultar todos los contactos de servicio al cliente para resolver cualquier duda\nFi TOS\nSito web oficial were SOUL OST\nEn este apartado puede comprobar que la aplicación se encuentre en su última versión de\nactualización\n10. Gestión de Gateway\nLa cerradura cuenta con conexión Bluetooth de forma predeterminada, sin embargo no contará con conectividad WiFi El Gateway fungira\ncomo puente entre la cerradura y una red doméstica de WiFi. A través\ndel Gateway, el usuario podrá administrar remotamente el reloj y\nvisualizar el historial de registros\nAdicionalmente, también podrá borrar y modificar contraseñas a DO\ndistancia.",
+  "storage_bucket": "extracted-text"
+}

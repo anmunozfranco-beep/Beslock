@@ -1,0 +1,1212 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "total_nodes": 571,
+  "total_findings": 497,
+  "by_class": {
+    "orphan-node": 497
+  },
+  "findings": [
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "proc-requisitos-antes-de-vincular",
+      "type": "procedure"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "proc-validacion-despues-del-alta",
+      "type": "procedure"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "warning-limites-de-evidencia",
+      "type": "warning"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-objetivo",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-que-vas-a-instalar",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-que-necesitas-antes-de-empezar",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-validacion-despues-de-instalar",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "warning-precauciones-clave",
+      "type": "warning"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-relacion-con-el-paquete-documental",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "install-context-estado-editorial",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-tuya",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-wechat",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-2-4g",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-qr",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-pin",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-huella",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-administrador",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "term-reset",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-overview-1",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-reset-button-2",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-mechanical-key-3",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-the-length-of-the-4",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-for-door-thicknesses-5",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-changing-handle-direction-6",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-do-not-remove-the-7",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-changing-lock-body-direction-8",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-9",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-ic-card-10",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-pr-11",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-in-normal-status-12",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-13",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-adding-an-administrator-14",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-function-settings-15",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-settings-16",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-17",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-settings-18",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-please-enter-the-time-19",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-20",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-enter-time-21",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-22",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-select-the-appropriate-23",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-in-normal-status-24",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-wake-up-the-screen-by-25",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-adding-an-administrator-26",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-press-27",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-enter-the-fingerprint-password-28",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-after-successful-operation-press-29",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-press-and-hold-for-5-30",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-doodle-app-download-installation-and-door-31",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "ocr-ocr-sweep-32",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "capability-map",
+      "type": "capability-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-app-pairing",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-emergency-unlock",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-fingerprint-enrollment",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-installation-assistance",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-onboarding-overview",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "intent-warning-visualisation",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "risk-hallucinated-sensor",
+      "type": "visual-risk"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "risk-incorrect-handle-direction",
+      "type": "visual-risk"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "risk-misplaced-fingerprint-zone",
+      "type": "visual-risk"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "risk-missing-mechanical-key",
+      "type": "visual-risk"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "publication-intent-map",
+      "type": "publication-intent-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "component-visibility-map",
+      "type": "component-visibility-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "oem-source-index-e-flex",
+      "type": "oem-source-index"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-cambio-de-direccion",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-energia-e-inicializacion",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-montar-panel-exterior-e-interior",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-install-usar-la-guia-de-instalacion-disponible",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-wf-alta-desde-tuya-app",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-flex",
+      "id": "semantic-wf-secuencia-local-en-la-cerradura",
+      "type": "procedural-semantics"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-1-2",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-2-3",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-3-4",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-paso-4-5",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-29300-portale-ein-go-10",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "capability-map",
+      "type": "capability-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "intent-onboarding-overview",
+      "type": "visual-intent"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "risk-misplaced-fingerprint-zone",
+      "type": "visual-risk"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "publication-intent-map",
+      "type": "publication-intent-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "component-visibility-map",
+      "type": "component-visibility-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-nova",
+      "id": "oem-source-index-e-nova",
+      "type": "oem-source-index"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ts-paginas-prioritarias-para-fase-1",
+      "type": "troubleshooting"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "install-context-decision-sobre-plantilla-de-instalacion",
+      "type": "installation-flow"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "proc-requisitos-antes-de-vincular",
+      "type": "procedure"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-tuya",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-smart-life",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-ez-mode",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-qr",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-pin",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-huella",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-administrador",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-reset",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-wi-fi",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-ip66",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-ip68",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-smart-lock-manual-1",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-specification-parameters-2",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-comparison-mode-3",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-self-learning-capacitive-press-4",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-acquisition-head-resolution-5",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-rejection-rate-6",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-fake-admission-rate-7",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-fingerprint-collection-range-8",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-card-type-9",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-id-range-010-249-10",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scroll-600-strip-11",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-number-of-door-openings-12",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-dynamic-power-13",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-static-power-14",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-verification-time-15",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-touch-sensing-16",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-oled-17",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-extemal-emergency-power-supply-fr-display-screen-18",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-antistatic-ability-19",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-15-rh-93-rh-20",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-wake-up-touch-panel-21",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-please-enter-the-password-22",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-after-successful-deletion-23",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-id-to-be-deleted-24",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-anada-25",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-after-successful-networkty-26",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-es-es-27",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-mentes-28",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-confirm-the-restoration-of-factory-29",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-loam-30",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-enter-the-time-you-want-to-query-31",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-app-operation-32",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-doorbell-33",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-34",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-35",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-video-lock-36",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-37",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-bird-feeder-38",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-39",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-no-prompts-40",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-41",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-the-qr-code-with-the-door-lock-42",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connecting-device-43",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-scan-44",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-added-successfully-45",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-46",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-doorbell-47",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connecting-device-48",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-ble-49",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-camera-50",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-bird-feeder-51",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-lock-52",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-l8t-rd-53",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-add-device-54",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-select-the-status-of-the-indicator-light-or-55",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-check-if-the-device-has-been-reset-and-56",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-connect-your-mobile-phone-to-57",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-9-connect-your-phone-to-the-hotspot-shown-58",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-y-sl-xxxx-59",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-go-to-connect-60",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-messages-such-as-doorbell-push-61",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-1-days-62",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-online-offline-password-63",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-ea-ed-64",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-logs-65",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-member-management-66",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-67",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-8-card-68",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-69",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-any-unlock-with-card10-70",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-save-71",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-72",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-73",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-user-details-74",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-o-face-75",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-temporary-password-76",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-offline-password-77",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-expiration-time-78",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-message-notification-79",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "ocr-ocr-expiration-time-80",
+      "type": "extracted-text"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-administrator",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-fingerprint",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-nf14",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-qr-pairing",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-temporary-password",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-tongtong-app",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-tuya-smart",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-user",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "term-virtual-password",
+      "type": "glossary-term"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "cap-map-verified",
+      "type": "capability-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "capability-map",
+      "type": "capability-map"
+    },
+    {
+      "class": "orphan-node",
+      "product": "e-orbit",
+      "id": "hardware-nf14",
+      "type": "hardware-specification"
+    }
+  ],
+  "findings_truncated_to": 200
+}

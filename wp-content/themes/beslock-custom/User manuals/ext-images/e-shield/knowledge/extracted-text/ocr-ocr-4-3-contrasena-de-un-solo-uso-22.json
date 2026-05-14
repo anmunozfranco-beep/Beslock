@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-4-3-contrasena-de-un-solo-uso-22",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "4.3 Contraseña De Un Solo Uso",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-22"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "Esta contraseña únicamente podrá utilizarse una vez y Cn Cement ane mtcre cane\nestara disponible durante 6 horas. cee .\nSeer eens\n4.4 Eliminar\nEl apartado de Eliminar se utiliza para borrar todos los Cente oe 49 rem Seg NOS\ncódigos de acceso que la cerradura ha establecido. y .\nque están disponibles durante 24 horas °",
+  "storage_bucket": "extracted-text"
+}

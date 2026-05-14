@@ -1,0 +1,37 @@
+{
+  "id": "term-2-4g",
+  "type": "glossary-term",
+  "product": "e-prime",
+  "summary": "Banda de red Wi-Fi requerida.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+  ],
+  "extraction_lineage": [
+    "knowledge/terminology/term-2-4g.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "canonical": "2.4G",
+  "oem_variants": [
+    "2.4G",
+    "2.4 GHz",
+    "2.4Ghz"
+  ],
+  "definition": "Banda de red Wi-Fi requerida.",
+  "legacy_storage_bucket": "terminology"
+}

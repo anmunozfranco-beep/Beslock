@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Ingrese Al Menú Principal Y Presione La Tecla Correspondiente A La Configuración Del",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-4"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-ingrese-al-menu-principal-y-presione-la-tecla-correspondient.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Configuration",
+  "raw_text": "sistema (idioma, volumen, etc.) según las indicaciones de voz.\nModelo: NXS-L\nMaterial: Aluminio + Hierro inoxidable\nTamaño frontal: 145*58*50\nTamaño posterior: 130*110*SO\nGrosor de puerta aplicable: 30-110 mm\nTipo de puerta: Puerta de hierro /acero inoxidable / patio\nTipo de cilindro: Cilindro de cerradura Clase C\nTipo de pestillo: Acero inoxidable 304\nTipo de mortaja: Semiautomatica\nVida util: 100,000 veces\nCapacidad de huellas dactilares: 100 unidades (9 administradores / 91 usuarios)\nCapacidad de tarjetas: 100 unidades (9 administradores / 91 usuarios)\nCapacidad de contraseñas: 100 unidades (9 administradores / 91 usuarios)\nLongitud de la contraseña: 6-8 digitos\nLlave: 2 llaves de latón\nTasa de falso reconocimiento: <0.001%\nTasa de falso rechazo: <0.1%\nTemperatura de funcionamiento: -10°C a 68°C\nCorriente de funcionamiento: <200 mA\nHumedad de funcionamiento: 20%-93% RH\nVoltaje de alimentación: 4.8-6.5V\nFuente de alimentación: 4 baterías AA\nSuministro de energía de emergencia: USB\nCilindro de cerradura nivel C de inserción directa: y\nAnti-seguimiento y\nProtección contra interferencias electromagnéticas V\nAnti-espiado: Vv\nContraseña virtual para prevenir mirones: Vv\nLea atentamente el manual antes de la instalación y guárdelo en un lugar seguro.\nConsulte a agentes comerciales y profesionales para obtener información no incluida en\neste manual",
+  "legacy_storage_bucket": "extracted-text"
+}

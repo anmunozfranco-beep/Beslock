@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "products": {
+    "e-flex": {
+      "entities": 63,
+      "extracted_text_files": 24,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    },
+    "e-nova": {
+      "entities": 14,
+      "extracted_text_files": 0,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "No normalized OEM markdown sources",
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    },
+    "e-orbit": {
+      "entities": 109,
+      "extracted_text_files": 46,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    },
+    "e-prime": {
+      "entities": 65,
+      "extracted_text_files": 24,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    },
+    "e-shield": {
+      "entities": 62,
+      "extracted_text_files": 27,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    },
+    "e-touch": {
+      "entities": 98,
+      "extracted_text_files": 24,
+      "has_index": true,
+      "has_normalized": true,
+      "has_relationships": true,
+      "blockers": [
+        "Embeddings layer not yet generated (out of Phase 2 scope)"
+      ]
+    }
+  },
+  "next_steps": [
+    "Generate vector embeddings per entity (Phase 3).",
+    "Author manual-overrides.json edges for verified semantic relationships.",
+    "Promote `extraction-pending-review` entities to `verified` after human review."
+  ]
+}

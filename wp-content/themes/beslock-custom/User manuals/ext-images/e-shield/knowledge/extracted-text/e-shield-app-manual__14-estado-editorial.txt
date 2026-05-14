@@ -1,0 +1,11 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#14
+
+Este manual de app se apoya en OCR de la seccion OEM de aplicacion incluida dentro de la fuente principal de e-Shield.
+
+Queda util como base normalizada de contenido.
+Antes de publicarse como manual de app definitivo para cliente final, conviene validar:
+- nombre real de la app en la implementacion comercial
+- textos exactos de botones
+- disponibilidad real de Gateway, asistencia y transferencia de administrador

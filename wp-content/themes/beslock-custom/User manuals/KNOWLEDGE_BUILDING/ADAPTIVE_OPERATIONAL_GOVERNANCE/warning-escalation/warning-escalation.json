@@ -1,0 +1,79 @@
+{
+  "schema": "adaptive-operational-governance/1.0",
+  "generated_at": "2026-05-13T19:06:08+00:00",
+  "levels": [
+    {
+      "id": "informational",
+      "rank": 0,
+      "must_acknowledge": false
+    },
+    {
+      "id": "advisory",
+      "rank": 1,
+      "must_acknowledge": false
+    },
+    {
+      "id": "caution",
+      "rank": 2,
+      "must_acknowledge": true
+    },
+    {
+      "id": "warning",
+      "rank": 3,
+      "must_acknowledge": true
+    },
+    {
+      "id": "critical",
+      "rank": 4,
+      "must_acknowledge": true
+    },
+    {
+      "id": "irreversible",
+      "rank": 5,
+      "must_acknowledge": true,
+      "requires_explicit_action": true
+    },
+    {
+      "id": "emergency",
+      "rank": 6,
+      "must_acknowledge": true,
+      "requires_explicit_action": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "severity-driven",
+      "rule": "severity-level=warning -> minimum caution; severity-level in {blocked,unsafe} -> minimum warning"
+    },
+    {
+      "id": "interruption-driven",
+      "rule": "interruption during destructive step -> escalate to critical"
+    },
+    {
+      "id": "unsafe-state-driven",
+      "rule": "entering an unsafe state -> warning + mandatory-warning surface"
+    },
+    {
+      "id": "recovery-driven",
+      "rule": "recovery in progress -> all subsequent steps escalate one level"
+    },
+    {
+      "id": "irreversible-driven",
+      "rule": "irreversible operations -> always 'irreversible' level + explicit-action confirmation"
+    },
+    {
+      "id": "emergency-driven",
+      "rule": "operational-mode=emergency -> emergency level on any non-safety step blocking continuation"
+    },
+    {
+      "id": "evidence-driven",
+      "rule": "confidence-level in {inferred,ocr-derived,ambiguous} -> attach 'advisory' disclosure to operational claims"
+    }
+  ],
+  "invariants": [
+    "warnings can be escalated by adaptation but never demoted",
+    "an explicit-action confirmation cannot be replaced by acknowledgement",
+    "warnings declared by knowledge-core or composition are non-removable",
+    "every escalation must record its trigger predicate (auditable)"
+  ]
+}

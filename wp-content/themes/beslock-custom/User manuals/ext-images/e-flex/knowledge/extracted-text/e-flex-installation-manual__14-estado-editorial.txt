@@ -1,0 +1,9 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#14
+
+La base de instalacion queda suficientemente soportada por `e-Flex_1.pdf` y por el OEM ya procesado en `../../../../generated_manuals/e-flex/manual.md`.
+
+Sigue pendiente para una version final de cliente:
+- una plantilla de perforacion 1:1 si el proveedor la entrega
+- validacion fisica del tiempo exacto de bloqueo y de cualquier password inicial que la guia corta mencione

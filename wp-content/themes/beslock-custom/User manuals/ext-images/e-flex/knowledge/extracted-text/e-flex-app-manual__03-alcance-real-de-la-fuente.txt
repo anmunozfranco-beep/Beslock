@@ -1,0 +1,9 @@
+# Alcance real de la fuente
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#3
+
+La fuente OEM suplementaria muestra un flujo de alta corto y dos referencias de ecosistema:
+- `TUYA APP`
+- mini-programa `WeChat` por QR
+
+La evidencia fuerte esta en la provision de red y en la secuencia local sobre la cerradura.

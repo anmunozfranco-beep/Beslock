@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-press-the-registered-47",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Press The Registered",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-47"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "adminis trator fingerprint\n3.Four Ways to Turn OFF Normally-Open Mode\na.Repeat the above 2 methods to turn off the normally open mode\nb.Press \"#'to lock and turn off the normally open mode\nc.Enter an enrolled fingerprint or password to lockupg\nEnter“10#’Verify Administrator Add user",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:46:30Z",
+  "pointer": {
+    "path": "STOREFRONT_OWNERSHIP_SUMMARY.md",
+    "category": "F",
+    "sub_label": "frontend-migration-summary-legacy",
+    "size_bytes": 7791,
+    "mtime_iso": "2026-05-08T20:29:10Z",
+    "reason": "Ambiguous ownership or unclassified. Pointer recorded here; the asset itself was NOT moved or modified. Resolution requires human review.",
+    "ownership_recommendation": "future-relocate to _repository-governance/migration-history/frontend-summaries/ (NON-AUTOMATIC). These are historical migration receipts for the WordPress theme, not Beslock product knowledge."
+  },
+  "physical_action_taken": "none",
+  "reversible": true
+}

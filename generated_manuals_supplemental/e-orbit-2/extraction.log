@@ -1,0 +1,39 @@
+2026-05-13 17:10:16 [INFO] === Processing: e-Orbit_2.pdf ===
+2026-05-13 17:10:16 [DEBUG] Dependency status: {'pymupdf': True, 'pytesseract': True, 'pdf2image': True, 'pillow': True, 'ocrmypdf': True, 'tesseract': True, 'pdftoppm': True}
+2026-05-13 17:10:16 [INFO] Detecting PDF type...
+2026-05-13 17:10:16 [INFO] PDF type: scanned | pages=17 | text_chars=13301
+2026-05-13 17:10:16 [DEBUG] Running: ocrmypdf --skip-text --optimize 1 -l spa+eng /Users/andresmunoz/Documents/GitHub/Beslock/wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-orbit-2/e-Orbit_2.searchable.pdf
+2026-05-13 17:10:18 [WARNING] ocrmypdf failed (rc=3): OCR engine does not have language data for the following requested languages: 
+spa
+Please install the appropriate language data for your OCR engine.
+
+See the online documentation for instructions:
+    https://ocrmypdf.readthedocs.io/en/latest/languages.html
+
+Note: most languages are identified by a 3-letter ISO 639-2 Code.
+For example, English is 'eng', German is 'deu', and Spanish is 'spa'.
+Simplified Chinese is 'chi_sim' and Traditional Chinese is 'chi_tra'.
+2026-05-13 17:10:18 [INFO] Running fallback pdf2image+pytesseract OCR on e-Orbit_2.pdf...
+2026-05-13 17:10:18 [DEBUG] Converting PDF to images with pdf2image at 300 DPI
+2026-05-13 17:10:20 [DEBUG] OCR page 1/17
+2026-05-13 17:10:21 [DEBUG] OCR page 2/17
+2026-05-13 17:10:24 [DEBUG] OCR page 3/17
+2026-05-13 17:10:28 [DEBUG] OCR page 4/17
+2026-05-13 17:10:32 [DEBUG] OCR page 5/17
+2026-05-13 17:10:36 [DEBUG] OCR page 6/17
+2026-05-13 17:10:40 [DEBUG] OCR page 7/17
+2026-05-13 17:10:44 [DEBUG] OCR page 8/17
+2026-05-13 17:10:47 [DEBUG] OCR page 9/17
+2026-05-13 17:10:49 [DEBUG] OCR page 10/17
+2026-05-13 17:10:51 [DEBUG] OCR page 11/17
+2026-05-13 17:10:53 [DEBUG] OCR page 12/17
+2026-05-13 17:10:55 [DEBUG] OCR page 13/17
+2026-05-13 17:10:57 [DEBUG] OCR page 14/17
+2026-05-13 17:10:58 [DEBUG] OCR page 15/17
+2026-05-13 17:11:00 [DEBUG] OCR page 16/17
+2026-05-13 17:11:02 [DEBUG] OCR page 17/17
+2026-05-13 17:11:03 [INFO] pytesseract OCR complete: 17 pages, avg_conf=82.7%
+2026-05-13 17:11:03 [INFO] Raw text: 14660 characters after cleaning
+2026-05-13 17:11:03 [INFO] Structure: sections=9 specs=4 steps=2 warnings=10 features=0 app=5
+2026-05-13 17:11:03 [INFO] Outputs written to: /Users/andresmunoz/Documents/GitHub/Beslock/generated_manuals_supplemental/e-orbit-2
+2026-05-13 17:11:03 [INFO] ✓ e-Orbit_2.pdf: scanned=True pages=17 avg_confidence=82.7% method=pytesseract

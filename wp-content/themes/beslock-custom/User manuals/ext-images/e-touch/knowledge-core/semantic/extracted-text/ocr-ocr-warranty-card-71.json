@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-warranty-card-71",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Warranty Card",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-71"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-warranty-card-71.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "The Company provide life long maintenance for the sale of products,from the date of purchase within one year the company provides free warranty service;lf\nthe following cases are not held for free warranty services:\n(1) If there is no product warranty card or valid purchase voucher the warranty card and\npurchase certificate do not match the product;(2) Damage caused by human factors, including use in an abnormal working environment, damage caused by\nthe use of a non-stated manual,etc.;\n(3) The user's private dismantling,self-repair,\nmodification or maintenance by a non-authorized unit of the Company or other irresistible factors damaged\"",
+  "legacy_storage_bucket": "extracted-text"
+}

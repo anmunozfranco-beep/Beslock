@@ -1,0 +1,10 @@
+# Precauciones clave
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#12
+
+Segun la fuente corta en espanol:
+- no cuelgues objetos en la manija
+- no presiones en exceso el lector de huellas al registrar usuarios
+- reemplaza las baterias al menos una vez cada seis meses para reducir riesgo de fuga
+- tras la primera alerta de bateria baja todavia puede haber alrededor de `100` aperturas disponibles, pero conviene cambiar las pilas de inmediato
+- despues de `5` intentos incorrectos consecutivos la cerradura puede quedar inoperable durante `90 segundos`

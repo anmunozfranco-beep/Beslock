@@ -1,0 +1,30 @@
+{
+  "id": "faq-how-many-phones-configure-network",
+  "type": "faq",
+  "product": "e-orbit",
+  "summary": "Can more than one mobile phone configure the lock network at the same time?",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "document-supported",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "source-of-truth/manuals/e-Orbit app manual.md#4",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/faq.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "question": "Can more than one mobile phone configure the lock network at the same time?",
+  "answer": "No. The current source set says network configuration only supports one mobile phone at a time, and a new network configuration can clear the prior distribution."
+}

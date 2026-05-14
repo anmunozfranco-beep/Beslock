@@ -1,0 +1,53 @@
+# Registrar una huella
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7
+
+
+
+
+## Qué necesitas antes
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7.1
+
+- el dedo está limpio y seco
+- la cerradura responde normalmente
+- el usuario puede apoyar el dedo con comodidad
+
+
+## Ruta de menú
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7.2
+
+**Agregar usuario → Agregar administrador / Agregar usuario**
+
+
+## Paso a paso
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7.3
+
+1. entra al menú
+2. selecciona **Agregar usuario**
+3. elige el tipo de usuario
+4. selecciona **Huella**
+5. coloca el dedo sobre el lector cuando el sistema lo indique
+6. retira y vuelve a colocar el mismo dedo las veces necesarias
+7. espera la confirmación
+8. prueba la huella
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7.4
+
+Si eres administrador, deja registrada más de una huella si el sistema lo permite.
+
+
+## Qué validar después
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7.5
+
+- la lectura es estable
+- el acceso funciona varias veces seguidas
+- el usuario apoya el dedo con naturalidad
+
+---

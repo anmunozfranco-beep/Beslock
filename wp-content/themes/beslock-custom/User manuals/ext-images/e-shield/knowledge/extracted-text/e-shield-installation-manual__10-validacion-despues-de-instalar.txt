@@ -1,0 +1,11 @@
+# Validacion despues de instalar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10
+
+Antes de entregar el equipo o pasar a configuracion de usuarios, valida esto:
+- la puerta cierra y abre sin roce anormal
+- el cuerpo exterior queda vertical y la caja interior queda estable
+- el teclado despierta y responde al tacto
+- la llave mecanica abre y cierra correctamente
+- el puerto USB de emergencia sigue accesible
+- el boton interior y el pestillo responden sin retrasos ni holguras anormales

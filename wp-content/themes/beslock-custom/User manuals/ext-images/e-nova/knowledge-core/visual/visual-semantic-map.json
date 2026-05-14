@@ -1,0 +1,44 @@
+{
+  "id": "visual-semantic-map",
+  "type": "visual-semantic-map",
+  "product": "e-nova",
+  "summary": "OEM visual reference index for e-nova",
+  "language": "en",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "comfyui",
+    "support",
+    "rag"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_visual_semantic_map"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "trusted_visual_references": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/product-images/e-Nova.png"
+  ],
+  "prompt_packs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/ai-image-prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/prompts/e-Nova - AI image prompts.md"
+  ],
+  "generation_matrices": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/e-Nova - image generation matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/visual-system/generation-matrices/image-generation-matrix.md"
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "prohibited": [
+    "midjourney",
+    "dall-e production pipelines",
+    "external visual systems",
+    "hallucinated geometry",
+    "fake product variants",
+    "hand-drawn human figures (per visual system reset 2026-05-13)"
+  ],
+  "policy": "All future production imagery for this product MUST originate from a ComfyUI workflow that consumes the trusted_visual_references PNGs as anchor inputs. Component geometry, sensor location, keypad layout, and handle position must NOT be inferred outside the OEM PNGs and the verified `structured-knowledge/` (where present)."
+}

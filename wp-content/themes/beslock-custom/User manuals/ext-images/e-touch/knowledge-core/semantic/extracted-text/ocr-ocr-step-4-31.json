@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-step-4-31",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Step 4: |",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-31"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-step-4-31.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "and verify the administrator). The first 3 users are",
+  "legacy_storage_bucket": "extracted-text"
+}

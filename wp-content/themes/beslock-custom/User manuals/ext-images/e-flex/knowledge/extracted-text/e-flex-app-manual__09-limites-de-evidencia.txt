@@ -1,0 +1,7 @@
+# Limites de evidencia
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#9
+
+- la guia corta no aporta un mapa completo de modulos internos de la app
+- no hay suficiente evidencia aqui para prometer flujos avanzados de automatizacion o permisos remotos detallados
+- la experiencia de Beslock debe describirse como vinculacion `TUYA` sobre red `2.4G`, con mini-programa `WeChat` solo como apoyo OEM observado

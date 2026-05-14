@@ -1,0 +1,69 @@
+{
+  "console_design_rules": [
+    "consoles are operator surfaces, not consumer applications",
+    "consoles never render speculative content; only declared events and packages",
+    "consoles always show provenance + confidence + uncertainty alongside any recommendation",
+    "consoles never expose actions outside the operator's declared scope",
+    "consoles emit append-only events for every operator action",
+    "consoles are out of scope here as implementations; this layer is design-only"
+  ],
+  "consoles": [
+    {
+      "audience": "runtime-operator",
+      "id": "runtime-console",
+      "surfaces": [
+        "flow start",
+        "retrieval-package preview",
+        "approve/reject/demote"
+      ]
+    },
+    {
+      "audience": "reviewer",
+      "id": "reviewer-console",
+      "surfaces": [
+        "queue claim",
+        "side-by-side OEM",
+        "evidence attach",
+        "approve/reject"
+      ]
+    },
+    {
+      "audience": "escalation-supervisor",
+      "id": "escalation-console",
+      "surfaces": [
+        "incoming handoffs",
+        "trigger explanation",
+        "route choices"
+      ]
+    },
+    {
+      "audience": "governance-maintainer",
+      "id": "governance-console",
+      "surfaces": [
+        "reviewer registry",
+        "scope edits (within charter)",
+        "emergency demotion"
+      ]
+    },
+    {
+      "audience": "operational-auditor",
+      "id": "audit-console",
+      "surfaces": [
+        "read-only event stream",
+        "replay",
+        "finding emission"
+      ]
+    },
+    {
+      "audience": "runtime-operator + escalation-supervisor",
+      "id": "continuity-console",
+      "surfaces": [
+        "checkpoint timeline",
+        "resume-from-checkpoint",
+        "snapshot inspect"
+      ]
+    }
+  ],
+  "kind": "consoles",
+  "schema": "human-operations-governance/1.0"
+}

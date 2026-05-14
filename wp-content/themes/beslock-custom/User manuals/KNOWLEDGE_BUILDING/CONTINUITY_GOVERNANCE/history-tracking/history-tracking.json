@@ -1,0 +1,51 @@
+{
+  "schema": "continuity-governance/1.0",
+  "generated_at": "2026-05-13T19:34:40+00:00",
+  "record_types": [
+    {
+      "id": "operational-history",
+      "captures": "completed steps + outcomes"
+    },
+    {
+      "id": "troubleshooting-history",
+      "captures": "symptoms, branches, hypotheses, outcomes"
+    },
+    {
+      "id": "attempted-recoveries",
+      "captures": "recovery attempts + results + checkpoint used"
+    },
+    {
+      "id": "failed-paths",
+      "captures": "abandoned/refuted paths + reason"
+    },
+    {
+      "id": "escalation-history",
+      "captures": "tier transitions + triggers + provenance"
+    },
+    {
+      "id": "warning-history",
+      "captures": "warnings surfaced + acknowledgement + outcome"
+    },
+    {
+      "id": "confidence-evolution",
+      "captures": "confidence tier of key claims over time"
+    }
+  ],
+  "rules": [
+    "history is append-only; no silent edits",
+    "every record carries timestamp + provenance + confidence at time of recording",
+    "destructive operations always emit a history record",
+    "failed paths cannot be silently re-attempted in the same incident (retry caps apply)",
+    "history is queryable; queries do not mutate state",
+    "history of OEM-required events is preserved verbatim",
+    "history may not be used to silently elevate confidence; it can only reference the original tier"
+  ],
+  "query_patterns": [
+    "by-session-id",
+    "by-incident-id",
+    "by-procedure-id",
+    "by-failure-class",
+    "by-escalation-tier",
+    "by-time-range"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "approval_gates": [
+    "explicit-action-gate",
+    "irreversibility-gate",
+    "oem-handoff-gate",
+    "warning-acknowledgement-gate",
+    "schema-pin-gate"
+  ],
+  "boundaries": 6,
+  "escalation_checkpoints": 5,
+  "oversight_checkpoints": 5,
+  "schema": "runtime-orchestration-governance/1.0",
+  "supervision_required_states": [
+    "awaiting-explicit-action",
+    "executing-supervised",
+    "interrupted",
+    "restoring (when destructive was in flight)",
+    "degraded (L3 or higher)",
+    "escalating"
+  ],
+  "unsafe_interruption_rules": 5
+}

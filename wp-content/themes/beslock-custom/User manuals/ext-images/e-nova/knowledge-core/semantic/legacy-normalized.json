@@ -1,0 +1,372 @@
+{
+  "product": "e-nova",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "entities": [
+    {
+      "id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Nano Cerradura Pomo Inteligente",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-1"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "IMPORTADOR: FERNANDO DIAZ PADILLA\nCALLE 7 No. 1034-A ZONA INDUSTRIALC.P.44940 GUADALAJARA, JALISCO MEXICO\nRFC: DIPF650920752\nLista de Empaque\nDesembale el paquete del producto y compruebe si se incluyen\n+ los siguientes accesorios.\no da xo /\no ety Ni “\nPerilla de Doble Cierre\nPomo de la\nCerradura\nTrasera\nArea de\na . Ny Huella Dactilar\nCerradura\nCuerpo de la Frontal Interfaz de Suministro\nCerradura Cerradura iPatency —— de Energia de\nTrasera Emergencia\nAatenor: -\n1. Pasos de Instalación",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-paso-1-2",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Paso 1",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-2"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. Instale el cuerpo de 2. Apriete los tornillos\nla cerradura",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-paso-2-3",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Paso 2",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-3"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "S. Instale la cerradura frontal y pase la barra\nde conexión a través del agujero cuadrado\nDf» de la varilla en el cuerpo de la cerradura",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-paso-3-4",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Paso 3",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-4"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. Instale la cerradura trasera y pase la barra de 2. Apricte el tornillo de\nconexión a traves del agujero cuadrado de la tracción\nbarra de la cerradura trasera",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-paso-4-5",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Paso 4",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-5"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "1. Ajuste la posición horizontal y vertical del\npomo de la cerradura inversa de acuerdo\ncon el estado horizontal y vertical de la barra\ny de conexión, para que el pomo y la barra de",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "7 Conexión En Un Estado Unificadola Cerradura",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-6"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "2. Alinec el espacio en la S.Fije la manija de la 4. La instalación de la\nmanija de la cerradura cerradura trasera cerradura está completa\ntrasera con el espacio en\nel cuerpo de la cerradura\n2. Uso y Operación\n1. Registrar Huella Dactilar",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "El Registro De Huellas Dactilares Solo Se Puede Hacer A Través De Bluetooth,",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-7"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "App Instructions",
+      "raw_text": "y necesita descargar la Tuya Smart APP en su telefono móvil.\nPara enlazar el dispositivo con el teléfono movil, es necesario tocar para\ndespertar el dispositivo antes de que se pueda buscar el dispositivo Bluetooth:\nuna vez enlazado, no necesita tocar el dispositivo para conectarse directamente.\n2. Operación del Pomo Mecánico\n(1) Gire el pomo interior de la puerta verticalmente y mantengalo abierto\n(Modo Normal Abierto):Cuando la cerradura esta en el estado normalmente abierto,\nQuando está en modo normalmente abierto.deberá tocar el sensor dos veces dentr\no de 3 segundos. Luego.realice una verificación adicional para desbloquear.\n2. Operación del Pomo Mecánico\n(2 ) Cuando el pomo interior de la puerta gira a la posición horizontal, realiza el\nanti-bloqueo/doble cierre; En modo anti-bloqueo, solo la huella dactilar del\nadministrador puede desbloquear. Después de desbloquear (apertura automática).\nespere 5 segundos para que se bloquee automáticamente.\n(3) Cuando el pomo de la cerradura de la puerta se gira a la posición\nhorizontal y se bloquea. la cerradura se puede abrir normalmente desde cl interior,\n3. Restaurar Configuración de Fábrica\n(1) Los datos se pueden vaciar a través de la aplicación Tuya\n(2 ) Operacion local:\nGire el pomo 5 veces en 5 segundos. La luz azul permanecerá encendida indicando\nel modo de restablecimiento. Toque el sensor con cualquier dedo dentro de 10\nsegundos para borrar los datos. Ezumbador emitira un pitido largo para confirmar el\nrestablecimiento.\n4. Definición de Luces y Zumbadores\n(1) Si la identificación es exitosa, la luz verde se encenderá y el zumbador\nemitirá 1 sonido:\n(2) Si la identificación falla, la luz roja parpadeará 3 veces y el zumbador emitirá\n2 sonidos;\n(3) La luz roja estará encendida durante la carga. y la luz verde estará encendida\ncuando esté completamente cargada:2 sonidos:\n(4 ) Alarma de baja potencia: cuando la energia es baja. la luz roja parpadeara",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "5 Veces Después De Abrir La Puerta.",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-8"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "3. Operaciones relacionadas con Tuya Smart\nNota: Si no hay ningún usuario registrado, cualquier huella dactilar puede\ndesbloquearlo.\n1. Descargue la Tuya Smart App desde el Mobile App Market (Mercado de\nAplicaciones Móviles)\n1. Descargue la Tuya Smart App desde el Mobile App Market (Mercado de\nAplicaciones Móviles)\n2. Abra el Bluetooth y la Ubicación del teléfono, y abra la Tuya Smart App\na + < Añad r disoosrtivo or\nFavoritos ocu tio abe Re = few sinh dae sonar a Begin oem\nAñadir manusimente\n1. Haga clic en \"Agregar Dispositivo\"\ny comience a conectar\nrad mo\nUs) Corpa, Cane\n(2) MA nea\n2. Conectando 3. Conexión exitosa 4. Ingrese a la página de\ninicio para agregar usuarios\noa e aida\nSEM 10 que quiere deseniazrar este\nIFDOSIVO y 1 mpar los catos?\nFingerprint 4 ns\nCars eae Ca\no: Contra do Ayuda\nCard Ansde a Laval de mo\nActual rac on de . pon\n5. Agregue o elimine miembros 6. Elimine el dispositivo 7. Confirmar desvinculación\no modifique nombres 1. Desvincular\n2. Desvincular y borrar daros\n4. Restablecimiento de Fábrica\nCómo restablecer y eliminar todos los usuarios\nMétodo 1.",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Borrar Datos A Través De La App Tuya",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-9"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "App Instructions",
+      "raw_text": "emacs te core tonne\n«Seguro que quere deserlaror esto\n4a dispostive y MON Of datos?\nCent seete os oe we es one E\nCari few mts\nContre de Ayuda",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-29300-portale-ein-go-10",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "29300 Portale Ein Go",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-10"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "mene acs\nActual zac Or ce . Tee Dee ace MO OF bales\nMétodo 2.\nOperacion local: Después de girar repetidamente cl pomo 5 veces en",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "5 Segundos.Entrara En El Estado De Recuperacion De Fabrica, La Luz Azul Del Cabezal",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-11"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": "de la huella dactilar estara encendida permanentemente, la luz verde estara encendida\nal mismo tiempo. y el zumbador emitirá un pitido largo para indicar el éxito, y presione\ncualquier huella dactilar para borrar los datos dentro de 10 segundos.\n5. Parámetros del Producto",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Funciones/Rendimiento Parámetros Observaciones",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-12"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "Configuration",
+      "raw_text": "Tensión de Funcionamiento 334 2v Tensión Nonimal 3 7V\n(1) Detección de bateria baja, avisos de\nTensión de Alarma 3.540 1v voz locales (2) Desbloqueo mas de 50\nveces después de la alarma de baja\ntensión\nConsumo de Energia en Sueño Profundo <30uA\n‘Consumo de Energia Estático . (1) Método de medición: Crédito de",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "9 S50Ua Consumo De Energia En Modo De Espera",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-13"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "General",
+      "raw_text": ". . prolongado\nConsumo de Energia Dinámico S200mMA\nRequisitos de Humedad < 93% RH\nCapacidad de Huella Dactilar 20 (las primeras 3 son administradores y las 17 posteriores son\nusuarios regulares)\nMaterial del Producto Aleación de Aluminio + acero inoxidable\nFuente de Alimentación Bateria de litio ternaria de 400mAnh\nGrosor de Puerta Aplicable 35-55MM",
+      "storage_bucket": "extracted-text"
+    },
+    {
+      "id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+      "type": "extracted-text",
+      "product": "e-nova",
+      "summary": "Método De Desbloqueo Huella Dactilar/Lave/App",
+      "language": "es-CO",
+      "validation_status": "inferred-but-unverified",
+      "channel_targets": [
+        "web",
+        "pdf",
+        "support",
+        "onboarding",
+        "chatbot",
+        "rag",
+        "api"
+      ],
+      "source_refs": [
+        "generated_manuals/e-nova/manual.json#section-14"
+      ],
+      "related": {},
+      "updated_at": "2026-05-13T14:28:52Z",
+      "schema_version": "2.0",
+      "semantic_category": "App Instructions",
+      "raw_text": "Puerta de madera /puerta de oficina / puerta ultraestrecha/\nPuertas Aplicables puerta ecológica\n6. Uso Especial y Seguridad\n1. Modo Abierto Normal\nVerificación exterior: Cerradura de huella dactilar dos veces seguidas, verificar el\ndesbloqueo con huella dactilar una vez.\n2. Modo Cerrado Normal\nEn modo normalmente cerrado, solo se puede desbloquear con la huella dactilar\ndel usuario administrador o la APP, y se bloqueará automáticamente después\nde 5 segundos.\n3. Desbloqueo de Emergencia\n1. Desbloquear con llave\n2. Enchufe el cable de alimentación USB en el conector\n(para alimentación de emergencia)\n4.Recordatorio\n1, Guarde al menos una llave fuera de la puerta en caso de que la necesite.\n2. La luz indicadora parpadeara en rojo cuando la bateria este baja. y la energia\nrestante solo se utilizará para unas 50 veces para la cerradura de la puerta.\n3. Puede desbloquear la cerradura con una llave cuando la bateria esté agotada,\no usar su huella dactilar para alimentar la cerradura de la puerta a través del puerto\nmicro-USB.",
+      "storage_bucket": "extracted-text"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Que necesitas antes de empezar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#5
+
+- guia OEM de instalacion disponible en `e-Prime_1.pdf`
+- acceso a ambas caras y al canto de la puerta
+- herramientas compatibles con el cuerpo del cerrojo y los tornillos de montaje
+- 4 pilas AA nuevas para la prueba inicial
+- llave mecanica de respaldo y acceso a fuente de 5V para emergencia

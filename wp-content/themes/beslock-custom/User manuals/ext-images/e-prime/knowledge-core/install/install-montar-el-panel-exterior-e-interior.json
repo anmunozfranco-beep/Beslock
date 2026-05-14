@@ -1,0 +1,70 @@
+{
+  "id": "install-montar-el-panel-exterior-e-interior",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "Orden practico de montaje:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#8"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-montar-el-panel-exterior-e-interior.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "ajusta la direccion de la manija segun la apertura de la puerta"
+    },
+    {
+      "n": 2,
+      "text": "instala los pernos de montaje en el panel frontal y prepara el resorte de manija para el panel trasero"
+    },
+    {
+      "n": 3,
+      "text": "inserta el eje cuadrado y cortalo si el grosor real de la puerta lo exige"
+    },
+    {
+      "n": 4,
+      "text": "pasa el cable de datos por el orificio superior correspondiente"
+    },
+    {
+      "n": 5,
+      "text": "alinea el orificio cuadrado de la manija con el eje y presiona el panel frontal contra la puerta"
+    },
+    {
+      "n": 6,
+      "text": "conecta el cable de datos al panel trasero"
+    },
+    {
+      "n": 7,
+      "text": "alinea el panel trasero con el eje cuadrado y la barra de cerradura"
+    },
+    {
+      "n": 8,
+      "text": "aprieta los tornillos de montaje solo hasta poder corregir la alineacion fina"
+    },
+    {
+      "n": 9,
+      "text": "cuando el pestillo se mueva suavemente, completa el apriete final"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

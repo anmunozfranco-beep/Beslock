@@ -1,0 +1,62 @@
+{
+  "kind": "trust-zones",
+  "schema": "environment-integration-governance/1.0",
+  "trust_zone_invariants": [
+    "every artifact, sandbox, and integration is mapped to exactly one trust zone",
+    "no zone may inherit privileges from another; trust is declared per-zone",
+    "no prohibited zone is ever introduced as a 'temporary' integration",
+    "zone changes are governance actions; they are dual-audited",
+    "every zone has a declared revocation path"
+  ],
+  "trust_zones": [
+    {
+      "examples": [
+        "runtime-emission path",
+        "production knowledge-core read path"
+      ],
+      "id": "trusted-operational-zone",
+      "rule": "highest trust; reads are unrestricted; writes require governance pipeline auth"
+    },
+    {
+      "examples": [
+        "OEM ingestion env",
+        "candidate enrichment workspace"
+      ],
+      "id": "semi-trusted-ingestion-zone",
+      "rule": "may read trusted-zone provenance; may write only to staging"
+    },
+    {
+      "examples": [
+        "reviewer-workbench surfaces",
+        "review queue store"
+      ],
+      "id": "reviewer-controlled-zone",
+      "rule": "reviewer-bounded; may stage decisions; may not directly mutate production"
+    },
+    {
+      "examples": [
+        "escalation-trace channel",
+        "escalation console surfaces"
+      ],
+      "id": "escalation-zone",
+      "rule": "append-only; isolated from new emissions until decision"
+    },
+    {
+      "examples": [
+        "unsafe-runtime sandbox",
+        "rolled-back slice"
+      ],
+      "id": "quarantined-runtime-zone",
+      "rule": "no emission; read-only access to provenance; awaits operator decision"
+    },
+    {
+      "examples": [
+        "public internet writes",
+        "unbounded autonomous agents",
+        "untracked LLM calls"
+      ],
+      "id": "prohibited-operational-zone",
+      "rule": "categorically forbidden; integration with these zones is a governance violation"
+    }
+  ]
+}

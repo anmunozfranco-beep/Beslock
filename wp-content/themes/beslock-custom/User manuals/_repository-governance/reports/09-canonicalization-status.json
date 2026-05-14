@@ -1,0 +1,11 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:46:30Z",
+  "total_records": 4337,
+  "canonical_layer_records": 2476,
+  "classified_non_canonical_records": 1388,
+  "legacy_or_unknown_records": 24,
+  "infrastructure_records": 449,
+  "canonicalization_ratio": 0.637,
+  "interpretation": "Ratio of records inside canonical Beslock layers (ext-images, KNOWLEDGE_BUILDING, visual-system, _repository-governance, review-previews) over the non-infrastructure inventory."
+}

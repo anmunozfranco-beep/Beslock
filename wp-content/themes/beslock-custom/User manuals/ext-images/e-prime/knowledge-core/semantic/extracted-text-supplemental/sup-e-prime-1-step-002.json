@@ -1,0 +1,34 @@
+{
+  "id": "sup-e-prime-1-step-002",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "[step] 3. Gire el cambiador de direccién. de direccion.",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-good",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf#page=?",
+    "generated_manuals_supplemental/e-prime-1/manual.json#steps[1]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-prime-1/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "channel": "step-candidate",
+  "text": "3. Gire el cambiador de direccién. de direccion.",
+  "page": "?",
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-prime-1"
+}

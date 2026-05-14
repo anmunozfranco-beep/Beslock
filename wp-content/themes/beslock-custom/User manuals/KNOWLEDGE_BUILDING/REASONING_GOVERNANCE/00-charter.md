@@ -1,0 +1,27 @@
+# Reasoning Governance — Charter
+
+## Principles
+
+- the reasoning layer derives conclusions from declared causal links and predicates; it never invents knowledge
+- every conclusion is reproducible from declared inputs and provenance
+- abductive reasoning is permitted but always presented as 'likely' (never 'verified')
+- uncertainty is named, never hidden; OEM-required uncertainty escalates
+- contradictions and conflicts are surfaced, never silently resolved
+- consequences are declared, not inferred from history
+- reasoning chains terminate; bounded by retry thresholds and escalation triggers
+- reasoning preserves user intent; intent changes start new chains with provenance
+- reasoning is subordinate to knowledge-core and to all 11 prior governance layers
+- future reasoning consumers inherit these contracts; the reasoning layer never bends them for a consumer
+
+## Authority Areas
+
+- causal relation type declarations
+- reasoning chain rules and termination outcomes
+- consequence propagation rules
+- state-dependent reasoning profiles
+- contradiction classification and resolution rules
+- uncertainty kinds and treatments
+- hypothesis lifecycle and audit requirements
+- audit/provenance requirements for reasoning
+- interaction contracts with adaptive and decision layers
+- future reasoning-consumer gates

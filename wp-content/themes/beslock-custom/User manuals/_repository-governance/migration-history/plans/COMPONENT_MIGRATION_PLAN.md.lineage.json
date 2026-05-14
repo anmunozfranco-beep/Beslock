@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/plans/COMPONENT_MIGRATION_PLAN.md",
+  "previous_path": "COMPONENT_MIGRATION_PLAN.md",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "E",
+  "sub_label": "migration-plan",
+  "rationale": "Historical migration plan. Relocated to migration history.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/plans/COMPONENT_MIGRATION_PLAN.md' 'COMPONENT_MIGRATION_PLAN.md'"
+}

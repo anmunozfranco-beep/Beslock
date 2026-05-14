@@ -1,0 +1,10 @@
+[
+  {
+    "id": "install-context-decision-sobre-plantilla-de-instalacion",
+    "summary": "Con estas fuentes no es seguro crear una plantilla de instalacion real",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

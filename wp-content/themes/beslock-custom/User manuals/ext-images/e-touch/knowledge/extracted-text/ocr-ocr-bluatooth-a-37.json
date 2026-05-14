@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-bluatooth-a-37",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Bluatooth A",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-37"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Pp.\n92137717\naa\ne a Dreams. Puna\nCapy Pr.\nOtemu:",
+  "storage_bucket": "extracted-text"
+}

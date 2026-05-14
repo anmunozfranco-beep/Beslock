@@ -1,0 +1,156 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "stages": [
+    {
+      "id": "discovered",
+      "order": 1,
+      "terminal": false,
+      "description": "Source material identified (OEM PDF, image, web), no semantic interpretation yet."
+    },
+    {
+      "id": "extracted",
+      "order": 2,
+      "terminal": false,
+      "description": "Raw content extracted from source (text, structure, references)."
+    },
+    {
+      "id": "ocr-derived",
+      "order": 3,
+      "terminal": false,
+      "description": "Content obtained via OCR; explicitly flagged for confidence review."
+    },
+    {
+      "id": "inferred",
+      "order": 4,
+      "terminal": false,
+      "description": "Semantic shape inferred from extracted/OCR content; not yet normalized."
+    },
+    {
+      "id": "normalized",
+      "order": 5,
+      "terminal": false,
+      "description": "Conformed to ontology vocabulary, id format, and shared terminology."
+    },
+    {
+      "id": "canonicalized",
+      "order": 6,
+      "terminal": false,
+      "description": "Single authoritative representation chosen across duplicates/synonyms/bilingual variants."
+    },
+    {
+      "id": "verified",
+      "order": 7,
+      "terminal": false,
+      "description": "Reviewed by human/OEM checkpoint; lineage and evidence cross-validated."
+    },
+    {
+      "id": "promoted",
+      "order": 8,
+      "terminal": false,
+      "description": "Granted operational authority; usable by retrieval, onboarding, troubleshooting models."
+    },
+    {
+      "id": "deprecated",
+      "order": 9,
+      "terminal": false,
+      "description": "Marked for retirement; still readable; flagged not-for-new-use."
+    },
+    {
+      "id": "superseded",
+      "order": 10,
+      "terminal": false,
+      "description": "Replaced by a newer canonical artifact; lineage link to successor required."
+    },
+    {
+      "id": "archived",
+      "order": 11,
+      "terminal": true,
+      "description": "Removed from active surfaces; retained for audit/lineage; never re-promoted."
+    },
+    {
+      "id": "unresolved",
+      "order": 12,
+      "terminal": false,
+      "description": "Cannot progress without human/OEM input; tracked as knowledge debt."
+    }
+  ],
+  "transitions": [
+    [
+      "discovered",
+      "extracted"
+    ],
+    [
+      "extracted",
+      "ocr-derived"
+    ],
+    [
+      "extracted",
+      "inferred"
+    ],
+    [
+      "ocr-derived",
+      "inferred"
+    ],
+    [
+      "inferred",
+      "normalized"
+    ],
+    [
+      "inferred",
+      "unresolved"
+    ],
+    [
+      "normalized",
+      "canonicalized"
+    ],
+    [
+      "normalized",
+      "unresolved"
+    ],
+    [
+      "canonicalized",
+      "verified"
+    ],
+    [
+      "canonicalized",
+      "unresolved"
+    ],
+    [
+      "verified",
+      "promoted"
+    ],
+    [
+      "verified",
+      "deprecated"
+    ],
+    [
+      "promoted",
+      "deprecated"
+    ],
+    [
+      "promoted",
+      "superseded"
+    ],
+    [
+      "deprecated",
+      "superseded"
+    ],
+    [
+      "deprecated",
+      "archived"
+    ],
+    [
+      "superseded",
+      "archived"
+    ],
+    [
+      "unresolved",
+      "normalized"
+    ],
+    [
+      "unresolved",
+      "archived"
+    ]
+  ]
+}

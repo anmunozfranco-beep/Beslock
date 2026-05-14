@@ -1,0 +1,37 @@
+{
+  "id": "install-context-que-necesitas-antes-de-empezar",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "- plantilla impresa a escala `100%",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-que-necesitas-antes-de-empezar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "plantilla impresa a escala `100%`",
+    "acceso a la cara interior, exterior y canto de la puerta",
+    "herramientas compatibles con las perforaciones marcadas en la plantilla",
+    "baterias AA nuevas para la prueba inicial",
+    "llave mecanica de respaldo para validacion final"
+  ],
+  "legacy_storage_bucket": "installation"
+}

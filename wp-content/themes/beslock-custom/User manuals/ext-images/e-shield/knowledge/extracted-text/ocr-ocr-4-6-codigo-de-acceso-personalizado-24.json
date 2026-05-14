@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-4-6-codigo-de-acceso-personalizado-24",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "4.6 Código De Acceso Personalizado",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-24"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Ber aete Terie mn Deal sate Y\nEl usuario puede establecer las contraseñas y pe cave ©\nel periodo de validez que desee",
+  "storage_bucket": "extracted-text"
+}

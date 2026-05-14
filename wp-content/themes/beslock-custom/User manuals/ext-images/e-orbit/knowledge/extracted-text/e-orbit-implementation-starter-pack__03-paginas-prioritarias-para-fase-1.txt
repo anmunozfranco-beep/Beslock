@@ -1,0 +1,19 @@
+# Páginas prioritarias para Fase 1
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#3
+
+La implementación inicial debería priorizar estas páginas:
+
+- `/productos/e-orbit`
+- `/productos/e-orbit/primeros-pasos`
+- `/productos/e-orbit/usuarios/agregar-administrador`
+- `/productos/e-orbit/usuarios/agregar-usuario`
+- `/productos/e-orbit/uso/pin`
+- `/productos/e-orbit/uso/huella`
+- `/productos/e-orbit/configuracion/idioma`
+- `/productos/e-orbit/app/agregar-dispositivo`
+- `/productos/e-orbit/app/vincular-por-qr`
+- `/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`
+- `/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`
+
+---

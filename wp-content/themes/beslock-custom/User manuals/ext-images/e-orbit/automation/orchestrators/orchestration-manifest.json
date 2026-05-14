@@ -1,0 +1,35 @@
+{
+  "product": "e-orbit",
+  "visual_generation_policy": {
+    "authorized_renderer": "ComfyUI",
+    "validated_workflow_exports": [],
+    "policy_status": "enforced-for-future-renders",
+    "notes": "Workflow directories are intentionally empty until validated ComfyUI exports exist. No fake workflow JSON has been created."
+  },
+  "current_repo_pipelines": [
+    {
+      "id": "review-asset-generator",
+      "path": "tools/generate_reset_review_assets.py",
+      "role": "transitional deterministic review asset rebuild",
+      "canonical_input": "ext-images/e-orbit/source-of-truth/product-images/e-Orbit.png",
+      "status": "transitional legacy bridge"
+    },
+    {
+      "id": "review-preview-renderer",
+      "path": "tools/render_manual_review_drafts.py",
+      "role": "render review-draft manuals into HTML previews",
+      "status": "active"
+    },
+    {
+      "id": "review-draft-publisher",
+      "path": "tools/publish_review_drafts.py",
+      "role": "publish review-draft manuals and update canonical tracker states",
+      "status": "active and ext-images-aware for e-orbit"
+    }
+  ],
+  "next_required_artifacts": [
+    "Validated ComfyUI workflow export for e-Orbit identity-preserving generation.",
+    "Workflow API JSON export for the same validated Comfy graph.",
+    "Traceable conditioning and compositing package when workflow-only identity preservation is insufficient."
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "gaps_count": 12,
+  "gaps": [
+    {
+      "id": "gap.no-artifacts.procedures",
+      "domain": "procedures",
+      "products_affected": [
+        "e-flex",
+        "e-nova",
+        "e-orbit",
+        "e-prime",
+        "e-shield",
+        "e-touch"
+      ],
+      "severity": "high",
+      "note": "No semantic artifacts of type 'procedures' exist for any product."
+    },
+    {
+      "id": "gap.product-empty.e-nova.procedural-semantics",
+      "domain": "procedural-semantics",
+      "products_affected": [
+        "e-nova"
+      ],
+      "severity": "high",
+      "note": "e-nova has zero artifacts in 'procedural-semantics' while other products do."
+    },
+    {
+      "id": "gap.product-empty.e-nova.warnings",
+      "domain": "warnings",
+      "products_affected": [
+        "e-nova"
+      ],
+      "severity": "high",
+      "note": "e-nova has zero artifacts in 'warnings' while other products do."
+    },
+    {
+      "id": "gap.product-empty.e-nova.terminology",
+      "domain": "terminology",
+      "products_affected": [
+        "e-nova"
+      ],
+      "severity": "medium",
+      "note": "e-nova has zero artifacts in 'terminology' while other products do."
+    },
+    {
+      "id": "gap.product-empty.e-nova.workflows",
+      "domain": "workflows",
+      "products_affected": [
+        "e-nova"
+      ],
+      "severity": "medium",
+      "note": "e-nova has zero artifacts in 'workflows' while other products do."
+    },
+    {
+      "id": "gap.maturity-field.backfill",
+      "severity": "high",
+      "note": "`maturity` field is now required by doctrine but is not yet present on most existing artifacts; backfill required."
+    },
+    {
+      "id": "gap.shared-concept-membership.empty",
+      "severity": "medium",
+      "note": "shared-concept-membership.json is specified but not populated; per-product concept tagging is required."
+    },
+    {
+      "id": "gap.cross-product-edges.empty",
+      "severity": "medium",
+      "note": "cross-product-edges.json is specified but not populated."
+    },
+    {
+      "id": "gap.embeddings-strategy.deferred",
+      "severity": "low",
+      "note": "Embeddings store + embedding-model identity not yet declared."
+    },
+    {
+      "id": "gap.publication-channel-spec",
+      "severity": "high",
+      "note": "Per-channel publication specifications (resolution, alt-text, format caps) are still inherited as a draft from Phase 6."
+    },
+    {
+      "id": "gap.troubleshooting-coverage",
+      "severity": "high",
+      "note": "Only e-shield has any `troubleshooting/` artifact (1 file); the rest of the line is empty."
+    },
+    {
+      "id": "gap.specifications-coverage",
+      "severity": "medium",
+      "note": "Only e-orbit has any `specifications/` artifact; specifications layer is otherwise empty."
+    }
+  ]
+}

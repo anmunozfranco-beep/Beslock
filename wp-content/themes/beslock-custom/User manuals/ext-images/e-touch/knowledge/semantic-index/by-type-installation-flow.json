@@ -1,0 +1,90 @@
+[
+  {
+    "id": "install-context-objetivo",
+    "summary": "Ordenar la instalacion fisica de e-Touch usando la guia OEM suplementaria disponible, sin confundirla con una plantilla de perforacion a escala real",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-arquitectura-fisica-observada",
+    "summary": "e-Touch se instala como un conjunto compacto de rosetas circulares y manijas, no como una cerradura de placa larga",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-compatibilidad-antes-de-montar",
+    "summary": "Antes de fijar el conjunto:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-rol-de-la-guia-oem-disponible",
+    "summary": "![Guia OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-01",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-secuencia-base-de-instalacion",
+    "summary": "Segun la guia visual OEM:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-energia-y-cierre-del-montaje",
+    "summary": "La fuente OEM confirma:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-alta-tecnica-inicial-del-administrador",
+    "summary": "El PDF incluye un alta local inicial util para pruebas de instalacion:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "summary": "Despues del montaje, valida:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-problemas-y-cautelas-basicas",
+    "summary": "- si el equipo no responde, revisa primero bateria, cableado y conexion del circuito antes de desmontar",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "summary": "Este documento convive con:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#11"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "summary": "La guia suplementaria permite normalizar la instalacion de e-Touch con suficiente confianza",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#12"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

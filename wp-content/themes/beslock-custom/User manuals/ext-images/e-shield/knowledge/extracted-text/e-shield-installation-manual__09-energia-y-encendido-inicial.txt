@@ -1,0 +1,12 @@
+# Energia y encendido inicial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9
+
+Para la puesta en marcha:
+1. instala 4 baterias AA nuevas
+2. activa el panel exterior y confirma respuesta del teclado
+3. si no hay energia disponible, usa respaldo USB solo como alimentacion temporal de emergencia
+4. si el equipo llega con datos previos, usa el boton interno `SET` y sigue el flujo de voz del equipo para restaurar el modo de fabrica
+
+Nota editorial:
+La secuencia exacta de teclas de restauracion aparece inconsistente entre OCR y ficha OEM, asi que no debe fijarse como claim definitivo hasta validar el hardware real.

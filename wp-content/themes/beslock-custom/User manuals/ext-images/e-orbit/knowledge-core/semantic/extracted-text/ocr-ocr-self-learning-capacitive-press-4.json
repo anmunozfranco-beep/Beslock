@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-self-learning-capacitive-press-4",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Self Learning Capacitive Press",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-4"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-self-learning-capacitive-press-4.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "fingerprint head\nthree",
+  "legacy_storage_bucket": "extracted-text"
+}

@@ -1,0 +1,89 @@
+{
+  "layers": [
+    {
+      "consumes": [
+        "intent-record",
+        "access-pattern"
+      ],
+      "emits": [
+        "retrieval-package",
+        "provenance-manifest"
+      ],
+      "id": "retrieval-layer",
+      "responsibility": "resolve query intent into a read-only retrieval-package over knowledge-core",
+      "supervision": "operator-observed"
+    },
+    {
+      "consumes": [
+        "retrieval-package",
+        "continuity-state"
+      ],
+      "emits": [
+        "assembly-package",
+        "warning-record"
+      ],
+      "id": "context-assembly-layer",
+      "responsibility": "merge retrieval-package + warnings + prerequisites + continuity-state into an assembly-package",
+      "supervision": "operator-observed"
+    },
+    {
+      "consumes": [
+        "assembly-package",
+        "adaptation-record"
+      ],
+      "emits": [
+        "guidance-package",
+        "chain-record"
+      ],
+      "id": "operational-guidance-layer",
+      "responsibility": "shape assembly-package into a supervised guidance-package per ADAPTIVE precedence",
+      "supervision": "supervised"
+    },
+    {
+      "consumes": [
+        "assembly-package",
+        "guidance-package"
+      ],
+      "emits": [
+        "escalation-package",
+        "handoff-record"
+      ],
+      "id": "escalation-layer",
+      "responsibility": "evaluate escalation predicates and produce 12-field escalation packages",
+      "supervision": "supervised"
+    },
+    {
+      "consumes": [
+        "timeline-id",
+        "context-vector"
+      ],
+      "emits": [
+        "restoration-record",
+        "checkpoint-record"
+      ],
+      "id": "continuity-layer",
+      "responsibility": "load timeline + context vector and persist append-only checkpoint records",
+      "supervision": "supervised"
+    },
+    {
+      "consumes": [
+        "any-package"
+      ],
+      "emits": [
+        "supervision-receipt",
+        "override-record"
+      ],
+      "id": "supervision-layer",
+      "responsibility": "host operator review checkpoints, override channel, and supervision receipts",
+      "supervision": "operator-driven"
+    }
+  ],
+  "rules": [
+    "Layers are unidirectional: retrieval → assembly → guidance, with supervision/continuity/escalation as orthogonal observers.",
+    "Every layer emits provenance; an unobserved emission invalidates the prototype run.",
+    "No layer performs destructive operations during the prototype.",
+    "No layer may bypass lifecycle P-tier gates or schema-pin enforcement.",
+    "No layer may elevate confidence to compensate for missing inputs."
+  ],
+  "schema": "prototype-runtime-governance/1.0"
+}

@@ -1,0 +1,14 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/human-operations/operator-experience/",
+  "interaction_principles_count": 5,
+  "kind": "operator-experience-summary",
+  "operator_profiles": [
+    "runtime-operator",
+    "reviewer",
+    "governance-maintainer",
+    "escalation-supervisor",
+    "oem-reviewer",
+    "operational-auditor"
+  ],
+  "schema": "human-operations-governance/1.0"
+}

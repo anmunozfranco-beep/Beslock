@@ -1,0 +1,40 @@
+{
+  "id": "ts-paginas-prioritarias-para-fase-1",
+  "type": "troubleshooting",
+  "product": "e-orbit",
+  "summary": "Páginas prioritarias para Fase 1",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "symptoms": [
+    "La implementación inicial debería priorizar estas páginas:"
+  ],
+  "resolutions": [
+    "`/productos/e-orbit`",
+    "`/productos/e-orbit/primeros-pasos`",
+    "`/productos/e-orbit/usuarios/agregar-administrador`",
+    "`/productos/e-orbit/usuarios/agregar-usuario`",
+    "`/productos/e-orbit/uso/pin`",
+    "`/productos/e-orbit/uso/huella`",
+    "`/productos/e-orbit/configuracion/idioma`",
+    "`/productos/e-orbit/app/agregar-dispositivo`",
+    "`/productos/e-orbit/app/vincular-por-qr`",
+    "`/productos/e-orbit/solucion-de-problemas/no-reconoce-huella`",
+    "`/productos/e-orbit/solucion-de-problemas/no-conecta-a-la-app`"
+  ],
+  "storage_bucket": "troubleshooting"
+}

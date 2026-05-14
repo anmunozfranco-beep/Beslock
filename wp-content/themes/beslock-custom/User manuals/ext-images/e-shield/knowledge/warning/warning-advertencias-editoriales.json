@@ -1,0 +1,31 @@
+{
+  "id": "warning-advertencias-editoriales",
+  "type": "warning",
+  "product": "e-shield",
+  "summary": "- `TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#13"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "severity": "caution",
+  "details": [
+    "`TECDOFY` debe tratarse como fuente OEM observada, no como claim final multiregion sin validacion adicional",
+    "la app y los nombres exactos de botones pueden variar por version",
+    "si la operacion depende de Bluetooth local, no debe describirse como flujo remoto puro",
+    "las funciones de asistencia, grupos o soporte deben marcarse como opcionales cuando no haya prueba de version activa"
+  ],
+  "storage_bucket": "warning"
+}

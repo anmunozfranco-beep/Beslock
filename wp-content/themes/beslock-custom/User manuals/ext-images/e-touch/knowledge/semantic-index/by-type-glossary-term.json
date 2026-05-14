@@ -1,0 +1,65 @@
+[
+  {
+    "id": "term-tuya",
+    "summary": "Plataforma OEM de aplicación móvil.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-smart-life",
+    "summary": "Aplicación móvil OEM compatible.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-huella",
+    "summary": "Credencial biométrica dactilar.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-administrador",
+    "summary": "Usuario con permisos de gestión.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-reset",
+    "summary": "Acción o botón de inicialización.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-bluetooth",
+    "summary": "Canal inalámbrico de corto alcance.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-wi-fi",
+    "summary": "Canal inalámbrico de red local.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md"
+    ],
+    "validation_status": "normalized"
+  }
+]

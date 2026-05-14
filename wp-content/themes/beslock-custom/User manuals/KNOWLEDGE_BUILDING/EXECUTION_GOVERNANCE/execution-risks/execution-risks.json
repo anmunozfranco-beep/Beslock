@@ -1,0 +1,48 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "risks": [
+    {
+      "id": "thin-troubleshooting-corpus",
+      "severity": "high",
+      "description": "5/6 products have no troubleshooting symptoms; recovery-path resolution is blocked.",
+      "ref": "validation/02-workflow-executability.json"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "severity": "high",
+      "description": "2 products lack warnings; mandatory-warning-surface safeguard cannot fire.",
+      "ref": "validation/05-experience-validation.json"
+    },
+    {
+      "id": "no-checkpoints-declared",
+      "severity": "high",
+      "description": "Per-procedure checkpoint declarations are not yet authored in the knowledge-core; recovery anchors are heuristic."
+    },
+    {
+      "id": "no-validation-predicates-declared",
+      "severity": "high",
+      "description": "Procedures do not yet declare validation-predicates; completion currently inferred from terminal state alone."
+    },
+    {
+      "id": "no-confirmation-flags-on-steps",
+      "severity": "medium",
+      "description": "Steps do not yet carry `confirmation_required` flags; assistants would need conservative defaults."
+    },
+    {
+      "id": "intent-mismatch-detection",
+      "severity": "medium",
+      "description": "Intent vs operational-state coherence checking is contractual; no live detector yet."
+    },
+    {
+      "id": "snapshot-hash-not-emitted",
+      "severity": "medium",
+      "description": "Execution traces require knowledge-core snapshot hash for determinism; awaiting lifecycle integration."
+    },
+    {
+      "id": "shared-concepts-undeclared",
+      "severity": "medium",
+      "description": "Cross-product entity/terminology collisions block uniform state-model application across products."
+    }
+  ]
+}

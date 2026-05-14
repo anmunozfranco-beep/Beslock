@@ -1,0 +1,13 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "asset": "wp-content/themes/beslock-custom/User manuals/_repository-governance/quarantine/data-products/products.json",
+  "previous_path": "data/products.json",
+  "moved_at": "2026-05-13T15:59:53Z",
+  "method": "git-mv",
+  "tracked_in_git_before_move": true,
+  "category": "C",
+  "sub_label": "product-catalog-draft",
+  "rationale": "Ambiguous ownership (legacy storefront vs. knowledge-core product list). Quarantined pending human classification.",
+  "reversible": true,
+  "reversal_command": "git mv 'wp-content/themes/beslock-custom/User manuals/_repository-governance/quarantine/data-products/products.json' 'data/products.json'"
+}

@@ -1,0 +1,80 @@
+{
+  "id": "capability-map",
+  "type": "capability-map",
+  "product": "e-shield",
+  "summary": "Capabilities surfaced from e-shield OEM corpus (vocabulary-anchored)",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "partial",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "web",
+    "onboarding"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_build.py::build_capability_map::CAPABILITY_VOCAB"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Vocabulary-anchored. Capabilities are surfaced ONLY when the OEM corpus contains the matched phrase. No inference, no claims.",
+  "capabilities": [
+    {
+      "id": "cap-fingerprint-unlock",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ]
+    },
+    {
+      "id": "cap-pin-unlock",
+      "matched_surface_terms": [
+        "pin",
+        "contraseña",
+        "password"
+      ]
+    },
+    {
+      "id": "cap-ic-card-unlock",
+      "matched_surface_terms": [
+        "ic card",
+        "tarjeta"
+      ]
+    },
+    {
+      "id": "cap-bluetooth-pairing",
+      "matched_surface_terms": [
+        "bluetooth"
+      ]
+    },
+    {
+      "id": "cap-emergency-unlock-mechanical-key",
+      "matched_surface_terms": [
+        "llave"
+      ]
+    },
+    {
+      "id": "cap-emergency-unlock-usb",
+      "matched_surface_terms": [
+        "emergency power"
+      ]
+    },
+    {
+      "id": "cap-low-battery-alert",
+      "matched_surface_terms": [
+        "low battery",
+        "batería baja"
+      ]
+    },
+    {
+      "id": "cap-multi-language",
+      "matched_surface_terms": [
+        "idioma"
+      ]
+    }
+  ]
+}

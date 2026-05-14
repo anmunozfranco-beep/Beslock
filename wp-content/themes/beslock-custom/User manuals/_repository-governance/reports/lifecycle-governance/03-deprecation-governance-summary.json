@@ -1,0 +1,50 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "reasons": [
+    {
+      "id": "superseded-by-newer-version",
+      "destructive": false,
+      "requires_successor": true
+    },
+    {
+      "id": "ontology-rule-change",
+      "destructive": false,
+      "requires_successor": false
+    },
+    {
+      "id": "oem-correction",
+      "destructive": false,
+      "requires_successor": true
+    },
+    {
+      "id": "evidence-retracted",
+      "destructive": false,
+      "requires_successor": false
+    },
+    {
+      "id": "duplicate-canonicalized-away",
+      "destructive": false,
+      "requires_successor": true
+    },
+    {
+      "id": "product-discontinued",
+      "destructive": false,
+      "requires_successor": false
+    },
+    {
+      "id": "policy-restricted",
+      "destructive": false,
+      "requires_successor": false
+    }
+  ],
+  "rules": [
+    "Deprecation is reversible until archival; archival is terminal.",
+    "Lineage links (predecessor/successor) MUST be recorded on every transition.",
+    "Deprecated artifacts remain readable; surfaces must render a deprecation badge.",
+    "Superseded artifacts MUST link to their successor; orphaned supersession is a blocking debt.",
+    "Stale terminology is deprecated, never deleted; aliases preserve historical references.",
+    "Obsolete workflows retain ordering and warnings for forensic audit.",
+    "Silent destruction of any semantic artifact is a governance violation."
+  ]
+}

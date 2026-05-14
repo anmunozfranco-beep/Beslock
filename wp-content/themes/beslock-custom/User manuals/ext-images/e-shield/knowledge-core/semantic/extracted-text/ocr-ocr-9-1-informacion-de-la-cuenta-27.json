@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-9-1-informacion-de-la-cuenta-27",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9.1 Información De La Cuenta",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-27"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-9-1-informacion-de-la-cuenta-27.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "En este apartado podrá modificar toda la información\nrelacionada a su usuario como el nombre. avatar, email e coe \"\nreiniciar la contraseña. establecer las preguntas de et\nseguridad, etc\nPa dra .",
+  "legacy_storage_bucket": "extracted-text"
+}

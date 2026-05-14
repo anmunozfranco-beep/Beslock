@@ -1,0 +1,13 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "human-interaction-policy",
+  "title": "Human representation policy (hands-only)",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "visual-system/shared/visual-rules/manual-image-reset-policy.md",
+    "visual-system/shared/generation-guides/review-checklist.md",
+    "visual-system/shared/visual-rules/ai-limitations.md",
+    "KNOWLEDGE_BUILDING/PRODUCT_VISUAL_TRUTH.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

@@ -1,0 +1,18 @@
+# Preparar la puerta
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7
+
+La plantilla muestra un patron principal y perforaciones auxiliares.
+
+Control previo:
+- perforacion circular principal: `32 mm`
+- perforaciones auxiliares redondas: `6 mm`
+- perforacion auxiliar mayor: `25 mm`
+- abertura oblonga auxiliar: usar la plantilla impresa como referencia final
+
+Secuencia recomendada:
+1. fija temporalmente la plantilla en la cara correcta de la puerta
+2. marca centros y contornos sin mover la hoja
+3. perfora de forma controlada y limpia las rebabas
+4. revisa desde ambos lados que el paso del cilindro y del cuerpo exterior quede libre
+5. valida que el canto de la puerta permita el recorrido del pestillo sin rozamiento

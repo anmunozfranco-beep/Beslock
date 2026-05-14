@@ -1,0 +1,186 @@
+{
+  "id": "component-visibility-map",
+  "type": "component-visibility-map",
+  "product": "e-flex",
+  "summary": "Components that must stay geometrically accurate in future Comfy renders for e-flex",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/capabilities/cap-alcance-real-de-la-fuente.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/capabilities/cap-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/capabilities/capability-map.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/entities/entity-catalog.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-compatibilidad-fisica-antes-de-perforar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-estado-editorial.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-objetivo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-que-necesitas-antes-de-empezar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-que-vas-a-instalar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-relacion-con-el-paquete-documental.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-context-validacion-despues-de-instalar.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-energia-e-inicializacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-montar-panel-exterior-e-interior.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-preparar-la-puerta-y-el-cuerpo-del-cerrojo.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/operation/proc-requisitos-antes-de-vincular.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/operation/proc-validacion-despues-del-alta.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-adding-an-administrator-14.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-adding-an-administrator-26.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-17.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-pr-11.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-press-27.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-after-successful-operation-press-29.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-changing-handle-direction-6.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-changing-lock-body-direction-8.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-do-not-remove-the-7.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-doodle-app-download-installation-and-door-31.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-enter-the-fingerprint-password-28.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-enter-time-21.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-for-door-thicknesses-5.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-function-settings-15.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-ic-card-10.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-in-normal-status-12.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-in-normal-status-24.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-mechanical-key-3.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-overview-1.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-please-enter-the-time-19.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-press-and-hold-for-5-30.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-reset-button-2.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-appropriate-20.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-appropriate-22.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-select-the-appropriate-23.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-settings-16.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-settings-18.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-sweep-32.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-the-length-of-the-4.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-13.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-25.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-wake-up-the-screen-by-9.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/ocr-draft-index.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-2-4g.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-administrador.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-huella.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-pin.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-qr.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-reset.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-tuya.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/terminology/term-wechat.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/warnings/warning-limites-de-evidencia.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/warnings/warning-precauciones-clave.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/workflows/wf-alta-desde-tuya-app.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/workflows/wf-qr-y-mini-programa-de-wechat.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/workflows/wf-secuencia-local-en-la-cerradura.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::COMPONENT_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "components": [
+    {
+      "component_id": "fingerprint-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "fingerprint",
+        "huella"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-energia-e-inicializacion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-enter-the-fingerprint-password-28.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "ic-card-zone",
+      "kind": "sensor",
+      "matched_surface_terms": [
+        "ic card"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-ic-card-10.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "exterior-handle",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "handle",
+        "manija"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-de-la-manija.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-montar-panel-exterior-e-interior.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-changing-handle-direction-6.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "deadbolt",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "cerrojo"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-preparar-la-puerta-y-el-cuerpo-del-cerrojo.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "latch",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "pestillo"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-montar-panel-exterior-e-interior.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-preparar-la-puerta-y-el-cuerpo-del-cerrojo.json",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/install/install-usar-la-guia-de-instalacion-disponible.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "lock-body",
+      "kind": "mechanic",
+      "matched_surface_terms": [
+        "lock body"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-changing-lock-body-direction-8.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    },
+    {
+      "component_id": "mechanical-key-slot",
+      "kind": "fallback",
+      "matched_surface_terms": [
+        "mechanical key"
+      ],
+      "evidence_entity_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/knowledge-core/semantic/extracted-text/ocr-ocr-mechanical-key-3.json"
+      ],
+      "must_remain_geometrically_accurate": true,
+      "trusted_visual_reference": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/"
+    }
+  ],
+  "authorized_visual_renderer": "ComfyUI",
+  "policy": "Future ComfyUI workflows MUST consume the trusted_visual_reference PNGs as anchor inputs for any of these components. No generative inference of component position, count, sensor type, keypad layout, or handle direction is allowed."
+}

@@ -1,0 +1,35 @@
+{
+  "id": "install-context-problemas-frecuentes-de-instalacion",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "### La plantilla no coincide con la puerta",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "revisa escala de impresion al `100%`",
+    "confirma mano de apertura correcta",
+    "no reconstruyas cotas a ojo desde una captura de pantalla",
+    "revisa alineacion entre cuerpo exterior, caja interior y eje del pestillo",
+    "confirma que no haya rebabas o desviacion en la perforacion principal",
+    "verifica polaridad y carga de las 4 baterias AA",
+    "usa USB solo como prueba de energia de emergencia",
+    "confirma que el conector interno no haya quedado forzado durante el montaje"
+  ],
+  "storage_bucket": "installation"
+}

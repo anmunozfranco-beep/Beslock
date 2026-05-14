@@ -1,0 +1,36 @@
+{
+  "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Valida estas condiciones antes de tocar la puerta:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-compatibilidad-fisica-antes-de-perforar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "grosor compatible de puerta: `30 a 110 mm`",
+    "tipos de puerta declarados por la fuente OEM: hierro, acero inoxidable o patio",
+    "mano de apertura correcta segun la plantilla impresa",
+    "espacio suficiente para que la caja interior horizontal quede alineada y no choque con marcos, vidrios o herrajes cercanos"
+  ],
+  "legacy_storage_bucket": "installation"
+}

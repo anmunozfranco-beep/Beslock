@@ -1,0 +1,99 @@
+{
+  "isolation_boundaries": [
+    "retrieval ↔ provenance: retrieval reads provenance; never writes",
+    "orchestration ↔ canonical knowledge-core: orchestration emits packages; never writes canonical JSON",
+    "reviewer ↔ production write paths: reviewer surfaces stage decisions; never directly mutate production",
+    "ingestion ↔ production: OEM ingestion writes only to staging; supersession requires governance pipeline",
+    "replay ↔ live runtime: replay outputs go to a side channel; never to production emission paths",
+    "observability ↔ all modules: observability is read-only consumer; no back-channel mutation"
+  ],
+  "kind": "module-topology",
+  "module_relationships": [
+    {
+      "contract": "retrieve(product, query, kind) → package",
+      "from": "orchestration-runtime",
+      "kind": "synchronous-call",
+      "to": "retrieval-runtime"
+    },
+    {
+      "contract": "_evaluate_escalation(packages) → triggers[]",
+      "from": "orchestration-runtime",
+      "kind": "evaluation-call",
+      "to": "escalation-runtime"
+    },
+    {
+      "contract": "orchestration-trace, retrieval-trace, escalation-trace events",
+      "from": "orchestration-runtime",
+      "kind": "append-only-emit",
+      "to": "observability-system"
+    },
+    {
+      "contract": "load knowledge-core JSON; never write",
+      "from": "retrieval-runtime",
+      "kind": "read-only-load",
+      "to": "provenance-system"
+    },
+    {
+      "contract": "consume orchestration-trace; emit replay-trace",
+      "from": "replay-system",
+      "kind": "read-only-tail",
+      "to": "observability-system"
+    },
+    {
+      "contract": "re-execute retrieve() with captured (product, query, kind)",
+      "from": "replay-system",
+      "kind": "deterministic-re-call",
+      "to": "retrieval-runtime"
+    },
+    {
+      "contract": "consume runtime events; emit review-decision events",
+      "from": "reviewer-operations",
+      "kind": "read-only-tail + emit",
+      "to": "observability-system"
+    },
+    {
+      "contract": "render provenance for evidence-pull; no writes",
+      "from": "reviewer-operations",
+      "kind": "read-only-load",
+      "to": "provenance-system"
+    },
+    {
+      "contract": "assign / revoke reviewer scope; dual-audited",
+      "from": "governance-operations",
+      "kind": "scope-assignment",
+      "to": "reviewer-operations"
+    },
+    {
+      "contract": "only governance pipeline appends to provenance",
+      "from": "governance-operations",
+      "kind": "pipeline-write",
+      "to": "provenance-system"
+    },
+    {
+      "contract": "checksum-verified ingest into staging; never directly to production",
+      "from": "oem-ingestion-system",
+      "kind": "staged-write",
+      "to": "provenance-system"
+    },
+    {
+      "contract": "binding handoff for OEM-reviewer dual-review",
+      "from": "oem-ingestion-system",
+      "kind": "dual-review-handoff",
+      "to": "reviewer-operations"
+    },
+    {
+      "contract": "escalation-trace events; never silent",
+      "from": "escalation-runtime",
+      "kind": "append-only-emit",
+      "to": "observability-system"
+    }
+  ],
+  "schema": "reference-stack-governance/1.0",
+  "topology_invariants": [
+    "every module relationship is declared; undeclared calls are forbidden",
+    "every cross-module call satisfies a declared contract",
+    "every cross-module call emits an observability event",
+    "no cross-module call escalates trust silently",
+    "no cross-module call bypasses an isolation boundary"
+  ]
+}

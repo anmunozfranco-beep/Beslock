@@ -1,0 +1,11 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Workflow Executability Rules",
+  "rules": [
+    "Workflows MUST declare actors and at least one step.",
+    "Workflows MUST declare channel_targets.",
+    "Products MUST have \u22651 workflow to support onboarding.",
+    "Products MUST have \u22651 troubleshooting artifact to support escalation."
+  ]
+}

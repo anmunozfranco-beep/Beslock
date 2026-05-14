@@ -1,0 +1,45 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "node_types": [
+    "product",
+    "entity",
+    "procedure",
+    "workflow",
+    "warning",
+    "capability",
+    "specification",
+    "terminology-entry",
+    "visual-intent",
+    "procedural-semantics",
+    "publication-target",
+    "oem-evidence"
+  ],
+  "edge_types": [
+    "product.has-entity",
+    "product.has-capability",
+    "product.has-procedure",
+    "procedure.composes",
+    "procedure.touches-entity",
+    "procedure.requires-capability",
+    "procedure.warns",
+    "procedure.illustrated-by",
+    "procedure.troubleshoots",
+    "entity.contains-entity",
+    "visual-intent.depicts-entity",
+    "visual-intent.targets",
+    "artifact.derived-from"
+  ],
+  "edge_required_fields": [
+    "from",
+    "to",
+    "type",
+    "maturity",
+    "provenance"
+  ],
+  "storage": {
+    "per_product_edges": "ext-images/<slug>/knowledge-core/semantic/relationships/",
+    "cross_product_edges": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-graph/cross-product-edges.json",
+    "shared_concept_membership": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-graph/shared-concept-membership.json"
+  }
+}

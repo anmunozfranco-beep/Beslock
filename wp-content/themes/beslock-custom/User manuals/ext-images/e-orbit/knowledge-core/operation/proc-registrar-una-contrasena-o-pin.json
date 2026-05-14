@@ -1,0 +1,63 @@
+{
+  "id": "proc-registrar-una-contrasena-o-pin",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6"
+  ],
+  "extraction_lineage": [
+    "knowledge/operation/proc-registrar-una-contrasena-o-pin.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "local-device",
+  "menu_path": "Agregar usuario → Agregar administrador / Agregar usuario",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entra a **Agregar usuario**"
+    },
+    {
+      "n": 2,
+      "text": "elige si vas a registrar un administrador o un usuario regular"
+    },
+    {
+      "n": 3,
+      "text": "selecciona **Contraseña**"
+    },
+    {
+      "n": 4,
+      "text": "ingresa la clave"
+    },
+    {
+      "n": 5,
+      "text": "confírmala"
+    },
+    {
+      "n": 6,
+      "text": "guarda el registro"
+    },
+    {
+      "n": 7,
+      "text": "prueba el PIN"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "operation"
+}

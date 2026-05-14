@@ -1,0 +1,85 @@
+{
+  "id": "oem-source-index-e-shield",
+  "type": "oem-source-index",
+  "product": "e-shield",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/specifications/e-Shield - supplemental source review.md",
+      "ext": ".md",
+      "size_bytes": 3939,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+      "ext": ".pdf",
+      "size_bytes": 690311,
+      "md5": "f39508182581c3402ffed359acbe32be",
+      "semantic_pipeline_status": "ocr-supplemental (extracted-text-supplemental)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "ext": ".md",
+      "size_bytes": 5812,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md",
+      "ext": ".md",
+      "size_bytes": 5695,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 13214582,
+      "md5": "0635ee33886948403b91ed97ccd69617",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf",
+      "ext": ".pdf",
+      "size_bytes": 2504931,
+      "md5": "935d5df93cdfe2e06cef7d408be1c430",
+      "semantic_pipeline_status": "ocr-supplemental (extracted-text-supplemental)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-2/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 66359,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-2/page-01.png",
+      "ext": ".png",
+      "size_bytes": 56562,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 239150,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/page-01.png",
+      "ext": ".png",
+      "size_bytes": 152334,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/page-02.png",
+      "ext": ".png",
+      "size_bytes": 75766,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/product-images/e-Shield.png",
+      "ext": ".png",
+      "size_bytes": 194760,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

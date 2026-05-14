@@ -1,0 +1,18 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "category_counts": {
+    "duplicate-entity-within-product": 15,
+    "synonym-duplication": 41,
+    "bilingual-duplication": 15,
+    "non-conforming-id": 61,
+    "missing-prefix": 42,
+    "verb-out-of-registry": 26,
+    "cross-product-collision": 19,
+    "ambiguous-procedure-naming": 0
+  },
+  "total_conflicts_recorded": 219,
+  "policy": "Conflicts surfaced; never auto-resolved.",
+  "register_doc": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/semantic-conflicts/semantic-conflicts.md",
+  "register_json": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/semantic-conflicts/semantic-conflicts.json"
+}

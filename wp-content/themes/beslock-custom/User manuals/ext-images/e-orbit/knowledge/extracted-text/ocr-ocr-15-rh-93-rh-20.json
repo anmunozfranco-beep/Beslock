@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-15-rh-93-rh-20",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "15%Rh~ 93%Rh",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-20"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Two.Setting Description\n1.initialization\nLong press the settings button for 5 seconds, and the voice will broadcast: \"Factory reset, NO(*) YES(#).\" Press\nthe # key to confirm, and the system will restart to its initial state.\nIn the initial state, any face, fingerprint, password, or card can unlock the device. Performing a factory reset\noperation cannot clear the set door-opening direction or torque parameters.\n2.Low battery warning\nIf the system's battery level is less than 25%, the system will voice prompt \"Low power\" ,The battery can still\nbe unlocked about 50 times, but please charge it in a timely manner (or replace the battery).\n3.External USB emergency power supply\nUsing USB emergency power supply, it takes approximately 30 seconds to unlock.\n4.Illegal user alarm\nFailed to unlock after 3 to 5 consecutive inputs, with voice message: ‘Illegal user, illegal intrusion, owner notified’. After the 5th broadcast, the system is locked for 90 seconds, during which time no user action is taken.\nUnlock after 90 seconds.\n5.Virtual password\nWhen using a password to unlock, any number can be added before and after the correct password, which\ncan increase the security of the digital password. For example, if the password is \"123456\", you can enter\n\"426123456745\" to unlock.\nNote: The system can only recognize the first 16 digits\n6.version number\nEnter 999 # to read the system version number.\nThree.Function and operation",
+  "storage_bucket": "extracted-text"
+}

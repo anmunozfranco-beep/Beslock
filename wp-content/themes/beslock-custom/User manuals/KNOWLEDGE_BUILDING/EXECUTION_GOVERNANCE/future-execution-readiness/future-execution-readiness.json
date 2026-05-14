@@ -1,0 +1,75 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "consumers": [
+    {
+      "system": "guided-onboarding",
+      "consumes": [
+        "state-models",
+        "intent-progression",
+        "confirmation-semantics"
+      ],
+      "readiness_gate": "checkpoints + validation-predicates authored per procedure"
+    },
+    {
+      "system": "troubleshooting-assistant",
+      "consumes": [
+        "failure-states",
+        "recovery-rules",
+        "escalation-thresholds"
+      ],
+      "readiness_gate": "symptom corpus ≥ 10 per product"
+    },
+    {
+      "system": "adaptive-operational-guidance",
+      "consumes": [
+        "state-models",
+        "flow-semantics",
+        "intent-progression"
+      ],
+      "readiness_gate": "intent-mismatch detector live"
+    },
+    {
+      "system": "contextual-recovery-system",
+      "consumes": [
+        "interruption-recovery",
+        "failure-states"
+      ],
+      "readiness_gate": "checkpoint registry per procedure"
+    },
+    {
+      "system": "multimodal-operational-assistance",
+      "consumes": [
+        "state-models",
+        "visual-intent (composition layer)"
+      ],
+      "readiness_gate": "visual-intent attached to physical-installation procedures"
+    },
+    {
+      "system": "future-visual-assistance",
+      "consumes": [
+        "state-models",
+        "visual-risk",
+        "component-visibility"
+      ],
+      "readiness_gate": "visual-risk reclassification freeze in place"
+    },
+    {
+      "system": "state-aware-chatbot",
+      "consumes": [
+        "state-models",
+        "intent-progression",
+        "safeguards"
+      ],
+      "readiness_gate": "snapshot-hash on traces + access-trace logging"
+    }
+  ],
+  "products_in_scope": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

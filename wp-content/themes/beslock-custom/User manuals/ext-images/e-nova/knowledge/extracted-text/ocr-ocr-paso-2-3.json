@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-paso-2-3",
+  "type": "extracted-text",
+  "product": "e-nova",
+  "summary": "Paso 2",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json#section-3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "S. Instale la cerradura frontal y pase la barra\nde conexión a través del agujero cuadrado\nDf» de la varilla en el cuerpo de la cerradura",
+  "storage_bucket": "extracted-text"
+}

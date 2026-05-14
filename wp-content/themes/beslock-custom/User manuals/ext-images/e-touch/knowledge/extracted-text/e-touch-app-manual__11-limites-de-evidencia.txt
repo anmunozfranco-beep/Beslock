@@ -1,0 +1,7 @@
+# Limites de evidencia
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#11
+
+- la fuente no describe un flujo Wi-Fi ni una nube separada; el onboarding visible es Bluetooth
+- no hay evidencia suficiente aqui para asegurar automatizaciones avanzadas sin validacion adicional
+- las capacidades numericas de usuarios y credenciales siguen siendo claims OEM pendientes de confirmacion comercial

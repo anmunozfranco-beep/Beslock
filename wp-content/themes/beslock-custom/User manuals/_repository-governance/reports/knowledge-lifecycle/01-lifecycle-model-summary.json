@@ -1,0 +1,8 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/lifecycle-model/",
+  "kind": "lifecycle-model-summary",
+  "promotion_gates_count": 10,
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "states_count": 9,
+  "transitions_count": 10
+}

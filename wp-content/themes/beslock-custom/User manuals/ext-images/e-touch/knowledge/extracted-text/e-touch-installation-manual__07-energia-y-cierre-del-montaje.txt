@@ -1,0 +1,14 @@
+# Energia y cierre del montaje
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#7
+
+La fuente OEM confirma:
+- alimentacion principal por `4 AAA 1.5V`
+- energia de emergencia por `micro-USB`
+- llave mecanica de respaldo (`E-key`)
+
+Antes de cerrar el trabajo:
+1. instala las baterias nuevas
+2. confirma que la tapa trasera quede bien fijada
+3. verifica que la manija exterior despierte al tacto
+4. conserva al menos una llave mecanica fuera de la puerta

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "ocr-ocr-packing-list-1",
+    "summary": "Packing List",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-e-keyx2tmf-squa-2",
+    "summary": "E-Keyx2Tmf-Squa",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-es-fingerprint-lock-3",
+    "summary": "Es Fingerprint Lock",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-installation-instructions-4",
+    "summary": "Installation Instructions",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-h-connecting-i-fix-the-handle-j-fix-the-cover-5",
+    "summary": "H-Connecting I-Fix The Handle J-Fix The Cover",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-k-battery-x4-6",
+    "summary": "K-Battery X4",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-hare-7",
+    "summary": "Hare",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-e-ek-8",
+    "summary": "E-Ek",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-a-front-handle-9",
+    "summary": "A-Front Handle",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-b-rear-handle-10",
+    "summary": "B-Rear Handle",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-b-1-cover-screw-11",
+    "summary": "B-1 Cover Screw",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-b-2-rear-cover-12",
+    "summary": "B-2 Rear Cover",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-k-battery-x4-13",
+    "summary": "K-Battery X4",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-emergency-14",
+    "summary": "Emergency",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-d-pinch-plate-15",
+    "summary": "D-Pinch Plate,",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-15"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-installation-steps-16",
+    "summary": "Installation Steps",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-16"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-step-1-17",
+    "summary": "Step 1",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-17"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-china-18",
+    "summary": "China",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-18"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-pass-the-square-19",
+    "summary": "Pass The Square",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-19"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-please-enter-your-account-20",
+    "summary": "Please Enter Your Account",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-20"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-paasword-21",
+    "summary": "Paasword",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-21"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-completing-22",
+    "summary": "After Completing",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-22"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-if-you-already-have-an-existing-account-you-can-dick-23",
+    "summary": "If You Already Have An Existing Account,You Can Dick",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-23"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-login-mode-supports-password-verification-code-and-24",
+    "summary": "Login Mode Supports Password, Verification Code And",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-24"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-forgot-pmnsord-25",
+    "summary": "Forgot Pmnsord",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-25"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-choose-the-screw-of-26",
+    "summary": "Choose The Screw Of",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-26"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-step-3-27",
+    "summary": "Step 3",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-27"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-open-the-batte-28",
+    "summary": "Open The Batte",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-28"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-set-the-bey-29",
+    "summary": "Set The Bey",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-29"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-a-por-30",
+    "summary": "A Por",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-30"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-step-4-31",
+    "summary": "Step 4: |",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-31"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-has-been-open-button-32",
+    "summary": "Has Been Open Button ,",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-32"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-install-the-deadbolt-33",
+    "summary": "Install The Deadbolt",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-33"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-indoor-intelligent-lock-bluetooth-tuya-operation-guide-34",
+    "summary": "Indoor Intelligent Lock Bluetooth Tuya Operation Guide",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-34"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-tighten-the-screws-35",
+    "summary": "Tighten The Screws",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-35"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-1-pay-attention-to-the-36",
+    "summary": "1 Pay Attention To The",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-36"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-bluatooth-a-37",
+    "summary": "Bluatooth A",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-37"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-qhema-38",
+    "summary": "Qhema",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-38"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-the-connection-status-of-bluetooth-will-be-displayed-in-the-",
+    "summary": "The Connection Status Of Bluetooth Will Be Displayed In The Homepage Center",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-39"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-e-abled-40",
+    "summary": "E-Abled",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-40"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-urtodowin-mobil-phorp-41",
+    "summary": "Urtodowin Mobil Phorp",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-41"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-e-ebled-42",
+    "summary": "E-Ebled",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-42"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-by-connecting-the-doorlock-with-app-bluetooth-the-43",
+    "summary": "By Connecting The Doorlock With App Bluetooth,The",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-43"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-pasewort-44",
+    "summary": "Pasewort",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-44"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-when-the-indicator-light-45",
+    "summary": "When The Indicator Light",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-45"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-touch-to-wake-up-the-46",
+    "summary": "Touch To Wake Up The",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-46"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-press-the-registered-47",
+    "summary": "Press The Registered",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-47"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-other-member-48",
+    "summary": "Other Member",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-48"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-caneel-49",
+    "summary": "Caneel",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-49"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-add-fingerpr-50",
+    "summary": "Add Fingerpr",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-50"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-bluetoothand-the-administrator-can-51",
+    "summary": "Bluetoothand The Administrator Can",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-51"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-plug-the-usb-power-cord-52",
+    "summary": "Plug The Usb Power Cord",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-52"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-unlocking-is-successful-53",
+    "summary": "Unlocking Is Successful",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-53"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-product-parameters-54",
+    "summary": "Product Parameters",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-54"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-if-you-55",
+    "summary": "If You",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-55"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-cne-tene-pasewors-56",
+    "summary": "Cne-Tene Pasewors",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-56"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-parada-pusmnerd-57",
+    "summary": "Parada Pusmnerd",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-57"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ofine-password-58",
+    "summary": "Ofine Password)",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-58"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-rne-tine-password-59",
+    "summary": "Rne-Tine Password",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-59"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-cearing-cade-60",
+    "summary": "Cearing Cade",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-60"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-indoor-handle-61",
+    "summary": "After Indoor Handle",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-61"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-set-the-key-62",
+    "summary": "Set The Key",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-62"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-2-automatically-cancel-the-normally-open-mode-after-verifyin",
+    "summary": "2 Automatically Cancel The Normally Open Mode After Verifying",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-63"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-has-been-open-button-f-64",
+    "summary": "Has Been Open Button F",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-64"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-o-ther-s-etti-ngs-65",
+    "summary": "O Ther S Etti Ngs",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-65"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-step-2-66",
+    "summary": "Step 2:",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-66"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-press-the-registered-67",
+    "summary": "Press The Registered",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-67"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-long-press-the-small-hole-on-68",
+    "summary": "Long Press The Small Hole On",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-68"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-when-the-indicator-blinks-red-69",
+    "summary": "When The Indicator Blinks Red",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-69"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-this-70",
+    "summary": "This",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-70"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-warranty-card-71",
+    "summary": "Warranty Card",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-71"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-user-name-72",
+    "summary": "User Name",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-72"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-model-no-73",
+    "summary": "Model No",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-73"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-purchase-date-74",
+    "summary": "Purchase Date",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-74"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-contact-tel-75",
+    "summary": "Contact Tel",
+    "source_refs": [
+      "generated_manuals/e-touch/manual.json#section-75"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

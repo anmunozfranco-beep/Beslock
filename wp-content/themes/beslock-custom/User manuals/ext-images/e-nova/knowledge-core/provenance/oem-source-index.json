@@ -1,0 +1,23 @@
+{
+  "id": "oem-source-index-e-nova",
+  "type": "oem-source-index",
+  "product": "e-nova",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/manuals/e-Nova user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 17604956,
+      "md5": "009ac8d5937649559b3c3e06c892b5d2",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/product-images/e-Nova.png",
+      "ext": ".png",
+      "size_bytes": 106169,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

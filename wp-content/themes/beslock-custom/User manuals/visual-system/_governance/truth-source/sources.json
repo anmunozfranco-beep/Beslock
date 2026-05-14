@@ -1,0 +1,13 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "truth-source",
+  "title": "Truth-source PNG policy",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "KNOWLEDGE_BUILDING/PRODUCT_VISUAL_TRUTH.md",
+    "KNOWLEDGE_BUILDING/PHASE_1_IMPLEMENTATION.md",
+    "KNOWLEDGE_BUILDING/KNOWLEDGE_CORE_PRINCIPLES.md",
+    "visual-system/shared/visual-rules/product-truth-policy.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

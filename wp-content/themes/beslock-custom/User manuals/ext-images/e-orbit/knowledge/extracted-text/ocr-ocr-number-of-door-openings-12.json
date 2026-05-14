@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-number-of-door-openings-12",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Number Of Door Openings",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-12"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "greater than or equal 3000\ntimes\neleven\nworking voltage\n7.0V~8.4V, low voltage alarm\nvoltage 6.8 + 0.2V\ntwelve",
+  "storage_bucket": "extracted-text"
+}

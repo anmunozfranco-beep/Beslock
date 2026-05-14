@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-please-enter-your-account-20",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Please Enter Your Account",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-20"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Click \"Create a new account'to enter the account\nthe door lock position\nregistration page.Get SMS verification code and set",
+  "storage_bucket": "extracted-text"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "proc-pair-by-qr",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Smart Life -> Add device -> Camera&Lock -> Video Lock (Wi-Fi)",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-qr"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "app",
+  "menu_path": "Smart Life -> Add device -> Camera&Lock -> Video Lock (Wi-Fi)",
+  "steps": [
+    "Open Smart Life.",
+    "Start add-device flow.",
+    "Choose the lock category.",
+    "Enter Wi-Fi details.",
+    "Put the lock in network mode.",
+    "Show the QR from the phone to the lock.",
+    "Wait for confirmation.",
+    "Complete the app flow."
+  ],
+  "validation_checks": [
+    "The device appears in the app.",
+    "Connection appears stable.",
+    "The device panel can be opened in the app."
+  ]
+}

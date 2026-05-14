@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "id": "no-provisioned-environments",
+      "impact": "all six environments are declared; only local-supervised-runtime exists in fact",
+      "severity": "high"
+    },
+    {
+      "id": "no-trust-zone-mapping-enforcement",
+      "impact": "trust zones declared; no automated enforcement maps artifacts to zones",
+      "severity": "high"
+    },
+    {
+      "id": "no-integration-contract-registry",
+      "impact": "contracts declared; no registry validates that production integrations match a declared contract",
+      "severity": "high"
+    },
+    {
+      "id": "no-sandbox-runtime",
+      "impact": "sandbox patterns declared; no executable sandbox harness yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-environment-lifecycle-store",
+      "impact": "lifecycle states + transitions declared; no store records env state per id",
+      "severity": "medium"
+    },
+    {
+      "id": "no-incident-trace-channel",
+      "impact": "incident-trace events declared; channel not yet provisioned in observability",
+      "severity": "medium"
+    },
+    {
+      "id": "no-checksum-verified-ingest",
+      "impact": "OEM ingestion contract requires checksum-verified ingest; ingest tooling not yet implemented",
+      "severity": "high"
+    },
+    {
+      "id": "no-quarantine-resume-co-sign-flow",
+      "impact": "quarantine→active transition requires auditor co-sign; no flow enforces it",
+      "severity": "medium"
+    },
+    {
+      "id": "carry-overs-from-phases-28-30",
+      "impact": "no executable consoles, identity store, claim mediator, explanation renderer, reviewer registry, queue store, event log, OEM binding store; 132 candidates still await elevation",
+      "severity": "high"
+    }
+  ],
+  "kind": "unresolved-deployment-risks",
+  "schema": "environment-integration-governance/1.0"
+}

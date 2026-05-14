@@ -1,0 +1,12 @@
+# Usar la guia de instalacion disponible
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#6
+
+![Guia de instalacion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-04.png)
+
+La fuente nueva de e-Prime aporta una guia ilustrada de montaje, no una plantilla de perforacion 1:1.
+
+Reglas de uso:
+1. usa el PDF como referencia de secuencia y orientacion de piezas
+2. no derives perforaciones finales a escala real desde una captura de este PDF
+3. valida el sentido de apertura antes de cambiar direccion de manija o pestillo

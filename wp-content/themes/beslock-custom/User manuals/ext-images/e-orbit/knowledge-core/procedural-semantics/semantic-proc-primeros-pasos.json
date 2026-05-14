@@ -1,0 +1,83 @@
+{
+  "id": "semantic-proc-primeros-pasos",
+  "type": "procedural-semantics",
+  "product": "e-orbit",
+  "summary": "Normalized semantic actions for proc-primeros-pasos",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-primeros-pasos.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/knowledge-core/operation/proc-primeros-pasos.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "proc-primeros-pasos",
+  "source_entity_type": "procedure",
+  "surface": "local-device",
+  "menu_path": "",
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "crear el administrador principal",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "registrar un PIN",
+      "semantic_actions": [
+        "enroll"
+      ],
+      "matched_lexicon": [
+        "enroll"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "registrar una huella",
+      "semantic_actions": [
+        "place-finger",
+        "enroll"
+      ],
+      "matched_lexicon": [
+        "place-finger",
+        "enroll"
+      ]
+    },
+    {
+      "step_index": 4,
+      "raw_text": "probar los accesos registrados",
+      "semantic_actions": [
+        "test"
+      ],
+      "matched_lexicon": [
+        "test"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "revisar configuraciones básicas",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "conectar la cerradura a la app si aplica",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

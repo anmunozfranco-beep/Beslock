@@ -1,0 +1,57 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "classes": [
+    {
+      "id": "unresolved-gap",
+      "blocking": false,
+      "description": "Known missing knowledge area; tracked but not blocking promotion of unrelated artifacts."
+    },
+    {
+      "id": "ocr-confidence-debt",
+      "blocking": false,
+      "description": "Content derived from OCR below confidence threshold; requires human pass."
+    },
+    {
+      "id": "low-confidence-region",
+      "blocking": false,
+      "description": "Cluster of inferred artifacts in one domain; needs targeted review."
+    },
+    {
+      "id": "missing-specification",
+      "blocking": true,
+      "description": "Procedure references a spec that does not exist; blocks promotion of dependents."
+    },
+    {
+      "id": "unresolved-semantic",
+      "blocking": true,
+      "description": "Ambiguity escalation that did not resolve; blocks canonicalization."
+    },
+    {
+      "id": "governance-todo",
+      "blocking": false,
+      "description": "Open governance principle / authority gap; tracked at doctrine level."
+    },
+    {
+      "id": "blocked-domain",
+      "blocking": true,
+      "description": "Whole semantic domain blocked pending OEM input; blocks promotion within domain."
+    },
+    {
+      "id": "lineage-debt",
+      "blocking": true,
+      "description": "Deprecated/superseded artifact missing successor link."
+    },
+    {
+      "id": "maturity-debt",
+      "blocking": false,
+      "description": "Promoted artifact whose dependencies are not yet promoted."
+    }
+  ],
+  "rules": [
+    "All debt items have: id, class, owner, opened-date, blocking-flag, related-artifact-ids.",
+    "Blocking debt prevents promotion of dependent artifacts but never destroys lineage.",
+    "Debt items are closed only by an explicit resolution event (resolved / wont-fix / superseded-by).",
+    "Wont-fix debt MUST record rationale and reviewer."
+  ]
+}

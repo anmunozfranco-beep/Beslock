@@ -1,0 +1,52 @@
+{
+  "id": "wf-alta-desde-la-app",
+  "type": "workflow",
+  "product": "e-prime",
+  "summary": "La guia OEM no muestra todos los textos internos de la aplicacion, asi que Beslock debe describir el flujo asi:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abre la app `TUYA`"
+    },
+    {
+      "n": 2,
+      "text": "elige agregar un nuevo dispositivo de cerradura inteligente"
+    },
+    {
+      "n": 3,
+      "text": "confirma la red `2.4G`"
+    },
+    {
+      "n": 4,
+      "text": "mantente cerca de la cerradura durante el proceso"
+    },
+    {
+      "n": 5,
+      "text": "completa el enlace y valida que el equipo aparezca en la cuenta"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

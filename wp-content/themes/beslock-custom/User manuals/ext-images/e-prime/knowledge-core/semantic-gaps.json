@@ -1,0 +1,55 @@
+{
+  "id": "semantic-gaps",
+  "type": "semantic-gaps",
+  "product": "e-prime",
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "kc_subdomain_counts": {
+    "install": 14,
+    "operation": 2,
+    "workflows": 2,
+    "troubleshooting": 0,
+    "warnings": 4,
+    "terminology": 7,
+    "entities": 2,
+    "capabilities": 3,
+    "specifications": 0,
+    "semantic": 69
+  },
+  "missing_action_tokens": [
+    "hold",
+    "scan",
+    "enroll",
+    "pair",
+    "unlock",
+    "lock",
+    "reset",
+    "enter-menu",
+    "select",
+    "connect-wifi",
+    "install",
+    "replace-battery",
+    "show-qr",
+    "test"
+  ],
+  "missing_components": [
+    "keypad",
+    "face-recognition-cam",
+    "palm-vein-sensor",
+    "camera-cluster",
+    "interior-thumbturn",
+    "emergency-usb-port",
+    "mechanical-key-slot",
+    "led-indicator",
+    "buzzer"
+  ],
+  "missing_visual_intents": [
+    "intent-reset-procedure",
+    "intent-battery-replacement",
+    "intent-emergency-unlock"
+  ],
+  "intent_count": 5,
+  "risk_count": 3,
+  "publication_routing_count": 91,
+  "policy": "Gaps are explicit. They do NOT block downstream systems; they instruct future enrichment passes to look for missing tokens in OEM corpus refreshes (new manuals, supplemental OCR, structured-knowledge promotions)."
+}

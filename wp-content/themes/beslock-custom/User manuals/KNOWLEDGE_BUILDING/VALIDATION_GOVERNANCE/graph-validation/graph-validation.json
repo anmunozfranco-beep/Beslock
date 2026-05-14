@@ -1,0 +1,10 @@
+{
+  "schema": "validation-governance/1.0",
+  "generated": "2026-05-13",
+  "title": "Graph Validation Rules",
+  "rules": [
+    "No unresolved references (target id MUST exist within product scope).",
+    "No circular reference chains.",
+    "Orphan nodes outside the top-type allowlist are findings."
+  ]
+}

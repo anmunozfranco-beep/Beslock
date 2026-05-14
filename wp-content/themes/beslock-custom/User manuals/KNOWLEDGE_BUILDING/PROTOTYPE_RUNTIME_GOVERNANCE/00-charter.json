@@ -1,0 +1,50 @@
+{
+  "authority": [
+    "Declares the first executable runtime architecture (six layers).",
+    "Declares the first executable user flows for the onboarding + troubleshooting slice.",
+    "Declares the executable retrieval pipeline and its validation predicates.",
+    "Declares the executable contextual assembly flows.",
+    "Declares the supervised operational guidance posture for the prototype.",
+    "Declares operational safety validation predicates for the prototype.",
+    "Declares the prototype observability requirements.",
+    "Declares the prototype governance philosophy.",
+    "Declares the controlled transition path to future production cognition runtimes.",
+    "Declares the prototype readiness assessment criteria and outcome."
+  ],
+  "generated": "2026-05-13T21:12:10Z",
+  "kind": "charter",
+  "principles": [
+    "This prototype layer is itself modeling-only; it executes nothing.",
+    "The prototype is a supervised proof-of-value runtime, not a production system.",
+    "The prototype's first slice is contextual onboarding + troubleshooting retrieval.",
+    "Every prototype layer is read-only by default; destructive surfaces are out of scope.",
+    "Every prototype emission carries provenance, supervision receipt, and trace bindings.",
+    "Every prototype run is demotable; demotion is the safe response to anomalies.",
+    "Hard exclusions (no autonomous agents, no production deployment, no images, no PDFs, no large frontend, no perf optimization) bind every prototype layer.",
+    "The prototype cannot promote P-tier, elevate confidence, or alter prior governance layers.",
+    "Operator supervision is mandatory at every cognition boundary inside the prototype.",
+    "All prototype work remains subordinate to the governed knowledge-core forever."
+  ],
+  "schema": "prototype-runtime-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "dimensions": [
+    {
+      "id": "prio.operational-criticality",
+      "definition": "How essential the knowledge is to using the lock at all."
+    },
+    {
+      "id": "prio.user-frequency",
+      "definition": "How often a typical user needs the knowledge."
+    },
+    {
+      "id": "prio.support-burden",
+      "definition": "How much support time is spent on the underlying topic."
+    },
+    {
+      "id": "prio.failure-impact",
+      "definition": "Consequence of getting the knowledge wrong (lockout, data-loss, hardware damage)."
+    },
+    {
+      "id": "prio.onboarding-importance",
+      "definition": "Whether the knowledge is required for a successful first use."
+    },
+    {
+      "id": "prio.safety-importance",
+      "definition": "Whether the knowledge protects users or property."
+    }
+  ],
+  "tiers": [
+    {
+      "tier": "P0",
+      "label": "Critical-path",
+      "rule": "Required to operate the lock or to recover from a critical failure."
+    },
+    {
+      "tier": "P1",
+      "label": "High-frequency",
+      "rule": "Daily-to-weekly user need."
+    },
+    {
+      "tier": "P2",
+      "label": "Onboarding-key",
+      "rule": "Required for safe first use even if not high-frequency afterwards."
+    },
+    {
+      "tier": "P3",
+      "label": "Support-driver",
+      "rule": "Drives a measurable fraction of support tickets."
+    },
+    {
+      "tier": "P4",
+      "label": "Reference",
+      "rule": "Read on demand; not required for daily use."
+    },
+    {
+      "tier": "P5",
+      "label": "Edge / advanced",
+      "rule": "Power-user or rare scenarios."
+    }
+  ],
+  "assignments": [
+    {
+      "concept": "procedure.unlock-pin",
+      "tier": "P0"
+    },
+    {
+      "concept": "procedure.unlock-fingerprint",
+      "tier": "P0"
+    },
+    {
+      "concept": "procedure.battery-replacement",
+      "tier": "P0"
+    },
+    {
+      "concept": "procedure.emergency-power",
+      "tier": "P0"
+    },
+    {
+      "concept": "procedure.add-administrator",
+      "tier": "P2"
+    },
+    {
+      "concept": "procedure.register-pin",
+      "tier": "P2"
+    },
+    {
+      "concept": "procedure.register-fingerprint",
+      "tier": "P2"
+    },
+    {
+      "concept": "procedure.pair-with-app",
+      "tier": "P2"
+    },
+    {
+      "concept": "procedure.add-user",
+      "tier": "P3"
+    },
+    {
+      "concept": "procedure.member-management",
+      "tier": "P3"
+    },
+    {
+      "concept": "procedure.firmware-update",
+      "tier": "P4"
+    },
+    {
+      "concept": "procedure.qr-pairing",
+      "tier": "P3"
+    },
+    {
+      "concept": "procedure.ez-mode-pairing",
+      "tier": "P3"
+    },
+    {
+      "concept": "procedure.factory-reset",
+      "tier": "P5"
+    },
+    {
+      "concept": "procedure.change-language",
+      "tier": "P4"
+    }
+  ]
+}

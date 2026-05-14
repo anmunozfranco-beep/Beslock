@@ -1,0 +1,162 @@
+{
+  "generated": "2026-05-13T20:29:18Z",
+  "kind": "orchestration-loops",
+  "loops": [
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "retrieval-package-emitted",
+        "retrieval-failure",
+        "escalated"
+      ],
+      "id": "retrieval-loop",
+      "phase": "retrieval",
+      "steps": [
+        "bind query intent to declared access pattern",
+        "resolve hierarchy + filters via ACCESS_AND_CONSUMPTION",
+        "fetch read-only nodes from declared stable surfaces",
+        "attach provenance manifest",
+        "emit retrieval-package or retrieval-failure"
+      ],
+      "supervision": "unsupervised (read-only)",
+      "trigger": "query-intent declared by upstream consumer"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "assembly-package-emitted",
+        "assembly-degraded",
+        "escalated"
+      ],
+      "id": "contextual-assembly-loop",
+      "phase": "contextual-assembly",
+      "steps": [
+        "apply ADAPTIVE precedence (safety>simplifying; explicit>inferred)",
+        "apply COMPOSITION assembly rules",
+        "select profile matching context vector (or safest default if absent)",
+        "stamp adaptation provenance",
+        "emit assembly-package"
+      ],
+      "supervision": "unsupervised (read-only)",
+      "trigger": "retrieval-package + context vector available"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "concluded",
+        "inconclusive",
+        "escalated"
+      ],
+      "id": "reasoning-loop",
+      "phase": "reasoning",
+      "steps": [
+        "select reasoning profile per declared dimension",
+        "traverse declared causal relations only (no invention)",
+        "track hypothesis lifecycle stages",
+        "terminate at concluded | inconclusive | escalated",
+        "emit reasoning-trace + chain-record"
+      ],
+      "supervision": "unsupervised (read-only outputs)",
+      "trigger": "assembly-package + reasoning request"
+    },
+    {
+      "destructive_surface": true,
+      "exit_states": [
+        "decision-emitted",
+        "ambiguity-detected",
+        "escalated"
+      ],
+      "id": "decisioning-loop",
+      "phase": "decisioning",
+      "steps": [
+        "evaluate confidence tier against decision-point threshold",
+        "select path class (preferred>alternative>fallback>degraded>emergency>escalation)",
+        "if destructive option selected, require explicit-action gate",
+        "emit decision-record with provenance"
+      ],
+      "supervision": "destructive ⇒ supervised explicit-action required",
+      "trigger": "reasoning conclusion or declared decision-point"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "handed-off",
+        "handoff-failed"
+      ],
+      "id": "escalation-loop",
+      "phase": "escalation",
+      "steps": [
+        "snapshot continuity (read-only, append-only history)",
+        "build 12-field escalation package",
+        "transfer to declared receiver (human / OEM channel when modelled)",
+        "lock orchestration to read-only handoff state"
+      ],
+      "supervision": "supervised (handoff target is human or declared channel)",
+      "trigger": "tier-threshold reached or declared escalation predicate true"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "restored",
+        "restored-degraded",
+        "restoration-failed"
+      ],
+      "id": "continuity-restoration-loop",
+      "phase": "continuity-restoration",
+      "steps": [
+        "load declared timeline + context vector",
+        "verify checkpoint integrity (when registry exists)",
+        "re-apply non-inheritable rule (destructive-confirmation never inherited)",
+        "rebind retrieval scope",
+        "emit restoration-record or restoration-failure"
+      ],
+      "supervision": "supervised when destructive activity was in flight",
+      "trigger": "session resume or interruption-recovery request"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "adapted",
+        "adaptation-suppressed",
+        "escalated"
+      ],
+      "id": "adaptive-guidance-loop",
+      "phase": "adaptive-guidance",
+      "steps": [
+        "recompute guidance adaptation per ADAPTIVE rules",
+        "respect 4-tier precedence (knowledge-core>adaptive)",
+        "never override safety-preserving adaptations",
+        "emit adaptation-record"
+      ],
+      "supervision": "unsupervised for simplifying; supervised for safety-relevant",
+      "trigger": "context dimension change or skill-model update"
+    },
+    {
+      "destructive_surface": false,
+      "exit_states": [
+        "completed",
+        "blocked-on-open-warning",
+        "blocked-on-escalation"
+      ],
+      "id": "runtime-completion-loop",
+      "phase": "runtime-completion",
+      "steps": [
+        "verify no open warnings, no unresolved escalations",
+        "close timelines, release scoped context",
+        "persist append-only history record",
+        "emit completion-record"
+      ],
+      "supervision": "completion blocked unless prerequisites met",
+      "trigger": "terminal state reached AND validation predicate satisfied"
+    }
+  ],
+  "rules": [
+    "Loops are declared; no loop may be invented at runtime.",
+    "Loops emit provenance at every step; an unobserved step is an invalid step.",
+    "Loops respect upstream contracts and never insert undeclared operations.",
+    "Loops with destructive surface require an explicit-action step before any destructive transition.",
+    "Loops terminate only at declared exit states; ad-hoc termination is unsafe.",
+    "Loops compose via the cognition-coordination contracts (Task 2) — never via implicit chaining."
+  ],
+  "schema": "runtime-orchestration-governance/1.0"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "wf-flujo-oem-base-de-alta",
+  "type": "workflow",
+  "product": "e-touch",
+  "summary": "![Onboarding OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-01",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#5"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abrir `Tuya Smart` o `Smart Life`"
+    },
+    {
+      "n": 2,
+      "text": "tocar `Add device`"
+    },
+    {
+      "n": 3,
+      "text": "entrar a `Security monitoring`"
+    },
+    {
+      "n": 4,
+      "text": "elegir `Smart Door Lock`"
+    },
+    {
+      "n": 5,
+      "text": "iniciar la distribucion Bluetooth"
+    },
+    {
+      "n": 6,
+      "text": "despertar la cerradura tocando el keypad integrado o el lector de huella"
+    },
+    {
+      "n": 7,
+      "text": "esperar a que el telefono detecte el equipo y confirmar el alta"
+    },
+    {
+      "n": 8,
+      "text": "la cerradura emite dos avisos tipo `drip` cuando la vinculacion termina correctamente"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

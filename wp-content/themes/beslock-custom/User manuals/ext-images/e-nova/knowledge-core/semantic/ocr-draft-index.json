@@ -1,0 +1,35 @@
+{
+  "id": "ocr-draft-index",
+  "type": "ocr-draft-index",
+  "product": "e-nova",
+  "summary": "OCR-derived candidate index for e-nova (no normalized markdown source)",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-medium",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "support"
+  ],
+  "source_refs": [
+    "generated_manuals/e-nova/manual.json",
+    "/home/runner/work/Beslock/Beslock/User manuals/e-Nova user manual.pdf"
+  ],
+  "extraction_lineage": [
+    "generated_manuals/e-nova/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "ocr_method": "pytesseract",
+  "ocr_pages": 10,
+  "ocr_avg_confidence": 84.3,
+  "section_count": 14,
+  "step_candidate_count": 8,
+  "warning_candidate_count": 1,
+  "app_instruction_candidate_count": 9,
+  "specification_candidate_count": 2,
+  "feature_candidate_count": 0,
+  "non_canonical": true,
+  "policy": "OCR-DERIVED DRAFTS: candidates may be promoted to verified entities only after a human reviews them against the OEM PDF."
+}

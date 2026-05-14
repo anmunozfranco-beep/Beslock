@@ -1,0 +1,49 @@
+{
+  "id": "install-preparar-la-puerta",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "La plantilla muestra un patron principal y perforaciones auxiliares",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "fija temporalmente la plantilla en la cara correcta de la puerta"
+    },
+    {
+      "n": 2,
+      "text": "marca centros y contornos sin mover la hoja"
+    },
+    {
+      "n": 3,
+      "text": "perfora de forma controlada y limpia las rebabas"
+    },
+    {
+      "n": 4,
+      "text": "revisa desde ambos lados que el paso del cilindro y del cuerpo exterior quede libre"
+    },
+    {
+      "n": 5,
+      "text": "valida que el canto de la puerta permita el recorrido del pestillo sin rozamiento"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "installation"
+}

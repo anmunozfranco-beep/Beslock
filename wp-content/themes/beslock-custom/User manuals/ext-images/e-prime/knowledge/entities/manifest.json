@@ -1,0 +1,594 @@
+[
+  {
+    "id": "cap-objetivo",
+    "type": "capability",
+    "summary": "Explicar la vinculacion de e-Prime con red 2",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#2"
+    ]
+  },
+  {
+    "id": "cap-fuente-y-alcance-real",
+    "type": "capability",
+    "summary": "La fuente OCR disponible para app es breve",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#3"
+    ]
+  },
+  {
+    "id": "proc-requisitos-antes-de-vincular",
+    "type": "procedure",
+    "summary": "- la cerradura debe tener al menos un administrador registrado",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#4"
+    ]
+  },
+  {
+    "id": "wf-flujo-oem-base-de-vinculacion",
+    "type": "workflow",
+    "summary": "Segun la fuente OCR, el flujo local de referencia es:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#5"
+    ]
+  },
+  {
+    "id": "wf-alta-desde-la-app",
+    "type": "workflow",
+    "summary": "La guia OEM no muestra todos los textos internos de la aplicacion, asi que Beslock debe describir el flujo asi:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#6"
+    ]
+  },
+  {
+    "id": "proc-validacion-despues-del-alta",
+    "type": "procedure",
+    "summary": "Despues de enlazar el equipo:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#8"
+    ]
+  },
+  {
+    "id": "warning-limites-de-evidencia",
+    "type": "warning",
+    "summary": "- la fuente OEM disponible no detalla una guia extensa de modulos internos",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#9"
+    ]
+  },
+  {
+    "id": "install-context-objetivo",
+    "type": "installation-flow",
+    "summary": "Ordenar la preparacion de puerta, el montaje de paneles y la validacion inicial de e-Prime usando las fuentes OEM disponibles sin mezclar instalacion con uso diario o app",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#2"
+    ]
+  },
+  {
+    "id": "install-context-que-vas-a-instalar",
+    "type": "installation-flow",
+    "summary": "e-Prime es una cerradura de placa larga y delgada con:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#3"
+    ]
+  },
+  {
+    "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+    "type": "installation-flow",
+    "summary": "Valida estas condiciones antes de montar:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#4"
+    ]
+  },
+  {
+    "id": "install-context-que-necesitas-antes-de-empezar",
+    "type": "installation-flow",
+    "summary": "- guia OEM de instalacion disponible en `e-Prime_1",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#5"
+    ]
+  },
+  {
+    "id": "install-usar-la-guia-de-instalacion-disponible",
+    "type": "installation-flow",
+    "summary": "![Guia de instalacion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-04",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#6"
+    ]
+  },
+  {
+    "id": "install-preparar-la-puerta-y-el-cerrojo",
+    "type": "installation-flow",
+    "summary": "Secuencia base:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#7"
+    ]
+  },
+  {
+    "id": "install-montar-el-panel-exterior-e-interior",
+    "type": "installation-flow",
+    "summary": "Orden practico de montaje:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#8"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion",
+    "type": "installation-flow",
+    "summary": "![Cambio de direccion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-05",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+    "type": "installation-flow",
+    "summary": "afloja el tornillo de cambio de direccion",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.1"
+    ]
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-de-cerradura",
+    "type": "installation-flow",
+    "summary": "empuja el interruptor de cambio hacia arriba",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#9.2"
+    ]
+  },
+  {
+    "id": "install-energia-e-inicializacion",
+    "type": "installation-flow",
+    "summary": "Para la prueba inicial:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#10"
+    ]
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "type": "installation-flow",
+    "summary": "Antes de cerrar el trabajo, valida:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#11"
+    ]
+  },
+  {
+    "id": "warning-precauciones-clave",
+    "type": "warning",
+    "summary": "Segun la fuente corta en espanol:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#12"
+    ]
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "type": "installation-flow",
+    "summary": "Dentro del paquete Beslock de e-Prime, este documento convive con:",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#13"
+    ]
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "type": "installation-flow",
+    "summary": "La base de instalacion ya esta suficientemente soportada por `e-Prime_1",
+    "validation_status": "extraction-pending-review",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#14"
+    ]
+  },
+  {
+    "id": "term-tuya",
+    "type": "glossary-term",
+    "summary": "Plataforma OEM de aplicación móvil.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-wechat",
+    "type": "glossary-term",
+    "summary": "Plataforma china de mini-programas usada como canal OEM.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-2-4g",
+    "type": "glossary-term",
+    "summary": "Banda de red Wi-Fi requerida.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-qr",
+    "type": "glossary-term",
+    "summary": "Código gráfico de provisión.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-pin",
+    "type": "glossary-term",
+    "summary": "Código numérico de acceso.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-huella",
+    "type": "glossary-term",
+    "summary": "Credencial biométrica dactilar.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "term-administrador",
+    "type": "glossary-term",
+    "summary": "Usuario con permisos de gestión.",
+    "validation_status": "normalized",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ]
+  },
+  {
+    "id": "ocr-ocr-z-1",
+    "type": "extracted-text",
+    "summary": "Z系列⽤户⼿册",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-1"
+    ]
+  },
+  {
+    "id": "ocr-ocr-user-manual-for-z-serials-2",
+    "type": "extracted-text",
+    "summary": "User Manual For Z Serials",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-2"
+    ]
+  },
+  {
+    "id": "ocr-ocr-battery-compartment-3",
+    "type": "extracted-text",
+    "summary": "Battery Compartment",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-3"
+    ]
+  },
+  {
+    "id": "ocr-ocr-battery-cover-4",
+    "type": "extracted-text",
+    "summary": "Battery Cover",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-4"
+    ]
+  },
+  {
+    "id": "ocr-ocr-the-length-of-the-5",
+    "type": "extracted-text",
+    "summary": "The Length Of The",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-5"
+    ]
+  },
+  {
+    "id": "ocr-ocr-for-door-6",
+    "type": "extracted-text",
+    "summary": "For Door",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-6"
+    ]
+  },
+  {
+    "id": "ocr-ocr-sword-iron-make-on-demad-7",
+    "type": "extracted-text",
+    "summary": "Sword Iron(Make On Demad)",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-7"
+    ]
+  },
+  {
+    "id": "ocr-ocr-ic-8",
+    "type": "extracted-text",
+    "summary": "█\u0001开门⽅式：指纹、密码、Ic卡、机械钥匙、微信⼩程序等多种开门⽅式，",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-8"
+    ]
+  },
+  {
+    "id": "ocr-ocr-5v-9",
+    "type": "extracted-text",
+    "summary": "█\u0001备⽤供电：当电池耗尽时,使⽤5V移动电源即可对门锁应急供电;",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-9"
+    ]
+  },
+  {
+    "id": "ocr-ocr-do-not-remove-the-10",
+    "type": "extracted-text",
+    "summary": "Do Not Remove The",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-10"
+    ]
+  },
+  {
+    "id": "ocr-ocr-changing-lock-body-direction-11",
+    "type": "extracted-text",
+    "summary": "Changing Lock Body Direction",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-11"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-12",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-12"
+    ]
+  },
+  {
+    "id": "ocr-ocr-ic-card-13",
+    "type": "extracted-text",
+    "summary": "Ic Card",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-13"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-pr-14",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Pr",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-14"
+    ]
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-15",
+    "type": "extracted-text",
+    "summary": "In Normal Status",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-15"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-16",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-16"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-17",
+    "type": "extracted-text",
+    "summary": "After Adding An Administrator,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-17"
+    ]
+  },
+  {
+    "id": "ocr-ocr-function-settings-18",
+    "type": "extracted-text",
+    "summary": "Function Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-18"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-19",
+    "type": "extracted-text",
+    "summary": "After Successful Operation,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-19"
+    ]
+  },
+  {
+    "id": "ocr-ocr-settings-20",
+    "type": "extracted-text",
+    "summary": "Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-20"
+    ]
+  },
+  {
+    "id": "ocr-ocr-settings-21",
+    "type": "extracted-text",
+    "summary": "Settings",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-21"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-22",
+    "type": "extracted-text",
+    "summary": "Select The Appropriate",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-22"
+    ]
+  },
+  {
+    "id": "ocr-ocr-enter-time-23",
+    "type": "extracted-text",
+    "summary": "Enter Time",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-23"
+    ]
+  },
+  {
+    "id": "ocr-ocr-hour-minute-24",
+    "type": "extracted-text",
+    "summary": "Hour Minute",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-24"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-25",
+    "type": "extracted-text",
+    "summary": "Select The Appropriate",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-25"
+    ]
+  },
+  {
+    "id": "ocr-ocr-select-the-26",
+    "type": "extracted-text",
+    "summary": "Select The",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-26"
+    ]
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-27",
+    "type": "extracted-text",
+    "summary": "In Normal Status",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-27"
+    ]
+  },
+  {
+    "id": "ocr-ocr-confirm-28",
+    "type": "extracted-text",
+    "summary": "Confirm",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-28"
+    ]
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-29",
+    "type": "extracted-text",
+    "summary": "Wake Up The Screen By",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-29"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-30",
+    "type": "extracted-text",
+    "summary": "After Adding An Administrator,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-30"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-31",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Press",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-31"
+    ]
+  },
+  {
+    "id": "ocr-ocr-enter-the-fingerprint-password-32",
+    "type": "extracted-text",
+    "summary": "Enter The Fingerprint, Password,",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-32"
+    ]
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-33",
+    "type": "extracted-text",
+    "summary": "After Successful Operation, Press",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-33"
+    ]
+  },
+  {
+    "id": "ocr-ocr-press-and-hold-for-5-34",
+    "type": "extracted-text",
+    "summary": "Press And Hold For 5",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-34"
+    ]
+  },
+  {
+    "id": "ocr-ocr-doodle-app-download-installation-and-door-35",
+    "type": "extracted-text",
+    "summary": "Doodle App Download Installation And Door",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-35"
+    ]
+  },
+  {
+    "id": "ocr-ocr-sweep-36",
+    "type": "extracted-text",
+    "summary": "Sweep",
+    "validation_status": "inferred-but-unverified",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-36"
+    ]
+  }
+]

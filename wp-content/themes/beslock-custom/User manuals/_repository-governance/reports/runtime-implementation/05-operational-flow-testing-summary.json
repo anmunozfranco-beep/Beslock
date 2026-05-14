@@ -1,0 +1,26 @@
+{
+  "flows_tested": [
+    "onboarding",
+    "first-pairing",
+    "fingerprint-enrollment",
+    "troubleshooting-lookup",
+    "battery-recovery",
+    "escalation-handling"
+  ],
+  "implementation": "runtime-implementation/testing/test_flows.py",
+  "schema": "runtime-implementation-governance/1.0",
+  "test_classes": [
+    "ConfigTests",
+    "ProvenanceTests",
+    "RetrievalTests",
+    "AssemblyTests",
+    "SupervisionTests",
+    "FlowTests",
+    "ObservabilityTests"
+  ],
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

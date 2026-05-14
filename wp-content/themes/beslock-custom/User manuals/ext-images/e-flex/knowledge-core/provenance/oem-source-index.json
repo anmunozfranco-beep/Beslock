@@ -1,0 +1,110 @@
+{
+  "id": "oem-source-index-e-flex",
+  "type": "oem-source-index",
+  "product": "e-flex",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/specifications/e-Flex - supplemental source review.md",
+      "ext": ".md",
+      "size_bytes": 3915,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+      "ext": ".md",
+      "size_bytes": 2544,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md",
+      "ext": ".md",
+      "size_bytes": 5227,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 4687792,
+      "md5": "22a401c8db04fe45d245aaea4e9a1c79",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)",
+      "duplicate_of": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf"
+      ]
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf",
+      "ext": ".pdf",
+      "size_bytes": 4687792,
+      "md5": "22a401c8db04fe45d245aaea4e9a1c79",
+      "semantic_pipeline_status": "not-ingested",
+      "duplicate_of": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex user manual.pdf",
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex_1.pdf"
+      ]
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 1044990,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-01.png",
+      "ext": ".png",
+      "size_bytes": 17306,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-02.png",
+      "ext": ".png",
+      "size_bytes": 73824,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-03.png",
+      "ext": ".png",
+      "size_bytes": 70860,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-04.png",
+      "ext": ".png",
+      "size_bytes": 29178,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-05.png",
+      "ext": ".png",
+      "size_bytes": 18779,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-06.png",
+      "ext": ".png",
+      "size_bytes": 24101,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-07.png",
+      "ext": ".png",
+      "size_bytes": 43119,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/pdf-renders/e-flex-1/page-08.png",
+      "ext": ".png",
+      "size_bytes": 99365,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/product-images/e-Flex.png",
+      "ext": ".png",
+      "size_bytes": 279540,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

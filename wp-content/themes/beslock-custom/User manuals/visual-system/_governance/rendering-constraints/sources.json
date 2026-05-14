@@ -1,0 +1,13 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "domain": "rendering-constraints",
+  "title": "Rendering constraints",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "sources": [
+    "visual-system/shared/visual-rules/manual-image-reset-policy.md",
+    "visual-system/shared/visual-rules/app-ui-policy.md",
+    "visual-system/shared/visual-rules/ai-limitations.md",
+    "visual-system/shared/generation-guides/review-checklist.md"
+  ],
+  "consolidates": "All listed source documents are preserved. This file lists ownership, not content."
+}

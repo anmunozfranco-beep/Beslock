@@ -1,0 +1,16 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/trust-model/",
+  "decay_rules_count": 5,
+  "kind": "trust-evolution-summary",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "stale_detection_rules_count": 4,
+  "tiers": [
+    "candidate",
+    "low-confidence",
+    "ocr-derived",
+    "inferred",
+    "reviewer-confirmed",
+    "oem-verified",
+    "operationally-proven"
+  ]
+}

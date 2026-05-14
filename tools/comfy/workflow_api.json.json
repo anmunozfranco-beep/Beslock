@@ -1,0 +1,45 @@
+{
+  "1": {
+    "inputs": {
+      "prompt": "Photorealistic smart lock product render.\nMaintain exact lock geometry and sensor layout from the reference image.\nPremium brushed metal materials.\nClean architectural lighting.\nModern luxury interior background.\nCommercial product photography.\nUltra detailed.",
+      "seed": 1802976590,
+      "quality": "medium",
+      "background": "auto",
+      "size": "1024x1024",
+      "n": 1,
+      "model": "gpt-image-2",
+      "custom_width": 1024,
+      "custom_height": 1024,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "OpenAIGPTImage1",
+    "_meta": {
+      "title": "OpenAI GPT Image 2"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "d8b09f9f685ab99410a765b9ec89b07911522538684537e4c437f3bd2da1e093.webp"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Cargar Imagen"
+    }
+  },
+  "3": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Guardar Imagen"
+    }
+  }
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "ocr-ocr-z-1",
+    "summary": "Z系列⽤户⼿册",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-user-manual-for-z-serials-2",
+    "summary": "User Manual For Z Serials",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-battery-compartment-3",
+    "summary": "Battery Compartment",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-battery-cover-4",
+    "summary": "Battery Cover",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-the-length-of-the-5",
+    "summary": "The Length Of The",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-for-door-6",
+    "summary": "For Door",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-sword-iron-make-on-demad-7",
+    "summary": "Sword Iron(Make On Demad)",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ic-8",
+    "summary": "█\u0001开门⽅式：指纹、密码、Ic卡、机械钥匙、微信⼩程序等多种开门⽅式，",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-5v-9",
+    "summary": "█\u0001备⽤供电：当电池耗尽时,使⽤5V移动电源即可对门锁应急供电;",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-do-not-remove-the-10",
+    "summary": "Do Not Remove The",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-changing-lock-body-direction-11",
+    "summary": "Changing Lock Body Direction",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-12",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-ic-card-13",
+    "summary": "Ic Card",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-pr-14",
+    "summary": "After Successful Operation, Pr",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-15",
+    "summary": "In Normal Status",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-15"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-16",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-16"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-17",
+    "summary": "After Adding An Administrator,",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-17"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-function-settings-18",
+    "summary": "Function Settings",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-18"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-19",
+    "summary": "After Successful Operation,",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-19"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-settings-20",
+    "summary": "Settings",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-20"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-settings-21",
+    "summary": "Settings",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-21"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-22",
+    "summary": "Select The Appropriate",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-22"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-enter-time-23",
+    "summary": "Enter Time",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-23"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-hour-minute-24",
+    "summary": "Hour Minute",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-24"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-appropriate-25",
+    "summary": "Select The Appropriate",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-25"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-select-the-26",
+    "summary": "Select The",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-26"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-in-normal-status-27",
+    "summary": "In Normal Status",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-27"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-confirm-28",
+    "summary": "Confirm",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-28"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-wake-up-the-screen-by-29",
+    "summary": "Wake Up The Screen By",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-29"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-adding-an-administrator-30",
+    "summary": "After Adding An Administrator,",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-30"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-31",
+    "summary": "After Successful Operation, Press",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-31"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-enter-the-fingerprint-password-32",
+    "summary": "Enter The Fingerprint, Password,",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-32"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-after-successful-operation-press-33",
+    "summary": "After Successful Operation, Press",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-33"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-press-and-hold-for-5-34",
+    "summary": "Press And Hold For 5",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-34"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-doodle-app-download-installation-and-door-35",
+    "summary": "Doodle App Download Installation And Door",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-35"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-sweep-36",
+    "summary": "Sweep",
+    "source_refs": [
+      "generated_manuals/e-prime/manual.json#section-36"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

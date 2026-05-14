@@ -1,0 +1,7 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:59:53Z",
+  "policy": "No duplicate markdown or JSON assets were silently merged. All moves in this phase were 1:1 relocations of unique files. Duplicate manifests detected by the Phase 4 audit (mostly visual-generation snapshots) are out of scope.",
+  "handled_count": 0,
+  "handled": []
+}

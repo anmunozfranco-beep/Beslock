@@ -1,0 +1,5 @@
+# Manual de instalacion normalizado para Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#1
+
+

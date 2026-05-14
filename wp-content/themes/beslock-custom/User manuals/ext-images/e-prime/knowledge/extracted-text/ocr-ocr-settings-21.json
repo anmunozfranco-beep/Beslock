@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-settings-21",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Settings",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-21"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Configuration",
+  "raw_text": "1. Enable Always Open Mode\n2. Enable Dual Verify\n3. Enable Anti-pry Alarm\n4. Enable mute\n1. Chinese Voice\n1.Volume Up\n2.Volume Down\n2. English Voice",
+  "storage_bucket": "extracted-text"
+}

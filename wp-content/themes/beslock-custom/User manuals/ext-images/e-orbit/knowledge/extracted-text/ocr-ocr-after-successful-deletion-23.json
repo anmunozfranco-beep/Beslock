@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-after-successful-deletion-23",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "After Successful Deletion,",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-23"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "2.delete user\n2.delete by ID\n:Please enter the user\nvoice broadcast:\"User * * *,",
+  "storage_bucket": "extracted-text"
+}

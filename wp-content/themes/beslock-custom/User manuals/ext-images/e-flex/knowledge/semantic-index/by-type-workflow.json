@@ -1,0 +1,26 @@
+[
+  {
+    "id": "wf-secuencia-local-en-la-cerradura",
+    "summary": "La fuente OEM resume este flujo local:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-alta-desde-tuya-app",
+    "summary": "Una vez habilitado el modo de red en la cerradura:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-qr-y-mini-programa-de-wechat",
+    "summary": "La guia tambien indica que el QR puede escanearse con `WeChat` para usar el mini-programa de apertura",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

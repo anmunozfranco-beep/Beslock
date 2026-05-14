@@ -1,0 +1,84 @@
+{
+  "deployment_slices": [
+    {
+      "composition": "local-supervised-stack",
+      "halt_conditions": [
+        "safety-demote"
+      ],
+      "id": "onboarding-only-runtime",
+      "kinds": [
+        "pairing",
+        "onboarding-prereqs"
+      ]
+    },
+    {
+      "composition": "local-supervised-stack",
+      "halt_conditions": [
+        "candidate-only + irreversible-adjacent"
+      ],
+      "id": "troubleshooting-runtime",
+      "kinds": [
+        "troubleshooting",
+        "warnings"
+      ]
+    },
+    {
+      "composition": "reviewer-stack",
+      "halt_conditions": [
+        "missing-binding"
+      ],
+      "id": "reviewer-runtime",
+      "kinds": [
+        "queue-claim",
+        "evidence-pull",
+        "decision"
+      ]
+    },
+    {
+      "composition": "controlled-pilot-stack (governance-scoped subset)",
+      "halt_conditions": [
+        "dual-audit-disagreement"
+      ],
+      "id": "governance-runtime",
+      "kinds": [
+        "scope-assign",
+        "revoke",
+        "emergency-intervention"
+      ]
+    },
+    {
+      "composition": "ingestion-stack",
+      "halt_conditions": [
+        "checksum-mismatch"
+      ],
+      "id": "ingestion-runtime",
+      "kinds": [
+        "fetch",
+        "checksum-verify",
+        "stage",
+        "dual-review"
+      ]
+    },
+    {
+      "composition": "replay-stack",
+      "halt_conditions": [
+        "replay-drift > floor"
+      ],
+      "id": "replay-runtime",
+      "kinds": [
+        "replay-run",
+        "drift-compare",
+        "finding-emit"
+      ]
+    }
+  ],
+  "kind": "deployment-slices",
+  "schema": "reference-stack-governance/1.0",
+  "slice_invariants": [
+    "every slice is bounded by composition + kinds + halt conditions",
+    "every slice emits a slice-manifest at startup and at every halt",
+    "no slice silently widens its kinds",
+    "no slice resumes from a halt without an operator decision",
+    "every slice is product-scoped; cross-product slices are forbidden"
+  ]
+}

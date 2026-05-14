@@ -1,0 +1,5 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#2
+
+Ordenar la preparacion de puerta, el montaje del cuerpo de cerradura y la validacion inicial de e-Flex usando la fuente OEM suplementaria disponible.

@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-ic-card-13",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Ic Card",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-13"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-ic-card-13.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Press \"4\" to add administrator\ninformation; you can register\nfingerprint, password, or card",
+  "legacy_storage_bucket": "extracted-text"
+}

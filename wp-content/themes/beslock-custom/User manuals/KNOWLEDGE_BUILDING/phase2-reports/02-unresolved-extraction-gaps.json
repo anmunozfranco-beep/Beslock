@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "products": {
+    "e-flex": [
+      "Missing normalized user manual under source-of-truth/manuals/."
+    ],
+    "e-nova": [
+      "No normalized markdown manuals available under wp-content/themes/beslock-custom/User manuals/ext-images/e-nova/source-of-truth/manuals; only OCR fallback will be emitted.",
+      "Missing normalized user manual under source-of-truth/manuals/.",
+      "Missing normalized installation manual under source-of-truth/manuals/.",
+      "Missing normalized app manual under source-of-truth/manuals/."
+    ],
+    "e-orbit": [
+      "Missing normalized installation manual under source-of-truth/manuals/."
+    ],
+    "e-prime": [
+      "Missing normalized user manual under source-of-truth/manuals/."
+    ],
+    "e-shield": [
+      "Missing normalized user manual under source-of-truth/manuals/."
+    ],
+    "e-touch": [
+      "Missing normalized user manual under source-of-truth/manuals/."
+    ]
+  }
+}

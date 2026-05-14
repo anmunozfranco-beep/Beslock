@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-bluetoothand-the-administrator-can-51",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Bluetoothand The Administrator Can",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-51"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-bluetoothand-the-administrator-can-51.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "App Instructions",
+  "raw_text": "enter the\npassword for\nhimself\nor\nother family\nmembers.\nVill. Temporary password management\n4.Emergency Unlock\nMethod 1:",
+  "legacy_storage_bucket": "extracted-text"
+}

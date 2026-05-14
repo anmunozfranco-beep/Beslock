@@ -1,0 +1,223 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "journeys": [
+    {
+      "id": "journey.first-installation",
+      "label": "First installation",
+      "actors": [
+        "installer",
+        "admin-owner"
+      ],
+      "phases": [
+        "unbox",
+        "verify-contents",
+        "identify-door-type",
+        "mechanical-mount",
+        "wire-internal",
+        "insert-batteries",
+        "power-on-test",
+        "register-administrator"
+      ],
+      "trigger": "User receives a new lock.",
+      "success_state": "Lock physically mounted, powered, with at least one administrator registered.",
+      "failure_modes": [
+        "wrong-door-type",
+        "incorrect-handle-orientation",
+        "missed-mounting-screw",
+        "low-battery-on-first-power-on"
+      ],
+      "guidance_intensity": "high",
+      "criticality": "critical"
+    },
+    {
+      "id": "journey.first-unlock",
+      "label": "First unlock",
+      "actors": [
+        "admin-owner"
+      ],
+      "phases": [
+        "wake-keypad",
+        "enter-default-or-set-pin",
+        "observe-feedback",
+        "open-door"
+      ],
+      "trigger": "Lock is mounted and powered.",
+      "success_state": "Door physically opens via lock.",
+      "failure_modes": [
+        "forgot-default-credentials",
+        "fingerprint-not-yet-enrolled",
+        "low-battery"
+      ],
+      "guidance_intensity": "medium",
+      "criticality": "high"
+    },
+    {
+      "id": "journey.first-app-pairing",
+      "label": "First app pairing",
+      "actors": [
+        "admin-owner"
+      ],
+      "phases": [
+        "install-app",
+        "create-account",
+        "scan-qr-or-ez-mode",
+        "confirm-on-lock",
+        "verify-online-status"
+      ],
+      "trigger": "Admin wants remote / multi-user features.",
+      "success_state": "Lock visible in companion app, admin authenticated.",
+      "failure_modes": [
+        "weak-wifi",
+        "wrong-network-band",
+        "app-version-mismatch",
+        "qr-unreadable"
+      ],
+      "guidance_intensity": "high",
+      "criticality": "high"
+    },
+    {
+      "id": "journey.administrator-setup",
+      "label": "Administrator setup",
+      "actors": [
+        "admin-owner"
+      ],
+      "phases": [
+        "enter-management-menu",
+        "register-administrator-pin",
+        "register-administrator-fingerprint",
+        "set-language",
+        "set-time-zone"
+      ],
+      "trigger": "First admin needs full control.",
+      "success_state": "At least one administrator with PIN + fingerprint enrolled.",
+      "failure_modes": [
+        "confused-with-user-role",
+        "fingerprint-rejection",
+        "menu-timeout"
+      ],
+      "guidance_intensity": "medium",
+      "criticality": "high"
+    },
+    {
+      "id": "journey.user-enrolment",
+      "label": "User enrolment",
+      "actors": [
+        "admin-owner",
+        "regular-user"
+      ],
+      "phases": [
+        "admin-authenticates",
+        "open-add-user",
+        "register-pin",
+        "register-fingerprint",
+        "test-unlock"
+      ],
+      "trigger": "A new household / office member needs access.",
+      "success_state": "User can unlock independently with at least one credential.",
+      "failure_modes": [
+        "over-permission-grant",
+        "duplicate-fingerprint-conflict",
+        "weak-pin-choice"
+      ],
+      "guidance_intensity": "medium",
+      "criticality": "medium"
+    },
+    {
+      "id": "journey.battery-replacement",
+      "label": "Battery replacement",
+      "actors": [
+        "admin-owner"
+      ],
+      "phases": [
+        "receive-low-battery-warning",
+        "open-battery-bay",
+        "remove-old-batteries",
+        "insert-new-batteries",
+        "verify-power"
+      ],
+      "trigger": "Low-battery warning OR scheduled maintenance.",
+      "success_state": "Lock fully powered with fresh batteries; clock and configuration preserved.",
+      "failure_modes": [
+        "wrong-battery-orientation",
+        "mixed-battery-ages",
+        "battery-bay-cover-not-reseated"
+      ],
+      "guidance_intensity": "low",
+      "criticality": "medium"
+    },
+    {
+      "id": "journey.emergency-recovery",
+      "label": "Emergency recovery",
+      "actors": [
+        "admin-owner",
+        "occupant"
+      ],
+      "phases": [
+        "detect-no-power",
+        "locate-emergency-port",
+        "apply-9V-source",
+        "wake-keypad",
+        "unlock",
+        "replace-batteries"
+      ],
+      "trigger": "Lock unresponsive, batteries depleted, occupant locked out.",
+      "success_state": "Door opens; batteries are replaced before next sleep cycle.",
+      "failure_modes": [
+        "wrong-port-orientation",
+        "incorrect-voltage-source",
+        "credentials-forgotten",
+        "no-mechanical-key"
+      ],
+      "guidance_intensity": "very-high",
+      "criticality": "critical"
+    },
+    {
+      "id": "journey.factory-reset-recovery",
+      "label": "Factory reset recovery",
+      "actors": [
+        "admin-owner"
+      ],
+      "phases": [
+        "confirm-data-loss-acceptance",
+        "open-reset-pinhole-or-menu",
+        "execute-reset-sequence",
+        "observe-confirmation",
+        "re-register-administrator"
+      ],
+      "trigger": "Lost admin credentials OR re-deployment.",
+      "success_state": "Lock returned to factory state; new administrator registered.",
+      "failure_modes": [
+        "accidental-reset",
+        "incomplete-sequence",
+        "data-loss-not-anticipated"
+      ],
+      "guidance_intensity": "very-high",
+      "criticality": "critical"
+    },
+    {
+      "id": "journey.troubleshooting-escalation",
+      "label": "Troubleshooting escalation",
+      "actors": [
+        "admin-owner",
+        "support"
+      ],
+      "phases": [
+        "observe-symptom",
+        "self-diagnosis",
+        "guided-recovery",
+        "escalate-to-support",
+        "rma-or-field-service"
+      ],
+      "trigger": "Lock behaves unexpectedly.",
+      "success_state": "Issue resolved at lowest possible support tier.",
+      "failure_modes": [
+        "misdiagnosis",
+        "premature-escalation",
+        "skipped-recovery-steps"
+      ],
+      "guidance_intensity": "high",
+      "criticality": "high"
+    }
+  ]
+}

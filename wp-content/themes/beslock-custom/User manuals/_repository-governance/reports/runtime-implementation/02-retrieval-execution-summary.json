@@ -1,0 +1,18 @@
+{
+  "ambiguity_policy": "surfaced when top scores tie and confidence is low/medium/unknown",
+  "implementation": "runtime-implementation/runtime/retrieval.py",
+  "kinds_supported": [
+    "onboarding",
+    "troubleshooting",
+    "operational-procedures",
+    "warnings",
+    "escalation",
+    "adaptive-guidance",
+    "fingerprint-enrollment",
+    "pairing",
+    "battery-recovery"
+  ],
+  "provenance": "every package carries a runtime-provenance/1.0 manifest with SHA-256 hashes",
+  "schema": "runtime-implementation-governance/1.0",
+  "scoring": "Jaccard-over-query-tokens, NFKD diacritic + lowercase normalization"
+}

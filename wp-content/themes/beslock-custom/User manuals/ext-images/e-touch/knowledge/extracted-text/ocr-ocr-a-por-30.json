@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-a-por-30",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "A Por",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-30"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "times or the password 2 times, and the buzzer flutes\nsa\n‘Sn\neS omnes\nPs\nsatus ty fulowt\nonce. The setting is successful enter the second user",
+  "storage_bucket": "extracted-text"
+}

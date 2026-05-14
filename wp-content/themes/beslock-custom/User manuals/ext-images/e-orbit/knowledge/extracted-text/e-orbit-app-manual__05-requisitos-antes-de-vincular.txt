@@ -1,0 +1,11 @@
+# Requisitos antes de vincular
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5
+
+- tener la app instalada e iniciar sesion
+- disponer de una red Wi-Fi compatible con el alta del equipo
+- permanecer cerca de la cerradura durante el proceso
+- saber que la configuracion de red solo admite un telefono movil a la vez
+- tener presente que una nueva configuracion de red puede borrar la distribucion anterior
+
+La hoja tecnica indica que el producto usa `Tuya WiFi` integrado y no requiere gateway adicional.

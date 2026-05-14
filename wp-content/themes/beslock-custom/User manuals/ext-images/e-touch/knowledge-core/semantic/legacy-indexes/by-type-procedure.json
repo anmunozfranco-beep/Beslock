@@ -1,0 +1,18 @@
+[
+  {
+    "id": "proc-requisitos-antes-de-vincular",
+    "summary": "- tener una cuenta en la app o completar el registro inicial",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-reset-y-recuperacion",
+    "summary": "![Soporte OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-02",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "2.3 Fecha Y Hora, Diagnóstico De Errores",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-14"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-2-3-fecha-y-hora-diagnostico-de-errores-14.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Troubleshooting",
+  "raw_text": "De contar con un disporitivo Gateway, el rela; se calibrará en primer lugar a través del mismo. Si\nno se cuenta con este dispositivo, será necesario calibrarlo mediante el Bluetooth del teléfono\nmóvil\nEl diagnóstico de errores tiene como objetivo a a tia ta\nayudar a analizar los problemas del sistema Debe noe es ae aad\nrealizarse a través de Bluetooth situando el A\ndispositivo móvil junto a la cerradura ° Ñ\nini A = TECDOF",
+  "legacy_storage_bucket": "extracted-text"
+}

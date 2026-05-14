@@ -1,0 +1,77 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "policy": "Constitutional doctrine maps to runtime governance one-to-one. Each entry names the canonical doctrine file (Level 1) and the runtime authority it descends to (Level 2).",
+  "links": [
+    {
+      "doctrine": "doctrine/01-purpose-and-philosophy.md",
+      "runtime": "visual-system/_governance/visual-style-policy/policy.md"
+    },
+    {
+      "doctrine": "doctrine/02-truth-source-doctrine.md",
+      "runtime": "visual-system/_governance/truth-source/policy.md"
+    },
+    {
+      "doctrine": "doctrine/03-mechanical-consistency-doctrine.md",
+      "runtime": "visual-system/_governance/mechanical-consistency/policy.md"
+    },
+    {
+      "doctrine": "doctrine/04-human-interaction-doctrine.md",
+      "runtime": "visual-system/_governance/human-interaction-policy/policy.md"
+    },
+    {
+      "doctrine": "doctrine/05-rendering-style-doctrine.md",
+      "runtime": "visual-system/_governance/rendering-constraints/policy.md"
+    },
+    {
+      "doctrine": "doctrine/06-comfy-constitution.md",
+      "runtime": "visual-system/_governance/comfy-contracts/policy.md"
+    },
+    {
+      "doctrine": "doctrine/07-semantic-orchestration-doctrine.md",
+      "runtime": "visual-system/_governance/comfy-contracts/policy.md"
+    },
+    {
+      "doctrine": "doctrine/08-validation-philosophy.md",
+      "runtime": "visual-system/_governance/visual-validation/policy.md"
+    },
+    {
+      "doctrine": "doctrine/09-visual-risk-philosophy.md",
+      "runtime": "visual-system/_governance/visual-risk/policy.md"
+    },
+    {
+      "doctrine": "doctrine/10-publication-philosophy.md",
+      "runtime": "visual-system/_governance/publication-constraints/policy.md"
+    },
+    {
+      "doctrine": "doctrine/11-lineage-and-provenance-doctrine.md",
+      "runtime": "visual-system/_governance/visual-lineage/policy.md"
+    }
+  ],
+  "negative_prompts_runtime": "visual-system/_governance/negative-prompts/policy.md (no separate doctrine file; covered under doctrine 07 — semantic orchestration)",
+  "per_product_implementation_pattern": {
+    "prompts": "ext-images/<slug>/visual-system/prompts/ai-image-prompts.md",
+    "generation_matrix": "ext-images/<slug>/visual-system/generation-matrices/image-generation-matrix.md",
+    "visual_profile": "ext-images/<slug>/visual-system/references/<slug>-visual-profile.md",
+    "validation": "ext-images/<slug>/visual-system/validations/visual-validation.md",
+    "visual_intent": "ext-images/<slug>/knowledge-core/visual-intent/intent-*.json",
+    "visual_risk": "ext-images/<slug>/knowledge-core/visual-risk/risk-*.json",
+    "component_visibility": "ext-images/<slug>/knowledge-core/component-visibility/component-visibility-map.json",
+    "publication_intent": "ext-images/<slug>/knowledge-core/publication-intent/publication-intent-map.json",
+    "procedural_semantics": "ext-images/<slug>/knowledge-core/procedural-semantics/semantic-*.json"
+  },
+  "execution_layer": {
+    "runner": "tools/visual_generation.py",
+    "workflow_baseline": "tools/comfy/workflow_api.json.json",
+    "orchestration_manifest": "ext-images/<slug>/automation/orchestrators/orchestration-manifest.json",
+    "run_records": "ext-images/<slug>/automation/runs/"
+  },
+  "products_in_scope": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

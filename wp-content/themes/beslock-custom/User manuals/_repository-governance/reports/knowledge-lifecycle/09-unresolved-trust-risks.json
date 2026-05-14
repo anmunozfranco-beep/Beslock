@@ -1,0 +1,51 @@
+{
+  "items": [
+    {
+      "id": "no-reviewer-registry-implementation",
+      "impact": "review workflow is modeled but no executable registry exists yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-oem-binding-store",
+      "impact": "binding records are modeled but no executable store/index exists yet",
+      "severity": "high"
+    },
+    {
+      "id": "no-promotion-event-log",
+      "impact": "promotion/demotion events are modeled but no append-only log is wired",
+      "severity": "high"
+    },
+    {
+      "id": "no-dispute-resolution-implementation",
+      "impact": "dispute state caps trust but no resolution UI/CLI exists",
+      "severity": "high"
+    },
+    {
+      "id": "no-stale-detector-implementation",
+      "impact": "stale-knowledge detection is modeled, not yet scheduled",
+      "severity": "medium"
+    },
+    {
+      "id": "no-maturity-score-computer",
+      "impact": "maturity formulas are declared, not computed yet",
+      "severity": "medium"
+    },
+    {
+      "id": "no-cryptographic-signoff",
+      "impact": "signoff_key_fingerprint is declared but not bound to a real key",
+      "severity": "medium"
+    },
+    {
+      "id": "candidate-records-still-await-elevation",
+      "impact": "the 132 Phase-27 candidates remain unreviewed under the new lifecycle",
+      "severity": "high"
+    },
+    {
+      "id": "no-supersession-graph-store",
+      "impact": "superseded_by pointers are modeled but not yet indexed for fan-out queries",
+      "severity": "medium"
+    }
+  ],
+  "kind": "unresolved-trust-risks",
+  "schema": "knowledge-lifecycle-governance/1.0"
+}

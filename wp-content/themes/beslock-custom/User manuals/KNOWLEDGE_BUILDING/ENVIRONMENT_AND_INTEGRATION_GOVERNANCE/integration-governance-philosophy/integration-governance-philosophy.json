@@ -1,0 +1,10 @@
+{
+  "kind": "integration-governance-philosophy",
+  "principles": [
+    "Every integration is a contract; every contract is auditable.",
+    "Integrations may not silently widen scope; widening is a governance action.",
+    "Integrations may not silently degrade provenance or supervision guarantees.",
+    "Integrations are revocable; revocation is a first-class event."
+  ],
+  "schema": "environment-integration-governance/1.0"
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "groups_count": 17,
+  "variants_count": 48,
+  "canonical_terms": [
+    "administrator",
+    "user",
+    "fingerprint",
+    "pin",
+    "temporary-password",
+    "factory-reset",
+    "qr-pairing",
+    "ez-mode-pairing",
+    "tuya-smart-app",
+    "wi-fi",
+    "register-fingerprint",
+    "register-pin",
+    "add-administrator",
+    "add-user",
+    "change-language",
+    "pair-with-app",
+    "member-management"
+  ],
+  "registry_doc": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/canonical-terminology/canonical-terminology.md",
+  "registry_json": "KNOWLEDGE_BUILDING/SEMANTIC_GOVERNANCE/canonical-terminology/canonical-terminology.json"
+}

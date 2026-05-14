@@ -1,0 +1,11 @@
+# Relacion con el paquete documental
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12
+
+Dentro del estandar Beslock para e-Shield, este documento convive con:
+- `e-Shield user manual - image-ready.md`
+- `e-Shield - installation template standard.md`
+- `e-Shield - supplemental source review.md`
+
+Documento aun pendiente en forma dedicada:
+- manual de app normalizado

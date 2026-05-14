@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-after-adding-an-administrator-26",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "After Adding An Administrator,",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-26"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "verification is required each time to\naccess function management\nPress \"1\" to add user infor\nmation; you can register fin\ngerprint, password, or card\nPress \"2\" to delete user inf\normation",
+  "storage_bucket": "extracted-text"
+}

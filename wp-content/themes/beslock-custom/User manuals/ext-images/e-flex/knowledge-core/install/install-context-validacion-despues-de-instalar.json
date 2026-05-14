@@ -1,0 +1,37 @@
+{
+  "id": "install-context-validacion-despues-de-instalar",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Antes de cerrar el trabajo, valida:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#11"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-validacion-despues-de-instalar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "la manija opera sin friccion ni juego excesivo",
+    "el pestillo corre libre",
+    "el keypad y el panel despiertan correctamente",
+    "el boton `Reset` y el compartimiento de baterias quedan accesibles",
+    "la llave mecanica y la energia de emergencia siguen disponibles"
+  ],
+  "legacy_storage_bucket": "installation"
+}

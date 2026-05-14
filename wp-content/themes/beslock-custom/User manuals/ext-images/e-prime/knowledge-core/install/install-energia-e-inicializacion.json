@@ -1,0 +1,50 @@
+{
+  "id": "install-energia-e-inicializacion",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "Para la prueba inicial:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#10"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-energia-e-inicializacion.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "instala 4 pilas AA alcalinas de alto rendimiento"
+    },
+    {
+      "n": 2,
+      "text": "realiza la inicializacion para borrar datos de prueba de instalacion si el equipo es nuevo o ya fue manipulado"
+    },
+    {
+      "n": 3,
+      "text": "valida apertura por huella o por contrasena inicial solo como prueba tecnica local"
+    },
+    {
+      "n": 4,
+      "text": "coloca la tapa de baterias una vez que el movimiento mecanico y la verificacion sean correctos"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

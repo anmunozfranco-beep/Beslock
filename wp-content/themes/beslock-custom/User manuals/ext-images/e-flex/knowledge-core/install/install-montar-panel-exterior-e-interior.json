@@ -1,0 +1,74 @@
+{
+  "id": "install-montar-panel-exterior-e-interior",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Orden practico de montaje:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#8"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-montar-panel-exterior-e-interior.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "ajusta la direccion de la manija segun la apertura de la puerta"
+    },
+    {
+      "n": 2,
+      "text": "instala y aprieta los pernos de montaje en el panel frontal"
+    },
+    {
+      "n": 3,
+      "text": "inserta el resorte de manija en el panel trasero"
+    },
+    {
+      "n": 4,
+      "text": "coloca el eje cuadrado y recortalo si el grosor real de la puerta lo exige"
+    },
+    {
+      "n": 5,
+      "text": "pasa el cable de datos por el orificio superior correspondiente"
+    },
+    {
+      "n": 6,
+      "text": "alinea la manija y el eje cuadrado, y presiona el panel frontal contra la puerta"
+    },
+    {
+      "n": 7,
+      "text": "conecta el cable de datos al panel trasero"
+    },
+    {
+      "n": 8,
+      "text": "alinea el panel trasero con el eje y la barra de cerradura"
+    },
+    {
+      "n": 9,
+      "text": "aprieta los tornillos solo hasta corregir alineacion fina"
+    },
+    {
+      "n": 10,
+      "text": "cuando el pestillo se mueva sin friccion, completa el apriete final"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

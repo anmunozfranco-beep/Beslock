@@ -1,0 +1,50 @@
+{
+  "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "empuja el interruptor de cambio hacia arriba",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.2"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "empuja el interruptor de cambio hacia arriba"
+    },
+    {
+      "n": 2,
+      "text": "presiona el pestillo"
+    },
+    {
+      "n": 3,
+      "text": "gira el pestillo `180°`"
+    },
+    {
+      "n": 4,
+      "text": "completa el apriete final del tornillo de direccion"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

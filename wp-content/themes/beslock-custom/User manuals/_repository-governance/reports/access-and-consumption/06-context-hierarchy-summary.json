@@ -1,0 +1,88 @@
+{
+  "schema": "access-and-consumption-governance/1.0",
+  "generated": "2026-05-13",
+  "hierarchies": [
+    {
+      "id": "beginner",
+      "audience": "first-time end-user",
+      "knowledge_scope": [
+        "terminology",
+        "warnings",
+        "by-onboarding (safe-first-use)"
+      ],
+      "exclude": [
+        "admin-procedures",
+        "advanced-configuration"
+      ]
+    },
+    {
+      "id": "installer",
+      "audience": "physical installer",
+      "knowledge_scope": [
+        "install",
+        "warnings",
+        "visual-intent (physical-installation)",
+        "specifications"
+      ],
+      "exclude": [
+        "app-onboarding",
+        "advanced-configuration"
+      ]
+    },
+    {
+      "id": "administrator",
+      "audience": "lock administrator",
+      "knowledge_scope": [
+        "administrator-setup",
+        "user-enrolment",
+        "operation",
+        "workflows"
+      ],
+      "exclude": [
+        "installer-only-procedures"
+      ]
+    },
+    {
+      "id": "troubleshooting",
+      "audience": "support-tier responder",
+      "knowledge_scope": [
+        "troubleshooting",
+        "warnings",
+        "procedural-semantics"
+      ],
+      "exclude": [
+        "onboarding-marketing-copy"
+      ]
+    },
+    {
+      "id": "maintenance",
+      "audience": "owner / serviceperson",
+      "knowledge_scope": [
+        "battery-replacement",
+        "factory-reset-recovery",
+        "warnings"
+      ],
+      "exclude": [
+        "initial-onboarding"
+      ]
+    },
+    {
+      "id": "advanced-configuration",
+      "audience": "power-user / integrator",
+      "knowledge_scope": [
+        "all-promoted",
+        "capabilities",
+        "specifications"
+      ],
+      "exclude": [
+        "beginner-flows"
+      ]
+    }
+  ],
+  "rules": [
+    "Audience scopes are declarative: an artifact may belong to multiple scopes, but inclusion is opt-in per artifact.",
+    "Access calls without an audience scope default to the most restrictive (beginner).",
+    "Hierarchy filters compose with access-governance filters; the stricter wins.",
+    "Hierarchy assignment is a knowledge-center responsibility; access layer enforces, does not author."
+  ]
+}

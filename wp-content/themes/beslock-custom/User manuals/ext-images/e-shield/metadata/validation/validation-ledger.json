@@ -1,0 +1,15 @@
+{
+  "product_slug": "e-shield",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "open_items": [
+    {
+      "id": "oem-filename-typo",
+      "severity": "info",
+      "summary": "OEM-supplied PDF filename uses 'e-Shied_2.pdf' (missing 'l').",
+      "policy": "Filename preserved verbatim under source-of-truth/manuals/ for provenance; normalized references use the slug 'e-shield'.",
+      "source_ref": "ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+      "recorded_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-the-connection-status-of-bluetooth-will-be-displayed-in-the-",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "The Connection Status Of Bluetooth Will Be Displayed In The Homepage Center",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-39"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "App Instructions",
+  "raw_text": "If it is connected,you can click \"Long press\nto unlock\"and directly unlock the door lock (Please\nmake sure the Bluetooth of the mobile phone is turned on and the mobile phone is within a reasonable distance from the\ndoor Ibck.Itis recommended to operate within 5 meters);If Bluetooth is not connected,\"Bluetooth cannot be connected”\nis displayed,and the Bluetooth door lock cannot be opened directly through APP.\n3.The homepage slides to the left to the next page,with dynamic password function.\nAfter dicking \"Get Dynamic Password\",a group of 8-digit passwords wil appear randomly.You can use this digital\npassword to unlock the door within 5 minutes.\nIV.Member management-family member management\n1. Validity period:once added, the permission ofusing\ntime of family\nmembers\nis\npermanent\nuntil\nthe\nhratin\nadministrator deletes the member,and the members\nalways have the corresponding permission.\n2.Door\nopening\nmethod:The\nadministrator\ncan\ndecide the permission type of the member;As shown\nin the figure,if the administrator doses all the door",
+  "storage_bucket": "extracted-text"
+}

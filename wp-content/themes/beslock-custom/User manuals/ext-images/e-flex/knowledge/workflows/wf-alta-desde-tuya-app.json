@@ -1,0 +1,52 @@
+{
+  "id": "wf-alta-desde-tuya-app",
+  "type": "workflow",
+  "product": "e-flex",
+  "summary": "Una vez habilitado el modo de red en la cerradura:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#6"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app",
+    "device"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abre `TUYA APP`"
+    },
+    {
+      "n": 2,
+      "text": "agrega una nueva cerradura inteligente desde la categoria correcta"
+    },
+    {
+      "n": 3,
+      "text": "confirma la red `2.4G`"
+    },
+    {
+      "n": 4,
+      "text": "sigue el asistente de la app hasta completar el enlace"
+    },
+    {
+      "n": 5,
+      "text": "valida que el equipo aparezca correctamente en la cuenta"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

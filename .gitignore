@@ -12,3 +12,12 @@ generated_manuals/*/*
 !generated_manuals/*/extraction_report.md
 !generated_manuals/*/extracted_images/
 !generated_manuals/*/extracted_images/**
+
+# Local visual-generation automation artifacts
+output/visual-generation/
+
+# Local secrets for repo-side automation
+.env.local
+
+# Local archive created during manual processing
+wp-content/themes/beslock-custom/User manuals.zip

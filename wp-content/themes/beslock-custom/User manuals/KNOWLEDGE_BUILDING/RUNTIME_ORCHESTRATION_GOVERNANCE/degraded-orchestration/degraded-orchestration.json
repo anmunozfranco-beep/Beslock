@@ -1,0 +1,76 @@
+{
+  "generated": "2026-05-13T20:29:18Z",
+  "kind": "degraded-orchestration",
+  "modes": [
+    {
+      "destructive_allowed": false,
+      "fallback": "apply ADAPTIVE safest defaults",
+      "id": "missing-context-vector",
+      "level": "L1-soft"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "treat as low-confidence; never elevate; require supervised-confirmation for action",
+      "id": "missing-confidence-tier",
+      "level": "L2-partial"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "disable interruption-recovery; force restart-from-safe-state",
+      "id": "missing-checkpoint-registry",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "alternative-path resolution unavailable; degrade to preferred-or-escalate",
+      "id": "missing-fallback-registry",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "session-id used as best-effort key; cross-session bind disabled",
+      "id": "missing-incident-id-emitter",
+      "level": "L2-partial"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "only retrieval-loop legal; replay determinism unmet",
+      "id": "missing-provenance-emitter",
+      "level": "L4-read-only-only"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "troubleshooting-guidance package not released",
+      "id": "thin-troubleshooting-corpus",
+      "level": "L4-read-only-only"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "guidance with mandatory-warning-surface gated; affected products fall to read-only",
+      "id": "warning-corpus-gap",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "tier-4/5 escalations queued; orchestration locked",
+      "id": "oem-channel-contract-missing",
+      "level": "L5-handoff-only"
+    },
+    {
+      "destructive_allowed": false,
+      "fallback": "runtime refuses to initialize; escalation only",
+      "id": "schema-pin-mismatch",
+      "level": "L5-handoff-only"
+    }
+  ],
+  "rules": [
+    "Degradation is declared per cause; ad-hoc degradation is unsafe.",
+    "Destructive surface is unavailable in any L2+ degradation.",
+    "Degradation always emits a degradation-cause reference.",
+    "Degradation never elevates confidence to compensate for missing inputs.",
+    "Degradation prefers safest default over guess.",
+    "Recovery from degradation is supervised when destructive activity was in flight.",
+    "L5 degradation is terminal except via escalation handoff."
+  ],
+  "schema": "runtime-orchestration-governance/1.0"
+}

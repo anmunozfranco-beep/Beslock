@@ -1,0 +1,103 @@
+{
+  "product": "e-orbit",
+  "capabilities": {
+    "identity": {
+      "model": "NF14",
+      "materials": "Aluminum Alloy + Tempered Glass",
+      "visual_constraints": [
+        "tall monolithic body",
+        "upper sensor cluster",
+        "front keypad distinct from handle",
+        "fingerprint sensor on the upper exterior handle",
+        "interior screen plus lower thumbturn"
+      ],
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls",
+        "visual-system/references/e-orbit-visual-profile.md"
+      ]
+    },
+    "connectivity": {
+      "primary": [
+        "Wi-Fi 2.4 GHz",
+        "Smart Life / Tuya onboarding"
+      ],
+      "secondary": [
+        "Tongtong OEM mention"
+      ],
+      "gateway_required": false,
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#3",
+        "source-of-truth/manuals/e-Orbit app manual.md#4",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    "access_methods": {
+      "observed_in_sources": [
+        "face recognition",
+        "fingerprint",
+        "PIN or password",
+        "IC card",
+        "app"
+      ],
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls",
+        "source-of-truth/manuals/e-Orbit user manual.md#3",
+        "source-of-truth/manuals/e-Orbit user manual.md#5",
+        "source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    "security": {
+      "features": [
+        "virtual password support in OEM evidence",
+        "remote event logs",
+        "temporary passwords",
+        "battery and illegal-user event visibility"
+      ],
+      "validation_flags": [
+        "Alexa requires commercial confirmation",
+        "temporary-password variants beyond one-time and unlimited require build validation"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#7",
+        "source-of-truth/manuals/e-Orbit app manual.md#9",
+        "source-of-truth/manuals/e-Orbit app manual.md#10",
+        "source-of-truth/manuals/e-Orbit - supplemental source review.md#5"
+      ]
+    },
+    "power": {
+      "battery": "7.2V / 4200mAh rechargeable battery",
+      "emergency_input": "Micro USB",
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls",
+        "source-of-truth/manuals/e-Orbit - supplemental source review.md#5"
+      ]
+    },
+    "installation_envelope": {
+      "door_thickness_mm": "38-120",
+      "front_panel_mm": "425 x 69 x 49",
+      "rear_panel_mm": "430 x 70 x 70",
+      "lock_body_family": [
+        "6068",
+        "85",
+        "90"
+      ],
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    "remote_operations": {
+      "features": [
+        "remote unlock",
+        "visitor talk context",
+        "member management",
+        "event logs",
+        "temporary passwords"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#7",
+        "source-of-truth/manuals/e-Orbit app manual.md#8",
+        "source-of-truth/manuals/e-Orbit app manual.md#9"
+      ]
+    }
+  }
+}

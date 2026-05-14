@@ -1,0 +1,28 @@
+{
+  "schema": "runtime-governance/1.0",
+  "generated_at": "2026-05-13T19:53:57+00:00",
+  "principles": [
+    "the runtime layer specifies how cognition becomes execution; it is itself modeling-only",
+    "runtime is supervised by default; autonomous execution is not modelled here",
+    "runtime is bounded by declared contracts with each prior layer; it may not invent operations",
+    "runtime is read-only with respect to all 13 prior governance layers",
+    "destructive execution requires high-confidence + role + explicit-action + provenance",
+    "uncertainty, ambiguity, and contradictions are surfaced — never silently resolved",
+    "irreversibility warnings and explicit-action requirements are immutable at runtime",
+    "promotion (P-tiers) and authority changes are out-of-band; never at runtime",
+    "all runtime activity emits provenance and may be replayed deterministically from declared inputs",
+    "future runtime consumers inherit these contracts; the runtime layer never bends them for a consumer"
+  ],
+  "authority_areas": [
+    "vertical-slice selection and gating",
+    "runtime contract declarations and versioning",
+    "runtime boundary declarations (prohibitions / human review / escalation-required)",
+    "execution flow declarations and provenance requirements",
+    "human ↔ runtime interaction model",
+    "runtime packaging types and immutability rules",
+    "cognition execution lifecycle and stage rules",
+    "supervision and override semantics",
+    "schema-version pinning and contract compatibility",
+    "future runtime-consumer gates"
+  ]
+}

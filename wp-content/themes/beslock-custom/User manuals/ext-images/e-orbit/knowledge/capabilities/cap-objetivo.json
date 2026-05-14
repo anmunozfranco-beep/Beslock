@@ -1,0 +1,27 @@
+{
+  "id": "cap-objetivo",
+  "type": "capability",
+  "product": "e-orbit",
+  "summary": "Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#2"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "Separar el flujo de vinculacion, gestion remota y passwords temporales de e-Orbit en un documento dedicado, usando como fuente principal `e-Orbit_2.pdf` y como apoyo tecnico `e-Orbit_1.xls`."
+  ],
+  "storage_bucket": "capabilities"
+}

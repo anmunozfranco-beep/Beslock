@@ -1,0 +1,32 @@
+{
+  "id": "term-qr",
+  "type": "glossary-term",
+  "product": "e-prime",
+  "summary": "Código gráfico de provisión.",
+  "language": "es-CO",
+  "validation_status": "normalized",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "canonical": "QR",
+  "oem_variants": [
+    "QR",
+    "código QR",
+    "codigo QR"
+  ],
+  "definition": "Código gráfico de provisión.",
+  "storage_bucket": "terminology"
+}

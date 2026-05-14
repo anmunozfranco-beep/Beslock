@@ -1,0 +1,26 @@
+[
+  {
+    "id": "wf-alta-del-dispositivo-por-qr",
+    "summary": "La ruta OEM observada es:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+    "summary": "El PDF tambien muestra una variante de alta:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "wf-gestion-de-miembros",
+    "summary": "La guia OEM muestra `Gestion de miembros` con este flujo general:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

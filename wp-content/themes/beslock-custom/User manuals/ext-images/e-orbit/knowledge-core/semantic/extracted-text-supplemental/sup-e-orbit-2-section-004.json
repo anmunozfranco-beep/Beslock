@@ -1,0 +1,39 @@
+{
+  "id": "sup-e-orbit-2-section-004",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "43 Consumo Estatico Inferior Oo Igual A 200Uua (Consumo",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-medium",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+    "generated_manuals_supplemental/e-orbit-2/manual.json#sections[3]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-orbit-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "43 Consumo Estatico Inferior Oo Igual A 200Uua (Consumo",
+  "page": "?",
+  "text": [
+    "medio de energia",
+    "inferior o igual a 3s, (incluyendo todo",
+    "; ae el proceso de recogida de huellas,"
+  ],
+  "ocr_avg_confidence": 82.7,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-orbit-2"
+}

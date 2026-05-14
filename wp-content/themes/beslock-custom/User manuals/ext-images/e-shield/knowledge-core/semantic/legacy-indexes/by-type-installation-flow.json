@@ -1,0 +1,98 @@
+[
+  {
+    "id": "install-context-objetivo",
+    "summary": "Explicar la preparacion de puerta, el uso correcto de la plantilla, el montaje base del hardware y las validaciones minimas despues de instalar e-Shield",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-que-vas-a-instalar",
+    "summary": "e-Shield usa una arquitectura de cerradura dividida:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+    "summary": "Valida estas condiciones antes de tocar la puerta:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-que-necesitas-antes-de-empezar",
+    "summary": "- plantilla impresa a escala `100%",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-usar-la-plantilla-de-instalacion",
+    "summary": "![Plantilla de instalacion de e-Shield](assets/e-shield/pdf-renders/e-shield-2/page-01",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-preparar-la-puerta",
+    "summary": "La plantilla muestra un patron principal y perforaciones auxiliares",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-montar-el-conjunto-exterior-e-interior",
+    "summary": "Orden practico de montaje:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-energia-y-encendido-inicial",
+    "summary": "Para la puesta en marcha:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "summary": "Antes de entregar el equipo o pasar a configuracion de usuarios, valida esto:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-problemas-frecuentes-de-instalacion",
+    "summary": "### La plantilla no coincide con la puerta",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#11"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "summary": "Dentro del estandar Beslock para e-Shield, este documento convive con:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "summary": "Este manual se apoya en tres fuentes: OCR del manual OEM existente, la ficha suplementaria `e-Shield_1",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

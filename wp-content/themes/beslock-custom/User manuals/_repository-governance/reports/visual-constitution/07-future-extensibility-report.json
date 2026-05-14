@@ -1,0 +1,27 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "extension_surfaces": [
+    "video and motion",
+    "onboarding flows",
+    "chatbot and RAG visuals",
+    "troubleshooting visuals",
+    "AR guidance",
+    "dynamic / on-demand rendering",
+    "multilingual publication",
+    "automated visual QA"
+  ],
+  "non_negotiable_across_extensions": [
+    "truth-source primacy",
+    "mechanical consistency",
+    "hands-only human policy",
+    "comfy-native rendering",
+    "provenance-bound lineage"
+  ],
+  "out_of_scope_today": [
+    "audio guidance synchronised with visuals",
+    "live-feed integration with hardware telemetry",
+    "customer-uploaded photographs of installed locks"
+  ],
+  "extensibility_doc": "KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/extensibility/future-extensibility.md"
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "risks": [
+    {
+      "id": "thin-troubleshooting-corpus",
+      "severity": "high",
+      "description": "5/6 products lack troubleshooting symptoms; troubleshooting-package only assembles for e-shield.",
+      "ref": "validation/02-workflow-executability.json"
+    },
+    {
+      "id": "warning-corpus-gap",
+      "severity": "high",
+      "description": "2 products have empty warning corpora; warnings-follow-procedures rule cannot fire.",
+      "ref": "validation/05-experience-validation.json"
+    },
+    {
+      "id": "channel-targets-coverage",
+      "severity": "high",
+      "description": "417 artifacts missing channel_targets; package channel-binding under-determined.",
+      "ref": "validation/06-retrieval-validation.json"
+    },
+    {
+      "id": "capability-not-declared-per-product",
+      "severity": "medium",
+      "description": "Capability assemblies (e.g. fingerprint-management) cannot resolve where capability is undeclared per product."
+    },
+    {
+      "id": "audience-scope-not-authored",
+      "severity": "medium",
+      "description": "Per-artifact audience_scope assignments not yet authored; contextual composition relies on heuristics."
+    },
+    {
+      "id": "snapshot-hash-not-emitted",
+      "severity": "medium",
+      "description": "Determinism contract requires knowledge-core snapshot hash on every assembly; not yet integrated."
+    },
+    {
+      "id": "circular-prerequisite-detection",
+      "severity": "low",
+      "description": "Cycle detection at composition time depends on graph-validation passing; currently 0 cycles, but contract must remain enforced."
+    },
+    {
+      "id": "shared-concepts-undeclared",
+      "severity": "high",
+      "description": "15 cross-product entity-collisions + 10 terminology-collisions block cross-product capability composition."
+    }
+  ]
+}

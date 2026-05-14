@@ -1,0 +1,34 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "absolute_principle": "MAXIMUM OPERATIONAL CLARITY — NOT marketing aesthetics, NOT cinematic storytelling, NOT decorative AI art.",
+  "allowed_classes": [
+    "schematic",
+    "hybrid"
+  ],
+  "legacy_only_classes": [
+    "realistic",
+    "semi-realistic"
+  ],
+  "forbidden": [
+    "cinematic drama",
+    "marketing glamor",
+    "photorealistic lifestyle staging",
+    "decorative AI rendering",
+    "stock-photo aesthetics",
+    "dramatic / neon lighting",
+    "brochure imagery",
+    "emotional composition"
+  ],
+  "rendering_constraints": [
+    "one-side-per-image (exterior | interior | edge)",
+    "no mixed interior+exterior frame",
+    "no generated readable text used as instruction",
+    "no invented app-UI labels or menu hierarchies",
+    "low-detail phone renders only when phone is contextual, not source-of-truth",
+    "schematic fallback for wiring / installation / anatomy / reset",
+    "background quiet, diagram-like or lightly contextual",
+    "callouts/labels added in editorial composition, not baked into render"
+  ],
+  "canonical_policy": "visual-system/_governance/visual-style-policy/policy.md"
+}

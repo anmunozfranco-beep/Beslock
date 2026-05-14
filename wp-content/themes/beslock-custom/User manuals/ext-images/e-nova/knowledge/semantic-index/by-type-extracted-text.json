@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+    "summary": "Nano Cerradura Pomo Inteligente",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-1"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-paso-1-2",
+    "summary": "Paso 1",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-2"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-paso-2-3",
+    "summary": "Paso 2",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-3"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-paso-3-4",
+    "summary": "Paso 3",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-4"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-paso-4-5",
+    "summary": "Paso 4",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-5"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+    "summary": "7 Conexión En Un Estado Unificadola Cerradura",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-6"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+    "summary": "El Registro De Huellas Dactilares Solo Se Puede Hacer A Través De Bluetooth,",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-7"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+    "summary": "5 Veces Después De Abrir La Puerta.",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-8"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+    "summary": "Borrar Datos A Través De La App Tuya",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-9"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-29300-portale-ein-go-10",
+    "summary": "29300 Portale Ein Go",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-10"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+    "summary": "5 Segundos.Entrara En El Estado De Recuperacion De Fabrica, La Luz Azul Del Cabezal",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-11"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+    "summary": "Funciones/Rendimiento Parámetros Observaciones",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-12"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+    "summary": "9 S50Ua Consumo De Energia En Modo De Espera",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-13"
+    ],
+    "validation_status": "inferred-but-unverified"
+  },
+  {
+    "id": "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14",
+    "summary": "Método De Desbloqueo Huella Dactilar/Lave/App",
+    "source_refs": [
+      "generated_manuals/e-nova/manual.json#section-14"
+    ],
+    "validation_status": "inferred-but-unverified"
+  }
+]

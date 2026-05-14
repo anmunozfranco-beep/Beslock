@@ -1,0 +1,32 @@
+{
+  "id": "install-context-que-vas-a-instalar",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "e-Shield usa una arquitectura de cerradura dividida:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "modulo exterior vertical con lector circular en la parte superior y keypad debajo",
+    "caja interior horizontal separada",
+    "cilindro de seguridad tipo Clase C",
+    "alimentacion principal con 4 baterias AA",
+    "respaldo de energia por USB"
+  ],
+  "storage_bucket": "installation"
+}

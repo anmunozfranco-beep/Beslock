@@ -1,0 +1,9 @@
+# Normally-open mode y soporte remoto basico
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#9
+
+La fuente OEM muestra manejo de `normally-open mode` y record de aperturas.
+
+Regla editorial:
+- describir este modo como funcion disponible cuando la configuracion del administrador lo habilita
+- explicar que la app ayuda a revisar registros y ajustes, pero no mezclar este bloque con el manual de instalacion fisica

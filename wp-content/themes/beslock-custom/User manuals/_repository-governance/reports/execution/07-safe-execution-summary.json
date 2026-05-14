@@ -1,0 +1,79 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "safeguards": [
+    {
+      "id": "irreversibility-warning",
+      "applies_to": [
+        "factory-reset",
+        "delete-all-users",
+        "firmware-rollback"
+      ]
+    },
+    {
+      "id": "double-confirmation",
+      "applies_to": [
+        "factory-reset",
+        "delete-all-users"
+      ]
+    },
+    {
+      "id": "battery-precondition",
+      "applies_to": [
+        "firmware-upgrade",
+        "factory-reset"
+      ],
+      "reason": "low-battery may brick mid-operation"
+    },
+    {
+      "id": "network-precondition",
+      "applies_to": [
+        "app-pairing",
+        "remote-unlock"
+      ],
+      "reason": "2.4G band requirement"
+    },
+    {
+      "id": "physical-presence",
+      "applies_to": [
+        "factory-reset",
+        "battery-replacement"
+      ],
+      "reason": "remote initiation forbidden"
+    },
+    {
+      "id": "mandatory-warning-surface",
+      "applies_to": [
+        "all destructive procedures"
+      ],
+      "reason": "warning must reach user before step starts"
+    }
+  ],
+  "escalation_thresholds": [
+    {
+      "trigger": "3 consecutive validation-failures",
+      "escalate_to": "tier-2"
+    },
+    {
+      "trigger": "pairing-failed after 3 retries",
+      "escalate_to": "tier-3"
+    },
+    {
+      "trigger": "lockout (max-failed-attempts) ≥ 2 cycles",
+      "escalate_to": "tier-3"
+    },
+    {
+      "trigger": "depleted + replacement fails",
+      "escalate_to": "tier-4 (vendor)"
+    },
+    {
+      "trigger": "firmware-bricked",
+      "escalate_to": "tier-5 (RMA)"
+    }
+  ],
+  "irreversible_operations": [
+    "factory-reset",
+    "delete-all-users",
+    "firmware-rollback"
+  ]
+}

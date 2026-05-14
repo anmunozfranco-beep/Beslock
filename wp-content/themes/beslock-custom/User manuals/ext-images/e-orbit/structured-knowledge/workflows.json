@@ -1,0 +1,174 @@
+{
+  "product": "e-orbit",
+  "authorized_visual_renderer": "ComfyUI",
+  "workflows": [
+    {
+      "id": "local-onboarding",
+      "title": "Initial local onboarding",
+      "surface": "lock",
+      "outcomes": [
+        "administrator-created",
+        "pin-registered",
+        "fingerprint-registered"
+      ],
+      "preconditions": [
+        "lock installed correctly",
+        "panel wakes correctly",
+        "primary administrator designated"
+      ],
+      "steps": [
+        "Create the administrator from the user menu.",
+        "Register at least one PIN.",
+        "Register at least one fingerprint.",
+        "Validate both credentials immediately."
+      ],
+      "visual_slots": [
+        "IMG-003",
+        "IMG-004",
+        "IMG-005"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#2",
+        "source-of-truth/manuals/e-Orbit user manual.md#3",
+        "source-of-truth/manuals/e-Orbit user manual.md#5",
+        "source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    {
+      "id": "app-pairing-qr",
+      "title": "Smart Life QR pairing",
+      "surface": "app",
+      "outcomes": [
+        "device-visible-in-app",
+        "lock-network-configured"
+      ],
+      "preconditions": [
+        "app installed and signed in",
+        "compatible Wi-Fi available",
+        "lock in pairing mode"
+      ],
+      "steps": [
+        "Open Smart Life and add a device from Camera&Lock.",
+        "Choose the observed Wi-Fi video lock family.",
+        "Select the target Wi-Fi network and enter the password.",
+        "Show the generated phone QR to the lock camera.",
+        "Wait for the lock prompt and confirm success in the app."
+      ],
+      "visual_slots": [
+        "IMG-007",
+        "IMG-008"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#5",
+        "source-of-truth/manuals/e-Orbit user manual.md#9"
+      ]
+    },
+    {
+      "id": "app-pairing-ez-mode",
+      "title": "Wi-Fi or EZ Mode fallback pairing",
+      "surface": "app",
+      "outcomes": [
+        "fallback-pairing-attempted"
+      ],
+      "preconditions": [
+        "QR pairing unavailable or failed",
+        "compatible Wi-Fi available",
+        "lock reset path accessible"
+      ],
+      "steps": [
+        "Open the lock Wi-Fi onboarding family.",
+        "Enter the Wi-Fi details.",
+        "Enter the reset-device flow.",
+        "Switch the app to EZ Mode.",
+        "Follow the alternative distribution or hotspot prompts."
+      ],
+      "visual_slots": [
+        "IMG-007",
+        "IMG-008",
+        "IMG-010"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#6"
+      ]
+    },
+    {
+      "id": "remote-unlock-response",
+      "title": "Remote unlock response",
+      "surface": "app",
+      "outcomes": [
+        "visitor-reviewed",
+        "unlock-request-processed",
+        "event-log-preserved"
+      ],
+      "preconditions": [
+        "lock already paired",
+        "visitor event triggered"
+      ],
+      "steps": [
+        "Receive the ring or unlock request in the app.",
+        "Review the visitor context.",
+        "Use the unlock control if access is approved.",
+        "Review the related event in the logs if needed."
+      ],
+      "visual_slots": [
+        "IMG-007",
+        "IMG-010"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#7"
+      ]
+    },
+    {
+      "id": "member-management",
+      "title": "Member management",
+      "surface": "app",
+      "outcomes": [
+        "member-added",
+        "unlock-mode-assigned",
+        "user-code-bound"
+      ],
+      "preconditions": [
+        "lock already paired",
+        "user code generated during lock onboarding"
+      ],
+      "steps": [
+        "Enter the member management section.",
+        "Add a named member.",
+        "Open the member detail view.",
+        "Assign the unlock mode and bind the user code."
+      ],
+      "visual_slots": [
+        "IMG-007"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#8"
+      ]
+    },
+    {
+      "id": "temporary-password-generation",
+      "title": "Temporary password generation",
+      "surface": "app",
+      "outcomes": [
+        "one-time-password-created",
+        "unlimited-password-created"
+      ],
+      "preconditions": [
+        "lock already paired",
+        "temporary-password feature exposed by the commercial build"
+      ],
+      "steps": [
+        "Enter the temporary-password function in the app.",
+        "Choose a one-time or unlimited password type.",
+        "Generate the credential and distribute it according to the access policy.",
+        "Treat any additional temporary-password modes as unvalidated until the build is confirmed."
+      ],
+      "visual_slots": [
+        "IMG-007",
+        "IMG-010"
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#9"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "consumed_by": "retrieval kind `causal` and `troubleshooting`",
+  "domain": "causal-graphs",
+  "kind": "causal-graph-summary",
+  "records_per_product": {
+    "e-flex": 1,
+    "e-nova": 1,
+    "e-orbit": 1,
+    "e-prime": 1,
+    "e-shield": 1,
+    "e-touch": 1
+  },
+  "schema": "runtime-hardening-governance/1.0",
+  "structure": "symptom -> hypothesised-cause edges + hypothesis chains",
+  "total_records": 6
+}

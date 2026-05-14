@@ -1,0 +1,33 @@
+{
+  "id": "install-context-validacion-despues-de-instalar",
+  "type": "installation-flow",
+  "product": "e-shield",
+  "summary": "Antes de entregar el equipo o pasar a configuracion de usuarios, valida esto:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "physical-installation",
+  "notes": [
+    "la puerta cierra y abre sin roce anormal",
+    "el cuerpo exterior queda vertical y la caja interior queda estable",
+    "el teclado despierta y responde al tacto",
+    "la llave mecanica abre y cierra correctamente",
+    "el puerto USB de emergencia sigue accesible",
+    "el boton interior y el pestillo responden sin retrasos ni holguras anormales"
+  ],
+  "storage_bucket": "installation"
+}

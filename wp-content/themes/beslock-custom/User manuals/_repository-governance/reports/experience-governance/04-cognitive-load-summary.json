@@ -1,0 +1,15 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "dimension_count": 7,
+  "load_distribution": {
+    "very-high": 2,
+    "high": 2,
+    "medium": 3,
+    "low": 4
+  },
+  "very_high_procedures": [
+    "procedure.factory-reset",
+    "procedure.emergency-power"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "principles": [
+    "Composition assembles; it does not author.",
+    "Every assembly is reproducible from the knowledge-core snapshot.",
+    "Composition is publication-neutral; rendering lives elsewhere.",
+    "Safety constraints are non-droppable; provenance is non-strippable.",
+    "Determinism is a contract: same dimensions + same snapshot ⇒ same assembly.",
+    "Capability assemblies are document-agnostic; they query by semantic predicate.",
+    "Composition is subordinate to knowledge-core, lifecycle, validation, access governance.",
+    "Future composition consumers inherit composition contracts; contracts never bend to satisfy a consumer."
+  ],
+  "authority_areas": [
+    "knowledge-composition",
+    "assembly-rules",
+    "contextual-composition",
+    "capability-composition",
+    "troubleshooting-composition",
+    "onboarding-composition",
+    "publication-neutral-assemblies",
+    "composition-governance",
+    "composition-risks",
+    "future-composition-readiness"
+  ]
+}

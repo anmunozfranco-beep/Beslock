@@ -1,0 +1,10 @@
+{
+  "kind": "trust-preserving-operations-philosophy",
+  "principles": [
+    "Operations preserve trust by preserving provenance.",
+    "Operations preserve trust by preserving lineage.",
+    "Operations preserve trust by preserving reviewer accountability.",
+    "Operations preserve trust by preserving reversibility."
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

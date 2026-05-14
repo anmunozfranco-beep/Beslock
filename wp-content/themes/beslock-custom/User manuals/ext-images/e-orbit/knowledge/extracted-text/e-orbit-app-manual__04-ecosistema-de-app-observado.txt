@@ -1,0 +1,12 @@
+# Ecosistema de app observado
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#4
+
+Las fuentes muestran estas variantes:
+- `Smart Life` como ejemplo de interfaz de app
+- `Tuya` / `Tuya Smart` como ecosistema y modulo Wi-Fi integrado
+- `Tongtong APP` como variante OEM mencionada en la hoja tecnica
+
+Regla editorial Beslock:
+- presentar `Smart Life` / `Tuya` como flujo principal observado
+- tratar `Tongtong` como variante de proveedor que requiere confirmacion comercial antes de publicarse como ruta primaria

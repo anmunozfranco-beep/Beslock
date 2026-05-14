@@ -1,0 +1,111 @@
+{
+  "flows": [
+    {
+      "evidence": [
+        "retrieval-package-id",
+        "provenance-manifest-ref",
+        "query-intent-id"
+      ],
+      "id": "retrieval-flow",
+      "steps": [
+        "bind query intent to declared access pattern",
+        "resolve hierarchy + filters",
+        "fetch read-only nodes from declared stable surfaces",
+        "attach provenance manifest",
+        "emit retrieval-package"
+      ]
+    },
+    {
+      "evidence": [
+        "guidance-package-id",
+        "adaptation-record-ref",
+        "profile-id"
+      ],
+      "id": "procedural-guidance-flow",
+      "steps": [
+        "consume retrieval-package (read-only)",
+        "apply COMPOSITION assembly rules",
+        "select profile per ADAPTIVE precedence (or safest default)",
+        "emit guidance-package (read-only)"
+      ]
+    },
+    {
+      "evidence": [
+        "warning-record-ref",
+        "severity",
+        "source-node-id"
+      ],
+      "id": "warning-surface-flow",
+      "steps": [
+        "enumerate mandatory warnings attached to selected nodes",
+        "stamp warning-record with severity + source",
+        "block guidance emission if mandatory warning is unverified"
+      ]
+    },
+    {
+      "evidence": [
+        "escalation-package-ref",
+        "continuity-snapshot-ref",
+        "tier"
+      ],
+      "id": "escalation-flow",
+      "steps": [
+        "evaluate declared escalation predicates",
+        "snapshot continuity (read-only, append-only history)",
+        "build 12-field escalation package",
+        "lock proof slice to read-only handoff state"
+      ]
+    },
+    {
+      "evidence": [
+        "timeline-id",
+        "checkpoint-id",
+        "non-inheritable-filter-record"
+      ],
+      "id": "continuity-flow",
+      "steps": [
+        "load declared timeline + context vector",
+        "verify checkpoint integrity (when registry exists)",
+        "filter non-inheritable signals at boundary",
+        "emit restoration-record"
+      ]
+    },
+    {
+      "evidence": [
+        "adaptation-record-ref",
+        "precedence-rule-id"
+      ],
+      "id": "adaptive-guidance-flow",
+      "steps": [
+        "compute guidance adaptation per ADAPTIVE rules",
+        "respect 4-tier precedence (knowledge-core>adaptive)",
+        "never override safety-preserving adaptations",
+        "emit adaptation-record"
+      ]
+    },
+    {
+      "evidence": [
+        "chain-record-ref",
+        "termination-outcome",
+        "edges-traversed[]"
+      ],
+      "id": "reasoning-trace-flow",
+      "steps": [
+        "consume assembly-package (read-only)",
+        "traverse declared causal relations only",
+        "track hypothesis lifecycle stages",
+        "emit chain-record"
+      ]
+    }
+  ],
+  "generated": "2026-05-13T21:05:02Z",
+  "kind": "context-assembly",
+  "rules": [
+    "Flows are declared; no flow may be invented during a proof slice.",
+    "Every flow emits provenance; an unobserved step invalidates the proof.",
+    "Flows are read-only; destructive transitions are out of scope for proof-of-value.",
+    "Mandatory warnings cannot be suppressed at any flow.",
+    "Adaptive guidance never elevates confidence to compensate for missing inputs."
+  ],
+  "schema": "operational-proof-governance/1.0"
+}

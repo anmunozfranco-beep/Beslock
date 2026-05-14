@@ -1,0 +1,40 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "tiers": [
+    {
+      "tier": "verified",
+      "definition": "Cross-checked against OEM documentation and accepted by reviewer."
+    },
+    {
+      "tier": "canonical",
+      "definition": "Promoted into the canonical knowledge core; authoritative for downstream consumers."
+    },
+    {
+      "tier": "ocr-derived",
+      "definition": "Extracted from OCR of OEM manuals; awaits semantic reconciliation."
+    },
+    {
+      "tier": "inferred",
+      "definition": "Derived by semantic interpretation; supported by multiple evidences but not OEM-confirmed."
+    },
+    {
+      "tier": "low-confidence",
+      "definition": "Single-source or weakly evidenced; flagged for review."
+    },
+    {
+      "tier": "deprecated",
+      "definition": "Superseded by a newer artifact; retained for lineage only."
+    },
+    {
+      "tier": "unresolved",
+      "definition": "Known gap; tracked in the gaps register pending evidence."
+    },
+    {
+      "tier": "transitional",
+      "definition": "Migration in progress between two schema versions or two storage layouts."
+    }
+  ],
+  "required_field": "maturity",
+  "default_when_absent": "unresolved"
+}

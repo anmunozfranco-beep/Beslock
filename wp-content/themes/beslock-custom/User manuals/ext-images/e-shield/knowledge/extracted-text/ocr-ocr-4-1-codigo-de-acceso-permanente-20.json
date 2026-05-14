@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-4-1-codigo-de-acceso-permanente-20",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "4.1 Codigo De Acceso Permanente",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-20"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "Cuando se estableza una nueva contraseña es\npermanente, esta deberá utilizarse en las 24 horas a\nsiguientes a su generación; de lo contrario, caducará -\nautomaticamente SUR LES SU Pt",
+  "storage_bucket": "extracted-text"
+}

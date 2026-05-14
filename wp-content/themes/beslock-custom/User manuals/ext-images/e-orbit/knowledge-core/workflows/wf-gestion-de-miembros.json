@@ -1,0 +1,61 @@
+{
+  "id": "wf-gestion-de-miembros",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "La guia OEM muestra `Gestion de miembros` con este flujo general:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#9"
+  ],
+  "extraction_lineage": [
+    "knowledge/workflows/wf-gestion-de-miembros.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "mobile-app",
+  "actors": [
+    "device",
+    "user"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "entrar a la seccion de miembros"
+    },
+    {
+      "n": 2,
+      "text": "usar `+` para agregar otros miembros"
+    },
+    {
+      "n": 3,
+      "text": "introducir el nombre del miembro"
+    },
+    {
+      "n": 4,
+      "text": "entrar a la informacion del miembro"
+    },
+    {
+      "n": 5,
+      "text": "gestionar el modo de desbloqueo"
+    },
+    {
+      "n": 6,
+      "text": "vincular el numero de usuario correspondiente"
+    }
+  ],
+  "preconditions": [],
+  "legacy_storage_bucket": "workflows"
+}

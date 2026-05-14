@@ -1,0 +1,15 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/diff-lineage/",
+  "diff_kinds": [
+    "node-diff",
+    "binding-diff",
+    "trust-tier-diff",
+    "lineage-walk",
+    "evidence-walk",
+    "rollback-walk"
+  ],
+  "invariants_count": 4,
+  "kind": "diff-lineage-summary",
+  "lineage_views_count": 5,
+  "schema": "knowledge-operations-governance/1.0"
+}

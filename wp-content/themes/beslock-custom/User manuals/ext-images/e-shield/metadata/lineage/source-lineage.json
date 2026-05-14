@@ -1,0 +1,333 @@
+{
+  "product_slug": "e-shield",
+  "product_display": "e-Shield",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "phase": "phase-1-cutover",
+  "entries": [
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield - AI image prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/prompts/e-Shield - AI image prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield - image generation matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/e-Shield - image generation matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield - implementation starter pack.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/automation/orchestrators/e-Shield - implementation starter pack.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield - installation template standard.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/automation/orchestrators/e-Shield - installation template standard.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield - supplemental source review.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/specifications/e-Shield - supplemental source review.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield app manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield installation manual.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield user manual - image-ready.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/manuals/e-Shield user manual - image-ready.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield user manual - review-draft.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/manuals/e-Shield user manual - review-draft.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield user manual.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield user manual.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shield_1.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/e-Shied_2.pdf",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-Shield.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/product-images/e-Shield.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/e-shield-visual-profile.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/references/e-shield-visual-profile.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/notes.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/audit/legacy-pre-cutover-notes.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/ai-image-prompts.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/prompts/ai-image-prompts.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/image-generation-matrix.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/image-generation-matrix.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/visual-validation.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/validations/visual-validation.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/image-production-status.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/qa/image-production-status.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/audit/legacy-visual-system-product/README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/generated/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/audit/legacy-visual-system-product/generated-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/generated/e-shield-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/outputs/generated/e-shield-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/generated/e-shield-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/outputs/generated/e-shield-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/generated/e-shield-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/outputs/generated/e-shield-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/visual-system/products/e-shield/generated/selected-assets-register.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/traceability/selected-assets-register.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/review-draft/e-shield-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/review-draft/e-shield-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-add-admin-action.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-add-admin-action.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-app-add-device.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-app-add-device.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-downloads-docs.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-downloads-docs.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-fingerprint-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-fingerprint-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-hero-main.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-hero-main.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-installed-context.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-installed-context.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-language-settings.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-language-settings.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-link-qr.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-link-qr.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-pin-use.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-pin-use.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-troubleshoot-app-connection.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-troubleshoot-app-connection.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/web-ready/e-shield-troubleshoot-fingerprint.webp",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/assets/e-shield/web-ready/e-shield-troubleshoot-fingerprint.webp",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/pdf-renders/e-shield-1/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/pdf-renders/e-shield-1/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/pdf-renders/e-shield-1/page-02.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-1/page-02.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/pdf-renders/e-shield-2/contact-sheet.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-2/contact-sheet.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/pdf-renders/e-shield-2/page-01.png",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/pdf-renders/e-shield-2/page-01.png",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/assets/e-shield/README.md",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/metadata/audit/legacy-flat-files/assets-README.md",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    },
+    {
+      "src": "wp-content/themes/beslock-custom/User manuals/review-previews/e-shield-user-manual-review-draft.html",
+      "dst": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/publishing/web/review-previews/e-shield-user-manual-review-draft.html",
+      "operation": "promoted",
+      "promoted_at": "2026-05-13T14:02:02Z"
+    }
+  ]
+}

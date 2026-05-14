@@ -1,0 +1,89 @@
+{
+  "schema_version": "experience-governance/1.0",
+  "generated_at": "2026-05-13T17:27:13Z",
+  "tiers": [
+    {
+      "tier": 0,
+      "label": "Self-observation",
+      "scope": "User notices and classifies a symptom."
+    },
+    {
+      "tier": 1,
+      "label": "Guided self-recovery",
+      "scope": "Documented recovery procedures (battery-replacement, emergency-power, re-pairing)."
+    },
+    {
+      "tier": 2,
+      "label": "Soft reset / reconfig",
+      "scope": "Unpair + re-pair, re-enroll credentials, network change."
+    },
+    {
+      "tier": 3,
+      "label": "Factory reset",
+      "scope": "Last-resort local recovery; data-loss accepted."
+    },
+    {
+      "tier": 4,
+      "label": "Support contact",
+      "scope": "Asynchronous support channel; logs collected."
+    },
+    {
+      "tier": 5,
+      "label": "Field service / RMA",
+      "scope": "Hardware fault confirmed; physical exchange or technician dispatch."
+    }
+  ],
+  "symptom_categories": [
+    {
+      "id": "symptom.power",
+      "tiers_in_play": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "symptom.connectivity",
+      "tiers_in_play": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "symptom.credential-failure",
+      "tiers_in_play": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "symptom.mechanical",
+      "tiers_in_play": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "symptom.firmware",
+      "tiers_in_play": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "symptom.lockout",
+      "tiers_in_play": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ]
+}

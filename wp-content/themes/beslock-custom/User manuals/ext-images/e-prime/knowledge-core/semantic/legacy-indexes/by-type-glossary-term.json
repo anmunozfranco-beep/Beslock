@@ -1,0 +1,65 @@
+[
+  {
+    "id": "term-tuya",
+    "summary": "Plataforma OEM de aplicación móvil.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-wechat",
+    "summary": "Plataforma china de mini-programas usada como canal OEM.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-2-4g",
+    "summary": "Banda de red Wi-Fi requerida.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-qr",
+    "summary": "Código gráfico de provisión.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-pin",
+    "summary": "Código numérico de acceso.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-huella",
+    "summary": "Credencial biométrica dactilar.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  },
+  {
+    "id": "term-administrador",
+    "summary": "Usuario con permisos de gestión.",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md"
+    ],
+    "validation_status": "normalized"
+  }
+]

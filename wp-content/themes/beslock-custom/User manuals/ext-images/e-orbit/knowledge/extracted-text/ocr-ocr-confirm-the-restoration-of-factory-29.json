@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-confirm-the-restoration-of-factory-29",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Confirm The Restoration Of Factory",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-29"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "3.System\n3.Installation\n4, Factory",
+  "storage_bucket": "extracted-text"
+}

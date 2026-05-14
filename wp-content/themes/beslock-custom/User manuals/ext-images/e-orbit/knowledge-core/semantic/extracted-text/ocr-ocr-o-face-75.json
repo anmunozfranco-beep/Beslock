@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-o-face-75",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "O Face",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-75"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-o-face-75.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Select a one-time password and click Add or the + sign in the top right corner; Click to obtain the password,\nthe system automatically generates a set of ten-digit password, click to complete.\nThe password must be used within 6 hours after it is generated. The password can only be used once within\nthe valid period.",
+  "legacy_storage_bucket": "extracted-text"
+}

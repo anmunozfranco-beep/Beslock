@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-after-adding-an-administrator-14",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "After Adding An Administrator,",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-14"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "verification is required each time\nto access function management\nPress \"1\" for",
+  "storage_bucket": "extracted-text"
+}

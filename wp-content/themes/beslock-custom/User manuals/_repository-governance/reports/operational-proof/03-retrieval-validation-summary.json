@@ -1,0 +1,71 @@
+{
+  "by_kind": [
+    "all",
+    "contextual",
+    "escalation",
+    "guidance",
+    "onboarding",
+    "semantic",
+    "troubleshooting"
+  ],
+  "predicates": [
+    {
+      "id": "semantic-precision-≥-threshold",
+      "kind": "semantic",
+      "metric": "fraction of retrieved nodes that match query intent"
+    },
+    {
+      "id": "semantic-recall-≥-threshold",
+      "kind": "semantic",
+      "metric": "fraction of relevant nodes returned vs declared ground-truth set"
+    },
+    {
+      "id": "contextual-coherence-no-contradiction",
+      "kind": "contextual",
+      "metric": "no chain of retrieved nodes contradicts knowledge-core verified-truth"
+    },
+    {
+      "id": "guidance-completeness-mandatory-warnings",
+      "kind": "guidance",
+      "metric": "every mandatory warning attached to selected nodes is present in package"
+    },
+    {
+      "id": "guidance-completeness-required-steps",
+      "kind": "guidance",
+      "metric": "every required step in declared workflow is present in package"
+    },
+    {
+      "id": "onboarding-coverage",
+      "kind": "onboarding",
+      "metric": "every declared onboarding flow has retrievable bound nodes"
+    },
+    {
+      "id": "troubleshooting-coverage-symptom",
+      "kind": "troubleshooting",
+      "metric": "for each symptom, ≥1 retrievable diagnostic node exists"
+    },
+    {
+      "id": "troubleshooting-coverage-causal",
+      "kind": "troubleshooting",
+      "metric": "for each symptom, declared causal edges are traversable"
+    },
+    {
+      "id": "escalation-retrievability",
+      "kind": "escalation",
+      "metric": "for every declared escalation predicate, retrievable handoff procedure exists"
+    },
+    {
+      "id": "provenance-attachment",
+      "kind": "all",
+      "metric": "every retrieval-package carries a provenance manifest"
+    }
+  ],
+  "rules": [
+    "Predicates are declared; ad-hoc validation is unsafe.",
+    "Failure of any high-severity predicate blocks promotion of the slice past proof.",
+    "Validation results are append-only and signed with provenance.",
+    "Validation cannot mutate knowledge-core under any circumstance.",
+    "Predicates are evaluated per product when scope is per-product."
+  ],
+  "schema": "operational-proof-governance/1.0"
+}

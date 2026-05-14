@@ -1,0 +1,8 @@
+# Requisitos antes de vincular
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#4
+
+- la cerradura debe tener al menos un administrador registrado
+- el telefono debe tener instalada la app `TUYA`
+- la red disponible debe ser `2.4G`
+- debes estar junto a la cerradura para completar el alta

@@ -1,0 +1,46 @@
+{
+  "id": "install-rol-de-la-guia-oem-disponible",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "![Guia OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-01",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#5"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-rol-de-la-guia-oem-disponible.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "usar el PDF para orden de montaje, identidad de piezas y orientacion del pestillo"
+    },
+    {
+      "n": 2,
+      "text": "no derivar cotas finales de perforacion desde una captura reducida del PDF"
+    },
+    {
+      "n": 3,
+      "text": "si el proveedor entrega una plantilla 1:1 despues, esa fuente debe mandar sobre esta guia"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

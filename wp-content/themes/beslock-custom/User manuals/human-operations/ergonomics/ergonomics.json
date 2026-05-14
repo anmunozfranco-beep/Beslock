@@ -1,0 +1,36 @@
+{
+  "ergonomic_discipline": [
+    "ergonomics never override safety predicates",
+    "ergonomics never compress disclosure of irreversibility or uncertainty",
+    "ergonomics never replace required dual-review with single-click flows",
+    "ergonomics never auto-default approval; default is always 'pending operator decision'"
+  ],
+  "ergonomic_principles": [
+    {
+      "id": "cognitive-load-reduction",
+      "rule": "show at most one decision per checkpoint; defer secondary information to expandable detail"
+    },
+    {
+      "id": "operational-fatigue-prevention",
+      "rule": "queues respect declared SLA tiers; no operator is auto-assigned beyond declared capacity ceiling"
+    },
+    {
+      "id": "escalation-fatigue",
+      "rule": "repeated escalations from the same trigger collapse into one tracked incident, not N notifications"
+    },
+    {
+      "id": "reviewer-overload",
+      "rule": "reviewer registry declares per-reviewer concurrent claim ceiling"
+    },
+    {
+      "id": "ambiguity-minimization",
+      "rule": "every screen states what is known, what is uncertain, and the next required action"
+    },
+    {
+      "id": "guided-operational-sequencing",
+      "rule": "checkpoints are presented in a single declared order; no parallel competing decision surfaces"
+    }
+  ],
+  "kind": "ergonomics",
+  "schema": "human-operations-governance/1.0"
+}

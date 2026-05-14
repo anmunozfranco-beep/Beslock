@@ -1,0 +1,37 @@
+{
+  "id": "install-context-que-necesitas-antes-de-empezar",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "- guia OEM disponible en `e-Flex_1",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#5"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-que-necesitas-antes-de-empezar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "guia OEM disponible en `e-Flex_1.pdf`",
+    "acceso a ambas caras y al canto de la puerta",
+    "herramientas para cuerpo de cerradura, pernos y tornillos de montaje",
+    "4 baterias AA nuevas para la validacion inicial",
+    "acceso a energia de emergencia y llave mecanica para la prueba final"
+  ],
+  "legacy_storage_bucket": "installation"
+}

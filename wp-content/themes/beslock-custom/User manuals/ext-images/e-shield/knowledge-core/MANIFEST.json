@@ -1,0 +1,37 @@
+{
+  "id": "manifest-e-shield",
+  "type": "knowledge-core-manifest",
+  "product": "e-shield",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "subdomain_counts": {
+    "install": 12,
+    "operation": 0,
+    "workflows": 9,
+    "troubleshooting": 1,
+    "warnings": 3,
+    "terminology": 5,
+    "entities": 2,
+    "capabilities": 2,
+    "specifications": 0,
+    "semantic": 50,
+    "provenance": 1,
+    "visual": 1,
+    "orchestration": 1
+  },
+  "subdomains": [
+    "install",
+    "operation",
+    "workflows",
+    "troubleshooting",
+    "warnings",
+    "terminology",
+    "entities",
+    "capabilities",
+    "specifications",
+    "semantic",
+    "provenance",
+    "visual",
+    "orchestration"
+  ]
+}

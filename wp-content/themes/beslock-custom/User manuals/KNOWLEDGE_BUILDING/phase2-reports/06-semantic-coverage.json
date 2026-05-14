@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-05-13T14:28:52Z",
+  "matrix": {
+    "e-flex": {
+      "installation": 14,
+      "configuration": 0,
+      "operation": 2,
+      "workflows": 3,
+      "warning": 2,
+      "troubleshooting": 0,
+      "capabilities": 2,
+      "terminology": 8,
+      "faq": 0
+    },
+    "e-nova": {
+      "installation": 0,
+      "configuration": 0,
+      "operation": 0,
+      "workflows": 0,
+      "warning": 0,
+      "troubleshooting": 0,
+      "capabilities": 0,
+      "terminology": 0,
+      "faq": 0
+    },
+    "e-orbit": {
+      "installation": 1,
+      "configuration": 1,
+      "operation": 8,
+      "workflows": 3,
+      "warning": 0,
+      "troubleshooting": 1,
+      "capabilities": 4,
+      "terminology": 11,
+      "faq": 0
+    },
+    "e-prime": {
+      "installation": 14,
+      "configuration": 0,
+      "operation": 2,
+      "workflows": 2,
+      "warning": 2,
+      "troubleshooting": 0,
+      "capabilities": 2,
+      "terminology": 7,
+      "faq": 0
+    },
+    "e-shield": {
+      "installation": 12,
+      "configuration": 0,
+      "operation": 0,
+      "workflows": 9,
+      "warning": 1,
+      "troubleshooting": 1,
+      "capabilities": 1,
+      "terminology": 5,
+      "faq": 0
+    },
+    "e-touch": {
+      "installation": 11,
+      "configuration": 0,
+      "operation": 2,
+      "workflows": 1,
+      "warning": 1,
+      "troubleshooting": 0,
+      "capabilities": 1,
+      "terminology": 7,
+      "faq": 0
+    }
+  },
+  "policy": "Per-bucket counts of emitted entities. 0 = bucket empty (gap)."
+}

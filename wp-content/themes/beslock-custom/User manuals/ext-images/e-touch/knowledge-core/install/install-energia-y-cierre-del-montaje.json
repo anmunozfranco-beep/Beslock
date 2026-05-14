@@ -1,0 +1,50 @@
+{
+  "id": "install-energia-y-cierre-del-montaje",
+  "type": "installation-flow",
+  "product": "e-touch",
+  "summary": "La fuente OEM confirma:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#7"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-energia-y-cierre-del-montaje.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "instala las baterias nuevas"
+    },
+    {
+      "n": 2,
+      "text": "confirma que la tapa trasera quede bien fijada"
+    },
+    {
+      "n": 3,
+      "text": "verifica que la manija exterior despierte al tacto"
+    },
+    {
+      "n": 4,
+      "text": "conserva al menos una llave mecanica fuera de la puerta"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

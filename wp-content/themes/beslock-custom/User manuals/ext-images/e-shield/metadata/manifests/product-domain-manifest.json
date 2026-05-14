@@ -1,0 +1,20 @@
+{
+  "product_slug": "e-shield",
+  "product_display": "e-Shield",
+  "schema_version": "0.1.0",
+  "generated_at": "2026-05-13T14:02:02Z",
+  "canonical_png": "ext-images/e-shield/source-of-truth/product-images/e-Shield.png",
+  "approved_sources": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield user manual.pdf"
+  ],
+  "publishing_surfaces": [],
+  "visual_system": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/e-Shield - image generation matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/generation-matrices/image-generation-matrix.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/prompts/ai-image-prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/prompts/e-Shield - AI image prompts.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/qa/image-production-status.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/references/e-shield-visual-profile.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/visual-system/validations/visual-validation.md"
+  ]
+}

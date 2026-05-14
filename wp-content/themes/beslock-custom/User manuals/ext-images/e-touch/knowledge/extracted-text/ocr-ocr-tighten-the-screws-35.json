@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-tighten-the-screws-35",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Tighten The Screws",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-35"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "secur-ing the\n\"Tuya Smart APP\"is an intelligent device management APP provided by Tuya to end consumers.Through the \"Tuya\nbattery cover\nSmart APP\",you can conveniently configure and control the smart products in the whole house,configure your favorite\nscenes and automation schemes,share your smart devices with family and friends,and enjoy the fun of smart in the\n1.Click the \"add device\"icon on the homepage of APP.\nwhole house.\n2.Click the \"Security monitoring\"category on the left and find and dlick \"Smart Door Lock\".\nAcquisition APP:Search for \"Tuya Smart\"in the application market or \"Apple Mall\"or scan the following QR code to\n3.Start Bluetooth network distribution and click \"Next\".\ndownload.\n4.Wake up the door lock keyboard,\nor touch the fingerprint to wake up,wait for the mobile phone to scan the device,and",
+  "storage_bucket": "extracted-text"
+}

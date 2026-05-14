@@ -1,0 +1,55 @@
+{
+  "id": "wf-alta-del-dispositivo-por-wi-fi-ez-mode",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "El PDF tambien muestra una variante de alta:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#7"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "mobile-app",
+  "actors": [
+    "mobile-app"
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "text": "abrir `Camera&Lock`"
+    },
+    {
+      "n": 2,
+      "text": "elegir `Lock (Wi-Fi)`"
+    },
+    {
+      "n": 3,
+      "text": "seleccionar la red Wi-Fi e introducir la contrasena"
+    },
+    {
+      "n": 4,
+      "text": "entrar a `Reset the device`"
+    },
+    {
+      "n": 5,
+      "text": "seleccionar `EZ Mode`"
+    },
+    {
+      "n": 6,
+      "text": "si falla la distribucion, cambiar a otro modo de distribucion o usar el hotspot indicado por la app"
+    }
+  ],
+  "preconditions": [],
+  "storage_bucket": "workflows"
+}

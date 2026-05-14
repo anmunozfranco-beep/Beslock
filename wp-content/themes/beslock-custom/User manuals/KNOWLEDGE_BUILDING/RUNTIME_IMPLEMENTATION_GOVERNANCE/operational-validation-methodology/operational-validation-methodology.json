@@ -1,0 +1,11 @@
+{
+  "kind": "operational-validation-methodology",
+  "methodology": [
+    "Define the smallest read-only slice that exercises retrieval + assembly + guidance.",
+    "Declare evidence per step; evidence is binding and append-only.",
+    "Run under operator observation with append-only NDJSON traces.",
+    "Promote only on documented evidence; demote on any anomaly.",
+    "Replay deterministically from the captured channels alone."
+  ],
+  "schema": "runtime-implementation-governance/1.0"
+}

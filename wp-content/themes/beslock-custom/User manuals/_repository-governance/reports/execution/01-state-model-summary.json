@@ -1,0 +1,141 @@
+{
+  "schema": "execution-governance/1.0",
+  "generated": "2026-05-13",
+  "models": [
+    {
+      "id": "lock-state",
+      "states": [
+        "locked",
+        "unlocking",
+        "unlocked",
+        "lockout"
+      ],
+      "initial": "locked",
+      "terminal": [],
+      "safe_states": [
+        "locked",
+        "unlocked"
+      ],
+      "unsafe_states": [
+        "lockout"
+      ]
+    },
+    {
+      "id": "pairing-state",
+      "states": [
+        "unpaired",
+        "pairing",
+        "paired",
+        "pairing-failed"
+      ],
+      "initial": "unpaired",
+      "terminal": [
+        "paired"
+      ],
+      "safe_states": [
+        "unpaired",
+        "paired"
+      ],
+      "unsafe_states": [
+        "pairing-failed"
+      ]
+    },
+    {
+      "id": "enrollment-state",
+      "states": [
+        "unenrolled",
+        "enrolling",
+        "enrolled",
+        "enrollment-failed"
+      ],
+      "initial": "unenrolled",
+      "terminal": [
+        "enrolled"
+      ],
+      "safe_states": [
+        "unenrolled",
+        "enrolled"
+      ],
+      "unsafe_states": [
+        "enrollment-failed"
+      ]
+    },
+    {
+      "id": "battery-state",
+      "states": [
+        "nominal",
+        "low-battery",
+        "replacement-in-progress",
+        "restored",
+        "depleted"
+      ],
+      "initial": "nominal",
+      "terminal": [],
+      "safe_states": [
+        "nominal",
+        "restored"
+      ],
+      "unsafe_states": [
+        "depleted"
+      ]
+    },
+    {
+      "id": "operational-state",
+      "states": [
+        "normal",
+        "warning",
+        "troubleshooting",
+        "recovery",
+        "blocked"
+      ],
+      "initial": "normal",
+      "terminal": [],
+      "safe_states": [
+        "normal"
+      ],
+      "unsafe_states": [
+        "blocked"
+      ]
+    },
+    {
+      "id": "install-state",
+      "states": [
+        "uninstalled",
+        "mounting",
+        "wired",
+        "configured",
+        "verified-install"
+      ],
+      "initial": "uninstalled",
+      "terminal": [
+        "verified-install"
+      ],
+      "safe_states": [
+        "uninstalled",
+        "verified-install"
+      ],
+      "unsafe_states": []
+    },
+    {
+      "id": "admin-state",
+      "states": [
+        "no-admin",
+        "admin-pending",
+        "admin-set",
+        "admin-locked-out"
+      ],
+      "initial": "no-admin",
+      "terminal": [
+        "admin-set"
+      ],
+      "safe_states": [
+        "no-admin",
+        "admin-set"
+      ],
+      "unsafe_states": [
+        "admin-locked-out"
+      ]
+    }
+  ],
+  "transition_count": 33
+}

@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-05-13T14:51:24Z",
+  "products": {
+    "e-flex": {
+      "installation_flows": 14,
+      "operation_procedures": 2,
+      "configuration": 0,
+      "troubleshooting": 0,
+      "workflows": 3,
+      "terminology": 8,
+      "warnings": 2,
+      "capabilities": 2,
+      "faq": 0,
+      "dimensions_with_coverage": 6,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.67
+    },
+    "e-nova": {
+      "installation_flows": 0,
+      "operation_procedures": 0,
+      "configuration": 0,
+      "troubleshooting": 0,
+      "workflows": 0,
+      "terminology": 0,
+      "warnings": 0,
+      "capabilities": 0,
+      "faq": 0,
+      "dimensions_with_coverage": 0,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.0
+    },
+    "e-orbit": {
+      "installation_flows": 1,
+      "operation_procedures": 8,
+      "configuration": 1,
+      "troubleshooting": 1,
+      "workflows": 3,
+      "terminology": 11,
+      "warnings": 0,
+      "capabilities": 2,
+      "faq": 0,
+      "dimensions_with_coverage": 7,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.78
+    },
+    "e-prime": {
+      "installation_flows": 14,
+      "operation_procedures": 2,
+      "configuration": 0,
+      "troubleshooting": 0,
+      "workflows": 2,
+      "terminology": 7,
+      "warnings": 2,
+      "capabilities": 2,
+      "faq": 0,
+      "dimensions_with_coverage": 6,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.67
+    },
+    "e-shield": {
+      "installation_flows": 12,
+      "operation_procedures": 0,
+      "configuration": 0,
+      "troubleshooting": 1,
+      "workflows": 9,
+      "terminology": 5,
+      "warnings": 1,
+      "capabilities": 1,
+      "faq": 0,
+      "dimensions_with_coverage": 6,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.67
+    },
+    "e-touch": {
+      "installation_flows": 11,
+      "operation_procedures": 2,
+      "configuration": 0,
+      "troubleshooting": 0,
+      "workflows": 1,
+      "terminology": 7,
+      "warnings": 1,
+      "capabilities": 1,
+      "faq": 0,
+      "dimensions_with_coverage": 6,
+      "dimensions_total": 9,
+      "coverage_ratio": 0.67
+    }
+  }
+}

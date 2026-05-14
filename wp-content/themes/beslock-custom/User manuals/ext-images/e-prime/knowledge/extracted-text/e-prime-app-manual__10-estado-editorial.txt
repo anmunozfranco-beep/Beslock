@@ -1,0 +1,10 @@
+# Estado editorial
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#10
+
+Este manual de app queda normalizado como base operativa minima.
+
+Antes de una version final para cliente, conviene validar en equipo real:
+- nombres exactos de menus y botones de la app
+- si el mini-programa de `WeChat` sigue vigente en la version comercial
+- cualquier funcion remota adicional no visible en la fuente OEM resumida

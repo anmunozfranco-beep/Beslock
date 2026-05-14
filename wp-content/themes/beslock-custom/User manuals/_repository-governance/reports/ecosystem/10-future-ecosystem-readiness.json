@@ -1,0 +1,60 @@
+{
+  "consumers": [
+    {
+      "gates": [
+        "incident-id emitter",
+        "schema-pin federation",
+        "supervision receipt emitter"
+      ],
+      "id": "federated-operational-copilots"
+    },
+    {
+      "gates": [
+        "checkpoint registry",
+        "intent declaration channel",
+        "shared-context kind: federated-operational-session"
+      ],
+      "id": "interoperable-onboarding-systems"
+    },
+    {
+      "gates": [
+        "symptom corpus ≥ 10/product",
+        "causal edges emitted",
+        "hypothesis store"
+      ],
+      "id": "troubleshooting-ecosystems"
+    },
+    {
+      "gates": [
+        "visual-risk freeze contract",
+        "visual-unavailable fallback",
+        "no-image-generation hard exclusion preserved"
+      ],
+      "id": "multimodal-runtime-ecosystems"
+    },
+    {
+      "gates": [
+        "visual provenance contract",
+        "no-rendering-runtime hard exclusion preserved"
+      ],
+      "id": "future-visual-assistance-ecosystems"
+    },
+    {
+      "gates": [
+        "ADAPTIVE precedence engine declared",
+        "skill-model emitter",
+        "warning-corpus complete on all products"
+      ],
+      "id": "adaptive-operational-runtime-federation"
+    }
+  ],
+  "doctrine": [
+    "All future ecosystem consumers remain subordinate to knowledge-core.",
+    "All future ecosystem consumers operate under declared inter-runtime contracts only.",
+    "All future ecosystem consumers are gated by declared blocking risks until resolved.",
+    "All future ecosystem consumers are supervised by default.",
+    "All future ecosystem consumers preserve directionality, provenance, and monotonicity."
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "subordinate_to": "knowledge-core (forever)"
+}

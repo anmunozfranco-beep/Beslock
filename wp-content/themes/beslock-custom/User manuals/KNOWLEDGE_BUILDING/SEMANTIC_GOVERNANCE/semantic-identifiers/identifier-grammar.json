@@ -1,0 +1,62 @@
+{
+  "schema_version": "semantic-governance/1.0",
+  "generated_at": "2026-05-13T17:11:48Z",
+  "grammar_regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+  "domain_prefixes": {
+    "terminology": [
+      "term-"
+    ],
+    "entities": [
+      "entity-"
+    ],
+    "warnings": [
+      "warning-"
+    ],
+    "capabilities": [
+      "capability-",
+      "cap-"
+    ],
+    "specifications": [
+      "spec-",
+      "specification-"
+    ],
+    "workflows": [
+      "workflow-",
+      "wf-",
+      "semantic-wf-"
+    ],
+    "procedures": [
+      "procedure-",
+      "semantic-proc-"
+    ],
+    "procedural-semantics": [
+      "semantic-proc-",
+      "semantic-wf-"
+    ],
+    "visual-intent": [
+      "intent-",
+      "visual-intent-"
+    ],
+    "visual-risk": [
+      "risk-",
+      "visual-risk-"
+    ],
+    "publication-intent": [
+      "publication-",
+      "publication-intent-"
+    ],
+    "component-visibility": [
+      "component-"
+    ],
+    "provenance": [
+      "prov-",
+      "provenance-"
+    ]
+  },
+  "stability_rules": [
+    "Published IDs are immutable.",
+    "Deprecated IDs become synonyms; never silently dropped.",
+    "Renames require <old>.lineage.json receipts.",
+    "Cross-product links use canonical concept IDs only."
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "wf-flujo-oem-base-de-alta",
+    "summary": "![Onboarding OEM de e-Touch](assets/e-touch/pdf-renders/e-touch-1/page-01",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

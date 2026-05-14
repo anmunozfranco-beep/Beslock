@@ -1,0 +1,29 @@
+{
+  "product": "e-flex",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "sources_used": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md"
+  ],
+  "sources_missing": [],
+  "sections_seen": 26,
+  "entities_emitted": 63,
+  "bucket_counts": {
+    "capabilities": 2,
+    "operation": 2,
+    "workflows": 3,
+    "warning": 2,
+    "installation": 14,
+    "terminology": 8,
+    "ocr-evidence": 32
+  },
+  "gaps": [
+    "Missing normalized user manual under source-of-truth/manuals/."
+  ],
+  "ambiguities": [
+    "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4).",
+    "Procedure proc-validacion-despues-del-alta has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8)."
+  ],
+  "ambiguity_total": 2
+}

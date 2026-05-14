@@ -1,0 +1,248 @@
+{
+  "checkpoints": [
+    "post-retrieval (read-only snapshot of bound nodes + provenance)",
+    "post-assembly (assembly-package + adaptation-record)",
+    "post-reasoning (chain-record + termination outcome)",
+    "pre-destructive (decision-record + explicit-action receipt)",
+    "post-destructive-step (state delta + checkpoint id)",
+    "pre-handoff (continuity snapshot + escalation package)"
+  ],
+  "completion_states": [
+    "completed (terminal, validation predicate satisfied)",
+    "handed-off (terminal, escalation closed by receiver)",
+    "blocked (terminal-soft, awaiting external action)",
+    "failed (terminal, contract violation or unrecoverable error)"
+  ],
+  "degradation_levels": [
+    "L0-nominal",
+    "L1-soft (one missing context dimension; safest default applied)",
+    "L2-partial (one cognition system unavailable; fallback contract used)",
+    "L3-restricted (destructive surface disabled)",
+    "L4-read-only-only (only retrieval-loop available)",
+    "L5-handoff-only (escalation is the only legal next state)"
+  ],
+  "generated": "2026-05-13T20:29:18Z",
+  "interruption_states": [
+    "user-cancel (graceful, returns to last checkpointed state)",
+    "context-loss (re-enter context-acquiring with safest defaults)",
+    "upstream-contract-violation (force escalating)",
+    "ambiguity-unresolved (force escalating)",
+    "destructive-explicit-action-timeout (force blocked)",
+    "validation-failure (force degraded or escalating)",
+    "session-suspend (force checkpointed)"
+  ],
+  "kind": "state-management",
+  "recovery_states": [
+    "restored-from-checkpoint (full)",
+    "restored-degraded (safest defaults applied for missing context)",
+    "restoration-failed (force escalating)",
+    "rebound-from-knowledge-core (read-only re-resolution)"
+  ],
+  "schema": "runtime-orchestration-governance/1.0",
+  "states": [
+    {
+      "id": "initialized",
+      "kind": "entry",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "context-acquiring",
+      "kind": "preparation",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "retrieving",
+      "kind": "loop-active",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "assembling",
+      "kind": "loop-active",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "reasoning",
+      "kind": "loop-active",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "deciding",
+      "kind": "loop-active",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "awaiting-explicit-action",
+      "kind": "supervised-gate",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "executing-supervised",
+      "kind": "destructive-gated",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "interrupted",
+      "kind": "interruption",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "checkpointed",
+      "kind": "checkpoint",
+      "supervised": false,
+      "terminal": false
+    },
+    {
+      "id": "restoring",
+      "kind": "recovery",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "degraded",
+      "kind": "degradation",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "escalating",
+      "kind": "handoff",
+      "supervised": true,
+      "terminal": false
+    },
+    {
+      "id": "handed-off",
+      "kind": "terminal",
+      "supervised": true,
+      "terminal": true
+    },
+    {
+      "id": "completed",
+      "kind": "terminal",
+      "supervised": false,
+      "terminal": true
+    },
+    {
+      "id": "blocked",
+      "kind": "terminal-soft",
+      "supervised": true,
+      "terminal": true
+    },
+    {
+      "id": "failed",
+      "kind": "terminal",
+      "supervised": true,
+      "terminal": true
+    }
+  ],
+  "transitions": [
+    {
+      "from": "initialized",
+      "to": "context-acquiring"
+    },
+    {
+      "from": "context-acquiring",
+      "to": "retrieving"
+    },
+    {
+      "from": "context-acquiring",
+      "to": "degraded"
+    },
+    {
+      "from": "retrieving",
+      "to": "assembling"
+    },
+    {
+      "from": "retrieving",
+      "to": "failed"
+    },
+    {
+      "from": "assembling",
+      "to": "reasoning"
+    },
+    {
+      "from": "assembling",
+      "to": "degraded"
+    },
+    {
+      "from": "reasoning",
+      "to": "deciding"
+    },
+    {
+      "from": "reasoning",
+      "to": "escalating"
+    },
+    {
+      "from": "deciding",
+      "to": "awaiting-explicit-action"
+    },
+    {
+      "from": "deciding",
+      "to": "completed"
+    },
+    {
+      "from": "deciding",
+      "to": "escalating"
+    },
+    {
+      "from": "awaiting-explicit-action",
+      "to": "executing-supervised"
+    },
+    {
+      "from": "awaiting-explicit-action",
+      "to": "blocked"
+    },
+    {
+      "from": "executing-supervised",
+      "to": "checkpointed"
+    },
+    {
+      "from": "executing-supervised",
+      "to": "interrupted"
+    },
+    {
+      "from": "interrupted",
+      "to": "checkpointed"
+    },
+    {
+      "from": "interrupted",
+      "to": "escalating"
+    },
+    {
+      "from": "checkpointed",
+      "to": "restoring"
+    },
+    {
+      "from": "checkpointed",
+      "to": "completed"
+    },
+    {
+      "from": "restoring",
+      "to": "retrieving"
+    },
+    {
+      "from": "restoring",
+      "to": "degraded"
+    },
+    {
+      "from": "degraded",
+      "to": "completed"
+    },
+    {
+      "from": "degraded",
+      "to": "escalating"
+    },
+    {
+      "from": "escalating",
+      "to": "handed-off"
+    }
+  ]
+}

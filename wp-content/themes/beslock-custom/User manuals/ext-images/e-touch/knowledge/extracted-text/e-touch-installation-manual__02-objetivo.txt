@@ -1,0 +1,5 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#2
+
+Ordenar la instalacion fisica de e-Touch usando la guia OEM suplementaria disponible, sin confundirla con una plantilla de perforacion a escala real.

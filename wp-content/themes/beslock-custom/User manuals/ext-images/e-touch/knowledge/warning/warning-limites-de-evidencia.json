@@ -1,0 +1,30 @@
+{
+  "id": "warning-limites-de-evidencia",
+  "type": "warning",
+  "product": "e-touch",
+  "summary": "- la fuente no describe un flujo Wi-Fi ni una nube separada; el onboarding visible es Bluetooth",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#11"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "severity": "caution",
+  "details": [
+    "la fuente no describe un flujo Wi-Fi ni una nube separada; el onboarding visible es Bluetooth",
+    "no hay evidencia suficiente aqui para asegurar automatizaciones avanzadas sin validacion adicional",
+    "las capacidades numericas de usuarios y credenciales siguen siendo claims OEM pendientes de confirmacion comercial"
+  ],
+  "storage_bucket": "warning"
+}

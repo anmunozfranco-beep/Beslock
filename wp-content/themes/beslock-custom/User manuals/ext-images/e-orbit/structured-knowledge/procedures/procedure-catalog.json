@@ -1,0 +1,164 @@
+{
+  "product": "e-orbit",
+  "procedures": [
+    {
+      "id": "add-administrator",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario -> Agregar administrador",
+      "steps": [
+        "Wake the lock panel.",
+        "Enter the menu.",
+        "Choose Agregar usuario.",
+        "Choose Agregar administrador.",
+        "Select the credential type.",
+        "Complete the enrollment.",
+        "Save the result.",
+        "Test access immediately."
+      ],
+      "validation_checks": [
+        "Access works correctly.",
+        "The user can enter without difficulty.",
+        "A backup credential exists."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#3"
+      ]
+    },
+    {
+      "id": "add-user",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario -> Agregar usuario",
+      "steps": [
+        "Wake the lock panel.",
+        "Enter the menu.",
+        "Choose Agregar usuario.",
+        "Choose Agregar usuario again.",
+        "Select the credential type.",
+        "Complete the enrollment.",
+        "Save the result.",
+        "Test access."
+      ],
+      "validation_checks": [
+        "Access works.",
+        "The user understands how to use the credential.",
+        "No administrator privilege was assigned by mistake."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#4"
+      ]
+    },
+    {
+      "id": "register-pin",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario -> Agregar administrador or Agregar usuario",
+      "steps": [
+        "Enter Agregar usuario.",
+        "Choose the user type.",
+        "Select Contrasena.",
+        "Enter the PIN.",
+        "Confirm the PIN.",
+        "Save the enrollment.",
+        "Test the credential."
+      ],
+      "validation_checks": [
+        "The credential opens correctly.",
+        "The user remembers the credential.",
+        "The system accepts the credential consistently."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#5"
+      ]
+    },
+    {
+      "id": "register-fingerprint",
+      "surface": "local-device",
+      "menu_path": "Agregar usuario -> Agregar administrador or Agregar usuario",
+      "steps": [
+        "Enter the menu.",
+        "Choose Agregar usuario.",
+        "Choose the user type.",
+        "Select Huella.",
+        "Place the finger when prompted.",
+        "Lift and place the same finger repeatedly.",
+        "Wait for confirmation.",
+        "Test the fingerprint."
+      ],
+      "validation_checks": [
+        "Fingerprint reading is stable.",
+        "Access works multiple times in a row.",
+        "The user can place the finger naturally."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    {
+      "id": "change-language",
+      "surface": "local-device",
+      "menu_path": "observed numeric flow",
+      "steps": [
+        "Wake the panel.",
+        "Enter 888#.",
+        "Enter the language system.",
+        "Select the target language.",
+        "Use 3009# for Spanish only if the commercial build confirms it.",
+        "Confirm the change when prompted."
+      ],
+      "validation_checks": [
+        "The language actually changes.",
+        "The user understands the menu.",
+        "The lock still responds normally."
+      ],
+      "validation_status": "hardware-validation-required",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#7",
+        "source-of-truth/specifications/e-Orbit_1.xls"
+      ]
+    },
+    {
+      "id": "pair-by-qr",
+      "surface": "app",
+      "menu_path": "Smart Life -> Add device -> Camera&Lock -> Video Lock (Wi-Fi)",
+      "steps": [
+        "Open Smart Life.",
+        "Start add-device flow.",
+        "Choose the lock category.",
+        "Enter Wi-Fi details.",
+        "Put the lock in network mode.",
+        "Show the QR from the phone to the lock.",
+        "Wait for confirmation.",
+        "Complete the app flow."
+      ],
+      "validation_checks": [
+        "The device appears in the app.",
+        "Connection appears stable.",
+        "The device panel can be opened in the app."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#9",
+        "source-of-truth/manuals/e-Orbit app manual.md#5"
+      ]
+    },
+    {
+      "id": "pair-by-ez-mode",
+      "surface": "app",
+      "menu_path": "Smart Life -> Camera&Lock -> Lock (Wi-Fi) -> Reset the device -> EZ Mode",
+      "steps": [
+        "Open the Wi-Fi lock flow.",
+        "Enter the target network details.",
+        "Enter Reset the device.",
+        "Switch the app to EZ Mode.",
+        "Use the fallback distribution flow.",
+        "If needed, follow the hotspot guidance shown by the app."
+      ],
+      "validation_checks": [
+        "Fallback mode actually starts.",
+        "The app indicates device discovery or progress.",
+        "The lock appears in the app when the flow succeeds."
+      ],
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#6"
+      ]
+    }
+  ]
+}

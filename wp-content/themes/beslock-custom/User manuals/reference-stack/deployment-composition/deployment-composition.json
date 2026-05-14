@@ -1,0 +1,103 @@
+{
+  "composition_invariants": [
+    "every deployment composition declares its environment, modules, supervision, and exclusions",
+    "no composition includes a module not authorized for its environment's trust zone",
+    "no composition silently widens its module set",
+    "no composition shares mutable state with another composition",
+    "every composition emits a composition-manifest at startup"
+  ],
+  "deployment_compositions": [
+    {
+      "environment": "local-supervised-runtime",
+      "exclusions": [
+        "reviewer-operations",
+        "governance-operations",
+        "oem-ingestion-system"
+      ],
+      "id": "local-supervised-stack",
+      "modules": [
+        "retrieval-runtime",
+        "orchestration-runtime",
+        "escalation-runtime",
+        "provenance-system (read-only mount)",
+        "observability-system"
+      ],
+      "supervision": "full HITL on every checkpoint"
+    },
+    {
+      "environment": "reviewer-operation-environment",
+      "exclusions": [
+        "retrieval-runtime",
+        "orchestration-runtime",
+        "escalation-runtime",
+        "production write paths"
+      ],
+      "id": "reviewer-stack",
+      "modules": [
+        "reviewer-operations",
+        "observability-system (read-only tail)",
+        "provenance-system (read-only mount)"
+      ],
+      "supervision": "reviewer claim + queue ceiling"
+    },
+    {
+      "environment": "oem-ingestion-environment",
+      "exclusions": [
+        "retrieval-runtime",
+        "orchestration-runtime",
+        "production knowledge-core writes"
+      ],
+      "id": "ingestion-stack",
+      "modules": [
+        "oem-ingestion-system",
+        "observability-system",
+        "provenance-system (staged-write only)"
+      ],
+      "supervision": "OEM-reviewer dual-review"
+    },
+    {
+      "environment": "local-supervised-runtime or staging",
+      "exclusions": [
+        "orchestration emission to production",
+        "reviewer-operations write paths"
+      ],
+      "id": "replay-stack",
+      "modules": [
+        "replay-system",
+        "retrieval-runtime (re-call only)",
+        "observability-system (read-only tail)"
+      ],
+      "supervision": "operator-initiated; no auto-replay"
+    },
+    {
+      "environment": "any (read-only consumer)",
+      "exclusions": [
+        "all back-channel mutation"
+      ],
+      "id": "observability-stack",
+      "modules": [
+        "observability-system"
+      ],
+      "supervision": "consumer identity declared"
+    },
+    {
+      "environment": "controlled-pilot",
+      "exclusions": [
+        "governance-console exposure",
+        "oem-ingestion-system"
+      ],
+      "id": "controlled-pilot-stack",
+      "modules": [
+        "retrieval-runtime",
+        "orchestration-runtime",
+        "escalation-runtime",
+        "provenance-system (read-only)",
+        "observability-system",
+        "reviewer-operations (scoped)"
+      ],
+      "supervision": "full HITL + escalation-supervisor on slice-halt"
+    }
+  ],
+  "kind": "deployment-composition",
+  "schema": "reference-stack-governance/1.0"
+}

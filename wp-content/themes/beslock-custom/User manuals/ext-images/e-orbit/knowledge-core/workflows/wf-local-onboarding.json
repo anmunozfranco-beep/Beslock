@@ -1,0 +1,46 @@
+{
+  "id": "wf-local-onboarding",
+  "type": "workflow",
+  "product": "e-orbit",
+  "summary": "Initial local onboarding",
+  "language": "en",
+  "validation_status": "verified",
+  "confidence": "high",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#local-onboarding"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "surface": "lock",
+  "outcomes": [
+    "administrator-created",
+    "pin-registered",
+    "fingerprint-registered"
+  ],
+  "preconditions": [
+    "lock installed correctly",
+    "panel wakes correctly",
+    "primary administrator designated"
+  ],
+  "steps": [
+    "Create the administrator from the user menu.",
+    "Register at least one PIN.",
+    "Register at least one fingerprint.",
+    "Validate both credentials immediately."
+  ],
+  "validation_checks": [],
+  "authorized_visual_renderer": "ComfyUI"
+}

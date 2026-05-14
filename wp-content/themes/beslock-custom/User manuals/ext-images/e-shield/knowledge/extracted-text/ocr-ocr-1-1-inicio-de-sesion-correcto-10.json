@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-1-1-inicio-de-sesion-correcto-10",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "1.1 Inicio De Sesión Correcto",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-10"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "La primera vez que utilice la aplicación de la cerradura, $1 no hay datos previos de la cerradura,\nla página de inicio mostrará el botón para añadir la cerradura Si ya hay alguna cerradura o llave\nen la cuenta se mostrará la información de la cerradura",
+  "storage_bucket": "extracted-text"
+}

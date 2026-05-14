@@ -1,0 +1,45 @@
+{
+  "candidate_causes": [
+    "candidato pendiente de revisión OEM"
+  ],
+  "category": "pairing-failures",
+  "channel_targets": [
+    "support",
+    "rag",
+    "api"
+  ],
+  "confidence": "candidate",
+  "diagnostic_questions": [
+    "¿se puede reproducir el síntoma de forma consistente?",
+    "¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?",
+    "¿hay eventos recientes (cambio de batería, reset, actualización)?"
+  ],
+  "escalation_required": true,
+  "extraction_lineage": [
+    "corpus-enrichment/troubleshooting-candidate/ts-pairing-failures-candidate"
+  ],
+  "id": "ts-pairing-failures-candidate",
+  "language": "es-CO",
+  "menu_path": "",
+  "next_actions": [
+    "elevar el caso al canal de revisión OEM antes de operar",
+    "registrar el síntoma observado en el log operacional"
+  ],
+  "ocr_dependency": "none",
+  "product": "e-prime",
+  "schema_version": "knowledge-core/1.0",
+  "source_refs": [
+    "tools/corpus_enrichment.py",
+    "doctrine: corpus-enrichment categories"
+  ],
+  "summary": "fallo al vincular la cerradura con la app o el módulo OEM",
+  "surface": "runtime-corpus",
+  "symptoms": [
+    "la app no detecta la cerradura",
+    "la vinculación se interrumpe a mitad de proceso",
+    "la cerradura aparece como ya vinculada en otro dispositivo"
+  ],
+  "type": "troubleshooting-candidate",
+  "updated_at": "2026-05-13T21:33:02Z",
+  "validation_status": "candidate-pending-review"
+}

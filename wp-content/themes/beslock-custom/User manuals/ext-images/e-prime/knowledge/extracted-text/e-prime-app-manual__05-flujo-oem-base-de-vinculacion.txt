@@ -1,0 +1,11 @@
+# Flujo OEM base de vinculacion
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#5
+
+Segun la fuente OCR, el flujo local de referencia es:
+1. en la cerradura, despierta la pantalla con `*+#`
+2. verifica la informacion de administrador
+3. presiona `2` para `wireless settings`
+4. presiona `1` para `add network`
+5. abre `TUYA APP` en el telefono
+6. sigue el asistente de la app para completar la distribucion de red

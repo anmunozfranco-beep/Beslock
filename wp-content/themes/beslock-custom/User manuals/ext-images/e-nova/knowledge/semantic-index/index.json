@@ -1,0 +1,37 @@
+{
+  "product": "e-nova",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "language": "es-CO",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "totals": {
+    "entities": 14,
+    "ocr-evidence": 14
+  },
+  "by_type": {
+    "extracted-text": [
+      "ocr-ocr-nano-cerradura-pomo-inteligente-1",
+      "ocr-ocr-paso-1-2",
+      "ocr-ocr-paso-2-3",
+      "ocr-ocr-paso-3-4",
+      "ocr-ocr-paso-4-5",
+      "ocr-ocr-7-conexion-en-un-estado-unificadola-cerradura-6",
+      "ocr-ocr-el-registro-de-huellas-dactilares-solo-se-puede-hacer-a-trav",
+      "ocr-ocr-5-veces-despues-de-abrir-la-puerta-8",
+      "ocr-ocr-borrar-datos-a-traves-de-la-app-tuya-9",
+      "ocr-ocr-29300-portale-ein-go-10",
+      "ocr-ocr-5-segundos-entrara-en-el-estado-de-recuperacion-de-fabrica-l",
+      "ocr-ocr-funciones-rendimiento-parametros-observaciones-12",
+      "ocr-ocr-9-s50ua-consumo-de-energia-en-modo-de-espera-13",
+      "ocr-ocr-metodo-de-desbloqueo-huella-dactilar-lave-app-14"
+    ]
+  }
+}

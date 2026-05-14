@@ -1,0 +1,46 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "opportunities": [
+    {
+      "id": "val.silhouette-tolerance",
+      "summary": "Silhouette comparison vs canonical PNG with ≤2 px tolerance on 1024-ref."
+    },
+    {
+      "id": "val.component-anchor-tolerance",
+      "summary": "Per-component position tolerance check using component-visibility-map.json (≤4 px)."
+    },
+    {
+      "id": "val.sensor-count",
+      "summary": "Detected sensor count must equal anchor map sensor count."
+    },
+    {
+      "id": "val.keypad-grid",
+      "summary": "Keypad row/column inference must match anchor map."
+    },
+    {
+      "id": "val.handle-orientation",
+      "summary": "Handle orientation classifier (left/right/none) vs anchor map."
+    },
+    {
+      "id": "val.cross-product-contamination",
+      "summary": "Reject if foreign-product geometry (e.g., e-shield rim-lock box in an e-orbit run) is detected."
+    },
+    {
+      "id": "val.text-presence",
+      "summary": "Reject any candidate containing legible text other than approved logos/marks."
+    },
+    {
+      "id": "val.human-presence",
+      "summary": "Reject any candidate containing a face or full human figure."
+    },
+    {
+      "id": "val.publication-format",
+      "summary": "Per-channel resolution/aspect/format/alt-text validation hook."
+    },
+    {
+      "id": "val.run-record-compliance",
+      "summary": "Promotion-time check that every approved visual has a complete run record."
+    }
+  ]
+}

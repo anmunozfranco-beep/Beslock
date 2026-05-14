@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-instrucciones-de-instalacion-2",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "Instrucciones De Instalación",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-2"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-instrucciones-de-instalacion-2.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "Installation",
+  "raw_text": "nes aos\n1. Definición de términos y teclas de función\nAdministrador: Se refiere a las huellas dactilares, contraseñas y tarjetas de los usuarios con\nprivilegios de gestión.\nInformación de usuario: Datos registrados (huellas, contraseñas y tarjetas) tanto de\nadministradores como de usuarios regulares.\nTecla *: Tecla de borrar o retroceder. Al ingresar una contraseña, púlsela para borrar el\núltimo digito.\nTecla #: Tecla de confirmación, acceso al menú de funciones o timbre.\n2. Restaurar ajustes de fábrica\nMantenga presionado el botón interno SET en el panel posterior.\nLa voz indicará: \"Para restaurar los ajustes de fábrica, presione # para confirmar o * para cancelar\".\nPresione 4 y el sistema se reiniciará al modo de fábrica.\nNota: En estado de fábrica, cualquier huella o contraseña puede abrir la cerradura.\nEl restablecimiento no borrará los parámetros de dirección de giro ni de torsión ya configurados.\n3. Aviso de batería baja\nCuando la bateria sea inferior al 25%, el sistema emitirá el aviso: \"Bateria baja, por favor\nreemplace las baterías\". Tras el aviso, podrá abrir la cerradura unas 50 veces más, pero se\nrecomienda cargarla o cambiar las pilas de inmediato.\n4. Alimentación de emergencia por USB\nSi la batería se agota, conecte una bateria externa (Power Bank) al puerto USB mediante un\ncable de datos para suministrar energía de emergencia. Una vez conectado, tardará unos 30\nsegundos en permitir el desbloqueo.\n5. Alarma por usuario ilegal\nSi se ingresa una huella, contraseña o tarjeta incorrecta S veces consecutivas, el sistema\ndirá: \"Usuario ilegal, intrusión ilegal, el propietario ha sido notificado\" y se bloqueará por 90\nsegundos. Durante este tiempo, la cerradura no responderá a ninguna operación.\n6. Contraseña virtual\nAl abrir con contraseña, puede añadir números aleatorios antes y después de su código real\n(siempre que el total no supere los 16 dígitos). Presione “#\" al finalizar para confirmar.\nEsto evita que terceros memoricen su código real.",
+  "legacy_storage_bucket": "extracted-text"
+}

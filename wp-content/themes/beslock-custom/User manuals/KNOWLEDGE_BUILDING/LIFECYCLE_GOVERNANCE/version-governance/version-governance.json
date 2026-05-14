@@ -1,0 +1,77 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "axes": [
+    {
+      "axis": "ontology",
+      "scheme": "semver",
+      "scope": "global",
+      "breaking_triggers": [
+        "domain-removed",
+        "field-removed",
+        "id-format-changed"
+      ]
+    },
+    {
+      "axis": "schema",
+      "scheme": "semver",
+      "scope": "per-schema",
+      "breaking_triggers": [
+        "required-field-added",
+        "field-type-changed"
+      ]
+    },
+    {
+      "axis": "terminology",
+      "scheme": "calver",
+      "scope": "global",
+      "breaking_triggers": [
+        "canonical-term-renamed-without-alias"
+      ]
+    },
+    {
+      "axis": "workflow",
+      "scheme": "semver",
+      "scope": "per-product",
+      "breaking_triggers": [
+        "step-reordered",
+        "step-removed",
+        "warning-removed"
+      ]
+    },
+    {
+      "axis": "procedure",
+      "scheme": "semver",
+      "scope": "per-product",
+      "breaking_triggers": [
+        "safety-step-removed",
+        "input-precondition-changed"
+      ]
+    },
+    {
+      "axis": "governance-doc",
+      "scheme": "revision",
+      "scope": "per-doctrine",
+      "breaking_triggers": [
+        "principle-removed",
+        "authority-area-removed"
+      ]
+    },
+    {
+      "axis": "product-release",
+      "scheme": "oem-tag",
+      "scope": "per-product",
+      "breaking_triggers": [
+        "hardware-revision",
+        "firmware-major-change"
+      ]
+    }
+  ],
+  "rules": [
+    "Every versioned artifact records: previous-version, change-type (additive/breaking/corrective), change-rationale.",
+    "Breaking changes MUST emit a change-impact report (see TASK 7) before promotion.",
+    "Calver applies to terminology releases (terminology drifts slowly; date-anchored audit trail preferred).",
+    "Governance doctrine is revision-numbered, not semver — principles do not 'minor-bump'.",
+    "Product-release versions are OEM-authoritative; the knowledge center mirrors, never invents, them."
+  ]
+}

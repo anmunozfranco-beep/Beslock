@@ -1,0 +1,74 @@
+[
+  {
+    "id": "proc-requisitos-antes-de-vincular",
+    "summary": "La hoja tecnica indica que el producto usa `Tuya WiFi` integrado y no requiere gateway adicional",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-primeros-pasos",
+    "summary": "Antes de empezar, verifica lo siguiente:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-agregar-un-administrador",
+    "summary": "Agregar usuario → Agregar administrador",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-agregar-un-usuario",
+    "summary": "Agregar usuario → Agregar usuario",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-registrar-una-contrasena-o-pin",
+    "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-registrar-una-huella",
+    "summary": "Agregar usuario → Agregar administrador / Agregar usuario",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-cambiar-el-idioma",
+    "summary": "La extracción disponible muestra ingreso con `888#` y selección de español con `3009#`",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-conectar-la-cerradura-a-la-aplicacion",
+    "summary": "La app asociada para este proyecto es **Smart Life**",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "proc-vincular-por-qr",
+    "summary": "abre **Smart Life",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

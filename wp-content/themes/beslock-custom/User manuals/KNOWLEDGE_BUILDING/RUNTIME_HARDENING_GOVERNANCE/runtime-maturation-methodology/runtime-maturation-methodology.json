@@ -1,0 +1,11 @@
+{
+  "kind": "runtime-maturation-methodology",
+  "principles": [
+    "Identify the bottleneck (operational density, not architecture).",
+    "Add additive supplemental corpus surfaces.",
+    "Extend retrieval routing without weakening safety.",
+    "Add a deterministic validator (replay) before claiming maturity.",
+    "Govern the change as a single layer; do not spawn macro-governance."
+  ],
+  "schema": "runtime-hardening-governance/1.0"
+}

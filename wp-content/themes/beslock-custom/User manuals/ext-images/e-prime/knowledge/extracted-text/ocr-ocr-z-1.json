@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-z-1",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "Z系列⽤户⼿册",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-1"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "⼀、产品布局：\n注：安装时请保持前后⾯板内部清洁\n前⾯板\n后⾯板\n内执⼿\n电池盒\n反锁旋钮\n固定螺丝孔\n复位按键\n联⽹模块(选配)\n电池盖\n数字密码按键\n刷卡区域\n指纹识别区\n外执⼿\n应急电源\n机械钥匙",
+  "storage_bucket": "extracted-text"
+}

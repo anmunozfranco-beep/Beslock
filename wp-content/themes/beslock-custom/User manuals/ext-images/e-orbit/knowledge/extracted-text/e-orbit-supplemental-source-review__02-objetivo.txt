@@ -1,0 +1,5 @@
+# Objetivo
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#2
+
+Determinar que aportan realmente `e-Orbit_1.xls` y `e-Orbit_2.pdf`, separar conocimiento util de app, especificaciones y contexto visual, y dejar explicito que estas fuentes no equivalen a una plantilla 1:1 de instalacion.

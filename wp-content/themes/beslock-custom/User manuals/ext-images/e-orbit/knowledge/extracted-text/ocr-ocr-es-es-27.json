@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-es-es-27",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Es) Es",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-27"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "ings\nNM\n\"Success\"\n(Please refer to the appendix of the manual for detailed operation of networked products).\nNote: The distribution function only supports one mobile phone for distribution. If you enter the networking\nconfiguration again, the last distribution data will be automatically cleared. Users should be cautious when\noperating.\n@Volume\n| 3.System settings |\nsettings",
+  "storage_bucket": "extracted-text"
+}

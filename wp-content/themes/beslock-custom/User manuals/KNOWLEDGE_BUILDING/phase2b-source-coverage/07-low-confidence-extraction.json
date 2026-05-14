@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-05-13T14:51:24Z",
+  "products": {
+    "e-flex": [
+      {
+        "kind": "low-ocr-confidence",
+        "avg_confidence": 88.0,
+        "method": "ocrmypdf"
+      },
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#4)."
+      },
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-validacion-despues-del-alta has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex app manual.md#8)."
+      },
+      {
+        "kind": "procedure-with-no-steps",
+        "ids": [
+          "proc-requisitos-antes-de-vincular",
+          "proc-validacion-despues-del-alta"
+        ]
+      }
+    ],
+    "e-nova": [
+      {
+        "kind": "low-ocr-confidence",
+        "avg_confidence": 84.3,
+        "method": "pytesseract"
+      }
+    ],
+    "e-orbit": [
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5)."
+      },
+      {
+        "kind": "duplicate-entity-ids-in-manifest",
+        "items": [
+          {
+            "id": "cap-objetivo",
+            "occurrences": 3
+          }
+        ]
+      },
+      {
+        "kind": "procedure-with-no-steps",
+        "ids": [
+          "proc-requisitos-antes-de-vincular"
+        ]
+      },
+      {
+        "kind": "troubleshooting-misclassified-as-sitemap",
+        "ids": [
+          "ts-paginas-prioritarias-para-fase-1"
+        ]
+      }
+    ],
+    "e-prime": [
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#4)."
+      },
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-validacion-despues-del-alta has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md#8)."
+      },
+      {
+        "kind": "procedure-with-no-steps",
+        "ids": [
+          "proc-requisitos-antes-de-vincular",
+          "proc-validacion-despues-del-alta"
+        ]
+      }
+    ],
+    "e-shield": [
+      {
+        "kind": "low-ocr-confidence",
+        "avg_confidence": 84.9,
+        "method": "pytesseract"
+      }
+    ],
+    "e-touch": [
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-requisitos-antes-de-vincular has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#4)."
+      },
+      {
+        "kind": "extractor-ambiguity",
+        "detail": "Procedure proc-reset-y-recuperacion has no extractable numbered steps (source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#10)."
+      },
+      {
+        "kind": "procedure-with-no-steps",
+        "ids": [
+          "proc-requisitos-antes-de-vincular",
+          "proc-reset-y-recuperacion"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "promoted_domains": [
+    "visual-style-policy",
+    "human-interaction-policy",
+    "mechanical-consistency",
+    "truth-source",
+    "rendering-constraints",
+    "comfy-contracts",
+    "negative-prompts",
+    "visual-risk",
+    "visual-validation",
+    "visual-lineage",
+    "publication-constraints"
+  ],
+  "doctrine_to_runtime_links": [
+    {
+      "doctrine": "doctrine/01-purpose-and-philosophy.md",
+      "runtime": "visual-system/_governance/visual-style-policy/policy.md"
+    },
+    {
+      "doctrine": "doctrine/02-truth-source-doctrine.md",
+      "runtime": "visual-system/_governance/truth-source/policy.md"
+    },
+    {
+      "doctrine": "doctrine/03-mechanical-consistency-doctrine.md",
+      "runtime": "visual-system/_governance/mechanical-consistency/policy.md"
+    },
+    {
+      "doctrine": "doctrine/04-human-interaction-doctrine.md",
+      "runtime": "visual-system/_governance/human-interaction-policy/policy.md"
+    },
+    {
+      "doctrine": "doctrine/05-rendering-style-doctrine.md",
+      "runtime": "visual-system/_governance/rendering-constraints/policy.md"
+    },
+    {
+      "doctrine": "doctrine/06-comfy-constitution.md",
+      "runtime": "visual-system/_governance/comfy-contracts/policy.md"
+    },
+    {
+      "doctrine": "doctrine/07-semantic-orchestration-doctrine.md",
+      "runtime": "visual-system/_governance/comfy-contracts/policy.md"
+    },
+    {
+      "doctrine": "doctrine/08-validation-philosophy.md",
+      "runtime": "visual-system/_governance/visual-validation/policy.md"
+    },
+    {
+      "doctrine": "doctrine/09-visual-risk-philosophy.md",
+      "runtime": "visual-system/_governance/visual-risk/policy.md"
+    },
+    {
+      "doctrine": "doctrine/10-publication-philosophy.md",
+      "runtime": "visual-system/_governance/publication-constraints/policy.md"
+    },
+    {
+      "doctrine": "doctrine/11-lineage-and-provenance-doctrine.md",
+      "runtime": "visual-system/_governance/visual-lineage/policy.md"
+    }
+  ],
+  "promotion_rule": "Doctrine documents reference the runtime authority they descend to. They do not restate operational rules.",
+  "products_in_scope": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "risk-missing-mechanical-key",
+  "type": "visual-risk",
+  "product": "e-touch",
+  "summary": "Owner does not realise they have a mechanical fallback during an emergency.",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/component-visibility/component-visibility-map.json"
+  ],
+  "extraction_lineage": [
+    "tools/knowledge_core_semantic_enrich.py::RISK_CATALOG"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "severity": "high",
+  "trigger_components": [
+    "mechanical-key-slot"
+  ],
+  "failure_mode": "Owner does not realise they have a mechanical fallback during an emergency.",
+  "mitigation": "Future ComfyUI workflow MUST anchor the listed trigger_components against the OEM PNG references and refuse to render this asset if anchors are missing.",
+  "downstream_consumers": [
+    "comfyui",
+    "visual-qa"
+  ]
+}

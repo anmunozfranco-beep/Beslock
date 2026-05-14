@@ -1,0 +1,42 @@
+{
+  "id": "sup-e-prime-2-section-002",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "2 Brisa M Error Haiilg A Iaf Apsa Eas Rb",
+  "language": "es-CO",
+  "validation_status": "low-confidence-evidence-only",
+  "confidence": "ocr-very-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf#page=?",
+    "generated_manuals_supplemental/e-prime-2/manual.json#sections[1]"
+  ],
+  "extraction_lineage": [
+    "generated_manuals_supplemental/e-prime-2/manual.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "title": "2 Brisa M Error Haiilg A Iaf Apsa Eas Rb",
+  "page": "?",
+  "text": [
+    "S48 Bie is 2 5S fe AR I ee TE.",
+    "6a MRIS RIM EAR WRITER RIL RAH ERAN A.",
+    "TEBREARYH AF RAR AD MATS AR, fh A EI",
+    "Hid HAIT FE, DRA RP ce",
+    "8 3S EB ith, Se ik Se Se FF Gh Ba AA 0 8 ET AP IE, Bh A TIA",
+    "he -. \"es"
+  ],
+  "ocr_avg_confidence": 26.9,
+  "non_canonical": true,
+  "candidate_for_semantic_extraction": true,
+  "supplemental_source": "e-prime-2"
+}

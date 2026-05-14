@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-2-automatically-cancel-the-normally-open-mode-after-verifyin",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "2 Automatically Cancel The Normally Open Mode After Verifying",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-63"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "that the administrator or user is correct;\n3 Press the \"#\"key in the front handle to cancel the normally",
+  "storage_bucket": "extracted-text"
+}

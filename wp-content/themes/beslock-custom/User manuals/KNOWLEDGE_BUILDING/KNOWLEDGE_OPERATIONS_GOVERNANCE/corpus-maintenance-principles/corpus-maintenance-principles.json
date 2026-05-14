@@ -1,0 +1,10 @@
+{
+  "kind": "corpus-maintenance-principles",
+  "principles": [
+    "Canonical per-product knowledge-core JSON is read-only forever to the runtime and to operators outside the lifecycle.",
+    "Mutations occur only through declared events: promotion, demotion, binding, supersession, archival.",
+    "Stale records are queued for re-review, not silently kept and not deleted.",
+    "Coverage gaps are visible by symmetry across the 6 products."
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

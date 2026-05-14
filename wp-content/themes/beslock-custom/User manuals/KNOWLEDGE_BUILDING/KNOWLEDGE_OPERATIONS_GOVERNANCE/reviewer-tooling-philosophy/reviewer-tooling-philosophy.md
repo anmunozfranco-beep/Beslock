@@ -1,0 +1,10 @@
+# Reviewer Tooling Philosophy
+
+Reviewer tooling is a thin operator surface, not an application.
+
+## Principles
+
+- Reviewer tooling is a thin operator surface, not an application.
+- Reviewer tooling cannot edit canonical knowledge-core JSON.
+- Reviewer tooling cannot promote past the reviewer's tier_ceiling.
+- Reviewer tooling surfaces evidence; it does not invent it.

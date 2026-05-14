@@ -1,0 +1,8 @@
+# Problemas y cautelas basicas
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#10
+
+- si el equipo no responde, revisa primero bateria, cableado y conexion del circuito antes de desmontar
+- la fuente OEM recuerda reemplazar baterias con regularidad para evitar fugas
+- cuando la bateria esta baja, el indicador puede encender en rojo y aun dejar un numero limitado de aperturas residuales
+- no cierres el trabajo sin probar pestillo, huella, password y energia de emergencia

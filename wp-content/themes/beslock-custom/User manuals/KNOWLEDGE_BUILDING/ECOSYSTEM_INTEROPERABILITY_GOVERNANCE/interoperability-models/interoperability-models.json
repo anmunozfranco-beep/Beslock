@@ -1,0 +1,95 @@
+{
+  "generated": "2026-05-13T20:43:33Z",
+  "kind": "interoperability-models",
+  "models": [
+    {
+      "destructive_surface": false,
+      "from": "retrieval-runtime",
+      "id": "retrieval↔copilot",
+      "kind": "read-only context supply",
+      "to": "operational-copilot"
+    },
+    {
+      "destructive_surface": false,
+      "from": "operational-copilot",
+      "id": "copilot↔troubleshooting",
+      "kind": "supervised handoff with continuity snapshot",
+      "to": "troubleshooting-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "operational-copilot",
+      "id": "copilot↔onboarding",
+      "kind": "supervised handoff with intent declaration",
+      "to": "onboarding-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "troubleshooting-runtime",
+      "id": "troubleshooting↔visual",
+      "kind": "read-only visual surface request (gated by visual-risk freeze)",
+      "to": "visual-assistance-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "onboarding-runtime",
+      "id": "onboarding↔continuity",
+      "kind": "checkpoint emission (append-only)",
+      "to": "continuity-system"
+    },
+    {
+      "destructive_surface": false,
+      "from": "troubleshooting-runtime",
+      "id": "troubleshooting↔continuity",
+      "kind": "checkpoint + hypothesis snapshot (append-only)",
+      "to": "continuity-system"
+    },
+    {
+      "destructive_surface": false,
+      "from": "any-runtime",
+      "id": "any↔publication",
+      "kind": "read-only publication contract; never bypasses lifecycle P-tier gates",
+      "to": "publication-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "continuity-system",
+      "id": "continuity↔any",
+      "kind": "context inheritance (read-only, with non-inheritable signals filtered)",
+      "to": "any-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "operational-copilot",
+      "id": "copilot↔visual",
+      "kind": "read-only visual reference; no image generation",
+      "to": "visual-assistance-runtime"
+    },
+    {
+      "destructive_surface": false,
+      "from": "any-runtime",
+      "id": "any↔retrieval",
+      "kind": "read-only retrieval request bound by declared access pattern",
+      "to": "retrieval-runtime"
+    }
+  ],
+  "rules": [
+    "Interoperability is bilateral and declared; no undeclared edges may be opened at runtime.",
+    "Interoperability never creates a destructive cross-runtime path (destructive surface remains intra-runtime + supervised).",
+    "Interoperability messages carry provenance (origin runtime, schema version, incident-id when available).",
+    "Interoperability cannot bridge two runtimes via a third, undeclared intermediary.",
+    "Interoperability with publication-runtime cannot bypass lifecycle P-tier gates.",
+    "Interoperability with visual-assistance-runtime cannot trigger image generation, PDF rendering, or any rendered artefact.",
+    "Interoperability respects knowledge-core directionality (read-only); cross-runtime mutation of knowledge-core is forbidden."
+  ],
+  "runtime_kinds": [
+    "onboarding-runtime",
+    "troubleshooting-runtime",
+    "retrieval-runtime",
+    "operational-copilot",
+    "visual-assistance-runtime",
+    "publication-runtime",
+    "continuity-system"
+  ],
+  "schema": "ecosystem-interoperability-governance/1.0"
+}

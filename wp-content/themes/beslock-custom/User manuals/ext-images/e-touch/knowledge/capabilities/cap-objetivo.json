@@ -1,0 +1,27 @@
+{
+  "id": "cap-objetivo",
+  "type": "capability",
+  "product": "e-touch",
+  "summary": "Separar el flujo de vinculacion Bluetooth y gestion desde app para e-Touch, usando la evidencia OEM suplementaria disponible",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch app manual.md#2"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "details": [
+    "Separar el flujo de vinculacion Bluetooth y gestion desde app para e-Touch, usando la evidencia OEM suplementaria disponible."
+  ],
+  "storage_bucket": "capabilities"
+}

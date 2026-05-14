@@ -1,0 +1,22 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/review-workflows/",
+  "consensus_rules_count": 5,
+  "irreversible_operation_review_required_for": [
+    "factory-reset",
+    "admin-wipe",
+    "firmware-update",
+    "all warnings tagged irreversible-operation"
+  ],
+  "kind": "review-workflow-summary",
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "workflow_steps": [
+    "intake",
+    "triage",
+    "evidence-pull",
+    "single-review",
+    "dual-review",
+    "consensus",
+    "signoff",
+    "post-audit"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-9-3-grupo-de-dispositivos-29",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9.3 Grupo De Dispositivos",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-29"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "En caso de tener un gran número de dispositivos enlazados, podrá utilizar el apartado “Grupo de\ndispositivos” situado en la configuración y presionando el ícono “+” de la esquina superior\nderecha para organizarlos mediante carpetas.\nhen tae arm tenes oe\nO Para e me rar un grupo o modi car 5. “ome, cesiizar a la 29. esca junto al “ombre",
+  "storage_bucket": "extracted-text"
+}

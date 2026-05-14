@@ -1,0 +1,233 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:59:53Z",
+  "definition": "Assets relocated to transitional/quarantine destinations awaiting human ownership decision.",
+  "count": 25,
+  "items": [
+    {
+      "source": "ACTIVE_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/ACTIVE_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "HEADER_CSS_CONSOLIDATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HEADER_CSS_CONSOLIDATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "HEADER_MIGRATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HEADER_MIGRATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "HEADER_RUNTIME_CLEANUP_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HEADER_RUNTIME_CLEANUP_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "HOMEPAGE_SURFACE_MIGRATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/HOMEPAGE_SURFACE_MIGRATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "LEGACY_RUNTIME_AUDIT_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/LEGACY_RUNTIME_AUDIT_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "MAIN_CSS_DECOMPOSITION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/MAIN_CSS_DECOMPOSITION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "PRIMARY_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/PRIMARY_BOOTSTRAP_CONSOLIDATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "PRODUCT_CARD_CONSOLIDATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/PRODUCT_CARD_CONSOLIDATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "PRODUCT_CARD_MIGRATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/PRODUCT_CARD_MIGRATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "PRODUCT_CARD_PRESENTATION_OWNERSHIP_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/PRODUCT_CARD_PRESENTATION_OWNERSHIP_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "PRODUCT_CARD_RUNTIME_OWNERSHIP_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/PRODUCT_CARD_RUNTIME_OWNERSHIP_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "STOREFRONT_OWNERSHIP_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/STOREFRONT_OWNERSHIP_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "UTILITIES_MIGRATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/UTILITIES_MIGRATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "WORKTREE_NORMALIZATION_SUMMARY.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/migration-history/frontend-summaries/WORKTREE_NORMALIZATION_SUMMARY.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "F",
+      "sub_label": "frontend-migration-summary-legacy",
+      "rationale": "Historical WordPress theme migration receipt; not Beslock product knowledge. Relocated to migration history per recommended-moves manifest."
+    },
+    {
+      "source": "data/products.json",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/quarantine/data-products/products.json",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "C",
+      "sub_label": "product-catalog-draft",
+      "rationale": "Ambiguous ownership (legacy storefront vs. knowledge-core product list). Quarantined pending human classification."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/ai-project-context-export.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/ai-project-context-export.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/installation-manual-template.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/installation-manual-template.md",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-document-package-maturity-matrix.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-document-package-maturity-matrix.md",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-document-package-standard.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-document-package-standard.md",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-review-draft-index.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-review-draft-index.md",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-standardization-current-state-audit.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-standardization-current-state-audit.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-web-integration-matrix.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-web-integration-matrix.md",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/manual-web-integration-manifest.json",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/manual-standards/manual-web-integration-manifest.json",
+      "method": "fs-mv",
+      "tracked_in_git": false,
+      "category": "C",
+      "sub_label": "manual-standardization-draft",
+      "rationale": "Loose manual-standardisation draft inside the canonical area but not owned by any product nucleus. Marked transitional pending human ownership decision."
+    },
+    {
+      "source": "wp-content/themes/beslock-custom/User manuals/visual-system-current-state-audit.md",
+      "destination": "wp-content/themes/beslock-custom/User manuals/_repository-governance/transitional/visual-system-audits/visual-system-current-state-audit.md",
+      "method": "git-mv",
+      "tracked_in_git": true,
+      "category": "C",
+      "sub_label": "visual-system-audit-draft",
+      "rationale": "Audit doc of the visual system. Relocated as transitional documentation only — no visual pipeline code is touched."
+    }
+  ]
+}

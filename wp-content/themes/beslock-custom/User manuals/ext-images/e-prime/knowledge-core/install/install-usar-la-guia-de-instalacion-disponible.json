@@ -1,0 +1,46 @@
+{
+  "id": "install-usar-la-guia-de-instalacion-disponible",
+  "type": "installation-flow",
+  "product": "e-prime",
+  "summary": "![Guia de instalacion de e-Prime](assets/e-prime/pdf-renders/e-prime-1/page-04",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md#6"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-usar-la-guia-de-instalacion-disponible.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "usa el PDF como referencia de secuencia y orientacion de piezas"
+    },
+    {
+      "n": 2,
+      "text": "no derives perforaciones finales a escala real desde una captura de este PDF"
+    },
+    {
+      "n": 3,
+      "text": "valida el sentido de apertura antes de cambiar direccion de manija o pestillo"
+    }
+  ],
+  "validation_checks": [],
+  "legacy_storage_bucket": "installation"
+}

@@ -1,0 +1,25 @@
+# Conectar la cerradura a la aplicación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9
+
+La app asociada para este proyecto es **Smart Life**.
+
+
+## Flujo general
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9.1
+
+1. abre **Smart Life**
+2. pulsa **Agregar dispositivo** o el símbolo **+**
+3. entra a la categoría correspondiente
+4. elige la opción de cerradura adecuada
+5. sigue el flujo de vinculación
+
+
+## Recomendación
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9.2
+
+Si ves varias opciones parecidas, elige la que mejor corresponda a tu modelo real.
+
+---

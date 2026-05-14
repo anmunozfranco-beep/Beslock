@@ -1,0 +1,145 @@
+{
+  "id": "oem-source-index-e-prime",
+  "type": "oem-source-index",
+  "product": "e-prime",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/specifications/e-Prime - supplemental source review.md",
+      "ext": ".md",
+      "size_bytes": 4812,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime app manual.md",
+      "ext": ".md",
+      "size_bytes": 2961,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime installation manual.md",
+      "ext": ".md",
+      "size_bytes": 5456,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 4140535,
+      "md5": "965d048bec7db5b8e616aba82eed5fe4",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_1.pdf",
+      "ext": ".pdf",
+      "size_bytes": 2735814,
+      "md5": "8393bc2405305dcb78e7d69177e631ed",
+      "semantic_pipeline_status": "ocr-supplemental (extracted-text-supplemental)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf",
+      "ext": ".pdf",
+      "size_bytes": 3142884,
+      "md5": "ec4a90eb5cf1aa6db2fa440fc1d012ae",
+      "semantic_pipeline_status": "ocr-supplemental (extracted-text-supplemental)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 873032,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-01.png",
+      "ext": ".png",
+      "size_bytes": 72897,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-02.png",
+      "ext": ".png",
+      "size_bytes": 129910,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-03.png",
+      "ext": ".png",
+      "size_bytes": 70450,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-04.png",
+      "ext": ".png",
+      "size_bytes": 28459,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-05.png",
+      "ext": ".png",
+      "size_bytes": 28169,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-06.png",
+      "ext": ".png",
+      "size_bytes": 20261,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-2/page-07.png",
+      "ext": ".png",
+      "size_bytes": 33212,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 771711,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-01.png",
+      "ext": ".png",
+      "size_bytes": 13910,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-02.png",
+      "ext": ".png",
+      "size_bytes": 18905,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-03.png",
+      "ext": ".png",
+      "size_bytes": 20650,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-04.png",
+      "ext": ".png",
+      "size_bytes": 30064,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-05.png",
+      "ext": ".png",
+      "size_bytes": 62729,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/pdf-renders/e-prime-1/page-06.png",
+      "ext": ".png",
+      "size_bytes": 35245,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/product-images/e-Prime.png",
+      "ext": ".png",
+      "size_bytes": 628409,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

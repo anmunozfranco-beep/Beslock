@@ -1,0 +1,42 @@
+{
+  "schema": "composition-governance/1.0",
+  "generated": "2026-05-13",
+  "rules": [
+    {
+      "id": "warnings-follow-procedures",
+      "rule": "Every procedure assembled into a package MUST carry the warnings scoped to it."
+    },
+    {
+      "id": "prerequisites-are-transitive",
+      "rule": "Prerequisites expand transitively up to depth 3; circular dependencies are blocking findings."
+    },
+    {
+      "id": "visual-attached-when-physical",
+      "rule": "Procedures with `surface=physical-installation` MUST attach visual-intent + component-visibility."
+    },
+    {
+      "id": "troubleshooting-pulls-recovery",
+      "rule": "Troubleshooting symptoms MUST resolve to ≥1 recovery procedure or an explicit escalation tier."
+    },
+    {
+      "id": "onboarding-pulls-guidance",
+      "rule": "Onboarding assemblies MUST attach guidance-triggers and a cognitive-load assessment per included procedure."
+    },
+    {
+      "id": "guidance-respects-budget",
+      "rule": "Onboarding interruption budget ≤ 2 hard-interrupting triggers per session."
+    },
+    {
+      "id": "safety-constraints-non-droppable",
+      "rule": "Safety-critical warnings (P0) cannot be dropped from any assembly that contains the related procedure."
+    },
+    {
+      "id": "maturity-floor-enforced",
+      "rule": "Default maturity floor `normalized`; publication packages `verified`; RAG-bound packages `canonical-knowledge`."
+    },
+    {
+      "id": "deterministic-order",
+      "rule": "Assembly ordering is deterministic: declared step-index first, then priority tier, then artifact-id."
+    }
+  ]
+}

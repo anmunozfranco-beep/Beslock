@@ -1,0 +1,224 @@
+{
+  "archival_rules": [
+    "archival never deletes the node — it moves it out of active retrieval domains",
+    "archived nodes remain readable for lineage queries only",
+    "archival is reversible only by governance review (re-promotion to candidate)",
+    "archival of an OEM-verified record requires a supersession record"
+  ],
+  "kind": "lifecycle-model",
+  "promotion_gates": [
+    {
+      "gate": "ocr-evidence-attached",
+      "requires": [
+        "source_refs[*].kind in {pdf, ocr-fragment, screenshot}",
+        "sha256 binding",
+        "page/region"
+      ]
+    },
+    {
+      "gate": "inference-evidence-attached",
+      "requires": [
+        "inference_lineage with source node ids",
+        "inference rule id",
+        "confidence floor"
+      ]
+    },
+    {
+      "gate": "single-reviewer-approval",
+      "requires": [
+        "reviewer identity",
+        "supervision receipt",
+        "evidence checksum match"
+      ]
+    },
+    {
+      "gate": "dual-review",
+      "requires": [
+        "two distinct reviewers",
+        "no shared review session",
+        "no escalation override"
+      ]
+    },
+    {
+      "gate": "oem-binding-attached",
+      "requires": [
+        "oem_binding record present",
+        "oem source artifact pinned by sha256"
+      ]
+    },
+    {
+      "default_N": 5,
+      "gate": "N supervised runs without incident",
+      "requires": [
+        "replay-deterministic",
+        "no safety-demote",
+        "no escalation"
+      ]
+    },
+    {
+      "gate": "contradiction-detected",
+      "requires": [
+        "two oem-verified or reviewer-confirmed records disagree on a binding field"
+      ]
+    },
+    {
+      "gate": "supersession-record-attached",
+      "requires": [
+        "successor node id",
+        "rationale",
+        "reviewer"
+      ]
+    },
+    {
+      "gate": "retention-period-elapsed",
+      "requires": [
+        "age >= retention_days",
+        "no active lineage references"
+      ]
+    },
+    {
+      "gate": "evidence-invalidated",
+      "requires": [
+        "invalidation rationale",
+        "reviewer",
+        "demotion target tier"
+      ]
+    }
+  ],
+  "schema": "knowledge-lifecycle-governance/1.0",
+  "states": [
+    {
+      "blocking_for_runtime": false,
+      "default_for": [
+        "supplemental builders"
+      ],
+      "description": "declared but unverified; lowest trust",
+      "id": "candidate"
+    },
+    {
+      "blocking_for_runtime": false,
+      "default_for": [
+        "manual_ocr pipeline"
+      ],
+      "description": "extracted from OEM source via OCR; not yet reviewer-confirmed",
+      "id": "ocr-derived"
+    },
+    {
+      "blocking_for_runtime": false,
+      "default_for": [
+        "causal-graphs traversal"
+      ],
+      "description": "derived from declared neighbours by governed inference",
+      "id": "inferred"
+    },
+    {
+      "blocking_for_runtime": false,
+      "default_for": [],
+      "description": "human reviewer signed off after evidence attachment",
+      "id": "reviewer-confirmed"
+    },
+    {
+      "blocking_for_runtime": false,
+      "default_for": [],
+      "description": "bound to a verified OEM source artifact (PDF/screenshot/firmware doc)",
+      "id": "oem-verified"
+    },
+    {
+      "blocking_for_runtime": false,
+      "default_for": [],
+      "description": "deployed in supervised runtime flows for N successful supervised runs without incident",
+      "id": "operationally-proven"
+    },
+    {
+      "blocking_for_runtime": true,
+      "default_for": [],
+      "description": "two or more declared sources contradict; runtime must escalate",
+      "id": "disputed"
+    },
+    {
+      "blocking_for_runtime": true,
+      "default_for": [],
+      "description": "superseded by a newer record but preserved for lineage",
+      "id": "deprecated"
+    },
+    {
+      "blocking_for_runtime": true,
+      "default_for": [],
+      "description": "removed from active retrieval; lineage preserved read-only",
+      "id": "archived"
+    }
+  ],
+  "transitions": [
+    {
+      "actor": "ocr-pipeline+reviewer",
+      "from": "candidate",
+      "gate": "ocr-evidence-attached",
+      "reversible": true,
+      "to": "ocr-derived"
+    },
+    {
+      "actor": "reasoning-layer+reviewer",
+      "from": "candidate",
+      "gate": "inference-evidence-attached",
+      "reversible": true,
+      "to": "inferred"
+    },
+    {
+      "actor": "reviewer",
+      "from": "ocr-derived",
+      "gate": "single-reviewer-approval",
+      "reversible": true,
+      "to": "reviewer-confirmed"
+    },
+    {
+      "actor": "reviewer",
+      "from": "inferred",
+      "gate": "single-reviewer-approval",
+      "reversible": true,
+      "to": "reviewer-confirmed"
+    },
+    {
+      "actor": "reviewer x2",
+      "from": "reviewer-confirmed",
+      "gate": "oem-binding-attached + dual-review",
+      "reversible": true,
+      "to": "oem-verified"
+    },
+    {
+      "actor": "operator+reviewer",
+      "from": "oem-verified",
+      "gate": "N supervised runs without incident + signoff",
+      "reversible": true,
+      "to": "operationally-proven"
+    },
+    {
+      "actor": "runtime+reviewer",
+      "from": "*",
+      "gate": "contradiction-detected",
+      "reversible": true,
+      "to": "disputed"
+    },
+    {
+      "actor": "reviewer",
+      "from": "*",
+      "gate": "supersession-record-attached",
+      "reversible": true,
+      "to": "deprecated"
+    },
+    {
+      "actor": "governance",
+      "from": "deprecated",
+      "gate": "retention-period-elapsed",
+      "note": "lineage preserved read-only",
+      "reversible": false,
+      "to": "archived"
+    },
+    {
+      "actor": "reviewer",
+      "from": "*",
+      "gate": "evidence-invalidated (demotion)",
+      "reversible": true,
+      "to": "candidate"
+    }
+  ]
+}

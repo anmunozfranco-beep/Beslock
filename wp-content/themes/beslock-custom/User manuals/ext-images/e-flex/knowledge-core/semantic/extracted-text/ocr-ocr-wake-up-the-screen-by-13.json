@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-wake-up-the-screen-by-13",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "Wake Up The Screen By",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-13"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-wake-up-the-screen-by-13.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "pressing \"*+#\"",
+  "legacy_storage_bucket": "extracted-text"
+}

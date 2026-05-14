@@ -1,0 +1,48 @@
+{
+  "schema": "lifecycle-governance/1.0",
+  "generated": "2026-05-13",
+  "checkpoints": [
+    {
+      "id": "ontology-conformance-review",
+      "trigger": "promotion to normalized-artifact",
+      "actor": "automated + ontology-steward"
+    },
+    {
+      "id": "canonicalization-review",
+      "trigger": "promotion to canonical-knowledge",
+      "actor": "canonicalization-resolver + human-reviewer"
+    },
+    {
+      "id": "human-verification-review",
+      "trigger": "promotion to verified-truth",
+      "actor": "human-reviewer"
+    },
+    {
+      "id": "oem-verification-checkpoint",
+      "trigger": "safety-critical or P0 priority",
+      "actor": "OEM-confirmation"
+    },
+    {
+      "id": "deprecation-review",
+      "trigger": "any deprecation request",
+      "actor": "human-reviewer"
+    },
+    {
+      "id": "ambiguity-escalation-review",
+      "trigger": "unresolved-stage entry",
+      "actor": "human-reviewer + OEM-when-applicable"
+    },
+    {
+      "id": "governance-revision-review",
+      "trigger": "doctrine principle change",
+      "actor": "governance-steward (multi-party)"
+    }
+  ],
+  "rules": [
+    "Every promotion to verified-truth requires a human reviewer signature recorded in lineage.",
+    "Safety-critical (P0) artifacts require OEM confirmation in addition to human review.",
+    "Unresolved-stage artifacts are surfaced to a review queue, never silently dropped.",
+    "Ambiguity escalation must record: the ambiguity, the candidates considered, the decision rationale.",
+    "Governance principle changes require multi-party review and a revision-number bump."
+  ]
+}

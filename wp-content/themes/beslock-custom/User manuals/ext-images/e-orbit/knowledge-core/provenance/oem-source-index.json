@@ -1,0 +1,168 @@
+{
+  "id": "oem-source-index-e-orbit",
+  "type": "oem-source-index",
+  "product": "e-orbit",
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "policy": "Every OEM source artifact in source-of-truth/ is listed here with its semantic pipeline status. PDFs flagged 'not-ingested' have NO representation in knowledge-core except via supplemental OCR (where present).",
+  "sources": [
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/specifications/e-Orbit_1.xls",
+      "ext": ".xls",
+      "size_bytes": 29696,
+      "semantic_pipeline_status": "verified-deterministic-ingest"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md",
+      "ext": ".md",
+      "size_bytes": 5450,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md",
+      "ext": ".md",
+      "size_bytes": 4551,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md",
+      "ext": ".md",
+      "size_bytes": 4517,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md",
+      "ext": ".md",
+      "size_bytes": 6848,
+      "semantic_pipeline_status": "normalized-markdown-canonical"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.pdf",
+      "ext": ".pdf",
+      "size_bytes": 13978830,
+      "md5": "be0ee462d9643697313a3d0ddc19fb3e",
+      "semantic_pipeline_status": "ocr-fallback (extracted-text only)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf",
+      "ext": ".pdf",
+      "size_bytes": 6155148,
+      "md5": "090df59f84c92d8cd6add3a5a1f49b8d",
+      "semantic_pipeline_status": "ocr-supplemental (extracted-text-supplemental)"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/contact-sheet.png",
+      "ext": ".png",
+      "size_bytes": 756354,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-01.png",
+      "ext": ".png",
+      "size_bytes": 15788,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-02.png",
+      "ext": ".png",
+      "size_bytes": 39549,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-03.png",
+      "ext": ".png",
+      "size_bytes": 46614,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-04.png",
+      "ext": ".png",
+      "size_bytes": 47508,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-05.png",
+      "ext": ".png",
+      "size_bytes": 43784,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-06.png",
+      "ext": ".png",
+      "size_bytes": 47164,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-07.png",
+      "ext": ".png",
+      "size_bytes": 43684,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-08.png",
+      "ext": ".png",
+      "size_bytes": 42588,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-09.png",
+      "ext": ".png",
+      "size_bytes": 240582,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-10.png",
+      "ext": ".png",
+      "size_bytes": 196165,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-11.png",
+      "ext": ".png",
+      "size_bytes": 166669,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-12.png",
+      "ext": ".png",
+      "size_bytes": 320242,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-13.png",
+      "ext": ".png",
+      "size_bytes": 135920,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-14.png",
+      "ext": ".png",
+      "size_bytes": 200294,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-15.png",
+      "ext": ".png",
+      "size_bytes": 128318,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-16.png",
+      "ext": ".png",
+      "size_bytes": 112657,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/pdf-renders/e-orbit-2/page-17.png",
+      "ext": ".png",
+      "size_bytes": 115282,
+      "semantic_pipeline_status": "reference-or-render"
+    },
+    {
+      "path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/product-images/e-Orbit.png",
+      "ext": ".png",
+      "size_bytes": 2902385,
+      "semantic_pipeline_status": "reference-or-render"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Compatibilidad fisica antes de perforar
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4
+
+Valida estas condiciones antes de tocar la puerta:
+- grosor compatible de puerta: `30 a 110 mm`
+- tipos de puerta declarados por la fuente OEM: hierro, acero inoxidable o patio
+- mano de apertura correcta segun la plantilla impresa
+- espacio suficiente para que la caja interior horizontal quede alineada y no choque con marcos, vidrios o herrajes cercanos

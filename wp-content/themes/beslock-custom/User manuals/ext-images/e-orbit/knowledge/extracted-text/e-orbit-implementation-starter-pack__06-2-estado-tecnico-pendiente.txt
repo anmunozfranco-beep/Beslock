@@ -1,0 +1,8 @@
+# 2 Estado tecnico pendiente
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - implementation starter pack.md#6
+
+- manual de instalacion pendiente: las nuevas fuentes no incluyen montaje fisico ni despiece de perforacion
+- plantilla de instalacion pendiente: no existe cotado de corte ni escala 1:1 suficiente para normalizar una template real
+
+---

@@ -1,0 +1,20 @@
+{
+  "schema_version": "visual-governance/1.0",
+  "generated_at": "2026-05-13T16:14:38Z",
+  "ready_today": [
+    "ComfyUI declared the only authorised renderer (COMFY_GENERATION_GOVERNANCE.md §1)",
+    "Per-product orchestration manifest contract (visual_generation.py + VISUAL_GENERATION_AUTOMATION.md)",
+    "Run-record fields enumerated (canonical PNG hash, workflow id+version+hash, prompt, seed, model, ControlNet/IPAdapter inputs)",
+    "Conditioning policy: canonical-PNG-only or its derivatives",
+    "Per-product visual-intent + visual-risk + component-visibility + publication-intent JSONs in place (5/6 products Comfy-ready from Phase 3; e-nova still blocked by zero procedural-semantics)"
+  ],
+  "blockers_before_mass_orchestration": [
+    "tools/comfy/workflow_api.json.json filename normalisation + workflow registry creation",
+    "negative-prompt component registry must be wired into per-product prompts",
+    "model + sampler approval registry missing (gap.comfy.model-and-sampler-approval)",
+    "automated tolerance + cross-product-contamination QA missing (gap.qa.*)",
+    "per-channel publication spec missing (gap.publication.per-channel-spec)",
+    "e-nova procedural-semantics gap from Phase 3"
+  ],
+  "canonical_policy": "visual-system/_governance/comfy-contracts/policy.md"
+}

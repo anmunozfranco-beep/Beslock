@@ -1,0 +1,20 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "shared_entity_count": 11,
+  "shared_procedure_count": 11,
+  "shared_warning_count": 4,
+  "shared_capability_count": 7,
+  "shared_visual_intent_count": 8,
+  "publication_channels": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "ontology_doc": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-ontology/global-ontology.md",
+  "ontology_json": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/knowledge-ontology/ontology.json"
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "navigation",
+  "navigation_invariants": [
+    "navigation is bounded by declared edges; ad-hoc jumps are forbidden",
+    "navigation surfaces always show the current checkpoint and the next required decision",
+    "navigation never silently skips a checkpoint",
+    "navigation never silently rolls back; rollback is an explicit operator action",
+    "navigation is product-scoped; cross-product navigation is forbidden"
+  ],
+  "navigation_systems": [
+    {
+      "description": "moving across declared workflow steps within a slice",
+      "id": "operational-traversal"
+    },
+    {
+      "description": "advancing checkpoint-by-checkpoint with explicit decisions",
+      "id": "workflow-progression"
+    },
+    {
+      "description": "resuming from a declared continuity-checkpoint snapshot",
+      "id": "continuity-restoration"
+    },
+    {
+      "description": "walking causal-graph edges + candidate troubleshooting hits",
+      "id": "troubleshooting-navigation"
+    },
+    {
+      "description": "moving across escalation tiers along declared monotonic transitions",
+      "id": "escalation-navigation"
+    },
+    {
+      "description": "queue → claim → evidence → decision → audit, in declared order",
+      "id": "reviewer-navigation"
+    }
+  ],
+  "schema": "human-operations-governance/1.0"
+}

@@ -1,0 +1,29 @@
+{
+  "inheritable": [
+    "context-vector",
+    "skill-model",
+    "open-warnings (acknowledged or not)",
+    "incident-id",
+    "session-id",
+    "active-package references (read-only)"
+  ],
+  "non_inheritable": [
+    "destructive-confirmation",
+    "irreversibility-acknowledgement",
+    "explicit-action-receipt",
+    "operator-identity (re-asserted per runtime)",
+    "supervised-resume token"
+  ],
+  "rules": 6,
+  "schema": "ecosystem-interoperability-governance/1.0",
+  "shared_context_kinds": [
+    "shared-operational-memory",
+    "shared-troubleshooting-context",
+    "cross-runtime-continuity",
+    "shared-escalation-state",
+    "context-inheritance-record",
+    "federated-operational-session",
+    "shared-skill-model",
+    "shared-confidence-tier"
+  ]
+}

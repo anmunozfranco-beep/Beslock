@@ -1,0 +1,103 @@
+{
+  "product": "e-orbit",
+  "entries": [
+    {
+      "term": "administrator",
+      "definition": "Primary privileged user that should be created first and should retain at least one backup credential.",
+      "domain": "local-device",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#3"
+      ]
+    },
+    {
+      "term": "user",
+      "definition": "Regular enrolled person that should be added only after an administrator already exists.",
+      "domain": "local-device",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#4"
+      ]
+    },
+    {
+      "term": "pin",
+      "definition": "Numeric password credential enrolled from the user-management flow and validated immediately after creation.",
+      "domain": "credentials",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#5"
+      ]
+    },
+    {
+      "term": "fingerprint",
+      "definition": "Biometric credential captured through repeated contact on the sensor until the lock confirms the enrollment.",
+      "domain": "credentials",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    {
+      "term": "smart-life",
+      "definition": "Primary Beslock-facing app flow observed for e-Orbit onboarding and remote control.",
+      "domain": "app-ecosystem",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit user manual.md#8",
+        "source-of-truth/manuals/e-Orbit app manual.md#3"
+      ]
+    },
+    {
+      "term": "tuya-smart",
+      "definition": "Observed ecosystem and alternate naming surface for the same onboarding family used by the lock.",
+      "domain": "app-ecosystem",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#3"
+      ]
+    },
+    {
+      "term": "tongtong-app",
+      "definition": "OEM-mentioned app variant that is not yet approved as the primary commercial route.",
+      "domain": "app-ecosystem",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#3"
+      ]
+    },
+    {
+      "term": "qr-pairing",
+      "definition": "Observed onboarding flow in which the phone presents a QR code to the lock camera after network selection.",
+      "domain": "app-pairing",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#5"
+      ]
+    },
+    {
+      "term": "ez-mode",
+      "definition": "Fallback Wi-Fi onboarding mode that should remain editorially distinct from QR pairing.",
+      "domain": "app-pairing",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#6"
+      ]
+    },
+    {
+      "term": "temporary-password",
+      "definition": "App-generated credential family that currently has document evidence for one-time and unlimited modes.",
+      "domain": "remote-access",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit app manual.md#9"
+      ]
+    },
+    {
+      "term": "nf14",
+      "definition": "Supplier model family attached to e-Orbit in the OEM specification sheet.",
+      "domain": "product-identity",
+      "source_refs": [
+        "source-of-truth/specifications/e-Orbit_1.xls",
+        "source-of-truth/manuals/e-Orbit - supplemental source review.md#5"
+      ]
+    },
+    {
+      "term": "virtual-password",
+      "definition": "Observed feature family mentioned in the OEM sources as part of the local configuration and access system.",
+      "domain": "credentials",
+      "source_refs": [
+        "source-of-truth/manuals/e-Orbit - supplemental source review.md#4"
+      ]
+    }
+  ]
+}

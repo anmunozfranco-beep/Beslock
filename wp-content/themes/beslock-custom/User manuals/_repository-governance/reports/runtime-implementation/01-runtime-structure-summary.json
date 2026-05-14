@@ -1,0 +1,61 @@
+{
+  "implementation_root": "runtime-implementation/",
+  "modules": [
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/config.py",
+      "responsibility": "paths, products, slice declaration, in-scope guard"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/provenance.py",
+      "responsibility": "manifest builder, content hashing"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/retrieval.py",
+      "responsibility": "scored retrieval over knowledge-core"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/assembly.py",
+      "responsibility": "procedure + warnings + prerequisites + troubleshooting + continuity + adaptive merge"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/supervision.py",
+      "responsibility": "review checkpoints, decisions, supervision receipts"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/safety.py",
+      "responsibility": "continuous safety predicates"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/observability.py",
+      "responsibility": "append-only NDJSON channels"
+    },
+    {
+      "kind": "module",
+      "path": "runtime-implementation/runtime/flows.py",
+      "responsibility": "six declared supervised flows"
+    },
+    {
+      "kind": "entrypoint",
+      "path": "runtime-implementation/cli.py",
+      "responsibility": "supervised CLI"
+    },
+    {
+      "kind": "tests",
+      "path": "runtime-implementation/testing/test_flows.py",
+      "responsibility": "real unittest suite (14 tests)"
+    }
+  ],
+  "schema": "runtime-implementation-governance/1.0",
+  "test_suite": {
+    "passed": true,
+    "returncode": 0,
+    "summary_line": "OK"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "product": "e-prime",
+    "supplemental_source": "e-prime-2",
+    "pdf_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-prime/source-of-truth/manuals/e-Prime_2.pdf",
+    "ocr_avg_confidence": 26.9,
+    "confidence_tier": "ocr-very-low",
+    "risk": "Promoted as evidence-only. Do not surface to chatbot/RAG without human review against the OEM PDF."
+  },
+  {
+    "product": "e-shield",
+    "supplemental_source": "e-shied-2",
+    "pdf_path": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shied_2.pdf",
+    "ocr_avg_confidence": 55.6,
+    "confidence_tier": "ocr-low",
+    "risk": "Promoted as evidence-only. Do not surface to chatbot/RAG without human review against the OEM PDF."
+  },
+  {
+    "product": "e-nova",
+    "risk": "OCR-only product. Knowledge core relies entirely on OCR fallback with no normalized markdown counterpart. All operational entities are inferred-but-unverified.",
+    "ocr_avg_confidence": 84.3
+  }
+]

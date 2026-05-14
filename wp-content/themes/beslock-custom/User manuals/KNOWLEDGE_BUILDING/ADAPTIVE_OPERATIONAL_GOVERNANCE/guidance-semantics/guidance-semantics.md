@@ -1,0 +1,29 @@
+# Adaptive Guidance Semantics
+
+## Adaptations
+
+- **simplified-onboarding-for-beginners** — {"trigger": "user-role=beginner AND operational-mode=onboarding", "effect": "expand prerequisites; collapse advanced shortcuts; add irreversibility warnings explicitly"}
+- **shortcut-paths-for-installers** — {"trigger": "user-role=installer AND lifecycle-stage in {installing,configuring}", "effect": "permit batched steps when no destructive boundary is crossed"}
+- **warnings-amplified-during-recovery** — {"trigger": "operational-mode=recovery", "effect": "force mandatory-warning surfaces before every transition"}
+- **troubleshooting-first-under-failure** — {"trigger": "severity-level in {blocked,unsafe}", "effect": "suppress non-essential operational steps; surface symptom-resolution branch first"}
+- **confidence-aware-expansion** — {"trigger": "confidence-level in {inferred,ocr-derived,ambiguous}", "effect": "attach evidence disclosure; widen step granularity; require explicit user acknowledgement"}
+- **admin-only-controls-gated** — {"trigger": "user-role!=administrator AND step.requires=admin", "effect": "block step entry; surface escalation path"}
+- **degraded-mode-substitution** — {"trigger": "operational-mode=degraded", "effect": "swap full procedure for fallback procedure when registered; otherwise block"}
+- **emergency-mode-pruning** — {"trigger": "operational-mode=emergency", "effect": "retain only safety-critical steps; defer all configuration"}
+- **evidence-incomplete-disclosure** — {"trigger": "evidence-completeness in {partial,missing,conflicting}", "effect": "annotate guidance with disclosure; prohibit verified-truth claims"}
+
+## Rules
+
+- adaptation may simplify presentation but never silently weaken safeguards
+- destructive steps cannot be removed by any adaptation
+- irreversibility warnings cannot be suppressed by any adaptation
+- adaptations must compose deterministically (declared precedence)
+- every adaptation must declare its trigger predicate and observable effect
+- no adaptation may invent steps not present in the canonical procedure
+
+## Precedence
+
+- safety-preserving > simplifying
+- explicit-context > inferred-context
+- block > warn > suppress > expand > collapse
+- knowledge-core authority > adaptive layer

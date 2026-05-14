@@ -1,0 +1,8 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/reference-stack/module-topology/",
+  "invariants_count": 5,
+  "isolation_boundaries_count": 6,
+  "kind": "module-topology-summary",
+  "relationships_count": 13,
+  "schema": "reference-stack-governance/1.0"
+}

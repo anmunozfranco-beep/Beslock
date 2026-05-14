@@ -1,0 +1,54 @@
+{
+  "id": "proc-primeros-pasos",
+  "type": "procedure",
+  "product": "e-orbit",
+  "summary": "Antes de empezar, verifica lo siguiente:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "surface": "local-device",
+  "menu_path": "",
+  "preconditions": [],
+  "steps": [
+    {
+      "n": 1,
+      "text": "crear el administrador principal"
+    },
+    {
+      "n": 2,
+      "text": "registrar un PIN"
+    },
+    {
+      "n": 3,
+      "text": "registrar una huella"
+    },
+    {
+      "n": 4,
+      "text": "probar los accesos registrados"
+    },
+    {
+      "n": 5,
+      "text": "revisar configuraciones básicas"
+    },
+    {
+      "n": 6,
+      "text": "conectar la cerradura a la app si aplica"
+    }
+  ],
+  "validation_checks": [],
+  "storage_bucket": "operation"
+}

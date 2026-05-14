@@ -1,0 +1,236 @@
+{
+  "schema_version": "knowledge-center/1.0",
+  "generated_at": "2026-05-13T16:54:29Z",
+  "products": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ],
+  "domains": [
+    "entities",
+    "procedures",
+    "workflows",
+    "warnings",
+    "terminology",
+    "capabilities",
+    "specifications",
+    "troubleshooting",
+    "procedural-semantics",
+    "visual-intent",
+    "visual-risk",
+    "publication-intent",
+    "component-visibility",
+    "provenance"
+  ],
+  "per_product_counts": {
+    "e-flex": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 3,
+      "warnings": 2,
+      "terminology": 8,
+      "capabilities": 3,
+      "specifications": 0,
+      "troubleshooting": 0,
+      "procedural-semantics": 9,
+      "visual-intent": 6,
+      "visual-risk": 4,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    },
+    "e-nova": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 0,
+      "warnings": 0,
+      "terminology": 0,
+      "capabilities": 1,
+      "specifications": 0,
+      "troubleshooting": 0,
+      "procedural-semantics": 0,
+      "visual-intent": 1,
+      "visual-risk": 1,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    },
+    "e-orbit": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 9,
+      "warnings": 10,
+      "terminology": 20,
+      "capabilities": 4,
+      "specifications": 1,
+      "troubleshooting": 0,
+      "procedural-semantics": 24,
+      "visual-intent": 7,
+      "visual-risk": 3,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    },
+    "e-prime": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 2,
+      "warnings": 4,
+      "terminology": 7,
+      "capabilities": 3,
+      "specifications": 0,
+      "troubleshooting": 0,
+      "procedural-semantics": 9,
+      "visual-intent": 5,
+      "visual-risk": 3,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    },
+    "e-shield": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 9,
+      "warnings": 3,
+      "terminology": 5,
+      "capabilities": 2,
+      "specifications": 0,
+      "troubleshooting": 1,
+      "procedural-semantics": 13,
+      "visual-intent": 6,
+      "visual-risk": 4,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    },
+    "e-touch": {
+      "entities": 2,
+      "procedures": 0,
+      "workflows": 1,
+      "warnings": 1,
+      "terminology": 7,
+      "capabilities": 2,
+      "specifications": 0,
+      "troubleshooting": 0,
+      "procedural-semantics": 4,
+      "visual-intent": 5,
+      "visual-risk": 4,
+      "publication-intent": 1,
+      "component-visibility": 1,
+      "provenance": 1
+    }
+  },
+  "totals": {
+    "entities": 12,
+    "procedures": 0,
+    "workflows": 24,
+    "warnings": 20,
+    "terminology": 47,
+    "capabilities": 15,
+    "specifications": 1,
+    "troubleshooting": 1,
+    "procedural-semantics": 59,
+    "visual-intent": 30,
+    "visual-risk": 19,
+    "publication-intent": 6,
+    "component-visibility": 6,
+    "provenance": 6
+  },
+  "coverage_by_domain": {
+    "entities": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "procedures": [],
+    "workflows": [
+      "e-flex",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "warnings": [
+      "e-flex",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "terminology": [
+      "e-flex",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "capabilities": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "specifications": [
+      "e-orbit"
+    ],
+    "troubleshooting": [
+      "e-shield"
+    ],
+    "procedural-semantics": [
+      "e-flex",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "visual-intent": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "visual-risk": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "publication-intent": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "component-visibility": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ],
+    "provenance": [
+      "e-flex",
+      "e-nova",
+      "e-orbit",
+      "e-prime",
+      "e-shield",
+      "e-touch"
+    ]
+  },
+  "coverage_doc": "KNOWLEDGE_BUILDING/KNOWLEDGE_CENTER/cross-product-semantic-map/cross-product-map.md"
+}

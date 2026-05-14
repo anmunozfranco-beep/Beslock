@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-changing-lock-body-direction-8",
+  "type": "extracted-text",
+  "product": "e-flex",
+  "summary": "Changing Lock Body Direction",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-flex/manual.json#section-8"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "ao\ncl\n1. Push the direction change switch upwards;\n2. Press in the latch bolt;\n3. Rotate the latch bolt 180° to change\ndirection;\n4. Tighten the direction change screw to\ncomplete the process.\nII. Product Layout:\nHl Opening Methods: Multiple options including fingerprint, password, IC card, mechanical\nkey, WeChat mini-program, etc., offering you a unique door-opening experience (specific\nconfiguration may vary based on the actual product);\nWi Fingerprint: Utilizes advanced semiconductor sensors, 360-degree recognition angle, wide\nfingerprint capture area, high resolution, effectively preventing fake fingerprints;\nHi Password: Employs fashionable and advanced touchscreen button technology, allowing\naddition of up to 12 irrelevant digits before and after the correct password, effectively\npreventing awkward situations when entering passwords in the presence of others;\nHl Dual Verification Mode: Can set combinations of two among fingerprint, password, and\ncard for verification to unlock. Once set, only when two users verify simultaneously can the\ndoor be opened, suitable for special occasions;\nHl User Management: Administrators have the highest authority (regular users can only open a\nnd close the door), can edit lock settings, up to 9 administrators (can be fingerprint, password, c\nard), total capacity of 300 users;\nM Alarm Functions: The device has anti-pry alarm, low voltage alarm, and error attempt alarm;\nHi Backup Power Supply: When batteries are depleted, a 5V power bank can be used for\nemergency power supply;\nII. Precautions:\n1. After installing a new lock, perform initialization to clear any fingerprints\nentered during installation and debugging;\n2. The handle is a crucial component for opening and closing the door. Its flexibility directly\naffects the use of the door lock. Therefore, please refrain from hanging objects on the handle.\n3. When registering fingerprints, apply moderate finger pressure. Please avoid pressing too\nhard to prevent damage to the fingerprint scanner.\n4. The battery should not be used for an extended period. It is generally recommended to\nreplace the battery at least once every six months; otherwise, battery leakage may damage the\nsmart lock.\n5. This lock uses four AA (1.5V) high-performance alkaline batteries. When you receive the\nfirst \"Low battery, please replace\" warning, depending on the battery capacity, you can still\nopen the door approximately 100 times. At this point, you should replace the batteries\npromptly to avoid inconvenience due to battery depletion.\n6. After five consecutive incorrect inputs using any combination of fingerprint, card, or\npassword, an alarm will sound. The device will emit an alarm tone, and the door lock will be\ninoperable for 90 seconds.\nIV. User Guide:\n█\u0001Initialization Procedure:\nRemove the battery cover and press the \"SET\" button next to the battery co\nmpartment on the back panel for 5 seconds. A voice prompt will confirm \"I\nnitialization successful\".\n█\u0001Administrator Setup:",
+  "storage_bucket": "extracted-text"
+}

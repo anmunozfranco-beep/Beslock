@@ -1,0 +1,114 @@
+[
+  {
+    "id": "install-context-objetivo",
+    "summary": "Ordenar la preparacion de puerta, el montaje del cuerpo de cerradura y la validacion inicial de e-Flex usando la fuente OEM suplementaria disponible",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-que-vas-a-instalar",
+    "summary": "e-Flex usa una arquitectura de placas largas frontal y trasera con:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#3"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+    "summary": "Valida estas condiciones antes de montar:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#4"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-que-necesitas-antes-de-empezar",
+    "summary": "- guia OEM disponible en `e-Flex_1",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#5"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-usar-la-guia-de-instalacion-disponible",
+    "summary": "![Guia de instalacion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-02",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#6"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-preparar-la-puerta-y-el-cuerpo-del-cerrojo",
+    "summary": "Secuencia base:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#7"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-montar-panel-exterior-e-interior",
+    "summary": "Orden practico de montaje:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#8"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-cambio-de-direccion",
+    "summary": "![Cambio de direccion de e-Flex](assets/e-flex/pdf-renders/e-flex-1/page-03",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-de-la-manija",
+    "summary": "afloja el tornillo de cambio de direccion",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.1"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-cambio-de-direccion-cambio-de-direccion-del-cuerpo-del-pestillo",
+    "summary": "empuja el interruptor de cambio hacia arriba",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#9.2"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-energia-e-inicializacion",
+    "summary": "Para la prueba inicial:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#10"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-validacion-despues-de-instalar",
+    "summary": "Antes de cerrar el trabajo, valida:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#11"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-relacion-con-el-paquete-documental",
+    "summary": "Dentro del paquete Beslock de e-Flex, este documento convive con:",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#13"
+    ],
+    "validation_status": "extraction-pending-review"
+  },
+  {
+    "id": "install-context-estado-editorial",
+    "summary": "La base de instalacion queda suficientemente soportada por `e-Flex_1",
+    "source_refs": [
+      "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#14"
+    ],
+    "validation_status": "extraction-pending-review"
+  }
+]

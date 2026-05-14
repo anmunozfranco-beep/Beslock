@@ -1,0 +1,21 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/reviewer-workbench/",
+  "invariants_count": 5,
+  "kind": "reviewer-workbench-summary",
+  "out_of_scope": [
+    "no consumer-facing UI",
+    "no chatbot interaction",
+    "no autonomous suggestion engine",
+    "no embedding/ML-driven match suggestions"
+  ],
+  "panels": [
+    "side-by-side-oem",
+    "ocr-fragment-inspector",
+    "provenance-inspector",
+    "promotion-approval",
+    "confidence-adjustment",
+    "evidence-attachment",
+    "rollback-operations"
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

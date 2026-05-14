@@ -1,0 +1,97 @@
+{
+  "id": "semantic-install-secuencia-base-de-instalacion",
+  "type": "procedural-semantics",
+  "product": "e-touch",
+  "summary": "Normalized semantic actions for install-secuencia-base-de-instalacion",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "chatbot",
+    "rag",
+    "comfyui"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/source-of-truth/manuals/e-Touch installation manual.md#6"
+  ],
+  "extraction_lineage": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-touch/knowledge-core/install/install-secuencia-base-de-instalacion.json",
+    "tools/knowledge_core_semantic_enrich.py::ACTION_LEXICON"
+  ],
+  "schema_version": "knowledge-core/1.1-semantic-enrichment",
+  "updated_at": "2026-05-13T15:40:35Z",
+  "source_entity_id": "install-secuencia-base-de-instalacion",
+  "source_entity_type": "installation-flow",
+  "surface": "physical-installation",
+  "menu_path": null,
+  "normalized_steps": [
+    {
+      "step_index": 1,
+      "raw_text": "pasa el eje cuadrado junto con el cableado por el cuerpo de la cerradura",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 2,
+      "raw_text": "ajusta la posicion del orificio segun la posicion real del lock body",
+      "semantic_actions": [
+        "lock"
+      ],
+      "matched_lexicon": [
+        "lock"
+      ]
+    },
+    {
+      "step_index": 3,
+      "raw_text": "selecciona los tornillos segun el grosor de la puerta y aprietalos",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 4,
+      "raw_text": "abre la tapa de baterias para preparar la alimentacion interior",
+      "semantic_actions": [
+        "press"
+      ],
+      "matched_lexicon": [
+        "press"
+      ]
+    },
+    {
+      "step_index": 5,
+      "raw_text": "instala el `deadbolt`",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 6,
+      "raw_text": "instala y fija la manija en la puerta",
+      "semantic_actions": [],
+      "matched_lexicon": []
+    },
+    {
+      "step_index": 7,
+      "raw_text": "conecta el puerto del circuito del lock",
+      "semantic_actions": [
+        "lock"
+      ],
+      "matched_lexicon": [
+        "lock"
+      ]
+    },
+    {
+      "step_index": 8,
+      "raw_text": "aprieta los tornillos y asegura la tapa de baterias",
+      "semantic_actions": [
+        "press"
+      ],
+      "matched_lexicon": [
+        "press"
+      ]
+    }
+  ],
+  "lexicon_version": "ACTION_LEXICON@1",
+  "policy": "Vocabulary-anchored; no actions invented beyond ACTION_LEXICON matches against the original step text."
+}

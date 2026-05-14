@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>e-Touch - Review Preview</title>
+  <style>
+    :root {
+      --paper: #f6f1e6;
+      --ink: #13212e;
+      --muted: #5d6a73;
+      --frame: #dbcdb4;
+      --card: #fffdf8;
+      --accent: #7a3419;
+      --shadow: rgba(19, 33, 46, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(122, 52, 25, 0.10), transparent 28%),
+        linear-gradient(180deg, #f3ecdc 0%, var(--paper) 100%);
+    }
+    .shell {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    .masthead {
+      background: rgba(255, 253, 248, 0.72);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(122, 52, 25, 0.15);
+      border-radius: 24px;
+      padding: 20px 22px;
+      box-shadow: 0 14px 40px var(--shadow);
+      margin-bottom: 28px;
+    }
+    .masthead a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .masthead p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--frame);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 18px 44px var(--shadow);
+    }
+    h1, h2 {
+      font-weight: 600;
+      line-height: 1.12;
+      margin: 0 0 16px;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.3rem);
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      margin-top: 30px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(219, 205, 180, 0.9);
+    }
+    p, li {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    p + p { margin-top: 12px; }
+    ul, ol {
+      margin: 14px 0 0 24px;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    code {
+      font-family: "SFMono-Regular", Consolas, monospace;
+      background: rgba(19, 33, 46, 0.06);
+      padding: 0.12rem 0.38rem;
+      border-radius: 6px;
+      font-size: 0.94em;
+    }
+    .manual-image {
+      margin: 24px 0 0;
+      display: grid;
+      gap: 10px;
+    }
+    .manual-image img {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(19, 33, 46, 0.08);
+      background: #f4efe5;
+      box-shadow: 0 18px 34px rgba(19, 33, 46, 0.12);
+    }
+    .manual-image figcaption {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    @media (max-width: 640px) {
+      .shell { padding: 18px 14px 42px; }
+      article { padding: 22px 18px; border-radius: 22px; }
+      .masthead { padding: 16px 18px; border-radius: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="masthead">
+      <a href="index.html">Volver al indice de revision</a>
+      <p>Fuente: e-Touch user manual - review-draft.md</p>
+    </div>
+    <article>
+      <h1>e-Touch</h1>
+<h2>Borrador inicial para revision visual</h2>
+<p>Este borrador usa exclusivamente assets <code>review-draft</code> del reset visual 2026-05-13 para revisar una version integral del manual sin arrastrar la generacion anterior.</p>
+<h2>1. Introduccion</h2>
+<p>e-Touch se documenta aqui como una cerradura con numerales integrados en la manija, sin inventar un panel plano frontal que el producto no tiene.</p>
+<h2>2. Capacidades clave</h2>
+<ul><li>Conectividad: Bluetooth con la app Tuya.</li><li>Modos de apertura: huella dactilar, contrasena y llave mecanica.</li><li>Gestion remota: administracion de miembros, huellas y contrasenas desde la app.</li><li>Accesos temporales: contrasenas de un solo uso o por tiempo limitado.</li><li>Comodidad: modo normalmente abierto configurable.</li><li>Energia: 4 baterias AAA con respaldo por micro-USB.</li></ul>
+<h2>3. Vista general y primeros pasos</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-hero-main.webp" alt="Vista general de e-Touch" /><figcaption>Vista general de e-Touch</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-installed-context.webp" alt="Contexto instalado de e-Touch" /><figcaption>Contexto instalado de e-Touch</figcaption></figure>
+<p>Antes de iniciar:</p>
+<ul><li>verifica que la manija y las rosetas circulares queden bien alineadas</li><li>instala las baterias AAA</li><li>despierta la zona numerica integrada</li><li>define el administrador principal y la app que quedara vinculada</li></ul>
+<h2>4. Alta de administrador</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-add-admin-action.webp" alt="Alta de administrador en e-Touch" /><figcaption>Alta de administrador en e-Touch</figcaption></figure>
+<p>Flujo sugerido:</p>
+<ol><li>activa la zona numerica integrada en la manija</li><li>entra al flujo de administracion correspondiente</li><li>registra el acceso del administrador</li><li>valida el gesto de toque y la respuesta del equipo</li></ol>
+<h2>5. Uso de PIN integrado</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-pin-use.webp" alt="Uso de PIN en e-Touch" /><figcaption>Uso de PIN en e-Touch</figcaption></figure>
+<p>Puntos que deben quedar claros en web:</p>
+<ul><li>los numerales viven en la manija, no en un panel aparte</li><li>el usuario debe pulsar sobre la zona numerica integrada</li><li>la clave debe validarse apenas termina el registro</li></ul>
+<h2>6. Huella y miembros desde la app</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-fingerprint-use.webp" alt="Registro de huella en e-Touch" /><figcaption>Registro de huella en e-Touch</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-app-add-device.webp" alt="Alta del dispositivo en e-Touch" /><figcaption>Alta del dispositivo en e-Touch</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-link-qr.webp" alt="Vinculacion contextual por QR en e-Touch" /><figcaption>Vinculacion contextual por QR en e-Touch</figcaption></figure>
+<p>Usa este bloque para explicar:</p>
+<ol><li>registro de huellas</li><li>gestion de miembros</li><li>contrasenas temporales o de un solo uso</li><li>validacion de accesos desde la app Tuya</li></ol>
+<h2>7. Ajustes e idioma en flujos condicionales</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-language-settings.webp" alt="Ajustes condicionales en e-Touch" /><figcaption>Ajustes condicionales en e-Touch</figcaption></figure>
+<p>Este asset es esquematico y debe usarse para flujos condicionales o de configuracion cuando la version real lo justifica. No se debe presentar como si existiera una pantalla frontal fija en el equipo.</p>
+<h2>8. Soporte, energia de emergencia y diagnostico</h2>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-troubleshoot-fingerprint.webp" alt="Revision de huella en e-Touch" /><figcaption>Revision de huella en e-Touch</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-troubleshoot-app-connection.webp" alt="Revision de app en e-Touch" /><figcaption>Revision de app en e-Touch</figcaption></figure>
+<figure class="manual-image"><img src="../assets/e-touch/review-draft/e-touch-downloads-docs.webp" alt="Soporte documental de e-Touch" /><figcaption>Soporte documental de e-Touch</figcaption></figure>
+<p>La version web debe recordar:</p>
+<ul><li>respaldo por micro-USB en caso de bateria baja</li><li>modo normalmente abierto cuando aplique</li><li>validacion del sensor de huella en la base de la manija</li><li>disponibilidad de descargas y soporte postventa</li></ul>
+<h2>9. Estado del borrador</h2>
+<p>Este archivo es una version integral de revision. Los assets <code>review-draft</code> fueron reconstruidos bajo el reset visual 2026-05-13 y quedan listos para inspeccion antes de publicar el paquete final.</p>
+    </article>
+  </div>
+</body>
+</html>

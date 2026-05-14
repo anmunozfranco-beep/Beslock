@@ -1,0 +1,16 @@
+# Introducción
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#2
+
+Este manual reúne una versión estructurada del uso básico y la configuración general de la cerradura inteligente e-Orbit.
+
+Su propósito es ayudar a entender de forma práctica:
+- cómo empezar a usar la cerradura
+- cómo registrar accesos
+- cómo administrar usuarios
+- cómo cambiar configuraciones básicas
+- cómo apoyarse en la aplicación cuando corresponda
+
+> Nota: algunos flujos y códigos detectados a partir de material previo conviene validarlos visualmente con el equipo real antes de publicación definitiva.
+
+---

@@ -1,0 +1,61 @@
+{
+  "generated_at": "2026-05-13T14:51:24Z",
+  "products": {
+    "e-flex": {
+      "ocr_method": "ocrmypdf",
+      "ocr_pages": 8,
+      "ocr_avg_confidence": 88.0,
+      "ocr_sections_detected": 32,
+      "extracted_text_entities_emitted": 32,
+      "normalized_markdown_present": true
+    },
+    "e-nova": {
+      "ocr_method": "pytesseract",
+      "ocr_pages": 10,
+      "ocr_avg_confidence": 84.3,
+      "ocr_sections_detected": 14,
+      "extracted_text_entities_emitted": 14,
+      "normalized_markdown_present": false,
+      "diagnosis": "OCR-only product. No normalized markdown manuals exist under source-of-truth/manuals/. The extractor therefore emitted only 14 'extracted-text' fragments echoed from generated_manuals/e-nova/manual.json (pytesseract, avg confidence 84.3 over 10 pages). No procedures, workflows, warnings, terminology, or installation flows were emitted.",
+      "root_causes": [
+        "Missing normalized e-Nova installation manual.md",
+        "Missing normalized e-Nova app manual.md",
+        "Missing normalized e-Nova user manual.md",
+        "No supplemental OEM PDF (no e-Nova_1.pdf) to seed authoring"
+      ],
+      "fix_path": "Author the three normalized .md files from generated_manuals/e-nova/manual_raw.txt + OEM PDF page renders, then re-run tools/knowledge_extraction.py for e-nova only."
+    },
+    "e-orbit": {
+      "ocr_method": "ocrmypdf",
+      "ocr_pages": 2,
+      "ocr_avg_confidence": 92.0,
+      "ocr_sections_detected": 80,
+      "extracted_text_entities_emitted": 80,
+      "normalized_markdown_present": true
+    },
+    "e-prime": {
+      "ocr_method": "ocrmypdf",
+      "ocr_pages": 8,
+      "ocr_avg_confidence": 92.0,
+      "ocr_sections_detected": 36,
+      "extracted_text_entities_emitted": 36,
+      "normalized_markdown_present": true
+    },
+    "e-shield": {
+      "ocr_method": "pytesseract",
+      "ocr_pages": 20,
+      "ocr_avg_confidence": 84.9,
+      "ocr_sections_detected": 33,
+      "extracted_text_entities_emitted": 33,
+      "normalized_markdown_present": true
+    },
+    "e-touch": {
+      "ocr_method": "ocrmypdf",
+      "ocr_pages": 2,
+      "ocr_avg_confidence": 92.0,
+      "ocr_sections_detected": 75,
+      "extracted_text_entities_emitted": 75,
+      "normalized_markdown_present": true
+    }
+  }
+}

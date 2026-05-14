@@ -1,0 +1,19 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-operations/review-queues/",
+  "blocking_runtime_queues": [
+    "irreversible-operation-review",
+    "disputed-knowledge-review"
+  ],
+  "discipline_rules_count": 6,
+  "kind": "review-queue-summary",
+  "queues": [
+    "candidate-review",
+    "ocr-review",
+    "warning-review",
+    "troubleshooting-review",
+    "irreversible-operation-review",
+    "stale-knowledge-review",
+    "disputed-knowledge-review"
+  ],
+  "schema": "knowledge-operations-governance/1.0"
+}

@@ -1,0 +1,57 @@
+{
+  "destructive_allowed_in_any_degradation": false,
+  "modes": [
+    {
+      "destructive_allowed": false,
+      "id": "missing-context-vector",
+      "level": "L1-soft"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "missing-confidence-tier",
+      "level": "L2-partial"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "missing-checkpoint-registry",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "missing-fallback-registry",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "missing-incident-id-emitter",
+      "level": "L2-partial"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "missing-provenance-emitter",
+      "level": "L4-read-only-only"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "thin-troubleshooting-corpus",
+      "level": "L4-read-only-only"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "warning-corpus-gap",
+      "level": "L3-restricted"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "oem-channel-contract-missing",
+      "level": "L5-handoff-only"
+    },
+    {
+      "destructive_allowed": false,
+      "id": "schema-pin-mismatch",
+      "level": "L5-handoff-only"
+    }
+  ],
+  "rules": 7,
+  "schema": "runtime-orchestration-governance/1.0"
+}

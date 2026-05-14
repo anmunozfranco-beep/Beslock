@@ -1,0 +1,15 @@
+{
+  "schema_version": "repo-governance/1.0",
+  "generated_at": "2026-05-13T15:46:30Z",
+  "pointer": {
+    "path": "data/products.json",
+    "category": "C",
+    "sub_label": "product-catalog-draft",
+    "size_bytes": 188,
+    "mtime_iso": "2026-05-08T20:29:10Z",
+    "reason": "Ambiguous ownership or unclassified. Pointer recorded here; the asset itself was NOT moved or modified. Resolution requires human review.",
+    "ownership_recommendation": "ambiguous — quarantine pointer in _repository-governance/quarantine/data-products/ until ownership is clarified (legacy storefront vs. knowledge-core)"
+  },
+  "physical_action_taken": "none",
+  "reversible": true
+}

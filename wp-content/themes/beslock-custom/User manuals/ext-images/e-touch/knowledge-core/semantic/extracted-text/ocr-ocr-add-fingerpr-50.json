@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-add-fingerpr-50",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Add Fingerpr",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-50"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-add-fingerpr-50.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Vil.Password management\n1.Select “password management'as the entry of the home page.\n2.Before adding a password,select the user\n1.Validity period:the\nadministrator can decide the\nlength of validity period of other members.It can be\nset as permanent,or set the specified start time-end\ntime.\n2.Door opening mode:the administrator can decide\nthe\npermission type of the door opening mode\npossessed by the member;As shown in the figure.if\nthe\nadministrator\ncoses\nal\nthe\ndoor\nopening\npermissions of the member,the user can no longer\nmaintain his own door opening mode through APP,\nand can only use the existing door opening mode.\n3.After creating another member,the administrator\ncan associate the member with a certain user of APP\nby \"sharing\" When the specified end time of the user\narrives,the users APP wil automatically lose the\ndevice.\n1.Before\nselecting\n\"fingerpri\nfor\ncollection,select\nthe\nuser\ncorresponding\nto\nthe\nfingerprint to be added.\n2.Click\n\"Start\nCollection\"to enter\nthe\nfingerprint\ncollection\ninterface.For each fingerprint collection,\nmuliple\nfingerprints\nneed\nto\nbe\nentered\n(the\nmanufacturer can customize the collection times).\n3.Connect the door lock through APP Bluetooth,and\nthe administrator can colect fingerprints for himself\nor\nother family members.\nd to be added.\nding\nto the p\n3.Click \"Add Password\"to enter the password entry interface,which supports random generation and\nuser-defined\npasswords\n4.Connect the door lock through APP",
+  "legacy_storage_bucket": "extracted-text"
+}

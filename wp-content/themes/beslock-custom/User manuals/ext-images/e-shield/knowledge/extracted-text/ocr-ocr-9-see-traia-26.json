@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-9-see-traia-26",
+  "type": "extracted-text",
+  "product": "e-shield",
+  "summary": "9 See Traia?",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-shield/manual.json#section-26"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "eee , wore\npa Mee a tee\neg arta nga wae tens\n9. Configuración del sistema\nEn la configuracuón del sistema. se incluye el interruptor de toque para abrir. gestión de grupo,\ngestión de Gateway, configuración de seguridad, recordatorios, asi como la transferencia de\nadministración de la cerradura\no E ajuste de toca: para apar determina si se p.cde aber la puera tocando a cerradura",
+  "storage_bucket": "extracted-text"
+}

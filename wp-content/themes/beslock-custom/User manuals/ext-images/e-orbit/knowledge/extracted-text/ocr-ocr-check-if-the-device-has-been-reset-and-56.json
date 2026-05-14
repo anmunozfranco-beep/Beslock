@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-check-if-the-device-has-been-reset-and-56",
+  "type": "extracted-text",
+  "product": "e-orbit",
+  "summary": "Check If The Device Has Been Reset And",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-orbit/manual.json#section-56"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "the indicator is blinking quickly.\nCheck if it is 2.4 GHz Wi-Fi.\nVerify the Wi-Fi password.",
+  "storage_bucket": "extracted-text"
+}

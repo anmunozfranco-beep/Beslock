@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-after-successful-operation-pr-14",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "After Successful Operation, Pr",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-14"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "Operation",
+  "raw_text": "ess \"*\" to return to the previo\nus level or continue adding a\ndministrators",
+  "storage_bucket": "extracted-text"
+}

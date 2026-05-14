@@ -1,0 +1,26 @@
+{
+  "id": "ocr-ocr-5v-9",
+  "type": "extracted-text",
+  "product": "e-prime",
+  "summary": "█\u0001备⽤供电：当电池耗尽时,使⽤5V移动电源即可对门锁应急供电;",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-prime/manual.json#section-9"
+  ],
+  "related": {},
+  "updated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "semantic_category": "General",
+  "raw_text": "三.注意事项：\n1.新锁安装后,应进⾏恢复初始化操作,清空因安装调试时录⼊的指纹;\n把⼿换向\n锁体换向\n1.松开执⼿换向螺丝；\n2.将执⼿沿锁具上⽅旋转180°\n3.旋转换向器\n4.固定换向螺丝完成换向\n1.往上拨动换向拨⽚；\n2.斜⾆按进去;\n3.旋转斜⾆180°换向;",
+  "storage_bucket": "extracted-text"
+}

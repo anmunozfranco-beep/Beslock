@@ -1,0 +1,86 @@
+{
+  "product": "e-shield",
+  "generated_at": "2026-05-13T14:28:52Z",
+  "schema_version": "2.0",
+  "edges": [
+    {
+      "from": "workflow:wf-registro-e-inicio-de-sesion",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-agregar-la-cerradura",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-ekeys-y-acceso-compartido",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-contrasenas-remotas",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-tarjetas-rf-y-huellas",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-tarjetas-rf-y-huellas-tarjetas-rf",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-tarjetas-rf-y-huellas-huellas",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-desbloqueo-por-bluetooth",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-gateway-y-funciones-remotas",
+      "to": "warning:warning-advertencias-editoriales",
+      "rel": "co-located-with",
+      "evidence": "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md",
+      "validation_status": "inferred-by-adjacency"
+    },
+    {
+      "from": "workflow:wf-tarjetas-rf-y-huellas-huellas",
+      "to": "glossary-term:term-huella",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    },
+    {
+      "from": "workflow:wf-desbloqueo-por-bluetooth",
+      "to": "glossary-term:term-bluetooth",
+      "rel": "references",
+      "evidence": "step-text-match",
+      "validation_status": "inferred-by-text-match"
+    }
+  ],
+  "edge_total": 11,
+  "policy": "Only adjacency- and text-match-inferred edges are emitted. Verified semantic edges must be authored in manual-overrides.json."
+}

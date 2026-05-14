@@ -1,0 +1,31 @@
+{
+  "schema_version": "visual-constitution/1.0",
+  "generated_at": "2026-05-13T16:25:41Z",
+  "master_document": "KNOWLEDGE_BUILDING/VISUAL_GOVERNANCE/00-CONSTITUTION.md",
+  "ten_pillars": [
+    "Truth-source primacy",
+    "Mechanical consistency",
+    "Hands-only human policy",
+    "Schematic / hybrid only",
+    "Comfy-native rendering",
+    "Semantic orchestration",
+    "Provenance-bound lineage",
+    "Validation-first promotion",
+    "Risk-tiered rigour",
+    "Single canonical governance"
+  ],
+  "absolute_principle": "Maximum operational clarity — not marketing aesthetics, not cinematic storytelling, not decorative AI art.",
+  "doctrine_documents": [
+    "doctrine/01-purpose-and-philosophy.md",
+    "doctrine/02-truth-source-doctrine.md",
+    "doctrine/03-mechanical-consistency-doctrine.md",
+    "doctrine/04-human-interaction-doctrine.md",
+    "doctrine/05-rendering-style-doctrine.md",
+    "doctrine/06-comfy-constitution.md",
+    "doctrine/07-semantic-orchestration-doctrine.md",
+    "doctrine/08-validation-philosophy.md",
+    "doctrine/09-visual-risk-philosophy.md",
+    "doctrine/10-publication-philosophy.md",
+    "doctrine/11-lineage-and-provenance-doctrine.md"
+  ]
+}

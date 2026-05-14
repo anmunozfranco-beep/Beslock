@@ -1,0 +1,8 @@
+# Decision Beslock
+
+Source: wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#9
+
+- crear `e-Orbit app manual.md`
+- actualizar el manual de uso final con datos OEM nuevos de energia, apertura y app
+- reforzar perfil visual y prompts con material, proporciones y restricciones tecnicas
+- mantener `manual de instalacion` y `plantilla de instalacion` como pendientes hasta recibir fuente fisica real de montaje o perforacion

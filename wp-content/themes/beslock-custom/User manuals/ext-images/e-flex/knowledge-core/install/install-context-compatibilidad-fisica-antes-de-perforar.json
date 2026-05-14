@@ -1,0 +1,36 @@
+{
+  "id": "install-context-compatibilidad-fisica-antes-de-perforar",
+  "type": "installation-flow",
+  "product": "e-flex",
+  "summary": "Valida estas condiciones antes de montar:",
+  "language": "es-CO",
+  "validation_status": "extraction-pending-review",
+  "confidence": "medium",
+  "ocr_dependency": "none",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "wp-content/themes/beslock-custom/User manuals/ext-images/e-flex/source-of-truth/manuals/e-Flex installation manual.md#4"
+  ],
+  "extraction_lineage": [
+    "knowledge/installation/install-context-compatibilidad-fisica-antes-de-perforar.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "surface": "physical-installation",
+  "notes": [
+    "el montaje usa panel frontal, panel trasero y cuerpo de cerradura separados",
+    "el eje cuadrado debe sobresalir entre `10 y 30 mm` desde la superficie de la puerta",
+    "si el saliente real excede ese rango, el husillo debe recortarse o pedirse a medida",
+    "confirma mano de apertura y sentido del pestillo antes de fijar paneles"
+  ],
+  "legacy_storage_bucket": "installation"
+}

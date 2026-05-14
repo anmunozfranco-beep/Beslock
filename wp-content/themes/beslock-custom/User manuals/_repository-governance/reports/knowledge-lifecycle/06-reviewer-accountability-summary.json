@@ -1,0 +1,8 @@
+{
+  "approval_provenance_fields_count": 10,
+  "artifact": "wp-content/themes/beslock-custom/User manuals/knowledge-lifecycle/reviewer-accountability/",
+  "audit_trail_rules_count": 4,
+  "kind": "reviewer-accountability-summary",
+  "reviewer_identity_fields_count": 5,
+  "schema": "knowledge-lifecycle-governance/1.0"
+}

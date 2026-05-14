@@ -1,0 +1,31 @@
+{
+  "id": "ocr-ocr-contact-tel-75",
+  "type": "extracted-text",
+  "product": "e-touch",
+  "summary": "Contact Tel",
+  "language": "es-CO",
+  "validation_status": "inferred-but-unverified",
+  "confidence": "ocr-fallback-low",
+  "ocr_dependency": "full",
+  "channel_targets": [
+    "web",
+    "pdf",
+    "support",
+    "onboarding",
+    "chatbot",
+    "rag",
+    "api"
+  ],
+  "source_refs": [
+    "generated_manuals/e-touch/manual.json#section-75"
+  ],
+  "extraction_lineage": [
+    "knowledge/extracted-text/ocr-ocr-contact-tel-75.json"
+  ],
+  "schema_version": "knowledge-core/1.0",
+  "updated_at": "2026-05-13T15:18:31Z",
+  "related": {},
+  "semantic_category": "General",
+  "raw_text": "Note to users:\nIn order to protect your Legal rights, please keep the service card and the relevant purchase voucher to protect your Legal rights in warranty services,\nwarranty card once modified will be invalid",
+  "legacy_storage_bucket": "extracted-text"
+}
