@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refresh — Beslock Operational Console</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <meta name="governance-layer" content="37" />
+  <meta name="governance-schema" content="operational-console-governance/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+</head>
+<body class="oc-body" data-mock="../mock-data/pending-refresh.json">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console</div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 37 — modeling-only">L37</div>
+  </header>
+  <main class="oc-main">
+    <section class="oc-section"><h1>Refresh Approval</h1>
+      <p>Visualize detected changes, impacted layers and rebuild/propagation plans. Approve, reject or scope partial rebuilds — every action is a draft.</p></section>
+    <div class="oc-banner oc-banner--danger">No action on this screen executes a rebuild. All four buttons emit reviewer-bound drafts only.</div>
+    <section class="oc-grid oc-grid--3">
+      <article class="oc-card"><h2>Detected Changes</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Impacted Layers</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Rebuild Plans</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Propagation Plans</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Stale Outputs</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Affected Publications</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+      <article class="oc-card"><h2>Affected Runtime Domains</h2><p class="oc-meta">layer-36 dependency-graph view</p></article>
+    </section>
+    <section class="oc-section oc-card"><h2>Pending refresh (mock)</h2><pre id="oc-mock-dump" class="oc-pre">loading…</pre></section>
+    <section class="oc-section oc-card"><h2>Operator actions</h2>
+      <div class="oc-step"><div class="oc-step__index">·</div><div><div class="oc-step__title">dry-run <span class="oc-tag oc-tag--warn">draft only</span></div><div class="oc-step__hint">Preview rebuild manifest only</div></div></div>
+      <div class="oc-step"><div class="oc-step__index">·</div><div><div class="oc-step__title">approve <span class="oc-tag oc-tag--warn">draft only</span></div><div class="oc-step__hint">Emit refresh-approval draft for reviewer</div></div></div>
+      <div class="oc-step"><div class="oc-step__index">·</div><div><div class="oc-step__title">reject <span class="oc-tag oc-tag--warn">draft only</span></div><div class="oc-step__hint">Emit refresh-rejection draft</div></div></div>
+      <div class="oc-step"><div class="oc-step__index">·</div><div><div class="oc-step__title">partial-rebuild <span class="oc-tag oc-tag--warn">draft only</span></div><div class="oc-step__hint">Emit scoped rebuild draft (single product/domain/publication)</div></div></div>
+      <button data-propose="refresh-approval" data-target="oc-refresh-draft" data-source="oc-mock-dump">Propose refresh-approval</button>
+      <pre id="oc-refresh-draft" class="oc-pre">// nothing proposed yet</pre>
+    </section>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required</span>
+    <span>No SaaS · No cloud · No autonomous agents · No auto-approval</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Governance — Beslock Operational Console</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <meta name="governance-layer" content="37" />
+  <meta name="governance-schema" content="operational-console-governance/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+</head>
+<body class="oc-body" data-mock="../mock-data/governance-status.json">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console</div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 37 — modeling-only">L37</div>
+  </header>
+  <main class="oc-main">
+    <section class="oc-section"><h1>Governance & Safety Visibility</h1>
+      <p>Trust levels, unresolved risks, propagation warnings, lineage integrity, review status and governance conflicts.</p></section>
+    <div class="oc-banner">All counters are read from append-only governance reports. Nothing on this screen mutates governance.</div>
+    <section class="oc-grid oc-grid--3">
+      <article class="oc-card"><h2>Trust Levels</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Unresolved Risks</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Propagation Warnings</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Lineage Integrity</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Review Status</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Candidate Status</h2><p class="oc-meta">read-only</p></article>
+      <article class="oc-card"><h2>Governance Conflicts</h2><p class="oc-meta">read-only</p></article>
+    </section>
+    <section class="oc-section oc-card"><h2>Governance status (mock)</h2><pre id="oc-mock-dump" class="oc-pre">loading…</pre></section>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required</span>
+    <span>No SaaS · No cloud · No autonomous agents · No auto-approval</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+</body>
+</html>

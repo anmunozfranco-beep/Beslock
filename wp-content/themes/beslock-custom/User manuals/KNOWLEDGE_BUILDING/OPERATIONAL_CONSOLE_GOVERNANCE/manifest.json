@@ -1,0 +1,87 @@
+{
+  "auto_approves_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 37,
+  "doctrines": [
+    {
+      "file": "01-human-operability-doctrine.md",
+      "title": "Human operability doctrine"
+    },
+    {
+      "file": "02-governance-first-doctrine.md",
+      "title": "Governance-first doctrine"
+    },
+    {
+      "file": "03-non-mutation-doctrine.md",
+      "title": "Non-mutation doctrine"
+    },
+    {
+      "file": "04-non-execution-doctrine.md",
+      "title": "Non-execution doctrine"
+    },
+    {
+      "file": "05-local-first-doctrine.md",
+      "title": "Local-first doctrine"
+    },
+    {
+      "file": "06-determinism-doctrine.md",
+      "title": "Determinism doctrine"
+    },
+    {
+      "file": "07-audit-friendly-doctrine.md",
+      "title": "Audit-friendly doctrine"
+    },
+    {
+      "file": "08-no-saas-doctrine.md",
+      "title": "No SaaS doctrine"
+    }
+  ],
+  "executable": false,
+  "id": "operational-console-governance-manifest",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "schema": "operational-console-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance"
+  ],
+  "updated_at": "2026-05-14T10:43:38Z",
+  "uses_cloud": false
+}

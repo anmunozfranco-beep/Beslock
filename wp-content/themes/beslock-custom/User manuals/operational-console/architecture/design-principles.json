@@ -1,0 +1,95 @@
+{
+  "auto_approves_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "bypasses_reviewer_governance": false,
+  "constitutional_layer_index": 37,
+  "executable": false,
+  "id": "operational-console-design-principles",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "principles": [
+    {
+      "id": "lightweight",
+      "rule": "HTML/CSS/JS only; no framework, no bundler."
+    },
+    {
+      "id": "local-first",
+      "rule": "Opens from disk; no server required."
+    },
+    {
+      "id": "governance-first",
+      "rule": "Every action is modelled as a draft manifest; reviewer authorization is always required for promotion."
+    },
+    {
+      "id": "deterministic",
+      "rule": "Same input → same rendered view; no randomness, no clock-dependent layout."
+    },
+    {
+      "id": "audit-friendly",
+      "rule": "Every operator action surfaces the exact JSON payload that would be sent to governance."
+    },
+    {
+      "id": "no-cloud",
+      "rule": "No fetch() to remote hosts; no third-party CDN; no analytics."
+    },
+    {
+      "id": "no-backend",
+      "rule": "No persistent server-side state; manifest stores are append-only JSON files in the repo."
+    },
+    {
+      "id": "no-auto-approval",
+      "rule": "The UI cannot promote, mutate, or publish; it only proposes."
+    },
+    {
+      "id": "non-mutation",
+      "rule": "The console never writes into knowledge-core, source-of-truth, runtime, or publication."
+    },
+    {
+      "id": "transparency",
+      "rule": "Every screen exposes the governance layer, schema, and the exact subordinate chain."
+    }
+  ],
+  "schema": "operational-console-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance"
+  ],
+  "updated_at": "2026-05-14T10:43:38Z",
+  "uses_cloud": false
+}

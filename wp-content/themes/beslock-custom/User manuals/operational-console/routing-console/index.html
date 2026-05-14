@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Routing — Beslock Operational Console</title>
+  <link rel="stylesheet" href="../assets/console.css" />
+  <meta name="governance-layer" content="37" />
+  <meta name="governance-schema" content="operational-console-governance/1.0" />
+  <meta name="reviewer-required" content="true" />
+  <meta name="auto-approval" content="false" />
+</head>
+<body class="oc-body" data-mock="../mock-data/routing-suggestions.json">
+  <header class="oc-header">
+    <div class="oc-header__brand">Beslock · Operational Console</div>
+    <nav class="oc-nav">
+      <a class="oc-nav__item" href="../index.html">Dashboard</a>
+      <a class="oc-nav__item" href="../intake-console/index.html">Intake</a>
+      <a class="oc-nav__item" href="../routing-console/index.html">Routing</a>
+      <a class="oc-nav__item" href="../refresh-console/index.html">Refresh</a>
+      <a class="oc-nav__item" href="../reconciliation-console/index.html">Reconciliation</a>
+      <a class="oc-nav__item" href="../publication-console/index.html">Publication</a>
+      <a class="oc-nav__item" href="../governance-console/index.html">Governance</a>
+      <a class="oc-nav__item" href="../reports-console/index.html">Reports</a>
+    </nav>
+    <div class="oc-header__badge" title="Governance layer 37 — modeling-only">L37</div>
+  </header>
+  <main class="oc-main">
+    <section class="oc-section"><h1>Routing Consultation</h1>
+      <p>“I have this file — where should it go?” The console proposes; the operator decides; reviewer authorizes any cross-canonical move.</p></section>
+    <div class="oc-banner">Routing suggestions are <strong>advisory</strong>. The console never moves files automatically.</div>
+    <section class="oc-grid oc-grid--2">
+      <article class="oc-card"><h2>Operator questions</h2><ul class="oc-list">
+        <li><span>Where should this file go?</span><span class="oc-tag oc-tag--accent">suggested-destination</span></li>
+        <li><span>What class of evidence is this?</span><span class="oc-tag oc-tag--accent">evidence-classification</span></li>
+        <li><span>What trust tier should this carry?</span><span class="oc-tag oc-tag--accent">trust-tier</span></li>
+        <li><span>What is the operational role of this evidence?</span><span class="oc-tag oc-tag--accent">operational-role</span></li>
+        <li><span>What downstream domains/products are affected?</span><span class="oc-tag oc-tag--accent">downstream-impact</span></li>
+        <li><span>Will this trigger a refresh?</span><span class="oc-tag oc-tag--accent">refresh-impact</span></li>
+      </ul></article>
+      <article class="oc-card"><h2>Routing suggestions (mock)</h2><pre id="oc-mock-dump" class="oc-pre">loading…</pre></article>
+    </section>
+    <section class="oc-section oc-card">
+      <h2>Propose routing consultation</h2>
+      <button data-propose="routing-consultation" data-target="oc-routing-draft" data-source="oc-mock-dump">Propose routing-consultation</button>
+      <pre id="oc-routing-draft" class="oc-pre">// nothing proposed yet</pre>
+    </section>
+
+  </main>
+  <footer class="oc-footer">
+    <span>Repo-native · Local-first · Governance-first · Reviewer-required</span>
+    <span>No SaaS · No cloud · No autonomous agents · No auto-approval</span>
+  </footer>
+  <script src="../assets/console.js" defer></script>
+</body>
+</html>
