@@ -1,0 +1,30 @@
+{
+  "rule_family": "deployment-checklist",
+  "rules": [
+    {
+      "id": "DC-1",
+      "rule": "checklist_id required and unique"
+    },
+    {
+      "id": "DC-2",
+      "rule": "checklist_kind enum required"
+    },
+    {
+      "id": "DC-3",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "DC-4",
+      "rule": "items MUST be a non-empty ordered list of {item_id, requirement, governance_reference}"
+    },
+    {
+      "id": "DC-5",
+      "rule": "every governance_reference MUST resolve to an existing Phase 56 readiness audit / Phase 57 verification / Phase 57 deployment package / Phase 55 stabilization / activation lifecycle record"
+    },
+    {
+      "id": "DC-6",
+      "rule": "checklist_sha256 deterministic over canonical JSON; reviewer attribution mandatory"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

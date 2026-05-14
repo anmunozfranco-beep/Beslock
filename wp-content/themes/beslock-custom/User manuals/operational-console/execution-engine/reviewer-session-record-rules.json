@@ -1,0 +1,26 @@
+{
+  "rule_family": "reviewer-session-record",
+  "rules": [
+    {
+      "id": "RS-1",
+      "rule": "session_id required and unique"
+    },
+    {
+      "id": "RS-2",
+      "rule": "session_kind enum required"
+    },
+    {
+      "id": "RS-3",
+      "rule": "session is observational-only: notes is a string, references is a pointer-only list"
+    },
+    {
+      "id": "RS-4",
+      "rule": "behavior tracking / analytics / telemetry keys forbidden"
+    },
+    {
+      "id": "RS-5",
+      "rule": "session_sha256 deterministic over canonical JSON; append-only"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

@@ -1,0 +1,30 @@
+{
+  "rule_family": "onboarding-sequence",
+  "rules": [
+    {
+      "id": "ON-1",
+      "rule": "sequence_id required and unique"
+    },
+    {
+      "id": "ON-2",
+      "rule": "sequence_kind enum required"
+    },
+    {
+      "id": "ON-3",
+      "rule": "modules MUST be a non-empty ordered list of {module_id, title, references}"
+    },
+    {
+      "id": "ON-4",
+      "rule": "every reference MUST resolve to an existing runtime path under operational-console/ or KNOWLEDGE_BUILDING/"
+    },
+    {
+      "id": "ON-5",
+      "rule": "sequence_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "ON-6",
+      "rule": "supersession via new sequence_id with prior_sequence_id pointer; append-only"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

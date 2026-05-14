@@ -1,0 +1,30 @@
+{
+  "rule_family": "reproducibility-proof",
+  "rules": [
+    {
+      "id": "RP-1",
+      "rule": "proof_id required and unique"
+    },
+    {
+      "id": "RP-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "RP-3",
+      "rule": "for each declared target hash (stable-export-hash / deployment-package-hash / readiness-audit-hash), the value MUST match the upstream artifact's recorded hash byte-for-byte"
+    },
+    {
+      "id": "RP-4",
+      "rule": "status enum: confirmed | divergent (reviewer-readable; not used for auto-rollback)"
+    },
+    {
+      "id": "RP-5",
+      "rule": "proof_sha256 deterministic over canonical JSON of the comparison record"
+    },
+    {
+      "id": "RP-6",
+      "rule": "reviewer attribution mandatory; append-only"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}

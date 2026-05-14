@@ -1,0 +1,26 @@
+{
+  "rule_family": "production-handoff",
+  "rules": [
+    {
+      "id": "PH-1",
+      "rule": "handoff_id required and unique"
+    },
+    {
+      "id": "PH-2",
+      "rule": "from_reviewer and to_reviewer required (non-empty strings)"
+    },
+    {
+      "id": "PH-3",
+      "rule": "package_id, stabilization_id, deployment_package_id, readiness_audit_id MUST all resolve"
+    },
+    {
+      "id": "PH-4",
+      "rule": "activation_id MUST resolve and declared activation_state MUST equal latest recorded activation state for activation_id"
+    },
+    {
+      "id": "PH-5",
+      "rule": "handoff_sha256 deterministic over canonical JSON; append-only; no overwrite semantics"
+    }
+  ],
+  "schema": "reviewer-operational-ergonomics-convergence/1.0"
+}
