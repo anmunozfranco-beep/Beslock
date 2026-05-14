@@ -1,0 +1,206 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "blocking_states": [
+    "failed",
+    "recovery-required"
+  ],
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "initial_state": "initialized",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Deterministic finite-state model for governed transactions. Every mutation MUST flow through this state machine. Browser surfaces never advance state; only the CLI executor does, and only with --confirm.",
+  "recovery_is_reviewer_authorized": true,
+  "replay_is_reviewer_authorized": true,
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "TX-1",
+      "rule": "no_mutation_outside_transaction_boundary"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-2",
+      "rule": "transaction_id_required_on_every_event"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-3",
+      "rule": "state_transitions_are_append_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-4",
+      "reasoning": "Transitions must follow declared edges; no jumping states.",
+      "rule": "no_state_skipping"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-5",
+      "rule": "terminal_states_are_immutable"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-6",
+      "rule": "blocking_states_require_reviewer_intervention"
+    },
+    {
+      "fail_closed": true,
+      "id": "TX-7",
+      "rule": "transaction_journal_is_replayable"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "states": [
+    "initialized",
+    "staged",
+    "executing",
+    "committed",
+    "failed",
+    "rolled-back",
+    "recovery-required",
+    "replayed"
+  ],
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "terminal_states": [
+    "committed",
+    "rolled-back",
+    "replayed"
+  ],
+  "title": "Transaction State Rules",
+  "transitions": [
+    {
+      "from": "initialized",
+      "guard": "snapshot_capture_complete && preconditions_passed",
+      "id": "T-1",
+      "reasoning": "Snapshot must precede any mutation.",
+      "to": "staged"
+    },
+    {
+      "from": "staged",
+      "guard": "reviewer_confirm_flag",
+      "id": "T-2",
+      "reasoning": "Execution requires explicit reviewer authorization.",
+      "to": "executing"
+    },
+    {
+      "from": "executing",
+      "guard": "all_operations_succeeded && integrity_check_passed",
+      "id": "T-3",
+      "reasoning": "Commit only when every staged operation succeeded.",
+      "to": "committed"
+    },
+    {
+      "from": "executing",
+      "guard": "any_operation_failed",
+      "id": "T-4",
+      "reasoning": "Any sub-operation failure transitions the transaction to failed.",
+      "to": "failed"
+    },
+    {
+      "from": "failed",
+      "guard": "reviewer_authorised_rollback && rollback_executed",
+      "id": "T-5",
+      "reasoning": "Rollback is reviewer-authorized and append-only.",
+      "to": "rolled-back"
+    },
+    {
+      "from": "executing",
+      "guard": "process_interrupted_mid_execution",
+      "id": "T-6",
+      "reasoning": "Interrupted execution requires reviewer recovery.",
+      "to": "recovery-required"
+    },
+    {
+      "from": "recovery-required",
+      "guard": "reviewer_authorised_replay && replay_succeeded",
+      "id": "T-7",
+      "reasoning": "Replay reconstructs the deterministic outcome.",
+      "to": "replayed"
+    },
+    {
+      "from": "recovery-required",
+      "guard": "reviewer_authorised_rollback",
+      "id": "T-8",
+      "reasoning": "Reviewer may choose rollback over replay.",
+      "to": "rolled-back"
+    },
+    {
+      "from": "staged",
+      "guard": "preconditions_failed_at_execute_time",
+      "id": "T-9",
+      "reasoning": "Late precondition failure (e.g., source mutated).",
+      "to": "failed"
+    }
+  ],
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}

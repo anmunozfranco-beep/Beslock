@@ -1,0 +1,167 @@
+{
+  "append_only": true,
+  "audit_event_store": "runtime-manifests/integrity-events/_event-store.json",
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "auto_recovery": false,
+  "auto_replay": false,
+  "auto_rollback": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "captures_snapshots_before_mutation": true,
+  "checks": [
+    {
+      "blocks_execution_when_failing": true,
+      "id": "INT-1",
+      "kind": "lineage-continuity",
+      "validates": "every mutation_event has a corresponding lineage_event with same operation_id"
+    },
+    {
+      "blocks_execution_when_failing": true,
+      "id": "INT-2",
+      "kind": "manifest-consistency",
+      "validates": "every event-store carries declared schema and append_only flag"
+    },
+    {
+      "blocks_execution_when_failing": true,
+      "id": "INT-3",
+      "kind": "transaction-completeness",
+      "validates": "every transaction is in a declared state; no orphan transitions"
+    },
+    {
+      "blocks_execution_when_failing": true,
+      "id": "INT-4",
+      "kind": "snapshot-validity",
+      "validates": "every snapshot path declared in snapshot_events exists on disk and is non-empty"
+    },
+    {
+      "blocks_execution_when_failing": false,
+      "id": "INT-5",
+      "kind": "propagation-integrity",
+      "validates": "every accepted destination is referenced by at least one mutation_event"
+    },
+    {
+      "blocks_execution_when_failing": false,
+      "id": "INT-6",
+      "kind": "publication-runtime-parity",
+      "validates": "publication_events without superseding refresh_events appear consistent with current outputs"
+    },
+    {
+      "blocks_execution_when_failing": false,
+      "id": "INT-7",
+      "kind": "rebuild-consistency",
+      "validates": "every refresh_event with action approve|partial-rebuild has a downstream publication_event or audit-warning"
+    },
+    {
+      "blocks_execution_when_failing": false,
+      "id": "INT-8",
+      "kind": "stale-output-synchronisation",
+      "validates": "no destination newer than its source by more than declared drift threshold"
+    },
+    {
+      "blocks_execution_when_failing": true,
+      "id": "INT-9",
+      "kind": "transaction-journal-replayability",
+      "validates": "transaction journal is replayable end-to-end without external state"
+    }
+  ],
+  "constitutional_layer_index": 40,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "destructive_snapshot_pruning": false,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "purpose": "Read-only multi-channel integrity validation. Findings emit events and BLOCK execution when severity is 'block'. NO autonomous repair.",
+  "recovery_is_reviewer_authorized": true,
+  "replay_is_reviewer_authorized": true,
+  "requires_reviewer_confirmation": true,
+  "rollback_is_reviewer_authorized": true,
+  "rollback_preserves_evidence": true,
+  "rules": [
+    {
+      "fail_closed": true,
+      "id": "INT-R-1",
+      "rule": "integrity_engine_is_read_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "INT-R-2",
+      "rule": "integrity_findings_must_be_append_only"
+    },
+    {
+      "fail_closed": true,
+      "id": "INT-R-3",
+      "rule": "integrity_block_severity_blocks_new_transactions"
+    },
+    {
+      "fail_closed": true,
+      "id": "INT-R-4",
+      "rule": "integrity_must_never_auto_repair"
+    },
+    {
+      "fail_closed": true,
+      "id": "INT-R-5",
+      "rule": "integrity_must_never_quarantine_or_delete"
+    }
+  ],
+  "schema": "governed-transactional-execution/1.0",
+  "snapshot_append_only": true,
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance"
+  ],
+  "telemetry": false,
+  "title": "Integrity Verification Rules",
+  "updated_at": "2026-05-14T14:22:51Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false,
+  "wraps_mutations_in_transactions": true
+}

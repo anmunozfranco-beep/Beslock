@@ -1,0 +1,12 @@
+# Governed Transactional Execution & Recovery Governance (phase 47, layer 40)
+
+- [Transactional Mutation Boundary](./01-transactional-mutation-boundary-doctrine.md)
+- [Snapshot Precedes Mutation](./02-snapshot-precedes-mutation-doctrine.md)
+- [Rollback Is Reviewer-Authorized And Non-Destructive](./03-rollback-is-reviewer-authorized-and-non-destructive-doctrine.md)
+- [No Autonomous Recovery](./04-no-autonomous-recovery-doctrine.md)
+- [Deterministic Replay](./05-deterministic-replay-doctrine.md)
+- [Integrity Is Read-Only](./06-integrity-is-read-only-doctrine.md)
+- [No Silent Failure](./07-no-silent-failure-doctrine.md)
+- [Consistency Blocks Unsafe Execution](./08-consistency-blocks-unsafe-execution-doctrine.md)
+- [Append-Only Transactional Journal](./09-append-only-transactional-journal-doctrine.md)
+- [CLI-Only — No Daemon, No Watcher](./10-cli-only-no-daemon-no-watcher-doctrine.md)

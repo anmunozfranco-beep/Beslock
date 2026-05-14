@@ -34,3 +34,40 @@ python3 tools/governed_fs_executor.py --kind mutation --request ~/Downloads/muta
 - Knowledge-core, governance, runtime-implementation and the runtime-manifest event stores are immutable from intake.
 - Every successful operation appends to (a) operation event store, (b) lineage event store, (c) audit event store.
 - Every failed operation routes the source to `staging/quarantined/` and emits an audit event.
+
+
+---
+
+## Phase 47 addendum — governed transactional execution & recovery (layer 40)
+
+Layer 39 introduced REAL filesystem mutation. Layer 40 wraps every mutation in a governed transaction with deterministic snapshot capture, reviewer-authorized rollback execution, interrupted-operation recovery detection, deterministic replay, and multi-channel integrity verification.
+
+### New CLI
+
+```
+python3 tools/governed_transactional_executor.py \
+    --kind {transaction|rollback-exec|recovery-detect|replay|integrity|consistency} \
+    --request /path/to/request.json \
+    --confirm
+```
+
+Without `--confirm`: dry-run (validates request, prints plan, exits non-zero on any failure). With `--confirm`: appends transaction-events / snapshot-events / mutation-events / lineage-events / audit-events as appropriate.
+
+### New surfaces
+
+- `transaction-console/exec.html` — transaction inspector + builder
+- `snapshot-console/exec.html` — snapshot explorer (read-only)
+- `recovery-console/exec.html` — recovery manifest detector (read-only)
+- `replay-console/exec.html` — deterministic replay reconstructor
+- `integrity-console/exec.html` — multi-channel integrity dashboard
+- `failure-console/exec.html` — failed-operation explorer
+
+### Hard guarantees added by layer 40
+
+- No mutation outside a governed transaction boundary (TX-1).
+- Snapshot capture must precede mutation (SN-1); snapshot failure blocks the transaction (SN-8).
+- Snapshots are append-only and never pruned by the executor (SN-5).
+- Rollback restores into `rollback-target/`, never overwrites the live tree (RBE-6).
+- No autonomous recovery, rollback, or replay (REC-5 / RBE-1 / RPL-5).
+- Integrity engine is strictly read-only and never auto-repairs (INT-R-1 / INT-R-4).
+- No silent failure recovery (FG-5); every failure emits an append-only failure-event.

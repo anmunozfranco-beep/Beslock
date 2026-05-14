@@ -60,3 +60,17 @@
     border-bottom: 1px solid #2a2a2a; padding: .35rem .5rem; text-align: left; }
 .oc-exec__pill { display: inline-block; padding: 1px 6px; border-radius: 8px;
     font-size: 11px; background: #243a52; color: #cfe6ff; }
+
+/* phase 47 — governed transactional execution & recovery additions */
+.oc-tx__state { display: inline-block; padding: 1px 6px; border-radius: 8px;
+    font-size: 11px; background: #1f3a5f; color: #cfe6ff; }
+.oc-tx__state--committed { background: #1f5f3a; color: #d4f5d4; }
+.oc-tx__state--failed { background: #5f1f1f; color: #f5d4d4; }
+.oc-tx__state--rolled-back { background: #5f4a1f; color: #f5e7d4; }
+.oc-tx__state--recovery-required { background: #5a1f5f; color: #f0d4f5; }
+.oc-tx__finding--block { border-left: 3px solid #d96d6d; padding-left: .75rem; }
+.oc-tx__finding--warning { border-left: 3px solid #d9c46d; padding-left: .75rem; }
+.oc-tx__finding--recovery { border-left: 3px solid #6dadd9; padding-left: .75rem; }
+.oc-tx__journal { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px; background: #141414; color: #cfe6ff; padding: .75rem;
+    border-radius: 4px; max-height: 320px; overflow: auto; }

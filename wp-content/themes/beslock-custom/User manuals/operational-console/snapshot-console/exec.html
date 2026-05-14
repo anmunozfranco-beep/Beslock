@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Snapshot console — Beslock Operational Console</title>
+<link rel="stylesheet" href="../assets/console.css" />
+<link rel="stylesheet" href="../assets/exec/exec.css" />
+</head>
+<body class="oc-body oc-body--exec">
+<header class="oc-header">
+  <a class="oc-header__brand" href="../index.html">Beslock Operational Console</a>
+  <nav class="oc-header__nav">
+    <a href="../exec.html">Exec</a>
+    <a href="../mutation-console/exec.html">Mutation</a>
+    <a href="../lineage-console/exec.html">Lineage</a>
+    <a href="../rollback-console/exec.html">Rollback</a>
+    <a href="../safety-console/exec.html">Safety</a>
+    <a href="../transaction-console/exec.html">Transactions</a>
+    <a href="../snapshot-console/exec.html">Snapshots</a>
+    <a href="../recovery-console/exec.html">Recovery</a>
+    <a href="../replay-console/exec.html">Replay</a>
+    <a href="../integrity-console/exec.html">Integrity</a>
+    <a href="../failure-console/exec.html">Failures</a>
+  </nav>
+</header>
+<main class="oc-main oc-exec">
+
+<section class="oc-exec__panel">
+  <h1>Snapshot explorer</h1>
+  <p>Read-only view of <code>runtime-manifests/snapshot-events/</code>.
+     Snapshots are append-only; the executor never deletes them.</p>
+  <div id="snap-summary"><em>Loading…</em></div>
+  <h2>Snapshots by transaction</h2>
+  <div id="snap-by-tx"><em>Loading…</em></div>
+</section>
+<script>
+(async function () {
+  const ev = await window.OC.SnapshotEngine.loadSnapshotEvents();
+  const sum = window.OC.SnapshotEngine.summarise(ev);
+  document.getElementById('snap-summary').innerHTML =
+    '<p>Total snapshots: <strong>' + sum.total + '</strong> &nbsp; '
+    + 'Transactions covered: <strong>' + sum.by_tx + '</strong></p>'
+    + '<ul>' + Object.keys(sum.by_kind).sort().map(k =>
+        '<li><span class="oc-exec__pill">' + k + '</span> &nbsp; ' + sum.by_kind[k] + '</li>').join('') + '</ul>';
+  const grouped = window.OC.SnapshotEngine.groupByTransaction(ev);
+  const keys = Object.keys(grouped).sort();
+  document.getElementById('snap-by-tx').innerHTML = keys.length
+    ? keys.map(tx => '<details><summary><code>' + tx + '</code> ('
+        + grouped[tx].length + ' snapshots)</summary><pre class="oc-tx__journal">'
+        + grouped[tx].map(e => JSON.stringify(e)).join('\n') + '</pre></details>').join('')
+    : '<em>(no snapshot events yet)</em>';
+})();
+</script>
+</main>
+<script src="../assets/exec/state.js"></script>
+<script src="../assets/exec/ux.js"></script>
+<script src="../assets/exec/drafts.js"></script>
+<script src="../assets/exec/fs-bridge.js"></script>
+<script src="../assets/exec/dest-resolver.js"></script>
+<script src="../assets/exec/mutation-engine.js"></script>
+<script src="../assets/exec/rollback-engine.js"></script>
+<script src="../assets/exec/safety-engine.js"></script>
+<script src="../assets/exec/transaction-engine.js"></script>
+<script src="../assets/exec/snapshot-engine.js"></script>
+<script src="../assets/exec/rollback-exec-engine.js"></script>
+<script src="../assets/exec/recovery-engine.js"></script>
+<script src="../assets/exec/replay-engine.js"></script>
+<script src="../assets/exec/integrity-engine.js"></script>
+<script src="../assets/exec/failure-engine.js"></script>
+<script src="../assets/exec/consistency-engine.js"></script>
+</body></html>
