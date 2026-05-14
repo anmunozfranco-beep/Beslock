@@ -1,0 +1,26 @@
+{
+  "rule_family": "operational-regression-scan",
+  "rules": [
+    {
+      "id": "ORS-1",
+      "rule": "scan_id required and unique"
+    },
+    {
+      "id": "ORS-2",
+      "rule": "baseline_id MUST resolve to a stability-baseline-record"
+    },
+    {
+      "id": "ORS-3",
+      "rule": "current upstream hashes MUST be re-derived; comparisons recorded per tracked id"
+    },
+    {
+      "id": "ORS-4",
+      "rule": "regression_count is the count of comparisons whose match=false; informational only"
+    },
+    {
+      "id": "ORS-5",
+      "rule": "scan_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

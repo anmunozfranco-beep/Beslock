@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 52,
+  "report": "05-corpus-anomaly-tracking-runtime",
+  "schema": "production-hardening-corpus-validation/1.0",
+  "title": "Corpus anomaly tracking runtime"
+}

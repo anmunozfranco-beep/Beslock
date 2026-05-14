@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 52,
+  "report": "02-runtime-hardening-scan-runtime",
+  "schema": "production-hardening-corpus-validation/1.0",
+  "title": "Runtime hardening scan runtime"
+}

@@ -1,0 +1,34 @@
+{
+  "rule_family": "corpus-anomaly-record",
+  "rules": [
+    {
+      "id": "CAR-1",
+      "rule": "anomaly_id required and unique"
+    },
+    {
+      "id": "CAR-2",
+      "rule": "kind enum required"
+    },
+    {
+      "id": "CAR-3",
+      "rule": "severity enum required: informational | minor | major | blocking"
+    },
+    {
+      "id": "CAR-4",
+      "rule": "either package_id (resolvable) or scope='corpus' required"
+    },
+    {
+      "id": "CAR-5",
+      "rule": "description (string) required; references list pointer-only"
+    },
+    {
+      "id": "CAR-6",
+      "rule": "append-only; no autonomous remediation; reviewer-authored only"
+    },
+    {
+      "id": "CAR-7",
+      "rule": "anomaly_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

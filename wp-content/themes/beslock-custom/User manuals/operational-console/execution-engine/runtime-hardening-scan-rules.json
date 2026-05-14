@@ -1,0 +1,26 @@
+{
+  "rule_family": "runtime-hardening-scan",
+  "rules": [
+    {
+      "id": "RHS-1",
+      "rule": "scan_id required and unique"
+    },
+    {
+      "id": "RHS-2",
+      "rule": "scopes MUST be a non-empty subset of {overwrite-isolation, replay-consistency, hash-consistency, lifecycle-consistency, export-reproducibility}"
+    },
+    {
+      "id": "RHS-3",
+      "rule": "for each scope, deterministic findings MUST be derived from existing append-only stores; no live polling"
+    },
+    {
+      "id": "RHS-4",
+      "rule": "reviewer-readable status enum: clean | findings (informational only; no autonomous remediation)"
+    },
+    {
+      "id": "RHS-5",
+      "rule": "scan_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}

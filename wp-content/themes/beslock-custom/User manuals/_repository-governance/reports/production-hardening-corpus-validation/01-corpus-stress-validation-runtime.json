@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 52,
+  "report": "01-corpus-stress-validation-runtime",
+  "schema": "production-hardening-corpus-validation/1.0",
+  "title": "Corpus stress validation runtime"
+}

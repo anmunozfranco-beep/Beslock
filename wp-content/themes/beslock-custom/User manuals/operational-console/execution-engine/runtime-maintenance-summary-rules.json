@@ -1,0 +1,22 @@
+{
+  "rule_family": "runtime-maintenance-summary",
+  "rules": [
+    {
+      "id": "RMS-1",
+      "rule": "summary_id required and unique"
+    },
+    {
+      "id": "RMS-2",
+      "rule": "summary aggregates pointer-only counts of records under prior runtime trees (Phase 47–58); no payload duplication"
+    },
+    {
+      "id": "RMS-3",
+      "rule": "no telemetry / no streaming / no dashboards"
+    },
+    {
+      "id": "RMS-4",
+      "rule": "summary_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "production-hardening-corpus-validation/1.0"
+}
