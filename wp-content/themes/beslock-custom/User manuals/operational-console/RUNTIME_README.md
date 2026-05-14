@@ -71,3 +71,23 @@ Without `--confirm`: dry-run (validates request, prints plan, exits non-zero on 
 - No autonomous recovery, rollback, or replay (REC-5 / RBE-1 / RPL-5).
 - Integrity engine is strictly read-only and never auto-repairs (INT-R-1 / INT-R-4).
 - No silent failure recovery (FG-5); every failure emits an append-only failure-event.
+
+
+## phase 48 — governed knowledge synthesis & canonical publication generation
+
+Layer 41. Subordinate to layer 40.
+
+Reviewer flow:
+1. Open the synthesis console; pick evidence_ids; export an envelope.
+2. Run `python3 tools/governed_knowledge_synthesis_executor.py --kind synthesis --request <file> --confirm`.
+3. Inspect the synthesis manifest in `operational-console/synthesis-drafts/`.
+4. Resolve any conflicts via the evidence-resolution console + `--kind evidence-resolve --confirm`.
+5. Approve the synthesis (publication-lifecycle: draft → synthesized → review-required → reviewer-approved).
+6. Build the publication: `--kind publication-build --confirm`. Outputs land under `operational-console/publication-builds/<build_id>/` (HTML + JSON).
+7. Transition the build to `publication-ready`; rollback is achieved by superseding, never by overwrite.
+
+Hard rules:
+- No LLM, no ML, no embeddings.
+- No silent evidence merge; every conflict is explicit.
+- Live publication tree is never overwritten by this layer.
+- All transitions are append-only and reviewer-attributed.

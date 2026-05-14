@@ -1,0 +1,113 @@
+{
+  "append_only_publication_lineage": true,
+  "autonomous_synthesis": false,
+  "conflict_classes": [
+    "trust-tier-mismatch",
+    "specification-divergence",
+    "warning-divergence",
+    "procedure-divergence",
+    "terminology-divergence",
+    "identity-divergence",
+    "evidence-recency-divergence",
+    "scope-overlap-divergence"
+  ],
+  "constitutional_layer_index": 41,
+  "daemon": false,
+  "deterministic": true,
+  "fail_closed_on_unresolved_conflict": true,
+  "generated_at_iso": "2026-05-14T14:41:51Z",
+  "is_cloud": false,
+  "is_saas": false,
+  "kind": "evidence-resolution-rules",
+  "no_auto_publication": true,
+  "no_silent_evidence_merge": true,
+  "preserves_evidence_lineage": true,
+  "preserves_source_attribution": true,
+  "preserves_trust_tiers": true,
+  "probabilistic_inference": false,
+  "publication_rollback_via_supersedence": true,
+  "publishes_only_into_publication_builds": true,
+  "resolution_strategies": [
+    "highest-trust-tier-wins (only if delta >= 1 tier)",
+    "newest-evidence-wins (only within same trust tier)",
+    "scope-narrowest-wins (for scope-overlap)",
+    "reviewer-arbitration (for ties or contradictions)"
+  ],
+  "reviewer_authoritative": true,
+  "rules": [
+    {
+      "id": "ER-1",
+      "rule": "Conflicts MUST be enumerated explicitly; no silent merge."
+    },
+    {
+      "id": "ER-2",
+      "rule": "Trust-tier ties REQUIRE reviewer arbitration."
+    },
+    {
+      "id": "ER-3",
+      "rule": "Contradiction (incompatible scalar values) BLOCKS publication until reviewer resolves."
+    },
+    {
+      "id": "ER-4",
+      "rule": "Each resolution emits a conflict-event with chosen strategy and reasoning_chain."
+    },
+    {
+      "id": "ER-5",
+      "rule": "No resolution strategy may discard evidence; superseded evidence remains in lineage."
+    },
+    {
+      "id": "ER-6",
+      "rule": "Unresolved ambiguity is flagged 'review-required'; downstream synthesis halts for affected fields."
+    }
+  ],
+  "scheduled_trigger": false,
+  "schema": "governed-knowledge-synthesis/1.0",
+  "subordinate_to": [
+    "domain-evidence-extraction",
+    "ontology-mapping",
+    "semantic-bindings",
+    "knowledge-core",
+    "evidence-trust-tiers",
+    "domain-routing",
+    "lineage-graph",
+    "operational-classification",
+    "operator-experience-shell",
+    "review-state-machine",
+    "draft-and-publication-staging",
+    "intake-and-routing-doctrines",
+    "console-rendering-policies",
+    "operator-history-substrate",
+    "envelope-versioning",
+    "publication-source-of-truth",
+    "publication-trust-projection",
+    "publication-pre-publication-gates",
+    "publication-rollback-doctrine",
+    "publication-rendering-doctrine",
+    "publication-lifecycle-doctrine",
+    "publication-deletion-doctrine",
+    "publication-archival-doctrine",
+    "publication-promotion-doctrine",
+    "publication-naming-doctrine",
+    "publication-supersedence-doctrine",
+    "publication-traceability-doctrine",
+    "publication-conflict-doctrine",
+    "publication-rendering-language-doctrine",
+    "publication-publishing-locality-doctrine",
+    "publication-publishing-stamping-doctrine",
+    "publication-publishing-evidence-doctrine",
+    "publication-publishing-explanation-doctrine",
+    "publication-publishing-coherence-doctrine",
+    "publication-publishing-stability-doctrine",
+    "publication-publishing-determinism-doctrine",
+    "operator-cli-execution-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance",
+    "governed-transactional-execution-and-recovery-governance"
+  ],
+  "summary": "Multi-source evidence reconciliation rules.",
+  "uses_embeddings": false,
+  "uses_llm": false,
+  "uses_ml": false,
+  "watcher": false,
+  "writes_to_live_publication_tree": false
+}

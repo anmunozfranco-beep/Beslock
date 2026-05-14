@@ -1,0 +1,112 @@
+{
+  "append_only_publication_lineage": true,
+  "autonomous_synthesis": false,
+  "constitutional_layer_index": 41,
+  "daemon": false,
+  "deterministic": true,
+  "fail_closed_on_unresolved_conflict": true,
+  "generated_at_iso": "2026-05-14T14:41:51Z",
+  "is_cloud": false,
+  "is_saas": false,
+  "kind": "manual-assembly-rules",
+  "no_auto_publication": true,
+  "no_silent_evidence_merge": true,
+  "preserves_evidence_lineage": true,
+  "preserves_source_attribution": true,
+  "preserves_trust_tiers": true,
+  "probabilistic_inference": false,
+  "publication_rollback_via_supersedence": true,
+  "publishes_only_into_publication_builds": true,
+  "reviewer_authoritative": true,
+  "rules": [
+    {
+      "id": "MA-1",
+      "rule": "Each section MUST declare its evidence_ids and contributing manifests."
+    },
+    {
+      "id": "MA-2",
+      "rule": "Empty sections MUST be marked 'evidence-not-available' rather than silently omitted."
+    },
+    {
+      "id": "MA-3",
+      "rule": "Specifications and warnings MUST flag 'unresolved-fields' explicitly."
+    },
+    {
+      "id": "MA-4",
+      "rule": "Sections MAY declare 'review-required' if any contributing evidence is below reviewer-approved trust."
+    },
+    {
+      "id": "MA-5",
+      "rule": "Manual assembly MUST preserve canonical_product_id and product version."
+    },
+    {
+      "id": "MA-6",
+      "rule": "No section may contain text without an evidence pointer or governance pointer."
+    },
+    {
+      "id": "MA-7",
+      "rule": "Reviewer attribution MUST be carried per-section and at the manual root."
+    }
+  ],
+  "scheduled_trigger": false,
+  "schema": "governed-knowledge-synthesis/1.0",
+  "sections": [
+    "overview",
+    "prerequisites",
+    "installation",
+    "operation",
+    "troubleshooting",
+    "maintenance",
+    "specifications",
+    "warnings",
+    "support"
+  ],
+  "subordinate_to": [
+    "domain-evidence-extraction",
+    "ontology-mapping",
+    "semantic-bindings",
+    "knowledge-core",
+    "evidence-trust-tiers",
+    "domain-routing",
+    "lineage-graph",
+    "operational-classification",
+    "operator-experience-shell",
+    "review-state-machine",
+    "draft-and-publication-staging",
+    "intake-and-routing-doctrines",
+    "console-rendering-policies",
+    "operator-history-substrate",
+    "envelope-versioning",
+    "publication-source-of-truth",
+    "publication-trust-projection",
+    "publication-pre-publication-gates",
+    "publication-rollback-doctrine",
+    "publication-rendering-doctrine",
+    "publication-lifecycle-doctrine",
+    "publication-deletion-doctrine",
+    "publication-archival-doctrine",
+    "publication-promotion-doctrine",
+    "publication-naming-doctrine",
+    "publication-supersedence-doctrine",
+    "publication-traceability-doctrine",
+    "publication-conflict-doctrine",
+    "publication-rendering-language-doctrine",
+    "publication-publishing-locality-doctrine",
+    "publication-publishing-stamping-doctrine",
+    "publication-publishing-evidence-doctrine",
+    "publication-publishing-explanation-doctrine",
+    "publication-publishing-coherence-doctrine",
+    "publication-publishing-stability-doctrine",
+    "publication-publishing-determinism-doctrine",
+    "operator-cli-execution-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance",
+    "governed-transactional-execution-and-recovery-governance"
+  ],
+  "summary": "Section policy for canonical product manuals.",
+  "uses_embeddings": false,
+  "uses_llm": false,
+  "uses_ml": false,
+  "watcher": false,
+  "writes_to_live_publication_tree": false
+}

@@ -74,3 +74,14 @@
 .oc-tx__journal { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
     font-size: 12px; background: #141414; color: #cfe6ff; padding: .75rem;
     border-radius: 4px; max-height: 320px; overflow: auto; }
+
+/* phase 48 — governed knowledge synthesis & canonical publication additions */
+.oc-synth-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.oc-synth-card { border: 1px solid var(--oc-border, #d0d7de); border-radius: 8px; padding: 10px; background: #fff; }
+.oc-pub-state { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600;
+  background: #f6f8fa; color: #1f2328; border: 1px solid #d0d7de; }
+.oc-pub-state[data-state="reviewer-approved"] { background: #dafbe1; color: #14532d; border-color: #86efac; }
+.oc-pub-state[data-state="publication-ready"] { background: #dbeafe; color: #1e3a8a; border-color: #93c5fd; }
+.oc-pub-state[data-state="superseded"], .oc-pub-state[data-state="deprecated"] { background: #fee2e2; color: #7f1d1d; border-color: #fca5a5; }
+.oc-conflict { background: #fff7ed; border-left: 4px solid #ea580c; padding: 8px 10px; margin: 6px 0; }
+.oc-evidence-pin { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #475569; }

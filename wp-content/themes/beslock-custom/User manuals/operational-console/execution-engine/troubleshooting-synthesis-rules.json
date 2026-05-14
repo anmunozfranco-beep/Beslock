@@ -1,0 +1,101 @@
+{
+  "append_only_publication_lineage": true,
+  "autonomous_synthesis": false,
+  "constitutional_layer_index": 41,
+  "daemon": false,
+  "deterministic": true,
+  "fail_closed_on_unresolved_conflict": true,
+  "generated_at_iso": "2026-05-14T14:41:51Z",
+  "is_cloud": false,
+  "is_saas": false,
+  "kind": "troubleshooting-synthesis-rules",
+  "no_auto_publication": true,
+  "no_silent_evidence_merge": true,
+  "preserves_evidence_lineage": true,
+  "preserves_source_attribution": true,
+  "preserves_trust_tiers": true,
+  "probabilistic_inference": false,
+  "publication_rollback_via_supersedence": true,
+  "publishes_only_into_publication_builds": true,
+  "reviewer_authoritative": true,
+  "rules": [
+    {
+      "id": "TS-1",
+      "rule": "Each symptom MUST cite its evidence_ids."
+    },
+    {
+      "id": "TS-2",
+      "rule": "Root-cause grouping is permitted only when explicit lineage links symptoms."
+    },
+    {
+      "id": "TS-3",
+      "rule": "Escalation steps MUST cite the support/escalation manifest."
+    },
+    {
+      "id": "TS-4",
+      "rule": "Warnings MUST be integrated, not duplicated; cross-references are explicit."
+    },
+    {
+      "id": "TS-5",
+      "rule": "Continuity-aware reasoning preserves canonical_product_id across the flow."
+    },
+    {
+      "id": "TS-6",
+      "rule": "Flows MUST declare confidence_state per step (reviewer-approved | review-required | unresolved)."
+    },
+    {
+      "id": "TS-7",
+      "rule": "Unresolved ambiguity MUST be carried forward, not flattened."
+    }
+  ],
+  "scheduled_trigger": false,
+  "schema": "governed-knowledge-synthesis/1.0",
+  "subordinate_to": [
+    "domain-evidence-extraction",
+    "ontology-mapping",
+    "semantic-bindings",
+    "knowledge-core",
+    "evidence-trust-tiers",
+    "domain-routing",
+    "lineage-graph",
+    "operational-classification",
+    "operator-experience-shell",
+    "review-state-machine",
+    "draft-and-publication-staging",
+    "intake-and-routing-doctrines",
+    "console-rendering-policies",
+    "operator-history-substrate",
+    "envelope-versioning",
+    "publication-source-of-truth",
+    "publication-trust-projection",
+    "publication-pre-publication-gates",
+    "publication-rollback-doctrine",
+    "publication-rendering-doctrine",
+    "publication-lifecycle-doctrine",
+    "publication-deletion-doctrine",
+    "publication-archival-doctrine",
+    "publication-promotion-doctrine",
+    "publication-naming-doctrine",
+    "publication-supersedence-doctrine",
+    "publication-traceability-doctrine",
+    "publication-conflict-doctrine",
+    "publication-rendering-language-doctrine",
+    "publication-publishing-locality-doctrine",
+    "publication-publishing-stamping-doctrine",
+    "publication-publishing-evidence-doctrine",
+    "publication-publishing-explanation-doctrine",
+    "publication-publishing-coherence-doctrine",
+    "publication-publishing-stability-doctrine",
+    "publication-publishing-determinism-doctrine",
+    "operator-cli-execution-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance",
+    "governed-transactional-execution-and-recovery-governance"
+  ],
+  "summary": "Rules for assembling deterministic troubleshooting flows.",
+  "uses_embeddings": false,
+  "uses_llm": false,
+  "uses_ml": false,
+  "watcher": false,
+  "writes_to_live_publication_tree": false
+}
