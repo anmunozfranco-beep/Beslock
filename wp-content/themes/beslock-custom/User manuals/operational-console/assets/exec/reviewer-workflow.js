@@ -156,9 +156,10 @@
     if (wf.status === 'accepted') {
       throw new Error('workflow already accepted (re-analyze to supersede)');
     }
-    if (!reviewerConclusion || !reviewerConclusion.trim()) {
-      throw new Error('reviewer_conclusion required for Accept');
-    }
+    // Phase 61: reviewer_conclusion is optional. Reviewer authority is now
+    // demonstrated by attribution + authorized runtime tree presence enforced
+    // at the call site, not by a free-text textarea remnant.
+    const conclusion = (reviewerConclusion || '').trim();
     const accepted_at = new Date().toISOString();
     const accept_envs = ACCEPT_STEPS.map(function (s) {
       return buildEnvelope(s.kind, {
@@ -166,13 +167,13 @@
         step_label: s.label,
         source_file: wf.file,
         reviewer_summary: wf.summary,
-        reviewer_conclusion: reviewerConclusion
+        reviewer_conclusion: conclusion
       });
     });
     const patched = updateWorkflow(wf.workflow_id, {
       status: 'accepted',
       accepted_at_iso: accepted_at,
-      reviewer_conclusion: reviewerConclusion,
+      reviewer_conclusion: conclusion,
       accept_steps: ACCEPT_STEPS.slice(),
       accept_envelopes: accept_envs
     });

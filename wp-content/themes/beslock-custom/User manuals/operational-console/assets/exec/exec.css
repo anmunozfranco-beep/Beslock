@@ -640,3 +640,26 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   text-transform: lowercase;
 }
+
+/* ---- Phase 61: scoped local runtime tree authorization ---- */
+.oc-rwx__chip--fs {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10.5px;
+}
+.oc-rwx__chip--fs[data-state="unauth"]      { background: #3a2230; color: #f5b8c0; }
+.oc-rwx__chip--fs[data-state="auth"]        { background: #1f3a2a; color: #8be9a3; }
+.oc-rwx__chip--fs[data-state="unsupported"] { background: #2a2f3d; color: #6c7a90; }
+
+.oc-rwx__btn-fs {
+  background: #1f3a2a;
+  color: #8be9a3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  text-align: left;
+  padding: 8px 10px;
+  border: 1px solid #2a5a3f;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+.oc-rwx__btn-fs:hover { background: #265038; }
+.oc-rwx__btn-fs[disabled] { background: #2a2f3d; color: #6c7a90; border-color: #2a2f3d; cursor: not-allowed; }

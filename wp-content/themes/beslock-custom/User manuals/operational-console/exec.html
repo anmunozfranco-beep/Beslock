@@ -63,6 +63,7 @@
         <span class="oc-rwx__runtime-state" id="rwx-runtime-state" data-state="idle">idle</span>
         <span class="oc-rwx__chip" id="rwx-stream-profile">profile: idle</span>
         <span class="oc-rwx__chip oc-rwx__chip--solo" id="rwx-stream-eta">ETA &mdash;</span>
+        <span class="oc-rwx__chip oc-rwx__chip--fs" id="rwx-fs-state" data-state="unauth">fs: unauthorized</span>
         <span class="oc-rwx__status" id="rwx-status" data-status="empty">no workflow</span>
       </header>
       <ol class="oc-rwx__terminal" id="rwx-stream" aria-live="polite">
@@ -77,6 +78,7 @@
     <!-- RIGHT: reviewer actions + attestation -->
     <aside class="oc-rwx__right">
       <section class="oc-rwx__panel oc-rwx__panel--actions">
+        <button class="oc-exec__btn oc-rwx__btn-fs" id="rwx-authorize">&#128274; authorize runtime tree</button>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-analyze" disabled>&#9654; analyze</button>
         <button class="oc-exec__btn oc-rwx__btn-primary" id="rwx-accept" disabled>&#10003; accept</button>
         <button class="oc-exec__btn oc-exec__btn--ghost" id="rwx-reanalyze" disabled>&#8634; re-analyze</button>
@@ -139,6 +141,7 @@
   <script src="assets/exec/state.js" defer></script>
   <script src="assets/exec/drafts.js" defer></script>
   <script src="assets/exec/fs-bridge.js" defer></script>
+  <script src="assets/exec/fs-tree.js" defer></script>
   <script src="assets/exec/reviewer-workflow.js" defer></script>
   <script src="assets/exec/findings.js" defer></script>
   <script src="assets/exec/analysis-runner.js" defer></script>
@@ -162,6 +165,8 @@
       const elBtnAccept = $('rwx-accept');
       const elBtnReanalyze = $('rwx-reanalyze');
       const elBtnExport = $('rwx-export-bundle');
+      const elBtnAuthorize = $('rwx-authorize');
+      const elFsState = $('rwx-fs-state');
       const elBundlePreview = $('rwx-bundle-preview');
       const elAttest = $('rwx-attest');
       const elStream = $('rwx-stream');
@@ -172,7 +177,9 @@
       const elNotes = $('rwx-sum-notes');
 
       let selectedFile = null;
+      let selectedBlob = null;          // real File object (for fs-tree copy)
       let analysisCtl = null;            // active runner controller, if any
+      let acceptInFlight = false;        // guard concurrent Accept commits
       // Reviewer-authored summary lives in memory; bound to the attestation strip.
       // Persists into wf.summary at Analyze/Accept.
       let liveSummary = {
@@ -262,12 +269,37 @@
         const cur = RW.find(RW.current());
         const typed = elReviewer.value.trim();
         const hasReviewer = !!(committedReviewer() || typed);
-        const running = !!analysisCtl;
+        const running = !!analysisCtl || acceptInFlight;
+        const FST = window.OC && window.OC.FSTree;
+        const fsAuth = !!(FST && FST.isAuthorized());
         elBtnAnalyze.disabled = running || !(hasReviewer && selectedFile);
-        elBtnAccept.disabled = running || !(cur && cur.status === 'analyzed');
+        elBtnAccept.disabled = running || !(cur && cur.status === 'analyzed' && fsAuth);
         elBtnReanalyze.disabled = running || !cur;
         elBtnExport.disabled = running || !cur;
         refreshReviewerState();
+      }
+      function refreshFsState() {
+        const FST = window.OC && window.OC.FSTree;
+        if (!FST) {
+          elFsState.dataset.state = 'unsupported';
+          elFsState.textContent = 'fs: module missing';
+          return;
+        }
+        if (!FST.isSupported()) {
+          elFsState.dataset.state = 'unsupported';
+          elFsState.textContent = 'fs: api unavailable';
+          elBtnAuthorize.disabled = true;
+          return;
+        }
+        if (FST.isAuthorized()) {
+          elFsState.dataset.state = 'auth';
+          elFsState.textContent = 'fs: ' + FST.rootName() + '/';
+          elBtnAuthorize.textContent = '↻ re-authorize tree (' + FST.rootName() + ')';
+        } else {
+          elFsState.dataset.state = 'unauth';
+          elFsState.textContent = 'fs: unauthorized';
+          elBtnAuthorize.textContent = '🔒 authorize runtime tree';
+        }
       }
       function refreshStatus() {
         const cur = RW.find(RW.current());
@@ -407,13 +439,12 @@
             appendStreamLine('[' + nowStamp() + '] [runtime] analysis failed: ' + err.message,
               'oc-rwx__stream-line--error');
             refreshAll();
-            alert('Analyze failed: ' + err.message);
           }
         });
         refreshButtons();
       }
       function refreshAll() {
-        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle();
+        refreshButtons(); refreshStatus(); refreshLineage(); refreshBundle(); refreshFsState();
       }
 
       elReviewerSet.addEventListener('click', function () {
@@ -434,7 +465,8 @@
 
       elFile.addEventListener('change', function (ev) {
         const f = ev.target.files && ev.target.files[0];
-        if (!f) { selectedFile = null; refreshAll(); return; }
+        if (!f) { selectedFile = null; selectedBlob = null; refreshAll(); return; }
+        selectedBlob = f; // real File object retained for evidence copy
         selectedFile = { name: f.name, size: f.size, lastModified: f.lastModified };
         elFileName.textContent = f.name;
         elFileSize.textContent = fmtBytes(f.size);
@@ -449,17 +481,94 @@
           if (elReviewer.value.trim()) State.setReviewer(elReviewer.value.trim());
           if (analysisCtl) return;
           startStagedAnalyze(null);
-        } catch (e) { alert('Analyze failed: ' + e.message); }
+        } catch (e) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] analyze failed: ' + e.message,
+            'oc-rwx__stream-line--error');
+        }
+      });
+
+      elBtnAuthorize.addEventListener('click', function () {
+        const FST = window.OC && window.OC.FSTree;
+        if (!FST) {
+          appendStreamLine('[' + nowStamp() + '] [fs] fs-tree module unavailable', 'oc-rwx__stream-line--error');
+          return;
+        }
+        if (!FST.isSupported()) {
+          appendStreamLine('[' + nowStamp() + '] [fs] file system access api unavailable in this browser',
+            'oc-rwx__stream-line--error');
+          appendStreamLine('  use a chromium-based browser (chrome, edge) over https or localhost',
+            'oc-rwx__stream-line--meta');
+          return;
+        }
+        appendStreamLine('[' + nowStamp() + '] [fs] requesting reviewer-authorized runtime tree…',
+          'oc-rwx__stream-line--meta');
+        FST.authorize().then(function () {
+          appendStreamLine('[' + nowStamp() + '] [fs] runtime tree authorized: ' + FST.rootName() + '/',
+            'oc-rwx__stream-line--complete');
+          appendStreamLine('  scope: writes confined to this subtree (append-only)',
+            'oc-rwx__stream-line--meta');
+          refreshFsState();
+          refreshButtons();
+        }).catch(function (err) {
+          appendStreamLine('[' + nowStamp() + '] [fs] authorization aborted: ' + (err.message || err),
+            'oc-rwx__stream-line--error');
+        });
       });
 
       elBtnAccept.addEventListener('click', function () {
+        if (acceptInFlight) return;
+        const cur = RW.find(RW.current());
+        if (!cur) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] accept blocked', 'oc-rwx__stream-line--error');
+          appendStreamLine('[' + nowStamp() + '] [runtime] no analyzed workflow present', 'oc-rwx__stream-line--error');
+          return;
+        }
+        const FST = window.OC && window.OC.FSTree;
+        if (!FST || !FST.isAuthorized()) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] accept blocked', 'oc-rwx__stream-line--error');
+          appendStreamLine('[' + nowStamp() + '] [runtime] no authorized runtime tree present',
+            'oc-rwx__stream-line--error');
+          appendStreamLine('[' + nowStamp() + '] [reviewer] runtime tree authorization required',
+            'oc-rwx__stream-line--error');
+          return;
+        }
+        const Findings = window.OC && window.OC.ReviewerFindings;
+        const product = Findings ? Findings.inferredProduct(cur.file || selectedFile || {}) : 'unspecified';
+        cur.summary = readSummary();
+
+        let accepted;
         try {
-          const cur = RW.find(RW.current());
-          if (!cur) throw new Error('no current workflow');
-          cur.summary = readSummary();
-          RW.accept(cur.workflow_id, elConclusion.value.trim());
+          accepted = RW.accept(cur.workflow_id, elConclusion.value.trim());
+        } catch (e) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] accept rejected: ' + e.message,
+            'oc-rwx__stream-line--error');
+          return;
+        }
+        appendStreamLine('[' + nowStamp() + '] [runtime] reviewer-authorized accept → ' + product + '/',
+          'oc-rwx__stream-line--stage');
+        acceptInFlight = true;
+        refreshButtons();
+        FST.commitAccept({
+          workflow: accepted,
+          fileBlob: selectedBlob,
+          product: product,
+          onLog: function (line) {
+            appendStreamLine('  ' + line, 'oc-rwx__stream-line--detect');
+          }
+        }).then(function (result) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] accept committed (' +
+            result.written.length + ' files, append-only, lineage preserved)',
+            'oc-rwx__stream-line--complete');
+          acceptInFlight = false;
           refreshAll();
-        } catch (e) { alert('Accept failed: ' + e.message); }
+        }).catch(function (err) {
+          appendStreamLine('[' + nowStamp() + '] [fs] commit failed: ' + (err.message || err),
+            'oc-rwx__stream-line--error');
+          appendStreamLine('  prior workflow state preserved; no partial overwrite occurred',
+            'oc-rwx__stream-line--meta');
+          acceptInFlight = false;
+          refreshAll();
+        });
       });
 
       elBtnReanalyze.addEventListener('click', function () {
@@ -469,7 +578,10 @@
           if (analysisCtl) return;
           elConclusion.value = '';
           startStagedAnalyze(cur.workflow_id);
-        } catch (e) { alert('Re-analyze failed: ' + e.message); }
+        } catch (e) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] re-analyze failed: ' + e.message,
+            'oc-rwx__stream-line--error');
+        }
       });
 
       elBtnExport.addEventListener('click', function () {
@@ -477,12 +589,30 @@
           const cur = RW.find(RW.current());
           if (!cur) throw new Error('no current workflow');
           RW.exportBundle(cur.workflow_id);
-        } catch (e) { alert('Export failed: ' + e.message); }
+        } catch (e) {
+          appendStreamLine('[' + nowStamp() + '] [runtime] export failed: ' + e.message,
+            'oc-rwx__stream-line--error');
+        }
       });
 
       const cur = RW.find(RW.current());
       if (cur) writeSummary(cur.summary || {});
       refreshAll();
+
+      // Phase 61: attempt to restore previously authorized runtime tree.
+      const FST = window.OC && window.OC.FSTree;
+      if (FST && FST.isSupported()) {
+        FST.restore().then(function (ok) {
+          if (ok) {
+            appendStreamLine('[' + nowStamp() + '] [fs] restored authorized runtime tree: ' + FST.rootName() + '/',
+              'oc-rwx__stream-line--meta');
+          }
+          refreshFsState();
+          refreshButtons();
+        });
+      } else {
+        refreshFsState();
+      }
     });
   </script>
 </body>
