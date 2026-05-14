@@ -1,0 +1,6 @@
+{
+  "constitutional_layer_index": 49,
+  "report": "06-transaction-safe-incremental-refresh-summary",
+  "schema": "final-operational-closure-production-readiness/1.0",
+  "title": "Transaction-safe incremental refresh"
+}

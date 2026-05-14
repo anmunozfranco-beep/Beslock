@@ -1,0 +1,30 @@
+{
+  "rule_family": "reviewer-summary",
+  "rules": [
+    {
+      "id": "RS-1",
+      "rule": "summary_id required and unique"
+    },
+    {
+      "id": "RS-2",
+      "rule": "summary_kind enum required"
+    },
+    {
+      "id": "RS-3",
+      "rule": "summary content MUST be POINTER-only references to upstream records (no inline payload duplication)"
+    },
+    {
+      "id": "RS-4",
+      "rule": "summary MUST be presentation-neutral (no css/style/font/color/layout keys)"
+    },
+    {
+      "id": "RS-5",
+      "rule": "summary_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "RS-6",
+      "rule": "reviewer attribution mandatory"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

@@ -1,0 +1,38 @@
+{
+  "rule_family": "canonical-drift",
+  "rules": [
+    {
+      "id": "CD-1",
+      "rule": "drift_id required and unique"
+    },
+    {
+      "id": "CD-2",
+      "rule": "EXACTLY ONE of canonical_entity_id or canonical_procedure_id required"
+    },
+    {
+      "id": "CD-3",
+      "rule": "the referenced canonical record MUST exist in Phase 55 storage"
+    },
+    {
+      "id": "CD-4",
+      "rule": "drift_kind enum required"
+    },
+    {
+      "id": "CD-5",
+      "rule": "new_evidence_refs MUST be a non-empty list"
+    },
+    {
+      "id": "CD-6",
+      "rule": "reviewer rationale required; reviewer attribution mandatory"
+    },
+    {
+      "id": "CD-7",
+      "rule": "drift records are POINTER-only; prior canonical record MUST NOT be mutated (no silent canonical mutation)"
+    },
+    {
+      "id": "CD-8",
+      "rule": "affected_downstream_refs MUST be enumerated deterministically"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

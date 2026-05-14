@@ -1,0 +1,34 @@
+{
+  "rule_family": "multilingual-normalization-table",
+  "rules": [
+    {
+      "id": "MN-1",
+      "rule": "table_id required and unique"
+    },
+    {
+      "id": "MN-2",
+      "rule": "source_language and canonical_language required (ISO-639-1 lowercase)"
+    },
+    {
+      "id": "MN-3",
+      "rule": "mappings MUST be a non-empty list of {source_term, canonical_term} dicts"
+    },
+    {
+      "id": "MN-4",
+      "rule": "source_term and canonical_term MUST be deterministic strings; NO translation engines"
+    },
+    {
+      "id": "MN-5",
+      "rule": "table is append-only; superseding entries via new table_id with prior_table_id pointer"
+    },
+    {
+      "id": "MN-6",
+      "rule": "table_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "MN-7",
+      "rule": "reviewer attribution mandatory"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

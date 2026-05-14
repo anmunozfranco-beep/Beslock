@@ -1,0 +1,34 @@
+{
+  "rule_family": "multilingual-normalization-apply",
+  "rules": [
+    {
+      "id": "MA-1",
+      "rule": "application_id required and unique"
+    },
+    {
+      "id": "MA-2",
+      "rule": "table_id MUST resolve to an existing normalization table"
+    },
+    {
+      "id": "MA-3",
+      "rule": "source_evidence_id MUST be preserved (raw lineage)"
+    },
+    {
+      "id": "MA-4",
+      "rule": "applied_terms MUST list {source_term, canonical_term, table_entry_index}"
+    },
+    {
+      "id": "MA-5",
+      "rule": "every applied source_term MUST exist in the table mappings"
+    },
+    {
+      "id": "MA-6",
+      "rule": "NO machine translation, NO LLM translation, NO autodetect; deterministic dictionary lookup only"
+    },
+    {
+      "id": "MA-7",
+      "rule": "raw_text_sha256 preserved alongside normalized_text_sha256"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

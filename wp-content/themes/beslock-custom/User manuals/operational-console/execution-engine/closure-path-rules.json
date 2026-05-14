@@ -1,0 +1,30 @@
+{
+  "rule_family": "closure-path",
+  "rules": [
+    {
+      "id": "CL-1",
+      "rule": "closure_id required and unique"
+    },
+    {
+      "id": "CL-2",
+      "rule": "package_id MUST resolve"
+    },
+    {
+      "id": "CL-3",
+      "rule": "path_steps MUST enumerate the canonical 10 stages in order: evidence, analysis, convergence, canonical-entity, canonical-procedure, visual-support, prompt-package, stabilized-export, readiness-audit, consumer-payload"
+    },
+    {
+      "id": "CL-4",
+      "rule": "each step MUST reference at least one existing artifact id from the corresponding upstream store"
+    },
+    {
+      "id": "CL-5",
+      "rule": "closure_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "CL-6",
+      "rule": "POINTER-only; upstream stores NEVER mutated"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}
