@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Lineage console — Beslock Operational Console</title>
+<link rel="stylesheet" href="../assets/console.css" />
+<link rel="stylesheet" href="../assets/exec/exec.css" />
+</head>
+<body class="oc-body oc-body--exec">
+<header class="oc-header">
+  <a class="oc-header__brand" href="../index.html">Beslock Operational Console</a>
+  <nav class="oc-header__nav">
+    <a href="../exec.html">Exec dashboard</a>
+    <a href="../intake-console/exec.html">Intake</a>
+    <a href="../routing-console/exec.html">Routing</a>
+    <a href="../refresh-console/exec.html">Refresh</a>
+    <a href="../reconciliation-console/exec.html">Recon</a>
+    <a href="../mutation-console/exec.html">Mutation</a>
+    <a href="../lineage-console/exec.html">Lineage</a>
+    <a href="../rollback-console/exec.html">Rollback</a>
+    <a href="../safety-console/exec.html">Safety</a>
+  </nav>
+</header>
+<main class="oc-main oc-exec">
+
+<section class="oc-exec__panel">
+  <h1>Operational lineage</h1>
+  <p>Read-only inspection of the append-only lineage event store
+    (<code>runtime-manifests/lineage-events/_event-store.json</code>).
+    The store is populated by the CLI executor on every successful mutation,
+    refresh, publication-regeneration and rollback.</p>
+  <div class="oc-exec__row">
+    <button type="button" id="lin-load" class="oc-exec__btn">Load lineage events</button>
+    <span id="lin-count" class="oc-exec__pill">0 events</span>
+  </div>
+  <h2>Events</h2>
+  <pre id="lin-events" class="oc-exec__pre">(not loaded)</pre>
+</section>
+<script>
+(function () {
+  document.getElementById('lin-load').addEventListener('click', async function () {
+    const data = await window.OC.FSBridge.loadEventStore('lineage-events');
+    if (!data) { document.getElementById('lin-events').textContent = '(load failed — see warnings)'; return; }
+    const n = (data.events || []).length;
+    document.getElementById('lin-count').textContent = n + ' events';
+    document.getElementById('lin-events').textContent = JSON.stringify(data, null, 2);
+  });
+})();
+</script>
+</main>
+<script src="../assets/exec/state.js"></script>
+<script src="../assets/exec/ux.js"></script>
+<script src="../assets/exec/drafts.js"></script>
+<script src="../assets/exec/fs-bridge.js"></script>
+<script src="../assets/exec/dest-resolver.js"></script>
+<script src="../assets/exec/mutation-engine.js"></script>
+<script src="../assets/exec/rollback-engine.js"></script>
+<script src="../assets/exec/safety-engine.js"></script>
+</body></html>

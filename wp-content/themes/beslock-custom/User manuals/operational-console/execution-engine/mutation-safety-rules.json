@@ -1,0 +1,163 @@
+{
+  "append_only": true,
+  "auto_approves_ingestion": false,
+  "auto_ingestion": false,
+  "auto_mutates_source_truth": false,
+  "auto_promotion": false,
+  "auto_publication": false,
+  "background_process": false,
+  "browser_executes_filesystem_mutation": false,
+  "bypasses_reviewer_governance": false,
+  "collision_handling": "fail_closed_then_route_source_to_quarantined",
+  "constitutional_layer_index": 39,
+  "daemon": false,
+  "destructive_overwrite_forbidden": true,
+  "deterministic": true,
+  "executes_filesystem_mutation": true,
+  "executor_kind": "cli-only-explicit-confirm",
+  "forbidden_operation_kinds": [
+    "delete",
+    "destructive-move",
+    "in-place-overwrite",
+    "rename-across-trust-boundary",
+    "chmod-source-truth",
+    "symlink"
+  ],
+  "hash_algorithm": "sha256",
+  "introduces_autonomous_agents": false,
+  "introduces_ci_cd": false,
+  "is_production_app": false,
+  "is_saas": false,
+  "network_calls": false,
+  "operation_kinds": [
+    {
+      "description": "Copies source to destination; original retained.",
+      "kind": "copy"
+    },
+    {
+      "description": "Moves staging/incoming/<file> to staging/accepted/<ts>/<file> after a successful copy.",
+      "kind": "stage-accept"
+    },
+    {
+      "description": "Creates a destination directory tree (no file content).",
+      "kind": "mkdir"
+    },
+    {
+      "description": "Writes a manifest JSON next to a destination file (sibling .manifest.json).",
+      "kind": "manifest-write"
+    }
+  ],
+  "preconditions": [
+    {
+      "fail_closed": true,
+      "id": "M-PRE-1",
+      "reasoning": "Cannot operate on a non-existent source.",
+      "rule": "source_path_must_exist"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-2",
+      "on_violation": "route_to_quarantined",
+      "reasoning": "Destructive overwrite is forbidden.",
+      "rule": "destination_path_must_not_exist"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-3",
+      "reasoning": "Prevents path-traversal escape.",
+      "rule": "destination_must_be_under_repo_root"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-4",
+      "reasoning": "Knowledge-core / governance / runtime-manifests are immutable from intake.",
+      "rule": "destination_must_not_match_forbidden_destinations"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-5",
+      "reasoning": "Every mutation must be reviewer-attributed.",
+      "rule": "request_must_carry_reviewer_attribution"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-6",
+      "reasoning": "Determinism + auditability require explicit reasoning.",
+      "rule": "request_must_carry_reasoning_chain"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-7",
+      "reasoning": "Schema-locked requests are replayable.",
+      "rule": "request_schema_must_match_mutation_request_v1"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-8",
+      "reasoning": "Reviewer authorization gate at the OS level.",
+      "rule": "executor_must_be_invoked_with_explicit_confirm_flag"
+    },
+    {
+      "fail_closed": true,
+      "id": "M-PRE-9",
+      "reasoning": "Detects source mutation between request build and execution.",
+      "rule": "source_hash_must_match_request_hash"
+    },
+    {
+      "fail_closed": false,
+      "id": "M-PRE-10",
+      "on_violation": "emit_audit_warning_and_route_to_review_pending",
+      "reasoning": "Duplicate evidence is allowed only with reviewer attestation.",
+      "rule": "duplicate_hash_in_accepted_must_be_flagged"
+    }
+  ],
+  "purpose": "Hard preconditions every mutation operation must satisfy before the CLI executor performs any filesystem write.",
+  "requires_reviewer_confirmation": true,
+  "schema": "governed-filesystem-orchestration/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "structured-knowledge",
+    "source-of-truth",
+    "runtime-implementation",
+    "knowledge-building",
+    "publication-system",
+    "publication-quality",
+    "linguistic-governance",
+    "operational-pilots",
+    "review-governance",
+    "channel-governance",
+    "lineage-governance",
+    "provenance-governance",
+    "warning-governance",
+    "terminology-governance",
+    "visual-system",
+    "visual-intent-governance",
+    "component-visibility-governance",
+    "procedural-semantics",
+    "semantic-enrichment",
+    "corpus-enrichment",
+    "supplemental-source-governance",
+    "phase1-cutover",
+    "publication-and-delivery-governance",
+    "operational-pilot-governance",
+    "publication-renderer",
+    "publication-quality-governance",
+    "linguistic-rendering-governance",
+    "publication-time-only-doctrine",
+    "warning-fidelity-doctrine",
+    "multimodal-subordination-doctrine",
+    "multimodal-evidence-governance",
+    "intake-and-navigation-governance",
+    "semantic-domain-governance",
+    "identity-resolution-governance",
+    "runtime-orchestration-governance",
+    "operational-console-governance",
+    "executable-operational-bindings-governance"
+  ],
+  "telemetry": false,
+  "title": "Mutation Safety Rules",
+  "updated_at": "2026-05-14T12:23:11Z",
+  "uses_cloud": false,
+  "uses_ml_or_embeddings": false,
+  "watcher_process": false
+}

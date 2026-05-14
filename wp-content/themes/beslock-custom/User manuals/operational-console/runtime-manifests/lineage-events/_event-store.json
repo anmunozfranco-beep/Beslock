@@ -1,0 +1,10 @@
+{
+  "append_only": true,
+  "constitutional_layer_index": 39,
+  "created_at": "2026-05-14T12:23:11Z",
+  "deterministic": true,
+  "events": [],
+  "kind": "lineage-events",
+  "reviewer_authoritative": true,
+  "schema": "governed-fs-event-store/1.0"
+}

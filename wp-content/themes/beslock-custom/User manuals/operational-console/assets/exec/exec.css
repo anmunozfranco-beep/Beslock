@@ -49,3 +49,14 @@
 .oc-exec__indicator--unsaved { color: #f5b16a; }
 .oc-exec__hint { color: #8ab4f8; font-size: .8rem; }
 @media (max-width: 900px) { .oc-exec { grid-template-columns: 1fr; } }
+
+/* phase 46 — governed filesystem orchestration additions */
+.oc-exec__danger { border-left: 3px solid #d96d6d; padding-left: .75rem; }
+.oc-exec__pre--cmd { background: #1b1b1b; color: #cfe6ff; padding: .75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px;
+    white-space: pre-wrap; word-break: break-all; border-radius: 4px; }
+.oc-exec__table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.oc-exec__table th, .oc-exec__table td {
+    border-bottom: 1px solid #2a2a2a; padding: .35rem .5rem; text-align: left; }
+.oc-exec__pill { display: inline-block; padding: 1px 6px; border-radius: 8px;
+    font-size: 11px; background: #243a52; color: #cfe6ff; }
