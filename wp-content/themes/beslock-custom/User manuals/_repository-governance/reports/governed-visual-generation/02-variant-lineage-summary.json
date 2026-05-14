@@ -1,0 +1,205 @@
+{
+  "asset_kinds": [
+    "generated",
+    "oem",
+    "edited",
+    "supportive",
+    "procedural-sequence",
+    "troubleshooting",
+    "specification"
+  ],
+  "consoles": [
+    "visual-generation-console",
+    "variant-review-console",
+    "visual-selection-console",
+    "supersedence-console",
+    "generation-session-console",
+    "visual-integrity-console"
+  ],
+  "constitutional_layer_index": 43,
+  "generated_at": "2026-05-14T15:20:31Z",
+  "js_assets": [
+    "vg-generation-engine.js",
+    "vg-asset-engine.js",
+    "vg-comparison-engine.js",
+    "vg-selection-engine.js",
+    "vg-supersedence-engine.js",
+    "vg-session-engine.js",
+    "vg-lifecycle-engine.js",
+    "vg-integrity-engine.js"
+  ],
+  "lifecycle_edges": [
+    [
+      "candidate",
+      "review-required"
+    ],
+    [
+      "candidate",
+      "rejected"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "rejected"
+    ],
+    [
+      "review-required",
+      "candidate"
+    ],
+    [
+      "reviewer-approved",
+      "publication-selected"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-selected",
+      "superseded"
+    ],
+    [
+      "publication-selected",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "lifecycle_states": [
+    "candidate",
+    "deprecated",
+    "publication-selected",
+    "rejected",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "lifecycle_terminal_states": [
+    "deprecated",
+    "rejected"
+  ],
+  "new_event_stores": [
+    "visual-generation-events",
+    "variant-lineage-events",
+    "review-comparison-events",
+    "selection-events",
+    "supersedence-events",
+    "generation-session-events",
+    "publication-selection-events",
+    "visual-integrity-events"
+  ],
+  "posture": {
+    "append_only_visual_lineage": true,
+    "browser_surfaces_never_write_filesystem": true,
+    "deterministic": true,
+    "fail_closed_on_broken_continuity": true,
+    "fail_closed_on_missing_grounding": true,
+    "fail_closed_on_missing_prompt_lineage": true,
+    "fail_closed_on_unresolved_conflict": true,
+    "no_auto_publication": true,
+    "no_autonomous_generation": true,
+    "no_autonomous_visual_selection": true,
+    "no_cloud_orchestration": true,
+    "no_daemon_no_watcher_no_scheduler": true,
+    "no_hidden_prompt_mutation": true,
+    "no_live_publication_mutation": true,
+    "no_ml_governance_decisions": true,
+    "no_probabilistic_visual_replacement": true,
+    "no_saas_dependency": true,
+    "no_silent_asset_overwrite": true,
+    "reviewer_authoritative": true,
+    "writes_only_into_visual_generation_runtime_tree": true,
+    "writes_to_live_publication_tree": false,
+    "writes_to_visual_publication_builds_tree": false
+  },
+  "report_slug": "02-variant-lineage-summary",
+  "rule_tables": [
+    "visual-generation-request-rules.json",
+    "variant-lineage-rules.json",
+    "review-comparison-rules.json",
+    "publication-visual-selection-rules.json",
+    "visual-supersedence-rules.json",
+    "generation-session-rules.json",
+    "visual-integrity-rules.json",
+    "visual-asset-production-lifecycle-rules.json"
+  ],
+  "schema": "governance-report/1.0",
+  "session_edges": [
+    [
+      "open",
+      "frozen"
+    ],
+    [
+      "open",
+      "rejected"
+    ],
+    [
+      "frozen",
+      "open"
+    ],
+    [
+      "frozen",
+      "closed"
+    ],
+    [
+      "frozen",
+      "rejected"
+    ]
+  ],
+  "session_states": [
+    "closed",
+    "frozen",
+    "open",
+    "rejected"
+  ],
+  "subordinate_to": [
+    "knowledge-core-doctrine",
+    "governance-source-of-truth-doctrine",
+    "runtime-evidence-and-trust-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-doctrine",
+    "governed-transactional-execution-and-recovery-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance"
+  ],
+  "title": "Deterministic variant lineage summary."
+}

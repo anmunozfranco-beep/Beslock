@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "VL-1",
+      "rule": "every generated asset MUST carry a deterministic variant_id derived from sha256(generation_request_id|variant_index|sha256(asset_bytes))."
+    },
+    {
+      "id": "VL-2",
+      "rule": "every generated asset MUST cite generation_request_id, prompt_revision_id, grounding_id, synthesis_id."
+    },
+    {
+      "id": "VL-3",
+      "rule": "every generated asset MUST carry sha256 of the asset bytes (provenance)."
+    },
+    {
+      "id": "VL-4",
+      "rule": "variant family (siblings sharing generation_request_id) is reviewer-comparable; cross-family comparison requires explicit reviewer attestation."
+    },
+    {
+      "id": "VL-5",
+      "rule": "regeneration MUST preserve grounding_id; grounding-changing regeneration requires a new grounding manifest first (layer 42)."
+    },
+    {
+      "id": "VL-6",
+      "rule": "OEM assets MUST be labeled trust_tier=OEM and source_provenance.kind='oem-source'; generated/OEM differentiation is non-negotiable."
+    },
+    {
+      "id": "VL-7",
+      "rule": "edited assets MUST cite parent_asset_id and edit_kind ∈ {crop, annotate, redact, color-correct, watermark-removal-FORBIDDEN}."
+    }
+  ],
+  "schema": "variant-lineage-rules/1.0"
+}

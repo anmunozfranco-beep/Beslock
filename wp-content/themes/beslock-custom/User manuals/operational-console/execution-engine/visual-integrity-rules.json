@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "IN-1",
+      "rule": "every asset record MUST carry sha256; sha256 mismatch on re-verification is fail-closed."
+    },
+    {
+      "id": "IN-2",
+      "rule": "missing prompt_revision_id on a generated asset blocks publication selection."
+    },
+    {
+      "id": "IN-3",
+      "rule": "missing grounding_id on any asset blocks publication selection (grounding-preservation invariant)."
+    },
+    {
+      "id": "IN-4",
+      "rule": "selection of an asset whose lifecycle state is NOT reviewer-approved is fail-closed."
+    },
+    {
+      "id": "IN-5",
+      "rule": "OEM source assets MUST NEVER be overwritten; integrity check refuses any record claiming to overwrite an OEM source path."
+    },
+    {
+      "id": "IN-6",
+      "rule": "rollback MUST restore by appending a reverse selection event; destructive deletion of asset records is FORBIDDEN."
+    },
+    {
+      "id": "IN-7",
+      "rule": "cross-manual reuse of an asset MUST cite reviewer attestation and the source manual_id."
+    }
+  ],
+  "schema": "visual-integrity-rules/1.0"
+}

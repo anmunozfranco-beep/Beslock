@@ -1,0 +1,58 @@
+{
+  "constitutional_layer_index": 43,
+  "edges": [
+    [
+      "open",
+      "frozen"
+    ],
+    [
+      "open",
+      "rejected"
+    ],
+    [
+      "frozen",
+      "open"
+    ],
+    [
+      "frozen",
+      "closed"
+    ],
+    [
+      "frozen",
+      "rejected"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "GS-1",
+      "rule": "every generation session MUST be reviewer-opened and reviewer-attributed."
+    },
+    {
+      "id": "GS-2",
+      "rule": "session frozen state means: no new generation requests accepted; comparisons + reviews continue."
+    },
+    {
+      "id": "GS-3",
+      "rule": "session closed state means: no further mutations; selections may still be performed via separate publication-selection events that reference the closed session."
+    },
+    {
+      "id": "GS-4",
+      "rule": "session rejected state means: all candidate variants in the session are rejected; reviewer attestation required."
+    },
+    {
+      "id": "GS-5",
+      "rule": "a generation request MUST belong to exactly one session."
+    }
+  ],
+  "schema": "generation-session-rules/1.0",
+  "states": [
+    "closed",
+    "frozen",
+    "open",
+    "rejected"
+  ],
+  "terminal_states": [
+    "closed",
+    "rejected"
+  ]
+}

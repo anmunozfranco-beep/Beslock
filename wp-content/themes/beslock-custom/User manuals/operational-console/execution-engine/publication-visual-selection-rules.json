@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "SL-1",
+      "rule": "publication selection MUST cite a reviewer-approved variant_id; candidate / review-required / rejected variants are NEVER selectable."
+    },
+    {
+      "id": "SL-2",
+      "rule": "selection MUST cite the visual_publication_build_id and placement_slot_id from layer 42."
+    },
+    {
+      "id": "SL-3",
+      "rule": "selection MUST preserve grounding_id continuity (the variant's grounding_id MUST equal the placement's grounding_id)."
+    },
+    {
+      "id": "SL-4",
+      "rule": "auto-selection is FORBIDDEN. Selection MUST be reviewer-attributed."
+    },
+    {
+      "id": "SL-5",
+      "rule": "selection records are append-only; replacing a selection requires explicit supersedence."
+    },
+    {
+      "id": "SL-6",
+      "rule": "broken continuity, missing prompt lineage, or unresolved conflict BLOCKS selection (fail-closed)."
+    }
+  ],
+  "schema": "publication-visual-selection-rules/1.0"
+}

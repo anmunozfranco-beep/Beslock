@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "GR-1",
+      "rule": "every generation request MUST be reviewer-authored and reviewer-attributed."
+    },
+    {
+      "id": "GR-2",
+      "rule": "every generation request MUST cite a grounding_id, prompt_id, synthesis_id, canonical_product_id."
+    },
+    {
+      "id": "GR-3",
+      "rule": "autonomous (LLM- or agent-driven) generation requests are FORBIDDEN."
+    },
+    {
+      "id": "GR-4",
+      "rule": "the runtime does NOT execute generation; it records the reviewer-authored request and the out-of-band reviewer-supplied output."
+    },
+    {
+      "id": "GR-5",
+      "rule": "generation requests are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "GR-6",
+      "rule": "reviewer-declared variant_count MUST be >= 1 and bounded by reviewer-set ceiling."
+    },
+    {
+      "id": "GR-7",
+      "rule": "every generation request MUST declare expected asset_kind ∈ ASSET_KINDS."
+    }
+  ],
+  "schema": "visual-generation-request-rules/1.0"
+}

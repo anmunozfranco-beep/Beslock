@@ -1,0 +1,81 @@
+{
+  "constitutional_layer_index": 43,
+  "edges": [
+    [
+      "candidate",
+      "review-required"
+    ],
+    [
+      "candidate",
+      "rejected"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "rejected"
+    ],
+    [
+      "review-required",
+      "candidate"
+    ],
+    [
+      "reviewer-approved",
+      "publication-selected"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-selected",
+      "superseded"
+    ],
+    [
+      "publication-selected",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "LC-1",
+      "rule": "reviewer attribution required on every state transition."
+    },
+    {
+      "id": "LC-2",
+      "rule": "terminal states (deprecated, rejected) are immutable."
+    },
+    {
+      "id": "LC-3",
+      "rule": "publication-selected requires the asset to be reviewer-approved AND grounding-clean."
+    },
+    {
+      "id": "LC-4",
+      "rule": "transitions are append-only; in-place state mutation is FORBIDDEN."
+    },
+    {
+      "id": "LC-5",
+      "rule": "rejected is reachable from candidate or review-required; once rejected, the asset cannot be selected."
+    }
+  ],
+  "schema": "visual-asset-production-lifecycle-rules/1.0",
+  "states": [
+    "candidate",
+    "deprecated",
+    "publication-selected",
+    "rejected",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "terminal_states": [
+    "deprecated",
+    "rejected"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "SP-1",
+      "rule": "supersedence MUST cite predecessor_asset_id, successor_asset_id, reason, reviewer."
+    },
+    {
+      "id": "SP-2",
+      "rule": "predecessor MUST currently be in {publication-selected, reviewer-approved}; otherwise refused."
+    },
+    {
+      "id": "SP-3",
+      "rule": "successor MUST currently be reviewer-approved."
+    },
+    {
+      "id": "SP-4",
+      "rule": "supersedence MUST preserve grounding_id continuity (predecessor.grounding_id == successor.grounding_id), unless reviewer explicitly authorizes a grounding-shift with attribution."
+    },
+    {
+      "id": "SP-5",
+      "rule": "OEM source assets CANNOT be superseded by generated assets without explicit reviewer attestation and a recorded rationale."
+    },
+    {
+      "id": "SP-6",
+      "rule": "supersedence is append-only; in-place overwrite is FORBIDDEN."
+    },
+    {
+      "id": "SP-7",
+      "rule": "supersedence chain MUST be acyclic and traceable end-to-end."
+    }
+  ],
+  "schema": "visual-supersedence-rules/1.0"
+}
