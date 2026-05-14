@@ -1,0 +1,78 @@
+{
+  "envelope": {
+    "auto_promotes_unresolved_identities": false,
+    "bypasses_reviewer_governance": false,
+    "constitutional_layer_index": 35,
+    "introduces_autonomous_agents": false,
+    "introduces_face_or_image_recognition": false,
+    "introduces_ml_or_embeddings": false,
+    "layer": "reviewer-validations",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_publication": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "identity-resolution-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine",
+      "multimodal-evidence-governance",
+      "intake-and-navigation-governance",
+      "semantic-domain-governance"
+    ],
+    "summary": "Protocol governing reviewer validation events for identity reconciliations.",
+    "updated_at": "2026-05-14T10:24:18Z"
+  },
+  "id": "reviewer-validation-protocol",
+  "steps": [
+    {
+      "id": "1-collect-evidence",
+      "rule": "At least two independent evidence sources MUST be collected."
+    },
+    {
+      "id": "2-classify-confidence",
+      "rule": "Reviewer assigns confidence_state per identity-trust-models."
+    },
+    {
+      "id": "3-emit-lineage",
+      "rule": "Validation event MUST emit a lineage entry citing all evidence ids."
+    },
+    {
+      "id": "4-update-memory",
+      "rule": "Persistent memory store gets an append-only record."
+    },
+    {
+      "id": "5-attest-non-mutation",
+      "rule": "Reviewer attests that source-of-truth and knowledge-core were not mutated."
+    }
+  ]
+}
