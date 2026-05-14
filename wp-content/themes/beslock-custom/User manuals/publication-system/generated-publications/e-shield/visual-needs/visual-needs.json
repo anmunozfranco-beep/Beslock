@@ -1,0 +1,407 @@
+{
+  "schema": "publication-rendering/1.0",
+  "product": "e-shield",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "policy": "non-generative; identifies visual-assistance necessity only; no prompts produced; no images produced.",
+  "categories_used": [
+    "installation-orientation",
+    "troubleshooting-support",
+    "warning-illustration"
+  ],
+  "needs_count": 29,
+  "needs": [
+    {
+      "entity_id": "install-context-compatibilidad-fisica-antes-de-perforar",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#4"
+      ]
+    },
+    {
+      "entity_id": "install-context-estado-editorial",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#13"
+      ]
+    },
+    {
+      "entity_id": "install-context-objetivo",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#2"
+      ]
+    },
+    {
+      "entity_id": "install-context-problemas-frecuentes-de-instalacion",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#11"
+      ]
+    },
+    {
+      "entity_id": "install-context-que-necesitas-antes-de-empezar",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#5"
+      ]
+    },
+    {
+      "entity_id": "install-context-que-vas-a-instalar",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#3"
+      ]
+    },
+    {
+      "entity_id": "install-context-relacion-con-el-paquete-documental",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#12"
+      ]
+    },
+    {
+      "entity_id": "install-context-validacion-despues-de-instalar",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#10"
+      ]
+    },
+    {
+      "entity_id": "install-energia-y-encendido-inicial",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#9"
+      ]
+    },
+    {
+      "entity_id": "install-montar-el-conjunto-exterior-e-interior",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#8"
+      ]
+    },
+    {
+      "entity_id": "install-preparar-la-puerta",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#7"
+      ]
+    },
+    {
+      "entity_id": "install-usar-la-plantilla-de-instalacion",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield installation manual.md#6"
+      ]
+    },
+    {
+      "entity_id": "sup-e-shield-1-warning-001",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf#page=?",
+        "generated_manuals_supplemental/e-shield-1/manual.json#warnings[0]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-shield-1-warning-002",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield_1.pdf#page=?",
+        "generated_manuals_supplemental/e-shield-1/manual.json#warnings[1]"
+      ]
+    },
+    {
+      "entity_id": "warn-escalation-required-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-installation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-irreversible-operation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-low-battery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-operational-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-recovery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-unsafe-state-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-gestion-del-dispositivo",
+      "entity_type": "troubleshooting",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-shield/source-of-truth/manuals/e-Shield app manual.md#6"
+      ]
+    },
+    {
+      "entity_id": "ts-administrator-access-recovery-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-app-synchronization-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-battery-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-connectivity-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-enrollment-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-lock-state-inconsistencies-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-pairing-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    }
+  ]
+}

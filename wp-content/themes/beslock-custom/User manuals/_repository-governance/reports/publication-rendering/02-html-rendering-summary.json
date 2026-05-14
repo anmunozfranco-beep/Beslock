@@ -1,0 +1,69 @@
+{
+  "title": "02 — HTML rendering summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "renderer": {
+    "id": "publication-renderer-textfirst",
+    "version": "1.0.0"
+  },
+  "format": "html-text-first",
+  "image_generation_invoked": false,
+  "prompt_generation_invoked": false,
+  "comfy_invoked": false,
+  "per_product": [
+    {
+      "product": "e-orbit",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 44,
+      "visual_needs": 43,
+      "gaps": 68,
+      "source_refs": 33
+    },
+    {
+      "product": "e-prime",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 32,
+      "visual_needs": 30,
+      "gaps": 62,
+      "source_refs": 21
+    },
+    {
+      "product": "e-flex",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 30,
+      "visual_needs": 28,
+      "gaps": 60,
+      "source_refs": 18
+    },
+    {
+      "product": "e-touch",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 27,
+      "visual_needs": 25,
+      "gaps": 54,
+      "source_refs": 15
+    },
+    {
+      "product": "e-shield",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 29,
+      "visual_needs": 29,
+      "gaps": 56,
+      "source_refs": 18
+    },
+    {
+      "product": "e-nova",
+      "knowledge_core_present": true,
+      "pages_rendered": 7,
+      "entities_rendered": 14,
+      "visual_needs": 14,
+      "gaps": 28,
+      "source_refs": 2
+    }
+  ]
+}

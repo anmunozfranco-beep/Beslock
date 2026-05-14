@@ -1,0 +1,599 @@
+{
+  "schema": "publication-rendering/1.0",
+  "product": "e-orbit",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "policy": "non-generative; identifies visual-assistance necessity only; no prompts produced; no images produced.",
+  "categories_used": [
+    "hybrid-ui",
+    "installation-orientation",
+    "procedural-sequence",
+    "troubleshooting-support",
+    "warning-illustration"
+  ],
+  "needs_count": 43,
+  "needs": [
+    {
+      "entity_id": "wf-app-pairing-ez-mode",
+      "entity_type": "workflow",
+      "section": "onboarding",
+      "category": "hybrid-ui",
+      "why": "app + device workflow benefits from UI screenshot composite",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#app-pairing-ez-mode"
+      ]
+    },
+    {
+      "entity_id": "wf-app-pairing-qr",
+      "entity_type": "workflow",
+      "section": "onboarding",
+      "category": "hybrid-ui",
+      "why": "app + device workflow benefits from UI screenshot composite",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#app-pairing-qr"
+      ]
+    },
+    {
+      "entity_id": "wf-local-onboarding",
+      "entity_type": "workflow",
+      "section": "onboarding",
+      "category": "hybrid-ui",
+      "why": "app + device workflow benefits from UI screenshot composite",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/workflows.json#local-onboarding"
+      ]
+    },
+    {
+      "entity_id": "proc-add-administrator",
+      "entity_type": "procedure",
+      "section": "onboarding",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#add-administrator"
+      ]
+    },
+    {
+      "entity_id": "proc-add-user",
+      "entity_type": "procedure",
+      "section": "onboarding",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#add-user"
+      ]
+    },
+    {
+      "entity_id": "proc-agregar-un-administrador",
+      "entity_type": "procedure",
+      "section": "onboarding",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#4"
+      ]
+    },
+    {
+      "entity_id": "proc-conectar-la-cerradura-a-la-aplicacion",
+      "entity_type": "procedure",
+      "section": "onboarding",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#9"
+      ]
+    },
+    {
+      "entity_id": "install-context-decision-sobre-plantilla-de-instalacion",
+      "entity_type": "installation-flow",
+      "section": "installation",
+      "category": "installation-orientation",
+      "why": "physical mounting requires visual orientation reference",
+      "priority": "P0",
+      "user_risk_level": "high",
+      "criticality": "blocking-without-visual",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit - supplemental source review.md#8"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-001",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[0]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-002",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[1]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-003",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[2]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-004",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[3]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-005",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[4]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-006",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[5]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-007",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[6]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-008",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[7]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-009",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[8]"
+      ]
+    },
+    {
+      "entity_id": "sup-e-orbit-2-warning-010",
+      "entity_type": "warning",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit_2.pdf#page=?",
+        "generated_manuals_supplemental/e-orbit-2/manual.json#warnings[9]"
+      ]
+    },
+    {
+      "entity_id": "warn-escalation-required-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-installation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-irreversible-operation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-low-battery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-operational-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-recovery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-unsafe-state-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-administrator-access-recovery-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-app-synchronization-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-battery-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-connectivity-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-enrollment-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-lock-state-inconsistencies-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-pairing-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "proc-agregar-un-usuario",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5"
+      ]
+    },
+    {
+      "entity_id": "proc-cambiar-el-idioma",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8"
+      ]
+    },
+    {
+      "entity_id": "proc-change-language",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#change-language"
+      ]
+    },
+    {
+      "entity_id": "proc-pair-by-ez-mode",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-ez-mode"
+      ]
+    },
+    {
+      "entity_id": "proc-pair-by-qr",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-qr"
+      ]
+    },
+    {
+      "entity_id": "proc-primeros-pasos",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3"
+      ]
+    },
+    {
+      "entity_id": "proc-register-fingerprint",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-fingerprint"
+      ]
+    },
+    {
+      "entity_id": "proc-register-pin",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-pin"
+      ]
+    },
+    {
+      "entity_id": "proc-registrar-una-contrasena-o-pin",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6"
+      ]
+    },
+    {
+      "entity_id": "proc-registrar-una-huella",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7"
+      ]
+    },
+    {
+      "entity_id": "proc-vincular-por-qr",
+      "entity_type": "procedure",
+      "section": "operation",
+      "category": "procedural-sequence",
+      "why": "multi-step procedure improves with sequence illustration",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10"
+      ]
+    }
+  ]
+}

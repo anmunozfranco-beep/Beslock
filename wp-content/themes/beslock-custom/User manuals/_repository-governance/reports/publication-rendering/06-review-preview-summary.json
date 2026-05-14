@@ -1,0 +1,20 @@
+{
+  "title": "06 — Review preview summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "preview_locations": [
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-orbit/previews/review-preview.html",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-prime/previews/review-preview.html",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-flex/previews/review-preview.html",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-touch/previews/review-preview.html",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-shield/previews/review-preview.html",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-nova/previews/review-preview.html"
+  ],
+  "audience": "reviewer-preview",
+  "navigation_features": [
+    "per-page links",
+    "visual-needs preview list",
+    "gap preview list",
+    "provenance lineage in footer"
+  ]
+}

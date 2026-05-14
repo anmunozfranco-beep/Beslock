@@ -1,0 +1,46 @@
+{
+  "title": "07 — Unresolved publication gaps",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "total_gaps_across_products": 328,
+  "per_product": [
+    {
+      "product": "e-orbit",
+      "gaps": 68
+    },
+    {
+      "product": "e-prime",
+      "gaps": 62
+    },
+    {
+      "product": "e-flex",
+      "gaps": 60
+    },
+    {
+      "product": "e-touch",
+      "gaps": 54
+    },
+    {
+      "product": "e-shield",
+      "gaps": 56
+    },
+    {
+      "product": "e-nova",
+      "gaps": 28
+    }
+  ],
+  "structural_gaps": [
+    "no publication version registry yet",
+    "no assembly-receipt emitter (carry-over from layer 29)",
+    "no audience filter applied (single profile = reviewer-preview)",
+    "no revocation propagation index",
+    "no freshness-detection between knowledge-core updates and rendered HTML",
+    "no section-order validator beyond hard-coded section list",
+    "no lossy-format machine-checkable diff between html and structured-runtime",
+    "no reviewer-validation surface (carry-over from layer 24 console gap)"
+  ],
+  "policy_gaps": [
+    "visual-prompt pipeline intentionally absent in this phase",
+    "image generation intentionally absent in this phase"
+  ]
+}

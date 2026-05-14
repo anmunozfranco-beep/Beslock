@@ -1,0 +1,29 @@
+{
+  "title": "05 — Publication manifests summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "manifest_locations": [
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-orbit/manifests/publication-manifest.json",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-prime/manifests/publication-manifest.json",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-flex/manifests/publication-manifest.json",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-touch/manifests/publication-manifest.json",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-shield/manifests/publication-manifest.json",
+    "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/e-nova/manifests/publication-manifest.json"
+  ],
+  "manifest_fields": [
+    "renderer",
+    "knowledge_core_path",
+    "subordinate_to",
+    "pages",
+    "rendered_procedure_ids",
+    "rendered_warning_ids",
+    "rendered_troubleshooting_ids",
+    "source_refs",
+    "gaps",
+    "visual_needs_ref",
+    "preview_ref",
+    "metadata_ref",
+    "publication_intent_ref",
+    "provenance_ref"
+  ]
+}

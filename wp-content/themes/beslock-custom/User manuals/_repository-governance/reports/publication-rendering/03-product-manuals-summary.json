@@ -1,0 +1,15 @@
+{
+  "title": "03 — Product_Manuals.html summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "index_path": "wp-content/themes/beslock-custom/User manuals/publication-system/generated-publications/Product_Manuals.html",
+  "linked_products": [
+    "e-orbit",
+    "e-prime",
+    "e-flex",
+    "e-touch",
+    "e-shield",
+    "e-nova"
+  ],
+  "purpose": "publication navigation only — not a source of truth"
+}

@@ -1,0 +1,209 @@
+{
+  "schema": "publication-rendering/1.0",
+  "product": "e-nova",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "policy": "non-generative; identifies visual-assistance necessity only; no prompts produced; no images produced.",
+  "categories_used": [
+    "troubleshooting-support",
+    "warning-illustration"
+  ],
+  "needs_count": 14,
+  "needs": [
+    {
+      "entity_id": "warn-escalation-required-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-installation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-irreversible-operation-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-low-battery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-operational-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-recovery-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "operational warning improves comprehension with icon",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "warn-unsafe-state-candidate",
+      "entity_type": "warning-candidate",
+      "section": "warnings",
+      "category": "warning-illustration",
+      "why": "irreversible or high-severity warning benefits from icon/illustration",
+      "priority": "P1",
+      "user_risk_level": "high",
+      "criticality": "high",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-administrator-access-recovery-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-app-synchronization-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-battery-issues-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-connectivity-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-enrollment-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-lock-state-inconsistencies-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    },
+    {
+      "entity_id": "ts-pairing-failures-candidate",
+      "entity_type": "troubleshooting-candidate",
+      "section": "troubleshooting",
+      "category": "troubleshooting-support",
+      "why": "diagnostic decision tree benefits from a flow diagram",
+      "priority": "P2",
+      "user_risk_level": "medium",
+      "criticality": "medium",
+      "source_refs": [
+        "tools/corpus_enrichment.py",
+        "doctrine: corpus-enrichment categories"
+      ]
+    }
+  ]
+}

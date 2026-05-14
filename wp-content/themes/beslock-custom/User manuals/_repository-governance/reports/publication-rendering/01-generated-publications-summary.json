@@ -1,0 +1,28 @@
+{
+  "title": "01 — Generated publications summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "products_attempted": [
+    "e-orbit",
+    "e-prime",
+    "e-flex",
+    "e-touch",
+    "e-shield",
+    "e-nova"
+  ],
+  "products_rendered": [
+    "e-orbit",
+    "e-prime",
+    "e-flex",
+    "e-touch",
+    "e-shield",
+    "e-nova"
+  ],
+  "products_missing_kc": [],
+  "total_pages_rendered": 42,
+  "total_entities_rendered": 176,
+  "primary_products": [
+    "e-orbit",
+    "e-prime"
+  ]
+}

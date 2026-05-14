@@ -1,0 +1,41 @@
+{
+  "title": "04 — Visual-need detection summary",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "policy": "non-generative; identifies necessity only",
+  "total_needs_detected": 169,
+  "categories_supported": [
+    "schematic",
+    "hybrid-ui",
+    "procedural-sequence",
+    "warning-illustration",
+    "installation-orientation",
+    "troubleshooting-support"
+  ],
+  "per_product": [
+    {
+      "product": "e-orbit",
+      "needs": 43
+    },
+    {
+      "product": "e-prime",
+      "needs": 30
+    },
+    {
+      "product": "e-flex",
+      "needs": 28
+    },
+    {
+      "product": "e-touch",
+      "needs": 25
+    },
+    {
+      "product": "e-shield",
+      "needs": 29
+    },
+    {
+      "product": "e-nova",
+      "needs": 14
+    }
+  ]
+}

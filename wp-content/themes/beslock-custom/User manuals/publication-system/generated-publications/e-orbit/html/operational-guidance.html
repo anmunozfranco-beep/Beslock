@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>e-orbit — Operational guidance</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 960px; margin: 0 auto; padding: 24px 32px 64px; color: #1a1a1a; line-height: 1.55; }
+header.gov { background: #f5f3ef; border-left: 4px solid #8a7d5a; padding: 12px 16px; margin-bottom: 24px; font-size: 12px; color: #4a4435; }
+header.gov .label { text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; color: #6b5f3f; }
+nav.topnav { margin: 0 0 24px; padding: 8px 0; border-bottom: 1px solid #e0d9c8; font-size: 13px; }
+nav.topnav a { margin-right: 14px; color: #5a4d2a; text-decoration: none; }
+nav.topnav a:hover { text-decoration: underline; }
+h1 { color: #2b2b2b; border-bottom: 2px solid #8a7d5a; padding-bottom: 8px; }
+h2 { color: #3d3a30; margin-top: 32px; }
+h3 { color: #4a4435; }
+section.entity { background: #fafafa; border: 1px solid #e8e2d2; border-radius: 4px; padding: 14px 18px; margin: 14px 0; }
+section.entity .meta { font-size: 11px; color: #6f6750; margin-bottom: 6px; }
+section.entity .meta .pill { display: inline-block; padding: 1px 7px; border-radius: 9px; background: #ece6d3; color: #5a4d2a; margin-right: 6px; font-weight: 600; letter-spacing: 0.04em; }
+section.entity .meta .pill.confidence-high { background: #d8e8d4; color: #2f5728; }
+section.entity .meta .pill.confidence-medium { background: #f3e9c8; color: #6b5418; }
+section.entity .meta .pill.confidence-low, section.entity .meta .pill.confidence-candidate, section.entity .meta .pill.confidence-ocr-medium { background: #f1d6c9; color: #7a3a18; }
+section.entity .meta .pill.severity-high { background: #f5c5b9; color: #7a2010; }
+section.entity .meta .pill.severity-medium { background: #f3e0c2; color: #6b4818; }
+section.entity ol, section.entity ul { padding-left: 22px; }
+.visual-need { font-size: 11px; color: #6b5418; background: #fcf7e6; border: 1px dashed #d6c486; padding: 4px 8px; border-radius: 3px; margin-top: 8px; display: inline-block; }
+.lineage { font-size: 11px; color: #6b6760; margin-top: 10px; }
+.lineage code { background: #f0eee8; padding: 1px 4px; border-radius: 2px; }
+footer.disclosure { margin-top: 48px; padding: 16px; background: #f5f3ef; border-top: 2px solid #8a7d5a; font-size: 11px; color: #5a4d2a; }
+footer.disclosure ul { padding-left: 18px; margin: 4px 0; }
+.gap { color: #7a3a18; font-style: italic; }
+table.index { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+table.index th, table.index td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e8e2d2; }
+table.index th { background: #f5f3ef; color: #4a4435; }
+</style>
+</head>
+<body>
+<header class="gov">
+  <div class="label">Governed publication preview — text-first</div>
+  <div>This is a <strong>rendered view</strong> of the governed knowledge-core. It is <strong>not</strong> an independent source of truth. Knowledge-core remains canonical; this surface adds form only. Visuals are <strong>not generated</strong> in this phase — visual needs are flagged inline.</div>
+  <div>Renderer: <code>publication-renderer-textfirst@1.0.0</code> · Section: <code>operation</code> · Generated: <code>2026-05-14T04:39:04+00:00</code></div>
+</header>
+<nav class="topnav"><a href="index.html">Index</a><a href="onboarding.html">Onboarding</a><a href="installation.html">Installation</a><a href="warnings.html">Warnings</a><a href="troubleshooting.html">Troubleshooting</a><a href="full-manual.html">Full manual</a><a href="../Product_Manuals.html">All products</a></nav>
+<h1>e-orbit — Operational guidance</h1>
+
+<p>Day-to-day operating procedures beyond initial onboarding.</p>
+<section class="entity" id="proc-agregar-un-usuario">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-agregar-un-usuario</code></div>
+<h3>Agregar usuario → Agregar usuario</h3>
+<p><strong>Menu path:</strong> <code>Agregar usuario → Agregar usuario</code></p>
+<p><strong>Preconditions:</strong></p>
+<ul><li>la cerradura está encendida</li>
+<li>ya existe al menos un administrador configurado</li>
+<li>sabes qué método de acceso vas a registrar</li></ul>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;activa el panel de la cerradura&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;entra al menú&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;selecciona **Agregar usuario**&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;elige **Agregar usuario**&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;selecciona el método de acceso&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;completa el registro&#x27;}</li>
+<li>{&#x27;n&#x27;: 7, &#x27;text&#x27;: &#x27;guarda el cambio&#x27;}</li>
+<li>{&#x27;n&#x27;: 8, &#x27;text&#x27;: &#x27;prueba el acceso&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5</code> <code>knowledge/operation/proc-agregar-un-usuario.json</code> </div>
+</section>
+<section class="entity" id="proc-cambiar-el-idioma">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-cambiar-el-idioma</code></div>
+<h3>La extracción disponible muestra ingreso con `888#` y selección de español con `3009#`</h3>
+<p><strong>Preconditions:</strong></p>
+<ul><li>la cerradura está encendida</li>
+<li>el panel responde al activarlo</li>
+<li>el usuario tiene acceso al equipo</li></ul>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;activa el panel&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;ingresa `888#`&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;entra al sistema de idioma&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;selecciona el idioma deseado&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;para español, usa `3009#` si corresponde a tu versión&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;confirma el cambio si el sistema lo solicita&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8</code> <code>knowledge/configuration/proc-cambiar-el-idioma.json</code> </div>
+</section>
+<section class="entity" id="proc-change-language">
+<div class="meta"><span class="pill confidence-high">conf:high</span><span class="pill">verified</span><span class="pill">surface:local-device</span><code>proc-change-language</code></div>
+<h3>observed numeric flow</h3>
+<p><strong>Menu path:</strong> <code>observed numeric flow</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>Wake the panel.</li>
+<li>Enter 888#.</li>
+<li>Enter the language system.</li>
+<li>Select the target language.</li>
+<li>Use 3009# for Spanish only if the commercial build confirms it.</li>
+<li>Confirm the change when prompted.</li></ol>
+<p><strong>Validation checks:</strong></p>
+<ul><li>The language actually changes.</li>
+<li>The user understands the menu.</li>
+<li>The lock still responds normally.</li></ul>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#change-language</code> <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json</code> </div>
+</section>
+<section class="entity" id="proc-pair-by-ez-mode">
+<div class="meta"><span class="pill confidence-high">conf:high</span><span class="pill">verified</span><span class="pill">surface:app</span><code>proc-pair-by-ez-mode</code></div>
+<h3>Smart Life -&gt; Camera&amp;Lock -&gt; Lock (Wi-Fi) -&gt; Reset the device -&gt; EZ Mode</h3>
+<p><strong>Menu path:</strong> <code>Smart Life -&gt; Camera&amp;Lock -&gt; Lock (Wi-Fi) -&gt; Reset the device -&gt; EZ Mode</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>Open the Wi-Fi lock flow.</li>
+<li>Enter the target network details.</li>
+<li>Enter Reset the device.</li>
+<li>Switch the app to EZ Mode.</li>
+<li>Use the fallback distribution flow.</li>
+<li>If needed, follow the hotspot guidance shown by the app.</li></ol>
+<p><strong>Validation checks:</strong></p>
+<ul><li>Fallback mode actually starts.</li>
+<li>The app indicates device discovery or progress.</li>
+<li>The lock appears in the app when the flow succeeds.</li></ul>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-ez-mode</code> <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json</code> </div>
+</section>
+<section class="entity" id="proc-pair-by-qr">
+<div class="meta"><span class="pill confidence-high">conf:high</span><span class="pill">verified</span><span class="pill">surface:app</span><code>proc-pair-by-qr</code></div>
+<h3>Smart Life -&gt; Add device -&gt; Camera&amp;Lock -&gt; Video Lock (Wi-Fi)</h3>
+<p><strong>Menu path:</strong> <code>Smart Life -&gt; Add device -&gt; Camera&amp;Lock -&gt; Video Lock (Wi-Fi)</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>Open Smart Life.</li>
+<li>Start add-device flow.</li>
+<li>Choose the lock category.</li>
+<li>Enter Wi-Fi details.</li>
+<li>Put the lock in network mode.</li>
+<li>Show the QR from the phone to the lock.</li>
+<li>Wait for confirmation.</li>
+<li>Complete the app flow.</li></ol>
+<p><strong>Validation checks:</strong></p>
+<ul><li>The device appears in the app.</li>
+<li>Connection appears stable.</li>
+<li>The device panel can be opened in the app.</li></ul>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-qr</code> <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json</code> </div>
+</section>
+<section class="entity" id="proc-primeros-pasos">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-primeros-pasos</code></div>
+<h3>Antes de empezar, verifica lo siguiente:</h3>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;crear el administrador principal&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;registrar un PIN&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;registrar una huella&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;probar los accesos registrados&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;revisar configuraciones básicas&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;conectar la cerradura a la app si aplica&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3</code> <code>knowledge/operation/proc-primeros-pasos.json</code> </div>
+</section>
+<section class="entity" id="proc-register-fingerprint">
+<div class="meta"><span class="pill confidence-high">conf:high</span><span class="pill">verified</span><span class="pill">surface:local-device</span><code>proc-register-fingerprint</code></div>
+<h3>Agregar usuario -&gt; Agregar administrador or Agregar usuario</h3>
+<p><strong>Menu path:</strong> <code>Agregar usuario -&gt; Agregar administrador or Agregar usuario</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>Enter the menu.</li>
+<li>Choose Agregar usuario.</li>
+<li>Choose the user type.</li>
+<li>Select Huella.</li>
+<li>Place the finger when prompted.</li>
+<li>Lift and place the same finger repeatedly.</li>
+<li>Wait for confirmation.</li>
+<li>Test the fingerprint.</li></ol>
+<p><strong>Validation checks:</strong></p>
+<ul><li>Fingerprint reading is stable.</li>
+<li>Access works multiple times in a row.</li>
+<li>The user can place the finger naturally.</li></ul>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-fingerprint</code> <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json</code> </div>
+</section>
+<section class="entity" id="proc-register-pin">
+<div class="meta"><span class="pill confidence-high">conf:high</span><span class="pill">verified</span><span class="pill">surface:local-device</span><code>proc-register-pin</code></div>
+<h3>Agregar usuario -&gt; Agregar administrador or Agregar usuario</h3>
+<p><strong>Menu path:</strong> <code>Agregar usuario -&gt; Agregar administrador or Agregar usuario</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>Enter Agregar usuario.</li>
+<li>Choose the user type.</li>
+<li>Select Contrasena.</li>
+<li>Enter the PIN.</li>
+<li>Confirm the PIN.</li>
+<li>Save the enrollment.</li>
+<li>Test the credential.</li></ol>
+<p><strong>Validation checks:</strong></p>
+<ul><li>The credential opens correctly.</li>
+<li>The user remembers the credential.</li>
+<li>The system accepts the credential consistently.</li></ul>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-pin</code> <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json</code> </div>
+</section>
+<section class="entity" id="proc-registrar-una-contrasena-o-pin">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-registrar-una-contrasena-o-pin</code></div>
+<h3>Agregar usuario → Agregar administrador / Agregar usuario</h3>
+<p><strong>Menu path:</strong> <code>Agregar usuario → Agregar administrador / Agregar usuario</code></p>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;entra a **Agregar usuario**&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;elige si vas a registrar un administrador o un usuario regular&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;selecciona **Contraseña**&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;ingresa la clave&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;confírmala&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;guarda el registro&#x27;}</li>
+<li>{&#x27;n&#x27;: 7, &#x27;text&#x27;: &#x27;prueba el PIN&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6</code> <code>knowledge/operation/proc-registrar-una-contrasena-o-pin.json</code> </div>
+</section>
+<section class="entity" id="proc-registrar-una-huella">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-registrar-una-huella</code></div>
+<h3>Agregar usuario → Agregar administrador / Agregar usuario</h3>
+<p><strong>Menu path:</strong> <code>Agregar usuario → Agregar administrador / Agregar usuario</code></p>
+<p><strong>Preconditions:</strong></p>
+<ul><li>el dedo está limpio y seco</li>
+<li>la cerradura responde normalmente</li>
+<li>el usuario puede apoyar el dedo con comodidad</li></ul>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;entra al menú&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;selecciona **Agregar usuario**&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;elige el tipo de usuario&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;selecciona **Huella**&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;coloca el dedo sobre el lector cuando el sistema lo indique&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;retira y vuelve a colocar el mismo dedo las veces necesarias&#x27;}</li>
+<li>{&#x27;n&#x27;: 7, &#x27;text&#x27;: &#x27;espera la confirmación&#x27;}</li>
+<li>{&#x27;n&#x27;: 8, &#x27;text&#x27;: &#x27;prueba la huella&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7</code> <code>knowledge/operation/proc-registrar-una-huella.json</code> </div>
+</section>
+<section class="entity" id="proc-requisitos-antes-de-vincular">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:mobile-app</span><code>proc-requisitos-antes-de-vincular</code></div>
+<h3>La hoja tecnica indica que el producto usa `Tuya WiFi` integrado y no requiere gateway adicional</h3>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5</code> <code>knowledge/operation/proc-requisitos-antes-de-vincular.json</code> </div>
+</section>
+<section class="entity" id="proc-vincular-por-qr">
+<div class="meta"><span class="pill confidence-medium">conf:medium</span><span class="pill">extraction-pending-review</span><span class="pill">surface:local-device</span><code>proc-vincular-por-qr</code></div>
+<h3>abre **Smart Life</h3>
+<p><strong>Preconditions:</strong></p>
+<ul><li>la app Smart Life está instalada</li>
+<li>la cerradura está en modo de vinculación</li>
+<li>el celular tiene suficiente brillo en pantalla</li></ul>
+<p><strong>Steps:</strong></p>
+<ol><li>{&#x27;n&#x27;: 1, &#x27;text&#x27;: &#x27;abre **Smart Life**&#x27;}</li>
+<li>{&#x27;n&#x27;: 2, &#x27;text&#x27;: &#x27;entra a **Agregar dispositivo**&#x27;}</li>
+<li>{&#x27;n&#x27;: 3, &#x27;text&#x27;: &#x27;selecciona la categoría correspondiente&#x27;}</li>
+<li>{&#x27;n&#x27;: 4, &#x27;text&#x27;: &#x27;sigue el flujo hasta que la app muestre el código QR&#x27;}</li>
+<li>{&#x27;n&#x27;: 5, &#x27;text&#x27;: &#x27;lleva la cerradura al modo de vinculación&#x27;}</li>
+<li>{&#x27;n&#x27;: 6, &#x27;text&#x27;: &#x27;muestra el QR del celular frente al equipo&#x27;}</li>
+<li>{&#x27;n&#x27;: 7, &#x27;text&#x27;: &#x27;espera la confirmación&#x27;}</li>
+<li>{&#x27;n&#x27;: 8, &#x27;text&#x27;: &#x27;completa el proceso en la aplicación&#x27;}</li></ol>
+<div class="visual-need">Visual need: <strong>procedural-sequence</strong> · priority P2 · multi-step procedure improves with sequence illustration (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10</code> <code>knowledge/operation/proc-vincular-por-qr.json</code> </div>
+</section>
+
+<footer class="disclosure">
+  <strong>Provenance &amp; lineage (mandatory disclosure):</strong>
+  <ul><li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit app manual.md#5</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#10</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#3</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#5</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#6</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#7</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/source-of-truth/manuals/e-Orbit user manual.md#8</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#change-language</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-ez-mode</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#pair-by-qr</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-fingerprint</code></li>
+<li><code>wp-content/themes/beslock-custom/User manuals/ext-images/e-orbit/structured-knowledge/procedures/procedure-catalog.json#register-pin</code></li></ul>
+  <strong>Unresolved gaps in this rendered surface:</strong>
+  <ul><li class='gap'>proc-agregar-un-usuario: confidence=medium</li>
+<li class='gap'>proc-agregar-un-usuario: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-cambiar-el-idioma: confidence=medium</li>
+<li class='gap'>proc-cambiar-el-idioma: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-primeros-pasos: confidence=medium</li>
+<li class='gap'>proc-primeros-pasos: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-registrar-una-contrasena-o-pin: confidence=medium</li>
+<li class='gap'>proc-registrar-una-contrasena-o-pin: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-registrar-una-huella: confidence=medium</li>
+<li class='gap'>proc-registrar-una-huella: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-requisitos-antes-de-vincular: confidence=medium</li>
+<li class='gap'>proc-requisitos-antes-de-vincular: validation_status=extraction-pending-review</li>
+<li class='gap'>proc-vincular-por-qr: confidence=medium</li>
+<li class='gap'>proc-vincular-por-qr: validation_status=extraction-pending-review</li></ul>
+  <div>Subordinate to knowledge-core + 26 governance layers. Confidence is disclosed per entity. Audience filter: <code>reviewer-preview</code> (single profile).</div>
+</footer>
+</body>
+</html>

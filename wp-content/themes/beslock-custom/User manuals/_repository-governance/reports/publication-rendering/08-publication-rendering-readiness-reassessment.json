@@ -1,0 +1,19 @@
+{
+  "title": "08 — Publication rendering readiness reassessment",
+  "schema": "publication-rendering/1.0",
+  "generated_at": "2026-05-14T04:39:04+00:00",
+  "platform_status": "FIRST GOVERNED PUBLICATION RENDERING — OPERATIONAL",
+  "publication_readiness": "EXECUTABLE (text-first, single audience profile, lossy by disclosure)",
+  "primary_bottleneck_resolved": "renderer absence (resolved by this phase)",
+  "remaining_bottlenecks": [
+    "publication version registry",
+    "assembly-receipt emitter",
+    "audience-aware filtering",
+    "revocation propagation",
+    "freshness detection",
+    "reviewer-validation console"
+  ],
+  "next_track": "version registry + receipts + audience filtering + freshness checks",
+  "subordinate_chain_length": 28,
+  "runtime_impact": "none (renderer is read-only over knowledge-core)"
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>e-prime — Troubleshooting</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 960px; margin: 0 auto; padding: 24px 32px 64px; color: #1a1a1a; line-height: 1.55; }
+header.gov { background: #f5f3ef; border-left: 4px solid #8a7d5a; padding: 12px 16px; margin-bottom: 24px; font-size: 12px; color: #4a4435; }
+header.gov .label { text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; color: #6b5f3f; }
+nav.topnav { margin: 0 0 24px; padding: 8px 0; border-bottom: 1px solid #e0d9c8; font-size: 13px; }
+nav.topnav a { margin-right: 14px; color: #5a4d2a; text-decoration: none; }
+nav.topnav a:hover { text-decoration: underline; }
+h1 { color: #2b2b2b; border-bottom: 2px solid #8a7d5a; padding-bottom: 8px; }
+h2 { color: #3d3a30; margin-top: 32px; }
+h3 { color: #4a4435; }
+section.entity { background: #fafafa; border: 1px solid #e8e2d2; border-radius: 4px; padding: 14px 18px; margin: 14px 0; }
+section.entity .meta { font-size: 11px; color: #6f6750; margin-bottom: 6px; }
+section.entity .meta .pill { display: inline-block; padding: 1px 7px; border-radius: 9px; background: #ece6d3; color: #5a4d2a; margin-right: 6px; font-weight: 600; letter-spacing: 0.04em; }
+section.entity .meta .pill.confidence-high { background: #d8e8d4; color: #2f5728; }
+section.entity .meta .pill.confidence-medium { background: #f3e9c8; color: #6b5418; }
+section.entity .meta .pill.confidence-low, section.entity .meta .pill.confidence-candidate, section.entity .meta .pill.confidence-ocr-medium { background: #f1d6c9; color: #7a3a18; }
+section.entity .meta .pill.severity-high { background: #f5c5b9; color: #7a2010; }
+section.entity .meta .pill.severity-medium { background: #f3e0c2; color: #6b4818; }
+section.entity ol, section.entity ul { padding-left: 22px; }
+.visual-need { font-size: 11px; color: #6b5418; background: #fcf7e6; border: 1px dashed #d6c486; padding: 4px 8px; border-radius: 3px; margin-top: 8px; display: inline-block; }
+.lineage { font-size: 11px; color: #6b6760; margin-top: 10px; }
+.lineage code { background: #f0eee8; padding: 1px 4px; border-radius: 2px; }
+footer.disclosure { margin-top: 48px; padding: 16px; background: #f5f3ef; border-top: 2px solid #8a7d5a; font-size: 11px; color: #5a4d2a; }
+footer.disclosure ul { padding-left: 18px; margin: 4px 0; }
+.gap { color: #7a3a18; font-style: italic; }
+table.index { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+table.index th, table.index td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #e8e2d2; }
+table.index th { background: #f5f3ef; color: #4a4435; }
+</style>
+</head>
+<body>
+<header class="gov">
+  <div class="label">Governed publication preview — text-first</div>
+  <div>This is a <strong>rendered view</strong> of the governed knowledge-core. It is <strong>not</strong> an independent source of truth. Knowledge-core remains canonical; this surface adds form only. Visuals are <strong>not generated</strong> in this phase — visual needs are flagged inline.</div>
+  <div>Renderer: <code>publication-renderer-textfirst@1.0.0</code> · Section: <code>troubleshooting</code> · Generated: <code>2026-05-14T04:39:04+00:00</code></div>
+</header>
+<nav class="topnav"><a href="index.html">Index</a><a href="onboarding.html">Onboarding</a><a href="installation.html">Installation</a><a href="warnings.html">Warnings</a><a href="troubleshooting.html">Troubleshooting</a><a href="full-manual.html">Full manual</a><a href="../Product_Manuals.html">All products</a></nav>
+<h1>e-prime — Troubleshooting</h1>
+
+<p>Diagnostic candidates. Most entries are reviewer-pending; render preserves this status visibly.</p>
+<section class="entity" id="ts-administrator-access-recovery-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-administrator-access-recovery-candidate</code></div>
+<h3>el administrador perdió acceso o no puede recuperar control de la cerradura</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>el administrador olvidó su credencial maestro</li>
+<li>la cuenta administradora ya no figura en la app</li>
+<li>no se puede iniciar el flujo de recuperación de administrador</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-administrator-access-recovery-candidate</code> </div>
+</section>
+<section class="entity" id="ts-app-synchronization-issues-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-app-synchronization-issues-candidate</code></div>
+<h3>la app no refleja cambios realizados en la cerradura o viceversa</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>las credenciales nuevas no aparecen en la app</li>
+<li>los logs de la cerradura no se sincronizan</li>
+<li>los cambios de configuración no se aplican</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-app-synchronization-issues-candidate</code> </div>
+</section>
+<section class="entity" id="ts-battery-issues-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-battery-issues-candidate</code></div>
+<h3>comportamiento anómalo asociado a baja batería o alimentación inestable</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>la cerradura se reinicia sola</li>
+<li>la cerradura no abre a pesar de credencial válido</li>
+<li>indicador de batería en estado crítico antes de lo esperado</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-battery-issues-candidate</code> </div>
+</section>
+<section class="entity" id="ts-connectivity-failures-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-connectivity-failures-candidate</code></div>
+<h3>fallo de conectividad bluetooth/wifi o gateway opcional</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>la app pierde la conexión durante la operación</li>
+<li>la cerradura no aparece en el escaneo bluetooth</li>
+<li>el gateway opcional no reporta estado</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-connectivity-failures-candidate</code> </div>
+</section>
+<section class="entity" id="ts-enrollment-failures-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-enrollment-failures-candidate</code></div>
+<h3>fallo al registrar huella, pin, llave o credencial</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>el lector de huella no responde</li>
+<li>la huella se rechaza repetidamente</li>
+<li>la cerradura cierra el alta sin guardar el credencial</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-enrollment-failures-candidate</code> </div>
+</section>
+<section class="entity" id="ts-lock-state-inconsistencies-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-lock-state-inconsistencies-candidate</code></div>
+<h3>el estado físico no coincide con el estado reportado por la app</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>la app dice abierto y la cerradura está cerrada (o viceversa)</li>
+<li>tras corte de energía el estado reportado no se refresca</li>
+<li>la cerradura indica error de sensor de estado</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-lock-state-inconsistencies-candidate</code> </div>
+</section>
+<section class="entity" id="ts-pairing-failures-candidate">
+<div class="meta"><span class="pill confidence-candidate">conf:candidate</span><span class="pill">candidate-pending-review</span><span class="pill">surface:runtime-corpus</span><code>ts-pairing-failures-candidate</code></div>
+<h3>fallo al vincular la cerradura con la app o el módulo OEM</h3>
+<p><strong>Symptoms:</strong></p>
+<ul><li>la app no detecta la cerradura</li>
+<li>la vinculación se interrumpe a mitad de proceso</li>
+<li>la cerradura aparece como ya vinculada en otro dispositivo</li></ul>
+<p><strong>Diagnostic questions:</strong></p>
+<ul><li>¿se puede reproducir el síntoma de forma consistente?</li>
+<li>¿en qué momento del flujo aparece (alta, vinculación, uso normal, recuperación)?</li>
+<li>¿hay eventos recientes (cambio de batería, reset, actualización)?</li></ul>
+<p><strong>Next actions:</strong></p>
+<ul><li>elevar el caso al canal de revisión OEM antes de operar</li>
+<li>registrar el síntoma observado en el log operacional</li></ul>
+<p><strong>Escalation required:</strong> yes</p>
+<div class="visual-need">Visual need: <strong>troubleshooting-support</strong> · priority P2 · diagnostic decision tree benefits from a flow diagram (declarative only — no image generated this phase)</div>
+<div class="lineage">Source refs: <code>tools/corpus_enrichment.py</code> <code>doctrine: corpus-enrichment categories</code> <code>corpus-enrichment/troubleshooting-candidate/ts-pairing-failures-candidate</code> </div>
+</section>
+
+<footer class="disclosure">
+  <strong>Provenance &amp; lineage (mandatory disclosure):</strong>
+  <ul><li><code>doctrine: corpus-enrichment categories</code></li>
+<li><code>tools/corpus_enrichment.py</code></li></ul>
+  <strong>Unresolved gaps in this rendered surface:</strong>
+  <ul><li class='gap'>ts-administrator-access-recovery-candidate: confidence=candidate</li>
+<li class='gap'>ts-administrator-access-recovery-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-app-synchronization-issues-candidate: confidence=candidate</li>
+<li class='gap'>ts-app-synchronization-issues-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-battery-issues-candidate: confidence=candidate</li>
+<li class='gap'>ts-battery-issues-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-connectivity-failures-candidate: confidence=candidate</li>
+<li class='gap'>ts-connectivity-failures-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-enrollment-failures-candidate: confidence=candidate</li>
+<li class='gap'>ts-enrollment-failures-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-lock-state-inconsistencies-candidate: confidence=candidate</li>
+<li class='gap'>ts-lock-state-inconsistencies-candidate: validation_status=candidate-pending-review</li>
+<li class='gap'>ts-pairing-failures-candidate: confidence=candidate</li>
+<li class='gap'>ts-pairing-failures-candidate: validation_status=candidate-pending-review</li></ul>
+  <div>Subordinate to knowledge-core + 26 governance layers. Confidence is disclosed per entity. Audience filter: <code>reviewer-preview</code> (single profile).</div>
+</footer>
+</body>
+</html>
