@@ -1,0 +1,30 @@
+{
+  "rule_family": "observability-summary",
+  "rules": [
+    {
+      "id": "OB-1",
+      "rule": "observability_id required and unique"
+    },
+    {
+      "id": "OB-2",
+      "rule": "observability_kind enum required"
+    },
+    {
+      "id": "OB-3",
+      "rule": "summary content is POINTER-only references"
+    },
+    {
+      "id": "OB-4",
+      "rule": "presentation-neutral; no telemetry keys, no streaming keys, no dashboard keys"
+    },
+    {
+      "id": "OB-5",
+      "rule": "summary_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "OB-6",
+      "rule": "reviewer attribution mandatory"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

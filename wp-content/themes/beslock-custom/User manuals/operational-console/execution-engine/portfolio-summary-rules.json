@@ -1,0 +1,34 @@
+{
+  "rule_family": "portfolio-summary",
+  "rules": [
+    {
+      "id": "PF-1",
+      "rule": "portfolio_id required and unique"
+    },
+    {
+      "id": "PF-2",
+      "rule": "package_refs MUST be a non-empty list of existing package_ids"
+    },
+    {
+      "id": "PF-3",
+      "rule": "dimensions MUST cover the canonical portfolio dimensions"
+    },
+    {
+      "id": "PF-4",
+      "rule": "summary content is POINTER-only references to upstream records (no inline payload duplication)"
+    },
+    {
+      "id": "PF-5",
+      "rule": "presentation-neutral; no css / style / font / color / layout / dashboard keys"
+    },
+    {
+      "id": "PF-6",
+      "rule": "portfolio_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "PF-7",
+      "rule": "operational confidence visibility — NOT analytics, NOT dashboards"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "rule_family": "recovery-playbook",
+  "rules": [
+    {
+      "id": "RC-1",
+      "rule": "recovery_id required and unique"
+    },
+    {
+      "id": "RC-2",
+      "rule": "recovery_kind enum required"
+    },
+    {
+      "id": "RC-3",
+      "rule": "recovery_steps MUST enumerate ordered {step_id, action, expected_outcome, governing_dispatch} entries"
+    },
+    {
+      "id": "RC-4",
+      "rule": "every governing_dispatch MUST refer to an existing reviewer-authoritative dispatch (Phases 47–57)"
+    },
+    {
+      "id": "RC-5",
+      "rule": "rollback_target MUST point at a real prior artifact id (export, activation, canonical record, table, mapping)"
+    },
+    {
+      "id": "RC-6",
+      "rule": "NO autonomous repair; reviewer remains executor"
+    },
+    {
+      "id": "RC-7",
+      "rule": "append-only; reviewer attribution mandatory"
+    }
+  ],
+  "schema": "operational-deployment-readiness-controlled-production-activation/1.0"
+}

@@ -306,3 +306,26 @@ Consumer boundary inherited from Phase 53 (presentation-neutral).
   presentation-neutral; writes ONLY into the layer's own runtime tree.
 - this is the FINAL closure layer before true production-ready operational maturity:
   it hardens the existing constitutional substrate WITHOUT introducing new architecture.
+
+## phase 57 — operational deployment readiness, reviewer enablement & controlled production activation
+
+- schema: `operational-deployment-readiness-controlled-production-activation/1.0`
+- constitutional layer: 50
+- storage tree: `operational-console/operational-deployment-runtime/`
+- 10 storage subdirs: reviewer-playbooks, recovery-playbooks, production-activations,
+  activation-lifecycle-records, deployment-verifications, portfolio-summaries,
+  observability-summaries, deployment-packages, dependency-manifests, consumer-payload-bundles.
+- 9 dispatch kinds: reviewer-playbook-publish, recovery-playbook-publish,
+  production-activation-transition, deployment-verification-run, portfolio-summary-publish,
+  observability-summary-publish, deployment-package-build, dependency-manifest-publish,
+  consumer-payload-bundle-publish.
+- activation lifecycle: production-candidate → production-approved → production-active → superseded;
+  rollback-candidate observable from any pre-superseded state. APPEND-ONLY; no overwrite semantics.
+- posture: deployability + reviewer operability over architectural growth; deterministic only;
+  NO embeddings; NO vector DBs; NO probabilistic inference; NO ML / LLMs / MT;
+  NO autonomous activation / publication / repair; NO silent production replacement;
+  NO dashboards / telemetry / deployment automation daemons; reviewer-authoritative;
+  lineage-preserving; transaction-safe activation; rollback-governed; presentation-neutral;
+  writes ONLY into the layer's own runtime tree.
+- this is the operational activation layer that transforms the Phase 47–56 substrate
+  into a deployable reviewer-operated production system.
