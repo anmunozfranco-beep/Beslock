@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "MP-1",
+      "rule": "every manual package MUST cite manual_id, canonical_product_id, package_version, reviewer, reasoning_chain, semantic_structure (list of section_ids), continuity_status, and package_sha256."
+    },
+    {
+      "id": "MP-2",
+      "rule": "synthesis_ids, extraction_ids, grounding_ids, evidence_refs MUST be lists of reviewer-attributed strings; empty lineage is fail-closed (PI-1)."
+    },
+    {
+      "id": "MP-3",
+      "rule": "package_sha256 is computed deterministically over canonical JSON of {manual_id, package_version, semantic_structure, lineage refs}; mismatch on replay is fail-closed (PR-2)."
+    },
+    {
+      "id": "MP-4",
+      "rule": "package_version follows reviewer-declared semver (MAJOR.MINOR.PATCH); in-place mutation of a published version is FORBIDDEN."
+    },
+    {
+      "id": "MP-5",
+      "rule": "continuity_status MUST be one of {ok, gaps-detected, unresolved} and reviewer-attributed."
+    },
+    {
+      "id": "MP-6",
+      "rule": "manual packages are append-only; supersedence MUST cite prior_package_id."
+    },
+    {
+      "id": "MP-7",
+      "rule": "autonomous package promotion is FORBIDDEN; only reviewer-attributed lifecycle transitions advance state."
+    },
+    {
+      "id": "MP-8",
+      "rule": "manual packages MUST NOT contain CSS, breakpoints, layout instructions, typography systems, or any presentation-bearing fields."
+    }
+  ],
+  "schema": "manual-package-rules/1.0"
+}

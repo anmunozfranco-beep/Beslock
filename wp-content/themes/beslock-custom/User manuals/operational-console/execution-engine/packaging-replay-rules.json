@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "PR-1",
+      "rule": "replay MUST reconstruct semantic structure, package_sha256, continuity chains, and lineage references end-to-end."
+    },
+    {
+      "id": "PR-2",
+      "rule": "hash mismatch on any linked artifact is fail-closed."
+    },
+    {
+      "id": "PR-3",
+      "rule": "replay MUST be deterministic across invocations; non-determinism is fail-closed."
+    },
+    {
+      "id": "PR-4",
+      "rule": "replay MUST NEVER mutate prior-layer runtime trees, the live publication tree, frontend/theme systems, or source evidence."
+    },
+    {
+      "id": "PR-5",
+      "rule": "replay events are append-only and reviewer-attributed."
+    }
+  ],
+  "schema": "packaging-replay-rules/1.0"
+}

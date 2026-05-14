@@ -1,0 +1,22 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "PRO-1",
+      "rule": "every reviewer override MUST be reviewer-attributed and cite the prior artifact_id."
+    },
+    {
+      "id": "PRO-2",
+      "rule": "overrides are append-only; the prior artifact remains intact and is not deleted."
+    },
+    {
+      "id": "PRO-3",
+      "rule": "reject overrides MUST cite at least one rule_id from MP-/SS-/XC-/PC-/PL-/PR-/PI-/PXL-/PRO-* tables."
+    },
+    {
+      "id": "PRO-4",
+      "rule": "autonomous overrides are FORBIDDEN; the runtime may PROPOSE packages and exports only."
+    }
+  ],
+  "schema": "reviewer-packaging-override-rules/1.0"
+}

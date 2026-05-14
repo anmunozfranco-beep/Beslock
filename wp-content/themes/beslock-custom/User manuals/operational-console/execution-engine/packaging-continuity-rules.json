@@ -1,0 +1,42 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "PC-1",
+      "rule": "every continuity scan MUST cite manual_id and package_id."
+    },
+    {
+      "id": "PC-2",
+      "rule": "procedural continuity gaps (semantic-procedure step_index gaps) BLOCK approval."
+    },
+    {
+      "id": "PC-3",
+      "rule": "warning continuity gaps (semantic-warning-group missing severity coverage) BLOCK approval."
+    },
+    {
+      "id": "PC-4",
+      "rule": "grounding continuity gaps (orphan grounding_ids) BLOCK approval."
+    },
+    {
+      "id": "PC-5",
+      "rule": "troubleshooting continuity gaps (missing escalation paths in semantic-troubleshooting-group) BLOCK approval."
+    },
+    {
+      "id": "PC-6",
+      "rule": "unresolved semantic gaps are reported but reviewer may flag for re-extraction."
+    },
+    {
+      "id": "PC-7",
+      "rule": "orphan semantic sections (cited in semantic_structure but not registered) BLOCK approval."
+    },
+    {
+      "id": "PC-8",
+      "rule": "broken evidence lineage BLOCKS approval."
+    },
+    {
+      "id": "PC-9",
+      "rule": "duplicate semantic IDs are fail-closed."
+    }
+  ],
+  "schema": "packaging-continuity-rules/1.0"
+}

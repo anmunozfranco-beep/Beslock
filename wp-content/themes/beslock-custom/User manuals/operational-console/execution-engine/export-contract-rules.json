@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "XC-1",
+      "rule": "every export contract MUST cite contract_id, manual_id, package_id, export_kind ∈ EXPORT_KINDS, reviewer, reasoning_chain."
+    },
+    {
+      "id": "XC-2",
+      "rule": "export_kind MUST be one of {raw-html-export, structured-json-export, semantic-markdown-export}."
+    },
+    {
+      "id": "XC-3",
+      "rule": "exports MUST be presentation-neutral; CSS injection, breakpoints, screen-size optimization, frontend-rendering hints are FORBIDDEN."
+    },
+    {
+      "id": "XC-4",
+      "rule": "exports MUST cite the source package_id; orphan contracts BLOCK approval (PI-7)."
+    },
+    {
+      "id": "XC-5",
+      "rule": "rendered payload sha256 MUST be deterministic; mismatch on replay is fail-closed (PR-2)."
+    },
+    {
+      "id": "XC-6",
+      "rule": "exports preserve lineage and trust_composition; redaction or restructuring of lineage is FORBIDDEN."
+    },
+    {
+      "id": "XC-7",
+      "rule": "exports are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "XC-8",
+      "rule": "raw-html-export MUST emit only semantic HTML5 tags (article/section/h1-h6/ol/ul/li/p/figure/table); class attributes, style attributes, breakpoints, and inline CSS are FORBIDDEN."
+    }
+  ],
+  "schema": "export-contract-rules/1.0"
+}

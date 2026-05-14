@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "CB-1",
+      "rule": "the Knowledge OS packages SEMANTIC manual knowledge ONLY; presentation/UI/CSS/responsive behavior/layouts/typography are OUT OF SCOPE."
+    },
+    {
+      "id": "CB-2",
+      "rule": "consumer systems (WordPress, WooCommerce, React frontends, PDF generators, documentation renderers) are responsible for ALL rendering, CSS, breakpoints, layouts, and presentation."
+    },
+    {
+      "id": "CB-3",
+      "rule": "exports MUST be consumed by the consumer system; the runtime does NOT inject CSS, manage layouts, manage breakpoints, or optimize for screen size."
+    },
+    {
+      "id": "CB-4",
+      "rule": "the runtime does NOT govern frontend/theme systems and NEVER writes the live publication tree or any prior-layer runtime tree."
+    },
+    {
+      "id": "CB-5",
+      "rule": "this separation is enforced constitutionally; violations are fail-closed."
+    }
+  ],
+  "schema": "consumer-boundary-rules/1.0"
+}
