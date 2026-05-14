@@ -1,0 +1,22 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "LR-1",
+      "rule": "every layout-review decision MUST be reviewer-attributed and cite composition_id, page_index (or 'all'), and decision ∈ {approve, request-changes, reject}."
+    },
+    {
+      "id": "LR-2",
+      "rule": "layout-review decisions are append-only; revisions append new decisions citing prior_decision_id."
+    },
+    {
+      "id": "LR-3",
+      "rule": "approval at page level does NOT promote the composition lifecycle; lifecycle transitions are recorded separately."
+    },
+    {
+      "id": "LR-4",
+      "rule": "reject decisions MUST cite at least one rule_id from CP-/LO-/SQ-/RR-/PC-/PA-/IN-* tables."
+    }
+  ],
+  "schema": "layout-review-rules/1.0"
+}

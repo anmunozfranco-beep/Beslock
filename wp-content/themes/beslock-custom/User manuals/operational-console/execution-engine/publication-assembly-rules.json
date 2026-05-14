@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "PA-1",
+      "rule": "every publication assembly MUST cite composition_id, all page_layout_ids in order, and a sha256 of the deterministic assembly manifest."
+    },
+    {
+      "id": "PA-2",
+      "rule": "assembly is permitted only when composition is reviewer-approved AND continuity check passed AND responsive parity verified."
+    },
+    {
+      "id": "PA-3",
+      "rule": "assembly MUST NOT mutate the live publication tree, layer-42 visual-publication-builds tree, or layer-43 visual-generation-runtime tree."
+    },
+    {
+      "id": "PA-4",
+      "rule": "assemblies are append-only; replacement requires explicit publication-structure-supersedence."
+    },
+    {
+      "id": "PA-5",
+      "rule": "rollback restores by appending a reverse assembly event referencing the prior assembly_id."
+    },
+    {
+      "id": "PA-6",
+      "rule": "the assembly manifest MUST embed sha256 of every page_layout and section_composition for replay verification."
+    }
+  ],
+  "schema": "publication-assembly-rules/1.0"
+}

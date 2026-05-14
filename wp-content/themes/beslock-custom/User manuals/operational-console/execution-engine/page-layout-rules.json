@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "LO-1",
+      "rule": "every page layout MUST cite composition_id and page_index (1-based, deterministic)."
+    },
+    {
+      "id": "LO-2",
+      "rule": "every block on a page MUST declare role ∈ SECTION_ROLES and a stable block_id."
+    },
+    {
+      "id": "LO-3",
+      "rule": "image blocks MUST cite asset_id (layer 43) AND grounding_id (layer 42); orphan visual blocks BLOCK composition approval."
+    },
+    {
+      "id": "LO-4",
+      "rule": "warning blocks MUST be placed before the procedural block they warn about; warning-after-procedural is fail-closed."
+    },
+    {
+      "id": "LO-5",
+      "rule": "specification tables MUST be grouped within a single section_composition; cross-section split is FORBIDDEN unless reviewer attests."
+    },
+    {
+      "id": "LO-6",
+      "rule": "visual density per page MUST stay within reviewer-declared ceiling (default max_visuals_per_page = 6)."
+    },
+    {
+      "id": "LO-7",
+      "rule": "section overflow is handled by adding pages with explicit continuation_of links; silent splitting is FORBIDDEN."
+    },
+    {
+      "id": "LO-8",
+      "rule": "page layouts are append-only; in-place mutation is FORBIDDEN."
+    }
+  ],
+  "schema": "page-layout-rules/1.0"
+}

@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "RR-1",
+      "rule": "every responsive layout MUST declare parity across all RESPONSIVE_BREAKPOINTS for every block_id."
+    },
+    {
+      "id": "RR-2",
+      "rule": "blocks present at desktop MUST be present (or have a reviewer-attributed responsive_omission) at mobile/tablet/print."
+    },
+    {
+      "id": "RR-3",
+      "rule": "warning blocks MUST be visible at every breakpoint; responsive omission of warnings is FORBIDDEN."
+    },
+    {
+      "id": "RR-4",
+      "rule": "broken responsive parity BLOCKS publication-ready transition (fail-closed)."
+    },
+    {
+      "id": "RR-5",
+      "rule": "render previews are deterministic snapshots of the responsive manifest; no probabilistic re-flow."
+    }
+  ],
+  "schema": "responsive-render-rules/1.0"
+}

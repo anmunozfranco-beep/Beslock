@@ -1,0 +1,10 @@
+{
+  "append_only": true,
+  "constitutional_layer_index": 44,
+  "created_at": "2026-05-14T15:33:52Z",
+  "deterministic": true,
+  "events": [],
+  "kind": "layout-events",
+  "reviewer_authoritative": true,
+  "schema": "governed-fs-event-store/1.0"
+}

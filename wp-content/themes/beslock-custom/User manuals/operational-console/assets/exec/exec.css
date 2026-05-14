@@ -119,3 +119,24 @@
 .oc-vg-oem-badge { background: #cfc; padding: 0.1rem 0.3rem; border-radius: 0.2rem; font-weight: bold; }
 .oc-vg-generated-badge { background: #ffd; padding: 0.1rem 0.3rem; border-radius: 0.2rem; }
 .oc-vg-conflict { background: #fee; padding: 0.5rem; border-left: 4px solid #c00; }
+
+/* phase 51 — publication composition governance additions */
+.oc-pc-state { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem; border: 1px solid #999; font-size: 0.8rem; }
+.oc-pc-state[data-state='draft'] { background: #f4f4f4; color: #555; }
+.oc-pc-state[data-state='composed'] { background: #eef; color: #225; }
+.oc-pc-state[data-state='review-required'] { background: #ffe; color: #b58900; }
+.oc-pc-state[data-state='reviewer-approved'] { background: #cfc; color: #060; }
+.oc-pc-state[data-state='publication-ready'] { background: #ace; color: #036; font-weight: bold; }
+.oc-pc-state[data-state='superseded'] { background: #ddd; color: #555; }
+.oc-pc-state[data-state='deprecated'] { background: #ccc; color: #444; }
+.oc-pc-page { border: 1px solid #ccc; padding: 0.5rem; margin: 0.4rem 0; }
+.oc-pc-page--continuation { border-left: 4px solid #036; }
+.oc-pc-block { display: inline-block; padding: 0.25rem; margin: 0.2rem; border: 1px dashed #999; vertical-align: top; }
+.oc-pc-block[data-role='warning'] { border-color: #c00; background: #fee; }
+.oc-pc-block[data-role='specification'] { background: #f7f7ff; }
+.oc-pc-block[data-role='procedural'] { background: #efe; }
+.oc-pc-block[data-role='troubleshooting'] { background: #fef; }
+.oc-pc-block[data-role='evidence-trace'] { background: #ffd; font-family: monospace; }
+.oc-pc-orphan { background: #fee; padding: 0.3rem; border-left: 4px solid #c00; }
+.oc-pc-parity-ok { color: #060; }
+.oc-pc-parity-broken { color: #c00; font-weight: bold; }

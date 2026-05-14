@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 44,
+  "rules": [
+    {
+      "id": "CP-1",
+      "rule": "every composition draft MUST be reviewer-authored and reviewer-attributed."
+    },
+    {
+      "id": "CP-2",
+      "rule": "every composition draft MUST cite synthesis_id (layer 41) and a deterministic ordered list of section_ids."
+    },
+    {
+      "id": "CP-3",
+      "rule": "section ordering MUST be reviewer-declared and deterministic; hidden insertion or reordering is FORBIDDEN."
+    },
+    {
+      "id": "CP-4",
+      "rule": "every section reference MUST resolve to an existing section_composition or carry a reviewer-declared inline body."
+    },
+    {
+      "id": "CP-5",
+      "rule": "composition manifests are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "CP-6",
+      "rule": "compositions MUST cite manual_kind ∈ MANUAL_KINDS for governance routing."
+    },
+    {
+      "id": "CP-7",
+      "rule": "autonomous composition (LLM- / agent-driven) is FORBIDDEN."
+    }
+  ],
+  "schema": "publication-composition-rules/1.0"
+}
