@@ -1,0 +1,30 @@
+{
+  "rule_family": "export-stabilization",
+  "rules": [
+    {
+      "id": "ES-1",
+      "rule": "stabilization_id required and unique"
+    },
+    {
+      "id": "ES-2",
+      "rule": "package_id MUST resolve to a Phase 53 manual-package in 'export-ready' state"
+    },
+    {
+      "id": "ES-3",
+      "rule": "canonical_id_map MUST assign stable canonical IDs to each section/entity/procedure"
+    },
+    {
+      "id": "ES-4",
+      "rule": "stable_export_payload MUST be presentation-neutral and recursively scrubbed for forbidden keys"
+    },
+    {
+      "id": "ES-5",
+      "rule": "stable_export_sha256 deterministic over canonical JSON"
+    },
+    {
+      "id": "ES-6",
+      "rule": "subsequent stabilizations of the same package MUST preserve canonical_id_map (additive only)"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

@@ -1,0 +1,30 @@
+{
+  "rule_family": "refresh-cohesion",
+  "rules": [
+    {
+      "id": "RC-1",
+      "rule": "cohesion_id required and unique"
+    },
+    {
+      "id": "RC-2",
+      "rule": "trigger_kind enum: approved-intake | canonical-promotion | arbitration-resolution"
+    },
+    {
+      "id": "RC-3",
+      "rule": "trigger_ref MUST resolve into upstream phase 54 / 55 store (intake-approval, canonical-entity, canonical-procedure, arbitration-decision)"
+    },
+    {
+      "id": "RC-4",
+      "rule": "refresh_chain MUST be a deterministic ordered list (fingerprints → clusters → canonical → synthesis → export-invalidation)"
+    },
+    {
+      "id": "RC-5",
+      "rule": "records are POINTER-ONLY; Phase 55 NEVER mutates upstream extraction/packaging/closure trees"
+    },
+    {
+      "id": "RC-6",
+      "rule": "transaction-safety: cohesion records are append-only and replayable"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

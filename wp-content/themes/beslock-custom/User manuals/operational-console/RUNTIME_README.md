@@ -270,3 +270,20 @@ Phase 52 extraction, Phase 53 packaging) into a single deterministic flow:
 Storage: `manual-runtime-closure/` (single isolated tree).
 Dispatch kinds: `intake-analyze`, `intake-reanalyze`, `intake-approve`, `refresh-propagate`, `semantic-bank-snapshot`, `manual-synthesize`, `visual-support-detect`, `prompt-package-generate`, `export-finalize`.
 Consumer boundary inherited from Phase 53 (presentation-neutral).
+
+## phase 55 — semantic convergence, cross-evidence fusion & operational runtime cohesion
+
+- schema: `semantic-convergence-cross-evidence-fusion/1.0`
+- constitutional layer: 48
+- storage tree: `operational-console/semantic-convergence-runtime/`
+- 10 storage subdirs: evidence-fingerprints, fusion-clusters, canonical-entities, canonical-procedures,
+  conflict-surfacings, arbitration-decisions, refresh-cohesion-records, workspace-flows,
+  robustness-records, export-stabilizations.
+- 9 dispatch kinds: evidence-fingerprint, fusion-cluster-form, canonical-entity-promote,
+  canonical-procedure-converge, conflict-surface, arbitration-decide, refresh-cohesion-propagate,
+  workspace-flow-record, export-stabilize.
+- posture: deterministic fingerprints only; NO embeddings; NO vector DBs; NO probabilistic inference;
+  reviewer-authoritative arbitration; lineage-preserving; transaction-safe refresh cohesion;
+  consumer-boundary-enforced; presentation-neutral; writes ONLY into the layer's own runtime tree.
+- this is the FIRST POST-CONSTITUTIONAL convergence layer: it wires existing systems into operational
+  semantic intelligence WITHOUT expanding governance complexity.

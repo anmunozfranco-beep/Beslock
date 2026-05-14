@@ -1,0 +1,30 @@
+{
+  "rule_family": "canonical-entity",
+  "rules": [
+    {
+      "id": "CE-1",
+      "rule": "canonical_entity_id required and stable across runtime cycles"
+    },
+    {
+      "id": "CE-2",
+      "rule": "source_cluster_id must resolve and must be in 'pending-review' or 'reviewer-approved'"
+    },
+    {
+      "id": "CE-3",
+      "rule": "entity_kind enum: entity | warning | specification"
+    },
+    {
+      "id": "CE-4",
+      "rule": "lineage_pointers MUST preserve every member fingerprint_id and evidence_id"
+    },
+    {
+      "id": "CE-5",
+      "rule": "reviewer attribution mandatory; promotion is append-only"
+    },
+    {
+      "id": "CE-6",
+      "rule": "canonical_payload MUST be presentation-neutral (no css/style/font/color/layout keys)"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

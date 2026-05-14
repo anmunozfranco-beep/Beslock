@@ -1,0 +1,26 @@
+{
+  "rule_family": "workspace-flow",
+  "rules": [
+    {
+      "id": "WF-1",
+      "rule": "flow_event_id required and unique"
+    },
+    {
+      "id": "WF-2",
+      "rule": "stage enum from canonical workspace-flow stages"
+    },
+    {
+      "id": "WF-3",
+      "rule": "ref_id required and resolves into the corresponding upstream record (intake/cluster/canonical/etc.)"
+    },
+    {
+      "id": "WF-4",
+      "rule": "workspace-flow events are observational only; they MUST NOT mutate upstream state"
+    },
+    {
+      "id": "WF-5",
+      "rule": "reviewer attribution mandatory"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}
