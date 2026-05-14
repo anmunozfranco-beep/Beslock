@@ -113,3 +113,32 @@ Every command:
 - is fail-closed on missing evidence / broken lineage / illegal transitions,
 - appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
 - writes only into `grounding-drafts/`, `prompt-drafts/`, `visual-publication-builds/`, or `visual-asset-ledger/`.
+
+
+## phase 50 — governed visual generation & deterministic asset production
+
+Layer 43. Subordinate to layer 42 (governed-multimodal-grounding-and-visual-publication-governance).
+
+Mutation is performed exclusively by `tools/governed_visual_generation_executor.py --confirm`.
+Subcommands (`--kind`):
+
+- `generation-request` — record a reviewer-authored generation request (the runtime never generates).
+- `generated-asset-register` — record a reviewer-supplied generated asset with sha256 + prompt + grounding lineage.
+- `review-comparison` — record a reviewer-authored multi-variant comparison (no ML scoring).
+- `publication-visual-selection` — record a reviewer-attributed publication selection (asset MUST be reviewer-approved).
+- `visual-supersedence` — append-only supersedence between asset records.
+- `generation-session` — open / freeze / close / reject a reviewer-led generation session.
+- `asset-lifecycle-transition` — advance an asset through candidate → review-required → reviewer-approved → publication-selected → {superseded | deprecated}; or → rejected.
+- `visual-integrity` — record a reviewer-led integrity check (sha256 + lineage + grounding-preservation).
+
+Every command:
+- requires reviewer attribution,
+- is fail-closed on missing grounding / missing prompt lineage / missing sha256 / illegal transitions / OEM overwrite attempts,
+- appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
+- writes only into `operational-console/visual-generation-runtime/` subtrees.
+
+The visual-generation-runtime tree is isolated from:
+- the live publication tree,
+- the layer-42 visual-publication-builds tree,
+- OEM source assets,
+- knowledge-core, governance, runtime-implementation, runtime-manifests payloads.

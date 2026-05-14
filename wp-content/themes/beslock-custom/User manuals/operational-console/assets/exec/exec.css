@@ -103,3 +103,19 @@
 .oc-asset-state[data-state='superseded'], .oc-asset-state[data-state='deprecated'] { background: #ddd; color: #555; }
 .oc-continuity-gap { background: #fee; padding: 0.25rem 0.5rem; border-left: 4px solid #c00; }
 .oc-prompt-revision { font-family: monospace; white-space: pre-wrap; background: #f7f7f7; padding: 0.5rem; border-left: 3px solid #69c; }
+
+/* phase 50 — visual generation governance additions */
+.oc-vg-state { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem; border: 1px solid #999; font-size: 0.8rem; }
+.oc-vg-state[data-state='candidate'] { background: #eee; }
+.oc-vg-state[data-state='review-required'] { background: #ffe; color: #b58900; }
+.oc-vg-state[data-state='reviewer-approved'] { background: #cfc; color: #060; }
+.oc-vg-state[data-state='publication-selected'] { background: #ace; color: #036; font-weight: bold; }
+.oc-vg-state[data-state='superseded'] { background: #ddd; color: #555; }
+.oc-vg-state[data-state='deprecated'] { background: #ccc; color: #444; }
+.oc-vg-state[data-state='rejected'] { background: #fcc; color: #900; text-decoration: line-through; }
+.oc-vg-variant { display: inline-block; padding: 0.25rem; margin: 0.25rem; border: 1px solid #ccc; vertical-align: top; }
+.oc-vg-variant.is-selected { border: 2px solid #036; background: #eef6ff; }
+.oc-vg-provenance { font-family: monospace; font-size: 0.8rem; color: #333; word-break: break-all; }
+.oc-vg-oem-badge { background: #cfc; padding: 0.1rem 0.3rem; border-radius: 0.2rem; font-weight: bold; }
+.oc-vg-generated-badge { background: #ffd; padding: 0.1rem 0.3rem; border-radius: 0.2rem; }
+.oc-vg-conflict { background: #fee; padding: 0.5rem; border-left: 4px solid #c00; }

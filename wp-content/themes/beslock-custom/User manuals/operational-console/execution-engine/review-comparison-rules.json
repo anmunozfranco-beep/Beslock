@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 43,
+  "rules": [
+    {
+      "id": "RC-1",
+      "rule": "comparison manifests MUST include >= 2 candidate variant_ids."
+    },
+    {
+      "id": "RC-2",
+      "rule": "scores are reviewer-authored ONLY; ML / heuristic / similarity scoring is FORBIDDEN."
+    },
+    {
+      "id": "RC-3",
+      "rule": "every comparison MUST capture reviewer_id and a per-variant verdict ∈ {prefer, acceptable, reject, defer}."
+    },
+    {
+      "id": "RC-4",
+      "rule": "side-by-side metadata (display_order, group_id, comparison_dimension) MUST be deterministic and recorded."
+    },
+    {
+      "id": "RC-5",
+      "rule": "comparison records are append-only; revisions append new comparison_id with prior_comparison_id."
+    }
+  ],
+  "schema": "review-comparison-rules/1.0"
+}

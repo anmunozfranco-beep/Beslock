@@ -3,7 +3,27 @@
   "constitutional_layer_index": 39,
   "created_at": "2026-05-14T12:23:11Z",
   "deterministic": true,
-  "events": [],
+  "events": [
+    {
+      "append_only": true,
+      "audit_event_id": "ses-no-rev-aud-20260514T151949Z",
+      "kind": "session-precheck-failure",
+      "links_to_operation_id": "ses-no-rev",
+      "message": "GS-1: reviewer attribution required",
+      "occurred_at_iso": "2026-05-14T15:19:49Z",
+      "payload": {
+        "request": {
+          "payload": {
+            "action": "open",
+            "session_id": "ses-no-rev"
+          },
+          "schema": "governed-fs-operation-request/1.0"
+        }
+      },
+      "reviewer": "UNATTRIBUTED",
+      "severity": "block"
+    }
+  ],
   "kind": "audit-events",
   "reviewer_authoritative": true,
   "schema": "governed-fs-event-store/1.0"
