@@ -1,0 +1,107 @@
+{
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "evidence-trust-model",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Canonical evidence trust hierarchy.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "hierarchy": [
+    {
+      "description": "Sealed OEM artefacts received through the official channel.",
+      "id": "oem-direct-evidence",
+      "label_es": "Evidencia OEM directa",
+      "rank": 100
+    },
+    {
+      "description": "Deterministic structured export from OEM systems, signed-off.",
+      "id": "verified-structured-export",
+      "label_es": "Exportación estructurada verificada",
+      "rank": 85
+    },
+    {
+      "description": "Installer photos, retrofit notes, on-site captures.",
+      "id": "installer-evidence",
+      "label_es": "Evidencia de instalador",
+      "rank": 65
+    },
+    {
+      "description": "Support-channel artefacts: tickets, ad-hoc captures, transcripts.",
+      "id": "support-evidence",
+      "label_es": "Evidencia de soporte",
+      "rank": 55
+    },
+    {
+      "description": "Text recovered from images/PDFs without text layer; ALWAYS flagged.",
+      "id": "ocr-derived-evidence",
+      "label_es": "Evidencia derivada por OCR",
+      "rank": 40
+    },
+    {
+      "description": "Candidate-pending-review entries derived from corpus enrichment.",
+      "id": "inferred-evidence",
+      "label_es": "Evidencia inferida",
+      "rank": 25
+    },
+    {
+      "description": "Superseded artefacts retained for lineage only; never published.",
+      "id": "deprecated-evidence",
+      "label_es": "Evidencia deprecada",
+      "rank": 0
+    }
+  ],
+  "id": "evidence-trust-model",
+  "rules": {
+    "deprecated_must_never_publish": true,
+    "inferred_requires_candidate_pending_review_status": true,
+    "mechanical_template_publication_floor": "oem-direct-evidence",
+    "ocr_derived_requires_explicit_flag": true,
+    "publication_floor": "verified-structured-export",
+    "trust_downgrades_propagate_to_dependent_publications": true,
+    "warnings_publication_floor": "oem-direct-evidence"
+  },
+  "tier_count": 7
+}

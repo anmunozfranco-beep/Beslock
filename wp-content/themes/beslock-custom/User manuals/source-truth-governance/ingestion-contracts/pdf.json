@@ -1,0 +1,93 @@
+{
+  "contract": {
+    "evidence_classes_supported": [
+      "procedural-evidence",
+      "mechanical-evidence",
+      "specification-evidence",
+      "certification-evidence",
+      "troubleshooting-evidence",
+      "operational-evidence"
+    ],
+    "extensions": [
+      ".pdf"
+    ],
+    "extraction_expectations": {
+      "fallback": "OCR-derived",
+      "primary": "deterministic-text-extraction-when-text-layer-present",
+      "structural": "section-and-page-anchors-required"
+    },
+    "forbidden": [
+      "silent-paraphrase",
+      "page-anchor-omission",
+      "OEM-language-rewrite-at-ingest-time"
+    ],
+    "format": "pdf",
+    "lineage_requirements": [
+      "source_path",
+      "page_anchor",
+      "extraction_method",
+      "extraction_tool",
+      "extraction_timestamp"
+    ],
+    "provenance_requirements": [
+      "oem-channel",
+      "oem-version",
+      "received-from"
+    ],
+    "reviewer_requirements": [
+      "operational-reviewer-or-engineering-reviewer-by-class"
+    ],
+    "trust_weighting": "oem-direct-evidence-when-from-OEM-channel-otherwise-OCR-derived"
+  },
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "ingestion-contracts",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Ingestion contract for pdf.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "id": "ingestion-contract-pdf"
+}

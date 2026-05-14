@@ -1,0 +1,237 @@
+{
+  "class_count": 9,
+  "classes": [
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "operation",
+        "workflows",
+        "install"
+      ],
+      "description": "Stepwise operator procedures: pairing, enrollment, recovery, reset.",
+      "id": "procedural-evidence",
+      "label_es": "Evidencia procedimental",
+      "primary_modalities": [
+        "pdf",
+        "md",
+        "docx",
+        "txt"
+      ],
+      "review_class": "operational-reviewer",
+      "secondary_modalities": [
+        "mp4",
+        "png"
+      ],
+      "trust_floor": "verified-structured-export"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "visual",
+        "component-visibility",
+        "visual-intent"
+      ],
+      "description": "Photographs, renders, exploded diagrams, screenshots — every pixel that informs an operator.",
+      "id": "visual-evidence",
+      "label_es": "Evidencia visual",
+      "primary_modalities": [
+        "png",
+        "jpg",
+        "webp",
+        "svg"
+      ],
+      "review_class": "visual-reviewer",
+      "secondary_modalities": [
+        "pdf",
+        "mp4"
+      ],
+      "trust_floor": "oem-direct-evidence"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "install",
+        "specifications"
+      ],
+      "description": "Drilling templates, backsets, hole centres, dimensional drawings.",
+      "id": "mechanical-evidence",
+      "label_es": "Evidencia mecánica",
+      "primary_modalities": [
+        "pdf",
+        "svg",
+        "cad",
+        "png"
+      ],
+      "review_class": "installation-reviewer",
+      "secondary_modalities": [
+        "xlsx",
+        "csv"
+      ],
+      "trust_floor": "oem-direct-evidence"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "troubleshooting",
+        "warnings"
+      ],
+      "description": "Symptom-to-cause-to-action artefacts, escalation paths, field reports.",
+      "id": "troubleshooting-evidence",
+      "label_es": "Evidencia de diagnóstico",
+      "primary_modalities": [
+        "md",
+        "pdf",
+        "txt"
+      ],
+      "review_class": "support-reviewer",
+      "secondary_modalities": [
+        "mp4",
+        "png"
+      ],
+      "trust_floor": "support-evidence"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "capabilities",
+        "specifications"
+      ],
+      "description": "Firmware versions, release notes, behavioural deltas.",
+      "id": "firmware-evidence",
+      "label_es": "Evidencia de firmware",
+      "primary_modalities": [
+        "txt",
+        "md",
+        "json"
+      ],
+      "review_class": "engineering-reviewer",
+      "secondary_modalities": [
+        "pdf"
+      ],
+      "trust_floor": "oem-direct-evidence"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "specifications",
+        "capabilities"
+      ],
+      "description": "Datasheets, compatibility matrices, electrical/mechanical specs.",
+      "id": "specification-evidence",
+      "label_es": "Evidencia de especificación",
+      "primary_modalities": [
+        "xlsx",
+        "csv",
+        "pdf"
+      ],
+      "review_class": "engineering-reviewer",
+      "secondary_modalities": [
+        "json"
+      ],
+      "trust_floor": "verified-structured-export"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "operation",
+        "workflows"
+      ],
+      "description": "Onboarding flows, app-screen sequences, day-to-day operator behaviour.",
+      "id": "operational-evidence",
+      "label_es": "Evidencia operacional",
+      "primary_modalities": [
+        "md",
+        "pdf",
+        "png",
+        "mp4"
+      ],
+      "review_class": "operational-reviewer",
+      "secondary_modalities": [
+        "txt"
+      ],
+      "trust_floor": "verified-structured-export"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "troubleshooting",
+        "install",
+        "operation"
+      ],
+      "description": "Installer photos, support tickets, observed failures, retrofit notes.",
+      "id": "field-evidence",
+      "label_es": "Evidencia de campo",
+      "primary_modalities": [
+        "png",
+        "jpg",
+        "mp4",
+        "md"
+      ],
+      "review_class": "support-reviewer",
+      "secondary_modalities": [
+        "pdf"
+      ],
+      "trust_floor": "installer-evidence"
+    },
+    {
+      "binds_to_knowledge_core_subdomains": [
+        "specifications",
+        "capabilities"
+      ],
+      "description": "Regulatory certifications, conformity declarations, test reports.",
+      "id": "certification-evidence",
+      "label_es": "Evidencia de certificación",
+      "primary_modalities": [
+        "pdf"
+      ],
+      "review_class": "engineering-reviewer",
+      "secondary_modalities": [
+        "png"
+      ],
+      "trust_floor": "oem-direct-evidence"
+    }
+  ],
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "evidence-classification",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Canonical multimodal evidence taxonomy.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "id": "evidence-classes"
+}

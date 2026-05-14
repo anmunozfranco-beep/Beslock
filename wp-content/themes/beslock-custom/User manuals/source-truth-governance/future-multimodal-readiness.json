@@ -1,0 +1,86 @@
+{
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "future-multimodal-readiness",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Readiness contract for downstream multimodal publication channels.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "future_capabilities_supported": [
+    "supportive-visuals",
+    "procedural-hybrid-diagrams",
+    "video-assisted-onboarding",
+    "multimodal-troubleshooting",
+    "contextual-support-copilots"
+  ],
+  "id": "future-multimodal-readiness",
+  "interface_contract_for_downstream_consumers": {
+    "must_honour": [
+      "publication_floor",
+      "blocking conflict kinds",
+      "publishable lifecycle states",
+      "reviewer signoff for groundings"
+    ],
+    "must_read": [
+      "evidence-classification/evidence-classes.json",
+      "evidence-trust-model.json",
+      "ingestion-contracts/_index.json",
+      "ingestion-lifecycle/lifecycle-model.json",
+      "multimodal-lineage/lineage-schema.json",
+      "multimodal-lineage/cross-modal-references.json",
+      "cross-modal-grounding/grounding-types.json",
+      "evidence-conflict-governance/conflict-kinds.json"
+    ]
+  },
+  "non_negotiable_invariants": [
+    "All outputs subordinate to evidence trust hierarchy.",
+    "All outputs subordinate to warning-governance and warning-fidelity.",
+    "All outputs subordinate to linguistic-governance (publication-time only).",
+    "All outputs lineage-traceable to source-of-truth artefacts.",
+    "No autonomous interpretation; reviewer signoff required before publication.",
+    "No ML pipelines, no embeddings, no prompt generation, no image generation in this layer."
+  ]
+}

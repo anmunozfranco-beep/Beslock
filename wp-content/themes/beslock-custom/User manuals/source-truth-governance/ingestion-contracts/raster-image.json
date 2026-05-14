@@ -1,0 +1,92 @@
+{
+  "contract": {
+    "evidence_classes_supported": [
+      "visual-evidence",
+      "field-evidence",
+      "operational-evidence"
+    ],
+    "extensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp"
+    ],
+    "extraction_expectations": {
+      "OCR": "optional-and-explicitly-flagged-when-applied",
+      "primary": "byte-identical-ingest",
+      "structural": "EXIF-and-dimensions-recorded"
+    },
+    "forbidden": [
+      "silent-resize",
+      "silent-recompression",
+      "EXIF-stripping-without-record"
+    ],
+    "format": "raster-image",
+    "lineage_requirements": [
+      "source_path",
+      "sha256",
+      "dimensions",
+      "EXIF_capture_time",
+      "ingestion_timestamp"
+    ],
+    "provenance_requirements": [
+      "captured-by",
+      "received-from"
+    ],
+    "reviewer_requirements": [
+      "visual-reviewer"
+    ],
+    "trust_weighting": "oem-direct-evidence-when-from-OEM-otherwise-installer-or-field-evidence"
+  },
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "ingestion-contracts",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Ingestion contract for raster-image.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "id": "ingestion-contract-raster-image"
+}

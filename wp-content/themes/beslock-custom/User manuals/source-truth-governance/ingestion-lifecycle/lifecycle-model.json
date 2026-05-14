@@ -1,0 +1,154 @@
+{
+  "envelope": {
+    "applied_at": "ingestion-time-and-publication-time-via-future-wiring",
+    "constitutional_layer_index": 32,
+    "generates_images": false,
+    "generates_prompts": false,
+    "introduces_embeddings": false,
+    "introduces_ml_pipelines": false,
+    "invokes_comfyui": false,
+    "layer": "ingestion-lifecycle",
+    "modeling_only": true,
+    "mutates_knowledge_core": false,
+    "mutates_runtime": false,
+    "mutates_source_of_truth": false,
+    "schema_version": "multimodal-evidence-governance/1.0",
+    "subordinate_to": [
+      "knowledge-core",
+      "structured-knowledge",
+      "source-of-truth",
+      "runtime-implementation",
+      "knowledge-building",
+      "publication-system",
+      "publication-quality",
+      "linguistic-governance",
+      "operational-pilots",
+      "review-governance",
+      "channel-governance",
+      "lineage-governance",
+      "provenance-governance",
+      "warning-governance",
+      "terminology-governance",
+      "visual-system",
+      "visual-intent-governance",
+      "component-visibility-governance",
+      "procedural-semantics",
+      "semantic-enrichment",
+      "corpus-enrichment",
+      "supplemental-source-governance",
+      "phase1-cutover",
+      "publication-and-delivery-governance",
+      "operational-pilot-governance",
+      "publication-renderer",
+      "publication-quality-governance",
+      "linguistic-rendering-governance",
+      "publication-time-only-doctrine",
+      "warning-fidelity-doctrine",
+      "multimodal-subordination-doctrine"
+    ],
+    "summary": "Lifecycle state machine for every multimodal artifact.",
+    "updated_at": "2026-05-14T05:30:07Z"
+  },
+  "id": "ingestion-lifecycle-model",
+  "invariants": {
+    "candidate_generated_must_carry_validation_status_candidate_pending_review": true,
+    "deprecated_or_superseded_are_terminal": true,
+    "lineage_event_required_on_every_transition": true,
+    "ocr_derived_must_pass_through_reviewer_validated_before_promotion": true,
+    "publishable_only_when_state_in": [
+      "promoted"
+    ]
+  },
+  "states": [
+    {
+      "description": "Artefact landed in source-of-truth, classified, lineage initialised.",
+      "id": "raw-ingested",
+      "is_terminal": false,
+      "publishable": false
+    },
+    {
+      "description": "Awaiting deterministic extraction per ingestion contract.",
+      "id": "extraction-pending",
+      "is_terminal": false,
+      "publishable": false
+    },
+    {
+      "description": "Text recovered via OCR; explicitly flagged; awaiting review.",
+      "id": "ocr-derived",
+      "is_terminal": false,
+      "publishable": false
+    },
+    {
+      "description": "Knowledge-core candidate proposed; status=candidate-pending-review.",
+      "id": "candidate-generated",
+      "is_terminal": false,
+      "publishable": false
+    },
+    {
+      "description": "Reviewer signed off content + lineage + trust assignment.",
+      "id": "reviewer-validated",
+      "is_terminal": false,
+      "publishable": false
+    },
+    {
+      "description": "Promoted into knowledge-core / structured-knowledge as canonical.",
+      "id": "promoted",
+      "is_terminal": false,
+      "publishable": true
+    },
+    {
+      "description": "Withdrawn from publication; retained for lineage only.",
+      "id": "deprecated",
+      "is_terminal": true,
+      "publishable": false
+    },
+    {
+      "description": "Replaced by a newer artefact; cross-modal-reference relation=supersedes.",
+      "id": "superseded",
+      "is_terminal": true,
+      "publishable": false
+    }
+  ],
+  "transitions": [
+    {
+      "from": "raw-ingested",
+      "to": "extraction-pending"
+    },
+    {
+      "from": "extraction-pending",
+      "to": "ocr-derived"
+    },
+    {
+      "from": "extraction-pending",
+      "to": "candidate-generated"
+    },
+    {
+      "from": "ocr-derived",
+      "to": "candidate-generated"
+    },
+    {
+      "from": "candidate-generated",
+      "to": "reviewer-validated"
+    },
+    {
+      "from": "reviewer-validated",
+      "to": "promoted"
+    },
+    {
+      "from": "promoted",
+      "to": "superseded"
+    },
+    {
+      "from": "promoted",
+      "to": "deprecated"
+    },
+    {
+      "from": "reviewer-validated",
+      "to": "deprecated"
+    },
+    {
+      "from": "candidate-generated",
+      "to": "deprecated"
+    }
+  ]
+}
