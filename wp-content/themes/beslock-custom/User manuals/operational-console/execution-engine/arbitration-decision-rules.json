@@ -1,0 +1,34 @@
+{
+  "rule_family": "arbitration-decision",
+  "rules": [
+    {
+      "id": "AD-1",
+      "rule": "decision_id required and unique"
+    },
+    {
+      "id": "AD-2",
+      "rule": "conflict_id MUST resolve to existing conflict-surface record"
+    },
+    {
+      "id": "AD-3",
+      "rule": "decision enum: accept | reject | defer | escalate"
+    },
+    {
+      "id": "AD-4",
+      "rule": "accept requires accepted_ref to be one of the conflicting_refs"
+    },
+    {
+      "id": "AD-5",
+      "rule": "reject and escalate require non-empty cited_rule_ids"
+    },
+    {
+      "id": "AD-6",
+      "rule": "arbitration is reviewer-only; no autonomous arbitration"
+    },
+    {
+      "id": "AD-7",
+      "rule": "decisions are append-only; supersession via new decision_id with prior_decision_id pointer"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

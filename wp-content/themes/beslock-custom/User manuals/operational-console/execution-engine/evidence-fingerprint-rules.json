@@ -1,0 +1,30 @@
+{
+  "rule_family": "evidence-fingerprint",
+  "rules": [
+    {
+      "id": "EFP-1",
+      "rule": "fingerprint_id and source_evidence_id required"
+    },
+    {
+      "id": "EFP-2",
+      "rule": "fingerprint MUST be deterministic SHA-256 over normalized text + structural feature set; NO embeddings, NO vectors"
+    },
+    {
+      "id": "EFP-3",
+      "rule": "normalization is lowercase + whitespace-collapse + punctuation-strip ONLY (deterministic)"
+    },
+    {
+      "id": "EFP-4",
+      "rule": "structural_kind enum: procedure-step | warning | specification | troubleshooting | app-flow | navigation | maintenance"
+    },
+    {
+      "id": "EFP-5",
+      "rule": "evidence_refs must be a non-empty list; provenance preserved"
+    },
+    {
+      "id": "EFP-6",
+      "rule": "presentation/CSS/typography/layout keys are forbidden in payload"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

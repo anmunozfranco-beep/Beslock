@@ -1,0 +1,34 @@
+{
+  "rule_family": "fusion-cluster",
+  "rules": [
+    {
+      "id": "FC-1",
+      "rule": "cluster_id required and unique within fusion-clusters/"
+    },
+    {
+      "id": "FC-2",
+      "rule": "member_fingerprint_ids must be non-empty list of resolvable fingerprint_ids"
+    },
+    {
+      "id": "FC-3",
+      "rule": "cluster_fingerprint MUST be deterministic SHA-256 over sorted member fingerprints"
+    },
+    {
+      "id": "FC-4",
+      "rule": "all members MUST share structural_kind (no cross-kind clustering)"
+    },
+    {
+      "id": "FC-5",
+      "rule": "cluster preserves union of evidence_refs and grounding_refs from members"
+    },
+    {
+      "id": "FC-6",
+      "rule": "fusion is reviewer-governed; no autonomous clustering"
+    },
+    {
+      "id": "FC-7",
+      "rule": "cluster_state begins 'pending-review' and may only be promoted via canonical-entity-promote or canonical-procedure-converge"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

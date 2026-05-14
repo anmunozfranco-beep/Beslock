@@ -1,0 +1,30 @@
+{
+  "rule_family": "conflict-surfacing",
+  "rules": [
+    {
+      "id": "CS-1",
+      "rule": "conflict_id required and unique"
+    },
+    {
+      "id": "CS-2",
+      "rule": "conflict_kind enum: specification-conflict | procedure-conflict | warning-conflict | troubleshooting-conflict"
+    },
+    {
+      "id": "CS-3",
+      "rule": "conflicting_refs MUST be a list of >= 2 distinct fingerprint_ids or canonical entity ids"
+    },
+    {
+      "id": "CS-4",
+      "rule": "severity enum: informational | minor | major | blocking"
+    },
+    {
+      "id": "CS-5",
+      "rule": "trust_composition MUST be recorded (counts of reviewer-approved / review-required / unresolved sources)"
+    },
+    {
+      "id": "CS-6",
+      "rule": "conflict surfacing is fail-closed: blocking conflicts MUST gate downstream canonical promotion"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}

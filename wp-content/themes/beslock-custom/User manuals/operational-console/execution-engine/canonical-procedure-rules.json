@@ -1,0 +1,34 @@
+{
+  "rule_family": "canonical-procedure",
+  "rules": [
+    {
+      "id": "CP-1",
+      "rule": "canonical_procedure_id required and stable"
+    },
+    {
+      "id": "CP-2",
+      "rule": "source_cluster_ids must all resolve and share procedure-class structural_kind"
+    },
+    {
+      "id": "CP-3",
+      "rule": "step_sequence MUST be deterministically ordered (1..N contiguous)"
+    },
+    {
+      "id": "CP-4",
+      "rule": "every step MUST reference at least one source fingerprint_id"
+    },
+    {
+      "id": "CP-5",
+      "rule": "every step MUST preserve evidence_refs and grounding_refs from its source"
+    },
+    {
+      "id": "CP-6",
+      "rule": "conflicting steps MUST NOT be silently flattened — they MUST surface a conflict-surface record"
+    },
+    {
+      "id": "CP-7",
+      "rule": "presentation keys forbidden recursively"
+    }
+  ],
+  "schema": "semantic-convergence-cross-evidence-fusion/1.0"
+}
