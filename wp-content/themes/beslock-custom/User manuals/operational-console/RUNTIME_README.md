@@ -173,3 +173,38 @@ The publication-composition-runtime tree is isolated from:
 - the layer-43 visual-generation-runtime tree,
 - OEM source assets,
 - knowledge-core, governance, runtime-implementation, runtime-manifests payloads.
+
+
+## phase 52 — governed semantic evidence analysis & multimodal extraction runtime
+
+Layer 45. Subordinate to layer 44 (governed-multimodal-publication-composition-and-page-orchestration-governance).
+
+Mutation is performed exclusively by `tools/governed_semantic_extraction_executor.py --confirm`.
+Subcommands (`--kind`):
+
+- `evidence-decomposition` — record a reviewer-authored decomposition of video / image / pdf / xls / xlsx / csv evidence (keyframes / pages / worksheets / regions).
+- `ocr-fragment` — record a reviewer-attributed OCR fragment with verbatim text and lineage to a decomposition region/page/frame.
+- `ocr-correction` — record a reviewer override of a prior OCR fragment (cites prior_fragment_id; append-only).
+- `extraction-candidate` — record a typed extraction candidate (one of CANDIDATE_KINDS) with full lineage pointers, reasoning_chain, and confidence_state.
+- `temporal-continuity` — record a temporal continuity scan for a video decomposition (gaps fail-closed for procedural sequences).
+- `extraction-lineage` — record a deterministic lineage replay with sha256 verification of every linked artifact.
+- `extraction-replay` — record a full extraction replay event verifying lineage and manifest hashes.
+- `extraction-lifecycle-transition` — advance a candidate through unresolved → review-required → reviewer-approved → {superseded → deprecated}.
+- `extraction-integrity` — record a reviewer-led integrity scan (orphan candidates, broken lineage, invalid OCR references, missing evidence, continuity gaps, hidden mutation).
+- `reviewer-override` — record a reviewer-attributed override of any extraction artifact (rejection requires cited_rule_ids).
+
+Every command:
+- requires reviewer attribution,
+- is fail-closed on missing source evidence / orphan candidates / broken lineage / invalid OCR references / temporal continuity gaps / illegal candidate states / duplicate IDs / forbidden overwrite paths / hidden extraction mutation,
+- appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
+- writes only into `operational-console/semantic-extraction-runtime/` subtrees.
+
+The semantic-extraction-runtime tree is isolated from:
+- the live publication tree,
+- the layer-44 publication-composition-runtime tree,
+- the layer-43 visual-generation-runtime tree,
+- the layer-42 visual-publication-builds tree,
+- OEM source assets,
+- knowledge-core, governance, runtime-implementation, runtime-manifests payloads, uploads.
+
+Nothing in this surface uses embeddings, vector databases, probabilistic semantic matching, autonomous LLM reasoning, cloud APIs, SaaS, telemetry, watchers, daemons, or background workers.

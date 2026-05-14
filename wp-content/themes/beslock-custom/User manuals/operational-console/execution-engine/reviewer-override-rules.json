@@ -1,0 +1,22 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "RO-1",
+      "rule": "every reviewer override (OCR correction, candidate state change, extraction rejection) MUST be reviewer-attributed and cite the prior artifact_id."
+    },
+    {
+      "id": "RO-2",
+      "rule": "overrides are append-only; the prior artifact remains intact and is not deleted."
+    },
+    {
+      "id": "RO-3",
+      "rule": "rejection overrides MUST cite at least one rule_id from ED-/OF-/EC-/TC-/EL-/ER-/XL-/XI-* tables."
+    },
+    {
+      "id": "RO-4",
+      "rule": "autonomous overrides are FORBIDDEN; the runtime may PROPOSE candidates only."
+    }
+  ],
+  "schema": "reviewer-override-rules/1.0"
+}

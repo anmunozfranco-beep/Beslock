@@ -1,0 +1,30 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "TC-1",
+      "rule": "every temporal continuity scan MUST cite source_evidence_id and an ordered list of frame_indices."
+    },
+    {
+      "id": "TC-2",
+      "rule": "frame_index sequences MUST be strictly increasing; gaps are reported and BLOCK procedural-sequence promotion."
+    },
+    {
+      "id": "TC-3",
+      "rule": "frames cited by candidates MUST exist in the decomposition; missing frames BLOCK approval."
+    },
+    {
+      "id": "TC-4",
+      "rule": "scene boundaries MUST be reviewer-declared; autonomous scene detection is FORBIDDEN."
+    },
+    {
+      "id": "TC-5",
+      "rule": "procedural sequences extracted from video MUST have contiguous frame coverage; non-contiguous procedural sequences BLOCK approval (fail-closed)."
+    },
+    {
+      "id": "TC-6",
+      "rule": "orphan frames (referenced by no candidate) are reported but NON-blocking unless the reviewer flags them."
+    }
+  ],
+  "schema": "temporal-continuity-rules/1.0"
+}

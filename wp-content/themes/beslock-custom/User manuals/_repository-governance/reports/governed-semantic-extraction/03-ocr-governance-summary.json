@@ -1,0 +1,205 @@
+{
+  "candidate_kinds": [
+    "procedural-step-candidate",
+    "troubleshooting-candidate",
+    "warning-candidate",
+    "specification-field-candidate",
+    "ui-state-candidate",
+    "app-flow-candidate",
+    "terminology-candidate",
+    "visual-anchor-candidate",
+    "section-candidate",
+    "table-candidate"
+  ],
+  "confidence_states": [
+    "reviewer-approved",
+    "review-required",
+    "unresolved"
+  ],
+  "consoles": [
+    "semantic-extraction-console",
+    "ocr-review-console",
+    "frame-review-console",
+    "table-review-console",
+    "continuity-review-console",
+    "extraction-lineage-console",
+    "extraction-integrity-console"
+  ],
+  "constitutional_layer_index": 45,
+  "evidence_kinds": [
+    "video",
+    "image",
+    "pdf",
+    "xls",
+    "xlsx",
+    "csv"
+  ],
+  "generated_at": "2026-05-14T16:14:25Z",
+  "js_assets": [
+    "se-decomposition-engine.js",
+    "se-ocr-engine.js",
+    "se-candidate-engine.js",
+    "se-continuity-engine.js",
+    "se-lineage-engine.js",
+    "se-replay-engine.js",
+    "se-lifecycle-engine.js",
+    "se-integrity-engine.js",
+    "se-override-engine.js"
+  ],
+  "lifecycle_edges": [
+    [
+      "unresolved",
+      "review-required"
+    ],
+    [
+      "unresolved",
+      "deprecated"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "unresolved"
+    ],
+    [
+      "review-required",
+      "deprecated"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "reviewer-approved",
+      "superseded"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "lifecycle_states": [
+    "deprecated",
+    "review-required",
+    "reviewer-approved",
+    "superseded",
+    "unresolved"
+  ],
+  "lifecycle_terminal_states": [
+    "deprecated"
+  ],
+  "new_event_stores": [
+    "evidence-decomposition-events",
+    "ocr-fragment-events",
+    "ocr-correction-events",
+    "extraction-candidate-events",
+    "temporal-continuity-events",
+    "extraction-lineage-events",
+    "extraction-replay-events",
+    "extraction-lifecycle-events",
+    "extraction-integrity-events"
+  ],
+  "posture": {
+    "append_only_lineage": true,
+    "auditable": true,
+    "browser_surfaces_never_write_filesystem": true,
+    "deterministic": true,
+    "fail_closed_on_broken_lineage": true,
+    "fail_closed_on_duplicate_extraction_id": true,
+    "fail_closed_on_forbidden_overwrite_path": true,
+    "fail_closed_on_hidden_extraction_mutation": true,
+    "fail_closed_on_illegal_candidate_state": true,
+    "fail_closed_on_invalid_ocr_reference": true,
+    "fail_closed_on_missing_source_evidence": true,
+    "fail_closed_on_orphan_candidate": true,
+    "fail_closed_on_temporal_continuity_gap": true,
+    "local_first": true,
+    "no_autonomous_llm_reasoning": true,
+    "no_autonomous_publication": true,
+    "no_autonomous_reviewer_decisions": true,
+    "no_autonomous_routing": true,
+    "no_background_workers": true,
+    "no_cloud_apis": true,
+    "no_daemons": true,
+    "no_embeddings": true,
+    "no_hidden_extraction": true,
+    "no_hidden_ocr_mutation": true,
+    "no_probabilistic_semantic_matching": true,
+    "no_saas_dependency": true,
+    "no_silent_correction": true,
+    "no_silent_evidence_mutation": true,
+    "no_telemetry": true,
+    "no_vector_databases": true,
+    "no_watchers": true,
+    "replayable": true,
+    "reviewer_authoritative": true,
+    "stdlib_first": true,
+    "writes_only_into_semantic_extraction_runtime_tree": true,
+    "writes_to_live_publication_tree": false,
+    "writes_to_publication_composition_runtime_tree": false,
+    "writes_to_visual_generation_runtime_tree": false,
+    "writes_to_visual_publication_builds_tree": false
+  },
+  "report_slug": "03-ocr-governance-summary",
+  "rule_tables": [
+    "evidence-decomposition-rules.json",
+    "extraction-ocr-rules.json",
+    "extraction-candidate-rules.json",
+    "temporal-continuity-rules.json",
+    "extraction-lineage-rules.json",
+    "extraction-replay-rules.json",
+    "reviewer-override-rules.json",
+    "extraction-lifecycle-rules.json",
+    "extraction-integrity-rules.json"
+  ],
+  "schema": "governance-report/1.0",
+  "subordinate_to": [
+    "knowledge-core-doctrine",
+    "governance-source-of-truth-doctrine",
+    "runtime-evidence-and-trust-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-doctrine",
+    "governed-transactional-execution-and-recovery-governance",
+    "governed-knowledge-synthesis-and-canonical-publication-governance",
+    "governed-multimodal-grounding-and-visual-publication-governance",
+    "governed-visual-generation-and-deterministic-asset-production-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance",
+    "governed-multimodal-publication-composition-and-page-orchestration-governance"
+  ],
+  "title": "Deterministic OCR governance summary."
+}

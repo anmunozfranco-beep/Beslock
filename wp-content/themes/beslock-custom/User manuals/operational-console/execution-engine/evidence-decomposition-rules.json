@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "ED-1",
+      "rule": "every evidence decomposition MUST be reviewer-attributed and cite source_evidence_id, evidence_kind ∈ EVIDENCE_KINDS, and content_sha256."
+    },
+    {
+      "id": "ED-2",
+      "rule": "decomposition is reviewer-proposed; the runtime MUST NOT autonomously decompose evidence."
+    },
+    {
+      "id": "ED-3",
+      "rule": "video decompositions MUST cite an ordered list of keyframes with timestamps; gaps in timeline ordering BLOCK approval."
+    },
+    {
+      "id": "ED-4",
+      "rule": "PDF decompositions MUST cite ordered page indices starting at 1; gaps BLOCK approval."
+    },
+    {
+      "id": "ED-5",
+      "rule": "spreadsheet decompositions MUST cite each worksheet by deterministic name and column count."
+    },
+    {
+      "id": "ED-6",
+      "rule": "image decompositions MUST cite at least one visual anchor or OCR-ready region."
+    },
+    {
+      "id": "ED-7",
+      "rule": "decomposition manifests are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "ED-8",
+      "rule": "decomposition MUST NOT mutate the source evidence file or any prior-layer storage tree."
+    }
+  ],
+  "schema": "evidence-decomposition-rules/1.0"
+}

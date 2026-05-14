@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "EC-1",
+      "rule": "every extraction candidate MUST cite candidate_id, source_evidence_id, extraction_runtime_id, extraction_rule_id, reviewer, confidence_state ∈ CONFIDENCE_STATES, reasoning_chain, and lineage pointers."
+    },
+    {
+      "id": "EC-2",
+      "rule": "candidate_kind MUST be in CANDIDATE_KINDS; unknown kinds are fail-closed."
+    },
+    {
+      "id": "EC-3",
+      "rule": "candidates default to confidence_state='unresolved' unless the reviewer explicitly attributes a higher state."
+    },
+    {
+      "id": "EC-4",
+      "rule": "autonomous approval is FORBIDDEN; only reviewer-attributed lifecycle transitions may set 'reviewer-approved'."
+    },
+    {
+      "id": "EC-5",
+      "rule": "duplicate candidate_id is FORBIDDEN; a new candidate citing prior_candidate_id MUST be recorded as supersedence."
+    },
+    {
+      "id": "EC-6",
+      "rule": "candidates citing OCR fragments MUST cite at least one ocr_fragment_id; orphan OCR references BLOCK approval."
+    },
+    {
+      "id": "EC-7",
+      "rule": "candidates citing video frames MUST cite frame_index and timestamp_ms; missing frames BLOCK approval."
+    },
+    {
+      "id": "EC-8",
+      "rule": "candidate manifests are append-only; in-place mutation is FORBIDDEN."
+    }
+  ],
+  "schema": "extraction-candidate-rules/1.0"
+}
