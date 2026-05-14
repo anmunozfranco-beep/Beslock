@@ -1,0 +1,73 @@
+{
+  "constitutional_layer_index": 42,
+  "image_roles": [
+    "contextual",
+    "procedural",
+    "warning",
+    "troubleshooting",
+    "specification",
+    "orientation",
+    "escalation-support",
+    "comparison-support"
+  ],
+  "role_to_section": {
+    "comparison-support": [
+      "specifications",
+      "operation"
+    ],
+    "contextual": [
+      "overview",
+      "operation"
+    ],
+    "escalation-support": [
+      "support",
+      "troubleshooting"
+    ],
+    "orientation": [
+      "overview",
+      "prerequisites"
+    ],
+    "procedural": [
+      "installation",
+      "operation"
+    ],
+    "specification": [
+      "specifications"
+    ],
+    "troubleshooting": [
+      "troubleshooting"
+    ],
+    "warning": [
+      "warnings",
+      "operation",
+      "installation"
+    ]
+  },
+  "rules": [
+    {
+      "id": "SI-1",
+      "rule": "every supportive-image mapping MUST declare role ∈ IMAGE_ROLES."
+    },
+    {
+      "id": "SI-2",
+      "rule": "role-to-section mapping is reviewer-governed; cross-role sharing requires explicit reviewer attribution."
+    },
+    {
+      "id": "SI-3",
+      "rule": "warning role images MUST carry evidence lineage AND a reviewer-approved warning manifest reference."
+    },
+    {
+      "id": "SI-4",
+      "rule": "specification role images MUST cite the specific specification field they support."
+    },
+    {
+      "id": "SI-5",
+      "rule": "comparison-support images MUST list both compared canonical_product_ids."
+    },
+    {
+      "id": "SI-6",
+      "rule": "contextual / orientation images MAY be reused across products only with explicit reviewer-attestation."
+    }
+  ],
+  "schema": "supportive-image-matrix-rules/1.0"
+}

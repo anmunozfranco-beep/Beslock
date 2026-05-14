@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "PG-1",
+      "rule": "every prompt MUST be bound to a grounding_id, canonical_product_id, and synthesis_id."
+    },
+    {
+      "id": "PG-2",
+      "rule": "every prompt revision is append-only and carries prior_prompt_id; in-place edits are FORBIDDEN."
+    },
+    {
+      "id": "PG-3",
+      "rule": "detached prompts (no grounding_id) are FORBIDDEN."
+    },
+    {
+      "id": "PG-4",
+      "rule": "prompt provenance MUST record reviewer, created_at_iso, intent, and constraints."
+    },
+    {
+      "id": "PG-5",
+      "rule": "prompt content is reviewer-authored text; autonomous LLM-driven prompt synthesis is FORBIDDEN."
+    },
+    {
+      "id": "PG-6",
+      "rule": "publication lineage MUST trace every published image back to a prompt_revision_id (or source_provenance for non-generated assets)."
+    },
+    {
+      "id": "PG-7",
+      "rule": "prompt deletion is FORBIDDEN; deprecation requires reviewer attribution and lineage preservation."
+    }
+  ],
+  "schema": "prompt-governance-rules/1.0"
+}

@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "VT-1",
+      "rule": "every troubleshooting symptom MAY carry one or more grounded visuals; each MUST cite evidence_ids."
+    },
+    {
+      "id": "VT-2",
+      "rule": "escalation steps MUST cite the support manifest AND a grounded escalation-support image (if available)."
+    },
+    {
+      "id": "VT-3",
+      "rule": "operational warnings MUST cite at least one warning-role visual when a visual exists in the asset ledger."
+    },
+    {
+      "id": "VT-4",
+      "rule": "unresolved ambiguity MUST be carried forward as 'visual_unresolved=true' rather than silently dropped."
+    },
+    {
+      "id": "VT-5",
+      "rule": "confidence_state propagates from grounding into the troubleshooting flow; reviewer-approved is required for publication-ready promotion."
+    }
+  ],
+  "schema": "visual-troubleshooting-rules/1.0"
+}

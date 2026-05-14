@@ -1,0 +1,77 @@
+{
+  "constitutional_layer_index": 42,
+  "edges": [
+    [
+      "candidate",
+      "grounded"
+    ],
+    [
+      "grounded",
+      "review-required"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "candidate"
+    ],
+    [
+      "reviewer-approved",
+      "publication-ready"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "publication-ready",
+      "superseded"
+    ],
+    [
+      "publication-ready",
+      "deprecated"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "VL-1",
+      "rule": "reviewer attribution required on every state transition."
+    },
+    {
+      "id": "VL-2",
+      "rule": "asset replacement is append-only via supersedence; silent overwrite is FORBIDDEN."
+    },
+    {
+      "id": "VL-3",
+      "rule": "hidden regeneration is FORBIDDEN; every regeneration MUST carry a prompt_revision_id and reviewer attribution."
+    },
+    {
+      "id": "VL-4",
+      "rule": "terminal states (superseded, deprecated) are immutable."
+    },
+    {
+      "id": "VL-5",
+      "rule": "publication-ready promotion requires (a) reviewer-approved grounding, (b) continuity-clean state."
+    }
+  ],
+  "schema": "visual-asset-lifecycle-rules/1.0",
+  "states": [
+    "candidate",
+    "deprecated",
+    "grounded",
+    "publication-ready",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "terminal_states": [
+    "deprecated",
+    "superseded"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "GR-1",
+      "rule": "every grounding record MUST cite at least one image_id and one grounded_target_id."
+    },
+    {
+      "id": "GR-2",
+      "rule": "grounded_target_id MUST resolve to an existing procedural / troubleshooting / specification / warning / installation / operational target."
+    },
+    {
+      "id": "GR-3",
+      "rule": "every grounding record MUST carry source evidence_ids and image provenance (source_uri or source_manifest)."
+    },
+    {
+      "id": "GR-4",
+      "rule": "trust_tier MUST be declared per image; OEM > certified-installer > field-reviewer > contributor."
+    },
+    {
+      "id": "GR-5",
+      "rule": "probabilistic / similarity-derived bindings are FORBIDDEN — bindings are reviewer-declared only."
+    },
+    {
+      "id": "GR-6",
+      "rule": "confidence_state ∈ {reviewer-approved, review-required, unresolved}; unresolved blocks publication-ready promotion."
+    },
+    {
+      "id": "GR-7",
+      "rule": "synthesis_id MUST be present and resolve to an existing layer-41 synthesis manifest."
+    },
+    {
+      "id": "GR-8",
+      "rule": "no silent rebinding: replacing an image_id requires append-only revision with prior_grounding_id."
+    },
+    {
+      "id": "GR-9",
+      "rule": "reviewer attribution required on every grounding record."
+    }
+  ],
+  "schema": "multimodal-grounding-rules/1.0"
+}

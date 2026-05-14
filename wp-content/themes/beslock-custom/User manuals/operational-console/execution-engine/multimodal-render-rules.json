@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 42,
+  "rules": [
+    {
+      "id": "MR-1",
+      "rule": "every <img> MUST carry data-grounding-id, data-image-id, data-role, data-evidence."
+    },
+    {
+      "id": "MR-2",
+      "rule": "alt text is reviewer-authored Spanish (Colombia); machine-translated alt text is FORBIDDEN."
+    },
+    {
+      "id": "MR-3",
+      "rule": "image src is the relative path stored in the asset ledger; remote URLs are FORBIDDEN at render time."
+    },
+    {
+      "id": "MR-4",
+      "rule": "missing-image placeholders are explicit visual markers (visual-not-available); silent omission is FORBIDDEN."
+    },
+    {
+      "id": "MR-5",
+      "rule": "trust composition (per-image trust_tier) is rendered as a visible badge."
+    }
+  ],
+  "schema": "multimodal-render-rules/1.0"
+}
