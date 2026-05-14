@@ -1,0 +1,361 @@
+{
+  "builder_conventions": [
+    "filename = `tools/<area>_governance.py` (snake_case area; suffix `_governance`)",
+    "exposes a single top-level `build()` function and `if __name__ == '__main__': build()`",
+    "declares `SCHEMA = '<area>-governance/<version>'` exactly once",
+    "declares `SUBORDINATE_TO = [...]` listing knowledge-core + every prior layer",
+    "uses the `write_pair(folder, slug, title, intro, sections, payload)` helper with paired `.md` + `.json`",
+    "writes only under THREE roots: artifact folder + KNOWLEDGE_BUILDING/<LAYER>/ + reports/<slug>/",
+    "is idempotent and non-destructive (re-running yields the same files)",
+    "reads no per-product knowledge-core JSON",
+    "prints a final summary line including the three written roots"
+  ],
+  "builders": [
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "access_consumption.py",
+      "schemas_declared": [
+        "access-and-consumption-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "adaptive_governance.py",
+      "schemas_declared": [
+        "adaptive-operational-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "composition_governance.py",
+      "schemas_declared": [
+        "composition-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "continuity_governance.py",
+      "schemas_declared": [
+        "continuity-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "corpus_enrichment.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "decision_governance.py",
+      "schemas_declared": [
+        "decision-intelligence-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "ecosystem_governance.py",
+      "schemas_declared": [
+        "ecosystem-interoperability-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "ecosystem_normalization_governance.py",
+      "schemas_declared": [
+        "ecosystem-normalization-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "environment_integration_governance.py",
+      "schemas_declared": [
+        "environment-integration-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "execution_governance.py",
+      "schemas_declared": [
+        "execution-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "experience_modeling.py",
+      "schemas_declared": [
+        "experience-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "generate_reset_review_assets.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "human_operations_governance.py",
+      "schemas_declared": [
+        "human-operations-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "knowledge_center_consolidate.py",
+      "schemas_declared": [
+        "knowledge-center/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "knowledge_core_build.py",
+      "schemas_declared": [
+        "knowledge-core/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "knowledge_core_semantic_enrich.py",
+      "schemas_declared": [
+        "knowledge-core/1.1-semantic-enrichment"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "knowledge_extraction.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "knowledge_lifecycle_governance.py",
+      "schemas_declared": [
+        "knowledge-lifecycle-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "knowledge_normalize_audit.py",
+      "schemas_declared": [
+        "semantic-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "knowledge_operations_governance.py",
+      "schemas_declared": [
+        "knowledge-operations-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "knowledge_validation.py",
+      "schemas_declared": [
+        "validation-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "lifecycle_governance.py",
+      "schemas_declared": [
+        "lifecycle-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "orchestration_governance.py",
+      "schemas_declared": [
+        "runtime-orchestration-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "phase1_cutover.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "phase2b_source_audit.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "proof_governance.py",
+      "schemas_declared": [
+        "operational-proof-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "prototype_runtime_governance.py",
+      "schemas_declared": [
+        "prototype-runtime-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "publish_review_drafts.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "realization_governance.py",
+      "schemas_declared": [
+        "realization-and-deployment-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "reasoning_governance.py",
+      "schemas_declared": [
+        "reasoning-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": true,
+      "id": "reference_stack_governance.py",
+      "schemas_declared": [
+        "reference-stack-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "render_manual_review_drafts.py",
+      "schemas_declared": [],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "repository_governance_audit.py",
+      "schemas_declared": [
+        "repo-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "root_canonicalize_md_json.py",
+      "schemas_declared": [
+        "repo-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "runtime_governance.py",
+      "schemas_declared": [
+        "runtime-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "runtime_hardening_governance.py",
+      "schemas_declared": [
+        "runtime-hardening-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": true,
+      "declares_subordinate_to": false,
+      "id": "runtime_implementation_governance.py",
+      "schemas_declared": [
+        "runtime-implementation-governance/1.0"
+      ],
+      "uses_write_pair_helper": true
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "visual_governance_consolidate.py",
+      "schemas_declared": [
+        "visual-governance/1.0"
+      ],
+      "uses_write_pair_helper": false
+    },
+    {
+      "declares_idempotent": false,
+      "declares_subordinate_to": false,
+      "id": "visual_governance_promote.py",
+      "schemas_declared": [
+        "visual-constitution/1.0"
+      ],
+      "uses_write_pair_helper": false
+    }
+  ],
+  "harmonization_rules": [
+    "future builders MUST satisfy every builder convention listed above",
+    "future builders MUST NOT introduce a second helper that diverges from `write_pair`",
+    "future builders MUST NOT write outside the three declared roots",
+    "future builders MUST NOT rename existing schemas; new MAJOR versions only",
+    "future builders MUST NOT introduce new macro-governance mega-layers"
+  ],
+  "kind": "builder-harmonization",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

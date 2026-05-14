@@ -1,0 +1,28 @@
+{
+  "coherence_status": "AUDITED + CANONICALIZED",
+  "doctrine_rewrites_performed": 0,
+  "future_commitments": [
+    "new products are added to the per-product knowledge-core under ext-images/<product>/; no new architecture is spawned",
+    "new OEM manuals enter via the OEM ingestion environment + dual-review binding (layers 23, 25)",
+    "new runtime domains extend ALLOWED_DOMAINS in config.py; CONFIDENCE_WEIGHTS extends only via governance action",
+    "future deployment slices are declared compositions of canonical-stack modules (layer 26); no new module categories",
+    "future reviewer ecosystems are partitioned by scope (layers 22, 23); revocation remains first-class",
+    "future multimodal systems subscribe to existing observability channels (layers 25, 26); no parallel channels"
+  ],
+  "future_invariants": [
+    "no future growth introduces a new macro-governance mega-layer",
+    "no future growth renames a schema in place",
+    "no future growth dissolves a prior layer's scope",
+    "no future growth introduces a canonical term with a new meaning",
+    "no future growth bypasses canonical-references"
+  ],
+  "generated": "2026-05-14T03:24:36Z",
+  "kind": "ecosystem-coherence-reassessment",
+  "layer_count": 27,
+  "next_bottleneck": "executable enforcement of canonical-references (builder conformance tests, naming lint, schema version registry, runtime carry-over enforcement)",
+  "platform_status": "FOUNDATIONALLY COMPLETE (unchanged)",
+  "primary_bottleneck": "LONG-TERM ECOSYSTEM COHERENCE (now governed by declared canonical-references + audit findings)",
+  "schema": "ecosystem-normalization-governance/1.0",
+  "schema_renames_performed": 0,
+  "subordinate_chain_length": 27
+}

@@ -1,0 +1,123 @@
+{
+  "contradiction_findings": [
+    {
+      "evidence": "every layer declares SUBORDINATE_TO knowledge-core + all prior layers; every layer is modeling-only; every layer respects: append-only, supervision-receipt, no-canonical-write, HITL-default, no-autonomous-operator",
+      "id": "no-doctrinal-contradictions-detected",
+      "resolution": "no rewrites required; canonical-references doc clarifies layered ownership"
+    }
+  ],
+  "doctrine_overlap_resolutions": [
+    {
+      "doctrines": [
+        "EXECUTION_GOVERNANCE",
+        "RUNTIME_GOVERNANCE",
+        "RUNTIME_ORCHESTRATION_GOVERNANCE",
+        "RUNTIME_IMPLEMENTATION_GOVERNANCE",
+        "PROTOTYPE_RUNTIME_GOVERNANCE",
+        "RUNTIME_HARDENING_GOVERNANCE"
+      ],
+      "id": "execution-stack",
+      "ownership": "EXECUTION = abstract execution model; RUNTIME = realization strategy; RUNTIME_ORCHESTRATION = supervised loop; RUNTIME_IMPLEMENTATION = real Python package; PROTOTYPE_RUNTIME = prototype slice; RUNTIME_HARDENING = supplemental corpus + replay"
+    },
+    {
+      "doctrines": [
+        "LIFECYCLE_GOVERNANCE",
+        "KNOWLEDGE_LIFECYCLE_GOVERNANCE",
+        "KNOWLEDGE_OPERATIONS_GOVERNANCE"
+      ],
+      "id": "knowledge-stack",
+      "ownership": "LIFECYCLE = content lifecycle; KNOWLEDGE_LIFECYCLE = trust lifecycle (candidate→trusted); KNOWLEDGE_OPERATIONS = operator tooling/workflows"
+    },
+    {
+      "doctrines": [
+        "REALIZATION_AND_DEPLOYMENT_GOVERNANCE",
+        "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+        "REFERENCE_STACK_GOVERNANCE"
+      ],
+      "id": "deployment-stack",
+      "ownership": "REALIZATION = value/sequencing; ENVIRONMENT_AND_INTEGRATION = trust zones + integration contracts; REFERENCE_STACK = canonical module composition"
+    },
+    {
+      "doctrines": [
+        "ECOSYSTEM_INTEROPERABILITY_GOVERNANCE",
+        "ECOSYSTEM_NORMALIZATION_GOVERNANCE"
+      ],
+      "id": "ecosystem-stack",
+      "ownership": "INTEROPERABILITY = cross-system contracts; NORMALIZATION = internal coherence + dedup"
+    },
+    {
+      "doctrines": [
+        "HUMAN_OPERATIONS_GOVERNANCE"
+      ],
+      "id": "human-stack",
+      "ownership": "single owner of operator UX, HITL, explainability, ergonomics"
+    },
+    {
+      "doctrines": [
+        "ADAPTIVE_OPERATIONAL_GOVERNANCE",
+        "DECISION_INTELLIGENCE_GOVERNANCE",
+        "REASONING_GOVERNANCE",
+        "CONTINUITY_GOVERNANCE"
+      ],
+      "id": "intelligence-stack",
+      "ownership": "ADAPTIVE = context adaptation; DECISION = branching/confidence; REASONING = causality/uncertainty; CONTINUITY = sessions/snapshots"
+    },
+    {
+      "doctrines": [
+        "VISUAL",
+        "KNOWLEDGE_CENTER",
+        "SEMANTIC",
+        "EXPERIENCE",
+        "ACCESS_AND_CONSUMPTION",
+        "COMPOSITION",
+        "OPERATIONAL_PROOF"
+      ],
+      "id": "platform-foundation",
+      "ownership": "foundational layers; each owns its declared scope; no overlap"
+    }
+  ],
+  "doctrine_roots": [
+    "ACCESS_AND_CONSUMPTION_GOVERNANCE",
+    "ADAPTIVE_OPERATIONAL_GOVERNANCE",
+    "COMPOSITION_GOVERNANCE",
+    "CONTINUITY_GOVERNANCE",
+    "DECISION_INTELLIGENCE_GOVERNANCE",
+    "ECOSYSTEM_INTEROPERABILITY_GOVERNANCE",
+    "ECOSYSTEM_NORMALIZATION_GOVERNANCE",
+    "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+    "EXECUTION_GOVERNANCE",
+    "EXPERIENCE_GOVERNANCE",
+    "HUMAN_OPERATIONS_GOVERNANCE",
+    "KNOWLEDGE_CENTER",
+    "KNOWLEDGE_LIFECYCLE_GOVERNANCE",
+    "KNOWLEDGE_OPERATIONS_GOVERNANCE",
+    "LIFECYCLE_GOVERNANCE",
+    "OPERATIONAL_PROOF_GOVERNANCE",
+    "PROTOTYPE_RUNTIME_GOVERNANCE",
+    "REALIZATION_AND_DEPLOYMENT_GOVERNANCE",
+    "REASONING_GOVERNANCE",
+    "REFERENCE_STACK_GOVERNANCE",
+    "RUNTIME_GOVERNANCE",
+    "RUNTIME_HARDENING_GOVERNANCE",
+    "RUNTIME_IMPLEMENTATION_GOVERNANCE",
+    "RUNTIME_ORCHESTRATION_GOVERNANCE",
+    "SEMANTIC_GOVERNANCE",
+    "VALIDATION_GOVERNANCE",
+    "VISUAL_GOVERNANCE",
+    "legacy-architecture",
+    "migrations",
+    "phase2-execution-reports",
+    "phase2-reports",
+    "phase2b-source-coverage",
+    "phase3-execution-reports"
+  ],
+  "governance_dedup_rules": [
+    "no doctrine may be split across two layers without an explicit canonical-references entry",
+    "no doctrine may be silently absorbed by another layer",
+    "no doctrine may contradict a prior layer; subordination is strict",
+    "no new doctrine may duplicate the scope of an existing doctrine",
+    "doctrines may be deprecated only via a governance action; deprecation is append-only"
+  ],
+  "kind": "governance-deduplication",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

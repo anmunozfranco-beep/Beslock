@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "patterns": [
+    {
+      "id": "reviewer-fatigue",
+      "indicator": "time-to-decision rising over rolling window for a reviewer",
+      "mitigation": "rotate reviewer-of-scope; reduce queue assignment"
+    },
+    {
+      "id": "workflow-friction",
+      "indicator": "operator retraction rate or step-loop rate above baseline",
+      "mitigation": "doctrine clarification (layer 24 ergonomics); console refinement"
+    },
+    {
+      "id": "escalation-overload",
+      "indicator": "escalation receiver acknowledgement time exceeds declared envelope",
+      "mitigation": "expand receiver pool; tighten escalation criteria"
+    },
+    {
+      "id": "ambiguity-density",
+      "indicator": "topic cluster with high divergence-score across sessions",
+      "mitigation": "corpus enrichment for that topic via layer-23 candidate flow"
+    },
+    {
+      "id": "navigation-pain",
+      "indicator": "operator requests clarification on the same step across operators",
+      "mitigation": "layer-24 explainability artifact + console copy refinement"
+    },
+    {
+      "id": "continuity-restoration-failures",
+      "indicator": "checkpoint resume fails or operator restarts session",
+      "mitigation": "review checkpoint contract; widen continuity scope (layer 14) without mutating runtime invariants"
+    }
+  ],
+  "rules": [
+    "friction analytics inform reviewer + governance; never auto-mutate doctrine",
+    "individual operator friction surfaces are scoped to that operator + their reviewer-of-scope",
+    "friction findings flow into the candidate pipeline (layer 23); no shortcut into trusted corpus"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

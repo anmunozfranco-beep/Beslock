@@ -1,0 +1,41 @@
+{
+  "compressed": false,
+  "generated_at": "2026-05-14T03:32:55Z",
+  "human_judgment_band_steps": [
+    3,
+    4,
+    5
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "step_count": 7,
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

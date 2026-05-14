@@ -1,0 +1,42 @@
+{
+  "generated": "2026-05-14T03:24:36Z",
+  "kind": "charter",
+  "principles": [
+    "This layer governs internal coherence: schemas, builders, doctrines, contracts, naming, and runtime assumptions.",
+    "All twenty-six prior layers are preserved without modification.",
+    "Normalization is auditing + canonicalization; no schema is renamed and no layer is rewritten in this phase.",
+    "Canonical-references is the single source of truth for contract ownership and doctrinal scope.",
+    "No new macro-governance mega-layer is spawned; this layer audits, it does not expand.",
+    "Subordinate to knowledge-core and to all twenty-six prior governance layers."
+  ],
+  "schema": "ecosystem-normalization-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK"
+  ]
+}

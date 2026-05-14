@@ -1,0 +1,67 @@
+{
+  "kind": "runtime-consistency",
+  "runtime_consistency_findings": [
+    {
+      "evidence": "retrieval.py applies CONFIDENCE_WEIGHTS declared in config.py; weights match RUNTIME_HARDENING_GOVERNANCE schema",
+      "id": "retrieval-uses-confidence-weights",
+      "status": "consistent"
+    },
+    {
+      "evidence": "retrieval sets manifest.extra.candidate_only; assembly._evaluate_escalation reads it; ESCALATION emits trigger",
+      "id": "candidate-only-marker-flows-end-to-end",
+      "status": "consistent"
+    },
+    {
+      "evidence": "replay.py skips manifest.extra.empty=True; tests pass 19/19",
+      "id": "replay-skips-empty-packages",
+      "status": "consistent"
+    },
+    {
+      "evidence": "channels.py allows only declared channel names; orchestration/retrieval/escalation/continuity/replay/operational-audit-log",
+      "id": "observability-channels-bounded",
+      "status": "consistent"
+    },
+    {
+      "carry_over_from": "phase 30",
+      "evidence": "HUMAN_OPERATIONS_GOVERNANCE declares supervision-receipt; runtime CLI does not yet emit one as a separate field; flows.operator is a free string",
+      "id": "supervision-receipt-not-yet-runtime-field",
+      "status": "gap (declared, not enforced)"
+    },
+    {
+      "carry_over_from": "phase 32",
+      "evidence": "REFERENCE_STACK_GOVERNANCE declares composition-manifest at startup; runtime does not yet emit it",
+      "id": "composition-manifest-not-yet-emitted",
+      "status": "gap (declared, not enforced)"
+    },
+    {
+      "carry_over_from": "phase 32",
+      "evidence": "REFERENCE_STACK_GOVERNANCE declares contract registry; absent in code",
+      "id": "interop-contract-registry-absent",
+      "status": "gap (declared, not enforced)"
+    },
+    {
+      "carry_over_from": "phase 31",
+      "evidence": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE declares incident-trace; channels.py has no `incident-trace` entry",
+      "id": "incident-trace-channel-not-provisioned",
+      "status": "gap (declared, not enforced)"
+    },
+    {
+      "evidence": "all runtime modules subscribe to a single config.ALLOWED_DOMAINS + a single CONFIDENCE_WEIGHTS dict; no module redefines either",
+      "id": "no-divergent-runtime-assumptions-detected",
+      "status": "consistent"
+    },
+    {
+      "evidence": "replay re-executes against captured (product, query, kind); deterministic; tests pass",
+      "id": "no-replay-incompatibilities-detected",
+      "status": "consistent"
+    }
+  ],
+  "runtime_consistency_rules": [
+    "every runtime module uses canonical terms only (TASK 5)",
+    "every runtime module reads ALLOWED_DOMAINS and CONFIDENCE_WEIGHTS from a single config source",
+    "every runtime module emits to declared channels only",
+    "every runtime gap above is recorded as a carry-over; no new gaps are introduced",
+    "every runtime change is preceded by a governance action documented in this layer's canonical-references"
+  ],
+  "schema": "ecosystem-normalization-governance/1.0"
+}

@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-05-14T03:32:55Z",
+  "loop": [
+    {
+      "actor": "runtime",
+      "produces": "instrumented signal (TASK 2)",
+      "stage": "runtime observation",
+      "step": 1
+    },
+    {
+      "actor": "telemetry pipeline",
+      "produces": "hotspot / friction / retrieval finding (TASKs 3-5)",
+      "stage": "aggregation",
+      "step": 2
+    },
+    {
+      "actor": "reviewer-of-scope",
+      "produces": "enrichment request OR closure with rationale",
+      "stage": "reviewer triage",
+      "step": 3
+    },
+    {
+      "actor": "knowledge operator",
+      "produces": "candidate knowledge node (layer 23)",
+      "stage": "candidate authoring",
+      "step": 4
+    },
+    {
+      "actor": "reviewer ecosystem",
+      "produces": "promotion decision (single or dual review per scope)",
+      "stage": "trust evaluation",
+      "step": 5
+    },
+    {
+      "actor": "promotion workflow",
+      "produces": "trusted corpus update",
+      "stage": "promotion",
+      "step": 6
+    },
+    {
+      "actor": "runtime",
+      "produces": "next-cycle observations (loop closes)",
+      "stage": "runtime improvement",
+      "step": 7
+    }
+  ],
+  "rules": [
+    "no step in this flow may be skipped",
+    "no automation may compress steps 3 + 4 + 5 (the human-judgment band)",
+    "every promotion carries provenance back to the originating signal cluster",
+    "loop is observation-only on the first iteration of every new pilot product",
+    "signal → corpus changes are governed; never inferred and applied silently"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

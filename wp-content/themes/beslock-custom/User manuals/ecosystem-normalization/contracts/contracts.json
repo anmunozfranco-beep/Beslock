@@ -1,0 +1,69 @@
+{
+  "canonical_contract_authorities": [
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE (layer 26) — packaging/",
+      "contract": "runtime-package-manifest"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — interoperability/",
+      "contract": "runtime-contract (retrieve)"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — interoperability/",
+      "contract": "escalation-contract"
+    },
+    {
+      "authority": "knowledge-core/1.0 + REFERENCE_STACK_GOVERNANCE",
+      "contract": "provenance-contract"
+    },
+    {
+      "authority": "RUNTIME_HARDENING_GOVERNANCE (layer 21) + REFERENCE_STACK_GOVERNANCE",
+      "contract": "replay-contract"
+    },
+    {
+      "authority": "RUNTIME_HARDENING_GOVERNANCE + REFERENCE_STACK_GOVERNANCE",
+      "contract": "retrieval-contract (Jaccard×weight)"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE",
+      "contract": "governance-contract"
+    },
+    {
+      "authority": "CONTINUITY_GOVERNANCE + REFERENCE_STACK_GOVERNANCE",
+      "contract": "continuity-contract"
+    },
+    {
+      "authority": "REFERENCE_STACK_GOVERNANCE — packaging/",
+      "contract": "deployment-manifest"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE (layer 25)",
+      "contract": "environment-manifest"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+      "contract": "integration-contracts (7)"
+    },
+    {
+      "authority": "ENVIRONMENT_AND_INTEGRATION_GOVERNANCE",
+      "contract": "trust-zone mapping"
+    },
+    {
+      "authority": "HUMAN_OPERATIONS_GOVERNANCE (layer 24)",
+      "contract": "supervision-receipt"
+    },
+    {
+      "authority": "HUMAN_OPERATIONS_GOVERNANCE",
+      "contract": "operator-identity field"
+    }
+  ],
+  "canonicalization_rules": [
+    "every contract has exactly one authoritative declaring layer",
+    "implementation modules cite the authoritative layer in their docstring (forward action)",
+    "no contract is silently extended; extensions are governance actions",
+    "no contract is silently versioned down; downgrades require a governance action",
+    "canonical-references is the single source of truth for contract ownership"
+  ],
+  "kind": "contracts",
+  "schema": "ecosystem-normalization-governance/1.0"
+}

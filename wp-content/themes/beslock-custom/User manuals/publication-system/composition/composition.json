@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-05-14T03:42:21Z",
+  "publication_types": [
+    {
+      "audience_default": "end-user",
+      "id": "user-manual",
+      "required_sections": [
+        "overview",
+        "safety-warnings",
+        "installation-summary",
+        "operation",
+        "maintenance",
+        "troubleshooting-quickref",
+        "support"
+      ],
+      "tier_required": "trusted"
+    },
+    {
+      "audience_default": "end-user",
+      "id": "onboarding-guide",
+      "required_sections": [
+        "welcome",
+        "prerequisites",
+        "first-use-flow",
+        "key-warnings",
+        "where-to-go-next"
+      ],
+      "tier_required": "trusted"
+    },
+    {
+      "audience_default": "end-user",
+      "id": "troubleshooting-guide",
+      "required_sections": [
+        "symptom-index",
+        "diagnostic-tree",
+        "remediation-steps",
+        "escalation-criteria",
+        "support-contact"
+      ],
+      "tier_required": "trusted"
+    },
+    {
+      "audience_default": "end-user",
+      "id": "quick-start-guide",
+      "required_sections": [
+        "unbox",
+        "minimal-setup",
+        "first-action",
+        "safety-callouts"
+      ],
+      "tier_required": "trusted"
+    },
+    {
+      "audience_default": "installer",
+      "id": "installation-guide",
+      "required_sections": [
+        "site-requirements",
+        "tooling",
+        "stepwise-procedure",
+        "verification",
+        "handoff-checklist"
+      ],
+      "tier_required": "trusted"
+    },
+    {
+      "audience_default": "end-user",
+      "id": "operational-faq",
+      "required_sections": [
+        "question",
+        "answer",
+        "related-procedures",
+        "confidence-band"
+      ],
+      "tier_required": "trusted-or-elevated-candidate"
+    },
+    {
+      "audience_default": "support-agent",
+      "id": "support-knowledge-article",
+      "required_sections": [
+        "scenario",
+        "diagnosis",
+        "resolution",
+        "escalation-path",
+        "internal-notes"
+      ],
+      "tier_required": "trusted-or-elevated-candidate"
+    }
+  ],
+  "rules": [
+    "every publication is composed from knowledge-core nodes; no free-text injection by the renderer",
+    "every required section is present or the publication is rejected at validation",
+    "candidate-tier nodes MAY appear only when explicitly elevated by reviewer-of-scope and disclosed in the publication",
+    "no publication mixes products without explicit cross-product manifest",
+    "no publication compresses safety warnings; warnings render verbatim from source",
+    "section order is governance-declared; renderer MUST NOT reorder"
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "canonical_references_doc": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/ECOSYSTEM_NORMALIZATION_GOVERNANCE/canonical-references.json",
+  "constitutional_root": "wp-content/themes/beslock-custom/User manuals/KNOWLEDGE_BUILDING/ECOSYSTEM_NORMALIZATION_GOVERNANCE/",
+  "doctrine_sections": [
+    "normalization-philosophy",
+    "canonicalization-doctrine",
+    "anti-fragmentation-principles",
+    "schema-stability-doctrine",
+    "builder-harmonization-philosophy",
+    "ecosystem-coherence-principles"
+  ],
+  "kind": "normalization-governance-summary",
+  "layer_index": 27,
+  "reports_root": "wp-content/themes/beslock-custom/User manuals/_repository-governance/reports/ecosystem-normalization/",
+  "schema": "ecosystem-normalization-governance/1.0",
+  "subordinate_to_count": 27
+}

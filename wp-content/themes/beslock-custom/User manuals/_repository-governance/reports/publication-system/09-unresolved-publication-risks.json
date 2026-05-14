@@ -1,0 +1,88 @@
+{
+  "generated_at": "2026-05-14T03:42:21Z",
+  "risk_count": 10,
+  "risks": [
+    {
+      "id": "no-renderer-implemented",
+      "note": "All composition + assembly + format rules are modeled; no renderer code exists yet.",
+      "severity": "high"
+    },
+    {
+      "id": "no-publication-version-registry",
+      "note": "Publication versions + manifest hashes are required by lineage but no registry exists.",
+      "severity": "high"
+    },
+    {
+      "id": "no-revocation-propagation",
+      "note": "Source-node revocation does not yet flag dependent publications (no dependency index).",
+      "severity": "high"
+    },
+    {
+      "id": "no-assembly-receipt-emitter",
+      "note": "Runtime-generation auditability requires assembly receipts; runtime emits none today.",
+      "severity": "high"
+    },
+    {
+      "id": "audience-filter-not-enforced",
+      "note": "Audience filters are doctrine-declared; no executable enforcement layer exists.",
+      "severity": "medium"
+    },
+    {
+      "id": "no-lossy-format-disclosure-check",
+      "note": "Lossy formats must disclose what is lost; no automated check verifies this.",
+      "severity": "medium"
+    },
+    {
+      "id": "no-section-order-validator",
+      "note": "Section order is governance-declared; no validator rejects reordered output.",
+      "severity": "medium"
+    },
+    {
+      "id": "publication-freshness-undetected",
+      "note": "Drift signal is named (layer 28) but has no implementation; stale publications cannot yet be flagged.",
+      "severity": "medium"
+    },
+    {
+      "id": "visual-prompt-pipeline-absent",
+      "note": "Visual-prompt format is declarative only; no pipeline consumes it (intentional in this phase).",
+      "severity": "low"
+    },
+    {
+      "id": "reviewer-validation-surface-absent",
+      "note": "Reviewer validation step (manual-assembly flow step 4) has no console; depends on layer-24 carry-over.",
+      "severity": "high"
+    }
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

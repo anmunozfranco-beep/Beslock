@@ -1,0 +1,51 @@
+{
+  "commitments": [
+    "future web delivery surfaces will consume the structured-runtime format and apply governance-declared audience filters",
+    "future operational support portals will be reviewer-attributed surfaces over the same publications, with no parallel corpus",
+    "future contextual copilots will assemble responses via the manual-assembly flow (TASK 6); they may not bypass it",
+    "future runtime-assisted onboarding will be a delivery surface over onboarding-guide publications, not a new authoring path",
+    "future multimodal publications will subscribe visual-prompt outputs to the dual-review env (layer 25); generation remains out of scope here",
+    "future visual guidance ecosystems will be subordinate to VISUAL governance and to publication lineage",
+    "future support runtimes will consume support-knowledge-articles as their corpus surface"
+  ],
+  "generated_at": "2026-05-14T03:42:21Z",
+  "invariants": [
+    "no consumption surface authors content; all surfaces are read-only over published artifacts",
+    "no consumption surface bypasses lineage rendering",
+    "no consumption surface re-tiers content (candidate cannot appear as trusted via a delivery channel)",
+    "no consumption surface introduces a new audience without governance entry",
+    "no consumption surface auto-republishes stale publications"
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

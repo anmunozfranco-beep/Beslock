@@ -1,0 +1,80 @@
+{
+  "flow": [
+    {
+      "actor": "knowledge-core/1.0",
+      "produces": "selected source nodes per manifest",
+      "stage": "knowledge-core",
+      "step": 1
+    },
+    {
+      "actor": "assembly pipeline (TASK 2)",
+      "produces": "structured-runtime publication candidate",
+      "stage": "contextual-assembly",
+      "step": 2
+    },
+    {
+      "actor": "renderer per format (TASK 4)",
+      "produces": "format-specific outputs (markdown, web, pdf-ready, support-article, visual-prompt)",
+      "stage": "publication-rendering",
+      "step": 3
+    },
+    {
+      "actor": "reviewer-of-scope (layer 23)",
+      "produces": "validation decision + attribution",
+      "stage": "reviewer-validation",
+      "step": 4
+    },
+    {
+      "actor": "promotion workflow",
+      "produces": "versioned publication artifact",
+      "stage": "publication-promotion",
+      "step": 5
+    },
+    {
+      "actor": "RUNTIME_IMPLEMENTATION",
+      "produces": "assembled response with embedded provenance + confidence",
+      "stage": "runtime-consumable-output",
+      "step": 6
+    }
+  ],
+  "generated_at": "2026-05-14T03:42:21Z",
+  "rules": [
+    "no step in this flow may be skipped",
+    "no automation compresses steps 4 + 5 (reviewer judgment + promotion)",
+    "publication promotion is a distinct act from candidate promotion (layer 23)",
+    "runtime-consumable outputs MUST cite the publication version they were derived from",
+    "first publication of any new manual is observation-only against pilots (layer 28) before broad delivery"
+  ],
+  "schema": "publication-and-delivery-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION",
+    "OPERATIONAL_PILOT"
+  ]
+}

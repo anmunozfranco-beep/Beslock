@@ -1,0 +1,49 @@
+{
+  "commitments": [
+    "long-term telemetry retention will be governance-declared with explicit retention windows",
+    "reviewer ecosystem learning will be observable via aggregate workload + decision-quality metrics",
+    "runtime hardening will proceed via candidate authoring + reviewer promotion only",
+    "operational maturity will be reassessed at declared cadence, not continuously",
+    "deployment-readiness observation will require explicit promotion of telemetry from pilot env to staging env (layer 25)",
+    "supervised production pilots remain bounded to the dual-review binding (layers 23 + 25) and to receipts (layer 24)"
+  ],
+  "generated_at": "2026-05-14T03:32:55Z",
+  "invariants": [
+    "no telemetry stream becomes a control loop without governance entry",
+    "no operational learning bypasses the candidate → review → promotion sequence",
+    "no pilot promotes itself to production without explicit reviewer-of-scope authorization",
+    "no observed friction silently rewrites doctrine",
+    "no reviewer pain-point shortcut compresses the human-judgment band"
+  ],
+  "schema": "operational-pilot-governance/1.0",
+  "subordinate_to": [
+    "knowledge-core",
+    "VISUAL",
+    "KNOWLEDGE_CENTER",
+    "SEMANTIC",
+    "EXPERIENCE",
+    "LIFECYCLE",
+    "VALIDATION",
+    "ACCESS_AND_CONSUMPTION",
+    "COMPOSITION",
+    "EXECUTION",
+    "ADAPTIVE_OPERATIONAL",
+    "DECISION_INTELLIGENCE",
+    "REASONING",
+    "CONTINUITY",
+    "RUNTIME",
+    "RUNTIME_ORCHESTRATION",
+    "ECOSYSTEM_INTEROPERABILITY",
+    "REALIZATION_AND_DEPLOYMENT",
+    "OPERATIONAL_PROOF",
+    "PROTOTYPE_RUNTIME",
+    "RUNTIME_IMPLEMENTATION",
+    "RUNTIME_HARDENING",
+    "KNOWLEDGE_LIFECYCLE",
+    "KNOWLEDGE_OPERATIONS",
+    "HUMAN_OPERATIONS",
+    "ENVIRONMENT_AND_INTEGRATION",
+    "REFERENCE_STACK",
+    "ECOSYSTEM_NORMALIZATION"
+  ]
+}

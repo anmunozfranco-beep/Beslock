@@ -1,0 +1,9 @@
+{
+  "artifact": "wp-content/themes/beslock-custom/User manuals/ecosystem-normalization/runtime-consistency/",
+  "consistent_count": 6,
+  "findings_count": 10,
+  "gap_count": 4,
+  "kind": "runtime-consistency-summary",
+  "schema": "ecosystem-normalization-governance/1.0",
+  "test_suite_status": "19/19 passing (runtime untouched)"
+}
