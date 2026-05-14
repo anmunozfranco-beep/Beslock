@@ -1,0 +1,34 @@
+{
+  "rule_family": "visual-support",
+  "rules": [
+    {
+      "id": "VS-1",
+      "text": "detection_id required and unique"
+    },
+    {
+      "id": "VS-2",
+      "text": "synthesis_id must resolve to an existing manual synthesis draft"
+    },
+    {
+      "id": "VS-3",
+      "text": "confidence must be one of ['low', 'medium', 'high']"
+    },
+    {
+      "id": "VS-4",
+      "text": "severity must be one of ['informational', 'recommended', 'required', 'blocking']"
+    },
+    {
+      "id": "VS-5",
+      "text": "rationale required and must be non-empty"
+    },
+    {
+      "id": "VS-6",
+      "text": "this layer DETECTS only — it MUST NOT generate images"
+    },
+    {
+      "id": "VS-7",
+      "text": "affected_step_refs must be a list referencing synthesis steps"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

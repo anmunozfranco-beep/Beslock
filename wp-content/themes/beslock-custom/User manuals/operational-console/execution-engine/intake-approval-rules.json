@@ -1,0 +1,30 @@
+{
+  "rule_family": "intake-approval",
+  "rules": [
+    {
+      "id": "IAP-1",
+      "text": "approval_id required and unique"
+    },
+    {
+      "id": "IAP-2",
+      "text": "analysis_id (or latest revision) must resolve"
+    },
+    {
+      "id": "IAP-3",
+      "text": "decision must be one of ['approve', 'reject']"
+    },
+    {
+      "id": "IAP-4",
+      "text": "reject decisions require non-empty cited_rule_ids"
+    },
+    {
+      "id": "IAP-5",
+      "text": "approve emits refresh-eligibility marker; reject does not"
+    },
+    {
+      "id": "IAP-6",
+      "text": "approval is reviewer-attributed and append-only"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

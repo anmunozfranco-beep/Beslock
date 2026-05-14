@@ -1,0 +1,26 @@
+{
+  "rule_family": "runtime-refresh",
+  "rules": [
+    {
+      "id": "RR-1",
+      "text": "refresh_id required and unique"
+    },
+    {
+      "id": "RR-2",
+      "text": "approval_id must resolve to an approved intake"
+    },
+    {
+      "id": "RR-3",
+      "text": "refresh records are pointers — they NEVER mutate upstream extraction/semantic/packaging trees"
+    },
+    {
+      "id": "RR-4",
+      "text": "refresh propagation is deterministic and reuses existing governance (no new orchestration)"
+    },
+    {
+      "id": "RR-5",
+      "text": "refresh records are append-only and reviewer-attributed"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

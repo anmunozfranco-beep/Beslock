@@ -1,0 +1,34 @@
+{
+  "rule_family": "prompt-package",
+  "rules": [
+    {
+      "id": "PP-1",
+      "text": "package_id required and unique"
+    },
+    {
+      "id": "PP-2",
+      "text": "support_need_id must resolve to a visual-support-need"
+    },
+    {
+      "id": "PP-3",
+      "text": "prompt_text required (deterministic, reviewer-editable)"
+    },
+    {
+      "id": "PP-4",
+      "text": "grounding_refs must be a list (may reference Phase 49 grounding artifacts)"
+    },
+    {
+      "id": "PP-5",
+      "text": "visual_role required"
+    },
+    {
+      "id": "PP-6",
+      "text": "prohibited_inaccuracies must be a list"
+    },
+    {
+      "id": "PP-7",
+      "text": "this layer GENERATES PROMPT PACKAGES only — it MUST NOT invoke image-generation pipelines"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}

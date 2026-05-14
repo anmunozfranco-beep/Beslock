@@ -1,0 +1,30 @@
+{
+  "rule_family": "intake-revision",
+  "rules": [
+    {
+      "id": "IR-1",
+      "text": "revision_id required and unique"
+    },
+    {
+      "id": "IR-2",
+      "text": "prior_analysis_id required and must resolve"
+    },
+    {
+      "id": "IR-3",
+      "text": "revision is append-only — never mutates prior analysis"
+    },
+    {
+      "id": "IR-4",
+      "text": "revision_number is monotonically increasing per evidence_id"
+    },
+    {
+      "id": "IR-5",
+      "text": "reviewer_rationale required"
+    },
+    {
+      "id": "IR-6",
+      "text": "revision recomputes analysis_sha256 deterministically"
+    }
+  ],
+  "schema": "unified-operational-manual-runtime-closure/1.0"
+}
