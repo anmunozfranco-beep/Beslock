@@ -1,0 +1,87 @@
+{
+  "constitutional_layer_index": 46,
+  "edges": [
+    [
+      "draft",
+      "review-required"
+    ],
+    [
+      "draft",
+      "deprecated"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "draft"
+    ],
+    [
+      "review-required",
+      "deprecated"
+    ],
+    [
+      "reviewer-approved",
+      "export-ready"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "reviewer-approved",
+      "superseded"
+    ],
+    [
+      "export-ready",
+      "reviewer-approved"
+    ],
+    [
+      "export-ready",
+      "superseded"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "PXL-1",
+      "rule": "reviewer attribution required on every lifecycle transition."
+    },
+    {
+      "id": "PXL-2",
+      "rule": "transitions are append-only; declared from_state MUST equal actual replayed state."
+    },
+    {
+      "id": "PXL-3",
+      "rule": "terminal state (deprecated) is immutable."
+    },
+    {
+      "id": "PXL-4",
+      "rule": "reviewer-approved -> superseded MUST cite successor_package_id."
+    },
+    {
+      "id": "PXL-5",
+      "rule": "autonomous lifecycle promotion is FORBIDDEN."
+    },
+    {
+      "id": "PXL-6",
+      "rule": "reviewer-approved -> export-ready MUST require zero blocking integrity findings AND a successful packaging-replay."
+    }
+  ],
+  "schema": "packaging-lifecycle-rules/1.0",
+  "states": [
+    "deprecated",
+    "draft",
+    "export-ready",
+    "review-required",
+    "reviewer-approved",
+    "superseded"
+  ],
+  "terminal_states": [
+    "deprecated"
+  ]
+}

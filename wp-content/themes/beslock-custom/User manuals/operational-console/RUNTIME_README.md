@@ -208,3 +208,49 @@ The semantic-extraction-runtime tree is isolated from:
 - knowledge-core, governance, runtime-implementation, runtime-manifests payloads, uploads.
 
 Nothing in this surface uses embeddings, vector databases, probabilistic semantic matching, autonomous LLM reasoning, cloud APIs, SaaS, telemetry, watchers, daemons, or background workers.
+
+
+## phase 53 — governed manual semantic packaging & consumer-ready export contracts
+
+Layer 46. Subordinate to layer 45 (governed-semantic-evidence-analysis-and-multimodal-extraction-governance).
+
+The Knowledge OS packages SEMANTIC manual knowledge ONLY. Presentation, CSS,
+breakpoints, layouts, typography, responsive behavior, mobile rendering, UI
+frameworks, and visual page composition are OUT OF SCOPE and FORBIDDEN at this
+layer. Consumer systems (WordPress, WooCommerce, React frontends, PDF generators,
+documentation renderers) render UI; the runtime emits only presentation-neutral,
+renderer-agnostic, lineage-preserving, trust-aware semantic payloads.
+
+Mutation is performed exclusively by `tools/governed_manual_semantic_packaging_executor.py --confirm`.
+Subcommands (`--kind`):
+
+- `manual-package` — record a reviewer-authored manual package manifest (semantic_structure, lineage refs, continuity_status, package_sha256).
+- `semantic-section` — record a typed semantic section (one of SECTION_KINDS) with extraction/grounding/evidence lineage and trust composition.
+- `export-contract` — register a presentation-neutral export contract (raw-html-export, structured-json-export, semantic-markdown-export) bound to a package.
+- `export-render` — produce the deterministic export payload defined by a contract; payload sha256 is recorded for replay.
+- `packaging-continuity` — record a continuity scan over a package (procedural, warning, grounding, troubleshooting, duplicate-id, orphan-section).
+- `packaging-lineage` — record a deterministic lineage replay with sha256 verification of every linked artifact.
+- `packaging-replay` — record a full package replay event verifying semantic structure, package_sha256, continuity, and lineage.
+- `packaging-lifecycle-transition` — advance a package through draft → review-required → reviewer-approved → export-ready → {superseded → deprecated}.
+- `packaging-integrity` — record a reviewer-led integrity scan (missing lineage, unresolved grounding, orphan procedures, duplicate section ids, broken continuity, unresolved evidence, invalid contracts, hidden mutation).
+- `reviewer-packaging-override` — record a reviewer-attributed override of any packaging artifact (rejection requires cited_rule_ids).
+
+Every command:
+- requires reviewer attribution,
+- is fail-closed on missing lineage / unresolved grounding / orphan sections / duplicate section ids / broken continuity chains / unresolved evidence refs / invalid export contracts / forbidden overwrite paths / hidden semantic mutation,
+- appends to one or more append-only event stores under `operational-console/runtime-manifests/`,
+- writes only into `operational-console/manual-semantic-packaging-runtime/` subtrees.
+
+The manual-semantic-packaging-runtime tree is isolated from:
+- the live publication tree,
+- the layer-45 semantic-extraction-runtime tree,
+- the layer-44 publication-composition-runtime tree,
+- the layer-43 visual-generation-runtime tree,
+- the layer-42 visual-publication-builds tree,
+- frontend/theme systems and WordPress runtime,
+- OEM source assets,
+- knowledge-core, governance, runtime-implementation, runtime-manifests payloads, uploads.
+
+Nothing in this surface uses CSS, layouts, breakpoints, typography, responsive
+logic, UI frameworks, embeddings, vector databases, autonomous LLM reasoning,
+cloud APIs, SaaS, telemetry, watchers, daemons, or background workers.

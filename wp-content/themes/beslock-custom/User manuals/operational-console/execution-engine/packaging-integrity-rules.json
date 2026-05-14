@@ -1,0 +1,42 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "PI-1",
+      "rule": "missing lineage (empty extraction_ids and synthesis_ids and grounding_ids) BLOCKS approval."
+    },
+    {
+      "id": "PI-2",
+      "rule": "unresolved grounding references BLOCK approval."
+    },
+    {
+      "id": "PI-3",
+      "rule": "orphan semantic procedures (cited but not registered, or registered without lineage) BLOCK approval."
+    },
+    {
+      "id": "PI-4",
+      "rule": "duplicate section_id within a manual is fail-closed."
+    },
+    {
+      "id": "PI-5",
+      "rule": "broken continuity chains BLOCK approval."
+    },
+    {
+      "id": "PI-6",
+      "rule": "unresolved evidence_refs BLOCK approval."
+    },
+    {
+      "id": "PI-7",
+      "rule": "invalid export contracts (non-deterministic, presentation-bearing, missing package_id) BLOCK approval."
+    },
+    {
+      "id": "PI-8",
+      "rule": "forbidden overwrite paths are fail-closed."
+    },
+    {
+      "id": "PI-9",
+      "rule": "hidden semantic mutation (sha256 mismatch on replay) is fail-closed."
+    }
+  ],
+  "schema": "packaging-integrity-rules/1.0"
+}

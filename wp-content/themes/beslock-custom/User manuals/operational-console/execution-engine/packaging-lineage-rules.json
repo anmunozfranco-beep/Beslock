@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "PL-1",
+      "rule": "every package MUST trace to: extraction artifacts, synthesis manifests, grounding manifests, evidence manifests, OCR lineage, multimodal continuity, reviewer approvals."
+    },
+    {
+      "id": "PL-2",
+      "rule": "lineage is append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "PL-3",
+      "rule": "broken pointers (any cited id that does not resolve) are fail-closed."
+    },
+    {
+      "id": "PL-4",
+      "rule": "lineage MUST cite manifest sha256 of every linked artifact for replay verification."
+    },
+    {
+      "id": "PL-5",
+      "rule": "supersedence MUST cite predecessor package_id and successor package_id; silent replacement is FORBIDDEN."
+    }
+  ],
+  "schema": "packaging-lineage-rules/1.0"
+}

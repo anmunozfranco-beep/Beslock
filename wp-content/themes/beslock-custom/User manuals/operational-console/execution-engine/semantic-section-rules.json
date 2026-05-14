@@ -1,0 +1,38 @@
+{
+  "constitutional_layer_index": 46,
+  "rules": [
+    {
+      "id": "SS-1",
+      "rule": "every section MUST cite section_id, manual_id, section_kind ∈ SECTION_KINDS, reviewer, and lineage references (extraction_ids, grounding_ids, evidence_refs)."
+    },
+    {
+      "id": "SS-2",
+      "rule": "section_kind MUST be one of: semantic-section, semantic-procedure, semantic-warning-group, semantic-specification-group, semantic-troubleshooting-group, semantic-support-group."
+    },
+    {
+      "id": "SS-3",
+      "rule": "sections MUST preserve unresolved_states (list) and trust_composition counts {reviewer-approved, review-required, unresolved}."
+    },
+    {
+      "id": "SS-4",
+      "rule": "orphan sections (citing extraction_ids or grounding_ids that do not resolve) BLOCK approval (fail-closed PI-3)."
+    },
+    {
+      "id": "SS-5",
+      "rule": "duplicate section_id within a manual_id is FORBIDDEN (fail-closed PI-4)."
+    },
+    {
+      "id": "SS-6",
+      "rule": "sections MUST NOT contain CSS, breakpoints, layout instructions, typography, or rendering hints."
+    },
+    {
+      "id": "SS-7",
+      "rule": "sections are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "SS-8",
+      "rule": "semantic-procedure sections MUST cite contiguous step_index sequences starting at 1; gaps are fail-closed (PC-2)."
+    }
+  ],
+  "schema": "semantic-section-rules/1.0"
+}
