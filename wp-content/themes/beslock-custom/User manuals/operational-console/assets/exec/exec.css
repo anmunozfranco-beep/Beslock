@@ -140,3 +140,20 @@
 .oc-pc-orphan { background: #fee; padding: 0.3rem; border-left: 4px solid #c00; }
 .oc-pc-parity-ok { color: #060; }
 .oc-pc-parity-broken { color: #c00; font-weight: bold; }
+
+/* phase 52 — semantic extraction governance additions */
+.oc-se-state { display: inline-block; padding: 0.1rem 0.4rem; border-radius: 0.2rem; border: 1px solid #999; font-size: 0.8rem; }
+.oc-se-state[data-state='unresolved'] { background: #f4f4f4; color: #555; }
+.oc-se-state[data-state='review-required'] { background: #ffe; color: #b58900; }
+.oc-se-state[data-state='reviewer-approved'] { background: #cfc; color: #060; font-weight: bold; }
+.oc-se-state[data-state='superseded'] { background: #ddd; color: #555; }
+.oc-se-state[data-state='deprecated'] { background: #ccc; color: #444; }
+.oc-se-candidate { border: 1px solid #ccc; padding: 0.4rem; margin: 0.3rem 0; }
+.oc-se-candidate[data-kind='warning-candidate'] { border-color: #c00; background: #fee; }
+.oc-se-candidate[data-kind='procedural-step-candidate'] { background: #efe; }
+.oc-se-candidate[data-kind='troubleshooting-candidate'] { background: #fef; }
+.oc-se-candidate[data-kind='specification-field-candidate'] { background: #eef; }
+.oc-se-orphan { background: #fee; padding: 0.3rem; border-left: 4px solid #c00; }
+.oc-se-ocr { font-family: monospace; font-size: 0.85rem; background: #f7f7f7; padding: 0.3rem; }
+.oc-se-replay-ok { color: #060; }
+.oc-se-replay-mismatch { color: #c00; font-weight: bold; }

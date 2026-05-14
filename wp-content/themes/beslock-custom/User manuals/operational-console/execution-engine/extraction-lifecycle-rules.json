@@ -1,0 +1,70 @@
+{
+  "constitutional_layer_index": 45,
+  "edges": [
+    [
+      "unresolved",
+      "review-required"
+    ],
+    [
+      "unresolved",
+      "deprecated"
+    ],
+    [
+      "review-required",
+      "reviewer-approved"
+    ],
+    [
+      "review-required",
+      "unresolved"
+    ],
+    [
+      "review-required",
+      "deprecated"
+    ],
+    [
+      "reviewer-approved",
+      "review-required"
+    ],
+    [
+      "reviewer-approved",
+      "superseded"
+    ],
+    [
+      "superseded",
+      "deprecated"
+    ]
+  ],
+  "rules": [
+    {
+      "id": "XL-1",
+      "rule": "reviewer attribution required on every state transition."
+    },
+    {
+      "id": "XL-2",
+      "rule": "transitions are append-only; declared from_state MUST equal actual replayed state."
+    },
+    {
+      "id": "XL-3",
+      "rule": "terminal state (deprecated) is immutable."
+    },
+    {
+      "id": "XL-4",
+      "rule": "reviewer-approved -> superseded MUST cite successor_candidate_id."
+    },
+    {
+      "id": "XL-5",
+      "rule": "autonomous lifecycle promotion is FORBIDDEN."
+    }
+  ],
+  "schema": "extraction-lifecycle-rules/1.0",
+  "states": [
+    "deprecated",
+    "review-required",
+    "reviewer-approved",
+    "superseded",
+    "unresolved"
+  ],
+  "terminal_states": [
+    "deprecated"
+  ]
+}

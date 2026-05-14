@@ -1,0 +1,34 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "OF-1",
+      "rule": "every OCR fragment MUST cite source_evidence_id, decomposition_id, region or page reference, and reviewer attribution."
+    },
+    {
+      "id": "OF-2",
+      "rule": "OCR fragments MUST cite verbatim_sha256 of the recorded text; silent normalization is FORBIDDEN."
+    },
+    {
+      "id": "OF-3",
+      "rule": "OCR fragments are append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "OF-4",
+      "rule": "OCR corrections MUST cite prior_fragment_id; corrections without lineage are FORBIDDEN."
+    },
+    {
+      "id": "OF-5",
+      "rule": "OCR corrections MUST be reviewer-attributed; autonomous OCR cleanup is FORBIDDEN."
+    },
+    {
+      "id": "OF-6",
+      "rule": "OCR language detection / translation / normalization MUST be reviewer-declared; silent translation is FORBIDDEN."
+    },
+    {
+      "id": "OF-7",
+      "rule": "OCR fragments cited by a candidate MUST exist; orphan OCR references BLOCK candidate approval."
+    }
+  ],
+  "schema": "ocr-rules/1.0"
+}

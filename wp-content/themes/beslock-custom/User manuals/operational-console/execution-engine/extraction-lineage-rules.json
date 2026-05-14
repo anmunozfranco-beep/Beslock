@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "EL-1",
+      "rule": "every extracted candidate MUST trace to: source_evidence_id, decomposition_id, extraction_rule_id, extraction_runtime_id, reviewer attribution, and continuity_chain (if temporal)."
+    },
+    {
+      "id": "EL-2",
+      "rule": "lineage is append-only; in-place mutation is FORBIDDEN."
+    },
+    {
+      "id": "EL-3",
+      "rule": "broken lineage chains (any pointer that does not resolve) are fail-closed."
+    },
+    {
+      "id": "EL-4",
+      "rule": "lineage events MUST cite the manifest sha256 of every linked artifact for replay verification."
+    },
+    {
+      "id": "EL-5",
+      "rule": "supersedence MUST cite predecessor candidate_id and successor candidate_id; silent replacement is FORBIDDEN."
+    }
+  ],
+  "schema": "extraction-lineage-rules/1.0"
+}

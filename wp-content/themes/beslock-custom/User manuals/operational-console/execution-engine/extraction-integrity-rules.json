@@ -1,0 +1,42 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "XI-1",
+      "rule": "orphan extraction candidates (citing missing decomposition or evidence) BLOCK approval."
+    },
+    {
+      "id": "XI-2",
+      "rule": "broken lineage chains BLOCK approval."
+    },
+    {
+      "id": "XI-3",
+      "rule": "invalid OCR references BLOCK approval."
+    },
+    {
+      "id": "XI-4",
+      "rule": "missing source evidence BLOCKS approval."
+    },
+    {
+      "id": "XI-5",
+      "rule": "temporal continuity gaps BLOCK procedural-sequence promotion."
+    },
+    {
+      "id": "XI-6",
+      "rule": "illegal candidate states (state outside LIFECYCLE_STATES) are fail-closed."
+    },
+    {
+      "id": "XI-7",
+      "rule": "duplicate extraction IDs are fail-closed."
+    },
+    {
+      "id": "XI-8",
+      "rule": "forbidden overwrite paths are fail-closed."
+    },
+    {
+      "id": "XI-9",
+      "rule": "hidden extraction mutation (sha256 mismatch on replay) is fail-closed."
+    }
+  ],
+  "schema": "extraction-integrity-rules/1.0"
+}

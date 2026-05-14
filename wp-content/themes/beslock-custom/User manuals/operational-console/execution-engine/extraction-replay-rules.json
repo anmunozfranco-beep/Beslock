@@ -1,0 +1,26 @@
+{
+  "constitutional_layer_index": 45,
+  "rules": [
+    {
+      "id": "ER-1",
+      "rule": "replay MUST reconstruct the candidate's lineage chain end-to-end; any unresolved pointer is fail-closed."
+    },
+    {
+      "id": "ER-2",
+      "rule": "replay MUST verify manifest sha256 of every linked artifact; mismatch is fail-closed."
+    },
+    {
+      "id": "ER-3",
+      "rule": "replay MUST be deterministic across invocations; non-determinism is fail-closed."
+    },
+    {
+      "id": "ER-4",
+      "rule": "replay MUST NEVER mutate live publication trees, prior-layer runtime trees, or source evidence."
+    },
+    {
+      "id": "ER-5",
+      "rule": "replay events are append-only and reviewer-attributed."
+    }
+  ],
+  "schema": "extraction-replay-rules/1.0"
+}
