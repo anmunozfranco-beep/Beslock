@@ -1,0 +1,105 @@
+{
+  "append_only_publication_lineage": true,
+  "autonomous_synthesis": false,
+  "constitutional_layer_index": 41,
+  "daemon": false,
+  "deterministic": true,
+  "fail_closed_on_unresolved_conflict": true,
+  "generated_at_iso": "2026-05-14T14:41:51Z",
+  "is_cloud": false,
+  "is_saas": false,
+  "kind": "synthesis-rules",
+  "no_auto_publication": true,
+  "no_silent_evidence_merge": true,
+  "preserves_evidence_lineage": true,
+  "preserves_source_attribution": true,
+  "preserves_trust_tiers": true,
+  "probabilistic_inference": false,
+  "publication_rollback_via_supersedence": true,
+  "publishes_only_into_publication_builds": true,
+  "reviewer_authoritative": true,
+  "rules": [
+    {
+      "id": "SYN-1",
+      "rule": "Synthesis MUST cite every contributing evidence_id."
+    },
+    {
+      "id": "SYN-2",
+      "rule": "Synthesis MUST preserve trust tier of each evidence fragment."
+    },
+    {
+      "id": "SYN-3",
+      "rule": "Synthesis MUST emit a reasoning_chain explaining inclusion of each fragment."
+    },
+    {
+      "id": "SYN-4",
+      "rule": "No fragment without explicit lineage may enter synthesis."
+    },
+    {
+      "id": "SYN-5",
+      "rule": "No probabilistic, ML or LLM-derived inference is permitted in synthesis."
+    },
+    {
+      "id": "SYN-6",
+      "rule": "Unresolved conflicts BLOCK synthesis advancement."
+    },
+    {
+      "id": "SYN-7",
+      "rule": "Synthesis manifests are append-only; revision yields a new manifest version."
+    },
+    {
+      "id": "SYN-8",
+      "rule": "Synthesis MUST declare the contributing manifests and reviewer attribution."
+    }
+  ],
+  "scheduled_trigger": false,
+  "schema": "governed-knowledge-synthesis/1.0",
+  "subordinate_to": [
+    "domain-evidence-extraction",
+    "ontology-mapping",
+    "semantic-bindings",
+    "knowledge-core",
+    "evidence-trust-tiers",
+    "domain-routing",
+    "lineage-graph",
+    "operational-classification",
+    "operator-experience-shell",
+    "review-state-machine",
+    "draft-and-publication-staging",
+    "intake-and-routing-doctrines",
+    "console-rendering-policies",
+    "operator-history-substrate",
+    "envelope-versioning",
+    "publication-source-of-truth",
+    "publication-trust-projection",
+    "publication-pre-publication-gates",
+    "publication-rollback-doctrine",
+    "publication-rendering-doctrine",
+    "publication-lifecycle-doctrine",
+    "publication-deletion-doctrine",
+    "publication-archival-doctrine",
+    "publication-promotion-doctrine",
+    "publication-naming-doctrine",
+    "publication-supersedence-doctrine",
+    "publication-traceability-doctrine",
+    "publication-conflict-doctrine",
+    "publication-rendering-language-doctrine",
+    "publication-publishing-locality-doctrine",
+    "publication-publishing-stamping-doctrine",
+    "publication-publishing-evidence-doctrine",
+    "publication-publishing-explanation-doctrine",
+    "publication-publishing-coherence-doctrine",
+    "publication-publishing-stability-doctrine",
+    "publication-publishing-determinism-doctrine",
+    "operator-cli-execution-doctrine",
+    "executable-operational-bindings-governance",
+    "governed-filesystem-orchestration-governance",
+    "governed-transactional-execution-and-recovery-governance"
+  ],
+  "summary": "Deterministic rules for assembling evidence into synthesis manifests.",
+  "uses_embeddings": false,
+  "uses_llm": false,
+  "uses_ml": false,
+  "watcher": false,
+  "writes_to_live_publication_tree": false
+}
