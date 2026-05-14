@@ -1,0 +1,30 @@
+{
+  "rule_family": "export-stability-guarantee",
+  "rules": [
+    {
+      "id": "ES-1",
+      "rule": "guarantee_id required and unique"
+    },
+    {
+      "id": "ES-2",
+      "rule": "stabilization_id MUST resolve to an existing Phase 55 export stabilization"
+    },
+    {
+      "id": "ES-3",
+      "rule": "deterministic_invariants MUST include: section_ordering_sha256, canonical_id_map_sha256, export_payload_sha256"
+    },
+    {
+      "id": "ES-4",
+      "rule": "guarantee_state begins 'reaffirmed'; supersession via new guarantee_id with prior_guarantee_id pointer"
+    },
+    {
+      "id": "ES-5",
+      "rule": "subsequent guarantees on same stabilization MUST observe identical invariants OR fail-closed"
+    },
+    {
+      "id": "ES-6",
+      "rule": "presentation keys forbidden recursively"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

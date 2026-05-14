@@ -1,0 +1,34 @@
+{
+  "rule_family": "incremental-refresh",
+  "rules": [
+    {
+      "id": "IR-1",
+      "rule": "refresh_id required and unique"
+    },
+    {
+      "id": "IR-2",
+      "rule": "trigger_kind enum required"
+    },
+    {
+      "id": "IR-3",
+      "rule": "trigger_ref MUST resolve into the appropriate upstream store"
+    },
+    {
+      "id": "IR-4",
+      "rule": "affected_set MUST enumerate {kind, id} for entities/procedures/exports actually touched"
+    },
+    {
+      "id": "IR-5",
+      "rule": "unaffected_stable_set MUST explicitly enumerate canonical IDs preserved unchanged (transaction-safety)"
+    },
+    {
+      "id": "IR-6",
+      "rule": "POINTER-only; upstream extraction/packaging/closure/convergence trees NEVER mutated"
+    },
+    {
+      "id": "IR-7",
+      "rule": "append-only; replayable"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

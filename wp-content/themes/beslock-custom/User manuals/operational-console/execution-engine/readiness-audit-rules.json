@@ -1,0 +1,34 @@
+{
+  "rule_family": "readiness-audit",
+  "rules": [
+    {
+      "id": "RA-1",
+      "rule": "audit_id required and unique"
+    },
+    {
+      "id": "RA-2",
+      "rule": "package_id MUST resolve and MUST be in 'export-ready' lifecycle state"
+    },
+    {
+      "id": "RA-3",
+      "rule": "audit MUST inspect: unresolved_conflicts, missing_visual_support, broken_grounding, unstable_exports, unresolved_multilingual_mappings, missing_warnings, incomplete_troubleshooting, orphan_semantic_entities, export_drift, unresolved_reviewer_states"
+    },
+    {
+      "id": "RA-4",
+      "rule": "status enum: ready | not-ready"
+    },
+    {
+      "id": "RA-5",
+      "rule": "findings MUST list every check + outcome deterministically"
+    },
+    {
+      "id": "RA-6",
+      "rule": "audit is informational; reviewer remains authoritative — NO autonomous publication"
+    },
+    {
+      "id": "RA-7",
+      "rule": "audit_sha256 deterministic over canonical JSON"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}

@@ -1,0 +1,34 @@
+{
+  "rule_family": "evidence-robustness",
+  "rules": [
+    {
+      "id": "ER-1",
+      "rule": "record_id and source_evidence_id required"
+    },
+    {
+      "id": "ER-2",
+      "rule": "robustness_kind enum required"
+    },
+    {
+      "id": "ER-3",
+      "rule": "severity enum: informational | minor | major | blocking"
+    },
+    {
+      "id": "ER-4",
+      "rule": "lineage_pointers MUST preserve evidence_refs / grounding_refs / fingerprint_ids if present"
+    },
+    {
+      "id": "ER-5",
+      "rule": "no silent normalization — raw text / raw payload pointers preserved"
+    },
+    {
+      "id": "ER-6",
+      "rule": "reviewer attribution mandatory; append-only"
+    },
+    {
+      "id": "ER-7",
+      "rule": "no ML cleanup; deterministic markers only"
+    }
+  ],
+  "schema": "final-operational-closure-production-readiness/1.0"
+}
