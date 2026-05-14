@@ -712,3 +712,20 @@
   background: transparent;
   margin: 0;
 }
+
+/* ---- Phase 62.3: parallel sensing channel headers ---- */
+/* The reviewer must perceive deterministic and AI sensing as TWO independent
+   sensing systems observing the same evidence in parallel \u2014 not as a runtime
+   followed by AI decoration. Distinct colors anchor that perception. */
+.oc-rwx__stream-line--runtime {
+  color: #9cd2ff;
+  border-left: 2px solid #2a4a6a;
+  padding-left: 8px !important;
+  font-weight: 500;
+}
+.oc-rwx__stream-line--semantic {
+  color: #8be9a3;
+  border-left: 2px solid #2f6f4f;
+  padding-left: 8px !important;
+  font-weight: 500;
+}

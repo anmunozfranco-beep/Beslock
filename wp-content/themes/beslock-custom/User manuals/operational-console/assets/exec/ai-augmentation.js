@@ -1,9 +1,26 @@
-/* OC.AIAugmentation — Phase 62 / 62.1 / 62.2
+/* OC.AIAugmentation — Phase 62 / 62.1 / 62.2 / 62.3
    Advisory-only, non-canonical, reviewer-triggered.
 
    62.0 doctrinal scaffold.
    62.1 operational density (cadence, tiers, ASCII tables).
    62.2 NON-COMPETITIVE semantic convergence domains.
+   62.3 INDEPENDENT SEMANTIC SENSING.
+
+   DOCTRINAL CORRECTION (62.3)
+   ---------------------------
+   This module is NOT a post-deterministic decorator. It is an independent
+   semantic sensing layer that observes the SAME shared evidence intake
+   (file + metadata + topology) that the deterministic runtime observes.
+   The two sensing systems run in parallel and emit independently. AI
+   sensing MUST be capable of producing advisory emergence even when the
+   deterministic runtime extracts nothing (weak OCR, no explicit refs,
+   sparse structure). Reconciliation between deterministic facts and
+   advisory emergence is performed ONLY at reviewer convergence — never
+   automatically fused, never ranked against deterministic findings.
+
+   intake_dependency       = 'evidence-only'   (file + metadata + topology)
+   deterministic_dependency = 'none'           (AI never waits for runtime)
+   reconciliation_authority = 'reviewer-only'  (no automatic fusion)
 
    DOCTRINAL CORRECTION (62.2)
    ---------------------------
@@ -263,13 +280,17 @@
     const dur = ctx.ev && ctx.ev.kind === 'video' ? estimatedDurationSec(ctx.file) : 0;
 
     return {
-      schema: 'reviewer-ai-advisory/1.2',
+      schema: 'reviewer-ai-advisory/1.3',
       advisory_only: true,
       requires_reviewer_seal: true,
       non_authoritative: true,
       canonical_overwrite_authority: 'denied',
       ranking_model: 'none',
       semantic_model: 'parallel-convergence-domains',
+      independence_model: 'parallel-sensing',
+      intake_dependency: 'evidence-only',
+      deterministic_dependency: 'none',
+      reconciliation_authority: 'reviewer-only',
       persistence_target: 'runtime/ai-augmentation/',
       model_kind: MODEL_KIND,
       generated_at_iso: new Date().toISOString(),
@@ -315,6 +336,10 @@
         ['schema',                  advisory.schema],
         ['semantic_model',          advisory.semantic_model],
         ['ranking_model',           advisory.ranking_model],
+        ['independence_model',      advisory.independence_model],
+        ['intake_dependency',       advisory.intake_dependency],
+        ['deterministic_dependency', advisory.deterministic_dependency],
+        ['reconciliation_authority', advisory.reconciliation_authority],
         ['advisory_only',           String(advisory.advisory_only)],
         ['canonical_overwrite',     advisory.canonical_overwrite_authority],
         ['reviewer_seal_required',  String(advisory.requires_reviewer_seal)],
@@ -331,11 +356,15 @@
     function push(line, cls)       { plan.push({ delayMs: t, line: line, cls: cls }); }
     function pushTable(table, cls) { plan.push({ delayMs: t, table: table, cls: cls }); }
 
-    // ---- preamble: provenance block ----
-    push('[ai] ====== ADVISORY-ONLY AUGMENTATION (non-canonical) ======',
+    // ---- preamble: independent-sensing posture + provenance block ----
+    push('[ai] ====== INDEPENDENT SEMANTIC SENSING (advisory-only) ======',
       'oc-rwx__stream-line--ai-banner');
     t += 60;
-    push('[ai] augmentation channel active',                      'oc-rwx__stream-line--ai-meta'); t += 40;
+    push('[ai] semantic sensing initialized',                      'oc-rwx__stream-line--ai-meta'); t += 40;
+    push('[ai] independence model: parallel-sensing',              'oc-rwx__stream-line--ai-meta'); t += 40;
+    push('[ai] intake dependency: evidence-only · deterministic dependency: none',
+      'oc-rwx__stream-line--ai-meta'); t += 40;
+    push('[ai] reconciliation authority: reviewer-only',           'oc-rwx__stream-line--ai-meta'); t += 40;
     push('[ai] semantic model: parallel-convergence-domains',     'oc-rwx__stream-line--ai-meta'); t += 40;
     push('[ai] ranking model: none (domains coexist)',            'oc-rwx__stream-line--ai-meta'); t += 40;
     push('[ai] model kind: ' + advisory.model_kind,                'oc-rwx__stream-line--ai-meta'); t += 40;
@@ -383,11 +412,12 @@
     }
 
     // ---- closing banner ----
-    push('[ai] ' + advisory.emergence_count + ' parallel emergences across ' +
-         advisory.domain_count_active + ' active semantic domains \u00b7 no ranking applied',
+    push('[ai] independent semantic sensing complete · ' +
+         advisory.emergence_count + ' parallel emergences across ' +
+         advisory.domain_count_active + ' active semantic domains · no ranking applied',
       'oc-rwx__stream-line--ai-banner');
     t += 60;
-    push('[ai] advisory_only=true \u00b7 reviewer seal required \u00b7 canonical envelopes untouched',
+    push('[ai] advisory_only=true · reviewer-mediated reconciliation · canonical envelopes untouched',
       'oc-rwx__stream-line--ai-banner');
 
     return plan;

@@ -298,6 +298,7 @@
           ai_advisory_attached: !!opts.aiAdvisory,
           ai_advisory_model_kind: opts.aiAdvisory ? (opts.aiAdvisory.model_kind || null) : null,
           ai_advisory_semantic_model: opts.aiAdvisory ? (opts.aiAdvisory.semantic_model || null) : null,
+          ai_advisory_independence_model: opts.aiAdvisory ? (opts.aiAdvisory.independence_model || null) : null,
           ai_advisory_emergence_count: opts.aiAdvisory ? (opts.aiAdvisory.emergence_count || 0) : 0,
           ai_advisory_active_domain_count: opts.aiAdvisory ? (opts.aiAdvisory.domain_count_active || 0) : 0,
           written_paths: written.map(function (w) { return w.path; }),

@@ -395,19 +395,24 @@
         return new Date().toISOString().slice(11, 23);
       }
 
-      // ---- Phase 62 / 62.1: AI augmentation channel (advisory-only) ------
-      // Plays an OC.AIAugmentation stream plan back through the terminal
-      // with deterministic cadence so the reviewer perceives progressive
-      // semantic emergence rather than a single blob emission.
+      // ---- Phase 62 / 62.1 / 62.2 / 62.3: AI semantic sensing channel --
+      // INDEPENDENT semantic sensing layer. Runs in parallel with the
+      // deterministic runtime, fed from the SAME shared evidence intake.
+      // Never gated by deterministic success; never waits for stages;
+      // never decorates deterministic findings. Reconciliation is
+      // reviewer-only. Advisory persists separately under
+      // <product>/runtime/ai-augmentation/ at accept time.
       let aiPlaybackToken = 0;
-      function runAiAugmentationIfEnabled(wf) {
+      function runAiSemanticSensingIfEnabled() {
         const AI = window.OC && window.OC.AIAugmentation;
         const Runner = window.OC && window.OC.AnalysisRunner;
         if (!AI || !AI.isEnabled() || !Runner || !selectedFile) {
           pendingAiAdvisory = null;
           return;
         }
-        const ctx = Runner.ctxFor(selectedFile, wf.summary || {});
+        // AI consumes ONLY the shared evidence intake (file + metadata
+        // + topology). No dependency on deterministic summary/results.
+        const ctx = Runner.ctxFor(selectedFile, {});
         const advisory = AI.augment(ctx);
         pendingAiAdvisory = advisory;
         const plan = AI.buildStreamPlan(advisory);
@@ -440,7 +445,31 @@
         clearStream();
         elStreamProfile.textContent = 'profile: ' + planned.profile.kind + ' · ' + planned.profile.label;
         elStreamEta.textContent = 'ETA ≈ ' + (planned.total_ms / 1000).toFixed(1) + ' s · ' + planned.stages.length + ' stages';
-        appendStreamLine('[' + nowStamp() + '] runtime engaged — reviewer: ' + (committedReviewer() || elReviewer.value.trim()), 'oc-rwx__stream-line--meta');
+
+        // ---- Phase 62.3: shared evidence intake feeds parallel sensing -----
+        // Both the deterministic runtime and the (optional) AI semantic
+        // sensing layer observe the SAME evidence intake. The runtime
+        // narration declares this explicitly so the reviewer perceives
+        // multiple sensing systems running in parallel — not deterministic
+        // followed by AI decoration.
+        const reviewerLabel = (committedReviewer() || elReviewer.value.trim());
+        const intakeKind = (window.OC && OC.ReviewerFindings)
+          ? OC.ReviewerFindings.evidenceFor(selectedFile).kind
+          : 'generic-binary';
+        appendStreamLine('[' + nowStamp() + '] [runtime] evidence intake complete — ' +
+          selectedFile.name + ' · ' + intakeKind + ' · ' + selectedFile.size + ' bytes · reviewer: ' + reviewerLabel,
+          'oc-rwx__stream-line--runtime');
+        appendStreamLine('[' + nowStamp() + '] [semantic] deterministic sensing active',
+          'oc-rwx__stream-line--semantic');
+        const AI = window.OC && window.OC.AIAugmentation;
+        if (AI && AI.isEnabled()) {
+          appendStreamLine('[' + nowStamp() + '] [ai] semantic sensing active',
+            'oc-rwx__stream-line--ai');
+          // Launch independent AI sensing IN PARALLEL with deterministic
+          // sensing. Not gated on stage completion; not gated on summary;
+          // not gated on deterministic success.
+          runAiSemanticSensingIfEnabled();
+        }
 
         analysisCtl = Runner.run({
           file: { name: selectedFile.name, size: selectedFile.size, lastModified: selectedFile.lastModified },
@@ -470,9 +499,12 @@
               (wf.analyze_envelopes ? wf.analyze_envelopes.length : 0) +
               ' analyze · workflow ' + wf.workflow_id.slice(0, 18) + '…)',
               'oc-rwx__stream-line--complete');
-            appendStreamLine('[' + nowStamp() + '] [runtime] analysis completed successfully', 'oc-rwx__stream-line--complete');
-            // Phase 62: optional advisory-only augmentation, AFTER deterministic completion.
-            runAiAugmentationIfEnabled(wf);
+            appendStreamLine('[' + nowStamp() + '] [semantic] deterministic sensing complete',
+              'oc-rwx__stream-line--complete');
+            // Phase 62.3: AI sensing was launched in parallel at intake;
+            // it runs independently and is NOT re-triggered here. The two
+            // sensing layers complete on their own cadence. Reconciliation
+            // happens only at reviewer accept.
             refreshAll();
           },
           onError: function (err) {
@@ -599,11 +631,13 @@
           }
         }).then(function (result) {
           if (pendingAiAdvisory) {
-            appendStreamLine('[' + nowStamp() + '] [ai] writing advisory artifacts → runtime/ai-augmentation/',
+            appendStreamLine('[' + nowStamp() + '] [ai] reviewer-mediated reconciliation: advisory sealed alongside canonical envelopes',
               'oc-rwx__stream-line--ai-banner');
+            appendStreamLine('[' + nowStamp() + '] [ai] writing advisory artifacts → runtime/ai-augmentation/',
+              'oc-rwx__stream-line--ai-meta');
             appendStreamLine('[' + nowStamp() + '] [ai] append-only advisory commit complete',
               'oc-rwx__stream-line--ai-meta');
-            appendStreamLine('[' + nowStamp() + '] [ai] canonical manifests untouched · envelopes untouched',
+            appendStreamLine('[' + nowStamp() + '] [ai] independent semantic sensing · canonical manifests untouched · envelopes untouched',
               'oc-rwx__stream-line--ai-meta');
           }
           appendStreamLine('[' + nowStamp() + '] [runtime] accept committed (' +
