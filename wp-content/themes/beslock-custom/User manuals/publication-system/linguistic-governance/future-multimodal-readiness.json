@@ -1,0 +1,80 @@
+{
+  "schema": "linguistic-governance/1.0",
+  "layer": "future-multimodal-readiness",
+  "summary": "Linguistic preconditions for future visual / multimodal phases.",
+  "generated_at": "2026-05-14T05:13:16+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "mutates_knowledge_core": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-quality-governance/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "applied_at": "publication-rendering-time-only",
+  "out_of_scope": [
+    "autonomous rewriting",
+    "hallucinated editorialization",
+    "stylistic creativity",
+    "frontend styling",
+    "visual generation",
+    "image prompts",
+    "new cognition architecture"
+  ],
+  "policy_now": {
+    "visuals_generated": false,
+    "prompts_generated": false,
+    "comfyui_invoked": false,
+    "multimodal_pipelines_invoked": false
+  },
+  "subordination_invariant": "visual and multimodal systems remain subordinate to operational linguistic clarity.",
+  "future_integration_points": {
+    "supportive_visuals": "visual captions are rendered through the same terminology + warning pipelines as text.",
+    "hybrid_procedural_visuals": "step labels in any procedural diagram must use canonical operational verbs.",
+    "onboarding_copilots": "copilot prompts (when introduced) must consume canonical-lock-terms and forbidden-phrases.",
+    "runtime_guidance": "runtime-rendered guidance must apply the same publication-time linguistic transforms.",
+    "multimodal_publications": "multimodal payloads must record applied linguistic-governance schema version in their manifest."
+  },
+  "ordering_rule_for_future_phase": [
+    "do not introduce multimodal copy until linguistic detectors are wired and surfacing defects",
+    "do not introduce multimodal copy until terminology enforcer is wired into the renderer",
+    "do not introduce multimodal copy until warning language renderer is wired into the renderer"
+  ],
+  "explicit_non_goals_this_phase": [
+    "no prompt strings produced",
+    "no image bytes produced",
+    "no copilot deployed",
+    "no runtime guidance changed"
+  ]
+}

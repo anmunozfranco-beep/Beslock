@@ -1,0 +1,304 @@
+{
+  "schema": "linguistic-governance/1.0",
+  "layer": "terminology",
+  "summary": "Canonical Colombian operational terminology for smart locks.",
+  "generated_at": "2026-05-14T05:13:16+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "mutates_knowledge_core": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-quality-governance/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "applied_at": "publication-rendering-time-only",
+  "out_of_scope": [
+    "autonomous rewriting",
+    "hallucinated editorialization",
+    "stylistic creativity",
+    "frontend styling",
+    "visual generation",
+    "image prompts",
+    "new cognition architecture"
+  ],
+  "policy": "publication-time substitution from any listed alias to the canonical term; never edit knowledge-core text.",
+  "terms": [
+    {
+      "canonical": "cerradura inteligente",
+      "category": "device",
+      "aliases": [
+        "smart lock",
+        "lock",
+        "candado inteligente",
+        "cerrojo inteligente"
+      ]
+    },
+    {
+      "canonical": "panel de la cerradura",
+      "category": "device-surface",
+      "aliases": [
+        "panel",
+        "lock panel",
+        "front panel",
+        "panel frontal"
+      ]
+    },
+    {
+      "canonical": "teclado",
+      "category": "device-surface",
+      "aliases": [
+        "keypad",
+        "panel numérico",
+        "keypad numérico"
+      ]
+    },
+    {
+      "canonical": "lector de huella",
+      "category": "device-surface",
+      "aliases": [
+        "fingerprint reader",
+        "sensor de huella",
+        "fingerprint sensor"
+      ]
+    },
+    {
+      "canonical": "tarjeta RFID",
+      "category": "credential",
+      "aliases": [
+        "tarjeta",
+        "RFID card",
+        "tag RFID"
+      ]
+    },
+    {
+      "canonical": "código numérico",
+      "category": "credential",
+      "aliases": [
+        "PIN",
+        "código",
+        "clave numérica",
+        "passcode"
+      ]
+    },
+    {
+      "canonical": "credencial",
+      "category": "credential",
+      "aliases": [
+        "credential",
+        "método de acceso"
+      ]
+    },
+    {
+      "canonical": "aplicación",
+      "category": "software",
+      "aliases": [
+        "app",
+        "aplicación móvil",
+        "mobile app"
+      ]
+    },
+    {
+      "canonical": "vinculación",
+      "category": "operation",
+      "aliases": [
+        "pairing",
+        "emparejamiento",
+        "asociación",
+        "enlace"
+      ]
+    },
+    {
+      "canonical": "vincular",
+      "category": "operation-verb",
+      "aliases": [
+        "emparejar",
+        "asociar",
+        "enlazar",
+        "pair"
+      ]
+    },
+    {
+      "canonical": "registrar",
+      "category": "operation-verb",
+      "aliases": [
+        "enrolar",
+        "dar de alta",
+        "enroll"
+      ]
+    },
+    {
+      "canonical": "administrador",
+      "category": "role",
+      "aliases": [
+        "admin",
+        "administrator"
+      ]
+    },
+    {
+      "canonical": "usuario",
+      "category": "role",
+      "aliases": [
+        "user",
+        "miembro"
+      ]
+    },
+    {
+      "canonical": "código de respaldo",
+      "category": "credential",
+      "aliases": [
+        "backup code",
+        "código de emergencia"
+      ]
+    },
+    {
+      "canonical": "modo EZ",
+      "category": "feature",
+      "aliases": [
+        "EZ Mode",
+        "modo fácil"
+      ]
+    },
+    {
+      "canonical": "código QR",
+      "category": "credential-channel",
+      "aliases": [
+        "QR",
+        "QR code",
+        "código de barras 2D"
+      ]
+    },
+    {
+      "canonical": "Wi-Fi",
+      "category": "connectivity",
+      "aliases": [
+        "wifi",
+        "WiFi",
+        "wi fi",
+        "red inalámbrica"
+      ]
+    },
+    {
+      "canonical": "Bluetooth",
+      "category": "connectivity",
+      "aliases": [
+        "BT",
+        "bluetooth"
+      ]
+    },
+    {
+      "canonical": "restablecer",
+      "category": "operation-verb",
+      "aliases": [
+        "resetear",
+        "reset",
+        "reiniciar de fábrica"
+      ]
+    },
+    {
+      "canonical": "restablecimiento de fábrica",
+      "category": "operation",
+      "aliases": [
+        "factory reset",
+        "reseteo de fábrica",
+        "hard reset"
+      ]
+    },
+    {
+      "canonical": "batería",
+      "category": "power",
+      "aliases": [
+        "pila",
+        "battery"
+      ]
+    },
+    {
+      "canonical": "batería baja",
+      "category": "state",
+      "aliases": [
+        "low battery",
+        "pila baja"
+      ]
+    },
+    {
+      "canonical": "advertencia",
+      "category": "safety",
+      "aliases": [
+        "warning",
+        "aviso",
+        "atención"
+      ]
+    },
+    {
+      "canonical": "operación irreversible",
+      "category": "safety",
+      "aliases": [
+        "irreversible operation",
+        "acción no reversible"
+      ]
+    },
+    {
+      "canonical": "escalar al canal de soporte",
+      "category": "escalation",
+      "aliases": [
+        "contactar soporte",
+        "elevar a soporte",
+        "raise to support"
+      ]
+    },
+    {
+      "canonical": "diagnóstico",
+      "category": "troubleshooting",
+      "aliases": [
+        "diagnosis",
+        "diagnostic"
+      ]
+    },
+    {
+      "canonical": "verificación posterior",
+      "category": "validation",
+      "aliases": [
+        "post-install verification",
+        "verificación post instalación"
+      ]
+    },
+    {
+      "canonical": "plantilla de instalación",
+      "category": "installation",
+      "aliases": [
+        "drilling template",
+        "plantilla de perforación"
+      ]
+    }
+  ]
+}

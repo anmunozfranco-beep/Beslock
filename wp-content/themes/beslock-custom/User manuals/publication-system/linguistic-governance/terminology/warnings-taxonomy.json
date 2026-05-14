@@ -1,0 +1,121 @@
+{
+  "schema": "linguistic-governance/1.0",
+  "layer": "terminology",
+  "summary": "Canonical warning taxonomy and required structural fields.",
+  "generated_at": "2026-05-14T05:13:16+00:00",
+  "modeling_only": true,
+  "non_destructive": true,
+  "idempotent": true,
+  "touches_runtime": false,
+  "mutates_knowledge_core": false,
+  "generates_prompts": false,
+  "generates_images": false,
+  "invokes_comfyui": false,
+  "subordinate_to": [
+    "knowledge-core/1.0",
+    "publication-quality-governance/1.0",
+    "publication-rendering/1.0",
+    "publication-and-delivery-governance/1.0",
+    "operational-pilot-governance/1.0",
+    "ecosystem-normalization-governance/1.0",
+    "reference-stack-governance/1.0",
+    "environment-integration-governance/1.0",
+    "human-operations-governance/1.0",
+    "knowledge-operations-governance/1.0",
+    "knowledge-lifecycle-governance/1.0",
+    "runtime-hardening-governance/1.0",
+    "runtime-implementation-governance/1.0",
+    "runtime-orchestration-governance/1.0",
+    "runtime-governance/1.0",
+    "operational-proof-governance/1.0",
+    "prototype-runtime-governance/1.0",
+    "realization-and-deployment-governance/1.0",
+    "execution-governance/1.0",
+    "decision-intelligence-governance/1.0",
+    "reasoning-governance/1.0",
+    "lifecycle-governance/1.0",
+    "composition-governance/1.0",
+    "continuity-governance/1.0",
+    "ecosystem-interoperability-governance/1.0",
+    "adaptive-operational-governance/1.0",
+    "repo-governance/1.0",
+    "visual-governance/1.0",
+    "visual-constitution/1.0"
+  ],
+  "applied_at": "publication-rendering-time-only",
+  "out_of_scope": [
+    "autonomous rewriting",
+    "hallucinated editorialization",
+    "stylistic creativity",
+    "frontend styling",
+    "visual generation",
+    "image prompts",
+    "new cognition architecture"
+  ],
+  "warning_classes": [
+    {
+      "id": "irreversible-operation",
+      "label_es": "Operación irreversible",
+      "severity": "high",
+      "operator_action_required": true,
+      "required_fields": [
+        "consequence",
+        "trigger_condition",
+        "operator_action"
+      ],
+      "render_position": "immediately-before-triggering-step"
+    },
+    {
+      "id": "low-battery",
+      "label_es": "Batería baja",
+      "severity": "medium",
+      "operator_action_required": true,
+      "required_fields": [
+        "consequence",
+        "trigger_condition",
+        "operator_action"
+      ]
+    },
+    {
+      "id": "installation-hazard",
+      "label_es": "Riesgo en la instalación",
+      "severity": "high",
+      "operator_action_required": true,
+      "required_fields": [
+        "consequence",
+        "trigger_condition",
+        "operator_action"
+      ]
+    },
+    {
+      "id": "escalation-required",
+      "label_es": "Escalamiento requerido",
+      "severity": "high",
+      "operator_action_required": true,
+      "required_fields": [
+        "channel_reference",
+        "diagnostic_packet"
+      ]
+    },
+    {
+      "id": "operational-warning",
+      "label_es": "Advertencia operativa",
+      "severity": "medium",
+      "operator_action_required": false,
+      "required_fields": [
+        "consequence",
+        "trigger_condition"
+      ]
+    },
+    {
+      "id": "informational-note",
+      "label_es": "Nota",
+      "severity": "low",
+      "operator_action_required": false,
+      "required_fields": [
+        "text"
+      ]
+    }
+  ],
+  "rendering_rule": "warning labels are rendered in Colombian operational Spanish; severity and irreversibility flags are preserved verbatim from knowledge-core."
+}
