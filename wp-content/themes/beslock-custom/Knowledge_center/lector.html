@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>True Sources — Lector</title>
+  <style>
+    :root {
+      --bg:#0e1726; --panel:#111c2e; --panel-2:#0a121f; --border:#1f2c45;
+      --text:#e4ecf7; --muted:#8a93a4; --accent:#f5d27a; --accent-2:#2b6cb0;
+      --ok:#8be9a3; --warn:#f5d27a; --err:#ff8a8a;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; min-height:100vh; }
+    header { padding:14px 24px; border-bottom:1px solid var(--border);
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    header h1 { margin:0; font-size:15px; color:var(--accent); text-transform:uppercase; letter-spacing:0.08em; }
+    header .sub { font-size:11px; color:var(--muted); font-family:var(--mono); }
+    main { display:grid; grid-template-columns: 360px 1fr; gap:16px; padding:16px 24px 24px; align-items:start; }
+    main > * { min-width:0; }
+    @media (max-width: 960px) { main { grid-template-columns: 1fr; } }
+
+    .panel { background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:14px 16px; }
+    .panel h2 { margin:0 0 10px 0; font-size:13px; color:var(--accent); text-transform:uppercase; letter-spacing:0.05em; }
+
+    .dropzone { border:2px dashed var(--border); border-radius:6px; padding:22px 14px;
+      text-align:center; color:var(--muted); cursor:pointer; transition:border-color .15s, background .15s; }
+    .dropzone:hover, .dropzone.is-drag { border-color:var(--accent); background:rgba(245,210,122,0.04); color:var(--text); }
+    .dropzone strong { color:var(--accent); }
+    .dropzone input[type="file"] { display:none; }
+    .filelist { list-style:none; padding:0; margin:12px 0 0; max-height:200px; overflow:auto; font-size:12px; }
+    .filelist li { display:flex; align-items:center; justify-content:space-between; padding:6px 8px; border-bottom:1px dashed var(--border); gap:8px; }
+    .filelist .name { color:var(--text); word-break:break-all; }
+    .filelist .meta { color:var(--muted); font-family:var(--mono); font-size:11px; white-space:nowrap; }
+    .filelist .rm { background:transparent; border:0; color:var(--err); cursor:pointer; font-size:14px; padding:0 4px; }
+    .actions { display:flex; gap:8px; margin-top:12px; flex-wrap:wrap; }
+    button.btn { background:var(--accent-2); color:#fff; border:0; padding:9px 14px; border-radius:4px; font-size:13px; font-weight:600; cursor:pointer; }
+    button.btn:hover { filter:brightness(1.08); }
+    button.btn[disabled] { background:#2a3953; color:#6c7a90; cursor:not-allowed; filter:none; }
+    button.btn--ghost { background:transparent; color:var(--muted); border:1px solid var(--border); }
+    button.btn--ghost:hover { color:var(--text); border-color:var(--accent); }
+
+    .terminal { background:var(--panel-2); border:1px solid var(--border); border-radius:6px; overflow:hidden;
+      display:flex; flex-direction:column; min-height:540px; max-height:calc(100vh - 96px); position:sticky; top:16px; }
+    .terminal__bar { display:flex; align-items:center; gap:6px; background:#07101c; padding:8px 12px; border-bottom:1px solid var(--border); }
+    .terminal__dot { width:10px; height:10px; border-radius:50%; display:inline-block; }
+    .terminal__dot.r { background:#ff5f56; } .terminal__dot.y { background:#ffbd2e; } .terminal__dot.g { background:#27c93f; }
+    .terminal__title { margin-left:12px; font-size:11px; color:var(--muted); font-family:var(--mono); letter-spacing:0.04em; }
+    .terminal__btn { margin-left:auto; background:transparent; color:var(--muted); border:1px solid var(--border);
+      border-radius:4px; padding:3px 9px; font-size:11px; font-family:inherit; cursor:pointer; }
+    .terminal__btn:hover:not(:disabled) { color:var(--text); border-color:var(--accent); }
+    .terminal__btn:disabled { opacity:0.45; cursor:not-allowed; }
+    .terminal__body { flex:1 1 auto; min-height:0; padding:12px 14px;
+      font-family:var(--mono); font-size:12px; color:#cfd6e2; overflow-y:auto; overflow-x:hidden; overscroll-behavior:contain; }
+    .term-line { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.55; }
+    .term-line.ok { color:var(--ok); } .term-line.warn { color:var(--warn); }
+    .term-line.err { color:var(--err); } .term-line.dim { color:var(--muted); }
+    .term-line.head { color:var(--accent); margin-top:10px; }
+    .term-line.section { color:var(--accent); margin-top:14px; font-weight:600; border-bottom:1px solid var(--border); padding-bottom:4px; }
+
+    table.report { border-collapse:collapse; width:100%; max-width:100%; table-layout:fixed;
+      margin:10px 0 16px; font-family:var(--mono); font-size:12px; }
+    table.report th, table.report td { border:1px solid var(--border); padding:6px 8px; text-align:left; vertical-align:top;
+      overflow-wrap:anywhere; word-break:break-word; }
+    table.report th { background:#0c1626; color:var(--accent); font-weight:600; }
+    table.report td.k { color:var(--muted); width:36%; } table.report td.v { color:var(--text); }
+    table.report tr.winner td { background:#0d2418; }
+
+    .badge { display:inline-block; padding:1px 8px; border-radius:999px; font-size:10px; font-family:var(--mono); letter-spacing:0.06em; text-transform:uppercase; }
+    .badge.ok { background:#1f5f3a; color:#cfffe1; }
+    .badge.no { background:#5f1f1f; color:#ffd1d1; }
+    .badge.warn { background:#5f4a1f; color:#ffe9b8; }
+    .badge.cls-physical_product { background:#1f5f3a; color:#cfffe1; }
+    .badge.cls-ui_screenshot   { background:#5f1f1f; color:#ffd1d1; }
+    .badge.cls-text_graphic    { background:#5f1f4a; color:#ffd1eb; }
+    .badge.cls-logo            { background:#5f3a1f; color:#ffe1cf; }
+    .badge.cls-qr              { background:#1f1f5f; color:#d1d1ff; }
+    .badge.cls-diagram         { background:#3a1f5f; color:#e1cfff; }
+    .badge.cls-unknown         { background:#2a2f3d; color:#cfd6e2; }
+    .badge.fam-knob_lock     { background:#1f5f3a; color:#cfffe1; }
+    .badge.fam-handle_lock   { background:#5f3a1f; color:#ffe1cf; }
+    .badge.fam-deadbolt      { background:#3a1f5f; color:#e1cfff; }
+    .badge.fam-smart_panel   { background:#1f3a5f; color:#cfe1ff; }
+    .badge.fam-padlock       { background:#5f1f5f; color:#ffd1ff; }
+    .badge.fam-unknown       { background:#2a2f3d; color:#cfd6e2; }
+    .badge.lvl-canonical { background:#1f5f3a; color:#cfffe1; }
+    .badge.lvl-probable  { background:#1f3a5f; color:#cfe1ff; }
+    .badge.lvl-tentative { background:#5f4a1f; color:#ffe9b8; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(120px, 1fr)); gap:8px; margin:8px 0 16px; }
+    .cell { background:#0a121f; border:1px solid var(--border); border-radius:4px; padding:6px;
+      display:flex; flex-direction:column; gap:4px; align-items:center; font-family:var(--mono); font-size:10px; color:var(--muted); }
+    .cell canvas { max-width:100%; height:auto; image-rendering:pixelated; background:#fff; border-radius:2px; }
+    .cell .lbl { color:var(--text); text-align:center; line-height:1.3; }
+    .cell .meta { color:var(--muted); font-size:9px; text-align:center; }
+    .why { background:#0d2418; border:1px solid #1f5f3a; border-radius:4px; padding:10px 12px; margin:8px 0 16px;
+      font-family:var(--mono); font-size:12px; color:#cfffe1; line-height:1.6; }
+    .why.no { background:#241818; border-color:#5f1f1f; color:#ffd1d1; }
+    .why strong { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>True Sources — Lector</h1>
+      <div class="sub">deterministic visual belonging engine · browser-only · reference-first</div>
+    </div>
+    <div class="sub">v1.0.0 · clean-room</div>
+  </header>
+  <main>
+    <section class="panel" aria-label="entrada">
+      <h2>Medio</h2>
+      <label class="dropzone" id="dropzone">
+        Arrastra <strong>PDF · PNG · JPG · WEBP · MP4 · MOV</strong><br/>
+        <span style="font-size:11px;">o haz clic para seleccionar</span>
+        <input type="file" id="fileInput" multiple
+          accept="application/pdf,image/png,image/jpeg,image/webp,video/mp4,video/quicktime" />
+      </label>
+      <ul id="filelist" class="filelist"></ul>
+      <div class="actions">
+        <button id="analyzeBtn" class="btn" disabled>Analizar</button>
+        <button id="clearBtn" class="btn btn--ghost" disabled>Limpiar</button>
+      </div>
+    </section>
+
+    <section class="terminal" aria-label="terminal">
+      <div class="terminal__bar">
+        <span class="terminal__dot r"></span><span class="terminal__dot y"></span><span class="terminal__dot g"></span>
+        <span class="terminal__title">true-sources://lector</span>
+        <button id="downloadBtn" class="terminal__btn" disabled>↓ PDF</button>
+      </div>
+      <div id="terminal" class="terminal__body" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  </script>
+
+  <script>
+  /* ============================================================
+   *  TRUE SOURCES — LECTOR
+   *  Clean-room visual belonging engine (single-file, modular)
+   * ============================================================
+   *  Modules (in order):
+   *    [0] CONFIG
+   *    [1] util          — log / timeout / canvas / format
+   *    [2] pixel         — gray / integral / threshold / CC / dilate
+   *    [3] silhouette    — alpha-aware normalized mask + IoU + boundary
+   *    [4] descriptors   — radial signature, Hu moments, family
+   *    [5] textmask      — pdf.js text suppression mask
+   *    [6] regions       — visual region extraction (text-suppressed)
+   *    [7] gate          — physical product filter
+   *    [8] catalog       — Sources/ loader (manifest + probe) + part decomposition
+   *    [9] search        — REFERENCE-FIRST silhouette search (multi-scale + 4 rotations)
+   *    [10] consensus    — part + document consensus
+   *    [11] media        — pdf / image / video adapters → unified VisualFrames
+   *    [12] pipeline     — orchestrator
+   *    [13] report       — terminal-style explainable report (10 sections)
+   *    [14] ui           — wiring
+   * ========================================================== */
+  (function () {
+    'use strict';
+
+    /* =====================================================
+     * [0] CONFIG
+     * ===================================================== */
+    const CONFIG = {
+      // Timeouts (ms) — never freeze
+      tmoPdfOpen:20000, tmoPageGet:5000, tmoPageRender:10000, tmoTextContent:3000,
+      tmoVideoLoad:15000, tmoVideoSeek:4000, tmoRefHead:1500, tmoRefLoad:5000,
+      tmoManifest:1500,
+
+      // PDF render
+      pdfRenderScale:1.6, maxPdfPages:24,
+
+      // Video
+      videoSampleStep:2.0, videoMaxFrames:100, videoMinSceneDelta:0.08,
+
+      // Visual region extraction
+      adaptiveBlockRatio:0.04, adaptiveK:8,
+      minRegionAreaRatio:0.0025,   // ≥ 0.25 % of frame
+      maxRegionAreaRatio:0.55,
+      maxRegionsPerFrame:24,
+      textOverlapReject:0.20,      // mandatory: > 20 % overlap with text → reject
+
+      // Physical gate
+      gateProductnessAccept:0.55,
+      gateUnknownStrongSignals:3,
+
+      // Reference catalog
+      catalogPath:'True_sources/Sources/',
+      catalogFallback:'True_sources/',     // legacy fallback
+      refProbe:[
+        'e-Nova.png','e-Flex.png','e-Prime.png','e-Touch.png','e-Shield.png',
+        'e-Orbit.png','e-Pro.png','e-Lite.png','e-Smart.png'
+      ],
+      refTargetSize:96,
+      refRadialBins:36,
+      refMaxParts:5,
+      refPartMinAreaRatio:0.005,
+      refPartMaxAreaRatio:0.65,
+
+      // Reference-first search
+      searchScales:[0.6,0.8,1.0,1.25,1.5],
+      searchRotations:[0, Math.PI/2, Math.PI, 3*Math.PI/2],   // + small jitter handled by radial sim
+      searchAcceptScore:0.58,
+      searchTopMatchesPerRef:6,
+
+      // Ensemble weights (belonging-first: parts weigh more than whole)
+      W_GLOBAL:0.10, W_CONTOUR:0.15, W_RADIAL:0.15, W_HU:0.10,
+      W_GEOM:0.10,   W_PART:0.30,    W_FAMILY:0.10,
+
+      // Consensus
+      partCoOccurBoost:0.10,
+      pageCoOccurBoost:0.12,
+      consensusCap:1.6,
+
+      // Evidence vault
+      evidenceTentative:0.58, evidenceProbable:0.72, evidenceCanonical:0.85,
+      vaultStoreThreshold:0.80,
+
+      // Debug caps
+      maxDebugCells:64, maxRefDebugCells:48, maxDetailRows:14
+    };
+
+    /* =====================================================
+     * [1] util
+     * ===================================================== */
+    const term = document.getElementById('terminal');
+    const log = (msg, cls) => {
+      const d = document.createElement('div');
+      d.className = 'term-line' + (cls ? ' ' + cls : '');
+      d.textContent = msg; term.appendChild(d); term.scrollTop = term.scrollHeight; return d;
+    };
+    const section = t => log('═══ ' + t + ' ═══', 'section');
+    const appendNode = n => { term.appendChild(n); term.scrollTop = term.scrollHeight; };
+    const yieldFrame = () => new Promise(r => setTimeout(r, 0));
+    const clamp = (v, a, b) => v<a?a:(v>b?b:v);
+    const newCanvas = (w, h) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+    function withTimeout(promise, ms, label) {
+      return new Promise(resolve => {
+        let done = false;
+        const t = setTimeout(() => { if (!done) { done = true; resolve({ ok:false, timedOut:true, error:new Error('timeout:'+label) }); } }, ms);
+        Promise.resolve(promise).then(
+          v => { if (!done) { done = true; clearTimeout(t); resolve({ ok:true, value:v }); } },
+          e => { if (!done) { done = true; clearTimeout(t); resolve({ ok:false, timedOut:false, error:e }); } }
+        );
+      });
+    }
+    const fileSize = n => n<1024 ? n+' B' : n<1024*1024 ? (n/1024).toFixed(1)+' KB' : (n/1024/1024).toFixed(2)+' MB';
+    function prettyMime(m) {
+      if (!m) return 'unknown';
+      if (m === 'application/pdf') return 'PDF';
+      if (m.startsWith('image/')) return m.replace('image/','').toUpperCase();
+      if (m.startsWith('video/')) return m.replace('video/','').toUpperCase();
+      return m;
+    }
+
+    /* =====================================================
+     * [2] pixel ops
+     * ===================================================== */
+    function toGray(imageData) {
+      const { width:w, height:h, data:d } = imageData;
+      const out = new Uint8ClampedArray(w*h);
+      for (let i=0,j=0; i<d.length; i+=4,j++) out[j] = (d[i]*0.299 + d[i+1]*0.587 + d[i+2]*0.114)|0;
+      return { w, h, data:out };
+    }
+    function integralImage(g) {
+      const { w, h, data } = g; const I = new Float64Array((w+1)*(h+1));
+      for (let y=1; y<=h; y++) {
+        let row = 0;
+        for (let x=1; x<=w; x++) { row += data[(y-1)*w+(x-1)]; I[y*(w+1)+x] = I[(y-1)*(w+1)+x] + row; }
+      }
+      return I;
+    }
+    function adaptiveThreshold(g, blockSize, k) {
+      const { w, h, data } = g; const I = integralImage(g); const W = w+1; const half = blockSize>>1;
+      const out = new Uint8Array(w*h);
+      for (let y=0; y<h; y++) {
+        const y0 = Math.max(0, y-half), y1 = Math.min(h-1, y+half);
+        for (let x=0; x<w; x++) {
+          const x0 = Math.max(0, x-half), x1 = Math.min(w-1, x+half);
+          const area = (x1-x0+1)*(y1-y0+1);
+          const sum = I[(y1+1)*W+(x1+1)] - I[y0*W+(x1+1)] - I[(y1+1)*W+x0] + I[y0*W+x0];
+          out[y*w+x] = data[y*w+x] < (sum/area - k) ? 1 : 0;
+        }
+      }
+      return { w, h, data:out };
+    }
+    function dilate(bin, iters) {
+      let cur = bin;
+      for (let k=0; k<iters; k++) {
+        const { w, h, data } = cur; const out = new Uint8Array(w*h);
+        for (let y=0; y<h; y++) for (let x=0; x<w; x++) {
+          if (data[y*w+x]) { out[y*w+x] = 1; continue; }
+          if (x>0   && data[y*w+x-1]) { out[y*w+x] = 1; continue; }
+          if (x<w-1 && data[y*w+x+1]) { out[y*w+x] = 1; continue; }
+          if (y>0   && data[(y-1)*w+x]) { out[y*w+x] = 1; continue; }
+          if (y<h-1 && data[(y+1)*w+x]) { out[y*w+x] = 1; continue; }
+        }
+        cur = { w, h, data:out };
+      }
+      return cur;
+    }
+    function connectedComponents(bin, minArea, maxArea) {
+      const { w, h, data } = bin;
+      const labels = new Int32Array(w*h);
+      const stack = new Int32Array(w*h);
+      const comps = []; let next = 1;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) {
+        const idx = y*w+x;
+        if (data[idx] !== 1 || labels[idx] !== 0) continue;
+        let sp = 0; stack[sp++] = idx; labels[idx] = next;
+        let minX=x, maxX=x, minY=y, maxY=y, area=0, sx=0, sy=0;
+        while (sp > 0) {
+          const cur = stack[--sp]; const cy = (cur/w)|0; const cx = cur - cy*w;
+          area++; sx += cx; sy += cy;
+          if (cx < minX) minX = cx; if (cx > maxX) maxX = cx;
+          if (cy < minY) minY = cy; if (cy > maxY) maxY = cy;
+          if (cx > 0)   { const n = cur-1; if (data[n] === 1 && labels[n] === 0) { labels[n] = next; stack[sp++] = n; } }
+          if (cx < w-1) { const n = cur+1; if (data[n] === 1 && labels[n] === 0) { labels[n] = next; stack[sp++] = n; } }
+          if (cy > 0)   { const n = cur-w; if (data[n] === 1 && labels[n] === 0) { labels[n] = next; stack[sp++] = n; } }
+          if (cy < h-1) { const n = cur+w; if (data[n] === 1 && labels[n] === 0) { labels[n] = next; stack[sp++] = n; } }
+        }
+        if (area >= minArea && area <= maxArea) {
+          comps.push({ id:next, x:minX, y:minY, w:maxX-minX+1, h:maxY-minY+1, area, cx:sx/area, cy:sy/area });
+        }
+        next++;
+      }
+      return { labels, comps };
+    }
+
+    /* =====================================================
+     * [3] silhouette — alpha-aware, normalized to square
+     * ===================================================== */
+    function hasUsefulAlpha(imageData) {
+      const d = imageData.data; let n=0, opaque=0;
+      for (let i=3; i<d.length; i+=4*16) { n++; if (d[i] >= 250) opaque++; }
+      return n > 0 && (opaque/n) < 0.95;
+    }
+    function silhouetteFromImageData(img, target) {
+      const { width:w, height:h, data:d } = img;
+      let bin, alphaUsed = false;
+      if (hasUsefulAlpha(img)) {
+        alphaUsed = true;
+        const a = new Uint8Array(w*h);
+        for (let i=3,j=0; i<d.length; i+=4,j++) a[j] = d[i] >= 32 ? 1 : 0;
+        bin = { w, h, data:a };
+      } else {
+        const g = toGray(img);
+        const block = Math.max(15, ((Math.min(w,h) * CONFIG.adaptiveBlockRatio)|0) | 1);
+        bin = adaptiveThreshold(g, block, CONFIG.adaptiveK);
+      }
+      // tight bbox + square pad → resample
+      let minX=w, minY=h, maxX=0, maxY=0, any = false;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++)
+        if (bin.data[y*w+x]) { any = true; if (x<minX) minX=x; if (x>maxX) maxX=x; if (y<minY) minY=y; if (y>maxY) maxY=y; }
+      if (!any) return { mask:new Uint8Array(target*target), w:target, h:target, fill:0, alphaUsed };
+      const bw = maxX-minX+1, bh = maxY-minY+1;
+      const side = Math.max(bw, bh);
+      const padX = ((side-bw)/2)|0, padY = ((side-bh)/2)|0;
+      const out = new Uint8Array(target*target); let fill = 0;
+      for (let y=0; y<target; y++) for (let x=0; x<target; x++) {
+        const sx = (minX - padX + ((x*side)/target)|0);
+        const sy = (minY - padY + ((y*side)/target)|0);
+        if (sx>=0 && sy>=0 && sx<w && sy<h && bin.data[sy*w+sx]) { out[y*target+x] = 1; fill++; }
+      }
+      return { mask:out, w:target, h:target, fill, alphaUsed };
+    }
+    function silhouetteFromCanvas(canvas, target) {
+      const ctx = canvas.getContext('2d', { willReadFrequently:true });
+      const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      return silhouetteFromImageData(img, target);
+    }
+    function rotateMask(mask, k /* 0..3, multiples of 90° */) {
+      if (k === 0) return mask;
+      const n = mask.w; const out = new Uint8Array(n*n);
+      for (let y=0; y<n; y++) for (let x=0; x<n; x++) {
+        if (!mask.mask[y*n+x]) continue;
+        let nx, ny;
+        if (k === 1)      { nx = n-1-y; ny = x; }
+        else if (k === 2) { nx = n-1-x; ny = n-1-y; }
+        else              { nx = y;     ny = n-1-x; }
+        out[ny*n+nx] = 1;
+      }
+      let fill=0; for (let i=0; i<out.length; i++) if (out[i]) fill++;
+      return { mask:out, w:n, h:n, fill, alphaUsed:mask.alphaUsed };
+    }
+    function maskIoU(a, b) {
+      if (a.w !== b.w || a.h !== b.h) return 0;
+      let inter=0, uni=0;
+      for (let i=0; i<a.mask.length; i++) {
+        const av = a.mask[i], bv = b.mask[i];
+        if (av || bv) { uni++; if (av && bv) inter++; }
+      }
+      return uni === 0 ? 0 : inter/uni;
+    }
+    function boundaryMask(mask) {
+      const { mask:m, w, h } = mask; const out = new Uint8Array(w*h);
+      for (let y=1; y<h-1; y++) for (let x=1; x<w-1; x++) {
+        if (!m[y*w+x]) continue;
+        if (!(m[y*w+x-1] && m[y*w+x+1] && m[(y-1)*w+x] && m[(y+1)*w+x])) out[y*w+x] = 1;
+      }
+      return out;
+    }
+    function contourOverlap(a, b) {
+      const ba = boundaryMask(a), bb = boundaryMask(b);
+      const da = dilate({ w:a.w, h:a.h, data:ba }, 1);
+      const db = dilate({ w:b.w, h:b.h, data:bb }, 1);
+      let inter=0, uni=0;
+      for (let i=0; i<da.data.length; i++) { const x = da.data[i], y = db.data[i]; if (x || y) { uni++; if (x && y) inter++; } }
+      return uni === 0 ? 0 : inter/uni;
+    }
+
+    /* =====================================================
+     * [4] descriptors
+     * ===================================================== */
+    function radialSignature(mask, bins) {
+      const { mask:m, w, h } = mask;
+      let sx=0, sy=0, n=0;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) if (m[y*w+x]) { sx+=x; sy+=y; n++; }
+      if (!n) return new Float32Array(bins);
+      const cx = sx/n, cy = sy/n;
+      const sig = new Float32Array(bins);
+      for (let y=1; y<h-1; y++) for (let x=1; x<w-1; x++) {
+        if (!m[y*w+x]) continue;
+        if (m[y*w+x-1] && m[y*w+x+1] && m[(y-1)*w+x] && m[(y+1)*w+x]) continue;
+        const dx = x-cx, dy = y-cy;
+        let ang = Math.atan2(dy, dx); if (ang < 0) ang += Math.PI*2;
+        const b = Math.min(bins-1, (ang/(Math.PI*2)*bins)|0);
+        const r = Math.sqrt(dx*dx + dy*dy);
+        if (r > sig[b]) sig[b] = r;
+      }
+      let max=0; for (let i=0; i<bins; i++) if (sig[i] > max) max = sig[i];
+      if (max > 0) for (let i=0; i<bins; i++) sig[i] /= max;
+      return sig;
+    }
+    function radialSimilarity(a, b) {
+      if (!a || !b || a.length !== b.length) return 0;
+      let best = 0;
+      for (let r=0; r<a.length; r++) {
+        let s = 0;
+        for (let i=0; i<a.length; i++) s += 1 - Math.abs(a[i] - b[(i+r) % a.length]);
+        s /= a.length;
+        if (s > best) best = s;
+      }
+      return best;
+    }
+    function huMoments(mask) {
+      const { mask:m, w, h } = mask;
+      let m00=0, m10=0, m01=0;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) if (m[y*w+x]) { m00++; m10+=x; m01+=y; }
+      if (m00 === 0) return new Float32Array(7);
+      const xc = m10/m00, yc = m01/m00;
+      let u20=0,u02=0,u11=0,u30=0,u03=0,u21=0,u12=0;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) if (m[y*w+x]) {
+        const dx = x-xc, dy = y-yc;
+        u20+=dx*dx; u02+=dy*dy; u11+=dx*dy;
+        u30+=dx*dx*dx; u03+=dy*dy*dy; u21+=dx*dx*dy; u12+=dx*dy*dy;
+      }
+      const n = (p,q) => 1 / Math.pow(m00, 1 + (p+q)/2);
+      const n20 = u20*n(2,0), n02 = u02*n(0,2), n11 = u11*n(1,1);
+      const n30 = u30*n(3,0), n03 = u03*n(0,3), n21 = u21*n(2,1), n12 = u12*n(1,2);
+      const I1 = n20+n02;
+      const I2 = (n20-n02)**2 + 4*n11*n11;
+      const I3 = (n30-3*n12)**2 + (3*n21-n03)**2;
+      const I4 = (n30+n12)**2 + (n21+n03)**2;
+      const I5 = (n30-3*n12)*(n30+n12)*((n30+n12)**2 - 3*(n21+n03)**2)
+               + (3*n21-n03)*(n21+n03)*(3*(n30+n12)**2 - (n21+n03)**2);
+      const I6 = (n20-n02)*((n30+n12)**2 - (n21+n03)**2) + 4*n11*(n30+n12)*(n21+n03);
+      const I7 = (3*n21-n03)*(n30+n12)*((n30+n12)**2 - 3*(n21+n03)**2)
+               - (n30-3*n12)*(n21+n03)*(3*(n30+n12)**2 - (n21+n03)**2);
+      const sl = v => Math.sign(v) * Math.log(Math.abs(v) + 1e-30);
+      return new Float32Array([sl(I1), sl(I2), sl(I3), sl(I4), sl(I5), sl(I6), sl(I7)]);
+    }
+    function huSimilarity(a, b) {
+      if (!a || !b) return 0;
+      let s = 0; for (let i=0; i<a.length; i++) s += 1 / (1 + Math.abs(a[i]-b[i]));
+      return s/a.length;
+    }
+    function classifyFamily(mask) {
+      const { mask:m, w, h, fill } = mask;
+      const fr = fill / (w*h);
+      let sx=0, sy=0, n=0;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) if (m[y*w+x]) { sx+=x; sy+=y; n++; }
+      if (!n) return 'unknown';
+      const cx = sx/n, cy = sy/n;
+      let minX=w, minY=h, maxX=0, maxY=0, maxR2=0;
+      for (let y=0; y<h; y++) for (let x=0; x<w; x++) if (m[y*w+x]) {
+        if (x<minX) minX=x; if (x>maxX) maxX=x;
+        if (y<minY) minY=y; if (y>maxY) maxY=y;
+        const d = (x-cx)**2 + (y-cy)**2; if (d>maxR2) maxR2 = d;
+      }
+      const bw = maxX-minX+1, bh = maxY-minY+1; const ar = bw/bh;
+      const maxR = Math.sqrt(maxR2);
+      const circ = maxR > 0 ? n / (Math.PI * maxR * maxR) : 0;
+      if (circ > 0.62 && ar > 0.85 && ar < 1.18 && fr > 0.40) return 'knob_lock';
+      if (ar > 1.6 && fr < 0.45) return 'handle_lock';
+      if (ar > 0.60 && ar < 0.95 && fr > 0.45 && circ < 0.55) return 'deadbolt';
+      if (ar > 0.50 && ar < 0.80 && circ < 0.50 && fr > 0.55) return 'smart_panel';
+      if (ar > 0.85 && ar < 1.2 && circ < 0.60 && fr > 0.50) return 'padlock';
+      return 'unknown';
+    }
+
+    /* =====================================================
+     * [5] textmask — pdf.js text suppression
+     * ===================================================== */
+    async function buildTextMask(page, viewport) {
+      const tcR = await withTimeout(page.getTextContent(), CONFIG.tmoTextContent, 'getTextContent');
+      const w = (viewport.width + 0.5)|0, h = (viewport.height + 0.5)|0;
+      if (!tcR.ok) return { mask:null, count:0, w, h, timedOut:!!tcR.timedOut };
+      const tc = tcR.value;
+      const mask = new Uint8Array(w*h); let count = 0;
+      for (const item of tc.items) {
+        const tr = pdfjsLib.Util.transform(viewport.transform, item.transform);
+        const x = tr[4], y = tr[5];
+        const fontH = Math.hypot(tr[2], tr[3]);
+        const fontW = Math.hypot(tr[0], tr[1]);
+        const itemW = (item.width || (item.str || '').length * fontW) * (viewport.scale || 1);
+        // Pad text bbox slightly to cover anti-aliased halos
+        const x0 = Math.max(0, (x|0) - 1), y0 = Math.max(0, (y - fontH)|0 - 1);
+        const x1 = Math.min(w-1, ((x + itemW)|0) + 1), y1 = Math.min(h-1, (y + 2)|0);
+        for (let yy=y0; yy<=y1; yy++) for (let xx=x0; xx<=x1; xx++) mask[yy*w+xx] = 1;
+        count++;
+      }
+      return { mask, count, w, h, timedOut:false };
+    }
+    function textOverlapForBbox(textMask, bbox) {
+      if (!textMask || !textMask.mask) return 0;
+      const { mask, w, h } = textMask;
+      let total=0, hit=0;
+      const x1 = clamp(bbox.x|0, 0, w-1), y1 = clamp(bbox.y|0, 0, h-1);
+      const x2 = clamp((bbox.x+bbox.w)|0, 0, w-1), y2 = clamp((bbox.y+bbox.h)|0, 0, h-1);
+      for (let y=y1; y<=y2; y++) for (let x=x1; x<=x2; x++) { total++; if (mask[y*w+x]) hit++; }
+      return total === 0 ? 0 : hit/total;
+    }
+
+    /* =====================================================
+     * [6] regions — visual region extraction
+     * ===================================================== */
+    function extractVisualRegions(frame) {
+      const c = frame.canvas, w = c.width, h = c.height;
+      const ctx = c.getContext('2d', { willReadFrequently:true });
+      const img = ctx.getImageData(0, 0, w, h);
+      const gray = toGray(img);
+      const block = Math.max(15, ((Math.min(w,h) * CONFIG.adaptiveBlockRatio)|0) | 1);
+      const bin = adaptiveThreshold(gray, block, CONFIG.adaptiveK);
+      const closed = dilate(bin, 1);
+      const minArea = (w*h * CONFIG.minRegionAreaRatio)|0;
+      const maxArea = (w*h * CONFIG.maxRegionAreaRatio)|0;
+      const { comps } = connectedComponents(closed, minArea, maxArea);
+      comps.sort((a,b) => b.area - a.area);
+      const out = []; let textRejected = 0;
+      for (const cc of comps) {
+        if (out.length >= CONFIG.maxRegionsPerFrame) break;
+        const padX = Math.round(cc.w * 0.06), padY = Math.round(cc.h * 0.06);
+        const bx = clamp(cc.x - padX, 0, w-1), by = clamp(cc.y - padY, 0, h-1);
+        const bw = clamp(cc.w + padX*2, 1, w - bx), bh = clamp(cc.h + padY*2, 1, h - by);
+        const tov = textOverlapForBbox(frame.textMask, { x:bx, y:by, w:bw, h:bh });
+        if (tov > CONFIG.textOverlapReject) { textRejected++; continue; }
+        const crop = newCanvas(bw, bh);
+        crop.getContext('2d').drawImage(c, bx, by, bw, bh, 0, 0, bw, bh);
+        out.push({ bbox:{x:bx,y:by,w:bw,h:bh}, canvas:crop, area:cc.area, textOverlap:tov });
+      }
+      return { regions:out, textRejected };
+    }
+
+    /* =====================================================
+     * [7] gate — physical product filter
+     * ===================================================== */
+    function detectQrPattern(gray) {
+      const { w, h, data } = gray; const nb = 8;
+      const bw = (w/nb)|0, bh = (h/nb)|0;
+      if (bw < 4 || bh < 4) return 0;
+      let alt = 0, total = 0;
+      for (let by=0; by<nb; by++) {
+        let prev = -1;
+        for (let bx=0; bx<nb; bx++) {
+          let sum=0, n=0;
+          for (let y=by*bh; y<(by+1)*bh; y++) for (let x=bx*bw; x<(bx+1)*bw; x++) { sum += data[y*w+x]; n++; }
+          const v = (sum/n) < 128 ? 1 : 0;
+          if (prev !== -1) { total++; if (v !== prev) alt++; }
+          prev = v;
+        }
+      }
+      return total === 0 ? 0 : alt/total;
+    }
+    function productnessSignals(canvas, mask) {
+      const w = canvas.width, h = canvas.height;
+      const ctx = canvas.getContext('2d', { willReadFrequently:true });
+      const img = ctx.getImageData(0, 0, w, h);
+      const gray = toGray(img); const data = img.data;
+      let edges=0, sumI=0, sumI2=0; const n = w*h;
+      for (let y=1; y<h-1; y++) for (let x=1; x<w-1; x++) {
+        const i = y*w+x;
+        const gx = gray.data[i+1] - gray.data[i-1];
+        const gy = gray.data[i+w] - gray.data[i-w];
+        if (Math.abs(gx) + Math.abs(gy) > 30) edges++;
+        sumI += gray.data[i]; sumI2 += gray.data[i]*gray.data[i];
+      }
+      let satSum=0, colorf=0, nPx=0;
+      for (let i=0; i<data.length; i+=4) {
+        const r=data[i], g=data[i+1], b=data[i+2];
+        const mx = Math.max(r,g,b), mn = Math.min(r,g,b);
+        satSum += mx === 0 ? 0 : (mx-mn)/mx;
+        colorf += Math.abs(r-g) + Math.abs(g-b);
+        nPx++;
+      }
+      const meanI = sumI/Math.max(1,n);
+      const stdI = Math.sqrt(Math.max(0, sumI2/Math.max(1,n) - meanI*meanI))/255;
+      const hist = new Uint32Array(16);
+      for (let i=0; i<gray.data.length; i++) hist[(gray.data[i]>>4)]++;
+      let nonEmpty=0; for (let i=0; i<16; i++) if (hist[i]/n > 0.01) nonEmpty++;
+      const fr = mask.fill / (mask.w*mask.h);
+      let symInter=0, symUni=0;
+      for (let y=0; y<mask.h; y++) for (let x=0; x<mask.w; x++) {
+        const a = mask.mask[y*mask.w+x];
+        const b = mask.mask[y*mask.w + (mask.w-1-x)];
+        if (a||b) { symUni++; if (a && b) symInter++; }
+      }
+      const bnd = boundaryMask(mask);
+      let bndN=0, bndCont=0;
+      for (let y=1; y<mask.h-1; y++) for (let x=1; x<mask.w-1; x++) {
+        if (!bnd[y*mask.w+x]) continue;
+        bndN++; let nb=0;
+        for (let dy=-1; dy<=1; dy++) for (let dx=-1; dx<=1; dx++) if (!(dx===0 && dy===0))
+          if (bnd[(y+dy)*mask.w+(x+dx)]) nb++;
+        if (nb >= 2) bndCont++;
+      }
+      return {
+        edgeDensity: edges/n,
+        satMean: satSum/nPx,
+        colorfulness: (colorf/nPx)/255,
+        stdI, histDiversity: nonEmpty/16,
+        fillRatio: fr,
+        symVert: symUni===0 ? 0 : symInter/symUni,
+        contourContinuity: bndN===0 ? 0 : bndCont/bndN,
+        qrScore: detectQrPattern(gray)
+      };
+    }
+    function physicalGate(canvas, mask) {
+      const s = productnessSignals(canvas, mask);
+      const reasons = [];
+      if (s.qrScore > 0.78 && s.histDiversity < 0.30) {
+        reasons.push('qr-alt-pattern'); return { cls:'qr', signals:s, reasons, productness:0.05 };
+      }
+      if (s.histDiversity < 0.22 && s.stdI < 0.18 && s.satMean < 0.20) {
+        reasons.push('flat-bilevel');
+        return s.fillRatio > 0.08 && s.fillRatio < 0.55
+          ? { cls:'logo', signals:s, reasons, productness:0.05 }
+          : { cls:'text_graphic', signals:s, reasons, productness:0.02 };
+      }
+      const aspect = canvas.width / canvas.height;
+      if (s.stdI < 0.20 && s.colorfulness > 0.10 && s.contourContinuity > 0.55 && aspect > 0.45 && aspect < 0.75) {
+        reasons.push('ui-flat-portrait'); return { cls:'ui_screenshot', signals:s, reasons, productness:0.10 };
+      }
+      if (s.edgeDensity > 0.18 && s.satMean < 0.15 && s.stdI < 0.22) {
+        reasons.push('high-edge-low-shade'); return { cls:'diagram', signals:s, reasons, productness:0.10 };
+      }
+      const productness = clamp(
+        0.30*(s.stdI/0.30) + 0.20*(s.colorfulness/0.30) +
+        0.15*s.contourContinuity + 0.15*s.histDiversity +
+        0.10*(1 - Math.abs(s.symVert - 0.65)) +
+        0.10*(1 - Math.abs(s.fillRatio - 0.35)/0.35), 0, 1);
+      let strong = 0;
+      if (s.stdI > 0.20) strong++;
+      if (s.contourContinuity > 0.55) strong++;
+      if (s.histDiversity > 0.45) strong++;
+      if (s.symVert > 0.55 && s.symVert < 0.95) strong++;
+      if (s.colorfulness > 0.10) strong++;
+      if (productness >= CONFIG.gateProductnessAccept) {
+        reasons.push('coherent-product (' + strong + ' strong)');
+        return { cls:'physical_product', signals:s, reasons, productness, strong };
+      }
+      if (strong >= CONFIG.gateUnknownStrongSignals) {
+        reasons.push('promoted-by-strong (' + strong + ')');
+        return { cls:'physical_product', signals:s, reasons, productness:Math.max(productness, 0.5), strong };
+      }
+      reasons.push('insufficient-productness (' + strong + ')');
+      return { cls:'unknown', signals:s, reasons, productness, strong };
+    }
+
+    /* =====================================================
+     * [8] catalog — load Sources/, decompose into parts
+     * ===================================================== */
+    function buildRefDescriptor(canvas, label, family) {
+      const sil = silhouetteFromCanvas(canvas, CONFIG.refTargetSize);
+      return {
+        label,
+        family: family || classifyFamily(sil),
+        mask: sil,
+        alphaUsed: sil.alphaUsed,
+        radial: radialSignature(sil, CONFIG.refRadialBins),
+        hu: huMoments(sil),
+        canvas
+      };
+    }
+    function autoExtractParts(refCanvas, alphaUsed) {
+      const w = refCanvas.width, h = refCanvas.height;
+      const ctx = refCanvas.getContext('2d', { willReadFrequently:true });
+      const img = ctx.getImageData(0, 0, w, h);
+      let bin;
+      if (alphaUsed) {
+        const a = new Uint8Array(w*h);
+        for (let i=3,j=0; i<img.data.length; i+=4,j++) a[j] = img.data[i] >= 32 ? 1 : 0;
+        bin = { w, h, data:a };
+      } else {
+        const gray = toGray(img);
+        const block = Math.max(15, ((Math.min(w,h) * CONFIG.adaptiveBlockRatio)|0) | 1);
+        bin = adaptiveThreshold(gray, block, CONFIG.adaptiveK);
+      }
+      const closed = dilate(bin, 1);
+      const minArea = (w*h * CONFIG.refPartMinAreaRatio)|0;
+      const maxArea = (w*h * CONFIG.refPartMaxAreaRatio)|0;
+      const { comps } = connectedComponents(closed, minArea, maxArea);
+      comps.sort((a,b) => b.area - a.area);
+      const parts = [];
+      for (let i=1; i<comps.length && parts.length < CONFIG.refMaxParts; i++) {
+        const cc = comps[i];
+        const padX = Math.round(cc.w * 0.08), padY = Math.round(cc.h * 0.08);
+        const bx = clamp(cc.x - padX, 0, w-1), by = clamp(cc.y - padY, 0, h-1);
+        const bw = clamp(cc.w + padX*2, 1, w - bx), bh = clamp(cc.h + padY*2, 1, h - by);
+        const crop = newCanvas(bw, bh);
+        crop.getContext('2d').drawImage(refCanvas, bx, by, bw, bh, 0, 0, bw, bh);
+        parts.push({ canvas:crop, area:cc.area, bbox:{x:bx,y:by,w:bw,h:bh} });
+      }
+      return parts;
+    }
+    async function probeReference(url) {
+      try {
+        const r = await withTimeout(fetch(url, { method:'HEAD' }), CONFIG.tmoRefHead, 'head:'+url);
+        if (r.ok && r.value && r.value.ok) return true;
+      } catch (e) {}
+      return await new Promise(res => {
+        const im = new Image(); im.onload = () => res(true); im.onerror = () => res(false); im.src = url;
+      });
+    }
+    async function loadReferenceFromUrl(label, url) {
+      const r = await withTimeout(new Promise((res, rej) => {
+        const i = new Image(); i.crossOrigin = 'anonymous';
+        i.onload = () => res(i); i.onerror = () => rej(new Error('load'));
+        i.src = url;
+      }), CONFIG.tmoRefLoad, 'refLoad:'+url);
+      if (!r.ok) throw new Error('cannot load: ' + label);
+      const img = r.value;
+      const c = newCanvas(img.naturalWidth, img.naturalHeight);
+      c.getContext('2d').drawImage(img, 0, 0);
+      const main = buildRefDescriptor(c, label + ' / main');
+      const partRaw = autoExtractParts(c, main.alphaUsed);
+      const parts = partRaw.map((p, i) => buildRefDescriptor(p.canvas, label + ' / part_' + (i+1), main.family));
+      return { product:label, family:main.family, main, parts, sourceUrl:url };
+    }
+    let CATALOG = null;
+    async function discoverCandidates() {
+      // Try manifest.json under both Sources/ and parent (legacy)
+      for (const base of [CONFIG.catalogPath, CONFIG.catalogFallback]) {
+        const m = await withTimeout(fetch(base + 'manifest.json'), CONFIG.tmoManifest, 'manifest');
+        if (m.ok && m.value && m.value.ok) {
+          try {
+            const json = await m.value.json();
+            const list = Array.isArray(json) ? json : (Array.isArray(json.references) ? json.references : null);
+            if (list) {
+              return list.map(e => typeof e === 'string'
+                ? { label:e.replace(/\.[a-z]+$/i, ''), url:base + e }
+                : { label:e.label, url:base + e.url });
+            }
+          } catch (e) {}
+        }
+      }
+      // Probe known names under both paths (Sources/ first)
+      const found = [];
+      for (const name of CONFIG.refProbe) {
+        for (const base of [CONFIG.catalogPath, CONFIG.catalogFallback]) {
+          const url = base + name;
+          if (await probeReference(url)) { found.push({ label:name.replace(/\.[a-z]+$/i,''), url }); break; }
+        }
+      }
+      return found;
+    }
+    async function loadCatalog() {
+      const candidates = await discoverCandidates();
+      const lib = [];
+      for (const c of candidates) {
+        try {
+          const ref = await loadReferenceFromUrl(c.label, c.url);
+          lib.push(ref);
+          log('  ✓ ' + ref.product + ' · family=' + ref.family + ' · parts=' + ref.parts.length + (ref.main.alphaUsed ? ' · α' : ''), 'dim');
+        } catch (e) { log('  ✗ ' + c.label + ' — ' + (e.message || e), 'warn'); }
+      }
+      return lib;
+    }
+    async function ensureCatalog() {
+      if (CATALOG) return CATALOG;
+      section('SOURCE CATALOG');
+      log('  cargando True_sources/Sources/…', 'dim');
+      CATALOG = await loadCatalog();
+      log('  total fuentes: ' + CATALOG.length, CATALOG.length ? 'ok' : 'err');
+      return CATALOG;
+    }
+
+    /* =====================================================
+     * [9] search — REFERENCE-FIRST silhouette search
+     *
+     * For each reference (main + parts), iterate visual regions of
+     * the frame. For each region, try multiple scales & 4 rotations
+     * (sliding-translation handled by region cropping). Pick the
+     * (region, scale, rotation) with the best ensemble score.
+     *
+     * Output: per (reference × frame) → best location + components.
+     * ===================================================== */
+    function geometryCompat(maskA, maskB) {
+      const arA = maskA.w/maskA.h, arB = maskB.w/maskB.h;
+      const arSim = 1 - Math.min(1, Math.abs(arA-arB)/Math.max(arA,arB));
+      const frA = maskA.fill/(maskA.w*maskA.h);
+      const frB = maskB.fill/(maskB.w*maskB.h);
+      const frSim = 1 - Math.min(1, Math.abs(frA-frB));
+      return 0.5*arSim + 0.5*frSim;
+    }
+    function rescaleSilhouette(canvas, target, scale) {
+      // scale = ratio of object size → resample then re-normalize via silhouetteFromImageData
+      const w = Math.max(8, (canvas.width * scale)|0);
+      const h = Math.max(8, (canvas.height * scale)|0);
+      const tmp = newCanvas(w, h);
+      tmp.getContext('2d').drawImage(canvas, 0, 0, w, h);
+      return silhouetteFromCanvas(tmp, target);
+    }
+    function ensembleScore(p) {
+      return clamp(
+        CONFIG.W_GLOBAL  * p.global  + CONFIG.W_CONTOUR * p.contour +
+        CONFIG.W_RADIAL  * p.radial  + CONFIG.W_HU      * p.hu      +
+        CONFIG.W_GEOM    * p.geom    + CONFIG.W_PART    * p.part    +
+        CONFIG.W_FAMILY  * p.family, 0, 1);
+    }
+    function compareDescriptorVsRegion(desc, regionMask, regionRadial, regionHu) {
+      let bestIou=0, bestCon=0, bestRad=0, bestHu=0, bestGeom=0;
+      // base orientation
+      for (let k=0; k<CONFIG.searchRotations.length; k++) {
+        const rot = (k % 4); // 0..3 mapped 90° steps
+        const rotMask = rotateMask(desc.mask, rot);
+        const iou = maskIoU(rotMask, regionMask);
+        const con = contourOverlap(rotMask, regionMask);
+        // radial sim already rotation-invariant (cyclic), just compute once on base
+        if (iou > bestIou) bestIou = iou;
+        if (con > bestCon) bestCon = con;
+        const geom = geometryCompat(rotMask, regionMask);
+        if (geom > bestGeom) bestGeom = geom;
+      }
+      const rad = radialSimilarity(desc.radial, regionRadial);
+      const hu  = huSimilarity(desc.hu, regionHu);
+      if (rad > bestRad) bestRad = rad;
+      if (hu  > bestHu)  bestHu  = hu;
+      return { iou:bestIou, contour:bestCon, radial:bestRad, hu:bestHu, geom:bestGeom };
+    }
+    function searchReferenceInRegion(ref, region) {
+      // Try each scale on the region's content; descriptor is the *reference*
+      // We rescale the REFERENCE by the scale factor (== searching ref at that scale inside region)
+      let best = null;
+      for (const scale of CONFIG.searchScales) {
+        const mainScaled = rescaleSilhouette(ref.main.canvas, CONFIG.refTargetSize, scale);
+        const mainDesc = {
+          mask: mainScaled,
+          radial: radialSignature(mainScaled, CONFIG.refRadialBins),
+          hu: huMoments(mainScaled)
+        };
+        const c = compareDescriptorVsRegion(mainDesc, region.silhouette, region.radial, region.hu);
+        // part channel: best part composite at this scale
+        let bestPartChannel = 0; let matchedParts = 0; let bestPartName = null;
+        for (const part of ref.parts) {
+          const pScaled = rescaleSilhouette(part.canvas, CONFIG.refTargetSize, scale);
+          const pDesc = {
+            mask: pScaled,
+            radial: radialSignature(pScaled, CONFIG.refRadialBins),
+            hu: huMoments(pScaled)
+          };
+          const pc = compareDescriptorVsRegion(pDesc, region.silhouette, region.radial, region.hu);
+          const channel = 0.4*pc.iou + 0.3*pc.contour + 0.15*pc.radial + 0.15*pc.hu;
+          if (channel >= CONFIG.searchAcceptScore) matchedParts++;
+          if (channel > bestPartChannel) { bestPartChannel = channel; bestPartName = part.label; }
+        }
+        const family = (region.family === ref.family) ? 1 : 0.4;
+        const score = ensembleScore({
+          global:c.iou, contour:c.contour, radial:c.radial, hu:c.hu, geom:c.geom,
+          part:bestPartChannel, family
+        });
+        if (!best || score > best.score) {
+          best = { score, scale, components:{
+            global:c.iou, contour:c.contour, radial:c.radial, hu:c.hu, geom:c.geom,
+            part:bestPartChannel, family
+          }, matchedParts, bestPartName };
+        }
+      }
+      return best;
+    }
+
+    /* =====================================================
+     * [10] consensus
+     * ===================================================== */
+    function aggregateConsensus(allMatches) {
+      const agg = {};
+      for (const m of allMatches) {
+        const k = m.ref.product;
+        if (!agg[k]) agg[k] = { product:k, family:m.ref.family, matches:[], pages:new Set(), bestScore:0, partsObserved:new Set() };
+        agg[k].matches.push(m);
+        if (m.frame.page) agg[k].pages.add(m.frame.page);
+        else if (m.frame.label) agg[k].pages.add(m.frame.label);
+        if (m.bestPartName) agg[k].partsObserved.add(m.bestPartName);
+        if (m.score > agg[k].bestScore) agg[k].bestScore = m.score;
+      }
+      return Object.values(agg).map(d => {
+        const partBoost = Math.min(CONFIG.consensusCap, 1 + CONFIG.partCoOccurBoost * Math.max(0, d.partsObserved.size - 1));
+        const pageBoost = Math.min(CONFIG.consensusCap, 1 + CONFIG.pageCoOccurBoost * Math.max(0, d.pages.size - 1));
+        d.partBoost = partBoost; d.pageBoost = pageBoost;
+        d.confidence = clamp(d.bestScore * partBoost * pageBoost, 0, 1);
+        return d;
+      }).sort((a,b) => b.confidence - a.confidence);
+    }
+
+    /* =====================================================
+     * [11] media adapters
+     * ===================================================== */
+    async function decomposePdf(arrayBuffer) {
+      const openR = await withTimeout(pdfjsLib.getDocument({ data:arrayBuffer }).promise, CONFIG.tmoPdfOpen, 'pdf.open');
+      if (!openR.ok) throw new Error('pdf.open ' + (openR.timedOut ? 'TIMEOUT' : 'failed'));
+      const pdf = openR.value;
+      const total = pdf.numPages, limit = Math.min(total, CONFIG.maxPdfPages);
+      log('  pdf abierto · ' + total + ' páginas (procesando ' + limit + ')', 'dim');
+      const frames = [];
+      for (let i=1; i<=limit; i++) {
+        const t0 = performance.now();
+        const pageR = await withTimeout(pdf.getPage(i), CONFIG.tmoPageGet, 'getPage#'+i);
+        if (!pageR.ok) { log('  ⚠ page ' + i + ' getPage ' + (pageR.timedOut?'TIMEOUT':'ERR') + ' — skip', 'warn'); continue; }
+        const page = pageR.value;
+        const vp = page.getViewport({ scale:CONFIG.pdfRenderScale });
+        const canvas = newCanvas((vp.width + 0.5)|0, (vp.height + 0.5)|0);
+        const ctx = canvas.getContext('2d', { willReadFrequently:true });
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+        const task = page.render({ canvasContext:ctx, viewport:vp });
+        const renderR = await withTimeout(task.promise, CONFIG.tmoPageRender, 'render#'+i);
+        if (!renderR.ok) { try { task.cancel(); } catch (e) {} log('  ⚠ render ' + (renderR.timedOut?'TIMEOUT':'ERR') + ' page ' + i + ' — skip', 'warn'); continue; }
+        const tm = await buildTextMask(page, vp);
+        const dt = (performance.now() - t0)|0;
+        frames.push({ kind:'pdf-page', label:'page ' + i, canvas, textMask:tm, page:i });
+        log('  ✓ page ' + i + '/' + limit + ' · ' + canvas.width + '×' + canvas.height + ' · txt:' + tm.count + ' · ' + dt + 'ms', 'dim');
+        await yieldFrame();
+      }
+      return frames;
+    }
+    async function decomposeImage(file) {
+      const url = URL.createObjectURL(file);
+      const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('img load')); i.src = url; });
+      const maxSide = 1400;
+      const scale = Math.min(1, maxSide / Math.max(img.naturalWidth, img.naturalHeight));
+      const w = (img.naturalWidth * scale)|0, h = (img.naturalHeight * scale)|0;
+      const canvas = newCanvas(w, h);
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, w, h);
+      ctx.drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+      log('  ✓ image · ' + w + '×' + h, 'dim');
+      return [{ kind:'image', label:file.name, canvas, textMask:null }];
+    }
+    async function decomposeVideo(file) {
+      const url = URL.createObjectURL(file);
+      const v = document.createElement('video');
+      v.src = url; v.muted = true; v.playsInline = true; v.preload = 'auto';
+      const r = await withTimeout(new Promise((res, rej) => { v.onloadedmetadata = () => res(); v.onerror = () => rej(new Error('video load')); }), CONFIG.tmoVideoLoad, 'video.metadata');
+      if (!r.ok) { URL.revokeObjectURL(url); log('  ⚠ video metadata TIMEOUT', 'warn'); return []; }
+      const dur = v.duration;
+      if (!dur || !isFinite(dur)) { URL.revokeObjectURL(url); return []; }
+      const targetW = 480;
+      const ratio = (v.videoWidth && v.videoHeight) ? v.videoHeight/v.videoWidth : 9/16;
+      const targetH = (targetW * ratio)|0;
+      const tmp = newCanvas(targetW, targetH);
+      const tctx = tmp.getContext('2d', { willReadFrequently:true });
+      const samples = [];
+      for (let t=0; t<dur && samples.length < CONFIG.videoMaxFrames*2; t += CONFIG.videoSampleStep) {
+        const seekR = await withTimeout(new Promise(res => { v.onseeked = () => res(); v.currentTime = t; }), CONFIG.tmoVideoSeek, 'video.seek');
+        if (!seekR.ok) continue;
+        tctx.drawImage(v, 0, 0, targetW, targetH);
+        const data = tctx.getImageData(0, 0, targetW, targetH).data;
+        const hist = new Uint32Array(64);
+        for (let i=0; i<data.length; i+=4) hist[(((data[i]>>6)<<4) | ((data[i+1]>>6)<<2) | (data[i+2]>>6)) & 63]++;
+        samples.push({ t, hist, snapshot:tctx.getImageData(0, 0, targetW, targetH) });
+      }
+      const frames = []; let prev = null;
+      for (const s of samples) {
+        let delta = 1;
+        if (prev) {
+          let d=0, sum=0;
+          for (let i=0; i<s.hist.length; i++) { d += Math.abs(s.hist[i] - prev[i]); sum += s.hist[i]; }
+          delta = d / Math.max(1, 2*sum);
+        }
+        if (delta >= CONFIG.videoMinSceneDelta || prev === null) {
+          const fc = newCanvas(targetW, targetH);
+          fc.getContext('2d').putImageData(s.snapshot, 0, 0);
+          frames.push({ kind:'video-frame', label:'frame @' + s.t.toFixed(1) + 's', canvas:fc, textMask:null, time:s.t });
+          prev = s.hist;
+          if (frames.length >= CONFIG.videoMaxFrames) break;
+        }
+      }
+      URL.revokeObjectURL(url);
+      log('  ✓ video · ' + frames.length + ' keyframes', 'dim');
+      return frames;
+    }
+
+    /* =====================================================
+     * [12] pipeline
+     * ===================================================== */
+    async function analyzeFile(file) {
+      const t0 = performance.now();
+      const mime = file.type || '';
+      const buf = (mime === 'application/pdf') ? await file.arrayBuffer() : null;
+
+      section('MEDIA ANALYSIS');
+      log('  archivo : ' + file.name, 'dim');
+      log('  tipo    : ' + prettyMime(mime), 'dim');
+      log('  tamaño  : ' + fileSize(file.size), 'dim');
+
+      try {
+        // ── DECOMPOSITION
+        section('MEDIA DECOMPOSITION');
+        let frames = [];
+        if (mime === 'application/pdf')      frames = await decomposePdf(buf);
+        else if (mime.startsWith('image/'))  frames = await decomposeImage(file);
+        else if (mime.startsWith('video/'))  frames = await decomposeVideo(file);
+        else { log('  ✗ formato no soportado', 'err'); return; }
+        if (!frames.length) { log('  ✗ sin frames extraídos', 'err'); return; }
+
+        await ensureCatalog();
+        if (!CATALOG.length) { log('  ✗ catálogo vacío — no es posible identificar', 'err'); return; }
+
+        // ── VISUAL REGION EXTRACTION (with text suppression)
+        section('VISUAL REGIONS · TEXT SUPPRESSION');
+        let totalRegions = 0, totalTextRej = 0;
+        for (const f of frames) {
+          const r = extractVisualRegions(f);
+          f.regions = r.regions; f.textRejected = r.textRejected;
+          totalRegions += r.regions.length; totalTextRej += r.textRejected;
+        }
+        log('  regiones visuales : ' + totalRegions + ' · rechazadas por texto: ' + totalTextRej, 'dim');
+
+        // ── PHYSICAL GATE
+        section('PHYSICAL PRODUCT FILTER');
+        let kept=0, rejected=0; const breakdown = {};
+        for (const f of frames) for (const e of f.regions) {
+          const sil = silhouetteFromCanvas(e.canvas, CONFIG.refTargetSize);
+          const cls = physicalGate(e.canvas, sil);
+          e.cls = cls.cls; e.signals = cls.signals; e.reasons = cls.reasons;
+          e.productness = cls.productness; e.strong = cls.strong || 0;
+          e.silhouette = sil;
+          breakdown[cls.cls] = (breakdown[cls.cls] || 0) + 1;
+          if (cls.cls === 'physical_product') {
+            e.accepted = true;
+            e.family = classifyFamily(sil);
+            e.radial = radialSignature(sil, CONFIG.refRadialBins);
+            e.hu = huMoments(sil);
+            kept++;
+          } else { e.accepted = false; rejected++; }
+        }
+        log('  aceptadas : ' + kept + ' · rechazadas : ' + rejected + ' · ' +
+          Object.entries(breakdown).map(([k,v]) => k + ':' + v).join(' · '), kept ? 'ok' : 'warn');
+
+        // ── REFERENCE-FIRST SILHOUETTE SEARCH
+        section('TRUE SOURCE SILHOUETTE SEARCH (reference → media)');
+        const allMatches = [];
+        for (const ref of CATALOG) {
+          let perRef = [];
+          for (const f of frames) {
+            for (const region of (f.regions || [])) {
+              if (!region.accepted) continue;
+              const r = searchReferenceInRegion(ref, region);
+              if (r && r.score >= CONFIG.searchAcceptScore) {
+                perRef.push({ ref, frame:f, region, ...r });
+              }
+            }
+          }
+          perRef.sort((a,b) => b.score - a.score);
+          perRef = perRef.slice(0, CONFIG.searchTopMatchesPerRef);
+          for (const m of perRef) allMatches.push(m);
+          log('  ' + ref.product + ' → ' + perRef.length + ' matches' +
+            (perRef[0] ? ' · best=' + perRef[0].score.toFixed(3) : ''),
+            perRef.length ? 'ok' : 'dim');
+          await yieldFrame();
+        }
+
+        // ── CONSENSUS
+        section('CONSENSUS ENGINE');
+        const ranked = aggregateConsensus(allMatches);
+        if (ranked.length) {
+          for (const d of ranked.slice(0, 5)) {
+            log('  ' + d.product + ' · conf=' + d.confidence.toFixed(3) +
+              ' · best=' + d.bestScore.toFixed(3) +
+              ' · ×' + d.partBoost.toFixed(2) + 'p · ×' + d.pageBoost.toFixed(2) + 'g' +
+              ' · pages=' + d.pages.size + ' · parts=' + d.partsObserved.size, 'dim');
+          }
+        } else log('  sin candidatos consistentes', 'warn');
+
+        // ── EVIDENCE VAULT
+        const vault = [];
+        for (const m of allMatches) {
+          let level = null;
+          if (m.score >= CONFIG.evidenceCanonical) level = 'canonical';
+          else if (m.score >= CONFIG.evidenceProbable) level = 'probable';
+          else if (m.score >= CONFIG.evidenceTentative) level = 'tentative';
+          if (level) vault.push({ level, match:m, stored: m.score >= CONFIG.vaultStoreThreshold });
+        }
+
+        // ── FINAL
+        section('FINAL IDENTIFICATION');
+        const winner = ranked[0] || null;
+        if (winner) {
+          log('  → ' + winner.product + ' · conf=' + winner.confidence.toFixed(3), 'ok');
+        } else log('  → sin ganador (precision-first)', 'warn');
+
+        renderReport({
+          file, frames, ranked, allMatches, breakdown, totalRegions, totalTextRej,
+          kept, rejected, vault, winner, dt:(performance.now() - t0)|0
+        });
+      } catch (e) {
+        log('  ✗ pipeline aborted: ' + (e.message || e), 'err'); console.error(e);
+      }
+    }
+
+    /* =====================================================
+     * [13] report — 10 sections per spec
+     * ===================================================== */
+    const badge = (cls, label) => '<span class="badge ' + cls + '">' + label + '</span>';
+    function tableKV(pairs) {
+      const tbl = document.createElement('table'); tbl.className = 'report';
+      for (const [k, v] of pairs) {
+        const tr = document.createElement('tr');
+        const kd = document.createElement('td'); kd.className = 'k'; kd.textContent = k;
+        const vd = document.createElement('td'); vd.className = 'v';
+        if (v instanceof Node) vd.appendChild(v); else vd.innerHTML = v;
+        tr.appendChild(kd); tr.appendChild(vd); tbl.appendChild(tr);
+      }
+      return tbl;
+    }
+    const sH = t => { const e = document.createElement('div'); e.className = 'term-line head'; e.textContent = '── ' + t + ' ──'; return e; };
+
+    function renderReport(r) {
+      const wrap = document.createElement('div');
+      const head = document.createElement('div'); head.className = 'term-line head';
+      head.textContent = '═══ REPORTE FINAL ═══'; wrap.appendChild(head);
+
+      // ── 1 · SOURCE CATALOG
+      wrap.appendChild(sH('1 · source catalog (' + (CATALOG ? CATALOG.length : 0) + ')'));
+      if (CATALOG && CATALOG.length) {
+        const grid = document.createElement('div'); grid.className = 'grid';
+        let cnt = 0;
+        for (const ref of CATALOG) {
+          for (const desc of [ref.main, ...ref.parts]) {
+            if (cnt >= CONFIG.maxRefDebugCells) break;
+            const cell = document.createElement('div'); cell.className = 'cell';
+            const cv = document.createElement('canvas');
+            const tw = 90, th = Math.max(40, ((desc.canvas.height/desc.canvas.width) * tw)|0);
+            cv.width = tw; cv.height = th;
+            cv.getContext('2d').drawImage(desc.canvas, 0, 0, tw, th);
+            cell.appendChild(cv);
+            const lbl = document.createElement('div'); lbl.className = 'lbl'; lbl.textContent = desc.label;
+            cell.appendChild(lbl);
+            const meta = document.createElement('div'); meta.className = 'meta';
+            meta.innerHTML = badge('fam-' + desc.family, desc.family) + (desc.alphaUsed ? ' <span style="color:#8be9a3">α</span>' : '');
+            cell.appendChild(meta);
+            grid.appendChild(cell); cnt++;
+          }
+        }
+        wrap.appendChild(grid);
+      }
+
+      // ── 2 · MEDIA ANALYSIS
+      wrap.appendChild(sH('2 · media analysis'));
+      wrap.appendChild(tableKV([
+        ['archivo', r.file.name],
+        ['tipo', prettyMime(r.file.type)],
+        ['tamaño', fileSize(r.file.size)],
+        ['tiempo total', r.dt + ' ms']
+      ]));
+
+      // ── 3 · MEDIA DECOMPOSITION
+      wrap.appendChild(sH('3 · media decomposition'));
+      wrap.appendChild(tableKV([
+        ['frames procesados', String(r.frames.length)],
+        ['kind', r.frames[0] ? r.frames[0].kind : '—']
+      ]));
+
+      // ── 4 · VISUAL REGIONS
+      wrap.appendChild(sH('4 · visual regions'));
+      wrap.appendChild(tableKV([
+        ['regiones extraídas', String(r.totalRegions)],
+        ['rechazadas por texto', String(r.totalTextRej)],
+        ['gate · aceptadas', badge('ok', String(r.kept))],
+        ['gate · rechazadas', badge('no', String(r.rejected))]
+      ]));
+
+      // ── 5 · TEXT SUPPRESSION
+      wrap.appendChild(sH('5 · text suppression'));
+      const txtPdf = r.frames.filter(f => f.textMask && f.textMask.mask).length;
+      wrap.appendChild(tableKV([
+        ['frames con text-layer', String(txtPdf) + ' / ' + r.frames.length],
+        ['umbral overlap rechazo', '> ' + (CONFIG.textOverlapReject*100).toFixed(0) + ' %'],
+        ['regiones suprimidas', String(r.totalTextRej)]
+      ]));
+
+      // ── 6 · SILHOUETTE SEARCH
+      wrap.appendChild(sH('6 · silhouette search (reference-first)'));
+      const stbl = document.createElement('table'); stbl.className = 'report';
+      stbl.innerHTML = '<thead><tr><th>frame</th><th>ref</th><th>scale</th><th>score</th><th>global</th><th>part</th><th>contour</th><th>radial</th><th>hu</th><th>geom</th><th>fam</th></tr></thead>';
+      const stb = document.createElement('tbody');
+      r.allMatches.slice().sort((a,b) => b.score - a.score).slice(0, CONFIG.maxDetailRows).forEach(m => {
+        const c = m.components;
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + m.frame.label + '</td><td>' + m.ref.product + '</td>' +
+          '<td>×' + m.scale.toFixed(2) + '</td>' +
+          '<td><strong>' + m.score.toFixed(3) + '</strong></td>' +
+          '<td>' + c.global.toFixed(2) + '</td><td>' + c.part.toFixed(2) + '</td>' +
+          '<td>' + c.contour.toFixed(2) + '</td><td>' + c.radial.toFixed(2) + '</td>' +
+          '<td>' + c.hu.toFixed(2) + '</td><td>' + c.geom.toFixed(2) + '</td>' +
+          '<td>' + c.family.toFixed(2) + '</td>';
+        stb.appendChild(tr);
+      });
+      stbl.appendChild(stb); wrap.appendChild(stbl);
+      if (!r.allMatches.length) { const p = document.createElement('div'); p.className = 'term-line warn'; p.textContent = '  ningún match superó el umbral ' + CONFIG.searchAcceptScore; wrap.appendChild(p); }
+
+      // ── 7 · PART MATCHES
+      wrap.appendChild(sH('7 · part matches'));
+      const partRows = r.allMatches
+        .filter(m => m.bestPartName)
+        .sort((a,b) => b.components.part - a.components.part)
+        .slice(0, CONFIG.maxDetailRows);
+      if (partRows.length) {
+        const ptbl = document.createElement('table'); ptbl.className = 'report';
+        ptbl.innerHTML = '<thead><tr><th>frame</th><th>ref</th><th>parte ganadora</th><th>part-score</th><th>partes✓</th></tr></thead>';
+        const ptb = document.createElement('tbody');
+        partRows.forEach(m => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + m.frame.label + '</td><td>' + m.ref.product + '</td>' +
+            '<td>' + (m.bestPartName || '—') + '</td>' +
+            '<td>' + m.components.part.toFixed(3) + '</td>' +
+            '<td>' + m.matchedParts + '</td>';
+          ptb.appendChild(tr);
+        });
+        ptbl.appendChild(ptb); wrap.appendChild(ptbl);
+      } else { const p = document.createElement('div'); p.className = 'term-line dim'; p.textContent = '  sin matches a nivel de parte'; wrap.appendChild(p); }
+
+      // ── 8 · CONSENSUS ENGINE
+      wrap.appendChild(sH('8 · consensus engine'));
+      if (!r.ranked.length) {
+        const p = document.createElement('div'); p.className = 'term-line warn'; p.textContent = '  sin consenso'; wrap.appendChild(p);
+      } else {
+        const tbl = document.createElement('table'); tbl.className = 'report';
+        tbl.innerHTML = '<thead><tr><th>#</th><th>producto</th><th>familia</th><th>conf</th><th>best</th><th>×part</th><th>×page</th><th>pages</th><th>parts</th></tr></thead>';
+        const tb = document.createElement('tbody');
+        r.ranked.forEach((d, i) => {
+          const tr = document.createElement('tr');
+          if (i === 0) tr.className = 'winner';
+          tr.innerHTML = '<td>' + (i+1) + '</td><td>' + d.product + '</td>' +
+            '<td>' + badge('fam-' + d.family, d.family) + '</td>' +
+            '<td><strong>' + d.confidence.toFixed(3) + '</strong></td>' +
+            '<td>' + d.bestScore.toFixed(3) + '</td>' +
+            '<td>×' + d.partBoost.toFixed(2) + '</td>' +
+            '<td>×' + d.pageBoost.toFixed(2) + '</td>' +
+            '<td>' + d.pages.size + '</td>' +
+            '<td>' + d.partsObserved.size + '</td>';
+          tb.appendChild(tr);
+        });
+        tbl.appendChild(tb); wrap.appendChild(tbl);
+      }
+
+      // ── 9 · FINAL IDENTIFICATION + WHY
+      wrap.appendChild(sH('9 · final identification'));
+      const why = document.createElement('div');
+      if (r.winner) {
+        why.className = 'why';
+        const w = r.winner;
+        const partsList = Array.from(w.partsObserved).join(', ') || '—';
+        why.innerHTML =
+          '<strong>WHY ' + w.product + ' belongs to this media:</strong><br/>' +
+          '• mejor score individual: <strong>' + w.bestScore.toFixed(3) + '</strong> (umbral=' + CONFIG.searchAcceptScore + ')<br/>' +
+          '• evidencia repetida en <strong>' + w.pages.size + '</strong> página(s)/frame(s) → page boost ×' + w.pageBoost.toFixed(2) + '<br/>' +
+          '• partes únicas reconocidas: <strong>' + w.partsObserved.size + '</strong> (' + partsList + ') → part boost ×' + w.partBoost.toFixed(2) + '<br/>' +
+          '• familia coherente: <strong>' + w.family + '</strong><br/>' +
+          '• confianza final: <strong>' + w.confidence.toFixed(3) + '</strong>';
+      } else {
+        why.className = 'why no';
+        why.innerHTML =
+          '<strong>NO winner:</strong><br/>' +
+          'ningún producto del catálogo superó el umbral de evidencia. ' +
+          'la política precision-first prefiere rechazar antes que afirmar bajo ruido.<br/>' +
+          'razones probables: catálogo no contiene el producto · medio sin contenido visual de producto · evidencia rechazada por gate de texto/QR/UI.';
+      }
+      wrap.appendChild(why);
+
+      // ── 10 · VISUAL EVIDENCE
+      wrap.appendChild(sH('10 · visual evidence vault'));
+      if (r.vault.length) {
+        const vtbl = document.createElement('table'); vtbl.className = 'report';
+        vtbl.innerHTML = '<thead><tr><th>nivel</th><th>ref</th><th>frame</th><th>score</th><th>parts✓</th><th>stored</th></tr></thead>';
+        const vtb = document.createElement('tbody');
+        r.vault.sort((a,b) => b.match.score - a.match.score).forEach(v => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = '<td>' + badge('lvl-' + v.level, v.level) + '</td>' +
+            '<td>' + v.match.ref.product + '</td><td>' + v.match.frame.label + '</td>' +
+            '<td>' + v.match.score.toFixed(3) + '</td><td>' + v.match.matchedParts + '</td>' +
+            '<td>' + (v.stored ? badge('ok', '✓') : '—') + '</td>';
+          vtb.appendChild(tr);
+        });
+        vtbl.appendChild(vtb); wrap.appendChild(vtbl);
+      } else {
+        const p = document.createElement('div'); p.className = 'term-line dim';
+        p.textContent = '  sin evidencia almacenable (umbral=' + CONFIG.vaultStoreThreshold + ')';
+        wrap.appendChild(p);
+      }
+
+      // gate breakdown
+      wrap.appendChild(sH('apéndice · physical gate breakdown'));
+      const gtbl = document.createElement('table'); gtbl.className = 'report';
+      gtbl.innerHTML = '<thead><tr><th>clase</th><th>conteo</th></tr></thead>';
+      const gtb = document.createElement('tbody');
+      Object.entries(r.breakdown).sort((a,b) => b[1] - a[1]).forEach(([k, v]) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + badge('cls-' + k, k.replace('_',' ')) + '</td><td>' + v + '</td>';
+        gtb.appendChild(tr);
+      });
+      gtbl.appendChild(gtb); wrap.appendChild(gtbl);
+
+      // entity gallery
+      wrap.appendChild(sH('apéndice · regiones extraídas (debug)'));
+      const grid = document.createElement('div'); grid.className = 'grid';
+      let cnt = 0;
+      for (const f of r.frames) {
+        for (const e of (f.regions || [])) {
+          if (cnt >= CONFIG.maxDebugCells) break;
+          const cell = document.createElement('div'); cell.className = 'cell';
+          const cv = document.createElement('canvas');
+          const tw = 100, th = Math.max(40, ((e.canvas.height/e.canvas.width) * tw)|0);
+          cv.width = tw; cv.height = th;
+          cv.getContext('2d').drawImage(e.canvas, 0, 0, tw, th);
+          cell.appendChild(cv);
+          const lbl = document.createElement('div'); lbl.className = 'lbl';
+          lbl.innerHTML = badge('cls-' + e.cls, e.cls);
+          cell.appendChild(lbl);
+          const meta = document.createElement('div'); meta.className = 'meta';
+          meta.textContent = f.label + ' · prod=' + (e.productness || 0).toFixed(2) +
+            ' · str=' + (e.strong || 0) + ' · txt=' + (e.textOverlap || 0).toFixed(2);
+          cell.appendChild(meta);
+          grid.appendChild(cell); cnt++;
+        }
+        if (cnt >= CONFIG.maxDebugCells) break;
+      }
+      wrap.appendChild(grid);
+
+      appendNode(wrap);
+    }
+
+    /* =====================================================
+     * [14] ui
+     * ===================================================== */
+    const fileInput  = document.getElementById('fileInput');
+    const dropzone   = document.getElementById('dropzone');
+    const fileListEl = document.getElementById('filelist');
+    const analyzeBtn = document.getElementById('analyzeBtn');
+    const clearBtn   = document.getElementById('clearBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const files = [];
+    function renderFileList() {
+      fileListEl.innerHTML = '';
+      files.forEach((f, i) => {
+        const li = document.createElement('li');
+        const a = document.createElement('span'); a.className = 'name'; a.textContent = f.name;
+        const m = document.createElement('span'); m.className = 'meta'; m.textContent = prettyMime(f.type) + ' · ' + fileSize(f.size);
+        const rm = document.createElement('button'); rm.className = 'rm'; rm.textContent = '✕';
+        rm.onclick = () => { files.splice(i, 1); renderFileList(); };
+        li.appendChild(a); li.appendChild(m); li.appendChild(rm); fileListEl.appendChild(li);
+      });
+      analyzeBtn.disabled = files.length === 0;
+      clearBtn.disabled   = files.length === 0;
+    }
+    function addFiles(fl) { for (const f of fl) files.push(f); renderFileList(); }
+    fileInput.addEventListener('change', e => { addFiles(e.target.files); e.target.value = ''; });
+    // <label class="dropzone"> already opens picker natively. Do NOT add a click handler (would double-open).
+    dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('is-drag'); });
+    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('is-drag'));
+    dropzone.addEventListener('drop', e => {
+      e.preventDefault(); dropzone.classList.remove('is-drag');
+      if (e.dataTransfer && e.dataTransfer.files) addFiles(e.dataTransfer.files);
+    });
+    clearBtn.addEventListener('click', () => { files.length = 0; renderFileList(); term.innerHTML = ''; downloadBtn.disabled = true; });
+
+    analyzeBtn.addEventListener('click', async () => {
+      analyzeBtn.disabled = true; clearBtn.disabled = true;
+      term.innerHTML = '';
+      log('$ identificar-fuente --files=' + files.length, 'head');
+      log('# inicio: ' + new Date().toISOString(), 'dim');
+      try {
+        await ensureCatalog();
+        for (let i=0; i<files.length; i++) {
+          const f = files[i];
+          log('\n[' + (i+1) + '/' + files.length + '] → ' + f.name, 'head');
+          try { await analyzeFile(f); }
+          catch (e) { log('✘ error: ' + (e.message || e), 'err'); console.error(e); }
+        }
+      } catch (e) { log('✘ error global: ' + (e.message || e), 'err'); console.error(e); }
+      log('\n# fin: ' + new Date().toISOString(), 'dim');
+      log('$ _', 'dim');
+      analyzeBtn.disabled = false; clearBtn.disabled = false; downloadBtn.disabled = false;
+    });
+
+    downloadBtn.addEventListener('click', async () => {
+      const orig = downloadBtn.textContent;
+      downloadBtn.disabled = true; downloadBtn.textContent = '↓ generando…';
+      try {
+        if (typeof html2canvas !== 'function') throw new Error('html2canvas no disponible');
+        const { jsPDF } = window.jspdf;
+        const src = term;
+        const stage = document.createElement('div');
+        stage.style.cssText = 'position:fixed; left:-99999px; top:0; width:' + Math.max(900, src.clientWidth) + 'px;' +
+          ' background:#0a121f; color:#cfd6e2; font:12px ui-monospace,Menlo,Consolas,monospace;' +
+          ' padding:16px; box-sizing:border-box;';
+        const clone = src.cloneNode(true);
+        clone.style.cssText = 'max-height:none; overflow:visible; padding:0; background:transparent;';
+        const srcCanvases = src.querySelectorAll('canvas');
+        const dstCanvases = clone.querySelectorAll('canvas');
+        for (let i=0; i<srcCanvases.length && i<dstCanvases.length; i++) {
+          try { const sc = srcCanvases[i], dc = dstCanvases[i];
+            dc.width = sc.width; dc.height = sc.height;
+            dc.getContext('2d').drawImage(sc, 0, 0);
+          } catch (e) {}
+        }
+        stage.appendChild(clone); document.body.appendChild(stage);
+        const canvas = await html2canvas(stage, {
+          backgroundColor:'#0a121f',
+          scale: Math.min(2, window.devicePixelRatio || 1.5),
+          useCORS:true, logging:false, imageTimeout:5000,
+          windowWidth:stage.scrollWidth, windowHeight:stage.scrollHeight
+        });
+        document.body.removeChild(stage);
+        const pdf = new jsPDF({ unit:'pt', format:'a4', compress:true });
+        const pageW = pdf.internal.pageSize.getWidth();
+        const pageH = pdf.internal.pageSize.getHeight();
+        const margin = 24, printW = pageW - margin*2;
+        const ratio = canvas.width / printW;
+        const sliceH = (pageH - margin*2) * ratio;
+        let off = 0, page = 0;
+        while (off < canvas.height) {
+          const h = Math.min(sliceH, canvas.height - off);
+          const slice = document.createElement('canvas');
+          slice.width = canvas.width; slice.height = h;
+          slice.getContext('2d').drawImage(canvas, 0, off, canvas.width, h, 0, 0, canvas.width, h);
+          const imgData = slice.toDataURL('image/jpeg', 0.85);
+          if (page > 0) pdf.addPage();
+          pdf.addImage(imgData, 'JPEG', margin, margin, printW, h/ratio, undefined, 'FAST');
+          off += h; page++;
+          await new Promise(r => setTimeout(r, 0));
+        }
+        pdf.save('lector_report.pdf');
+      } catch (e) { console.error(e); log('  ✗ export PDF falló: ' + (e.message || e), 'err'); }
+      finally { downloadBtn.disabled = false; downloadBtn.textContent = orig; }
+    });
+
+    log('lector listo. arrastra un archivo para empezar.', 'dim');
+  })();
+  </script>
+</body>
+</html>
