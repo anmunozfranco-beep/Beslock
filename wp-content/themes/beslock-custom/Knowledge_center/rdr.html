@@ -1,0 +1,1392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TRUE SOURCES — RDR · Visual Decomposition Engine</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  :root {
+    --bg:#0b111c; --panel:#111c2e; --panel2:#0e1726; --border:#1f2c45;
+    --text:#e4ecf7; --muted:#8a93a4; --gold:#f5d27a; --blue:#2b6cb0;
+    --green:#2f6f4f; --red:#7a2b2b; --yellow:#7a6a2b;
+    --mono:'SF Mono',Menlo,Consolas,monospace;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; height:100%; background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:13px; }
+  .app { display:grid; grid-template-columns:340px 1fr; gap:0; height:100vh; }
+  .left { background:var(--panel); border-right:1px solid var(--border); display:flex; flex-direction:column; padding:18px; gap:14px; overflow-y:auto; }
+  .right { background:var(--panel2); display:flex; flex-direction:column; overflow:hidden; }
+  h1 { font-size:14px; margin:0; color:var(--gold); letter-spacing:.06em; text-transform:uppercase; }
+  .sub { color:var(--muted); font-size:11px; margin-top:-8px; }
+  .dropzone { display:block; border:2px dashed #2a3953; border-radius:8px; padding:28px 16px;
+    text-align:center; color:var(--muted); cursor:pointer; transition:.15s; background:var(--panel2); }
+  .dropzone:hover, .dropzone.drag { border-color:var(--gold); color:var(--gold); background:#0f1828; }
+  .dropzone input { display:none; }
+  .queue { display:flex; flex-direction:column; gap:6px; max-height:260px; overflow-y:auto; }
+  .qitem { background:var(--panel2); border:1px solid var(--border); border-radius:4px;
+    padding:8px 10px; font-size:12px; display:flex; justify-content:space-between; align-items:center; }
+  .qitem .nm { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:200px; }
+  .qitem .rm { color:var(--muted); cursor:pointer; padding:0 6px; }
+  .qitem .rm:hover { color:#ff6b6b; }
+  .btn { display:block; width:100%; padding:10px 14px; border:0; border-radius:5px;
+    background:var(--blue); color:#fff; font-weight:600; font-size:13px; cursor:pointer; }
+  .btn[disabled] { background:#2a3953; color:#6c7a90; cursor:not-allowed; }
+  .btn.ghost { background:transparent; border:1px solid var(--border); color:var(--muted); font-weight:500; }
+  .btn.ghost:hover { color:var(--text); border-color:#2a3953; }
+  .meta { font-size:11px; color:var(--muted); line-height:1.6; }
+  .meta b { color:var(--text); font-weight:500; }
+
+  .right-head { padding:14px 18px; border-bottom:1px solid var(--border);
+    display:flex; justify-content:space-between; align-items:center; }
+  .right-head h2 { margin:0; font-size:13px; color:var(--gold); text-transform:uppercase; letter-spacing:.06em; }
+  .right-body { flex:1; overflow-y:auto; padding:16px 22px; font-family:var(--mono); font-size:12px; line-height:1.65; }
+  .sec { margin:18px 0 22px; }
+  .sec h3 { color:var(--gold); font-size:12px; margin:0 0 10px; padding-bottom:6px;
+    border-bottom:1px solid var(--border); text-transform:uppercase; letter-spacing:.06em; }
+  .row { display:grid; grid-template-columns:160px 1fr; gap:6px 12px; padding:2px 0; }
+  .row .k { color:var(--muted); }
+  .row .v { color:var(--text); }
+  .pill { display:inline-block; padding:1px 8px; border-radius:99px; font-size:10px;
+    background:#1f2c45; color:#cfd6e2; margin-right:4px; }
+  .pill.g { background:var(--green); color:#cfeedf; }
+  .pill.r { background:var(--red); color:#ffd0d0; }
+  .pill.y { background:var(--yellow); color:#fff0c8; }
+  .pill.b { background:var(--blue); color:#fff; }
+  .tbl { width:100%; border-collapse:collapse; margin-top:6px; }
+  .tbl th, .tbl td { text-align:left; padding:5px 8px; border-bottom:1px solid var(--border); font-size:11px; }
+  .tbl th { color:var(--muted); font-weight:500; text-transform:uppercase; letter-spacing:.04em; font-size:10px; }
+  .crops { display:grid; grid-template-columns:repeat(auto-fill,minmax(96px,1fr)); gap:8px; margin-top:8px; }
+  .crop { background:#000; border:1px solid var(--border); border-radius:3px; padding:4px;
+    text-align:center; }
+  .crop canvas { display:block; max-width:100%; height:auto; image-rendering:pixelated; }
+  .crop .lbl { font-size:9px; color:var(--muted); margin-top:3px; }
+  .fam { background:var(--panel); border:1px solid var(--border); border-radius:6px; padding:12px 14px; margin:10px 0; }
+  .fam-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+  .fam-head .nm { color:var(--gold); font-weight:600; font-size:13px; }
+  .fam-head .ct { color:var(--muted); font-size:11px; }
+  .empty { color:var(--muted); padding:30px 0; text-align:center; }
+  .log { color:var(--muted); white-space:pre-wrap; }
+  .log .ok { color:#8be9a3; }
+  .log .warn { color:#f5d27a; }
+  .log .err { color:#ff8585; }
+  .log .info { color:#9bb6df; }
+</style>
+</head>
+<body>
+<div class="app">
+
+  <aside class="left">
+    <div>
+      <h1>TRUE SOURCES — RDR</h1>
+      <div class="sub">Visual Decomposition Engine · Phase 1</div>
+    </div>
+
+    <label class="dropzone" id="dz">
+      <input type="file" id="fi" multiple
+        accept=".pdf,.png,.jpg,.jpeg,.webp,.mp4,.mov,application/pdf,image/*,video/*">
+      <div style="font-size:13px; color:var(--gold); font-weight:600;">DROP MEDIA</div>
+      <div style="margin-top:4px; font-size:11px;">PDF · PNG · JPG · WEBP · MP4 · MOV</div>
+    </label>
+
+    <div class="queue" id="queue"></div>
+
+    <button class="btn" id="run" disabled>ANALYZE</button>
+    <button class="btn ghost" id="export" disabled>DOWNLOAD PDF</button>
+    <button class="btn ghost" id="reset">RESET</button>
+
+    <div class="meta">
+      <div><b>Mission.</b> Learn how to visually decompose a medium and group recurring elements into <b>visual families</b>.</div>
+      <div style="margin-top:8px;"><b>Not</b> product identification. <b>Not</b> silhouette matching. <b>Not</b> OCR.</div>
+      <div style="margin-top:8px;"><b>100% local.</b> Deterministic. No backend, no API, no upload.</div>
+    </div>
+  </aside>
+
+  <section class="right">
+    <div class="right-head">
+      <h2>Visual Report</h2>
+      <div class="meta" id="hdrMeta"></div>
+    </div>
+    <div class="right-body" id="report">
+      <div class="empty">Drop media on the left and press <b>ANALYZE</b>.</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  if (window['pdfjsLib']) {
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+      'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  }
+</script>
+
+<script>
+'use strict';
+
+/* ============================================================
+ * MODULE [0] CONFIG
+ * ============================================================ */
+const CONFIG = {
+  // timeouts (ms)
+  tmoPdfOpen:        20000,
+  tmoPageRender:     10000,
+  tmoVideoLoad:      15000,
+  tmoVideoSeek:       4000,
+  tmoImageLoad:       8000,
+
+  // PDF
+  pdfRenderScale:     1.5,
+  maxPdfPages:        24,
+
+  // VIDEO
+  videoSampleStep:    2.0,   // seconds
+  videoMaxFrames:     100,
+
+  // FRAME normalization
+  frameMaxSide:       1280,  // downscale large frames
+
+  // DECOMPOSITION
+  adaptiveBlockRatio: 0.04,  // adaptive threshold block = max(15, side*ratio)
+  adaptiveK:          8,
+  morphDilate:        2,     // px
+  ccMinAreaRatio:     0.0015,// region area >= 0.15% of frame area
+  ccMaxAreaRatio:     0.85,  // reject regions covering most of frame
+
+  // NOISE rejection thresholds
+  rejAspectExtreme:   8.0,   // w/h > 8 or h/w > 8
+  rejDensityMin:      0.06,  // mask fill ratio min inside bbox
+  rejBorderTouchPct:  0.85,  // bbox edge touches > 85% of any frame border
+  rejEntropyMin:      0.35,  // normalized entropy
+  rejFragmentation:   0.9,   // contour-fragmentation score
+
+  // FEATURES
+  fpSize:             64,    // fingerprint mask resampled to 64x64
+  radialBins:         24,
+  edgeHistBins:       8,
+  colorPaletteBins:   4,     // 4x4x4 quantized RGB palette top-K
+  paletteTopK:        4,
+
+  // CLASSIFICATION heuristics
+  cls: {
+    iconMaxSide:        96,
+    textGraphicGradMin: 0.18, // edge density above this -> textish
+    textGraphicAspect:  3.5,
+    uiScreenAspectMin:  0.55,
+    uiScreenAspectMax:  2.2,
+    uiScreenFlatness:   0.70, // % of pixels in dominant tone bucket
+    diagramEdgeMin:     0.22,
+    diagramShadeMax:    0.18,
+    productCircMin:     0.18,
+    productOccMin:      0.20,
+    productOccMax:      0.92,
+    tableGridMin:       0.55, // grid-line score
+  },
+
+  // CLUSTERING (deterministic agglomerative)
+  clusterDistMax:     0.42,  // merge threshold on combined distance [0..1]
+  clusterMinSize:     1,
+  clusterFeatureWeights: {
+    fp:      0.34,   // fingerprint IoU
+    radial:  0.18,   // radial signature
+    hu:      0.10,   // Hu moments
+    edge:    0.10,   // edge histogram
+    geom:    0.10,   // geometry vector
+    color:   0.10,   // dominant palette
+    cls:     0.08,   // visual class agreement
+  },
+
+  // REPORT
+  cropDisplaySize:    96,
+  maxRepresentatives: 8,
+};
+
+/* ============================================================
+ * MODULE [1] util
+ * ============================================================ */
+const util = (() => {
+  const yieldFrame = () => new Promise(r => setTimeout(r, 0));
+  function withTimeout(promise, ms, label) {
+    return new Promise((resolve) => {
+      let done = false;
+      const t = setTimeout(() => {
+        if (done) return; done = true;
+        resolve({ ok:false, timedOut:true, error:new Error('timeout: '+label+' ('+ms+'ms)') });
+      }, ms);
+      Promise.resolve(promise).then(v => {
+        if (done) return; done = true; clearTimeout(t);
+        resolve({ ok:true, value:v });
+      }, e => {
+        if (done) return; done = true; clearTimeout(t);
+        resolve({ ok:false, timedOut:false, error:e });
+      });
+    });
+  }
+  const clamp = (x, a, b) => x < a ? a : x > b ? b : x;
+  function fmtBytes(n){
+    if (n < 1024) return n+' B';
+    if (n < 1048576) return (n/1024).toFixed(1)+' KB';
+    return (n/1048576).toFixed(2)+' MB';
+  }
+  function shortHash(s){
+    let h = 5381 >>> 0;
+    for (let i=0;i<s.length;i++) h = (((h<<5)+h) ^ s.charCodeAt(i)) >>> 0;
+    return h.toString(16).padStart(8,'0');
+  }
+  function escHTML(s){
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[c]));
+  }
+  return { yieldFrame, withTimeout, clamp, fmtBytes, shortHash, escHTML };
+})();
+
+/* ============================================================
+ * MODULE [2] pixel — primitives
+ * ============================================================ */
+const pixel = (() => {
+  function toGray(imgData) {
+    const { data, width, height } = imgData;
+    const out = new Uint8ClampedArray(width * height);
+    for (let i=0, p=0; p < out.length; i+=4, p++) {
+      // ITU-R BT.601 luma
+      out[p] = (data[i]*0.299 + data[i+1]*0.587 + data[i+2]*0.114) | 0;
+    }
+    return { gray: out, width, height };
+  }
+  function integral(gray, w, h){
+    const I = new Float64Array((w+1)*(h+1));
+    for (let y=1; y<=h; y++){
+      let row = 0;
+      for (let x=1; x<=w; x++){
+        row += gray[(y-1)*w + (x-1)];
+        I[y*(w+1)+x] = I[(y-1)*(w+1)+x] + row;
+      }
+    }
+    return I;
+  }
+  function adaptiveThreshold(gray, w, h){
+    const block = Math.max(15, Math.round(Math.min(w,h) * CONFIG.adaptiveBlockRatio) | 1);
+    const half = block >> 1;
+    const I = integral(gray, w, h);
+    const out = new Uint8Array(w*h);
+    const W = w+1;
+    for (let y=0; y<h; y++){
+      const y0 = Math.max(0, y-half), y1 = Math.min(h-1, y+half);
+      for (let x=0; x<w; x++){
+        const x0 = Math.max(0, x-half), x1 = Math.min(w-1, x+half);
+        const cnt = (x1-x0+1)*(y1-y0+1);
+        const sum = I[(y1+1)*W + (x1+1)] - I[(y0)*W + (x1+1)] - I[(y1+1)*W + x0] + I[y0*W + x0];
+        const mean = sum / cnt;
+        out[y*w+x] = (gray[y*w+x] < mean - CONFIG.adaptiveK) ? 1 : 0;
+      }
+    }
+    return out;
+  }
+  function dilate(mask, w, h, r){
+    if (r <= 0) return mask;
+    let cur = mask;
+    for (let k=0; k<r; k++){
+      const out = new Uint8Array(w*h);
+      for (let y=0; y<h; y++){
+        for (let x=0; x<w; x++){
+          if (cur[y*w+x]) { out[y*w+x] = 1; continue; }
+          if ((x>0 && cur[y*w+(x-1)]) || (x<w-1 && cur[y*w+(x+1)]) ||
+              (y>0 && cur[(y-1)*w+x]) || (y<h-1 && cur[(y+1)*w+x])) out[y*w+x] = 1;
+        }
+      }
+      cur = out;
+    }
+    return cur;
+  }
+  function connectedComponents(mask, w, h){
+    const labels = new Int32Array(w*h);
+    const stack = new Int32Array(w*h);
+    const comps = [];
+    let next = 1;
+    for (let y=0; y<h; y++){
+      for (let x=0; x<w; x++){
+        const idx = y*w+x;
+        if (!mask[idx] || labels[idx]) continue;
+        let sp = 0; stack[sp++] = idx; labels[idx] = next;
+        let minX=x, minY=y, maxX=x, maxY=y, count=0;
+        while (sp){
+          const p = stack[--sp]; count++;
+          const py = (p / w) | 0, px = p - py*w;
+          if (px < minX) minX = px; if (px > maxX) maxX = px;
+          if (py < minY) minY = py; if (py > maxY) maxY = py;
+          // 4-connectivity
+          if (px > 0)   { const q = p-1; if (mask[q] && !labels[q]) { labels[q]=next; stack[sp++]=q; } }
+          if (px < w-1) { const q = p+1; if (mask[q] && !labels[q]) { labels[q]=next; stack[sp++]=q; } }
+          if (py > 0)   { const q = p-w; if (mask[q] && !labels[q]) { labels[q]=next; stack[sp++]=q; } }
+          if (py < h-1) { const q = p+w; if (mask[q] && !labels[q]) { labels[q]=next; stack[sp++]=q; } }
+        }
+        comps.push({ id: next, area: count, bbox: [minX, minY, maxX, maxY] });
+        next++;
+      }
+    }
+    return { labels, comps };
+  }
+  function gradients(gray, w, h){
+    const gx = new Int16Array(w*h), gy = new Int16Array(w*h), mag = new Uint16Array(w*h);
+    for (let y=1; y<h-1; y++){
+      for (let x=1; x<w-1; x++){
+        const i = y*w+x;
+        const a = gray[i-w-1], b = gray[i-w], c = gray[i-w+1];
+        const d = gray[i-1],                   f = gray[i+1];
+        const g = gray[i+w-1], hh= gray[i+w], k = gray[i+w+1];
+        const gxv = -a + c - 2*d + 2*f - g + k;
+        const gyv = -a - 2*b - c + g + 2*hh + k;
+        gx[i] = gxv; gy[i] = gyv;
+        mag[i] = Math.min(65535, (Math.abs(gxv) + Math.abs(gyv))) | 0;
+      }
+    }
+    return { gx, gy, mag };
+  }
+  return { toGray, integral, adaptiveThreshold, dilate, connectedComponents, gradients };
+})();
+
+/* ============================================================
+ * MODULE [3] regions — extract candidate regions
+ * ============================================================ */
+const regions = (() => {
+  function extract(frame){
+    const { canvas, ctx } = frame;
+    const W = canvas.width, H = canvas.height;
+    const img = ctx.getImageData(0, 0, W, H);
+    const { gray } = pixel.toGray(img);
+    const bin = pixel.adaptiveThreshold(gray, W, H);
+    const dil = pixel.dilate(bin, W, H, CONFIG.morphDilate);
+    const { labels, comps } = pixel.connectedComponents(dil, W, H);
+    const minA = CONFIG.ccMinAreaRatio * W * H;
+    const maxA = CONFIG.ccMaxAreaRatio * W * H;
+    const regs = [];
+    for (const c of comps){
+      if (c.area < minA || c.area > maxA) continue;
+      const [x0,y0,x1,y1] = c.bbox;
+      const rw = x1-x0+1, rh = y1-y0+1;
+      // tight mask for this component
+      const mask = new Uint8Array(rw*rh);
+      for (let y=y0; y<=y1; y++){
+        for (let x=x0; x<=x1; x++){
+          if (labels[y*W+x] === c.id) mask[(y-y0)*rw + (x-x0)] = 1;
+        }
+      }
+      regs.push({
+        id: regs.length+1,
+        bbox: [x0,y0,x1,y1],
+        w: rw, h: rh, area: c.area,
+        mask,
+        frameW: W, frameH: H,
+      });
+    }
+    // Sort by area desc, deterministic
+    regs.sort((a,b) => b.area - a.area || a.bbox[1]-b.bbox[1] || a.bbox[0]-b.bbox[0]);
+    return { regions: regs, gray, bin: dil, W, H, imgData: img };
+  }
+  return { extract };
+})();
+
+/* ============================================================
+ * MODULE [4] features — geometry, shape, appearance, topology
+ * ============================================================ */
+const features = (() => {
+  function resampleMask(mask, rw, rh, target){
+    const out = new Uint8Array(target*target);
+    for (let y=0; y<target; y++){
+      const sy = (y * rh / target) | 0;
+      for (let x=0; x<target; x++){
+        const sx = (x * rw / target) | 0;
+        out[y*target+x] = mask[sy*rw + sx];
+      }
+    }
+    // tighten + center
+    let minX=target,minY=target,maxX=-1,maxY=-1;
+    for (let y=0; y<target; y++)
+      for (let x=0; x<target; x++)
+        if (out[y*target+x]) {
+          if (x<minX)minX=x; if (x>maxX)maxX=x;
+          if (y<minY)minY=y; if (y>maxY)maxY=y;
+        }
+    if (maxX < 0) return out;
+    const bw = maxX-minX+1, bh = maxY-minY+1, side = Math.max(bw,bh);
+    const norm = new Uint8Array(target*target);
+    const off = (target - side) >> 1;
+    for (let y=0; y<bh; y++)
+      for (let x=0; x<bw; x++)
+        if (out[(minY+y)*target + (minX+x)]) {
+          const nx = off + ((x * side / bw) | 0);
+          const ny = off + ((y * side / bh) | 0);
+          if (nx>=0 && nx<target && ny>=0 && ny<target) norm[ny*target+nx] = 1;
+        }
+    return norm;
+  }
+  function huMoments(mask, w, h){
+    let m00=0, m10=0, m01=0;
+    for (let y=0; y<h; y++)
+      for (let x=0; x<w; x++)
+        if (mask[y*w+x]) { m00++; m10+=x; m01+=y; }
+    if (!m00) return new Array(7).fill(0);
+    const xb = m10/m00, yb = m01/m00;
+    let u20=0,u02=0,u11=0,u30=0,u03=0,u21=0,u12=0;
+    for (let y=0; y<h; y++)
+      for (let x=0; x<w; x++)
+        if (mask[y*w+x]) {
+          const dx=x-xb, dy=y-yb;
+          u20 += dx*dx; u02 += dy*dy; u11 += dx*dy;
+          u30 += dx*dx*dx; u03 += dy*dy*dy;
+          u21 += dx*dx*dy; u12 += dx*dy*dy;
+        }
+    const s2 = m00*m00, s25 = Math.pow(m00, 2.5);
+    const n20=u20/s2, n02=u02/s2, n11=u11/s2;
+    const n30=u30/s25, n03=u03/s25, n21=u21/s25, n12=u12/s25;
+    const I1 = n20 + n02;
+    const I2 = (n20-n02)*(n20-n02) + 4*n11*n11;
+    const I3 = (n30-3*n12)*(n30-3*n12) + (3*n21-n03)*(3*n21-n03);
+    const I4 = (n30+n12)*(n30+n12) + (n21+n03)*(n21+n03);
+    const I5 = (n30-3*n12)*(n30+n12)*((n30+n12)*(n30+n12) - 3*(n21+n03)*(n21+n03)) +
+               (3*n21-n03)*(n21+n03)*(3*(n30+n12)*(n30+n12) - (n21+n03)*(n21+n03));
+    const I6 = (n20-n02)*((n30+n12)*(n30+n12) - (n21+n03)*(n21+n03)) +
+               4*n11*(n30+n12)*(n21+n03);
+    const I7 = (3*n21-n03)*(n30+n12)*((n30+n12)*(n30+n12) - 3*(n21+n03)*(n21+n03)) -
+               (n30-3*n12)*(n21+n03)*(3*(n30+n12)*(n30+n12) - (n21+n03)*(n21+n03));
+    // log-scale for stability
+    return [I1,I2,I3,I4,I5,I6,I7].map(v => {
+      if (!isFinite(v) || v === 0) return 0;
+      return Math.sign(v) * Math.log10(Math.abs(v) + 1e-12);
+    });
+  }
+  function radialSignature(mask, target, bins){
+    const cx = target/2, cy = target/2;
+    const sig = new Float32Array(bins);
+    const cnt = new Float32Array(bins);
+    for (let y=0; y<target; y++)
+      for (let x=0; x<target; x++)
+        if (mask[y*target+x]) {
+          const dx = x-cx, dy = y-cy;
+          const r = Math.hypot(dx, dy);
+          let a = Math.atan2(dy, dx); if (a<0) a += Math.PI*2;
+          const b = Math.min(bins-1, ((a/(Math.PI*2)) * bins) | 0);
+          if (r > sig[b]) sig[b] = r;
+          cnt[b]++;
+        }
+    // normalize by max
+    let mx = 0; for (let i=0;i<bins;i++) if (sig[i]>mx) mx = sig[i];
+    if (mx > 0) for (let i=0;i<bins;i++) sig[i] /= mx;
+    return Array.from(sig);
+  }
+  function radialDistance(a, b){
+    // rotation-invariant: cyclic shift, take min L1
+    const n = a.length;
+    let best = Infinity;
+    for (let s=0; s<n; s++){
+      let d = 0;
+      for (let i=0; i<n; i++) d += Math.abs(a[i] - b[(i+s)%n]);
+      if (d < best) best = d;
+    }
+    return best / n; // [0..1]
+  }
+  function edgeHistogram(gray, w, h, bins){
+    const { gx, gy, mag } = pixel.gradients(gray, w, h);
+    const hist = new Float32Array(bins);
+    let total = 0;
+    for (let i=0; i<mag.length; i++){
+      if (mag[i] < 30) continue;
+      let a = Math.atan2(gy[i], gx[i]); if (a<0) a += Math.PI;
+      const b = Math.min(bins-1, ((a/Math.PI) * bins) | 0);
+      hist[b] += mag[i]; total += mag[i];
+    }
+    if (total > 0) for (let i=0; i<bins; i++) hist[i] /= total;
+    return Array.from(hist);
+  }
+  function dominantColors(imgData, x0, y0, x1, y1, bins, topK){
+    const { data, width } = imgData;
+    const buckets = new Map();
+    let total = 0;
+    for (let y=y0; y<=y1; y++){
+      for (let x=x0; x<=x1; x++){
+        const i = (y*width + x)*4;
+        const r = (data[i]   * bins / 256) | 0;
+        const g = (data[i+1] * bins / 256) | 0;
+        const b = (data[i+2] * bins / 256) | 0;
+        const key = r*bins*bins + g*bins + b;
+        buckets.set(key, (buckets.get(key)||0) + 1);
+        total++;
+      }
+    }
+    const arr = Array.from(buckets.entries())
+      .sort((a,b) => b[1]-a[1] || a[0]-b[0])
+      .slice(0, topK);
+    const palette = arr.map(([k,c]) => {
+      const r = ((k / (bins*bins)) | 0) * (256/bins) + (128/bins);
+      const g = (((k / bins) | 0) % bins) * (256/bins) + (128/bins);
+      const b = (k % bins) * (256/bins) + (128/bins);
+      return { r:r|0, g:g|0, b:b|0, w: total ? c/total : 0 };
+    });
+    // dominant tone flatness = top bucket share
+    const flatness = total ? (arr[0] ? arr[0][1] / total : 0) : 0;
+    return { palette, flatness };
+  }
+  function brightnessContrast(gray, w, h, x0, y0, x1, y1){
+    let sum = 0, sum2 = 0, n = 0, mn = 255, mx = 0;
+    for (let y=y0; y<=y1; y++){
+      for (let x=x0; x<=x1; x++){
+        const v = gray[y*w+x];
+        sum += v; sum2 += v*v; n++;
+        if (v < mn) mn = v; if (v > mx) mx = v;
+      }
+    }
+    const mean = sum / n;
+    const variance = (sum2 / n) - mean*mean;
+    const stdev = Math.sqrt(Math.max(0, variance));
+    return { mean: mean/255, contrast: stdev/128, range:(mx-mn)/255 };
+  }
+  function contourComplexity(mask, w, h){
+    // perimeter / sqrt(area) — high = jagged
+    let area = 0, perim = 0;
+    for (let y=0; y<h; y++){
+      for (let x=0; x<w; x++){
+        if (!mask[y*w+x]) continue;
+        area++;
+        const left  = x>0 ? mask[y*w+(x-1)] : 0;
+        const right = x<w-1 ? mask[y*w+(x+1)] : 0;
+        const up    = y>0 ? mask[(y-1)*w+x] : 0;
+        const down  = y<h-1 ? mask[(y+1)*w+x] : 0;
+        if (!left || !right || !up || !down) perim++;
+      }
+    }
+    if (!area) return 0;
+    return perim / Math.sqrt(area);
+  }
+  function symmetryScore(mask, w, h){
+    // horizontal flip symmetry
+    let same = 0, total = 0;
+    for (let y=0; y<h; y++){
+      for (let x=0; x<(w>>1); x++){
+        const a = mask[y*w+x], b = mask[y*w+(w-1-x)];
+        if (a || b) { total++; if (a === b) same++; }
+      }
+    }
+    return total ? same/total : 0;
+  }
+  function geometry(reg){
+    const { w:rw, h:rh, area, mask, bbox, frameW, frameH } = reg;
+    const aspect = rw / rh;
+    const occupancy = area / (rw * rh);
+    const circ = (() => {
+      // 4*pi*area / perimeter^2
+      let perim = 0;
+      for (let y=0; y<rh; y++){
+        for (let x=0; x<rw; x++){
+          if (!mask[y*rw+x]) continue;
+          const left  = x>0 ? mask[y*rw+(x-1)] : 0;
+          const right = x<rw-1 ? mask[y*rw+(x+1)] : 0;
+          const up    = y>0 ? mask[(y-1)*rw+x] : 0;
+          const down  = y<rh-1 ? mask[(y+1)*rw+x] : 0;
+          if (!left || !right || !up || !down) perim++;
+        }
+      }
+      if (!perim) return 0;
+      return Math.min(1, (4*Math.PI*area) / (perim*perim));
+    })();
+    const orient = aspect >= 1 ? 'landscape' : 'portrait';
+    const bboxRatio = (rw*rh) / (frameW*frameH);
+    const cc = contourComplexity(mask, rw, rh);
+    const sym = symmetryScore(mask, rw, rh);
+    const [x0,y0,x1,y1] = bbox;
+    const touchL = x0 <= 2, touchR = x1 >= frameW-3,
+          touchT = y0 <= 2, touchB = y1 >= frameH-3;
+    const borderTouches = (touchL?1:0)+(touchR?1:0)+(touchT?1:0)+(touchB?1:0);
+    return { aspect, occupancy, circularity:circ, orient, bboxRatio, contourComplexity:cc, symmetry:sym, borderTouches, touch:{L:touchL,R:touchR,T:touchT,B:touchB} };
+  }
+  function entropy(gray, w, h, x0, y0, x1, y1){
+    const hist = new Uint32Array(256); let n = 0;
+    for (let y=y0; y<=y1; y++)
+      for (let x=x0; x<=x1; x++) { hist[gray[y*w+x]]++; n++; }
+    let H = 0;
+    for (let i=0; i<256; i++){
+      if (!hist[i]) continue;
+      const p = hist[i]/n;
+      H -= p * Math.log2(p);
+    }
+    return H / 8; // normalized [0..1]
+  }
+  function compute(reg, ctx){
+    const { gray, imgData, W } = ctx;
+    const [x0,y0,x1,y1] = reg.bbox;
+    const fp = resampleMask(reg.mask, reg.w, reg.h, CONFIG.fpSize);
+    const radial = radialSignature(fp, CONFIG.fpSize, CONFIG.radialBins);
+    const hu = huMoments(fp, CONFIG.fpSize, CONFIG.fpSize);
+    const eh = edgeHistogram(gray.subarray ? gray : gray, W, ctx.H, CONFIG.edgeHistBins); // global; cheap
+    // local edge density
+    let edgeSum = 0, edgeCnt = 0;
+    {
+      const { mag } = pixel.gradients(gray, W, ctx.H); // recompute? expensive — skip global, do local only
+      for (let y=y0; y<=y1; y++)
+        for (let x=x0; x<=x1; x++) { const m = mag[y*W+x]; if (m > 30) edgeSum++; edgeCnt++; }
+    }
+    const edgeDensity = edgeCnt ? edgeSum/edgeCnt : 0;
+    const colors = dominantColors(imgData, x0, y0, x1, y1, CONFIG.colorPaletteBins, CONFIG.paletteTopK);
+    const bc = brightnessContrast(gray, W, ctx.H, x0, y0, x1, y1);
+    const ent = entropy(gray, W, ctx.H, x0, y0, x1, y1);
+    const geom = geometry(reg);
+    return {
+      fp, radial, hu, edgeHist: eh, edgeDensity,
+      palette: colors.palette, flatness: colors.flatness,
+      brightness: bc.mean, contrast: bc.contrast, range: bc.range,
+      entropy: ent, geom,
+    };
+  }
+  // distances
+  function fpIoU(a, b){
+    let inter=0, uni=0;
+    for (let i=0; i<a.length; i++){
+      const av=a[i], bv=b[i];
+      if (av || bv) uni++;
+      if (av && bv) inter++;
+    }
+    return uni ? inter/uni : 0;
+  }
+  function vecL1(a, b){
+    let s = 0; const n = Math.min(a.length, b.length);
+    for (let i=0; i<n; i++) s += Math.abs(a[i]-b[i]);
+    return s / n;
+  }
+  function huDistance(a, b){
+    return vecL1(a, b) / 2; // normalize roughly to [0..1]
+  }
+  function paletteDistance(a, b){
+    // earth-mover-ish on top-K
+    if (!a.length || !b.length) return 1;
+    let total = 0, used = new Array(b.length).fill(false);
+    for (const ca of a){
+      let bestI = -1, bestD = Infinity;
+      for (let j=0; j<b.length; j++){
+        if (used[j]) continue;
+        const cb = b[j];
+        const d = (Math.abs(ca.r-cb.r)+Math.abs(ca.g-cb.g)+Math.abs(ca.b-cb.b)) / 765;
+        if (d < bestD) { bestD = d; bestI = j; }
+      }
+      if (bestI >= 0) used[bestI] = true;
+      total += bestD * (ca.w + (bestI>=0 ? b[bestI].w : 0)) / 2;
+    }
+    return Math.min(1, total);
+  }
+  function geomVector(g){
+    return [
+      Math.min(2, g.aspect)/2,
+      g.occupancy,
+      g.circularity,
+      g.symmetry,
+      Math.min(3, g.contourComplexity)/3,
+    ];
+  }
+  return { compute, fpIoU, vecL1, huDistance, paletteDistance, geomVector, radialDistance };
+})();
+
+/* ============================================================
+ * MODULE [5] classify — heuristic visual class
+ * ============================================================ */
+const classify = (() => {
+  const C = CONFIG.cls;
+  function classifyRegion(f){
+    const g = f.geom;
+    const ar = g.aspect, occ = g.occupancy, circ = g.circularity, flat = f.flatness;
+    const ed = f.edgeDensity, ent = f.entropy, range = f.range;
+    const side = Math.max(g.aspect >= 1 ? 1 : ar, 1/Math.max(ar,1e-6));
+    const pixSide = Math.max(1, Math.min(g.aspect>=1 ? 1 : 0, 0)); // unused
+    const reasons = [];
+
+    // ICON: tiny region
+    // (caller provides actual side; approximate via bboxRatio threshold)
+    const isTiny = g.bboxRatio < 0.005;
+    if (isTiny) { reasons.push('tiny region'); return { cls:'ICON', reasons }; }
+
+    // TEXT_GRAPHIC: high edge density + high aspect + low flatness wins on uniform background
+    if (ed > C.textGraphicGradMin && (ar > C.textGraphicAspect || 1/ar > C.textGraphicAspect) && flat > 0.45) {
+      reasons.push('high edge density','elongated bbox','flat background');
+      return { cls:'TEXT_GRAPHIC', reasons };
+    }
+    // TABLE: heavy regular grid → high edge density + near-uniform horizontal+vertical balance
+    const eh = f.edgeHist;
+    if (eh && eh.length === CONFIG.edgeHistBins){
+      const horiz = eh[0] + eh[eh.length-1];
+      const vert  = eh[Math.floor(eh.length/2)];
+      if ((horiz + vert) > C.tableGridMin && ed > 0.18 && flat > 0.55) {
+        reasons.push('strong horiz+vert edges','grid pattern');
+        return { cls:'TABLE', reasons };
+      }
+    }
+    // UI_SCREEN: reasonable aspect, very flat dominant tone, moderate edges
+    if (ar >= C.uiScreenAspectMin && ar <= C.uiScreenAspectMax && flat > C.uiScreenFlatness && ed > 0.05 && ed < 0.22) {
+      reasons.push('bounded aspect','flat dominant tone','moderate edges');
+      return { cls:'UI_SCREEN', reasons };
+    }
+    // DIAGRAM: many edges, low shading variance
+    if (ed > C.diagramEdgeMin && f.contrast < C.diagramShadeMax + 0.15 && range < 0.85) {
+      reasons.push('high edges','low shading');
+      return { cls:'DIAGRAM', reasons };
+    }
+    // PRODUCT_LIKE: enough occupancy, some circularity OR symmetric blob, varied tones
+    if (occ >= C.productOccMin && occ <= C.productOccMax &&
+        (circ >= C.productCircMin || g.symmetry > 0.7) &&
+        ent > 0.35 && range > 0.35) {
+      reasons.push('mid occupancy','shape coherence','tonal range');
+      return { cls:'PRODUCT_LIKE', reasons };
+    }
+    // MIXED_VISUAL: mid signal but doesn't cleanly fit
+    if (ent > 0.4 && range > 0.3) {
+      reasons.push('mixed signals');
+      return { cls:'MIXED_VISUAL', reasons };
+    }
+    return { cls:'UNKNOWN', reasons:['no class triggers met'] };
+  }
+  return { classifyRegion };
+})();
+
+/* ============================================================
+ * MODULE [6] noise — rejection rules
+ * ============================================================ */
+const noise = (() => {
+  function evaluate(reg, f){
+    const g = f.geom;
+    const reasons = [];
+    if (g.aspect > CONFIG.rejAspectExtreme || 1/g.aspect > CONFIG.rejAspectExtreme)
+      reasons.push('extreme aspect ratio ('+g.aspect.toFixed(2)+')');
+    if (g.occupancy < CONFIG.rejDensityMin)
+      reasons.push('density too low ('+g.occupancy.toFixed(3)+')');
+    // border touch: percentage of bbox border that lies on frame edge
+    {
+      const [x0,y0,x1,y1] = reg.bbox;
+      const W = reg.frameW, H = reg.frameH;
+      const top = y0 <= 1, bot = y1 >= H-2, lft = x0 <= 1, rgt = x1 >= W-2;
+      const t = (top?1:0)+(bot?1:0)+(lft?1:0)+(rgt?1:0);
+      if (t >= 3) reasons.push('touches '+t+' frame borders');
+    }
+    if (f.entropy < CONFIG.rejEntropyMin)
+      reasons.push('low entropy ('+f.entropy.toFixed(2)+')');
+    if (g.contourComplexity / 4 > CONFIG.rejFragmentation)
+      reasons.push('too fragmented ('+g.contourComplexity.toFixed(2)+')');
+    return { reject: reasons.length > 0, reasons };
+  }
+  return { evaluate };
+})();
+
+/* ============================================================
+ * MODULE [7] media adapters (PDF / IMAGE / VIDEO)
+ * ============================================================ */
+const media = (() => {
+  function downscaleCanvas(srcCanvas){
+    const sw = srcCanvas.width, sh = srcCanvas.height;
+    const max = CONFIG.frameMaxSide;
+    if (sw <= max && sh <= max) return srcCanvas;
+    const scale = max / Math.max(sw, sh);
+    const dw = Math.round(sw*scale), dh = Math.round(sh*scale);
+    const c = document.createElement('canvas');
+    c.width = dw; c.height = dh;
+    c.getContext('2d').drawImage(srcCanvas, 0, 0, dw, dh);
+    return c;
+  }
+  async function fromPdf(file, log){
+    const buf = await file.arrayBuffer();
+    const r = await util.withTimeout(pdfjsLib.getDocument({ data: buf }).promise, CONFIG.tmoPdfOpen, 'pdf.open');
+    if (!r.ok) { log('err','pdf.open: '+r.error.message); return []; }
+    const doc = r.value;
+    const pages = Math.min(doc.numPages, CONFIG.maxPdfPages);
+    log('info','PDF pages: '+doc.numPages+(pages<doc.numPages?(' (capped at '+pages+')'):''));
+    const frames = [];
+    for (let p=1; p<=pages; p++){
+      const pg = await util.withTimeout(doc.getPage(p), 5000, 'getPage '+p);
+      if (!pg.ok) { log('warn','getPage '+p+': skipped'); continue; }
+      const vp = pg.value.getViewport({ scale: CONFIG.pdfRenderScale });
+      const c = document.createElement('canvas');
+      c.width = vp.width|0; c.height = vp.height|0;
+      const renderTask = pg.value.render({ canvasContext: c.getContext('2d'), viewport: vp });
+      const rr = await util.withTimeout(renderTask.promise, CONFIG.tmoPageRender, 'render '+p);
+      if (!rr.ok) { log('warn','render page '+p+': '+rr.error.message); try{ renderTask.cancel(); }catch(e){} continue; }
+      const final = downscaleCanvas(c);
+      frames.push({ canvas: final, ctx: final.getContext('2d'), label:'page '+p, kind:'pdf' });
+      await util.yieldFrame();
+    }
+    return frames;
+  }
+  async function fromImage(file, log){
+    const url = URL.createObjectURL(file);
+    try {
+      const img = await new Promise((res, rej) => {
+        const im = new Image();
+        const t = setTimeout(() => rej(new Error('image load timeout')), CONFIG.tmoImageLoad);
+        im.onload = () => { clearTimeout(t); res(im); };
+        im.onerror = () => { clearTimeout(t); rej(new Error('image load failed')); };
+        im.src = url;
+      });
+      const c = document.createElement('canvas');
+      c.width = img.naturalWidth; c.height = img.naturalHeight;
+      c.getContext('2d').drawImage(img, 0, 0);
+      const final = downscaleCanvas(c);
+      return [{ canvas: final, ctx: final.getContext('2d'), label:'image', kind:'image' }];
+    } catch(e) {
+      log('err','image: '+e.message);
+      return [];
+    } finally { URL.revokeObjectURL(url); }
+  }
+  async function fromVideo(file, log){
+    const url = URL.createObjectURL(file);
+    const v = document.createElement('video');
+    v.muted = true; v.playsInline = true; v.preload = 'auto'; v.src = url;
+    try {
+      const r = await util.withTimeout(new Promise((res, rej) => {
+        v.onloadedmetadata = () => res();
+        v.onerror = () => rej(new Error('video error'));
+      }), CONFIG.tmoVideoLoad, 'video.metadata');
+      if (!r.ok) { log('err','video metadata: '+r.error.message); return []; }
+      const dur = v.duration;
+      if (!isFinite(dur) || dur <= 0) { log('err','video duration unknown'); return []; }
+      const stamps = [];
+      for (let t=0; t<dur && stamps.length<CONFIG.videoMaxFrames; t+=CONFIG.videoSampleStep) stamps.push(t);
+      log('info','video frames sampled: '+stamps.length);
+      const frames = [];
+      for (let i=0; i<stamps.length; i++){
+        v.currentTime = stamps[i];
+        const sk = await util.withTimeout(new Promise(res => { v.onseeked = () => res(); }), CONFIG.tmoVideoSeek, 'seek '+i);
+        if (!sk.ok) { log('warn','seek '+stamps[i].toFixed(1)+'s skipped'); continue; }
+        const c = document.createElement('canvas');
+        c.width = v.videoWidth; c.height = v.videoHeight;
+        c.getContext('2d').drawImage(v, 0, 0);
+        const final = downscaleCanvas(c);
+        frames.push({ canvas: final, ctx: final.getContext('2d'), label:'t='+stamps[i].toFixed(1)+'s', kind:'video' });
+        await util.yieldFrame();
+      }
+      return frames;
+    } finally { URL.revokeObjectURL(url); v.removeAttribute('src'); }
+  }
+  async function load(file, log){
+    const name = file.name.toLowerCase();
+    const ext = name.split('.').pop();
+    log('info','loading '+file.name+' ('+util.fmtBytes(file.size)+')');
+    if (ext === 'pdf' || file.type === 'application/pdf') return fromPdf(file, log);
+    if (['png','jpg','jpeg','webp'].includes(ext) || file.type.startsWith('image/')) return fromImage(file, log);
+    if (['mp4','mov'].includes(ext) || file.type.startsWith('video/')) return fromVideo(file, log);
+    log('warn','unsupported file type: '+file.name);
+    return [];
+  }
+  return { load };
+})();
+
+/* ============================================================
+ * MODULE [8] cluster — deterministic agglomerative
+ * ============================================================ */
+const cluster = (() => {
+  const W = CONFIG.clusterFeatureWeights;
+  function distance(a, b){
+    // a, b are component records with .features attached
+    const fa = a.features, fb = b.features;
+    const dFp = 1 - features.fpIoU(fa.fp, fb.fp);
+    const dRad = features.radialDistance(fa.radial, fb.radial);
+    const dHu = features.huDistance(fa.hu, fb.hu);
+    const dEdge = features.vecL1(fa.edgeHist, fb.edgeHist);
+    const dGeom = features.vecL1(features.geomVector(fa.geom), features.geomVector(fb.geom));
+    const dColor = features.paletteDistance(fa.palette, fb.palette);
+    const dCls = (a.cls === b.cls) ? 0 : 1;
+    return W.fp*dFp + W.radial*dRad + W.hu*Math.min(1,dHu) + W.edge*dEdge +
+           W.geom*dGeom + W.color*dColor + W.cls*dCls;
+  }
+  function group(components){
+    if (!components.length) return [];
+    // single-link agglomerative until min pair distance > clusterDistMax
+    const N = components.length;
+    const parent = new Int32Array(N);
+    for (let i=0; i<N; i++) parent[i] = i;
+    const find = (x) => { while (parent[x] !== x) { parent[x] = parent[parent[x]]; x = parent[x]; } return x; };
+    // precompute pair distances; N typically small (<= ~200 across all media)
+    const pairs = [];
+    for (let i=0; i<N; i++){
+      for (let j=i+1; j<N; j++){
+        const d = distance(components[i], components[j]);
+        pairs.push({ i, j, d });
+      }
+    }
+    // deterministic sort by (d, i, j)
+    pairs.sort((a,b) => a.d - b.d || a.i - b.i || a.j - b.j);
+    for (const { i, j, d } of pairs){
+      if (d > CONFIG.clusterDistMax) break;
+      const ri = find(i), rj = find(j);
+      if (ri !== rj) parent[Math.max(ri,rj)] = Math.min(ri,rj);
+    }
+    const groups = new Map();
+    for (let i=0; i<N; i++){
+      const r = find(i);
+      if (!groups.has(r)) groups.set(r, []);
+      groups.get(r).push(i);
+    }
+    // build family records
+    const families = [];
+    for (const [root, idxs] of groups){
+      if (idxs.length < CONFIG.clusterMinSize) continue;
+      // pick representative: max area * (occupancy + circularity)
+      let bestI = idxs[0], bestScore = -1;
+      const classCounts = new Map();
+      for (const i of idxs){
+        const c = components[i];
+        const score = c.region.area * (c.features.geom.occupancy + 0.5*c.features.geom.circularity + 1e-3);
+        if (score > bestScore) { bestScore = score; bestI = i; }
+        classCounts.set(c.cls, (classCounts.get(c.cls)||0) + 1);
+      }
+      // dominant class
+      let domCls = 'UNKNOWN', domN = 0;
+      for (const [k,v] of classCounts) if (v > domN) { domN = v; domCls = k; }
+      families.push({ rootIdx: root, members: idxs, repIdx: bestI, type: domCls, classCounts });
+    }
+    // sort families by occurrences desc, then by representative area
+    families.sort((a,b) => b.members.length - a.members.length ||
+      components[b.repIdx].region.area - components[a.repIdx].region.area);
+    // confidence per family
+    for (const fam of families){
+      const N = fam.members.length;
+      // intra-cluster avg distance (sample up to 12 pairs)
+      let sum = 0, cnt = 0;
+      const M = fam.members;
+      for (let i=0; i<M.length && cnt<12; i++){
+        for (let j=i+1; j<M.length && cnt<12; j++){
+          sum += distance(components[M[i]], components[M[j]]); cnt++;
+        }
+      }
+      const avg = cnt ? sum/cnt : 0;
+      const cohesion = 1 - Math.min(1, avg / CONFIG.clusterDistMax);
+      const recurrence = Math.min(1, N / 6);
+      const conf = 0.6*cohesion + 0.4*recurrence;
+      fam.cohesion = cohesion;
+      fam.recurrence = recurrence;
+      fam.confidence = conf;
+      fam.label = conf >= 0.7 ? 'high' : conf >= 0.45 ? 'medium' : 'low';
+    }
+    return families;
+  }
+  return { distance, group };
+})();
+
+/* ============================================================
+ * MODULE [9] pipeline — orchestrator
+ * ============================================================ */
+const pipeline = (() => {
+  async function analyzeMedium(file, logger){
+    const log = (lvl, msg) => logger.push({ lvl, msg, file: file.name });
+    const t0 = performance.now();
+    const frames = await media.load(file, (lvl,msg) => log(lvl,msg));
+    const t1 = performance.now();
+    if (!frames.length) {
+      log('warn','no frames extracted');
+      return { file, frames:[], components:[], rejected:[], elapsedMs: t1-t0 };
+    }
+    log('ok','frames extracted: '+frames.length+' ('+Math.round(t1-t0)+'ms)');
+
+    const allComponents = []; // accepted regions with features + class
+    const rejected = [];
+    for (let fi=0; fi<frames.length; fi++){
+      const fr = frames[fi];
+      const ext = regions.extract(fr);
+      log('info','frame['+(fi+1)+'/'+frames.length+'] '+fr.label+' → '+ext.regions.length+' candidate regions');
+      const ctx = { gray: ext.gray, W: ext.W, H: ext.H, imgData: ext.imgData };
+      for (const reg of ext.regions){
+        const f = features.compute(reg, ctx);
+        const noi = noise.evaluate(reg, f);
+        if (noi.reject) {
+          rejected.push({ frameIndex: fi, frameLabel: fr.label, region: reg, reasons: noi.reasons });
+          continue;
+        }
+        const cl = classify.classifyRegion(f);
+        allComponents.push({
+          frameIndex: fi, frameLabel: fr.label,
+          frameW: ext.W, frameH: ext.H,
+          region: reg, features: f, cls: cl.cls, classReasons: cl.reasons,
+          frameCanvas: fr.canvas,
+        });
+      }
+      await util.yieldFrame();
+    }
+    const t2 = performance.now();
+    log('ok','components accepted: '+allComponents.length+' · rejected: '+rejected.length+' ('+Math.round(t2-t1)+'ms)');
+
+    const families = cluster.group(allComponents);
+    const t3 = performance.now();
+    log('ok','visual families discovered: '+families.length+' ('+Math.round(t3-t2)+'ms)');
+
+    return { file, frames, components: allComponents, rejected, families, elapsedMs: t3-t0 };
+  }
+  return { analyzeMedium };
+})();
+
+/* ============================================================
+ * MODULE [10] report — render
+ * ============================================================ */
+const report = (() => {
+  const $ = (sel) => document.querySelector(sel);
+  function pillForClass(c){
+    const map = {
+      PRODUCT_LIKE:'g', UI_SCREEN:'b', TEXT_GRAPHIC:'y', DIAGRAM:'b',
+      TABLE:'y', ICON:'', MIXED_VISUAL:'', UNKNOWN:'r',
+    };
+    return '<span class="pill '+(map[c]||'')+'">'+c+'</span>';
+  }
+  function pillForLabel(l){
+    return '<span class="pill '+(l==='high'?'g':l==='medium'?'y':'r')+'">'+l+'</span>';
+  }
+  function cropCanvasFromComponent(comp, size){
+    const [x0,y0,x1,y1] = comp.region.bbox;
+    const w = x1-x0+1, h = y1-y0+1;
+    const c = document.createElement('canvas');
+    c.width = size; c.height = size;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#000'; ctx.fillRect(0,0,size,size);
+    const scale = Math.min(size/w, size/h);
+    const dw = w*scale, dh = h*scale;
+    const dx = (size-dw)/2, dy = (size-dh)/2;
+    ctx.drawImage(comp.frameCanvas, x0, y0, w, h, dx, dy, dw, dh);
+    return c;
+  }
+  function renderLog(logger){
+    return logger.map(e => {
+      const cls = e.lvl==='ok'?'ok':e.lvl==='warn'?'warn':e.lvl==='err'?'err':'info';
+      return '<span class="'+cls+'">['+e.lvl.toUpperCase().padEnd(4)+']</span> '+util.escHTML(e.file ? '['+e.file+'] ' : '')+util.escHTML(e.msg);
+    }).join('\n');
+  }
+  function renderResult(res, logger, root){
+    if (!res || !res.frames.length){
+      root.innerHTML = '<div class="empty">No frames could be extracted from the provided media.</div>'+
+        '<div class="sec"><h3>1 · Media Loading Log</h3><div class="log">'+renderLog(logger)+'</div></div>';
+      return;
+    }
+
+    const html = [];
+
+    // Section 1
+    html.push('<div class="sec"><h3>1 · Media Loading</h3>');
+    html.push('<div class="log">'+renderLog(logger.filter(e => e.lvl!=='detail'))+'</div></div>');
+
+    // Section 2
+    html.push('<div class="sec"><h3>2 · Frame Extraction</h3>');
+    html.push('<div class="row"><span class="k">file</span><span class="v">'+util.escHTML(res.file.name)+' · '+util.fmtBytes(res.file.size)+'</span></div>');
+    html.push('<div class="row"><span class="k">frames</span><span class="v">'+res.frames.length+'</span></div>');
+    html.push('<div class="row"><span class="k">elapsed</span><span class="v">'+Math.round(res.elapsedMs)+' ms</span></div>');
+    html.push('</div>');
+
+    // Section 3
+    html.push('<div class="sec"><h3>3 · Visual Decomposition</h3>');
+    html.push('<table class="tbl"><thead><tr><th>frame</th><th>label</th><th>w×h</th><th>regions raw</th></tr></thead><tbody>');
+    {
+      const counts = {};
+      for (const c of res.components) counts[c.frameIndex] = (counts[c.frameIndex]||0)+1;
+      for (const r of res.rejected) counts[r.frameIndex] = (counts[r.frameIndex]||0); // ensure key
+      for (let i=0; i<res.frames.length; i++){
+        const f = res.frames[i];
+        const accepted = res.components.filter(c => c.frameIndex===i).length;
+        const rej = res.rejected.filter(r => r.frameIndex===i).length;
+        html.push('<tr><td>'+(i+1)+'</td><td>'+util.escHTML(f.label)+'</td><td>'+f.canvas.width+'×'+f.canvas.height+'</td><td>'+accepted+' accepted · '+rej+' rejected</td></tr>');
+      }
+    }
+    html.push('</tbody></table></div>');
+
+    // Section 4
+    html.push('<div class="sec"><h3>4 · Region Extraction</h3>');
+    html.push('<div class="row"><span class="k">accepted</span><span class="v">'+res.components.length+'</span></div>');
+    html.push('<div class="row"><span class="k">rejected</span><span class="v">'+res.rejected.length+'</span></div>');
+    if (res.components.length){
+      html.push('<table class="tbl"><thead><tr><th>#</th><th>frame</th><th>bbox</th><th>area</th><th>occ</th><th>circ</th><th>aspect</th><th>class</th></tr></thead><tbody>');
+      const top = res.components.slice(0, 30);
+      top.forEach((c, i) => {
+        const g = c.features.geom;
+        html.push('<tr><td>'+(i+1)+'</td><td>'+util.escHTML(c.frameLabel)+'</td>'+
+          '<td>'+c.region.bbox.join(',')+'</td>'+
+          '<td>'+c.region.area+'</td>'+
+          '<td>'+g.occupancy.toFixed(2)+'</td>'+
+          '<td>'+g.circularity.toFixed(2)+'</td>'+
+          '<td>'+g.aspect.toFixed(2)+'</td>'+
+          '<td>'+pillForClass(c.cls)+'</td></tr>');
+      });
+      html.push('</tbody></table>');
+      if (res.components.length > 30) html.push('<div class="meta">… and '+(res.components.length-30)+' more</div>');
+    }
+    html.push('</div>');
+
+    // Section 5
+    html.push('<div class="sec"><h3>5 · Rejection Log</h3>');
+    if (!res.rejected.length) html.push('<div class="meta">No regions rejected.</div>');
+    else {
+      const summary = new Map();
+      for (const r of res.rejected) for (const reason of r.reasons) summary.set(reason, (summary.get(reason)||0)+1);
+      html.push('<table class="tbl"><thead><tr><th>reason</th><th>count</th></tr></thead><tbody>');
+      Array.from(summary.entries()).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => {
+        html.push('<tr><td>'+util.escHTML(k)+'</td><td>'+v+'</td></tr>');
+      });
+      html.push('</tbody></table>');
+      html.push('<div class="meta" style="margin-top:6px;">First 10 individual rejections:</div>');
+      html.push('<table class="tbl"><thead><tr><th>frame</th><th>bbox</th><th>reasons</th></tr></thead><tbody>');
+      res.rejected.slice(0,10).forEach(r => {
+        html.push('<tr><td>'+util.escHTML(r.frameLabel)+'</td><td>'+r.region.bbox.join(',')+'</td><td>'+util.escHTML(r.reasons.join(' · '))+'</td></tr>');
+      });
+      html.push('</tbody></table>');
+    }
+    html.push('</div>');
+
+    // Section 6
+    html.push('<div class="sec"><h3>6 · Component Summary</h3>');
+    {
+      const byCls = new Map();
+      for (const c of res.components) byCls.set(c.cls, (byCls.get(c.cls)||0)+1);
+      html.push('<table class="tbl"><thead><tr><th>class</th><th>count</th></tr></thead><tbody>');
+      Array.from(byCls.entries()).sort((a,b)=>b[1]-a[1]).forEach(([k,v]) => {
+        html.push('<tr><td>'+pillForClass(k)+'</td><td>'+v+'</td></tr>');
+      });
+      html.push('</tbody></table>');
+    }
+    html.push('</div>');
+
+    // Section 7
+    html.push('<div class="sec"><h3>7 · Visual Families</h3>');
+    if (!res.families.length) html.push('<div class="meta">No families detected.</div>');
+    else {
+      html.push('<table class="tbl"><thead><tr><th>family</th><th>type</th><th>occurrences</th><th>frames</th><th>cohesion</th><th>recurrence</th><th>confidence</th></tr></thead><tbody>');
+      res.families.forEach((fam, i) => {
+        const frameSet = new Set(fam.members.map(m => res.components[m].frameIndex+1));
+        const fr = Array.from(frameSet).sort((a,b)=>a-b).join(',');
+        html.push('<tr><td>FAMILY '+String.fromCharCode(65+i)+'</td>'+
+          '<td>'+pillForClass(fam.type)+'</td>'+
+          '<td>'+fam.members.length+'</td>'+
+          '<td>'+fr+'</td>'+
+          '<td>'+fam.cohesion.toFixed(2)+'</td>'+
+          '<td>'+fam.recurrence.toFixed(2)+'</td>'+
+          '<td>'+fam.confidence.toFixed(2)+' '+pillForLabel(fam.label)+'</td></tr>');
+      });
+      html.push('</tbody></table>');
+    }
+    html.push('</div>');
+
+    // Section 8
+    html.push('<div class="sec"><h3>8 · Family Details</h3>');
+    res.families.forEach((fam, i) => {
+      const rep = res.components[fam.repIdx];
+      const frameSet = new Set(fam.members.map(m => res.components[m].frameIndex+1));
+      const sharedClasses = Array.from(fam.classCounts.entries()).sort((a,b)=>b[1]-a[1])
+        .map(([k,v]) => k+'×'+v).join(' · ');
+      html.push('<div class="fam">'+
+        '<div class="fam-head">'+
+          '<div class="nm">FAMILY '+String.fromCharCode(65+i)+' · '+pillForClass(fam.type)+'</div>'+
+          '<div class="ct">'+fam.members.length+' occurrences · pages/frames {'+Array.from(frameSet).sort((a,b)=>a-b).join(',')+'}</div>'+
+        '</div>'+
+        '<div class="row"><span class="k">representative</span><span class="v">'+util.escHTML(rep.frameLabel)+' · bbox '+rep.region.bbox.join(',')+'</span></div>'+
+        '<div class="row"><span class="k">cohesion</span><span class="v">'+fam.cohesion.toFixed(3)+'</span></div>'+
+        '<div class="row"><span class="k">recurrence</span><span class="v">'+fam.recurrence.toFixed(3)+'</span></div>'+
+        '<div class="row"><span class="k">confidence</span><span class="v">'+fam.confidence.toFixed(3)+' '+pillForLabel(fam.label)+'</span></div>'+
+        '<div class="row"><span class="k">class mix</span><span class="v">'+util.escHTML(sharedClasses)+'</span></div>'+
+        '<div class="row"><span class="k">shared geom</span><span class="v">'+
+          'aspect~'+(fam.members.reduce((s,m)=>s+res.components[m].features.geom.aspect,0)/fam.members.length).toFixed(2)+
+          ' · circ~'+(fam.members.reduce((s,m)=>s+res.components[m].features.geom.circularity,0)/fam.members.length).toFixed(2)+
+          ' · occ~'+(fam.members.reduce((s,m)=>s+res.components[m].features.geom.occupancy,0)/fam.members.length).toFixed(2)+
+          ' · sym~'+(fam.members.reduce((s,m)=>s+res.components[m].features.geom.symmetry,0)/fam.members.length).toFixed(2)+
+        '</span></div>'+
+        '</div>'
+      );
+    });
+    html.push('</div>');
+
+    // Section 9
+    html.push('<div class="sec"><h3>9 · Representative Crops</h3>');
+    res.families.forEach((fam, i) => {
+      html.push('<div style="margin:14px 0 6px;color:var(--gold);font-weight:600;">FAMILY '+String.fromCharCode(65+i)+' · '+pillForClass(fam.type)+' · '+fam.members.length+'×</div>');
+      html.push('<div class="crops" data-fam="'+i+'"></div>');
+    });
+    html.push('</div>');
+
+    root.innerHTML = html.join('');
+
+    // paint crops AFTER innerHTML so canvases are real DOM nodes
+    res.families.forEach((fam, i) => {
+      const host = root.querySelector('.crops[data-fam="'+i+'"]');
+      if (!host) return;
+      // pick representatives: rep first, then up to (maxRepresentatives-1) members by score desc
+      const sorted = fam.members.slice().sort((a,b) => {
+        const ca = res.components[a], cb = res.components[b];
+        return cb.region.area * (cb.features.geom.occupancy + cb.features.geom.circularity) -
+               ca.region.area * (ca.features.geom.occupancy + ca.features.geom.circularity);
+      });
+      const picks = [];
+      const seen = new Set();
+      for (const idx of [fam.repIdx, ...sorted]) {
+        if (seen.has(idx)) continue; seen.add(idx);
+        picks.push(idx);
+        if (picks.length >= CONFIG.maxRepresentatives) break;
+      }
+      for (const idx of picks){
+        const comp = res.components[idx];
+        const wrap = document.createElement('div'); wrap.className = 'crop';
+        const c = cropCanvasFromComponent(comp, CONFIG.cropDisplaySize);
+        wrap.appendChild(c);
+        const lbl = document.createElement('div'); lbl.className = 'lbl';
+        lbl.textContent = comp.frameLabel;
+        wrap.appendChild(lbl);
+        host.appendChild(wrap);
+      }
+    });
+  }
+  return { renderResult };
+})();
+
+/* ============================================================
+ * MODULE [11] ui — wiring
+ * ============================================================ */
+(() => {
+  const dz = document.getElementById('dz');
+  const fi = document.getElementById('fi');
+  const queueEl = document.getElementById('queue');
+  const runBtn = document.getElementById('run');
+  const resetBtn = document.getElementById('reset');
+  const exportBtn = document.getElementById('export');
+  const reportEl = document.getElementById('report');
+  const hdrMeta = document.getElementById('hdrMeta');
+  let queue = [];
+
+  function renderQueue(){
+    queueEl.innerHTML = '';
+    queue.forEach((f, i) => {
+      const el = document.createElement('div');
+      el.className = 'qitem';
+      el.innerHTML = '<span class="nm">'+util.escHTML(f.name)+'</span>'+
+        '<span class="rm" data-i="'+i+'" title="remove">×</span>';
+      queueEl.appendChild(el);
+    });
+    queueEl.querySelectorAll('.rm').forEach(b => {
+      b.addEventListener('click', (ev) => {
+        const i = +ev.currentTarget.dataset.i;
+        queue.splice(i, 1); renderQueue(); refreshButton();
+      });
+    });
+  }
+  function refreshButton(){ runBtn.disabled = queue.length === 0; }
+  function addFiles(list){
+    for (const f of list) {
+      if (queue.find(x => x.name===f.name && x.size===f.size)) continue;
+      queue.push(f);
+    }
+    renderQueue(); refreshButton();
+  }
+
+  fi.addEventListener('change', (e) => addFiles(e.target.files));
+  ;['dragenter','dragover'].forEach(ev => dz.addEventListener(ev, e => {
+    e.preventDefault(); e.stopPropagation(); dz.classList.add('drag');
+  }));
+  ;['dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => {
+    e.preventDefault(); e.stopPropagation(); dz.classList.remove('drag');
+  }));
+  dz.addEventListener('drop', (e) => addFiles(e.dataTransfer.files));
+
+  resetBtn.addEventListener('click', () => {
+    queue = []; renderQueue(); refreshButton();
+    reportEl.innerHTML = '<div class="empty">Drop media on the left and press <b>ANALYZE</b>.</div>';
+    hdrMeta.textContent = '';
+    exportBtn.disabled = true;
+  });
+
+  // ----- PDF export of the current report -----
+  async function exportReportPdf(){
+    if (!window.jspdf || !window.html2canvas) {
+      alert('PDF libraries not loaded yet. Try again in a moment.');
+      return;
+    }
+    exportBtn.disabled = true;
+    const oldLabel = exportBtn.textContent;
+    exportBtn.textContent = 'RENDERING…';
+
+    // 1. Build offscreen clone of report at fixed width
+    const stage = document.createElement('div');
+    stage.style.cssText = 'position:fixed;left:-10000px;top:0;width:980px;background:#0e1726;color:#e4ecf7;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:13px;padding:24px;';
+    const clone = reportEl.cloneNode(true);
+    stage.appendChild(clone);
+    document.body.appendChild(stage);
+
+    // 2. cloneNode does NOT copy canvas bitmaps -> repaint each crop canvas
+    const liveCanvases = reportEl.querySelectorAll('canvas');
+    const cloneCanvases = clone.querySelectorAll('canvas');
+    for (let i=0; i<cloneCanvases.length && i<liveCanvases.length; i++){
+      const src = liveCanvases[i], dst = cloneCanvases[i];
+      dst.width = src.width; dst.height = src.height;
+      try { dst.getContext('2d').drawImage(src, 0, 0); } catch(e){}
+    }
+
+    try {
+      const scale = Math.min(2, window.devicePixelRatio || 1);
+      const big = await window.html2canvas(stage, {
+        backgroundColor: '#0e1726',
+        scale: scale,
+        useCORS: true,
+        logging: false,
+      });
+
+      // 3. Slice into A4 pages
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({ orientation:'p', unit:'mm', format:'a4' });
+      const pageW = pdf.internal.pageSize.getWidth();
+      const pageH = pdf.internal.pageSize.getHeight();
+      const margin = 8;
+      const contentW = pageW - margin*2;
+      const pxPerMm = big.width / contentW;
+      const sliceHpx = Math.floor((pageH - margin*2) * pxPerMm);
+
+      let yPx = 0, pageIdx = 0;
+      while (yPx < big.height) {
+        const hPx = Math.min(sliceHpx, big.height - yPx);
+        const slice = document.createElement('canvas');
+        slice.width = big.width; slice.height = hPx;
+        const sctx = slice.getContext('2d');
+        sctx.fillStyle = '#0e1726'; sctx.fillRect(0,0,slice.width,slice.height);
+        sctx.drawImage(big, 0, yPx, big.width, hPx, 0, 0, big.width, hPx);
+        const dataUrl = slice.toDataURL('image/jpeg', 0.85);
+        if (pageIdx > 0) pdf.addPage();
+        pdf.addImage(dataUrl, 'JPEG', margin, margin, contentW, hPx / pxPerMm);
+        pageIdx++;
+        yPx += hPx;
+      }
+      const stamp = new Date().toISOString().replace(/[:.]/g,'-').slice(0,19);
+      pdf.save('rdr-report-'+stamp+'.pdf');
+    } catch(e) {
+      alert('PDF export failed: '+(e.message||e));
+    } finally {
+      document.body.removeChild(stage);
+      exportBtn.disabled = false;
+      exportBtn.textContent = oldLabel;
+    }
+  }
+  exportBtn.addEventListener('click', exportReportPdf);
+
+  runBtn.addEventListener('click', async () => {
+    runBtn.disabled = true; resetBtn.disabled = true;
+    const t0 = performance.now();
+    reportEl.innerHTML = '<div class="empty">analyzing…</div>';
+    const allHtml = [];
+    for (let i=0; i<queue.length; i++){
+      const file = queue[i];
+      const logger = [];
+      hdrMeta.textContent = 'analyzing '+(i+1)+'/'+queue.length+' · '+file.name;
+      const tmp = document.createElement('div');
+      try {
+        const res = await pipeline.analyzeMedium(file, logger);
+        report.renderResult(res, logger, tmp);
+      } catch(e) {
+        tmp.innerHTML = '<div class="sec"><h3>error</h3><div class="log err">'+util.escHTML(file.name+': '+(e.message||e))+'</div></div>';
+      }
+      const head = document.createElement('div');
+      head.innerHTML = '<div style="margin:24px 0 6px; padding:8px 12px; background:var(--panel); border-left:3px solid var(--gold); color:var(--gold); font-weight:600;">▸ '+util.escHTML(file.name)+'</div>';
+      allHtml.push(head.outerHTML + tmp.innerHTML);
+      reportEl.innerHTML = allHtml.join('');
+    }
+    const ms = Math.round(performance.now() - t0);
+    hdrMeta.textContent = 'done · '+queue.length+' file(s) · '+ms+' ms';
+    runBtn.disabled = false; resetBtn.disabled = false;
+    exportBtn.disabled = false;
+  });
+})();
+</script>
+</body>
+</html>
