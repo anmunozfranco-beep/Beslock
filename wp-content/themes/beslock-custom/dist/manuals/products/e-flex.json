@@ -1,0 +1,1243 @@
+{
+  "product": {
+    "slug": "e-flex",
+    "display_name": "e-Flex",
+    "profile_public": {
+      "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+      "commercial_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. Incluye cinco formas de acceso: huella, clave, tarjeta, llave mecánica y app. El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz. Apertura diaria con huella, clave, tarjeta, llave mecánica o app. Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. Respaldo físico con llave mecánica. Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. Administración local de usuarios desde el teclado.",
+      "product_type": "Cerradura inteligente",
+      "lock_architecture": "mortise_lock",
+      "access_systems": [
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Clave / contraseña",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta IC / proximidad",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App Tuya",
+          "status": "Confirmado"
+        }
+      ],
+      "materials": [],
+      "finish": "",
+      "visual_language": [
+        "En el panel exterior, el acceso de llave mecánica y el puerto exterior de emergencia deben representarse como detalles/zooms separados cuando la vista frontal no los muestre con claridad.",
+        "No dibujar orificios, tapas, puertos ni ranuras frontales adicionales sobre el panel principal si no aparecen en la referencia real; conectar los detalles a la zona inferior o inferior-lateral con guías finas.",
+        "En imágenes operativas ya aprobadas, retirar cualquier numeral aislado que no apunte a un componente, acción o estado real.",
+        "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo de cerradura, montaje de panel exterior con eje/cable, y conexión/fijación del panel interior con prueba de manija/pestillo.",
+        "Las imágenes de instalación no deben contener texto, listas ni instrucciones legibles; usar solo flechas, callouts, zooms, numerales conectados y checks simples."
+      ],
+      "key_features": [
+        "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+        "Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+        "Respaldo físico con llave mecánica.",
+        "Alimentación exterior de emergencia por USB-C cuando las baterías se agotan.",
+        "Administración local de usuarios desde el teclado.",
+        "Conexión con app Tuya por WiFi 2.4 GHz.",
+        "Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos."
+      ],
+      "use_cases": [],
+      "installation_type": "Notas confirmadas:",
+      "technical_highlights": [
+        {
+          "label": "Baterías",
+          "value": "4 pilas AA alcalinas de alto rendimiento"
+        },
+        {
+          "label": "Voltaje de baterías",
+          "value": "1,5 V por pila"
+        },
+        {
+          "label": "Rango de operación indicado",
+          "value": "4,5 V a 6,5 V"
+        },
+        {
+          "label": "Alimentación de emergencia",
+          "value": "Puerto exterior USB-C"
+        },
+        {
+          "label": "Aviso de baja energía",
+          "value": "Mensaje de voz \"Low battery, please replace\""
+        },
+        {
+          "label": "Uso tras primer aviso",
+          "value": "Aproximadamente 100 aperturas, según capacidad restante"
+        },
+        {
+          "label": "Mantenimiento recomendado",
+          "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas"
+        },
+        {
+          "label": "Conservación de datos",
+          "value": "Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía"
+        },
+        {
+          "label": "Bloqueo por intentos incorrectos",
+          "value": "Confirmado: después de cinco intentos erróneos con huella, tarjeta o contraseña, se activa alarma y el uso electrónico queda inoperable durante 90 segundos"
+        },
+        {
+          "label": "Verificación dual",
+          "value": "Confirmada como opción de ajustes de funciones"
+        },
+        {
+          "label": "Modo silencioso",
+          "value": "Confirmado como opción de ajustes de funciones"
+        },
+        {
+          "label": "Modo siempre abierto",
+          "value": "Confirmado como opción de ajustes de funciones"
+        },
+        {
+          "label": "Alarma antipalanca",
+          "value": "Confirmada como opción de ajustes de funciones, con redacción tecnico ambigua sobre activar/desactivar"
+        },
+        {
+          "label": "Llave mecánica",
+          "value": "Confirmada como respaldo de apertura"
+        },
+        {
+          "label": "Alimentación de emergencia",
+          "value": "Confirmada por manual y empaque"
+        }
+      ],
+      "seo_keywords": [
+        "e-Flex",
+        "BESLOCK e-Flex",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Tuya",
+        "WiFi 2.4 GHz para app Tuya",
+        "Huella",
+        "Clave / contraseña",
+        "Tarjeta IC / proximidad",
+        "Llave mecánica",
+        "App Tuya"
+      ],
+      "warnings_or_pending_validation": [
+        "El manual visible debe incluir solo funciones confirmadas por el material OEM de e-Flex.",
+        "Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente OEM específica.",
+        "Cuando una función aparece en empaque pero no en manual operativo, puede mencionarse con redacción conservadora o quedar como pendiente según su impacto."
+      ]
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Flex",
+      "summary": "Cerradura inteligente de manija con huella, clave, tarjeta, llave mecánica y app Tuya por WiFi 2.4 GHz.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-EFLEX-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-flex/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-EFLEX-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-flex/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-EFLEX-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-flex/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Flex es una cerradura semiautomática con panel exterior táctil, panel interior con baterías y cuerpo de cerradura de incrustar. Permite administrar accesos locales y vincular la cerradura con app Tuya."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-flex-001",
+              "related_manual_image_key": "IMG-EFLEX-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-001",
+              "image_id": "eflex-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Flex con partes numeradas.",
+              "image": "assets/e-flex/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Teclado táctil.",
+                "Área de lectura de tarjeta.",
+                "Botón de timbre.",
+                "Lector de huella en la manija.",
+                "Manija exterior.",
+                "Acceso de llave mecánica.",
+                "Puerto exterior de alimentación de emergencia."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-flex-002",
+              "related_manual_image_key": "IMG-EFLEX-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-002",
+              "image_id": "eflex-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Flex con partes numeradas.",
+              "image": "assets/e-flex/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Manija interior.",
+                "Compartimento de baterías.",
+                "Seguro nocturno o control interior de bloqueo."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-flex-003",
+              "related_manual_image_key": "IMG-EFLEX-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-003",
+              "image_id": "eflex-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Flex con partes numeradas.",
+              "image": "assets/e-flex/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo de cerradura.",
+                "Pestillo principal.",
+                "Recibidor del marco.",
+                "Eje cuadrado."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-EFLEX-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-EFLEX-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-flex/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-EFLEX-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-001",
+              "image_id": "eflex-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Flex.",
+              "image": "assets/e-flex/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con la plantilla de instalación.",
+                "Ajusta el sentido del pestillo según el sentido de apertura.",
+                "Inserta el cuerpo de cerradura en la puerta.",
+                "Fija los tornillos del cuerpo de cerradura.",
+                "Ajusta el sentido de las manijas.",
+                "Instala los pernos de montaje en el panel exterior.",
+                "Inserta el eje cuadrado y verifica que sobresalga lo necesario.",
+                "Pasa el cable de datos por el orificio de montaje.",
+                "Apoya el panel exterior contra la puerta y alinea la manija.",
+                "Conecta el cable de datos al panel interior.",
+                "Alinea el panel interior y fija los tornillos.",
+                "Coloca cuatro pilas AA alcalinas.",
+                "Acciona las manijas y confirma que el pestillo se mueva suavemente."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-EFLEX-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-flex/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-EFLEX-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-flex/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-EFLEX-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-flex/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-flex-004",
+              "manual_image_key": "IMG-EFLEX-004",
+              "image": "assets/e-flex/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el primer acceso que protege el menú de gestión. Debe crearse antes de vincular la app o entregar la cerradura."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-flex-005",
+              "manual_image_key": "IMG-EFLEX-005",
+              "image": "assets/e-flex/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los administradores pueden abrir, entrar al menú, crear usuarios, eliminar accesos y cambiar ajustes."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-flex-006",
+              "manual_image_key": "IMG-EFLEX-006",
+              "image": "assets/e-flex/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con huella, clave o tarjeta, pero no debe modificar la configuración."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-EFLEX-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-EFLEX-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-flex/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-EFLEX-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-002",
+              "image_id": "eflex-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Flex.",
+              "image": "assets/e-flex/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado.",
+                "Presiona * y luego #.",
+                "Selecciona la opción para crear administrador.",
+                "Elige huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-EFLEX-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-EFLEX-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-flex/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-EFLEX-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-003",
+              "image_id": "eflex-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Flex.",
+              "image": "assets/e-flex/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado táctil.",
+                "Presiona * y luego #.",
+                "Verifica con un administrador registrado.",
+                "Selecciona la opción que necesitas.",
+                "Usa * para volver o borrar y # para confirmar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "funciones-de-cierre",
+              "image_review_keys": [
+                "IMG-EFLEX-007"
+              ],
+              "heading": "Funciones de cierre",
+              "image": "assets/e-flex/manual/funciones-de-cierre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "volumen",
+              "image_review_keys": [
+                "IMG-EFLEX-008"
+              ],
+              "heading": "Volumen",
+              "image": "assets/e-flex/manual/volumen.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "voz-e-idioma",
+              "image_review_keys": [
+                "IMG-EFLEX-009"
+              ],
+              "heading": "Voz e idioma",
+              "image": "assets/e-flex/manual/voz-e-idioma.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "fecha-y-hora",
+              "image_review_keys": [
+                "IMG-EFLEX-010"
+              ],
+              "heading": "Fecha y hora",
+              "image": "assets/e-flex/manual/fecha-y-hora.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Funciones de cierre",
+              "anchor": "img-e-flex-007",
+              "manual_image_key": "IMG-EFLEX-007",
+              "image": "assets/e-flex/manual/funciones-de-cierre.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de cerradura.",
+                "Elige ajustes de funciones.",
+                "Activa o desactiva paso libre, verificación dual, alarma antipalanca o modo silencioso."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Volumen",
+              "anchor": "img-e-flex-008",
+              "manual_image_key": "IMG-EFLEX-008",
+              "image": "assets/e-flex/manual/volumen.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajuste de volumen.",
+                "Sube o baja el volumen.",
+                "Confirma el cambio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Voz e idioma",
+              "anchor": "img-e-flex-009",
+              "manual_image_key": "IMG-EFLEX-009",
+              "image": "assets/e-flex/manual/voz-e-idioma.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes de voz.",
+                "Elige el idioma disponible.",
+                "Confirma."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Fecha y hora",
+              "anchor": "img-e-flex-010",
+              "manual_image_key": "IMG-EFLEX-010",
+              "image": "assets/e-flex/manual/fecha-y-hora.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajuste de hora.",
+                "Ingresa año, mes, día, hora y minuto.",
+                "Presiona # para guardar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-EFLEX-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-EFLEX-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-flex/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-EFLEX-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-004",
+              "image_id": "eflex-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Flex.",
+              "image": "assets/e-flex/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar administrador.",
+                "Elige huella, clave o tarjeta.",
+                "Registra el acceso.",
+                "Espera la confirmación del sistema."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-EFLEX-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-EFLEX-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-flex/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-EFLEX-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-005",
+              "image_id": "eflex-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Flex.",
+              "image": "assets/e-flex/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige huella, clave o tarjeta.",
+                "Registra el acceso.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-EFLEX-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-EFLEX-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-flex/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-EFLEX-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EFLEX-006",
+              "image_id": "eflex-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Flex.",
+              "image": "assets/e-flex/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona eliminar usuario.",
+                "Elige eliminación por huella, clave, tarjeta o número ID.",
+                "Presenta el acceso o ingresa el número correspondiente.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "vinculacion-con-app-tuya",
+              "image_review_keys": [
+                "IMG-EFLEX-011"
+              ],
+              "heading": "Vinculación con app Tuya",
+              "image": "assets/e-flex/manual/vinculacion-con-app-tuya.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "paso-libre",
+              "image_review_keys": [
+                "IMG-EFLEX-012"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-flex/manual/paso-libre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "verificacion-dual",
+              "image_review_keys": [
+                "IMG-EFLEX-013"
+              ],
+              "heading": "Verificación dual",
+              "image": "assets/e-flex/manual/verificacion-dual.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "modo-silencioso",
+              "image_review_keys": [
+                "IMG-EFLEX-014"
+              ],
+              "heading": "Modo silencioso",
+              "image": "assets/e-flex/manual/modo-silencioso.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "seguro-nocturno",
+              "image_review_keys": [
+                "IMG-EFLEX-015"
+              ],
+              "heading": "Seguro nocturno",
+              "image": "assets/e-flex/manual/seguro-nocturno.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Vinculación con app Tuya",
+              "anchor": "img-e-flex-011",
+              "related_manual_image_key": "IMG-EFLEX-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-011",
+              "image_id": "eflex-10a-vinculacion-tuya",
+              "title": "Vinculación con app Tuya",
+              "caption": "Vinculación con app Tuya.",
+              "alt": "Vinculación con app Tuya en e-Flex.",
+              "image": "assets/e-flex/manual/vinculacion-con-app-tuya.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Crea primero un administrador.",
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes inalámbricos.",
+                "Elige agregar red.",
+                "Completa la vinculación desde la app Tuya usando una red WiFi de 2.4 GHz."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-flex-012",
+              "related_manual_image_key": "IMG-EFLEX-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-012",
+              "image_id": "eflex-10b-paso-libre",
+              "title": "Paso libre",
+              "caption": "Paso libre.",
+              "alt": "Modo paso libre en e-Flex.",
+              "image": "assets/e-flex/manual/paso-libre.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite abrir sin repetir verificación durante un periodo de acceso frecuente. Desactívalo cuando la puerta deba quedar protegida."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Verificación dual",
+              "anchor": "img-e-flex-013",
+              "related_manual_image_key": "IMG-EFLEX-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-013",
+              "image_id": "eflex-10c-verificacion-dual",
+              "title": "Verificación dual",
+              "caption": "Verificación dual.",
+              "alt": "Verificación dual en e-Flex.",
+              "image": "assets/e-flex/manual/verificacion-dual.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Solicita dos accesos válidos para abrir."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Modo silencioso",
+              "anchor": "img-e-flex-014",
+              "related_manual_image_key": "IMG-EFLEX-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-014",
+              "image_id": "eflex-10d-modo-silencioso",
+              "title": "Modo silencioso",
+              "caption": "Modo silencioso.",
+              "alt": "Modo silencioso en e-Flex.",
+              "image": "assets/e-flex/manual/modo-silencioso.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Reduce las indicaciones sonoras cuando necesitas operar la cerradura con discreción."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Seguro nocturno",
+              "anchor": "img-e-flex-015",
+              "related_manual_image_key": "IMG-EFLEX-015"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EFLEX-015",
+              "image_id": "eflex-10e-seguro-nocturno",
+              "title": "Seguro nocturno",
+              "caption": "Seguro nocturno.",
+              "alt": "Seguro nocturno interior en e-Flex.",
+              "image": "assets/e-flex/manual/seguro-nocturno.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Usa el control interior cuando quieras restringir aperturas desde el exterior durante la noche o mientras estás dentro."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-EFLEX-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-flex/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "fecha-y-hora",
+          "image_review_keys": [
+            "IMG-EFLEX-010"
+          ],
+          "heading": "Fecha y hora",
+          "image": "assets/e-flex/manual/fecha-y-hora.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "funciones-de-cierre",
+          "image_review_keys": [
+            "IMG-EFLEX-007"
+          ],
+          "heading": "Funciones de cierre",
+          "image": "assets/e-flex/manual/funciones-de-cierre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-EFLEX-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-flex/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "modo-silencioso",
+          "image_review_keys": [
+            "IMG-EFLEX-014"
+          ],
+          "heading": "Modo silencioso",
+          "image": "assets/e-flex/manual/modo-silencioso.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-EFLEX-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-flex/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-EFLEX-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-flex/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-flex/manual/partes-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre",
+          "image_review_keys": [
+            "IMG-EFLEX-012"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-flex/manual/paso-libre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-EFLEX-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-flex/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "seguro-nocturno",
+          "image_review_keys": [
+            "IMG-EFLEX-015"
+          ],
+          "heading": "Seguro nocturno",
+          "image": "assets/e-flex/manual/seguro-nocturno.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-EFLEX-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-flex/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "verificacion-dual",
+          "image_review_keys": [
+            "IMG-EFLEX-013"
+          ],
+          "heading": "Verificación dual",
+          "image": "assets/e-flex/manual/verificacion-dual.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "vinculacion-con-app-tuya",
+          "image_review_keys": [
+            "IMG-EFLEX-011"
+          ],
+          "heading": "Vinculación con app Tuya",
+          "image": "assets/e-flex/manual/vinculacion-con-app-tuya.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "volumen",
+          "image_review_keys": [
+            "IMG-EFLEX-008"
+          ],
+          "heading": "Volumen",
+          "image": "assets/e-flex/manual/volumen.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "voz-e-idioma",
+          "image_review_keys": [
+            "IMG-EFLEX-009"
+          ],
+          "heading": "Voz e idioma",
+          "image": "assets/e-flex/manual/voz-e-idioma.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-EFLEX-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-flex/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-EFLEX-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-flex/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-EFLEX-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-flex/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-EFLEX-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-flex/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-EFLEX-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-flex/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-EFLEX-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-flex/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-flex/ts/e-flex-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-flex/ts/e-flex-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-flex/ts/e-flex-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-flex/hero/e-flex-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

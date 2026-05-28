@@ -1,0 +1,396 @@
+{
+  "schema": "beslock.manuals.web_export.v1",
+  "created_at": "2026-05-28T01:29:01.971673+00:00",
+  "products": [
+    {
+      "slug": "e-flex",
+      "display_name": "e-Flex",
+      "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+      "hero_image": "assets/e-flex/hero/e-flex-hero.webp",
+      "product_json": "products/e-flex.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    },
+    {
+      "slug": "e-nova",
+      "display_name": "e-Nova",
+      "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
+      "hero_image": "assets/e-nova/hero/e-nova-hero.webp",
+      "product_json": "products/e-nova.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    },
+    {
+      "slug": "e-orbit",
+      "display_name": "e-Orbit",
+      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "hero_image": "assets/e-orbit/hero/e-orbit-hero.webp",
+      "product_json": "products/e-orbit.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    },
+    {
+      "slug": "e-prime",
+      "display_name": "e-Prime",
+      "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+      "hero_image": "assets/e-prime/hero/e-prime-hero.webp",
+      "product_json": "products/e-prime.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    },
+    {
+      "slug": "e-shield",
+      "display_name": "e-Shield",
+      "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
+      "hero_image": "assets/e-shield/hero/e-shield-hero.webp",
+      "product_json": "products/e-shield.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    },
+    {
+      "slug": "e-touch",
+      "display_name": "e-Touch",
+      "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+      "hero_image": "assets/e-touch/hero/e-touch-hero.webp",
+      "product_json": "products/e-touch.json",
+      "manual_sections": [
+        {
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "order": 1
+        },
+        {
+          "id": "instalacion",
+          "title": "Instalación",
+          "order": 2
+        },
+        {
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "order": 3
+        },
+        {
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "order": 4
+        },
+        {
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "order": 5
+        },
+        {
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "order": 6
+        },
+        {
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "order": 7
+        },
+        {
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "order": 8
+        },
+        {
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "order": 9
+        },
+        {
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "order": 10
+        }
+      ],
+      "flags": {
+        "has_manual": true,
+        "has_profile": true,
+        "has_true_sources": true,
+        "has_hero_image": true
+      }
+    }
+  ]
+}

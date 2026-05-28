@@ -1,0 +1,1286 @@
+{
+  "product": {
+    "slug": "e-orbit",
+    "display_name": "e-Orbit",
+    "profile_public": {
+      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "commercial_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos. Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+      "product_type": "Cerradura inteligente",
+      "lock_architecture": "mortise_lock",
+      "access_systems": [
+        {
+          "name": "Reconocimiento facial",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Contraseña / PIN",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta M1 / IC",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App móvil",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Desbloqueo remoto",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Apertura interior",
+          "status": "Confirmado"
+        }
+      ],
+      "materials": [],
+      "finish": "",
+      "visual_language": [
+        "el compartimento circular inferior del panel/manija exterior es el acceso oculto de llave mecánica de emergencia (Secret key hole / Key unlock).",
+        "La alimentación externa de emergencia debe representarse como puerto Micro USB de 5 V / 1 A en la misma zona inferior de servicio o inmediatamente contigua al compartimento de llave, sin asignar esa cubierta completa a la función de energía.",
+        "No identificar el compartimento circular inferior como tapa de batería, sensor, reset, pieza decorativa, botón genérico ni puerto de energía.",
+        "Si la vista frontal no muestra el orificio interno, usar un zoom del mismo compartimento abierto, conectado con una guía al componente real. No inventar un segundo keyhole en la base ni duplicar compartimentos.",
+        "En la imagen del mecanismo, evitar texto, iconos redundantes y pictogramas. Deben verse solo el cuerpo multipunto, latch, bulones rectangulares, zona de cilindro/llave y recibidor.",
+        "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo multipunto, montaje de panel exterior con cableado, y conexión/fijación del panel interior con prueba de manija, latch y bulones.",
+        "En escenas operativas aprobadas, retirar numerales aislados que no estén conectados a una acción, componente o estado real."
+      ],
+      "key_features": [
+        "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+        "Reconocimiento facial con cámara frontal y detección de presencia.",
+        "Video/intercom desde la app cuando alguien toca el timbre.",
+        "Desbloqueo remoto desde el teléfono.",
+        "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+        "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+        "Administración local de usuarios, administradores y registros.",
+        "Respaldo por llave mecánica y alimentación externa de emergencia."
+      ],
+      "use_cases": [],
+      "installation_type": "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+      "technical_highlights": [
+        {
+          "label": "Modo de comparación",
+          "value": "1:N"
+        },
+        {
+          "label": "Tipo de sensor de huella",
+          "value": "Cabezal capacitivo de autoaprendizaje"
+        },
+        {
+          "label": "Resolución de huella",
+          "value": "508 dpi"
+        },
+        {
+          "label": "Tasa de rechazo",
+          "value": "< 0,1%"
+        },
+        {
+          "label": "Tasa de falsa aceptación",
+          "value": "< 0,001%"
+        },
+        {
+          "label": "Rango de captura de huella",
+          "value": "±180°"
+        },
+        {
+          "label": "Tipo de tarjeta",
+          "value": "M1"
+        },
+        {
+          "label": "Capacidad total",
+          "value": "250 registros"
+        },
+        {
+          "label": "Capacidad por tipo",
+          "value": "Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua"
+        },
+        {
+          "label": "Registros de operación",
+          "value": "600"
+        },
+        {
+          "label": "Duración de batería",
+          "value": "Mayor o igual a 3000 aperturas"
+        },
+        {
+          "label": "Tensión de trabajo",
+          "value": "7,0 V a 8,4 V"
+        },
+        {
+          "label": "Alarma de baja tensión",
+          "value": "6,8 V ± 0,2 V"
+        },
+        {
+          "label": "Consumo dinámico",
+          "value": "≤ 1 A, sin acción motora ni reproducción de sonido"
+        },
+        {
+          "label": "Consumo estático",
+          "value": "≤ 200 uA"
+        },
+        {
+          "label": "Tiempo de verificación",
+          "value": "≤ 3 segundos"
+        },
+        {
+          "label": "Teclado",
+          "value": "Detección táctil"
+        },
+        {
+          "label": "Pantalla",
+          "value": "OLED 0,96 pulgadas"
+        },
+        {
+          "label": "Alimentación externa",
+          "value": "5 V / 1 A Micro USB"
+        },
+        {
+          "label": "Capacidad antiestática",
+          "value": "≥ 8 kV contacto / ≥ 15 kV sin contacto"
+        }
+      ],
+      "seo_keywords": [
+        "e-Orbit",
+        "BESLOCK e-Orbit",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Reconocimiento facial",
+        "Huella",
+        "Contraseña / PIN",
+        "Tarjeta M1 / IC",
+        "Llave mecánica",
+        "App móvil",
+        "Desbloqueo remoto",
+        "Apertura interior"
+      ],
+      "warnings_or_pending_validation": [
+        "Los videos son útiles para confirmar demostraciones reales: reconocimiento facial, huella, app, desbloqueo remoto, consulta de registros, instalación y prueba de agua.",
+        "Existe inconsistencia entre las apps mencionadas: el manual documenta Smart Life; algunos videos mencionan Tuya WiFi o TTLock. Para el manual visible, conviene usar una redacción conservadora hasta confirmar la app comercial final.",
+        "El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
+        "La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
+        "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video OEM."
+      ]
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Orbit",
+      "summary": "Cerradura inteligente motorizada con reconocimiento facial, huella, clave, tarjeta, llave mecánica y app móvil.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-EORBIT-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-orbit/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-EORBIT-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-orbit/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-EORBIT-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Orbit es una cerradura inteligente de panel vertical con reconocimiento facial, manija abatible y cuerpo de cerradura multipunto."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-orbit-001",
+              "related_manual_image_key": "IMG-EORBIT-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-001",
+              "image_id": "eorbit-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Orbit con partes numeradas.",
+              "image": "assets/e-orbit/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Módulo superior de reconocimiento facial.",
+                "Cámara o sensores frontales.",
+                "Pantalla OLED de estado.",
+                "Teclado táctil.",
+                "Área de lectura de tarjeta.",
+                "Botón de timbre.",
+                "Manija exterior abatible.",
+                "Lector de huella en la zona superior de la manija.",
+                "Compartimento inferior de acceso para llave mecánica de emergencia.",
+                "Puerto de energía externa de emergencia en la zona inferior de servicio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-orbit-002",
+              "related_manual_image_key": "IMG-EORBIT-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-002",
+              "image_id": "eorbit-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Orbit con partes numeradas.",
+              "image": "assets/e-orbit/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Pantalla o superficie de visualización interior.",
+                "Botones físicos bajo la pantalla.",
+                "Manija interior.",
+                "Controles interiores de bloqueo y desbloqueo."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-orbit-003",
+              "related_manual_image_key": "IMG-EORBIT-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-003",
+              "image_id": "eorbit-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Orbit con partes numeradas.",
+              "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo de cerradura multipunto.",
+                "Pestillo.",
+                "Bulones o pasadores rectangulares.",
+                "Cilindro o zona mecánica de llave.",
+                "Recibidor del marco."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-EORBIT-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-EORBIT-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-EORBIT-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-001",
+              "image_id": "eorbit-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Orbit.",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con la plantilla de instalación.",
+                "Revisa el sentido de apertura antes de perforar o fijar piezas.",
+                "Instala el cuerpo de cerradura multipunto dentro de la puerta.",
+                "Fija el cuerpo con sus tornillos.",
+                "Pasa el cableado del panel exterior hacia el lado interior.",
+                "Coloca el panel exterior alineado con el cuerpo de cerradura.",
+                "Conecta el cableado al panel interior.",
+                "Coloca el panel interior y fija los tornillos.",
+                "Instala la batería o alimentación principal.",
+                "Acciona la manija y confirma que pestillo y pasadores se muevan sin fricción."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-EORBIT-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-orbit/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-EORBIT-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-orbit/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-EORBIT-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-orbit/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-orbit-004",
+              "manual_image_key": "IMG-EORBIT-004",
+              "image": "assets/e-orbit/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el primer perfil que protege la configuración de la cerradura. Debe crearse antes de usar la e-Orbit como acceso principal."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-orbit-005",
+              "manual_image_key": "IMG-EORBIT-005",
+              "image": "assets/e-orbit/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los administradores pueden abrir, entrar al menú, crear usuarios, borrar perfiles, cambiar ajustes y consultar información."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-orbit-006",
+              "manual_image_key": "IMG-EORBIT-006",
+              "image": "assets/e-orbit/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con los accesos registrados. Si la verificación dual está activa, puede necesitar combinar dos accesos ordinarios."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-EORBIT-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-EORBIT-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-EORBIT-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-002",
+              "image_id": "eorbit-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Orbit.",
+              "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Activa el panel táctil.",
+                "Presiona * y luego #.",
+                "Ingresa una clave de administrador de 6 a 8 dígitos.",
+                "Confirma con #.",
+                "Registra el método principal del administrador: rostro, huella, clave o tarjeta.",
+                "Espera la confirmación.",
+                "Prueba la apertura con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-EORBIT-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-EORBIT-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-EORBIT-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-003",
+              "image_id": "eorbit-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Orbit.",
+              "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Activa el panel táctil.",
+                "Presiona * y luego #.",
+                "Verifica con un administrador registrado.",
+                "Selecciona la opción del menú.",
+                "Usa * para volver y # para confirmar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "fecha-y-hora",
+              "image_review_keys": [
+                "IMG-EORBIT-007"
+              ],
+              "heading": "Fecha y hora",
+              "image": "assets/e-orbit/manual/fecha-y-hora.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "configuracion-de-instalacion",
+              "image_review_keys": [
+                "IMG-EORBIT-008"
+              ],
+              "heading": "Configuración de instalación",
+              "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "volumen",
+              "image_review_keys": [
+                "IMG-EORBIT-009"
+              ],
+              "heading": "Volumen",
+              "image": "assets/e-orbit/manual/volumen.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "informacion-y-registros",
+              "image_review_keys": [
+                "IMG-EORBIT-010"
+              ],
+              "heading": "Información y registros",
+              "image": "assets/e-orbit/manual/informacion-y-registros.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Fecha y hora",
+              "anchor": "img-e-orbit-007",
+              "manual_image_key": "IMG-EORBIT-007",
+              "image": "assets/e-orbit/manual/fecha-y-hora.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración del sistema.",
+                "Elige fecha y hora.",
+                "Ingresa la información solicitada.",
+                "Confirma con #."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Configuración de instalación",
+              "anchor": "img-e-orbit-008",
+              "manual_image_key": "IMG-EORBIT-008",
+              "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de instalación.",
+                "Ajusta sentido de apertura, bloqueo retardado o parámetros de cierre según la puerta instalada.",
+                "Confirma los cambios."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Volumen",
+              "anchor": "img-e-orbit-009",
+              "manual_image_key": "IMG-EORBIT-009",
+              "image": "assets/e-orbit/manual/volumen.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona funciones del sistema.",
+                "Elige volumen.",
+                "Ajusta y confirma."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Información y registros",
+              "anchor": "img-e-orbit-010",
+              "manual_image_key": "IMG-EORBIT-010",
+              "image": "assets/e-orbit/manual/informacion-y-registros.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona búsqueda de información.",
+                "Consulta usuarios, versión o registros disponibles."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-EORBIT-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-EORBIT-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-EORBIT-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-004",
+              "image_id": "eorbit-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Orbit.",
+              "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige perfil administrador.",
+                "Selecciona rostro, huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-EORBIT-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-EORBIT-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-EORBIT-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-005",
+              "image_id": "eorbit-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Orbit.",
+              "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige perfil usuario.",
+                "Selecciona rostro, huella, clave o tarjeta.",
+                "Completa el registro.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-EORBIT-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-EORBIT-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-EORBIT-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-006",
+              "image_id": "eorbit-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Orbit.",
+              "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona eliminar usuario.",
+                "Elige eliminación por verificación directa o por ID.",
+                "Presenta el acceso o ingresa el ID correspondiente.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "distancia-de-deteccion-facial",
+              "image_review_keys": [
+                "IMG-EORBIT-011"
+              ],
+              "heading": "Distancia de detección facial",
+              "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "deteccion-humana",
+              "image_review_keys": [
+                "IMG-EORBIT-012"
+              ],
+              "heading": "Detección humana",
+              "image": "assets/e-orbit/manual/deteccion-humana.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "verificacion-dual",
+              "image_review_keys": [
+                "IMG-EORBIT-013"
+              ],
+              "heading": "Verificación dual",
+              "image": "assets/e-orbit/manual/verificacion-dual.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-retardado",
+              "image_review_keys": [
+                "IMG-EORBIT-014"
+              ],
+              "heading": "Bloqueo retardado",
+              "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil",
+              "image_review_keys": [
+                "IMG-EORBIT-015"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-orbit/manual/app-movil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Distancia de detección facial",
+              "anchor": "img-e-orbit-011",
+              "related_manual_image_key": "IMG-EORBIT-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-011",
+              "image_id": "eorbit-10a-distancia-deteccion-facial",
+              "title": "Distancia de detección facial",
+              "caption": "Distancia de detección facial.",
+              "alt": "Distancia de detección facial en e-Orbit.",
+              "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite ajustar la distancia en la que la cerradura detecta presencia frente al panel."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Detección humana",
+              "anchor": "img-e-orbit-012",
+              "related_manual_image_key": "IMG-EORBIT-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-012",
+              "image_id": "eorbit-10b-deteccion-humana",
+              "title": "Detección humana",
+              "caption": "Detección humana.",
+              "alt": "Detección humana en e-Orbit.",
+              "image": "assets/e-orbit/manual/deteccion-humana.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Puede configurarse para quedar desactivada, inteligente o activa según el comportamiento deseado."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Verificación dual",
+              "anchor": "img-e-orbit-013",
+              "related_manual_image_key": "IMG-EORBIT-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-013",
+              "image_id": "eorbit-10c-verificacion-dual",
+              "title": "Verificación dual",
+              "caption": "Verificación dual.",
+              "alt": "Verificación dual en e-Orbit.",
+              "image": "assets/e-orbit/manual/verificacion-dual.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Requiere dos accesos válidos para usuarios ordinarios. Los administradores pueden abrir directamente."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo retardado",
+              "anchor": "img-e-orbit-014",
+              "related_manual_image_key": "IMG-EORBIT-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-014",
+              "image_id": "eorbit-10d-bloqueo-retardado",
+              "title": "Bloqueo retardado",
+              "caption": "Bloqueo retardado.",
+              "alt": "Bloqueo retardado en e-Orbit.",
+              "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite definir un tiempo antes de completar el cierre automático."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-orbit-015",
+              "related_manual_image_key": "IMG-EORBIT-015"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-015",
+              "image_id": "eorbit-10e-app-movil",
+              "title": "App móvil",
+              "caption": "App móvil.",
+              "alt": "Uso de app móvil en e-Orbit.",
+              "image": "assets/e-orbit/manual/app-movil.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "La app permite vinculación, registros, apertura desde el teléfono, comunicación con visitante y gestión de miembros, según la configuración comercial del producto."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-EORBIT-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-orbit/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil",
+          "image_review_keys": [
+            "IMG-EORBIT-015"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-orbit/manual/app-movil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-retardado",
+          "image_review_keys": [
+            "IMG-EORBIT-014"
+          ],
+          "heading": "Bloqueo retardado",
+          "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "configuracion-de-instalacion",
+          "image_review_keys": [
+            "IMG-EORBIT-008"
+          ],
+          "heading": "Configuración de instalación",
+          "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "deteccion-humana",
+          "image_review_keys": [
+            "IMG-EORBIT-012"
+          ],
+          "heading": "Detección humana",
+          "image": "assets/e-orbit/manual/deteccion-humana.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "distancia-de-deteccion-facial",
+          "image_review_keys": [
+            "IMG-EORBIT-011"
+          ],
+          "heading": "Distancia de detección facial",
+          "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "fecha-y-hora",
+          "image_review_keys": [
+            "IMG-EORBIT-007"
+          ],
+          "heading": "Fecha y hora",
+          "image": "assets/e-orbit/manual/fecha-y-hora.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "informacion-y-registros",
+          "image_review_keys": [
+            "IMG-EORBIT-010"
+          ],
+          "heading": "Información y registros",
+          "image": "assets/e-orbit/manual/informacion-y-registros.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-EORBIT-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-EORBIT-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-orbit/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-EORBIT-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-orbit/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-de-la-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-orbit/manual/partes-de-la-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "piezas-principales",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-orbit/manual/piezas-principales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-EORBIT-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-orbit/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-EORBIT-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-orbit/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "verificacion-dual",
+          "image_review_keys": [
+            "IMG-EORBIT-013"
+          ],
+          "heading": "Verificación dual",
+          "image": "assets/e-orbit/manual/verificacion-dual.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "volumen",
+          "image_review_keys": [
+            "IMG-EORBIT-009"
+          ],
+          "heading": "Volumen",
+          "image": "assets/e-orbit/manual/volumen.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-EORBIT-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-EORBIT-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-EORBIT-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-EORBIT-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-EORBIT-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-EORBIT-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-orbit/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-orbit/ts/e-orbit-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-orbit/ts/e-orbit-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-orbit/ts/e-orbit-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-orbit/hero/e-orbit-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

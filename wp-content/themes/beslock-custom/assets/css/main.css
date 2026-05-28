@@ -2559,6 +2559,28 @@ body .products-portfolio__grid > .product-card .pc-actions {
   margin-top: auto;
 }
 
+/* Defensive product media frame.
+   Keeps a missing/broken thumbnail from stretching the whole products row. */
+body .products-portfolio .product-card .product-card__image {
+  box-sizing: border-box !important;
+  width: 100% !important;
+  height: 300px !important;
+  min-height: 300px !important;
+  max-height: 300px !important;
+  padding: 34px 0 6px !important;
+  overflow: hidden !important;
+  flex: 0 0 auto !important;
+}
+
+body .products-portfolio .product-card .product-card__image > img:not(.product-card__badge) {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 260px !important;
+  max-height: 260px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
 /* Responsive: si quieres cambiar el ratio en pantallas grandes */
 @media (min-width: 900px) {
   .footer-logo {
@@ -2941,4 +2963,3 @@ body .products-portfolio__grid > .product-card .pc-actions {
     text-overflow: clip;
   }
 }
-

@@ -1,0 +1,1222 @@
+{
+  "product": {
+    "slug": "e-touch",
+    "display_name": "e-Touch",
+    "profile_public": {
+      "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+      "commercial_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. La identidad visual base presenta manija negra horizontal, roseta circular, lector de huella en el extremo de la manija exterior, teclado numérico sobre la manija, aro luminoso verde y manija interior con botón o interruptor físico.",
+      "product_type": "Cerradura inteligente tipo manija",
+      "lock_architecture": "rim_lock_integrated_mechanism",
+      "access_systems": [
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Clave / PIN",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta IC",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App móvil",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Bluetooth",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Control remoto",
+          "status": "Mencionado en íconos comerciales, validar si aplica"
+        },
+        {
+          "name": "Reconocimiento facial",
+          "status": "No aplica"
+        },
+        {
+          "name": "Video / timbre",
+          "status": "No aplica"
+        }
+      ],
+      "materials": [],
+      "finish": "",
+      "visual_language": [
+        "manija horizontal negra,",
+        "roseta circular,",
+        "lector de huella circular en el extremo de la manija exterior,",
+        "aro luminoso alrededor del lector,",
+        "teclado táctil integrado sobre la manija,",
+        "tecla #,",
+        "área de tarjeta IC sobre la manija,",
+        "acceso de llave mecánica,",
+        "puerto exterior de energía de emergencia,",
+        "manija interior con botón o interruptor físico,",
+        "alimentación por baterías en el conjunto interior, sin inventar un compartimento visible si no aparece en la referencia.",
+        "pomo redondo tipo e-Nova,",
+        "panel vertical tipo e-Prime/e-Orbit,",
+        "cerradura de sobreponer tipo e-Shield,",
+        "mecanismo multipunto,",
+        "cámara,",
+        "reconocimiento facial,",
+        "timbre,"
+      ],
+      "key_features": [],
+      "use_cases": [],
+      "installation_type": "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+      "technical_highlights": [
+        {
+          "label": "Tipo",
+          "value": "Cerradura inteligente tipo manija"
+        },
+        {
+          "label": "Modelo final BESLOCK",
+          "value": "e-Touch genérico"
+        },
+        {
+          "label": "Serie tecnico de apoyo",
+          "value": "N191"
+        },
+        {
+          "label": "Alimentación",
+          "value": "4 pilas AAA alcalinas"
+        },
+        {
+          "label": "Huellas",
+          "value": "100"
+        },
+        {
+          "label": "Claves",
+          "value": "100"
+        },
+        {
+          "label": "Tarjetas",
+          "value": "100"
+        },
+        {
+          "label": "App",
+          "value": "Tuya Smart / Smart Life"
+        },
+        {
+          "label": "Conectividad",
+          "value": "Bluetooth"
+        },
+        {
+          "label": "Clave inicial",
+          "value": "123456"
+        },
+        {
+          "label": "Temperatura",
+          "value": "Caja: -20 °C a 60 °C"
+        },
+        {
+          "label": "Grosor de puerta",
+          "value": "Manual: 35-65 mm; caja: 30-50 mm"
+        },
+        {
+          "label": "Métodos de acceso",
+          "value": "Huella, clave, tarjeta, llave y app"
+        }
+      ],
+      "seo_keywords": [
+        "e-Touch",
+        "BESLOCK e-Touch",
+        "cerradura inteligente",
+        "Cerradura inteligente tipo manija",
+        "Tuya Smart / Smart Life",
+        "Bluetooth",
+        "Huella",
+        "Clave / PIN",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App móvil",
+        "Control remoto",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
+      "warnings_or_pending_validation": [
+        "Las referencias N191, N191A, N191B y CS-9 se concilian como un solo producto genérico. Sirven para confirmar funciones, pero no para construir variantes dentro del manual.",
+        "La caja BESLOCK está en español y confirma el enfoque comercial: 5 formas de acceso, 100 usuarios, modo paso libre, PIN superdiscreto, USB-C, 4 pilas AAA y puertas de 30-50 mm.",
+        "El manual OEM confirma 100 huellas, 100 claves, 100 tarjetas y cuatro pilas AAA, pero menciona puerta de 3,5 a 6,5 cm y micro-USB."
+      ]
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Touch",
+      "summary": "Cerradura inteligente tipo manija con apertura por huella, clave, tarjeta, llave mecánica y app móvil.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-ETOUCH-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-touch/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-ETOUCH-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-touch/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-ETOUCH-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-touch/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Touch es una cerradura de manija. El panel exterior integra teclado, lector de huella y accesos de respaldo; el panel interior aloja las baterías y los controles internos."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-touch-001",
+              "related_manual_image_key": "IMG-ETOUCH-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-001",
+              "image_id": "etouch-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Touch con partes numeradas.",
+              "image": "assets/e-touch/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Manija exterior.",
+                "Lector de huella en el extremo de la manija.",
+                "Aro luminoso del lector.",
+                "Teclado táctil.",
+                "Tecla #.",
+                "Área de lectura de tarjeta IC.",
+                "Acceso de llave mecánica.",
+                "Puerto exterior de energía de emergencia."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-touch-002",
+              "related_manual_image_key": "IMG-ETOUCH-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-002",
+              "image_id": "etouch-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Touch con partes numeradas.",
+              "image": "assets/e-touch/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Manija interior.",
+                "Botón o interruptor de bloqueo interior.",
+                "Control de paso libre, si está incluido en la versión instalada.",
+                "Compartimento de baterías.",
+                "Botón interior de configuración o reinicio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-touch-003",
+              "related_manual_image_key": "IMG-ETOUCH-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-003",
+              "image_id": "etouch-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Touch con partes numeradas.",
+              "image": "assets/e-touch/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo de cierre o pestillo.",
+                "Recibidor del marco."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-ETOUCH-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-ETOUCH-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-touch/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-ETOUCH-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-001",
+              "image_id": "etouch-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Touch.",
+              "image": "assets/e-touch/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con una cerradura tipo manija.",
+                "Revisa el sentido de apertura antes de montar las manijas.",
+                "Instala el cuerpo de cierre en el borde de la puerta.",
+                "Alinea el pestillo con el recibidor.",
+                "Coloca el panel exterior desde el lado de acceso.",
+                "Pasa el eje cuadrado por el cuerpo de cierre.",
+                "Conecta o acomoda el cable interno, si aplica.",
+                "Coloca el panel interior desde el lado protegido.",
+                "Ajusta los tornillos de fijación sin forzar los paneles.",
+                "Coloca cuatro pilas AAA alcalinas respetando la polaridad.",
+                "Acciona la manija interior y confirma que el pestillo se mueva suavemente."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-ETOUCH-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-touch/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-ETOUCH-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-touch/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-ETOUCH-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-touch/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-touch-004",
+              "manual_image_key": "IMG-ETOUCH-004",
+              "image": "assets/e-touch/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el primer acceso registrado y permite tomar control de la cerradura. Debe crearse antes de usarla todos los días."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-touch-005",
+              "manual_image_key": "IMG-ETOUCH-005",
+              "image": "assets/e-touch/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los primeros accesos registrados pueden actuar como administradores. Un administrador puede abrir, agregar usuarios y cambiar ajustes."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-touch-006",
+              "manual_image_key": "IMG-ETOUCH-006",
+              "image": "assets/e-touch/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con huella, clave, tarjeta o app, según los accesos que tenga registrados."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-ETOUCH-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-ETOUCH-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-touch/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-ETOUCH-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-002",
+              "image_id": "etouch-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Touch.",
+              "image": "assets/e-touch/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Coloca las pilas y mantén la puerta abierta.",
+                "Presiona el botón interior de configuración.",
+                "Elige el método de acceso: huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-ETOUCH-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-ETOUCH-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-touch/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-ETOUCH-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-003",
+              "image_id": "etouch-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Touch.",
+              "image": "assets/e-touch/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta la cerradura desde el teclado o el lector de huella.",
+                "Presiona el botón interior de configuración o la secuencia indicada por el teclado, según la versión instalada.",
+                "Verifica con una huella, clave o tarjeta de administrador.",
+                "Selecciona la opción que necesitas.",
+                "Confirma el cambio cuando el sistema lo solicite."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "gestion-de-accesos",
+              "image_review_keys": [
+                "IMG-ETOUCH-007"
+              ],
+              "heading": "Gestión de accesos",
+              "image": "assets/e-touch/manual/gestion-de-accesos.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "paso-libre-img-etouch-008",
+              "image_review_keys": [
+                "IMG-ETOUCH-008"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-touch/manual/paso-libre-img-etouch-008.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil-img-etouch-009",
+              "image_review_keys": [
+                "IMG-ETOUCH-009"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-touch/manual/app-movil-img-etouch-009.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Gestión de accesos",
+              "anchor": "img-e-touch-007",
+              "manual_image_key": "IMG-ETOUCH-007",
+              "image": "assets/e-touch/manual/gestion-de-accesos.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar, editar o eliminar acceso.",
+                "Elige huella, clave o tarjeta.",
+                "Completa la acción siguiendo las instrucciones del sistema."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-touch-008",
+              "related_manual_image_key": "IMG-ETOUCH-008"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-008",
+              "image_id": "etouch-10b-paso-libre",
+              "title": "Paso libre",
+              "caption": "Paso libre.",
+              "alt": "Modo paso libre en e-Touch.",
+              "image": "assets/e-touch/manual/paso-libre-img-etouch-008.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador o usa el control interior, según la versión instalada.",
+                "Activa el modo paso libre.",
+                "Confirma que el acceso quede disponible sin repetir verificación.",
+                "Desactívalo cuando ya no se necesite entrada frecuente."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-touch-009",
+              "related_manual_image_key": "IMG-ETOUCH-009"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-009",
+              "image_id": "etouch-10d-app-movil",
+              "title": "App móvil",
+              "caption": "App móvil.",
+              "alt": "Uso de app móvil en e-Touch.",
+              "image": "assets/e-touch/manual/app-movil-img-etouch-009.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador o despierta la cerradura.",
+                "Activa Bluetooth en el teléfono.",
+                "Abre la app Tuya Smart o Smart Life.",
+                "Agrega la cerradura cuando aparezca disponible."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-ETOUCH-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-ETOUCH-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-touch/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-ETOUCH-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-004",
+              "image_id": "etouch-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Touch.",
+              "image": "assets/e-touch/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar administrador.",
+                "Elige huella, clave o tarjeta.",
+                "Registra el acceso de la persona administradora.",
+                "Espera la confirmación.",
+                "Prueba el nuevo acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-ETOUCH-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-ETOUCH-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-touch/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-ETOUCH-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-005",
+              "image_id": "etouch-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Touch.",
+              "image": "assets/e-touch/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige el método de acceso: huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-ETOUCH-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-ETOUCH-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-touch/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-ETOUCH-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ETOUCH-006",
+              "image_id": "etouch-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Touch.",
+              "image": "assets/e-touch/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona eliminar acceso o usuario.",
+                "Elige si vas a eliminar una huella, clave, tarjeta o perfil desde la app.",
+                "Selecciona el acceso correspondiente.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "pin-con-privacidad",
+              "image_review_keys": [
+                "IMG-ETOUCH-010"
+              ],
+              "heading": "PIN con privacidad",
+              "image": "assets/e-touch/manual/pin-con-privacidad.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "paso-libre-img-etouch-011",
+              "image_review_keys": [
+                "IMG-ETOUCH-011"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-touch/manual/paso-libre-img-etouch-011.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-interior",
+              "image_review_keys": [
+                "IMG-ETOUCH-012"
+              ],
+              "heading": "Bloqueo interior",
+              "image": "assets/e-touch/manual/bloqueo-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil-img-etouch-013",
+              "image_review_keys": [
+                "IMG-ETOUCH-013"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-touch/manual/app-movil-img-etouch-013.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "energia-de-emergencia",
+              "image_review_keys": [
+                "IMG-ETOUCH-014"
+              ],
+              "heading": "Energía de emergencia",
+              "image": "assets/e-touch/manual/energia-de-emergencia.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "PIN con privacidad",
+              "anchor": "img-e-touch-010",
+              "related_manual_image_key": "IMG-ETOUCH-010"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-010",
+              "image_id": "etouch-10a-pin-privacidad",
+              "title": "PIN con privacidad",
+              "caption": "PIN con privacidad.",
+              "alt": "Uso de PIN con privacidad en e-Touch.",
+              "image": "assets/e-touch/manual/pin-con-privacidad.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite escribir números antes o después de la clave real. La cerradura reconoce la clave correcta dentro de la secuencia."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-touch-011",
+              "manual_image_key": "IMG-ETOUCH-011",
+              "image": "assets/e-touch/manual/paso-libre-img-etouch-011.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Úsalo cuando necesites entrada frecuente durante un periodo corto. Desactívalo cuando la puerta deba quedar protegida."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo interior",
+              "anchor": "img-e-touch-012",
+              "related_manual_image_key": "IMG-ETOUCH-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-012",
+              "image_id": "etouch-10c-bloqueo-interior",
+              "title": "Bloqueo interior",
+              "caption": "Bloqueo interior.",
+              "alt": "Bloqueo interior en e-Touch.",
+              "image": "assets/e-touch/manual/bloqueo-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "El bloqueo interior restringe aperturas desde el exterior cuando quieres mayor control desde dentro."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-touch-013",
+              "manual_image_key": "IMG-ETOUCH-013",
+              "image": "assets/e-touch/manual/app-movil-img-etouch-013.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "La app permite gestionar miembros, accesos y registros cuando el teléfono está cerca de la cerradura."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Energía de emergencia",
+              "anchor": "img-e-touch-014",
+              "related_manual_image_key": "IMG-ETOUCH-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ETOUCH-014",
+              "image_id": "etouch-10e-energia-emergencia",
+              "title": "Energía de emergencia",
+              "caption": "Energía de emergencia.",
+              "alt": "Energía de emergencia en e-Touch.",
+              "image": "assets/e-touch/manual/energia-de-emergencia.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Si las pilas se agotan, usa la llave mecánica o alimenta temporalmente la cerradura desde el puerto exterior para poder abrir."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-ETOUCH-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-touch/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil-img-etouch-009",
+          "image_review_keys": [
+            "IMG-ETOUCH-009"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-touch/manual/app-movil-img-etouch-009.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil-img-etouch-013",
+          "image_review_keys": [
+            "IMG-ETOUCH-013"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-touch/manual/app-movil-img-etouch-013.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-interior",
+          "image_review_keys": [
+            "IMG-ETOUCH-012"
+          ],
+          "heading": "Bloqueo interior",
+          "image": "assets/e-touch/manual/bloqueo-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "energia-de-emergencia",
+          "image_review_keys": [
+            "IMG-ETOUCH-014"
+          ],
+          "heading": "Energía de emergencia",
+          "image": "assets/e-touch/manual/energia-de-emergencia.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "gestion-de-accesos",
+          "image_review_keys": [
+            "IMG-ETOUCH-007"
+          ],
+          "heading": "Gestión de accesos",
+          "image": "assets/e-touch/manual/gestion-de-accesos.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-ETOUCH-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-touch/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-ETOUCH-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-touch/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-ETOUCH-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-touch/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-de-la-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-touch/manual/partes-de-la-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre-img-etouch-008",
+          "image_review_keys": [
+            "IMG-ETOUCH-008"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-touch/manual/paso-libre-img-etouch-008.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre-img-etouch-011",
+          "image_review_keys": [
+            "IMG-ETOUCH-011"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-touch/manual/paso-libre-img-etouch-011.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "piezas-principales",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-touch/manual/piezas-principales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "pin-con-privacidad",
+          "image_review_keys": [
+            "IMG-ETOUCH-010"
+          ],
+          "heading": "PIN con privacidad",
+          "image": "assets/e-touch/manual/pin-con-privacidad.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-ETOUCH-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-touch/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-ETOUCH-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-touch/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-ETOUCH-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-touch/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-ETOUCH-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-touch/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-ETOUCH-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-touch/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-ETOUCH-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-touch/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-ETOUCH-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-touch/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-ETOUCH-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-touch/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-touch/ts/e-touch-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-touch/ts/e-touch-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-touch/ts/e-touch-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-touch/hero/e-touch-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}
