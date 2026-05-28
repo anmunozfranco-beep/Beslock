@@ -216,7 +216,7 @@ body.single-product .product-reviews-summary__stars {
 }
 
 body.single-product .product-reviews-summary__stars .is-filled {
-  color: #f7b500;
+  color: var(--beslock-green, #034526);
 }
 
 body.single-product .product-reviews-summary__bars {
@@ -237,7 +237,7 @@ body.single-product .product-reviews-summary__bar span {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: #f7b500;
+  background: var(--beslock-green, #034526);
 }
 
 body.single-product .product-reviews-summary p {
