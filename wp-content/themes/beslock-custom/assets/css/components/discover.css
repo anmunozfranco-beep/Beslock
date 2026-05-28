@@ -3,11 +3,12 @@
 .discover {
   background: var(--beslock-white);
   color: var(--beslock-text-main);
+  overflow: hidden;
 }
 .discover__block {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
   align-items: stretch;
 }
 .discover__text {
@@ -29,26 +30,45 @@
   text-align: justify;
 }
 .discover__image {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
+}
+.discover__image picture {
+  display: block;
+  width: min(82vw, 320px);
 }
 .discover__image img {
   width: 100%;
-  max-width: 370px;
-  border-radius: 16px;
+  height: auto;
+  max-width: none;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
   box-shadow: 0 6px 26px rgba(0,0,0,0.10);
 }
 @media (min-width: 768px) {
   .discover__block {
     flex-direction: row;
-    gap: 3.5rem;
     align-items: center;
     justify-content: space-between;
   }
   .discover__text {
     flex: 1 1 330px;
+    max-width: 560px;
   }
   .discover__image {
     flex: 1 1 330px;
+    justify-content: flex-end;
+  }
+  .discover__image picture {
+    width: min(100%, 370px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .discover__image picture {
+    width: min(32vw, 430px);
   }
 }

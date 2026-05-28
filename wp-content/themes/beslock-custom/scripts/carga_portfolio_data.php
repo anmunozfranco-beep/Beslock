@@ -631,10 +631,28 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         }
       }
       if ( isset( $prod['features'] ) && is_array( $prod['features'] ) ) {
+        $feature_rows = function_exists( 'beslock_normalize_product_feature_rows' )
+          ? beslock_normalize_product_feature_rows( $prod['features'] )
+          : array();
+
         if ( ! $is_dry && $pid ) {
-          update_post_meta( $pid, 'beslock_features', array_map( 'sanitize_text_field', $prod['features'] ) );
+          update_post_meta( $pid, 'beslock_features', $feature_rows );
+          if ( function_exists( 'beslock_sync_product_features_to_wc_attributes' ) ) {
+            $feature_sync = beslock_sync_product_features_to_wc_attributes( $pid, $feature_rows );
+            if ( is_wp_error( $feature_sync ) ) {
+              $log[] = "Failed to sync WooCommerce attributes for {$slug}: " . $feature_sync->get_error_message();
+            } else {
+              $log[] = "Synced {$feature_sync['attributes']} feature attributes to WooCommerce for {$slug}";
+            }
+          } else {
+            $log[] = "Saved beslock_features for {$slug}; WooCommerce attribute sync helper unavailable";
+          }
         } else {
-          $log[] = "(dry-run) Would set features for {$slug}: " . implode( ',', array_map( 'sanitize_text_field', $prod['features'] ) );
+          $feature_summary = array_map( static function( $feature_row ) {
+            return trim( (string) ( $feature_row['label'] ?? '' ) ) . ' — ' . trim( (string) ( $feature_row['value'] ?? '' ) );
+          }, $feature_rows );
+          $log[] = "(dry-run) Would set features for {$slug}: " . implode( ', ', array_filter( $feature_summary ) );
+          $log[] = "(dry-run) Would sync " . count( $feature_rows ) . " feature attributes to WooCommerce for {$slug}";
         }
       }
 
@@ -716,6 +734,116 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
       'skipped' => $skipped,
       'missing_images' => array_values( array_unique( $missing_images ) ),
       'duplicated_slugs' => $duplicated_slugs,
+      'log' => $log,
+    );
+  }
+}
+
+if ( ! function_exists( 'beslock_sync_portfolio_features_to_wc_attributes' ) ) {
+  function beslock_sync_portfolio_features_to_wc_attributes( $dry_run = false ) {
+    $log = array();
+    $is_dry = (bool) $dry_run;
+    $synced = 0;
+    $skipped = array();
+    $missing_products = array();
+
+    $data_file = get_stylesheet_directory() . '/data/products.json';
+    if ( ! file_exists( $data_file ) ) {
+      $err = new WP_Error( 'no_file', sprintf( __( 'products.json not found: %s', 'beslock' ), $data_file ) );
+      try { update_option( 'beslock_last_import_log', $err->get_error_message() ); } catch ( Exception $e ) { }
+      return $err;
+    }
+
+    $json = file_get_contents( $data_file );
+    if ( $json === false ) {
+      $err = new WP_Error( 'read_error', __( 'Unable to read products.json', 'beslock' ) );
+      try { update_option( 'beslock_last_import_log', $err->get_error_message() ); } catch ( Exception $e ) { }
+      return $err;
+    }
+
+    $data = json_decode( $json, true );
+    if ( json_last_error() !== JSON_ERROR_NONE || ! is_array( $data ) ) {
+      $msg = json_last_error() !== JSON_ERROR_NONE ? json_last_error_msg() : __( 'products.json must be an array of product objects', 'beslock' );
+      $err = new WP_Error( 'json_error', $msg );
+      try { update_option( 'beslock_last_import_log', $msg ); } catch ( Exception $e ) { }
+      return $err;
+    }
+
+    foreach ( $data as $prod ) {
+      $slug = ! empty( $prod['slug'] ) ? sanitize_title( $prod['slug'] ) : '';
+      if ( '' === $slug ) {
+        $skipped[] = '(missing slug)';
+        $log[] = 'Skipped product without slug';
+        continue;
+      }
+
+      if ( empty( $prod['features'] ) || ! is_array( $prod['features'] ) ) {
+        $skipped[] = $slug;
+        $log[] = "Skipped {$slug}: no features in products.json";
+        continue;
+      }
+
+      $feature_rows = function_exists( 'beslock_normalize_product_feature_rows' )
+        ? beslock_normalize_product_feature_rows( $prod['features'] )
+        : array();
+
+      if ( empty( $feature_rows ) ) {
+        $skipped[] = $slug;
+        $log[] = "Skipped {$slug}: no valid feature rows";
+        continue;
+      }
+
+      $existing = get_page_by_path( $slug, OBJECT, 'product' );
+      if ( ! $existing && ! empty( $prod['title'] ) ) {
+        $existing = get_page_by_title( $prod['title'], OBJECT, 'product' );
+      }
+
+      if ( ! $existing ) {
+        $missing_products[] = $slug;
+        $log[] = "Product not found for feature sync: {$slug}";
+        continue;
+      }
+
+      if ( $is_dry ) {
+        $feature_summary = array_map( static function( $feature_row ) {
+          return trim( (string) ( $feature_row['label'] ?? '' ) ) . ' — ' . trim( (string) ( $feature_row['value'] ?? '' ) );
+        }, $feature_rows );
+        $log[] = "(dry-run) Would sync {$slug}: " . implode( ', ', array_filter( $feature_summary ) );
+        $synced++;
+        continue;
+      }
+
+      update_post_meta( $existing->ID, 'beslock_features', $feature_rows );
+
+      if ( ! function_exists( 'beslock_sync_product_features_to_wc_attributes' ) ) {
+        $skipped[] = $slug;
+        $log[] = "Skipped {$slug}: WooCommerce attribute sync helper unavailable";
+        continue;
+      }
+
+      $feature_sync = beslock_sync_product_features_to_wc_attributes( $existing->ID, $feature_rows );
+      if ( is_wp_error( $feature_sync ) ) {
+        $skipped[] = $slug;
+        $log[] = "Failed to sync {$slug}: " . $feature_sync->get_error_message();
+        continue;
+      }
+
+      $synced++;
+      $log[] = "Synced {$feature_sync['attributes']} feature attributes to WooCommerce for {$slug}";
+    }
+
+    $summary_lines = array(
+      'Synced: ' . $synced,
+      'Skipped: ' . count( $skipped ),
+      'Missing products: ' . count( $missing_products ),
+    );
+    $full_content = "Feature sync summary:\n" . implode( "\n", $summary_lines ) . "\n\nLog:\n" . implode( "\n", $log );
+    try { update_option( 'beslock_last_import_log', $full_content ); } catch ( Exception $e ) { }
+
+    return array(
+      'synced' => $synced,
+      'skipped' => $skipped,
+      'missing_products' => $missing_products,
       'log' => $log,
     );
   }
@@ -839,6 +967,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
       check_admin_referer( 'beslock_carga_portfolio_nonce' );
       $dry_run_flag = isset( $_POST['beslock_carga_dryrun'] ) && $_POST['beslock_carga_dryrun'] ? true : false;
       $images_only = isset( $_POST['beslock_import_images'] ) && $_POST['beslock_import_images'];
+      $features_only = isset( $_POST['beslock_sync_features'] ) && $_POST['beslock_sync_features'];
 
       // convert PHP errors to exceptions so they can be caught
       set_error_handler( function( $severity, $message, $file, $line ) {
@@ -882,7 +1011,9 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
           }
         }
 
-        if ( $images_only ) {
+        if ( $features_only ) {
+          $res = beslock_sync_portfolio_features_to_wc_attributes( $dry_run_flag );
+        } elseif ( $images_only ) {
           $res = beslock_import_images_from_assets( $dry_run_flag );
         } else {
           $res = beslock_carga_portfolio_process( $dry_run_flag );
@@ -893,14 +1024,19 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
           echo '<div class="notice notice-success"><p>' . esc_html__( 'Import finished. See log below.', 'beslock' ) . '</p></div>';
           echo '<h2>Summary</h2>';
           echo '<ul>';
-          echo '<li>Created: ' . intval( $res['created'] ) . '</li>';
-          echo '<li>Updated: ' . intval( $res['updated'] ) . '</li>';
-          echo '<li>Skipped: ' . count( $res['skipped'] ) . '</li>';
-          echo '<li>Missing images: ' . count( $res['missing_images'] ) . '</li>';
-          echo '<li>Duplicated slugs: ' . count( $res['duplicated_slugs'] ) . '</li>';
+          if ( isset( $res['created'] ) ) echo '<li>Created: ' . intval( $res['created'] ) . '</li>';
+          if ( isset( $res['updated'] ) ) echo '<li>Updated: ' . intval( $res['updated'] ) . '</li>';
+          if ( isset( $res['synced'] ) ) echo '<li>Synced: ' . intval( $res['synced'] ) . '</li>';
+          if ( isset( $res['imported'] ) ) echo '<li>Imported: ' . intval( $res['imported'] ) . '</li>';
+          if ( isset( $res['assigned'] ) ) echo '<li>Assigned: ' . intval( $res['assigned'] ) . '</li>';
+          if ( isset( $res['skipped'] ) ) echo '<li>Skipped: ' . count( (array) $res['skipped'] ) . '</li>';
+          if ( isset( $res['missing_images'] ) ) echo '<li>Missing images: ' . count( (array) $res['missing_images'] ) . '</li>';
+          if ( isset( $res['missing'] ) ) echo '<li>Missing: ' . count( (array) $res['missing'] ) . '</li>';
+          if ( isset( $res['missing_products'] ) ) echo '<li>Missing products: ' . count( (array) $res['missing_products'] ) . '</li>';
+          if ( isset( $res['duplicated_slugs'] ) ) echo '<li>Duplicated slugs: ' . count( (array) $res['duplicated_slugs'] ) . '</li>';
           echo '</ul>';
           echo '<h2>Log</h2>';
-          echo '<pre style="white-space:pre-wrap; background:#fff; border:1px solid #ddd; padding:12px;">' . esc_html( implode( "\n", $res['log'] ) ) . '</pre>';
+          echo '<pre style="white-space:pre-wrap; background:#fff; border:1px solid #ddd; padding:12px;">' . esc_html( implode( "\n", (array) ( $res['log'] ?? array() ) ) ) . '</pre>';
         }
       } catch ( Throwable $e ) {
         $err = sprintf( 'Import failed with exception: %s on line %d', $e->getMessage(), $e->getLine() );
@@ -920,6 +1056,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
     echo '<p>' . esc_html__( 'This will read data/products.json and create/update WooCommerce products accordingly.', 'beslock' ) . '</p>';
     echo '<p><label><input type="checkbox" name="beslock_carga_dryrun" value="1" checked> ' . esc_html__( 'Dry run (no changes, just report)', 'beslock' ) . '</label></p>';
     echo '<p><label><input type="checkbox" name="beslock_import_images" value="1"> ' . esc_html__( 'Only import images from theme assets and assign to products', 'beslock' ) . '</label></p>';
+    echo '<p><label><input type="checkbox" name="beslock_sync_features" value="1"> ' . esc_html__( 'Only sync product characteristics to WooCommerce attributes', 'beslock' ) . '</label></p>';
     echo '<p><button type="submit" name="beslock_carga_run" class="button button-primary">' . esc_html__( 'Regenerar catálogo', 'beslock' ) . '</button></p>';
     echo '</form></div>';
   }

@@ -10,11 +10,28 @@ get_header();
     $product = function_exists( 'wc_get_product' ) ? wc_get_product( get_the_ID() ) : null;
     $product_features = function_exists( 'beslock_get_product_features_list' ) ? beslock_get_product_features_list( $product ) : array();
     $product_reviews = function_exists( 'beslock_get_product_reviews_list' ) ? beslock_get_product_reviews_list( $product ) : array();
+    $product_review_rating_counts = array_fill( 1, 5, 0 );
+    $product_review_rating_total = 0;
+    $product_review_rating_count = 0;
     $product_navigation = array();
     $features_tab_id = 'product-tab-features-' . get_the_ID();
     $reviews_tab_id = 'product-tab-reviews-' . get_the_ID();
     $features_panel_id = 'product-panel-features-' . get_the_ID();
     $reviews_panel_id = 'product-panel-reviews-' . get_the_ID();
+
+    foreach ( $product_reviews as $product_review ) {
+      $product_review_rating = isset( $product_review['rating'] ) ? min( 5, max( 0, intval( $product_review['rating'] ) ) ) : 0;
+      if ( $product_review_rating < 1 ) {
+        continue;
+      }
+
+      $product_review_rating_counts[ $product_review_rating ]++;
+      $product_review_rating_total += $product_review_rating;
+      $product_review_rating_count++;
+    }
+
+    $product_review_average = $product_review_rating_count > 0 ? $product_review_rating_total / $product_review_rating_count : 0;
+    $product_review_average_display = $product_review_rating_count > 0 ? number_format( $product_review_average, 1, '.', '' ) : '0.0';
 
     $product_navigation_ids = get_posts( array(
       'post_type'      => 'product',
@@ -165,6 +182,38 @@ get_header();
             hidden
           >
             <?php if ( ! empty( $product_reviews ) ) : ?>
+              <div
+                class="product-reviews-summary"
+                aria-label="<?php printf( esc_attr__( 'Calificación promedio: %1$s de 5 basada en %2$d reseñas.', 'beslock' ), esc_attr( $product_review_average_display ), absint( $product_review_rating_count ) ); ?>"
+              >
+                <div class="product-reviews-summary__score">
+                  <strong><?php echo esc_html( $product_review_average_display ); ?></strong>
+                  <div class="product-reviews-summary__stars" aria-hidden="true">
+                    <?php for ( $summary_star = 1; $summary_star <= 5; $summary_star++ ) : ?>
+                      <span class="<?php echo $summary_star <= round( $product_review_average ) ? 'is-filled' : ''; ?>">&#9733;</span>
+                    <?php endfor; ?>
+                  </div>
+                  <span><?php printf( esc_html__( '(%d)', 'beslock' ), absint( $product_review_rating_count ) ); ?></span>
+                </div>
+
+                <div class="product-reviews-summary__bars">
+                  <?php for ( $summary_rating = 5; $summary_rating >= 1; $summary_rating-- ) : ?>
+                    <?php
+                    $summary_rating_count = $product_review_rating_counts[ $summary_rating ] ?? 0;
+                    $summary_rating_percent = $product_review_rating_count > 0 ? ( $summary_rating_count / $product_review_rating_count ) * 100 : 0;
+                    ?>
+                    <div
+                      class="product-reviews-summary__bar"
+                      aria-label="<?php printf( esc_attr__( '%1$d estrellas: %2$d reseñas', 'beslock' ), absint( $summary_rating ), absint( $summary_rating_count ) ); ?>"
+                    >
+                      <span style="width: <?php echo esc_attr( round( $summary_rating_percent, 2 ) ); ?>%;"></span>
+                    </div>
+                  <?php endfor; ?>
+                </div>
+
+                <p><?php echo esc_html__( 'No se verificaron las opiniones', 'beslock' ); ?></p>
+              </div>
+
               <ul class="product-reviews-list">
                 <?php foreach ( $product_reviews as $review ) : ?>
                   <?php $review_rating = isset( $review['rating'] ) ? intval( $review['rating'] ) : 0; ?>

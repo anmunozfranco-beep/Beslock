@@ -35,21 +35,17 @@ $rating_value  = isset( $main_form_values['rating'] ) ? absint( $main_form_value
 $reply_name_value    = isset( $reply_form_values['name'] ) ? (string) $reply_form_values['name'] : '';
 $reply_email_value   = isset( $reply_form_values['email'] ) ? (string) $reply_form_values['email'] : '';
 $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_form_values['content'] : '';
+$interaction_heading = sprintf(
+  __( 'Comparte tu experiencia o deja una consulta sobre %s.', 'beslock' ),
+  $product_name ? $product_name : __( 'este producto', 'beslock' )
+);
 ?>
 
 <section class="product-interactions" aria-labelledby="product-interactions-title">
   <div class="product-interactions__header">
     <div>
-      <h2 id="product-interactions-title"><?php echo esc_html__( 'Formulario de reseñas y consultas', 'beslock' ); ?></h2>
+      <h2 id="product-interactions-title"><?php echo esc_html( $interaction_heading ); ?></h2>
     </div>
-    <p class="product-interactions__description">
-      <?php
-      printf(
-        esc_html__( 'Comparte tu experiencia o deja una consulta sobre %s.', 'beslock' ),
-        esc_html( $product_name )
-      );
-      ?>
-    </p>
   </div>
 
   <div class="product-interactions__surface product-interactions__surface--form">
@@ -98,7 +94,7 @@ $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_
                     <?php checked( $rating_value, $rating ); ?>
                   >
                   <label for="beslock-interaction-rating-<?php echo esc_attr( $product_id ); ?>-<?php echo esc_attr( $rating ); ?>">
-                    <span class="product-interactions__star-number"><?php echo esc_html( $rating ); ?></span>
+                    <span class="screen-reader-text"><?php printf( esc_html( _n( '%d estrella', '%d estrellas', $rating, 'beslock' ) ), $rating ); ?></span>
                     <span class="product-interactions__star-icon" aria-hidden="true">&#9733;</span>
                   </label>
                 </div>
@@ -133,8 +129,7 @@ $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_
   </div>
 
   <div class="product-interactions__questions-header">
-    <h3><?php echo esc_html__( 'Preguntas y respuestas', 'beslock' ); ?></h3>
-    <p><?php echo esc_html__( 'Aquí verás las consultas aprobadas para este producto y, cuando existan, sus respuestas.', 'beslock' ); ?></p>
+    <h3><?php echo esc_html__( 'Histórico de consultas', 'beslock' ); ?></h3>
   </div>
 
   <div class="product-interactions__surface product-interactions__questions">

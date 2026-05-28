@@ -14,6 +14,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
   $theme_dir_uri  = get_stylesheet_directory_uri();
   $theme_dir_path = get_stylesheet_directory();
+  $is_product_page = function_exists( 'is_product' ) && is_product();
 
   $ver_main_css = file_exists( $theme_dir_path . '/assets/css/main.css' )
     ? filemtime( $theme_dir_path . '/assets/css/main.css' )
@@ -86,20 +87,22 @@ add_action( 'wp_enqueue_scripts', function() {
   $enqueue_optional_theme_style( 'beslock-recommendations-layout', '/assets/css/layout/recommendations.css' );
   $enqueue_optional_theme_style( 'beslock-storefront-layout', '/assets/css/layout/storefront.css' );
 
-  wp_enqueue_script(
-    'gsap',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
-    [],
-    null,
-    true
-  );
-  wp_enqueue_script(
-    'scrolltrigger',
-    'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
-    [ 'gsap' ],
-    null,
-    true
-  );
+  if ( apply_filters( 'beslock_enqueue_gsap', false ) ) {
+    wp_enqueue_script(
+      'gsap',
+      'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
+      [],
+      null,
+      true
+    );
+    wp_enqueue_script(
+      'scrolltrigger',
+      'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
+      [ 'gsap' ],
+      null,
+      true
+    );
+  }
 
   $main_js_path = $theme_dir_path . '/assets/js/main.js';
   $ver_main_js = file_exists( $main_js_path ) ? filemtime( $main_js_path ) : null;
@@ -197,26 +200,26 @@ add_action( 'wp_enqueue_scripts', function() {
   }
 
   $widgets_css = $theme_dir_path . '/assets/css/product-widgets.css';
-  if ( file_exists( $widgets_css ) ) {
+  if ( $is_product_page && file_exists( $widgets_css ) ) {
     wp_enqueue_style( 'beslock-product-widgets', $theme_dir_uri . '/assets/css/product-widgets.css', [ 'beslock-main-style' ], filemtime( $widgets_css ) );
   }
 
   $product_page_css = $theme_dir_path . '/assets/css/product-page.css';
-  if ( file_exists( $product_page_css ) ) {
+  if ( $is_product_page && file_exists( $product_page_css ) ) {
     wp_enqueue_style( 'beslock-product-page', $theme_dir_uri . '/assets/css/product-page.css', [ 'beslock-main-style' ], filemtime( $product_page_css ) );
   }
 
   $product_tabs_css = $theme_dir_path . '/assets/css/product-tabs.css';
-  if ( file_exists( $product_tabs_css ) ) {
+  if ( $is_product_page && file_exists( $product_tabs_css ) ) {
     wp_enqueue_style( 'beslock-product-tabs', $theme_dir_uri . '/assets/css/product-tabs.css', [ 'beslock-product-page' ], filemtime( $product_tabs_css ) );
   }
   $product_tabs_js = $theme_dir_path . '/assets/js/product-tabs.js';
-  if ( file_exists( $product_tabs_js ) ) {
+  if ( $is_product_page && file_exists( $product_tabs_js ) ) {
     wp_enqueue_script( 'beslock-product-tabs-js', $theme_dir_uri . '/assets/js/product-tabs.js', [ 'beslock-main-js' ], filemtime( $product_tabs_js ), true );
   }
 
   $qty_js = $theme_dir_path . '/assets/js/product-quantity-controls.js';
-  if ( file_exists( $qty_js ) ) {
+  if ( $is_product_page && file_exists( $qty_js ) ) {
     wp_enqueue_script( 'beslock-product-qty-js', $theme_dir_uri . '/assets/js/product-quantity-controls.js', [ 'beslock-main-js' ], filemtime( $qty_js ), true );
   }
 
@@ -248,11 +251,11 @@ add_action( 'wp_enqueue_scripts', function() {
   }
 
   $reel_css = $theme_dir_path . '/assets/css/product-gallery-reel.css';
-  if ( file_exists( $reel_css ) ) {
+  if ( $is_product_page && file_exists( $reel_css ) ) {
     wp_enqueue_style( 'beslock-product-gallery-reel', $theme_dir_uri . '/assets/css/product-gallery-reel.css', [ 'beslock-main-style' ], filemtime( $reel_css ) );
   }
   $reel_js = $theme_dir_path . '/assets/js/product-gallery-reel.js';
-  if ( file_exists( $reel_js ) ) {
+  if ( $is_product_page && file_exists( $reel_js ) ) {
     wp_enqueue_script( 'beslock-product-gallery-reel-js', $theme_dir_uri . '/assets/js/product-gallery-reel.js', [ 'beslock-main-js' ], filemtime( $reel_js ), true );
   }
 

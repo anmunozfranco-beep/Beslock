@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Menu must use the non-underscore images located in assets/images/products/
 $images_dir_path = get_stylesheet_directory() . '/assets/images/products/';
 $images_dir_uri  = get_stylesheet_directory_uri() . '/assets/images/products/';
+$transparent_pixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 
 // User-configurable overrides:
 // badge text per base (optional)
@@ -142,17 +143,20 @@ if ( ! function_exists( 'beslock_get_product_url_from_base' ) ) {
       <?php if ( ! empty( $product_url ) ) : ?>
       <a class="models__item-link" href="<?php echo esc_url( $product_url ); ?>" aria-labelledby="<?php echo esc_attr( $id_safe ); ?>">
       <?php endif; ?>
-      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
-        <picture>
-          <?php if ( $webp_uri ) : ?>
-            <source srcset="<?php echo esc_url( $webp_uri ); ?>" type="image/webp">
-          <?php endif; ?>
+	      <div class="models__item-media models__item-media--lazy" aria-hidden="false">
+	        <picture>
+	          <?php if ( $webp_uri ) : ?>
+	            <source data-srcset="<?php echo esc_url( $webp_uri ); ?>" type="image/webp">
+	          <?php endif; ?>
 
-          <img
-            src="<?php echo esc_url( $img_fallback ); ?>"
-            alt="<?php echo esc_attr( $title ); ?>"
-            loading="lazy"
-            class="models__item-img"
+	          <img
+	            src="<?php echo esc_attr( $transparent_pixel ); ?>"
+	            data-src="<?php echo esc_url( $img_fallback ); ?>"
+	            data-defer-until="drawer-open"
+	            alt="<?php echo esc_attr( $title ); ?>"
+	            loading="lazy"
+	            decoding="async"
+	            class="models__item-img"
             width="1200"
             height="675"
             <?php if ( ! empty( $focal ) ) : ?>

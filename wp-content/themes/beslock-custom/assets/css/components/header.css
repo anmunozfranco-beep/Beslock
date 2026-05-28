@@ -414,3 +414,156 @@ nav#mobileDrawer.products-open .mobile-products-panel.models--hidden,
     top: calc(50% + 0.4rem) !important;
   }
 }
+
+/* Final responsive drawer geometry.
+   This file is enqueued after the legacy drawer CSS, so these rules define the
+   layout contract used by Products, Guides, and any future drawer panels. */
+nav#mobileDrawer,
+[data-js="mobile-drawer"] {
+  --drawer-viewport-height: 100vh;
+  --drawer-current-width: min(var(--drawer-width, 448px), 100vw);
+  --drawer-header-height: calc(32px + 0.8rem);
+  --drawer-inline-pad: clamp(1rem, 4.8vw, 1.25rem);
+  --drawer-bottom-safe: max(1rem, calc(env(safe-area-inset-bottom) + 1rem));
+  --drawer-menu-top-space: clamp(1.25rem, 5vh, 3rem);
+  --drawer-menu-gap: clamp(1.75rem, 7vh, 4.5rem);
+  --drawer-menu-bottom-space: max(var(--drawer-bottom-safe), clamp(1.25rem, 4vh, 3rem));
+}
+
+@supports (height: 100dvh) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-viewport-height: 100dvh;
+  }
+}
+
+@media (min-width: 600px) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-header-height: calc(38px + 1.4rem);
+  }
+}
+
+@media (max-width: 767px) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-current-width: 100vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-current-width: min(560px, 72vw);
+    --drawer-menu-top-space: clamp(3.5rem, 9vh, 6rem);
+    --drawer-menu-gap: clamp(3rem, 10vh, 7rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-current-width: var(--drawer-width, 448px);
+    --drawer-menu-top-space: clamp(1.5rem, 4.5vh, 3.25rem);
+    --drawer-menu-gap: clamp(2rem, 6.5vh, 4rem);
+  }
+}
+
+@media (max-height: 760px) {
+  nav#mobileDrawer,
+  [data-js="mobile-drawer"] {
+    --drawer-menu-top-space: clamp(0.875rem, 3vh, 1.75rem);
+    --drawer-menu-gap: clamp(1rem, 4vh, 2rem);
+    --drawer-menu-bottom-space: max(var(--drawer-bottom-safe), 1rem);
+  }
+}
+
+nav#mobileDrawer.is-open::before,
+[data-js="mobile-drawer"].is-open::before {
+  height: var(--drawer-header-height) !important;
+}
+
+nav#mobileDrawer .mobile-drawer__panel,
+[data-js="mobile-drawer"] [data-js="mobile-drawer-panel"] {
+  width: var(--drawer-current-width) !important;
+  max-width: var(--drawer-current-width) !important;
+  height: var(--drawer-viewport-height) !important;
+  padding: 1.25rem var(--drawer-inline-pad) var(--drawer-bottom-safe) !important;
+}
+
+nav#mobileDrawer .drawer-header,
+[data-js="mobile-drawer"] [data-js="mobile-drawer-header"] {
+  height: var(--drawer-header-height) !important;
+  margin-right: calc(-1 * var(--drawer-inline-pad)) !important;
+  margin-left: calc(-1 * var(--drawer-inline-pad)) !important;
+}
+
+nav#mobileDrawer .mobile-menu__item,
+[data-js="mobile-drawer"] .mobile-menu__item {
+  position: static !important;
+}
+
+nav#mobileDrawer .mobile-drawer__panel .mobile-menu,
+[data-js="mobile-drawer"] [data-js="mobile-drawer-menu"] {
+  height: auto !important;
+  min-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height) - var(--drawer-bottom-safe)) !important;
+  max-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height)) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  justify-content: flex-start !important;
+  gap: var(--drawer-menu-gap) !important;
+  padding: var(--drawer-menu-top-space) 0 var(--drawer-menu-bottom-space) !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+nav#mobileDrawer .mobile-menu__item,
+[data-js="mobile-drawer"] .mobile-menu__item {
+  padding: clamp(0.25rem, 1.4vh, 0.9rem) 0 !important;
+}
+
+nav#mobileDrawer .mobile-products-panel,
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"] {
+  position: fixed !important;
+  top: var(--drawer-header-height) !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: var(--drawer-current-width) !important;
+  max-width: var(--drawer-current-width) !important;
+  height: calc(var(--drawer-viewport-height) - var(--drawer-header-height)) !important;
+  min-height: 0 !important;
+  max-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height)) !important;
+  padding:
+    clamp(0.9rem, 3vw, 1.25rem)
+    var(--drawer-inline-pad)
+    max(2rem, calc(env(safe-area-inset-bottom) + 1.5rem)) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  transform: translate3d(var(--drawer-current-width), 0, 0) !important;
+}
+
+nav#mobileDrawer .mobile-products-panel[hidden],
+nav#mobileDrawer .mobile-products-panel.models--hidden,
+nav#mobileDrawer .mobile-products-panel.models--hidden[hidden],
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"][hidden],
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"].models--hidden,
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"].models--hidden[hidden] {
+  transform: translate3d(var(--drawer-current-width), 0, 0) !important;
+}
+
+nav#mobileDrawer.products-opening .mobile-products-panel,
+[data-js="mobile-drawer"].products-opening [data-js="drawer-products-panel"] {
+  transform: translate3d(calc(-1 * var(--drawer-current-width)), 0, 0) !important;
+}
+
+nav#mobileDrawer.products-open .mobile-products-panel,
+nav#mobileDrawer .mobile-products-panel.models--visible,
+[data-js="mobile-drawer"].products-open [data-js="drawer-products-panel"],
+[data-js="mobile-drawer"] [data-js="drawer-products-panel"].models--visible {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+nav#mobileDrawer.products-closing .mobile-products-panel,
+[data-js="mobile-drawer"].products-closing [data-js="drawer-products-panel"] {
+  transform: translate3d(var(--drawer-current-width), 0, 0) !important;
+}

@@ -42,3 +42,153 @@
   color: var(--beslock-green-lite);
   border: 2px solid var(--beslock-green-lite);
 }
+
+/* Premium CTA skin shared across site buttons.
+   Keep this scoped to action buttons/links so navigation icons, tabs, drawer
+   controls, quantity steppers, stars, and close buttons keep their own UI. */
+:where(
+  .btn,
+  .beslock-btn,
+  .discover__btn,
+  .hero__cta,
+  .wp-block-button__link,
+  .button,
+  button[type="submit"],
+  input[type="submit"],
+  .checkout-button,
+  .shipping-calculator-button,
+  .product-interactions__submit,
+  .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close) {
+  opacity: 1 !important;
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1.35rem;
+  border: 1px solid var(--beslock-green, #034526) !important;
+  border-radius: 12px !important;
+  background: var(--beslock-green, #034526) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(3,69,38,0.14) !important;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
+  text-decoration: none !important;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 260ms cubic-bezier(.16,.84,.29,1),
+    transform 260ms cubic-bezier(.16,.84,.29,1) !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(
+  .btn,
+  .beslock-btn,
+  .discover__btn,
+  .hero__cta,
+  .wp-block-button__link,
+  .button,
+  button[type="submit"],
+  .checkout-button,
+  .shipping-calculator-button,
+  .product-interactions__submit,
+  .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close)::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 0 34%, rgba(255,255,255,0.22) 45%, transparent 58% 100%);
+  transform: translateX(-125%);
+  transition: transform 700ms cubic-bezier(.16,.84,.29,1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :where(
+    .btn,
+    .beslock-btn,
+    .discover__btn,
+    .hero__cta,
+    .wp-block-button__link,
+    .button,
+    button[type="submit"],
+    input[type="submit"],
+    .checkout-button,
+    .shipping-calculator-button,
+    .product-interactions__submit,
+    .product-interactions__reply-trigger
+  ):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):hover {
+    opacity: 1 !important;
+    background: #075231 !important;
+    border-color: #075231 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 16px 34px rgba(3,69,38,0.22), 0 4px 10px rgba(7,5,5,0.08) !important;
+  }
+
+  :where(
+    .btn,
+    .beslock-btn,
+    .discover__btn,
+    .hero__cta,
+    .wp-block-button__link,
+    .button,
+    button[type="submit"],
+    .checkout-button,
+    .shipping-calculator-button,
+    .product-interactions__submit,
+    .product-interactions__reply-trigger
+  ):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):hover::before {
+    transform: translateX(125%);
+  }
+}
+
+:where(
+  .btn,
+  .beslock-btn,
+  .discover__btn,
+  .hero__cta,
+  .wp-block-button__link,
+  .button,
+  button[type="submit"],
+  input[type="submit"],
+  .checkout-button,
+  .shipping-calculator-button,
+  .product-interactions__submit,
+  .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):active {
+  transform: translateY(0) scale(0.99) !important;
+  box-shadow: 0 8px 18px rgba(3,69,38,0.14) !important;
+}
+
+:where(
+  .btn,
+  .beslock-btn,
+  .discover__btn,
+  .hero__cta,
+  .wp-block-button__link,
+  .button,
+  button[type="submit"],
+  input[type="submit"],
+  .checkout-button,
+  .shipping-calculator-button,
+  .product-interactions__submit,
+  .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.94),
+    0 0 0 6px rgba(3,69,38,0.26),
+    0 12px 28px rgba(3,69,38,0.18) !important;
+}

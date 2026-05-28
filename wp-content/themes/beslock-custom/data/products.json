@@ -6,9 +6,12 @@
     "short_description": "Ideal para recibir y dar acceso sin estar presente. Códigos temporales, huella y control remoto para estancias cortas.",
     "badge": "Ideal para estancias cortas",
     "features": [
-      "Ideal para — visitas temporales",
-      "Total control — en el celular",
-      "Varias formas — de apertura"
+      {"label":"Tipo","value":"Cerradura inteligente de embutir"},
+      {"label":"Accesos","value":"Huella, clave, tarjeta IC, llave mecánica y app Tuya"},
+      {"label":"Conectividad","value":"WiFi 2.4 GHz con app Tuya"},
+      {"label":"Seguridad","value":"Verificación dual, alarma antipalanca y bloqueo temporal por intentos incorrectos"},
+      {"label":"Energía","value":"Funciona con 4 pilas AA y puerto exterior USB-C de emergencia"},
+      {"label":"Respaldo","value":"Llave mecánica y conservación de usuarios al retirar baterías"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":4,"text":"Muy buen desempeño en espacios pequeños."},
@@ -28,9 +31,12 @@
     "short_description": "Acceso inteligente sin llaves para tu día a día. Huella y control simple para moverte con libertad y tranquilidad.",
     "badge": "Privacidad sin complicaciones",
     "features": [
-      "Libérate — de cargar llaves",
-      "Varias formas — de apertura",
-      "Múltiples — usuarios"
+      {"label":"Tipo","value":"Cerradura inteligente tipo pomo"},
+      {"label":"Accesos","value":"Huella, app Tuya Smart por Bluetooth y llave mecánica"},
+      {"label":"Capacidad","value":"Permite 20 huellas: 3 administradores y 17 usuarios regulares"},
+      {"label":"Energía","value":"Batería de litio 400 mAh y puerto exterior de emergencia"},
+      {"label":"Puerta","value":"Compatible con grosores de 35 a 55 mm"},
+      {"label":"Uso diario","value":"Modo normalmente abierto y bloqueo interior / doble cierre"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":5,"text":"Perfecta para uso diario."},
@@ -51,9 +57,12 @@
     "short_description": "Mira y controla quién llega a tu puerta, estés donde estés. Seguridad avanzada con video y acceso inteligente desde tu celular.",
     "badge": "Desde donde te encuentres",
     "features": [
-      "Total control — en el celular",
-      "Varias formas — de apertura",
-      "Ideal para — visitas temporales"
+      {"label":"Accesos","value":"Rostro, huella, PIN, tarjeta M1, llave mecánica y app móvil"},
+      {"label":"Video","value":"Timbre con intercom y desbloqueo remoto desde la app"},
+      {"label":"Capacidad","value":"Permite 250 registros: hasta 100 huellas, 100 PIN y 50 rostros"},
+      {"label":"Historial","value":"Registra 600 eventos de operación"},
+      {"label":"Verificación","value":"Tiempo de verificación menor o igual a 3 segundos"},
+      {"label":"Energía","value":"Opera entre 7,0 V y 8,4 V, con Micro USB 5 V / 1 A de emergencia"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":5,"text":"Ideal para control remoto desde cualquier sitio."},
@@ -73,9 +82,12 @@
     "short_description": "Control total para accesos exigentes. Gestión avanzada de usuarios para espacios de alto flujo.",
     "badge": "Pensada para oficinas",
     "features": [
-      "Múltiples — usuarios",
-      "Total control — en el celular",
-      "Varias formas — de apertura"
+      {"label":"Accesos","value":"Huella, contraseña, tarjeta IC, app Tuya y llave mecánica"},
+      {"label":"Capacidad","value":"Permite hasta 300 usuarios o credenciales y 9 administradores"},
+      {"label":"Privacidad","value":"Contraseña antiespía con hasta 12 dígitos irrelevantes"},
+      {"label":"Seguridad","value":"Verificación dual, alarma antipalanca, baja tensión e intentos incorrectos"},
+      {"label":"Energía","value":"Funciona con 4 pilas AA y puerto externo de emergencia de 5 V"},
+      {"label":"Bloqueo","value":"Tras 5 intentos incorrectos, activa alarma y bloqueo temporal de 90 segundos"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":4,"text":"Robusta y profesional."},
@@ -95,9 +107,12 @@
     "short_description": "Protección inteligente para tu hogar. Seguridad robusta con acceso electrónico y respaldo mecánico.",
     "badge": "Máxima protección en tu hogar",
     "features": [
-      "Libérate — de cargar llaves",
-      "Varias formas — de apertura",
-      "Total control — en el celular"
+      {"label":"Tipo","value":"Cerradura inteligente exterior de sobreponer"},
+      {"label":"Accesos","value":"Huella, PIN, tarjeta IC, llave mecánica y app"},
+      {"label":"Puertas","value":"Compatible con puertas de hierro, acero inoxidable y patio, con grosor de 30 a 110 mm"},
+      {"label":"Construcción","value":"Aleación de aluminio, hierro inoxidable, cilindro clase C y pestillo 304"},
+      {"label":"Capacidad","value":"Permite 100 huellas, 100 tarjetas y 100 claves"},
+      {"label":"Energía","value":"Funciona con 4 baterías AA y puerto USB exterior para power bank"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":5,"text":"Súper seguro, me da paz mental."},
@@ -118,9 +133,12 @@
     "short_description": "Acceso fácil para espacios compartidos. Clave y huella para que todos puedan entrar, sin complicaciones.",
     "badge": "Acceso para todos",
     "features": [
-      "Múltiples — usuarios",
-      "Varias formas — de apertura",
-      "Libérate — de cargar llaves"
+      {"label":"Tipo","value":"Cerradura inteligente tipo manija"},
+      {"label":"Accesos","value":"Huella, clave, tarjeta IC, llave mecánica y app móvil"},
+      {"label":"Capacidad","value":"Permite 100 huellas, 100 claves y 100 tarjetas"},
+      {"label":"Conectividad","value":"Bluetooth con app Tuya Smart / Smart Life"},
+      {"label":"Energía","value":"Funciona con 4 pilas AAA y puerto USB-C de emergencia"},
+      {"label":"Uso diario","value":"Modo paso libre y PIN superdiscreto"}
     ],
     "reviews": [
       {"author":"Cliente Anónimo","rating":4,"text":"Muy accesible para invitados."},
