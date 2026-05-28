@@ -10,59 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 error_log( 'Loaded OK: inc/woocommerce/product-features.php' );
 
-if ( ! function_exists( 'beslock_get_manual_product_catalog' ) ) {
-  function beslock_get_manual_product_catalog() {
-    static $catalog = null;
-
-    if ( null !== $catalog ) {
-      return $catalog;
-    }
-
-    $catalog = array();
-    $catalog_path = get_stylesheet_directory() . '/data/product-manual-features.php';
-
-    if ( ! file_exists( $catalog_path ) || ! is_readable( $catalog_path ) ) {
-      return $catalog;
-    }
-
-    $loaded_catalog = require $catalog_path;
-    if ( ! is_array( $loaded_catalog ) ) {
-      return $catalog;
-    }
-
-    foreach ( $loaded_catalog as $slug => $item ) {
-      if ( empty( $slug ) || ! is_array( $item ) ) {
-        continue;
-      }
-
-      $catalog[ sanitize_title( (string) $slug ) ] = $item;
-    }
-
-    return $catalog;
-  }
-}
-
-if ( ! function_exists( 'beslock_get_manual_product_item' ) ) {
-  function beslock_get_manual_product_item( $product ) {
-    if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
-      $product = wc_get_product( intval( $product ) );
-    }
-
-    if ( ! $product || ! is_a( $product, 'WC_Product' ) ) {
-      return array();
-    }
-
-    $catalog = beslock_get_manual_product_catalog();
-    $slug = sanitize_title( (string) $product->get_slug() );
-
-    if ( empty( $catalog[ $slug ] ) || ! is_array( $catalog[ $slug ] ) ) {
-      return array();
-    }
-
-    return $catalog[ $slug ];
-  }
-}
-
 if ( ! function_exists( 'beslock_normalize_product_feature_list' ) ) {
   function beslock_normalize_product_feature_list( $features ) {
     if ( is_string( $features ) ) {
@@ -153,15 +100,6 @@ if ( ! function_exists( 'beslock_get_product_features_list' ) ) {
 
     if ( ! $product || ! is_a( $product, 'WC_Product' ) ) {
       return array();
-    }
-
-    $manual_item = beslock_get_manual_product_item( $product );
-    if ( ! empty( $manual_item['feature_rows'] ) ) {
-      return beslock_normalize_product_feature_rows( $manual_item['feature_rows'] );
-    }
-
-    if ( ! empty( $manual_item['features'] ) ) {
-      return beslock_normalize_product_feature_rows( $manual_item['features'] );
     }
 
     $features = beslock_normalize_product_feature_rows(
