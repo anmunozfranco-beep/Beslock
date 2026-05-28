@@ -5,7 +5,7 @@
 
 /* Variables */
 :root{
-  --drawer-width: 320px;
+  --drawer-width: 448px;
   --drawer-bg: #ffffff;
   --products-panel-width: 100%; /* en móvil es 100%, en desktop puedes ajustarlo */
   --backdrop-color: rgba(0,0,0,0.45);
@@ -296,6 +296,11 @@ nav#mobileDrawer.products-open .mobile-menu {
   pointer-events: none !important;
 }
 
+nav#mobileDrawer.products-closing .mobile-menu {
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
 /* Keep close/back button visible when products-open */
 nav#mobileDrawer.products-open .mobile-drawer__close {
   visibility: visible !important;
@@ -335,12 +340,11 @@ html.has-drawer-open { overflow: hidden !important; touch-action: none !importan
   .drawer-header .drawer__logo img { height: calc(var(--site-logo-height, 38px) - 4px) !important; }
 }
 
-/* Desktop: when Products panel is opened, make drawer 25% wider */
+/* Desktop: keep the base drawer and Products panel at the same width */
 @media (min-width: 600px) {
-  /* increase by 40% on desktop when products panel open; cap at 90vw */
   nav#mobileDrawer.products-open .mobile-drawer__panel {
-    width: min(calc(var(--drawer-width) * 1.4), 90vw) !important;
-    max-width: min(calc(85vw * 1.4), 90vw) !important;
+    width: var(--drawer-width) !important;
+    max-width: 90vw !important;
   }
 
   /* Control entry/exit directions for the products panel animations

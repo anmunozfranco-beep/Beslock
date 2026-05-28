@@ -2114,14 +2114,14 @@ body.single-product a.single_add_to_cart_button .bi {
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay {
-    --overlay-focus-scale-base: 0.96;
-    --overlay-focus-scale-active: 0.96;
+    --overlay-focus-scale-base: 1.01;
+    --overlay-focus-scale-active: 1.01;
     --overlay-offset: 0px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
-    --overlay-focus-scale-base: 0.9;
-    --overlay-focus-scale-active: 0.9;
+    --overlay-focus-scale-base: 1.01;
+    --overlay-focus-scale-active: 1.01;
   }
 
   .hero-slide .slide-overlay.overlay--visible {

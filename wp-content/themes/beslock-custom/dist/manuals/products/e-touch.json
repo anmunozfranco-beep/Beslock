@@ -3,7 +3,7 @@
     "slug": "e-touch",
     "display_name": "e-Touch",
     "profile_public": {
-      "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+      "short_description": "Huella en la palanca y teclado táctil convierten la apertura diaria en un gesto natural.",
       "commercial_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. La identidad visual base presenta manija negra horizontal, roseta circular, lector de huella en el extremo de la manija exterior, teclado numérico sobre la manija, aro luminoso verde y manija interior con botón o interruptor físico.",
       "product_type": "Cerradura inteligente tipo manija",
       "lock_architecture": "rim_lock_integrated_mechanism",
@@ -144,7 +144,14 @@
         "Las referencias N191, N191A, N191B y CS-9 se concilian como un solo producto genérico. Sirven para confirmar funciones, pero no para construir variantes dentro del manual.",
         "La caja BESLOCK está en español y confirma el enfoque comercial: 5 formas de acceso, 100 usuarios, modo paso libre, PIN superdiscreto, USB-C, 4 pilas AAA y puertas de 30-50 mm.",
         "El manual OEM confirma 100 huellas, 100 claves, 100 tarjetas y cuatro pilas AAA, pero menciona puerta de 3,5 a 6,5 cm y micro-USB."
-      ]
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella en la palanca y teclado táctil convierten la apertura diaria en un gesto natural.",
+        "instalacion": "Formato de manija con cuerpo de cierre integrado para una actualización limpia en puertas compatibles.",
+        "configuracion": "Hasta 100 huellas, claves y tarjetas ordenan perfiles de acceso con claridad operativa.",
+        "uso-diario": "Tomar la manija, validar y entrar: la huella en la palanca elimina pasos innecesarios.",
+        "soluciones-rapidas": "Llave mecánica, app y respaldo de credenciales mantienen opciones cuando un método no responde."
+      }
     },
     "manual": {
       "available": true,

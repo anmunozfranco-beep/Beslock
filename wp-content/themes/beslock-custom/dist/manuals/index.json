@@ -5,7 +5,7 @@
     {
       "slug": "e-flex",
       "display_name": "e-Flex",
-      "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+      "short_description": "Huella, PIN, tarjeta y app Tuya elevan el acceso residencial con una manija limpia y conectada.",
       "hero_image": "assets/e-flex/hero/e-flex-hero.webp",
       "product_json": "products/e-flex.json",
       "manual_sections": [
@@ -65,12 +65,19 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella, PIN, tarjeta y app Tuya elevan el acceso residencial con una manija limpia y conectada.",
+        "instalacion": "Montaje de incrustar con pestillo ajustable para puertas residenciales que piden precisión.",
+        "configuracion": "Perfiles, credenciales y modos de seguridad quedan bajo control desde teclado o Tuya WiFi.",
+        "uso-diario": "Acceso diario más fluido: credencial preferida, paso libre y respaldo mecánico siempre disponible.",
+        "soluciones-rapidas": "USB-C, alertas y bloqueo por intentos fallidos sostienen la operación cuando algo cambia."
       }
     },
     {
       "slug": "e-nova",
       "display_name": "e-Nova",
-      "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
+      "short_description": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
       "hero_image": "assets/e-nova/hero/e-nova-hero.webp",
       "product_json": "products/e-nova.json",
       "manual_sections": [
@@ -130,12 +137,19 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
+        "instalacion": "Reemplazo directo de pomo para actualizar puertas compatibles sin complicar la puesta en marcha.",
+        "configuracion": "Primeras huellas como administración y gestión Bluetooth para ordenar usuarios en minutos.",
+        "uso-diario": "Entrada en segundos por huella y modo normalmente abierto para espacios con movimiento constante.",
+        "soluciones-rapidas": "Batería recargable, aviso oportuno y llave mecánica protegen el acceso ante imprevistos."
       }
     },
     {
       "slug": "e-orbit",
       "display_name": "e-Orbit",
-      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "short_description": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
       "hero_image": "assets/e-orbit/hero/e-orbit-hero.webp",
       "product_json": "products/e-orbit.json",
       "manual_sections": [
@@ -195,12 +209,19 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
+        "instalacion": "Sistema multipunto y manija abatible suman presencia y seguridad en puertas compatibles.",
+        "configuracion": "Usuarios, registros y desbloqueo remoto bajo una arquitectura diseñada para control avanzado.",
+        "uso-diario": "Reconocimiento facial para entrar sin manos, con historial visible desde la app.",
+        "soluciones-rapidas": "Llave, energía de emergencia y alertas de eventos mantienen el acceso protegido fuera de rutina."
       }
     },
     {
       "slug": "e-prime",
       "display_name": "e-Prime",
-      "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+      "short_description": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
       "hero_image": "assets/e-prime/hero/e-prime-hero.webp",
       "product_json": "products/e-prime.json",
       "manual_sections": [
@@ -260,12 +281,19 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
+        "instalacion": "Incrustación limpia para puertas interiores que necesitan seguridad sin perder discreción.",
+        "configuracion": "Administradores, usuarios y PIN antiespía organizan el control local con credenciales múltiples.",
+        "uso-diario": "Huella, clave o tarjeta agilizan la rutina, con timbre integrado y privacidad en cada apertura.",
+        "soluciones-rapidas": "Baja batería, intentos fallidos y puerto 5 V dejan rutas claras para mantener continuidad."
       }
     },
     {
       "slug": "e-shield",
       "display_name": "e-Shield",
-      "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
+      "short_description": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
       "hero_image": "assets/e-shield/hero/e-shield-hero.webp",
       "product_json": "products/e-shield.json",
       "manual_sections": [
@@ -325,12 +353,19 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
+        "instalacion": "Instalación de sobreponer para reforzar accesos donde el embutido no es la mejor ruta.",
+        "configuracion": "Usuarios, idioma, volumen y fecha se gestionan desde un menú protegido y directo.",
+        "uso-diario": "Acceso exterior práctico para patios y portones, con cierre firme y métodos de entrada flexibles.",
+        "soluciones-rapidas": "USB de emergencia, llave mecánica y avisos de batería reducen fricción en momentos críticos."
       }
     },
     {
       "slug": "e-touch",
       "display_name": "e-Touch",
-      "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+      "short_description": "Huella en la palanca y teclado táctil convierten la apertura diaria en un gesto natural.",
       "hero_image": "assets/e-touch/hero/e-touch-hero.webp",
       "product_json": "products/e-touch.json",
       "manual_sections": [
@@ -390,6 +425,13 @@
         "has_profile": true,
         "has_true_sources": true,
         "has_hero_image": true
+      },
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella en la palanca y teclado táctil convierten la apertura diaria en un gesto natural.",
+        "instalacion": "Formato de manija con cuerpo de cierre integrado para una actualización limpia en puertas compatibles.",
+        "configuracion": "Hasta 100 huellas, claves y tarjetas ordenan perfiles de acceso con claridad operativa.",
+        "uso-diario": "Tomar la manija, validar y entrar: la huella en la palanca elimina pasos innecesarios.",
+        "soluciones-rapidas": "Llave mecánica, app y respaldo de credenciales mantienen opciones cuando un método no responde."
       }
     }
   ]

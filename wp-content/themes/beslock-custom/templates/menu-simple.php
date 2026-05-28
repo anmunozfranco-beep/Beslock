@@ -26,7 +26,7 @@
     <ul class="mobile-menu" role="menu">
       <li class="mobile-menu__item" role="none">
         <button class="mobile-menu__link" id="productsToggle" aria-expanded="false" aria-controls="productsPanel" role="menuitem">
-          <?php esc_html_e('Products', 'beslock'); ?> <span class="chev" aria-hidden="true">›</span>
+          <?php esc_html_e('Productos', 'beslock'); ?> <span class="chev" aria-hidden="true">›</span>
         </button>
 
         <?php
@@ -48,7 +48,23 @@
         </div>
       </li>
 
-      <!-- 'Tienda de productos' item removed as requested -->
+      <li class="mobile-menu__item mobile-menu__item--manuals" role="none">
+        <button class="mobile-menu__link mobile-menu__link--manuals" id="manualsToggle" data-js="drawer-manuals-toggle" aria-expanded="false" aria-controls="manualsSectionsPanel" role="menuitem">
+          <span class="mobile-menu__icon mobile-menu__icon--guides" aria-hidden="true"></span>
+          <div class="mobile-menu__meta">
+            <span class="mobile-menu__title">Guías BESLOCK</span>
+            <span class="mobile-menu__subtitle">Manuales y ayuda del producto</span>
+          </div>
+        </button>
+
+        <div id="manualsSectionsPanel" class="manuals-sections-panel" data-js="drawer-manuals-sections" role="region" aria-hidden="true" hidden>
+          <button type="button" class="manuals-section-button" data-manual-section="conoce-tu-cerradura">Conoce tu cerradura</button>
+          <button type="button" class="manuals-section-button" data-manual-section="instalacion">Instalación</button>
+          <button type="button" class="manuals-section-button" data-manual-section="configuracion">Configuración</button>
+          <button type="button" class="manuals-section-button" data-manual-section="uso-diario">Uso diario</button>
+          <button type="button" class="manuals-section-button" data-manual-section="soluciones-rapidas">Soluciones rápidas</button>
+        </div>
+      </li>
 
       <li class="mobile-menu__item" role="none">
         <a class="mobile-menu__link" href="<?php echo esc_url( home_url('/offers') ); ?>" role="menuitem">
@@ -70,17 +86,23 @@
         </a>
       </li>
 
-      <li class="mobile-menu__item" role="none">
-        <a class="mobile-menu__link" href="<?php echo esc_url( home_url('/docs') ); ?>" role="menuitem">
-          <i class="bi bi-hand-thumbs-up" aria-hidden="true"></i>
-          <div class="mobile-menu__meta">
-            <span class="mobile-menu__title">Technical Documentation</span>
-            <span class="mobile-menu__subtitle">Top products on specifications</span>
-          </div>
-        </a>
-      </li>
     </ul>
   </div>
+
+  <aside id="manualsDrawer" class="manuals-drawer" data-js="manuals-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'BESLOCK guides', 'beslock' ); ?>">
+    <div class="manuals-drawer__shell" data-js="manuals-drawer-shell">
+      <header class="manuals-drawer__header">
+        <div>
+          <p class="manuals-drawer__eyebrow" data-js="manuals-drawer-eyebrow">Guías BESLOCK</p>
+          <h2 class="manuals-drawer__title" data-js="manuals-drawer-title">Manuales y ayuda</h2>
+        </div>
+        <button type="button" class="manuals-drawer__close" data-js="manuals-drawer-close" aria-label="<?php esc_attr_e( 'Close guides', 'beslock' ); ?>">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </header>
+      <div class="manuals-drawer__body" data-js="manuals-drawer-body" tabindex="-1"></div>
+    </div>
+  </aside>
 
   <!-- Backdrop para cerrar tocando afuera -->
   <div class="mobile-drawer__backdrop" id="drawerBackdrop" tabindex="-1" aria-hidden="true"></div>

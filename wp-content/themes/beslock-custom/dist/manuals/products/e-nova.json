@@ -3,7 +3,7 @@
     "slug": "e-nova",
     "display_name": "e-Nova",
     "profile_public": {
-      "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
+      "short_description": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
       "commercial_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada. Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes.",
       "product_type": "Cerradura inteligente tipo pomo",
       "lock_architecture": "latch_lock",
@@ -170,7 +170,14 @@
         "Confirmar el flujo exacto para salir del modo normalmente abierto.",
         "Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
         "Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas. En el material operativo de e-Nova, Tuya Smart es la fuente más consistente."
-      ]
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
+        "instalacion": "Reemplazo directo de pomo para actualizar puertas compatibles sin complicar la puesta en marcha.",
+        "configuracion": "Primeras huellas como administración y gestión Bluetooth para ordenar usuarios en minutos.",
+        "uso-diario": "Entrada en segundos por huella y modo normalmente abierto para espacios con movimiento constante.",
+        "soluciones-rapidas": "Batería recargable, aviso oportuno y llave mecánica protegen el acceso ante imprevistos."
+      }
     },
     "manual": {
       "available": true,

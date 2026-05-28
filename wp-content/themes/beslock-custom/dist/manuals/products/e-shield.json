@@ -3,7 +3,7 @@
     "slug": "e-shield",
     "display_name": "e-Shield",
     "profile_public": {
-      "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
+      "short_description": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
       "commercial_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. La geometría principal presenta panel exterior vertical negro con lector de huella circular superior, teclado táctil, acceso inferior de llave mecánica y cuerpo de cierre rectangular de sobreponer con pestillo visible.",
       "product_type": "Cerradura inteligente exterior de sobreponer",
       "lock_architecture": "rim_lock_integrated_mechanism",
@@ -186,7 +186,14 @@
         "Confirmar si el control remoto forma parte del paquete comercial o es accesorio.",
         "Confirmar ubicación física exacta del SET en la unidad BESLOCK final.",
         "Confirmar si se incluirá cubierta impermeable como accesorio del paquete."
-      ]
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
+        "instalacion": "Instalación de sobreponer para reforzar accesos donde el embutido no es la mejor ruta.",
+        "configuracion": "Usuarios, idioma, volumen y fecha se gestionan desde un menú protegido y directo.",
+        "uso-diario": "Acceso exterior práctico para patios y portones, con cierre firme y métodos de entrada flexibles.",
+        "soluciones-rapidas": "USB de emergencia, llave mecánica y avisos de batería reducen fricción en momentos críticos."
+      }
     },
     "manual": {
       "available": true,

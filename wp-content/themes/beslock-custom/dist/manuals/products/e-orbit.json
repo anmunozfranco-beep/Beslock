@@ -3,7 +3,7 @@
     "slug": "e-orbit",
     "display_name": "e-Orbit",
     "profile_public": {
-      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "short_description": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
       "commercial_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos. Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
       "product_type": "Cerradura inteligente",
       "lock_architecture": "mortise_lock",
@@ -166,7 +166,14 @@
         "El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
         "La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
         "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video OEM."
-      ]
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
+        "instalacion": "Sistema multipunto y manija abatible suman presencia y seguridad en puertas compatibles.",
+        "configuracion": "Usuarios, registros y desbloqueo remoto bajo una arquitectura diseñada para control avanzado.",
+        "uso-diario": "Reconocimiento facial para entrar sin manos, con historial visible desde la app.",
+        "soluciones-rapidas": "Llave, energía de emergencia y alertas de eventos mantienen el acceso protegido fuera de rutina."
+      }
     },
     "manual": {
       "available": true,

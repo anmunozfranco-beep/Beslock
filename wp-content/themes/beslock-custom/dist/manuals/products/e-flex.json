@@ -3,7 +3,7 @@
     "slug": "e-flex",
     "display_name": "e-Flex",
     "profile_public": {
-      "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+      "short_description": "Huella, PIN, tarjeta y app Tuya elevan el acceso residencial con una manija limpia y conectada.",
       "commercial_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. Incluye cinco formas de acceso: huella, clave, tarjeta, llave mecánica y app. El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz. Apertura diaria con huella, clave, tarjeta, llave mecánica o app. Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. Respaldo físico con llave mecánica. Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. Administración local de usuarios desde el teclado.",
       "product_type": "Cerradura inteligente",
       "lock_architecture": "mortise_lock",
@@ -128,7 +128,14 @@
         "El manual visible debe incluir solo funciones confirmadas por el material OEM de e-Flex.",
         "Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente OEM específica.",
         "Cuando una función aparece en empaque pero no en manual operativo, puede mencionarse con redacción conservadora o quedar como pendiente según su impacto."
-      ]
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella, PIN, tarjeta y app Tuya elevan el acceso residencial con una manija limpia y conectada.",
+        "instalacion": "Montaje de incrustar con pestillo ajustable para puertas residenciales que piden precisión.",
+        "configuracion": "Perfiles, credenciales y modos de seguridad quedan bajo control desde teclado o Tuya WiFi.",
+        "uso-diario": "Acceso diario más fluido: credencial preferida, paso libre y respaldo mecánico siempre disponible.",
+        "soluciones-rapidas": "USB-C, alertas y bloqueo por intentos fallidos sostienen la operación cuando algo cambia."
+      }
     },
     "manual": {
       "available": true,

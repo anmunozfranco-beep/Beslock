@@ -3,7 +3,7 @@
     "slug": "e-prime",
     "display_name": "e-Prime",
     "profile_public": {
-      "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+      "short_description": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
       "commercial_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V. Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. Respaldo físico mediante llave mecánica. Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. Administración local de usuarios y administradores.",
       "product_type": "Cerradura inteligente",
       "lock_architecture": "mortise_lock",
@@ -132,7 +132,14 @@
         "Mini-programa WeChat",
         "Bluetooth"
       ],
-      "warnings_or_pending_validation": []
+      "warnings_or_pending_validation": [],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
+        "instalacion": "Incrustación limpia para puertas interiores que necesitan seguridad sin perder discreción.",
+        "configuracion": "Administradores, usuarios y PIN antiespía organizan el control local con credenciales múltiples.",
+        "uso-diario": "Huella, clave o tarjeta agilizan la rutina, con timbre integrado y privacidad en cada apertura.",
+        "soluciones-rapidas": "Baja batería, intentos fallidos y puerto 5 V dejan rutas claras para mantener continuidad."
+      }
     },
     "manual": {
       "available": true,

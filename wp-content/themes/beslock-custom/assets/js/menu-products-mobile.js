@@ -178,8 +178,9 @@
   function productsBackAction() {
     if (!productsPanel || !productsToggle) return;
     try {
-        productsToggle.setAttribute('aria-expanded', 'false');
+      productsToggle.setAttribute('aria-expanded', 'false');
       productsPanel.setAttribute('aria-hidden', 'true');
+      try { mobileDrawer.classList.add('products-closing'); } catch (e) {}
       // temporarily remove any transition delay so the close starts immediately
       try { productsPanel.style.transitionDelay = '0ms, 0ms'; } catch (e) {}
       // remove visible state, then schedule adding the hidden state on the
@@ -209,6 +210,7 @@
           try { panel.style.transitionDelay = ''; } catch (e) {}
           // only remove the products-open marker once the panel transition fully completed
           try { mobileDrawer.classList.remove('products-open'); } catch (e) {}
+          try { mobileDrawer.classList.remove('products-closing'); } catch (e) {}
           try { panel.removeEventListener('transitionend', onEnd); } catch (e) {}
           try { clearTimeout(fallback); } catch (e) {}
         }
@@ -285,6 +287,19 @@
 
   function closeDrawerAction() {
     if (!mobileDrawer.classList.contains('is-open')) return;
+    try {
+      mobileDrawer.classList.remove('products-open');
+      mobileDrawer.classList.remove('products-opening');
+      mobileDrawer.classList.remove('products-closing');
+      if (productsToggle) productsToggle.setAttribute('aria-expanded', 'false');
+      if (productsPanel) {
+        productsPanel.setAttribute('aria-hidden', 'true');
+        productsPanel.classList.remove('models--visible');
+        productsPanel.classList.add('models--hidden');
+        productsPanel.hidden = true;
+        productsPanel.style.transitionDelay = '';
+      }
+    } catch (e) {}
     mobileDrawer.classList.remove('is-open');
     backdrop.classList.remove('backdrop-visible');
     try { menuBtn.setAttribute('aria-expanded', 'false'); } catch (e) {}
@@ -354,6 +369,7 @@
           // close products: prepare slide-out and wait for transition before hiding
           productsToggle.setAttribute('aria-expanded', 'false');
           productsPanel.setAttribute('aria-hidden', 'true');
+          try { mobileDrawer.classList.add('products-closing'); } catch (e) {}
           
           // temporarily remove any transition delay so the close starts immediately
           try { productsPanel.style.transitionDelay = '0ms, 0ms'; } catch (e) {}
@@ -375,6 +391,7 @@
               try { panel.style.transitionDelay = ''; } catch (e) {}
               // only remove the products-open marker once the panel transition fully completed
               try { mobileDrawer.classList.remove('products-open'); } catch (e) {}
+              try { mobileDrawer.classList.remove('products-closing'); } catch (e) {}
               try { panel.removeEventListener('transitionend', onEndWrapper); } catch (e) {}
               try { clearTimeout(fallback); } catch (e) {}
             }
@@ -438,6 +455,7 @@
           } else {
             // close: trigger transition then hide
             productsPanel.setAttribute('aria-hidden', 'true');
+            try { mobileDrawer.classList.add('products-closing'); } catch (e) {}
             // temporarily remove any transition delay so the close starts immediately
             try { productsPanel.style.transitionDelay = '0ms, 0ms'; } catch (e) {}
             productsPanel.classList.remove('models--visible');
@@ -447,7 +465,7 @@
             if (chev) chev && chev.classList.remove('hidden');
             (function waitHide(panel){
               var called = false;
-              function done(){ if(called) return; called=true; try{ panel.hidden = true; }catch(e){} try{ panel.style.transitionDelay = ''; }catch(e){} try{ panel.removeEventListener('transitionend', onEnd); }catch(e){} try{ clearTimeout(fb); }catch(e){} }
+              function done(){ if(called) return; called=true; try{ panel.hidden = true; }catch(e){} try{ panel.style.transitionDelay = ''; }catch(e){} try{ mobileDrawer.classList.remove('products-open'); mobileDrawer.classList.remove('products-closing'); }catch(e){} try{ panel.removeEventListener('transitionend', onEnd); }catch(e){} try{ clearTimeout(fb); }catch(e){} }
               function onEnd(ev){ if (ev && ev.propertyName && ev.propertyName.indexOf('transform') === -1) return; done(); }
               var cs = window.getComputedStyle(panel);
               function parseTime(t){ if(!t) return 0; try{return Math.max.apply(null, (t.split(',').map(function(s){ s=s.trim(); return s.indexOf('ms')>-1?parseFloat(s):parseFloat(s)*1000; }))); }catch(e){return 0;} }
@@ -455,7 +473,7 @@
               var fb = setTimeout(done, timeout || 600);
               panel.addEventListener('transitionend', onEnd);
               // remove the `products-open` class only after the transition completes
-              try { panel.addEventListener('transitionend', function(){ try{ mobileDrawer.classList.remove('products-open'); }catch(e){} }); } catch(e){}
+              try { panel.addEventListener('transitionend', function(){ try{ mobileDrawer.classList.remove('products-open'); mobileDrawer.classList.remove('products-closing'); }catch(e){} }); } catch(e){}
               setCloseMode('close');
             })(productsPanel);
           }
