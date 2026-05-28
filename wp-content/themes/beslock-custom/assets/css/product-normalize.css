@@ -35,6 +35,7 @@
 .single-product .product-page__pager-link {
   position: relative;
   z-index: 0;
+  justify-self: stretch;
   display: flex;
   align-items: flex-start;
   gap: 0.6rem;
@@ -82,7 +83,7 @@
 }
 
 .single-product .product-page__pager-link--next {
-  justify-self: end;
+  justify-content: flex-end;
 }
 
 .single-product .product-page__pager-meta {
