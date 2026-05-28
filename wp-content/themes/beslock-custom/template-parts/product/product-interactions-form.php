@@ -129,8 +129,7 @@ $interaction_heading = sprintf(
   </div>
 
   <div class="product-interactions__questions-header">
-    <h3><?php echo esc_html__( 'Preguntas y respuestas', 'beslock' ); ?></h3>
-    <p><?php echo esc_html__( 'Aquí verás las consultas aprobadas para este producto y, cuando existan, sus respuestas.', 'beslock' ); ?></p>
+    <h3><?php echo esc_html__( 'Histórico de consultas', 'beslock' ); ?></h3>
   </div>
 
   <div class="product-interactions__surface product-interactions__questions">
