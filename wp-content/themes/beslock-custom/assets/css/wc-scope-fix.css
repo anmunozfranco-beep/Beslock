@@ -15,10 +15,10 @@ body.woocommerce, body.woocommerce-page {
    interfere with core WC components. This targets only elements created
    by WooCommerce itself (buttons and submit inputs) and avoids any custom
    `.btn` or product-card classes. */
-body.woocommerce button,
+body.woocommerce button:not(.header__icon):not(#mobileDrawer button):not(.tabs-nav button):not(.product-tabs__nav button):not(.beslock-qty button),
 body.woocommerce input[type="submit"],
 body.woocommerce .button,
-body.woocommerce-page button,
+body.woocommerce-page button:not(.header__icon):not(#mobileDrawer button):not(.tabs-nav button):not(.product-tabs__nav button):not(.beslock-qty button),
 body.woocommerce-page input[type="submit"],
 body.woocommerce-page .button {
   all: unset;

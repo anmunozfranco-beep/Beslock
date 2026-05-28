@@ -886,7 +886,7 @@ body.single-product {
   overflow-x: hidden;
 }
 
-body.single-product * {
+body.single-product :not(#mobileDrawer):not(#mobileDrawer *) {
   max-width: 100%;
 }
 
