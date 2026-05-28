@@ -15,6 +15,7 @@ add_action( 'wp_enqueue_scripts', function() {
   $theme_dir_uri  = get_stylesheet_directory_uri();
   $theme_dir_path = get_stylesheet_directory();
   $is_product_page = function_exists( 'is_product' ) && is_product();
+  $is_front_page = function_exists( 'is_front_page' ) && is_front_page();
 
   $ver_main_css = file_exists( $theme_dir_path . '/assets/css/main.css' )
     ? filemtime( $theme_dir_path . '/assets/css/main.css' )
@@ -277,6 +278,16 @@ add_action( 'wp_enqueue_scripts', function() {
   $header_state_css = $theme_dir_path . '/assets/css/header-state.css';
   if ( file_exists( $header_state_css ) ) {
     wp_enqueue_style( 'beslock-header-state-css', $theme_dir_uri . '/assets/css/header-state.css', [ 'beslock-main-style' ], filemtime( $header_state_css ) );
+  }
+
+  $frontpage_motion_css = $theme_dir_path . '/assets/css/frontpage-motion.css';
+  if ( $is_front_page && file_exists( $frontpage_motion_css ) ) {
+    wp_enqueue_style( 'beslock-frontpage-motion', $theme_dir_uri . '/assets/css/frontpage-motion.css', [ 'beslock-extra-style' ], filemtime( $frontpage_motion_css ) );
+  }
+
+  $frontpage_motion_js = $theme_dir_path . '/assets/js/frontpage-motion.js';
+  if ( $is_front_page && file_exists( $frontpage_motion_js ) ) {
+    wp_enqueue_script( 'beslock-frontpage-motion-js', $theme_dir_uri . '/assets/js/frontpage-motion.js', [ 'beslock-main-js' ], filemtime( $frontpage_motion_js ), true );
   }
 
 }, 10 );

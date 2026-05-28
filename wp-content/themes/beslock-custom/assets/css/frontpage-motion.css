@@ -1,0 +1,199 @@
+/* Front-page motion layer.
+   Loaded only on the home page. All effects are transform/opacity based. */
+
+body.beslock-frontpage-motion {
+  --frontpage-hero-progress: 0;
+}
+
+body.beslock-frontpage-motion .beslock-hero .hero-viewport {
+  transform: none;
+  filter:
+    saturate(calc(1 - (var(--frontpage-hero-progress) * 0.04)))
+    contrast(calc(1 - (var(--frontpage-hero-progress) * 0.018)));
+  will-change: filter;
+}
+
+body.beslock-frontpage-motion .beslock-hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  height: clamp(56px, 11vh, 132px);
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(242, 242, 242, 0), #f2f2f2 100%);
+  opacity: calc(var(--frontpage-hero-progress) * 0.96);
+}
+
+body.beslock-frontpage-motion #main-content {
+  position: relative;
+  isolation: isolate;
+}
+
+body.beslock-frontpage-motion #main-content .product-card {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.985);
+  transition:
+    opacity 560ms cubic-bezier(.16, .84, .29, 1),
+    transform 680ms cubic-bezier(.16, .84, .29, 1),
+    box-shadow 360ms cubic-bezier(.16, .84, .29, 1);
+  transition-delay: calc(var(--frontpage-card-index, 0) * 70ms);
+  will-change: transform, opacity, box-shadow;
+}
+
+body.beslock-frontpage-motion #main-content .product-card.is-motion-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+body.beslock-frontpage-motion #main-content .product-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0) 42%),
+    radial-gradient(circle at 50% 0%, rgba(3, 69, 38, 0.1), rgba(3, 69, 38, 0) 44%);
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+body.beslock-frontpage-motion #main-content .product-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+body.beslock-frontpage-motion #main-content .product-card .product-card__image img:not(.product-card__badge) {
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  transition:
+    transform 520ms cubic-bezier(.16, .84, .29, 1),
+    filter 520ms cubic-bezier(.16, .84, .29, 1) !important;
+  will-change: transform, filter;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.beslock-frontpage-motion #main-content .product-card:hover,
+  body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover {
+    transform: translate3d(0, -8px, 0) scale(1.012);
+    box-shadow: 0 24px 58px rgba(15, 23, 42, 0.13), 0 10px 24px rgba(3, 69, 38, 0.08);
+  }
+
+  body.beslock-frontpage-motion #main-content .product-card:hover::after,
+  body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover::after {
+    opacity: 1;
+  }
+
+  body.beslock-frontpage-motion #main-content .product-card:hover .product-card__image img:not(.product-card__badge),
+  body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover .product-card__image img:not(.product-card__badge) {
+    transform: translate3d(0, -8px, 0) scale(1.035) !important;
+    filter: drop-shadow(0 22px 20px rgba(15, 23, 42, 0.14));
+  }
+}
+
+body.beslock-frontpage-motion .discover .discover__text,
+body.beslock-frontpage-motion .discover .discover__image {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 640ms cubic-bezier(.16, .84, .29, 1),
+    transform 720ms cubic-bezier(.16, .84, .29, 1);
+  will-change: transform, opacity;
+}
+
+body.beslock-frontpage-motion .discover .discover__image picture {
+  clip-path: inset(0 100% 0 0 round 8px);
+  transition: clip-path 780ms cubic-bezier(.16, .84, .29, 1);
+}
+
+body.beslock-frontpage-motion .discover.is-active .discover__text,
+body.beslock-frontpage-motion .discover.is-active .discover__image {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+body.beslock-frontpage-motion .discover.is-active .discover__image {
+  transition-delay: 120ms;
+}
+
+body.beslock-frontpage-motion .discover.is-active .discover__image picture {
+  clip-path: inset(0 0 0 0 round 8px);
+  transition-delay: 160ms;
+}
+
+body.beslock-frontpage-motion .discover.is-active .discover__btn {
+  animation: frontpage-cta-settle 520ms cubic-bezier(.16, .84, .29, 1) 260ms both;
+}
+
+body.beslock-frontpage-motion .product-card .pc-btn-cart.is-adding,
+body.beslock-frontpage-motion .product-card .product-card__actions a:last-child.is-adding {
+  animation: frontpage-cart-button-pop 420ms cubic-bezier(.16, .84, .29, 1) both;
+}
+
+body.beslock-frontpage-motion .product-card .pc-btn-cart.is-adding i,
+body.beslock-frontpage-motion .product-card .product-card__actions a:last-child.is-adding i {
+  animation: frontpage-cart-icon-pop 420ms cubic-bezier(.16, .84, .29, 1) both;
+}
+
+body.frontpage-cart-pulse .header__icon--cart {
+  animation: frontpage-header-cart-pulse 560ms cubic-bezier(.16, .84, .29, 1) both;
+}
+
+@keyframes frontpage-cta-settle {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes frontpage-cart-button-pop {
+  0% { transform: translateY(-2px) scale(1); }
+  45% { transform: translateY(-3px) scale(1.08); }
+  100% { transform: translateY(-2px) scale(1.02); }
+}
+
+@keyframes frontpage-cart-icon-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(0.86) rotate(-5deg); }
+  100% { transform: scale(1.08) rotate(0deg); }
+}
+
+@keyframes frontpage-header-cart-pulse {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  45% { transform: translate3d(0, -2px, 0) scale(1.13); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@media (max-width: 599px) {
+  body.beslock-frontpage-motion #main-content .product-card {
+    transition-delay: calc(min(var(--frontpage-card-index, 0), 2) * 55ms);
+  }
+
+  body.beslock-frontpage-motion .discover .discover__image picture {
+    clip-path: inset(0 0 0 0 round 8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.beslock-frontpage-motion .beslock-hero .hero-viewport,
+  body.beslock-frontpage-motion #main-content .product-card,
+  body.beslock-frontpage-motion #main-content .product-card .product-card__image img:not(.product-card__badge),
+  body.beslock-frontpage-motion .discover .discover__text,
+  body.beslock-frontpage-motion .discover .discover__image,
+  body.beslock-frontpage-motion .discover .discover__image picture,
+  body.beslock-frontpage-motion .discover.is-active .discover__btn {
+    opacity: 1 !important;
+    clip-path: none !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
