@@ -223,6 +223,11 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_script( 'beslock-product-qty-js', $theme_dir_uri . '/assets/js/product-quantity-controls.js', [ 'beslock-main-js' ], filemtime( $qty_js ), true );
   }
 
+  $product_pager_reel_js = $theme_dir_path . '/assets/js/product-pager-reel.js';
+  if ( $is_product_page && file_exists( $product_pager_reel_js ) ) {
+    wp_enqueue_script( 'beslock-product-pager-reel-js', $theme_dir_uri . '/assets/js/product-pager-reel.js', [ 'beslock-main-js' ], filemtime( $product_pager_reel_js ), true );
+  }
+
   /* Badge injector removed to avoid duplicate client-side injections.
      Server-side rendering in template-parts/product-card.php provides the badge. */
 
