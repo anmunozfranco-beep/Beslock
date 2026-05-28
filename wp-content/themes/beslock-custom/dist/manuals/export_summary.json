@@ -1,0 +1,46 @@
+{
+  "schema": "beslock.manuals.web_export.summary.v1",
+  "created_at": "2026-05-28T01:29:01.978430+00:00",
+  "output_root": "dist/manuals",
+  "debug_mode": false,
+  "products_exported": [
+    "e-flex",
+    "e-nova",
+    "e-orbit",
+    "e-prime",
+    "e-shield",
+    "e-touch"
+  ],
+  "profiles_found": {
+    "e-flex": true,
+    "e-nova": true,
+    "e-orbit": true,
+    "e-prime": true,
+    "e-shield": true,
+    "e-touch": true
+  },
+  "profile_source_included": {
+    "e-flex": false,
+    "e-nova": false,
+    "e-orbit": false,
+    "e-prime": false,
+    "e-shield": false,
+    "e-touch": false
+  },
+  "manuals_found": {
+    "e-flex": true,
+    "e-nova": true,
+    "e-orbit": true,
+    "e-prime": true,
+    "e-shield": true,
+    "e-touch": true
+  },
+  "images_copied": 133,
+  "images_converted_to_webp": 151,
+  "hero_images_exported": 6,
+  "ts_exported": 18,
+  "legacy_html_figures_ignored": 12,
+  "macos_metadata_removed": 0,
+  "missing_assets": [],
+  "warnings": []
+}

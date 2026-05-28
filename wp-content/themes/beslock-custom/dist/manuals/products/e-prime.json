@@ -1,0 +1,1249 @@
+{
+  "product": {
+    "slug": "e-prime",
+    "display_name": "e-Prime",
+    "profile_public": {
+      "short_description": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
+      "commercial_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V. Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. Respaldo físico mediante llave mecánica. Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. Administración local de usuarios y administradores.",
+      "product_type": "Cerradura inteligente",
+      "lock_architecture": "mortise_lock",
+      "access_systems": [
+        {
+          "name": "Huella dactilar",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Contraseña",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta IC",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App Tuya",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Mini-programa WeChat",
+          "status": "Mencionado en manual P14/serie Z; puede depender de variante o mercado"
+        },
+        {
+          "name": "Bluetooth",
+          "status": "Icono visible en portada P14; no aparece desarrollado como especificación técnica en el texto"
+        }
+      ],
+      "materials": [],
+      "finish": "",
+      "visual_language": [
+        "el compartimento rectangular frontal inferior del panel exterior es el acceso de llave mecánica de emergencia (key hole unlock).",
+        "El puerto de alimentación de emergencia de 5 V debe mostrarse como puerto inferior separado, no como función del compartimento rectangular frontal.",
+        "No identificar el compartimento rectangular inferior como tapa de batería, reset, sensor, pieza decorativa, servicio genérico ni puerto de energía.",
+        "Si se necesita detalle, mostrar el mismo compartimento rectangular abierto con cilindro/keyhole visible y conectado con guía al componente real; no inventar un segundo keyhole en la base.",
+        "El compartimento de baterías del panel interior debe ubicarse en la zona superior del panel; no desplazarlo a la parte baja.",
+        "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo de cerradura, montaje de panel exterior con eje cuadrado y cable, y conexión/fijación del panel interior con batería y prueba final.",
+        "En imágenes operativas aprobadas, retirar numerales aislados y evitar texto pequeño dentro de la imagen."
+      ],
+      "key_features": [
+        "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+        "Respaldo físico mediante llave mecánica.",
+        "Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías.",
+        "Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real.",
+        "Administración local de usuarios y administradores.",
+        "Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+        "Timbre integrado en el panel exterior."
+      ],
+      "use_cases": [],
+      "installation_type": "Notas técnicas de instalación:",
+      "technical_highlights": [
+        {
+          "label": "Baterías",
+          "value": "4 pilas AA alcalinas de 1,5 V"
+        },
+        {
+          "label": "Alimentación de emergencia",
+          "value": "Puerto externo de 5 V para power bank o fuente equivalente"
+        },
+        {
+          "label": "Umbral de baja tensión",
+          "value": "4,8 V según manual de serie Z"
+        },
+        {
+          "label": "Uso tras primer aviso",
+          "value": "Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería"
+        },
+        {
+          "label": "Mantenimiento recomendado",
+          "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo"
+        },
+        {
+          "label": "Sensor de huella",
+          "value": "Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución"
+        },
+        {
+          "label": "Antifalsificación de huella",
+          "value": "El manual indica prevención efectiva de huellas falsas"
+        },
+        {
+          "label": "Contraseña antiespía",
+          "value": "Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta"
+        },
+        {
+          "label": "Verificación dual",
+          "value": "Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir"
+        },
+        {
+          "label": "Administradores",
+          "value": "Hasta 9 administradores, como huella, contraseña o tarjeta"
+        },
+        {
+          "label": "Capacidad total",
+          "value": "Hasta 300 usuarios/credenciales según manual de serie Z"
+        },
+        {
+          "label": "Usuarios normales",
+          "value": "Pueden abrir/cerrar; no administran configuración"
+        },
+        {
+          "label": "Alarmas",
+          "value": "Antipalanca/antirrobo, baja tensión e intentos incorrectos"
+        },
+        {
+          "label": "Bloqueo por error",
+          "value": "Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas"
+        }
+      ],
+      "seo_keywords": [
+        "e-Prime",
+        "BESLOCK e-Prime",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Tuya / Smart Life compatible, según video",
+        "Módulo de red opcional según manual de serie Z; soporte de app sujeto a configuración/version",
+        "Huella dactilar",
+        "Contraseña",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App Tuya",
+        "Mini-programa WeChat",
+        "Bluetooth"
+      ],
+      "warnings_or_pending_validation": [],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella, PIN, tarjeta y app resuelven acceso seguro para hogares, oficinas y habitaciones.",
+        "instalacion": "Incrustación limpia para puertas interiores que necesitan seguridad sin perder discreción.",
+        "configuracion": "Administradores, usuarios y PIN antiespía organizan el control local con credenciales múltiples.",
+        "uso-diario": "Huella, clave o tarjeta agilizan la rutina, con timbre integrado y privacidad en cada apertura.",
+        "soluciones-rapidas": "Baja batería, intentos fallidos y puerto 5 V dejan rutas claras para mantener continuidad."
+      }
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Prime",
+      "summary": "Cerradura inteligente de manija con apertura por huella, clave, tarjeta, llave mecánica y app móvil.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-EPRIME-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-prime/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-EPRIME-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-prime/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-EPRIME-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-prime/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Prime combina panel exterior táctil, panel interior con baterías y cuerpo de cerradura de incrustar. Está pensada para accesos interiores o residenciales donde se necesita administrar varios métodos de apertura."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-prime-001",
+              "related_manual_image_key": "IMG-EPRIME-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-001",
+              "image_id": "eprime-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Prime con partes numeradas.",
+              "image": "assets/e-prime/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Teclado táctil.",
+                "Área de lectura de tarjeta IC.",
+                "Botón de timbre.",
+                "Lector de huella integrado en la zona de la manija.",
+                "Manija exterior.",
+                "Compartimento rectangular frontal para llave mecánica de emergencia.",
+                "Puerto inferior de alimentación de emergencia de 5 V."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-prime-002",
+              "related_manual_image_key": "IMG-EPRIME-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-002",
+              "image_id": "eprime-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Prime con partes numeradas.",
+              "image": "assets/e-prime/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Manija interior.",
+                "Compartimento de baterías.",
+                "Botón SET o reinicio dentro del compartimento de baterías.",
+                "Control interior de bloqueo, si está incluido en la versión instalada."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-prime-003",
+              "related_manual_image_key": "IMG-EPRIME-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-003",
+              "image_id": "eprime-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Prime con partes numeradas.",
+              "image": "assets/e-prime/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo de cerradura.",
+                "Pestillo o pasador principal.",
+                "Recibidor del marco.",
+                "Eje cuadrado."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-EPRIME-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-EPRIME-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-prime/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-EPRIME-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-001",
+              "image_id": "eprime-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Prime.",
+              "image": "assets/e-prime/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma el sentido de apertura de la puerta.",
+                "Ajusta el pestillo del cuerpo de cerradura según ese sentido.",
+                "Inserta el cuerpo de cerradura en la puerta y fija sus tornillos.",
+                "Ajusta el sentido de la manija antes de montar los paneles.",
+                "Instala los pernos de montaje en el panel exterior.",
+                "Inserta el eje cuadrado en el cuerpo de cerradura.",
+                "Pasa el cable de datos por el orificio superior.",
+                "Alinea el panel exterior con el eje y apóyalo contra la puerta.",
+                "Conecta el cable de datos al panel interior.",
+                "Alinea el panel interior con el eje y fija los tornillos.",
+                "Coloca cuatro pilas AA alcalinas respetando la polaridad.",
+                "Acciona la manija y confirma que el pestillo se mueva suavemente."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-EPRIME-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-prime/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-EPRIME-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-prime/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-EPRIME-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-prime/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-prime-004",
+              "manual_image_key": "IMG-EPRIME-004",
+              "image": "assets/e-prime/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el primer acceso que permite tomar control de la cerradura. Debe crearse antes de entregar o usar la cerradura todos los días."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-prime-005",
+              "manual_image_key": "IMG-EPRIME-005",
+              "image": "assets/e-prime/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los administradores pueden abrir la cerradura, entrar al menú y gestionar usuarios, ajustes y funciones. La e-Prime admite hasta 9 administradores."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-prime-006",
+              "manual_image_key": "IMG-EPRIME-006",
+              "image": "assets/e-prime/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con los accesos registrados, pero no debe cambiar configuración ni administrar otros usuarios."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-EPRIME-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-EPRIME-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-prime/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-EPRIME-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-002",
+              "image_id": "eprime-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Prime.",
+              "image": "assets/e-prime/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado táctil.",
+                "Presiona * y luego # para entrar al menú inicial.",
+                "Selecciona la opción para agregar administrador.",
+                "Elige el método de acceso: huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-EPRIME-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-EPRIME-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-prime/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-EPRIME-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-003",
+              "image_id": "eprime-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Prime.",
+              "image": "assets/e-prime/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado táctil.",
+                "Presiona * y luego #.",
+                "Verifica con una huella, clave o tarjeta de administrador.",
+                "Selecciona la opción del menú que necesitas.",
+                "Usa * para volver o salir y # para confirmar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "funciones-de-cierre",
+              "image_review_keys": [
+                "IMG-EPRIME-007"
+              ],
+              "heading": "Funciones de cierre",
+              "image": "assets/e-prime/manual/funciones-de-cierre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "volumen",
+              "image_review_keys": [
+                "IMG-EPRIME-008"
+              ],
+              "heading": "Volumen",
+              "image": "assets/e-prime/manual/volumen.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "voz-e-idioma",
+              "image_review_keys": [
+                "IMG-EPRIME-009"
+              ],
+              "heading": "Voz e idioma",
+              "image": "assets/e-prime/manual/voz-e-idioma.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "fecha-y-hora",
+              "image_review_keys": [
+                "IMG-EPRIME-010"
+              ],
+              "heading": "Fecha y hora",
+              "image": "assets/e-prime/manual/fecha-y-hora.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Funciones de cierre",
+              "anchor": "img-e-prime-007",
+              "manual_image_key": "IMG-EPRIME-007",
+              "image": "assets/e-prime/manual/funciones-de-cierre.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de cerradura.",
+                "Entra a funciones.",
+                "Activa o desactiva paso libre, verificación dual, alarma antipalanca o modo silencioso, según necesites."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Volumen",
+              "anchor": "img-e-prime-008",
+              "manual_image_key": "IMG-EPRIME-008",
+              "image": "assets/e-prime/manual/volumen.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de cerradura.",
+                "Elige ajuste de volumen.",
+                "Sube o baja el volumen y confirma."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Voz e idioma",
+              "anchor": "img-e-prime-009",
+              "manual_image_key": "IMG-EPRIME-009",
+              "image": "assets/e-prime/manual/voz-e-idioma.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de voz.",
+                "Elige el idioma disponible en la cerradura.",
+                "Confirma el cambio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Fecha y hora",
+              "anchor": "img-e-prime-010",
+              "manual_image_key": "IMG-EPRIME-010",
+              "image": "assets/e-prime/manual/fecha-y-hora.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajuste de hora.",
+                "Ingresa año, mes, día, hora y minuto.",
+                "Usa * para corregir y # para guardar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-EPRIME-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-EPRIME-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-prime/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-EPRIME-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-004",
+              "image_id": "eprime-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Prime.",
+              "image": "assets/e-prime/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar administrador.",
+                "Elige huella, clave o tarjeta.",
+                "Registra el acceso de la persona que administrará la cerradura.",
+                "Espera la confirmación.",
+                "Prueba el nuevo administrador con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-EPRIME-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-EPRIME-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-prime/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-EPRIME-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-005",
+              "image_id": "eprime-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Prime.",
+              "image": "assets/e-prime/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige el método de acceso: huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Indica al usuario que haga una prueba con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-EPRIME-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-EPRIME-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-prime/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-EPRIME-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EPRIME-006",
+              "image_id": "eprime-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Prime.",
+              "image": "assets/e-prime/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona eliminar usuario.",
+                "Elige si vas a eliminar por huella, clave, tarjeta o número de usuario.",
+                "Presenta el acceso o ingresa el número correspondiente.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "pin-con-privacidad",
+              "image_review_keys": [
+                "IMG-EPRIME-011"
+              ],
+              "heading": "PIN con privacidad",
+              "image": "assets/e-prime/manual/pin-con-privacidad.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "verificacion-dual",
+              "image_review_keys": [
+                "IMG-EPRIME-012"
+              ],
+              "heading": "Verificación dual",
+              "image": "assets/e-prime/manual/verificacion-dual.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "paso-libre",
+              "image_review_keys": [
+                "IMG-EPRIME-013"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-prime/manual/paso-libre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "alarma-antipalanca",
+              "image_review_keys": [
+                "IMG-EPRIME-014"
+              ],
+              "heading": "Alarma antipalanca",
+              "image": "assets/e-prime/manual/alarma-antipalanca.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil",
+              "image_review_keys": [
+                "IMG-EPRIME-015"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-prime/manual/app-movil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "PIN con privacidad",
+              "anchor": "img-e-prime-011",
+              "related_manual_image_key": "IMG-EPRIME-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-011",
+              "image_id": "eprime-10a-pin-privacidad",
+              "title": "PIN con privacidad",
+              "caption": "PIN con privacidad.",
+              "alt": "Uso de PIN con privacidad en e-Prime.",
+              "image": "assets/e-prime/manual/pin-con-privacidad.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite escribir números antes o después de la clave real y confirmar con #. La cerradura reconoce la clave correcta dentro de la secuencia."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Verificación dual",
+              "anchor": "img-e-prime-012",
+              "related_manual_image_key": "IMG-EPRIME-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-012",
+              "image_id": "eprime-10b-verificacion-dual",
+              "title": "Verificación dual",
+              "caption": "Verificación dual.",
+              "alt": "Verificación dual en e-Prime.",
+              "image": "assets/e-prime/manual/verificacion-dual.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Cuando está activa, la cerradura solicita dos accesos válidos antes de abrir."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-prime-013",
+              "related_manual_image_key": "IMG-EPRIME-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-013",
+              "image_id": "eprime-10c-paso-libre",
+              "title": "Paso libre",
+              "caption": "Paso libre.",
+              "alt": "Modo paso libre en e-Prime.",
+              "image": "assets/e-prime/manual/paso-libre.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Úsalo cuando necesites entrada frecuente durante un periodo corto. Desactívalo cuando la puerta deba quedar protegida."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Alarma antipalanca",
+              "anchor": "img-e-prime-014",
+              "related_manual_image_key": "IMG-EPRIME-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-014",
+              "image_id": "eprime-10d-alarma-antipalanca",
+              "title": "Alarma antipalanca",
+              "caption": "Alarma antipalanca.",
+              "alt": "Alarma antipalanca en e-Prime.",
+              "image": "assets/e-prime/manual/alarma-antipalanca.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Activa la alerta de manipulación desde el menú de funciones, si la instalación y la versión lo permiten."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-prime-015",
+              "related_manual_image_key": "IMG-EPRIME-015"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EPRIME-015",
+              "image_id": "eprime-10e-app-movil",
+              "title": "App móvil",
+              "caption": "App móvil.",
+              "alt": "Vinculación con app móvil en e-Prime.",
+              "image": "assets/e-prime/manual/app-movil.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Después de crear un administrador, puedes iniciar la vinculación con la app compatible desde el menú inalámbrico de la cerradura."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-EPRIME-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-prime/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "alarma-antipalanca",
+          "image_review_keys": [
+            "IMG-EPRIME-014"
+          ],
+          "heading": "Alarma antipalanca",
+          "image": "assets/e-prime/manual/alarma-antipalanca.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil",
+          "image_review_keys": [
+            "IMG-EPRIME-015"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-prime/manual/app-movil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "fecha-y-hora",
+          "image_review_keys": [
+            "IMG-EPRIME-010"
+          ],
+          "heading": "Fecha y hora",
+          "image": "assets/e-prime/manual/fecha-y-hora.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "funciones-de-cierre",
+          "image_review_keys": [
+            "IMG-EPRIME-007"
+          ],
+          "heading": "Funciones de cierre",
+          "image": "assets/e-prime/manual/funciones-de-cierre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-EPRIME-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-prime/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-EPRIME-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-prime/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-EPRIME-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-prime/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-prime/manual/partes-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre",
+          "image_review_keys": [
+            "IMG-EPRIME-013"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-prime/manual/paso-libre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "pin-con-privacidad",
+          "image_review_keys": [
+            "IMG-EPRIME-011"
+          ],
+          "heading": "PIN con privacidad",
+          "image": "assets/e-prime/manual/pin-con-privacidad.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-EPRIME-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-prime/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-EPRIME-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-prime/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "verificacion-dual",
+          "image_review_keys": [
+            "IMG-EPRIME-012"
+          ],
+          "heading": "Verificación dual",
+          "image": "assets/e-prime/manual/verificacion-dual.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "volumen",
+          "image_review_keys": [
+            "IMG-EPRIME-008"
+          ],
+          "heading": "Volumen",
+          "image": "assets/e-prime/manual/volumen.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "voz-e-idioma",
+          "image_review_keys": [
+            "IMG-EPRIME-009"
+          ],
+          "heading": "Voz e idioma",
+          "image": "assets/e-prime/manual/voz-e-idioma.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-EPRIME-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-prime/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-EPRIME-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-prime/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-EPRIME-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-prime/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-EPRIME-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-prime/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-EPRIME-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-prime/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-EPRIME-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-prime/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-prime/ts/e-prime-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-prime/ts/e-prime-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-prime/ts/e-prime-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-prime/hero/e-prime-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

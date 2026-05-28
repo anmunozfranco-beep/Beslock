@@ -18,6 +18,104 @@ if ( ! $product instanceof WC_Product ) {
   return;
 }
 
+if ( ! function_exists( 'beslock_product_card_attachment_has_file' ) ) {
+  function beslock_product_card_attachment_has_file( $attachment_id ) {
+    $attachment_id = intval( $attachment_id );
+
+    if ( ! $attachment_id ) {
+      return false;
+    }
+
+    $file_path = get_attached_file( $attachment_id );
+
+    return is_string( $file_path ) && '' !== $file_path && file_exists( $file_path );
+  }
+}
+
+if ( ! function_exists( 'beslock_product_card_find_slug_attachment_id' ) ) {
+  function beslock_product_card_find_slug_attachment_id( $product_slug ) {
+    $product_slug = sanitize_title( (string) $product_slug );
+
+    if ( '' === $product_slug ) {
+      return 0;
+    }
+
+    $attachments = get_posts(
+      array(
+        'post_type'      => 'attachment',
+        'post_mime_type' => 'image',
+        'post_status'    => 'inherit',
+        'posts_per_page' => 30,
+        's'              => $product_slug,
+        'orderby'        => 'ID',
+        'order'          => 'ASC',
+      )
+    );
+
+    $fallback_id = 0;
+
+    foreach ( $attachments as $attachment ) {
+      $attachment_id = intval( $attachment->ID );
+
+      if ( ! beslock_product_card_attachment_has_file( $attachment_id ) ) {
+        continue;
+      }
+
+      $attached_file = (string) get_post_meta( $attachment_id, '_wp_attached_file', true );
+      $filename = basename( $attached_file );
+
+      if ( preg_match( '/^' . preg_quote( $product_slug, '/' ) . '[_-]?\.(webp|png|jpe?g)$/i', $filename ) ) {
+        return $attachment_id;
+      }
+
+      $filename_slug = sanitize_title( pathinfo( $filename, PATHINFO_FILENAME ) );
+      if ( 0 === $fallback_id && 0 === strpos( $filename_slug, $product_slug ) ) {
+        $fallback_id = $attachment_id;
+      }
+    }
+
+    return $fallback_id;
+  }
+}
+
+if ( ! function_exists( 'beslock_product_card_get_image_html' ) ) {
+  function beslock_product_card_get_image_html( WC_Product $product ) {
+    $thumbnail_id = $product->get_image_id();
+    $alt = $product->get_name();
+
+    if ( beslock_product_card_attachment_has_file( $thumbnail_id ) ) {
+      return $product->get_image( 'medium' );
+    }
+
+    $replacement_id = beslock_product_card_find_slug_attachment_id( $product->get_slug() );
+
+    if ( $replacement_id ) {
+      return wp_get_attachment_image(
+        $replacement_id,
+        'medium',
+        false,
+        array(
+          'alt'     => $alt,
+          'loading' => 'lazy',
+        )
+      );
+    }
+
+    $asset_relative_path = 'assets/images/products/' . sanitize_title( $product->get_slug() ) . '.webp';
+    $asset_path = get_stylesheet_directory() . '/' . $asset_relative_path;
+
+    if ( file_exists( $asset_path ) ) {
+      return sprintf(
+        '<img src="%1$s" alt="%2$s" loading="lazy" width="400" height="225" class="attachment-medium size-medium bes-product-card__fallback-image">',
+        esc_url( get_stylesheet_directory_uri() . '/' . $asset_relative_path . '?v=' . filemtime( $asset_path ) ),
+        esc_attr( $alt )
+      );
+    }
+
+    return $product->get_image( 'medium' );
+  }
+}
+
 $show_description = (bool) $args['show_description'];
 $card_classes = array(
   'product-card',
@@ -80,7 +178,7 @@ $add_to_cart_url = add_query_arg( 'add-to-cart', $product->get_id(), home_url( '
 
 <article class="<?php echo esc_attr( implode( ' ', $card_classes ) ); ?>" data-js="product-card" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
   <div class="<?php echo esc_attr( implode( ' ', $image_classes ) ); ?>">
-    <?php echo $product->get_image( 'medium' ); ?>
+    <?php echo beslock_product_card_get_image_html( $product ); ?>
 
     <?php if ( $show_badge && file_exists( $badge_path ) ) : ?>
       <img

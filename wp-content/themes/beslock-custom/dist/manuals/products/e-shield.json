@@ -1,0 +1,1288 @@
+{
+  "product": {
+    "slug": "e-shield",
+    "display_name": "e-Shield",
+    "profile_public": {
+      "short_description": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
+      "commercial_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. La geometría principal presenta panel exterior vertical negro con lector de huella circular superior, teclado táctil, acceso inferior de llave mecánica y cuerpo de cierre rectangular de sobreponer con pestillo visible.",
+      "product_type": "Cerradura inteligente exterior de sobreponer",
+      "lock_architecture": "rim_lock_integrated_mechanism",
+      "access_systems": [
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Clave / PIN",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta IC",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Control remoto",
+          "status": "Observado en imagen comercial, validar si aplica"
+        },
+        {
+          "name": "Doble verificación",
+          "status": "Documentado en manual antiguo como modo combinado"
+        },
+        {
+          "name": "Reconocimiento facial",
+          "status": "No aplica"
+        },
+        {
+          "name": "Video / timbre",
+          "status": "No aplica"
+        }
+      ],
+      "materials": [
+        "Aleación de aluminio + hierro inoxidable"
+      ],
+      "finish": "",
+      "visual_language": [
+        "panel exterior vertical negro,",
+        "lector de huella circular en la parte superior,",
+        "aro luminoso azul alrededor del lector,",
+        "teclado táctil con números, * y #,",
+        "zona inferior para llave mecánica,",
+        "cuerpo rectangular de sobreponer,",
+        "pestillo principal visible,",
+        "pieza de posicionamiento / lengüeta secundaria según despiece,",
+        "asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura,",
+        "pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre,",
+        "recibidor o placa de cierre para el marco,",
+        "tornillos de fijación,",
+        "diseño de instalación sobre reja o puerta metálica.",
+        "manija horizontal tipo e-Flex/e-Prime,",
+        "pomo circular tipo e-Nova,",
+        "cámara o reconocimiento facial,",
+        "pantalla de video,",
+        "timbre,"
+      ],
+      "key_features": [],
+      "use_cases": [
+        "puertas metálicas",
+        "rejas",
+        "portones",
+        "accesos tipo patio"
+      ],
+      "installation_type": "Hierro, acero inoxidable, patio",
+      "technical_highlights": [
+        {
+          "label": "Alimentación principal",
+          "value": "4 baterías AA alcalinas"
+        },
+        {
+          "label": "Voltaje",
+          "value": "4,8 V a 6,5 V"
+        },
+        {
+          "label": "Corriente de trabajo",
+          "value": "< 200 mA"
+        },
+        {
+          "label": "Aviso de batería baja",
+          "value": "Menos de 25% en manual NX5 reciente"
+        },
+        {
+          "label": "Aperturas tras aviso",
+          "value": "Aproximadamente 50 según manual NX5 reciente"
+        },
+        {
+          "label": "Emergencia",
+          "value": "Puerto USB exterior conectado a power bank"
+        },
+        {
+          "label": "Tiempo con USB",
+          "value": "Cerca de 30 segundos antes de abrir"
+        },
+        {
+          "label": "Modelo",
+          "value": "NX5-L"
+        },
+        {
+          "label": "Material",
+          "value": "Aleación de aluminio + hierro inoxidable"
+        },
+        {
+          "label": "Tamaño frontal",
+          "value": "145 x 58 x 50 mm"
+        },
+        {
+          "label": "Tamaño trasero",
+          "value": "130 x 110 x 50 mm"
+        },
+        {
+          "label": "Grosor de puerta",
+          "value": "30 a 110 mm según manual NX5 reciente"
+        },
+        {
+          "label": "Tipo de puerta",
+          "value": "Hierro, acero inoxidable, patio"
+        },
+        {
+          "label": "Cilindro",
+          "value": "Clase C"
+        },
+        {
+          "label": "Pestillo",
+          "value": "Acero inoxidable 304"
+        },
+        {
+          "label": "Tipo de cierre",
+          "value": "Semiautomático"
+        },
+        {
+          "label": "Vida útil",
+          "value": "100.000 ciclos en tabla técnica; 200.000 ciclos en imagen comercial"
+        },
+        {
+          "label": "Huellas",
+          "value": "100 en tabla; otra fuente menciona 40 usuarios de huella"
+        },
+        {
+          "label": "Tarjetas",
+          "value": "100"
+        },
+        {
+          "label": "Claves",
+          "value": "100"
+        }
+      ],
+      "seo_keywords": [
+        "e-Shield",
+        "BESLOCK e-Shield",
+        "cerradura inteligente",
+        "Cerradura inteligente exterior de sobreponer",
+        "Huella",
+        "Clave / PIN",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App",
+        "Control remoto",
+        "Doble verificación",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
+      "warnings_or_pending_validation": [
+        "Si una función aparece en el manual NX5 reciente y coincide con el producto visual, se considera confirmada.",
+        "Si una función aparece solo en material comercial visual, se marca como observada y pendiente de validación.",
+        "La variante doble se trata como variante específica, no como la versión base del manual salvo confirmación.",
+        "Confirmar app final: Tuya WiFi, TTLock/Tongtong o ambas por variante.",
+        "Confirmar si se cubrirá versión single, doble o ambas.",
+        "Confirmar rango final de grosor de puerta.",
+        "Confirmar capacidad máxima final de huellas, claves, tarjetas y usuarios.",
+        "Confirmar si IP65 y rango de temperatura se pueden publicar.",
+        "Confirmar si el control remoto forma parte del paquete comercial o es accesorio.",
+        "Confirmar ubicación física exacta del SET en la unidad BESLOCK final.",
+        "Confirmar si se incluirá cubierta impermeable como accesorio del paquete."
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Control exterior robusto para rejas, portones y accesos metálicos con credenciales múltiples.",
+        "instalacion": "Instalación de sobreponer para reforzar accesos donde el embutido no es la mejor ruta.",
+        "configuracion": "Usuarios, idioma, volumen y fecha se gestionan desde un menú protegido y directo.",
+        "uso-diario": "Acceso exterior práctico para patios y portones, con cierre firme y métodos de entrada flexibles.",
+        "soluciones-rapidas": "USB de emergencia, llave mecánica y avisos de batería reducen fricción en momentos críticos."
+      }
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Shield",
+      "summary": "Cerradura inteligente exterior de sobreponer para rejas, portones y accesos metálicos compatibles.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-ESHIELD-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-shield/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-ESHIELD-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-shield/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-ESHIELD-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-shield/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Shield es una cerradura de sobreponer. El panel exterior permite abrir con huella, clave, tarjeta, llave mecánica o app; el cuerpo interior aloja el cierre y se instala sobre la puerta, reja o portón."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-shield-001",
+              "related_manual_image_key": "IMG-ESHIELD-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-001",
+              "image_id": "eshield-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Shield con partes numeradas.",
+              "image": "assets/e-shield/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Lector de huella.",
+                "Aro luminoso del lector.",
+                "Teclado táctil.",
+                "Tecla *.",
+                "Tecla #.",
+                "Área de lectura de tarjeta IC.",
+                "Acceso de llave mecánica.",
+                "Puerto exterior de energía de emergencia."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-shield-002",
+              "related_manual_image_key": "IMG-ESHIELD-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-002",
+              "image_id": "eshield-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Shield con partes numeradas.",
+              "image": "assets/e-shield/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo interior de sobreponer.",
+                "Compartimento de baterías.",
+                "Botón SET o reinicio en el lado protegido.",
+                "Asa interior para sujetar y abrir la puerta.",
+                "Control interior de bloqueo, si está incluido en la versión instalada."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-shield-003",
+              "related_manual_image_key": "IMG-ESHIELD-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-003",
+              "image_id": "eshield-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Shield con partes numeradas.",
+              "image": "assets/e-shield/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Caja de cierre de sobreponer.",
+                "Pestillo principal.",
+                "Pasador o lengüeta auxiliar.",
+                "Recibidor del marco."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-ESHIELD-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-ESHIELD-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-shield/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-ESHIELD-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-001",
+              "image_id": "eshield-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Shield.",
+              "image": "assets/e-shield/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta, reja o portón sea compatible con una cerradura de sobreponer.",
+                "Define el sentido de apertura antes de perforar.",
+                "Ubica la plantilla de instalación sobre la superficie.",
+                "Marca los puntos de fijación y paso del cable, si aplica.",
+                "Perfora según la plantilla incluida.",
+                "Instala el panel exterior y pasa el cable hacia el lado protegido.",
+                "Conecta el cable al cuerpo interior.",
+                "Fija el cuerpo interior de sobreponer sin apretar en exceso.",
+                "Alinea el pestillo principal y el pasador con el recibidor.",
+                "Fija el recibidor en el marco.",
+                "Coloca cuatro baterías AA alcalinas respetando la polaridad.",
+                "Prueba la apertura con la puerta o reja abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-ESHIELD-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-shield/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-ESHIELD-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-shield/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-ESHIELD-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-shield/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-shield-004",
+              "manual_image_key": "IMG-ESHIELD-004",
+              "image": "assets/e-shield/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el acceso que toma control de la cerradura después del estado inicial. Debe crearse antes de usar la e-Shield todos los días."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-shield-005",
+              "manual_image_key": "IMG-ESHIELD-005",
+              "image": "assets/e-shield/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los administradores pueden abrir la cerradura, entrar al menú y gestionar usuarios, ajustes y funciones. La e-Shield admite perfiles de administrador y usuario."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-shield-006",
+              "manual_image_key": "IMG-ESHIELD-006",
+              "image": "assets/e-shield/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con huella, clave o tarjeta registrada, pero no debe cambiar ajustes ni administrar otros accesos."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-ESHIELD-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-ESHIELD-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-shield/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-ESHIELD-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-002",
+              "image_id": "eshield-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Shield.",
+              "image": "assets/e-shield/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado táctil.",
+                "Presiona * y luego #.",
+                "Ingresa la clave inicial indicada para el estado de fábrica.",
+                "Selecciona ajustes de administrador.",
+                "Elige el método de acceso: huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el nuevo administrador con la puerta o reja abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-ESHIELD-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-ESHIELD-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-shield/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-ESHIELD-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-003",
+              "image_id": "eshield-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Shield.",
+              "image": "assets/e-shield/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Despierta el teclado táctil.",
+                "Presiona * y luego #.",
+                "Verifica con una huella, clave o tarjeta de administrador.",
+                "Selecciona la opción del menú que necesitas.",
+                "Usa * para volver o salir y # para confirmar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "fecha-y-hora",
+              "image_review_keys": [
+                "IMG-ESHIELD-007"
+              ],
+              "heading": "Fecha y hora",
+              "image": "assets/e-shield/manual/fecha-y-hora.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "voz-idioma-y-volumen",
+              "image_review_keys": [
+                "IMG-ESHIELD-008"
+              ],
+              "heading": "Voz, idioma y volumen",
+              "image": "assets/e-shield/manual/voz-idioma-y-volumen.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "modo-de-apertura",
+              "image_review_keys": [
+                "IMG-ESHIELD-009"
+              ],
+              "heading": "Modo de apertura",
+              "image": "assets/e-shield/manual/modo-de-apertura.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Fecha y hora",
+              "anchor": "img-e-shield-007",
+              "manual_image_key": "IMG-ESHIELD-007",
+              "image": "assets/e-shield/manual/fecha-y-hora.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes del sistema.",
+                "Elige fecha y hora.",
+                "Ingresa los datos solicitados.",
+                "Confirma con #."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Voz, idioma y volumen",
+              "anchor": "img-e-shield-008",
+              "manual_image_key": "IMG-ESHIELD-008",
+              "image": "assets/e-shield/manual/voz-idioma-y-volumen.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes del sistema.",
+                "Elige voz, idioma o volumen.",
+                "Ajusta la opción disponible.",
+                "Confirma el cambio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Modo de apertura",
+              "anchor": "img-e-shield-009",
+              "manual_image_key": "IMG-ESHIELD-009",
+              "image": "assets/e-shield/manual/modo-de-apertura.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes del sistema.",
+                "Elige apertura simple o apertura combinada, si está disponible.",
+                "Confirma el modo que vas a usar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-ESHIELD-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-ESHIELD-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-shield/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-ESHIELD-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-004",
+              "image_id": "eshield-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Shield.",
+              "image": "assets/e-shield/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes de administrador.",
+                "Elige agregar administrador.",
+                "Selecciona huella, clave o tarjeta.",
+                "Registra el acceso de la persona administradora.",
+                "Espera la confirmación.",
+                "Prueba el nuevo acceso con la puerta o reja abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-ESHIELD-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-ESHIELD-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-shield/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-ESHIELD-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-005",
+              "image_id": "eshield-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Shield.",
+              "image": "assets/e-shield/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona ajustes de usuario.",
+                "Elige agregar usuario.",
+                "Selecciona huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación.",
+                "Prueba el acceso con la puerta o reja abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-ESHIELD-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-ESHIELD-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-shield/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-ESHIELD-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ESHIELD-006",
+              "image_id": "eshield-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Shield.",
+              "image": "assets/e-shield/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona la opción para eliminar usuario o administrador.",
+                "Elige eliminación individual.",
+                "Ingresa el número de usuario o presenta el acceso correspondiente, según el menú disponible.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "pin-con-privacidad",
+              "image_review_keys": [
+                "IMG-ESHIELD-010"
+              ],
+              "heading": "PIN con privacidad",
+              "image": "assets/e-shield/manual/pin-con-privacidad.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-temporal",
+              "image_review_keys": [
+                "IMG-ESHIELD-011"
+              ],
+              "heading": "Bloqueo temporal",
+              "image": "assets/e-shield/manual/bloqueo-temporal.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "paso-libre",
+              "image_review_keys": [
+                "IMG-ESHIELD-012"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-shield/manual/paso-libre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-interior",
+              "image_review_keys": [
+                "IMG-ESHIELD-013"
+              ],
+              "heading": "Bloqueo interior",
+              "image": "assets/e-shield/manual/bloqueo-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil",
+              "image_review_keys": [
+                "IMG-ESHIELD-014"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-shield/manual/app-movil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "PIN con privacidad",
+              "anchor": "img-e-shield-010",
+              "related_manual_image_key": "IMG-ESHIELD-010"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-010",
+              "image_id": "eshield-10a-pin-privacidad",
+              "title": "PIN con privacidad",
+              "caption": "PIN con privacidad.",
+              "alt": "Uso de PIN con privacidad en e-Shield.",
+              "image": "assets/e-shield/manual/pin-con-privacidad.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite escribir números antes o después de la clave real. La clave correcta debe quedar dentro de la secuencia y confirmarse con #."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo temporal",
+              "anchor": "img-e-shield-011",
+              "related_manual_image_key": "IMG-ESHIELD-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-011",
+              "image_id": "eshield-10b-bloqueo-temporal",
+              "title": "Bloqueo temporal",
+              "caption": "Bloqueo temporal.",
+              "alt": "Bloqueo temporal en e-Shield.",
+              "image": "assets/e-shield/manual/bloqueo-temporal.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Después de varios intentos incorrectos, la cerradura puede bloquear operaciones por un tiempo corto antes de permitir otro intento."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-shield-012",
+              "related_manual_image_key": "IMG-ESHIELD-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-012",
+              "image_id": "eshield-10c-paso-libre",
+              "title": "Paso libre",
+              "caption": "Paso libre.",
+              "alt": "Modo paso libre en e-Shield.",
+              "image": "assets/e-shield/manual/paso-libre.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Activa el paso libre cuando necesites entrada frecuente. Desactívalo cuando el acceso deba volver a quedar protegido."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo interior",
+              "anchor": "img-e-shield-013",
+              "related_manual_image_key": "IMG-ESHIELD-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-013",
+              "image_id": "eshield-10d-bloqueo-interior",
+              "title": "Bloqueo interior",
+              "caption": "Bloqueo interior.",
+              "alt": "Bloqueo interior en e-Shield.",
+              "image": "assets/e-shield/manual/bloqueo-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "El bloqueo interior restringe aperturas desde afuera para usuarios regulares. Un administrador puede abrir si es necesario."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-shield-014",
+              "related_manual_image_key": "IMG-ESHIELD-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ESHIELD-014",
+              "image_id": "eshield-10e-app-movil",
+              "title": "App móvil",
+              "caption": "App móvil.",
+              "alt": "Uso de app móvil en e-Shield.",
+              "image": "assets/e-shield/manual/app-movil.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "La app permite gestionar accesos y consultar funciones conectadas cuando la versión instalada lo permite."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-ESHIELD-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-shield/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil",
+          "image_review_keys": [
+            "IMG-ESHIELD-014"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-shield/manual/app-movil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-interior",
+          "image_review_keys": [
+            "IMG-ESHIELD-013"
+          ],
+          "heading": "Bloqueo interior",
+          "image": "assets/e-shield/manual/bloqueo-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-temporal",
+          "image_review_keys": [
+            "IMG-ESHIELD-011"
+          ],
+          "heading": "Bloqueo temporal",
+          "image": "assets/e-shield/manual/bloqueo-temporal.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "fecha-y-hora",
+          "image_review_keys": [
+            "IMG-ESHIELD-007"
+          ],
+          "heading": "Fecha y hora",
+          "image": "assets/e-shield/manual/fecha-y-hora.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-ESHIELD-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-shield/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "modo-de-apertura",
+          "image_review_keys": [
+            "IMG-ESHIELD-009"
+          ],
+          "heading": "Modo de apertura",
+          "image": "assets/e-shield/manual/modo-de-apertura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-ESHIELD-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-shield/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-ESHIELD-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-shield/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-de-la-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-shield/manual/partes-de-la-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre",
+          "image_review_keys": [
+            "IMG-ESHIELD-012"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-shield/manual/paso-libre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "piezas-principales",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-shield/manual/piezas-principales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "pin-con-privacidad",
+          "image_review_keys": [
+            "IMG-ESHIELD-010"
+          ],
+          "heading": "PIN con privacidad",
+          "image": "assets/e-shield/manual/pin-con-privacidad.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-ESHIELD-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-shield/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "revision-inicial",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-shield/manual/revision-inicial.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-ESHIELD-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-shield/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "voz-idioma-y-volumen",
+          "image_review_keys": [
+            "IMG-ESHIELD-008"
+          ],
+          "heading": "Voz, idioma y volumen",
+          "image": "assets/e-shield/manual/voz-idioma-y-volumen.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-ESHIELD-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-shield/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-ESHIELD-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-shield/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-ESHIELD-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-shield/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-ESHIELD-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-shield/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-ESHIELD-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-shield/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-ESHIELD-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-shield/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-shield/ts/e-shield-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-shield/ts/e-shield-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-shield/ts/e-shield-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-shield/hero/e-shield-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

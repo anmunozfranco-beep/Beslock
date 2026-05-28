@@ -1,0 +1,1221 @@
+{
+  "product": {
+    "slug": "e-nova",
+    "display_name": "e-Nova",
+    "profile_public": {
+      "short_description": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
+      "commercial_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada. Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes.",
+      "product_type": "Cerradura inteligente tipo pomo",
+      "lock_architecture": "latch_lock",
+      "access_systems": [
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App Tuya Smart",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Bluetooth",
+          "status": "Confirmado"
+        },
+        {
+          "name": "PIN / clave",
+          "status": "No confirmado para uso en el producto físico"
+        },
+        {
+          "name": "Tarjeta",
+          "status": "No confirmado para uso en el producto físico"
+        },
+        {
+          "name": "Reconocimiento facial",
+          "status": "No aplica"
+        },
+        {
+          "name": "Video / timbre",
+          "status": "No aplica"
+        }
+      ],
+      "materials": [
+        "Aleación de aluminio + acero inoxidable",
+        "Acero inoxidable"
+      ],
+      "finish": "Negro y plateado",
+      "visual_language": [
+        "La imagen H2 de instalación debe ser una composición de tres mini-escenas grandes: preparación de puerta para pomo, inserción/alineación del latch tubular con recibidor, y montaje de pomo exterior/interior con prueba final.",
+        "Mantener el hardware cilíndrico de e-Nova; no sustituirlo por mortaja, manija larga, cerradura multipunto ni arquitectura de otros productos.",
+        "Evitar texto dentro de las imágenes de instalación. La lectura debe depender de flechas, callouts, numerales conectados, zooms y checks.",
+        "En escenas operativas ya aprobadas, eliminar numerales aislados que no tengan guía o objetivo visual real.",
+        "Si se representa energía de emergencia, mantener el puerto como referencia visual genérica hasta confirmar físicamente el tipo exacto."
+      ],
+      "key_features": [
+        "Apertura sin llave mediante huella.",
+        "Control y gestión desde app Tuya Smart por Bluetooth.",
+        "Llave mecánica como respaldo.",
+        "Puerto exterior para energía de emergencia.",
+        "Modo normalmente abierto para accesos frecuentes.",
+        "Bloqueo interior / doble cierre mediante pomo interior.",
+        "Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles.",
+        "Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja.",
+        "Guardar al menos una llave fuera del espacio protegido.",
+        "Usar la llave mecánica si la batería se agota.",
+        "Usar energía exterior por el puerto USB para abrir de emergencia.",
+        "Cargar la batería al recibir aviso de baja energía.",
+        "El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+        "El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos."
+      ],
+      "use_cases": [],
+      "installation_type": "",
+      "technical_highlights": [
+        {
+          "label": "Tensión de funcionamiento",
+          "value": "3,3 V a 4,2 V"
+        },
+        {
+          "label": "Tensión nominal",
+          "value": "3,7 V"
+        },
+        {
+          "label": "Tensión de alarma",
+          "value": "3,5 V ± 0,1 V"
+        },
+        {
+          "label": "Batería",
+          "value": "Litio ternaria 400 mAh"
+        },
+        {
+          "label": "Capacidad de huella",
+          "value": "20 huellas"
+        },
+        {
+          "label": "Administradores",
+          "value": "Primeras 3 huellas"
+        },
+        {
+          "label": "Usuarios regulares",
+          "value": "17 huellas"
+        },
+        {
+          "label": "Temperatura de trabajo",
+          "value": "-25 °C a +70 °C"
+        },
+        {
+          "label": "Temperatura de almacenamiento",
+          "value": "-40 °C a +85 °C"
+        },
+        {
+          "label": "Humedad",
+          "value": "< 93% RH"
+        },
+        {
+          "label": "Protección ESD",
+          "value": "Contacto ±8 kV, aire ±15 kV"
+        },
+        {
+          "label": "Material indicado en manual",
+          "value": "Aleación de aluminio + acero inoxidable"
+        },
+        {
+          "label": "Material indicado en ficha inglesa",
+          "value": "Acero inoxidable"
+        },
+        {
+          "label": "Grosor de puerta",
+          "value": "35 a 55 mm"
+        },
+        {
+          "label": "Métodos de apertura",
+          "value": "Huella / llave / app"
+        },
+        {
+          "label": "Puertas aplicables",
+          "value": "Madera, oficina, puertas ultraestrechas y ecológicas"
+        },
+        {
+          "label": "Dimensión visual del pomo",
+          "value": "70 mm x 75 mm según ficha visual"
+        },
+        {
+          "label": "Cuerpo tubular",
+          "value": "60 mm a 70 mm ajustable según ficha visual"
+        }
+      ],
+      "seo_keywords": [
+        "e-Nova",
+        "BESLOCK e-Nova",
+        "cerradura inteligente",
+        "Cerradura inteligente tipo pomo",
+        "Tuya Smart",
+        "Bluetooth",
+        "Huella",
+        "Llave mecánica",
+        "App Tuya Smart",
+        "PIN / clave",
+        "Tarjeta",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
+      "warnings_or_pending_validation": [
+        "La caja BESLOCK menciona 3 Accesos • 50 Usuarios, pero el manual técnico y la ficha visual en inglés confirman 20 huellas, con las primeras 3 como administradores y las 17 restantes como usuarios regulares. Para el manual visible, conviene no prometer 50 usuarios hasta validar si esa cifra aplica a usuarios de app, miembros compartidos o una variante comercial.",
+        "El material menciona USB, micro-USB y USB-C en distintas piezas. Para el manual visible, usar una redacción conservadora como puerto exterior de energía de emergencia hasta confirmar físicamente el conector.",
+        "Algunas capturas de Tuya muestran opciones genéricas como código, tarjeta o contraseña temporal. Como el producto no tiene teclado ni lector de tarjeta visibles, esas opciones no deben presentarse como métodos de apertura de e-Nova sin validación adicional.",
+        "Confirmar si la capacidad comercial final será 20 huellas o 50 usuarios.",
+        "Confirmar si 50 usuarios se refiere a miembros de app, accesos compartidos o una variante del producto.",
+        "Confirmar tipo exacto de puerto exterior: USB-C, micro-USB u otro.",
+        "Confirmar el flujo exacto para salir del modo normalmente abierto.",
+        "Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
+        "Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas. En el material operativo de e-Nova, Tuya Smart es la fuente más consistente."
+      ],
+      "section_teasers": {
+        "conoce-tu-cerradura": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
+        "instalacion": "Reemplazo directo de pomo para actualizar puertas compatibles sin complicar la puesta en marcha.",
+        "configuracion": "Primeras huellas como administración y gestión Bluetooth para ordenar usuarios en minutos.",
+        "uso-diario": "Entrada en segundos por huella y modo normalmente abierto para espacios con movimiento constante.",
+        "soluciones-rapidas": "Batería recargable, aviso oportuno y llave mecánica protegen el acceso ante imprevistos."
+      }
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Nova",
+      "summary": "Cerradura inteligente tipo pomo con apertura por huella, llave mecánica y app Tuya por Bluetooth.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 3,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-ENOVA-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-nova/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-ENOVA-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-nova/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-ENOVA-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-nova/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Nova es una cerradura tipo pomo. El panel exterior integra el lector de huella y el respaldo mecánico; el panel interior permite bloquear o dejar el paso libre desde dentro."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-nova-001",
+              "related_manual_image_key": "IMG-ENOVA-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-001",
+              "image_id": "enova-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Nova con partes numeradas.",
+              "image": "assets/e-nova/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Pomo exterior.",
+                "Lector de huella.",
+                "Aro luminoso del lector.",
+                "Acceso de llave mecánica.",
+                "Puerto exterior de energía de emergencia."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-nova-002",
+              "related_manual_image_key": "IMG-ENOVA-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-002",
+              "image_id": "enova-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Nova con partes numeradas.",
+              "image": "assets/e-nova/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Pomo interior.",
+                "Control interior de bloqueo.",
+                "Iconos de bloqueo y desbloqueo.",
+                "Marca de orientación para el montaje."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-nova-003",
+              "related_manual_image_key": "IMG-ENOVA-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-003",
+              "image_id": "enova-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Nova con partes numeradas.",
+              "image": "assets/e-nova/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo tubular.",
+                "Pestillo.",
+                "Placa frontal.",
+                "Recibidor del marco."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-ENOVA-001",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-ENOVA-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-nova/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "related_manual_image_key": "H2-ENOVA-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-001",
+              "image_id": "enova-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Nova.",
+              "image": "assets/e-nova/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con una cerradura tipo pomo.",
+                "Verifica que el grosor de la puerta esté dentro del rango permitido.",
+                "Revisa que el orificio principal y el borde de la puerta estén limpios.",
+                "Inserta el cuerpo tubular en el borde de la puerta.",
+                "Alinea el pestillo con el recibidor.",
+                "Fija la placa frontal del cuerpo tubular.",
+                "Coloca el pomo exterior desde el lado de acceso.",
+                "Alinea el eje o vástago con el cuerpo tubular.",
+                "Coloca el pomo interior desde el lado protegido.",
+                "Respeta la marca de orientación antes de apretar.",
+                "Ajusta los tornillos hasta que ambos pomos queden firmes.",
+                "Gira el pomo interior y confirma que el pestillo se mueva suavemente."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-ENOVA-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-nova/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-ENOVA-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-nova/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-ENOVA-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-nova/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-nova-004",
+              "manual_image_key": "IMG-ENOVA-004",
+              "image": "assets/e-nova/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es la primera huella que se usa para administrar la cerradura. Debe registrarse antes de usar la e-Nova como acceso principal."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-nova-005",
+              "manual_image_key": "IMG-ENOVA-005",
+              "image": "assets/e-nova/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Las primeras 3 huellas se reservan para administradores. Estos accesos permiten gestionar la cerradura desde la app y mantener control sobre los demás usuarios."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-nova-006",
+              "manual_image_key": "IMG-ENOVA-006",
+              "image": "assets/e-nova/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Las huellas restantes funcionan como usuarios regulares. Un usuario regular puede abrir la cerradura, pero no debe administrar otros accesos."
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-ENOVA-002",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-ENOVA-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-nova/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "related_manual_image_key": "H2-ENOVA-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-002",
+              "image_id": "enova-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Nova.",
+              "image": "assets/e-nova/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Carga la cerradura antes de iniciar la configuración.",
+                "Instala la app Tuya Smart en el teléfono.",
+                "Activa Bluetooth y ubicación en el teléfono.",
+                "Abre la app y selecciona agregar dispositivo.",
+                "Toca el lector de huella para despertar la cerradura.",
+                "Selecciona la e-Nova cuando aparezca en la app.",
+                "Entra a la opción para agregar huella.",
+                "Registra la primera huella siguiendo las instrucciones de la app.",
+                "Prueba la huella con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-ENOVA-003",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-ENOVA-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-nova/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "related_manual_image_key": "H2-ENOVA-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-003",
+              "image_id": "enova-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Nova.",
+              "image": "assets/e-nova/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "En e-Nova, la administración se hace desde la app Tuya por Bluetooth."
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Acerca el teléfono a la cerradura.",
+                "Activa Bluetooth.",
+                "Abre la app Tuya Smart.",
+                "Selecciona la cerradura e-Nova.",
+                "Espera a que la app se conecte.",
+                "Entra a la opción de miembros, huellas o gestión de accesos."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "gestion-de-huellas",
+              "image_review_keys": [
+                "IMG-ENOVA-007"
+              ],
+              "heading": "Gestión de huellas",
+              "image": "assets/e-nova/manual/gestion-de-huellas.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "gestion-de-miembros",
+              "image_review_keys": [
+                "IMG-ENOVA-008"
+              ],
+              "heading": "Gestión de miembros",
+              "image": "assets/e-nova/manual/gestion-de-miembros.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "estado-de-bateria",
+              "image_review_keys": [
+                "IMG-ENOVA-009"
+              ],
+              "heading": "Estado de batería",
+              "image": "assets/e-nova/manual/estado-de-bateria.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador desde la app Tuya."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Gestión de huellas",
+              "anchor": "img-e-nova-007",
+              "manual_image_key": "IMG-ENOVA-007",
+              "image": "assets/e-nova/manual/gestion-de-huellas.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra a la cerradura desde la app Tuya.",
+                "Abre la lista de huellas.",
+                "Consulta, agrega o elimina huellas registradas.",
+                "Guarda los cambios desde la app."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Gestión de miembros",
+              "anchor": "img-e-nova-008",
+              "manual_image_key": "IMG-ENOVA-008",
+              "image": "assets/e-nova/manual/gestion-de-miembros.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra a la cerradura desde la app Tuya.",
+                "Abre la sección de miembros.",
+                "Asocia cada huella con la persona correspondiente.",
+                "Actualiza el nombre o permiso cuando sea necesario."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Estado de batería",
+              "anchor": "img-e-nova-009",
+              "manual_image_key": "IMG-ENOVA-009",
+              "image": "assets/e-nova/manual/estado-de-bateria.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra a la cerradura desde la app Tuya.",
+                "Revisa el estado de batería disponible.",
+                "Carga la cerradura cuando recibas aviso de baja batería."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-ENOVA-004",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-ENOVA-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-nova/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "related_manual_image_key": "H2-ENOVA-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-004",
+              "image_id": "enova-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Nova.",
+              "image": "assets/e-nova/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador desde la app Tuya.",
+                "Abre la opción para agregar huella.",
+                "Usa una de las primeras 3 posiciones para la persona administradora.",
+                "Coloca el dedo sobre el lector cuando la app lo indique.",
+                "Repite la lectura hasta completar el registro.",
+                "Asocia la huella con la persona correcta.",
+                "Prueba el nuevo acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-ENOVA-005",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-ENOVA-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-nova/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "related_manual_image_key": "H2-ENOVA-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-005",
+              "image_id": "enova-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Nova.",
+              "image": "assets/e-nova/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador desde la app Tuya.",
+                "Abre la opción para agregar huella.",
+                "Registra la huella del usuario regular.",
+                "Asocia la huella con la persona correspondiente.",
+                "Guarda el registro.",
+                "Prueba la apertura con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-ENOVA-006",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-ENOVA-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-nova/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "related_manual_image_key": "H2-ENOVA-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-006",
+              "image_id": "enova-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Nova.",
+              "image": "assets/e-nova/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador desde la app Tuya.",
+                "Abre la lista de huellas o miembros.",
+                "Selecciona la huella o persona que quieres eliminar.",
+                "Confirma la eliminación.",
+                "Prueba la cerradura con una huella activa."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "images": [
+            {
+              "section_id": "paso-libre",
+              "image_review_keys": [
+                "IMG-ENOVA-010"
+              ],
+              "heading": "Paso libre",
+              "image": "assets/e-nova/manual/paso-libre.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-interior",
+              "image_review_keys": [
+                "IMG-ENOVA-011"
+              ],
+              "heading": "Bloqueo interior",
+              "image": "assets/e-nova/manual/bloqueo-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "apertura-desde-app",
+              "image_review_keys": [
+                "IMG-ENOVA-012"
+              ],
+              "heading": "Apertura desde app",
+              "image": "assets/e-nova/manual/apertura-desde-app.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "energia-de-emergencia",
+              "image_review_keys": [
+                "IMG-ENOVA-013"
+              ],
+              "heading": "Energía de emergencia",
+              "image": "assets/e-nova/manual/energia-de-emergencia.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Paso libre",
+              "anchor": "img-e-nova-010",
+              "related_manual_image_key": "IMG-ENOVA-010"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-010",
+              "image_id": "enova-10a-paso-libre",
+              "title": "Paso libre",
+              "caption": "Paso libre.",
+              "alt": "Modo paso libre en e-Nova.",
+              "image": "assets/e-nova/manual/paso-libre.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "El modo de paso libre permite abrir sin repetir verificación durante un periodo de uso frecuente. Úsalo solo cuando el acceso pueda permanecer disponible."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo interior",
+              "anchor": "img-e-nova-011",
+              "related_manual_image_key": "IMG-ENOVA-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-011",
+              "image_id": "enova-10b-bloqueo-interior",
+              "title": "Bloqueo interior",
+              "caption": "Bloqueo interior.",
+              "alt": "Bloqueo interior en e-Nova.",
+              "image": "assets/e-nova/manual/bloqueo-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "El control interior permite restringir la apertura desde el exterior. Desde dentro puedes abrir normalmente."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Apertura desde app",
+              "anchor": "img-e-nova-012",
+              "related_manual_image_key": "IMG-ENOVA-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-012",
+              "image_id": "enova-10c-apertura-app",
+              "title": "Apertura desde app",
+              "caption": "Apertura desde app.",
+              "alt": "Apertura desde app en e-Nova.",
+              "image": "assets/e-nova/manual/apertura-desde-app.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "La app permite abrir la cerradura cuando el teléfono está cerca y conectado por Bluetooth."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Energía de emergencia",
+              "anchor": "img-e-nova-013",
+              "related_manual_image_key": "IMG-ENOVA-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-013",
+              "image_id": "enova-10d-energia-emergencia",
+              "title": "Energía de emergencia",
+              "caption": "Energía de emergencia.",
+              "alt": "Energía de emergencia en e-Nova.",
+              "image": "assets/e-nova/manual/energia-de-emergencia.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Si la batería se agota, usa la llave mecánica o alimenta temporalmente la cerradura desde el puerto exterior para poder abrir."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-ENOVA-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-nova/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "apertura-desde-app",
+          "image_review_keys": [
+            "IMG-ENOVA-012"
+          ],
+          "heading": "Apertura desde app",
+          "image": "assets/e-nova/manual/apertura-desde-app.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-interior",
+          "image_review_keys": [
+            "IMG-ENOVA-011"
+          ],
+          "heading": "Bloqueo interior",
+          "image": "assets/e-nova/manual/bloqueo-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "energia-de-emergencia",
+          "image_review_keys": [
+            "IMG-ENOVA-013"
+          ],
+          "heading": "Energía de emergencia",
+          "image": "assets/e-nova/manual/energia-de-emergencia.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "estado-de-bateria",
+          "image_review_keys": [
+            "IMG-ENOVA-009"
+          ],
+          "heading": "Estado de batería",
+          "image": "assets/e-nova/manual/estado-de-bateria.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "gestion-de-huellas",
+          "image_review_keys": [
+            "IMG-ENOVA-007"
+          ],
+          "heading": "Gestión de huellas",
+          "image": "assets/e-nova/manual/gestion-de-huellas.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "gestion-de-miembros",
+          "image_review_keys": [
+            "IMG-ENOVA-008"
+          ],
+          "heading": "Gestión de miembros",
+          "image": "assets/e-nova/manual/gestion-de-miembros.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-ENOVA-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-nova/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-ENOVA-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-nova/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-ENOVA-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-nova/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-de-la-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-nova/manual/partes-de-la-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "paso-libre",
+          "image_review_keys": [
+            "IMG-ENOVA-010"
+          ],
+          "heading": "Paso libre",
+          "image": "assets/e-nova/manual/paso-libre.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "piezas-principales",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-nova/manual/piezas-principales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-ENOVA-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-nova/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-ENOVA-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-nova/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-ENOVA-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-nova/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-ENOVA-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-nova/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-ENOVA-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-nova/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-ENOVA-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-nova/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-ENOVA-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-nova/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-ENOVA-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-nova/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-nova/ts/e-nova-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-nova/ts/e-nova-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-nova/ts/e-nova-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-nova/hero/e-nova-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

@@ -80,6 +80,7 @@ add_action( 'wp_enqueue_scripts', function() {
   $enqueue_optional_theme_style( 'beslock-utilities', '/assets/css/utilities/utilities.css' );
   $enqueue_optional_theme_style( 'beslock-button-utilities', '/assets/css/utilities/buttons.css' );
   $enqueue_optional_theme_style( 'beslock-header-component', '/assets/css/components/header.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile' ] );
+  $enqueue_optional_theme_style( 'beslock-manuals-viewer', '/assets/css/manuals-viewer.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile', 'beslock-header-component' ] );
   $enqueue_optional_theme_style( 'beslock-discover-component', '/assets/css/components/discover.css' );
   $enqueue_optional_theme_style( 'beslock-homepage-layout', '/assets/css/layout/homepage.css' );
   $enqueue_optional_theme_style( 'beslock-recommendations-layout', '/assets/css/layout/recommendations.css' );
@@ -159,6 +160,41 @@ add_action( 'wp_enqueue_scripts', function() {
     $ver_models_js,
     true
   );
+
+  $manuals_viewer_js = $theme_dir_path . '/assets/js/manuals-viewer.js';
+  if ( file_exists( $manuals_viewer_js ) ) {
+    wp_enqueue_script(
+      'beslock-manuals-viewer-js',
+      $theme_dir_uri . '/assets/js/manuals-viewer.js',
+      [ 'beslock-main-js', 'beslock-menu-products-mobile-js' ],
+      filemtime( $manuals_viewer_js ),
+      true
+    );
+
+    $manuals_cache_bust = filemtime( $manuals_viewer_js );
+    $manuals_index_json = $theme_dir_path . '/dist/manuals/index.json';
+    if ( file_exists( $manuals_index_json ) ) {
+      $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_index_json ) );
+    }
+
+    $manuals_product_json_files = glob( $theme_dir_path . '/dist/manuals/products/*.json' );
+    if ( is_array( $manuals_product_json_files ) ) {
+      foreach ( $manuals_product_json_files as $manuals_product_json ) {
+        $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_product_json ) );
+      }
+    }
+
+    $manuals_config = array(
+      'baseUrl'    => esc_url_raw( $theme_dir_uri . '/dist/manuals' ),
+      'cacheBust' => (string) $manuals_cache_bust,
+    );
+
+    wp_add_inline_script(
+      'beslock-manuals-viewer-js',
+      'window.BESLOCK_MANUALS_BASE_URL = ' . wp_json_encode( $manuals_config['baseUrl'] ) . '; window.BESLOCK_MANUALS_CONFIG = ' . wp_json_encode( $manuals_config ) . ';',
+      'before'
+    );
+  }
 
   $widgets_css = $theme_dir_path . '/assets/css/product-widgets.css';
   if ( file_exists( $widgets_css ) ) {
