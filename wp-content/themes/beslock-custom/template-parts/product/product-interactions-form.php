@@ -35,21 +35,17 @@ $rating_value  = isset( $main_form_values['rating'] ) ? absint( $main_form_value
 $reply_name_value    = isset( $reply_form_values['name'] ) ? (string) $reply_form_values['name'] : '';
 $reply_email_value   = isset( $reply_form_values['email'] ) ? (string) $reply_form_values['email'] : '';
 $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_form_values['content'] : '';
+$interaction_heading = sprintf(
+  __( 'Comparte tu experiencia o deja una consulta sobre %s.', 'beslock' ),
+  $product_name ? $product_name : __( 'este producto', 'beslock' )
+);
 ?>
 
 <section class="product-interactions" aria-labelledby="product-interactions-title">
   <div class="product-interactions__header">
     <div>
-      <h2 id="product-interactions-title"><?php echo esc_html__( 'Formulario de reseñas y consultas', 'beslock' ); ?></h2>
+      <h2 id="product-interactions-title"><?php echo esc_html( $interaction_heading ); ?></h2>
     </div>
-    <p class="product-interactions__description">
-      <?php
-      printf(
-        esc_html__( 'Comparte tu experiencia o deja una consulta sobre %s.', 'beslock' ),
-        esc_html( $product_name )
-      );
-      ?>
-    </p>
   </div>
 
   <div class="product-interactions__surface product-interactions__surface--form">
