@@ -152,23 +152,14 @@ get_header();
             tabindex="0"
           >
             <?php if ( ! empty( $product_features ) ) : ?>
-              <table class="product-features-table">
-                <caption class="visually-hidden"><?php printf( esc_html__( 'Resumen de características de %s', 'beslock' ), get_the_title() ); ?></caption>
-                <thead>
-                  <tr>
-                    <th scope="col"><?php echo esc_html__( 'Característica', 'beslock' ); ?></th>
-                    <th scope="col"><?php echo esc_html__( 'Especificación', 'beslock' ); ?></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php foreach ( $product_features as $feature ) : ?>
-                    <tr>
-                      <th scope="row"><?php echo esc_html( $feature['label'] ?? '' ); ?></th>
-                      <td><?php echo esc_html( $feature['value'] ?? '' ); ?></td>
-                    </tr>
-                  <?php endforeach; ?>
-                </tbody>
-              </table>
+              <dl class="product-features-list" aria-label="<?php printf( esc_attr__( 'Resumen de características de %s', 'beslock' ), get_the_title() ); ?>">
+                <?php foreach ( $product_features as $feature ) : ?>
+                  <div class="product-features-list__item">
+                    <dt><?php echo esc_html( $feature['label'] ?? '' ); ?></dt>
+                    <dd><?php echo esc_html( $feature['value'] ?? '' ); ?></dd>
+                  </div>
+                <?php endforeach; ?>
+              </dl>
             <?php else : ?>
               <p><?php echo esc_html__( 'Pronto compartiremos las características de este producto.', 'beslock' ); ?></p>
             <?php endif; ?>

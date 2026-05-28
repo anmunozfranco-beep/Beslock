@@ -416,5 +416,5 @@ body.single-product .product-page__gallery-reel.is-dragging {
   }
   body.single-product .product-page__media { order: 0; margin-top: 0; align-self: center; }
   body.single-product .product-page__info { order: 1; margin-top: 0; align-self: center; }
-  body.single-product .product-page__details { width: min(100%, 900px); margin: 0.75rem auto 0; }
+  body.single-product .product-page__details { width: min(100%, 980px); margin: 0.75rem auto 0; }
 }
