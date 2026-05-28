@@ -187,12 +187,6 @@ nav#mobileDrawer .manuals-section-button:focus-visible {
   outline: none !important;
 }
 
-nav#mobileDrawer .manuals-section-button[data-manual-section="conoce-tu-cerradura"] {
-  color: #0c1610 !important;
-  font-size: calc(var(--drawer-section-font-size) + 0.08rem) !important;
-  font-weight: 900 !important;
-}
-
 nav#mobileDrawer .manuals-section-button.is-active {
   background: transparent !important;
   border-color: transparent !important;
