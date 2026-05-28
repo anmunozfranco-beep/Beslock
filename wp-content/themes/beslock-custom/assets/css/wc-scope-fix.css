@@ -25,6 +25,216 @@ body.woocommerce-page .button {
   display: revert;
 }
 
+/* Re-apply the Beslock CTA skin after the Woo reset above. This intentionally
+   targets purchase/form actions while leaving navigation, tabs, quantity
+   steppers, star ratings, remove links, and dialog close controls untouched. */
+:where(
+  body.woocommerce a.button,
+  body.woocommerce button.button,
+  body.woocommerce input.button,
+  body.woocommerce button[type="submit"],
+  body.woocommerce input[type="submit"],
+  body.woocommerce .checkout-button,
+  body.woocommerce .shipping-calculator-button,
+  body.woocommerce .wp-block-button__link,
+  body.woocommerce .product-interactions__submit,
+  body.woocommerce .product-interactions__reply-trigger,
+  body.woocommerce-page a.button,
+  body.woocommerce-page button.button,
+  body.woocommerce-page input.button,
+  body.woocommerce-page button[type="submit"],
+  body.woocommerce-page input[type="submit"],
+  body.woocommerce-page .checkout-button,
+  body.woocommerce-page .shipping-calculator-button,
+  body.woocommerce-page .wp-block-button__link,
+  body.woocommerce-page .product-interactions__submit,
+  body.woocommerce-page .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button) {
+  opacity: 1 !important;
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 44px;
+  padding: 0.72rem 1.35rem !important;
+  border: 1px solid var(--beslock-green, #034526) !important;
+  border-radius: 12px !important;
+  background: var(--beslock-green, #034526) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(3,69,38,0.14) !important;
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  line-height: 1.05 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 260ms cubic-bezier(.16,.84,.29,1),
+    transform 260ms cubic-bezier(.16,.84,.29,1) !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(
+  body.woocommerce a.button,
+  body.woocommerce button.button,
+  body.woocommerce button[type="submit"],
+  body.woocommerce .checkout-button,
+  body.woocommerce .shipping-calculator-button,
+  body.woocommerce .wp-block-button__link,
+  body.woocommerce .product-interactions__submit,
+  body.woocommerce .product-interactions__reply-trigger,
+  body.woocommerce-page a.button,
+  body.woocommerce-page button.button,
+  body.woocommerce-page button[type="submit"],
+  body.woocommerce-page .checkout-button,
+  body.woocommerce-page .shipping-calculator-button,
+  body.woocommerce-page .wp-block-button__link,
+  body.woocommerce-page .product-interactions__submit,
+  body.woocommerce-page .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button)::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 0 34%, rgba(255,255,255,0.22) 45%, transparent 58% 100%);
+  transform: translateX(-125%);
+  transition: transform 700ms cubic-bezier(.16,.84,.29,1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :where(
+    body.woocommerce a.button,
+    body.woocommerce button.button,
+    body.woocommerce input.button,
+    body.woocommerce button[type="submit"],
+    body.woocommerce input[type="submit"],
+    body.woocommerce .checkout-button,
+    body.woocommerce .shipping-calculator-button,
+    body.woocommerce .wp-block-button__link,
+    body.woocommerce .product-interactions__submit,
+    body.woocommerce .product-interactions__reply-trigger,
+    body.woocommerce-page a.button,
+    body.woocommerce-page button.button,
+    body.woocommerce-page input.button,
+    body.woocommerce-page button[type="submit"],
+    body.woocommerce-page input[type="submit"],
+    body.woocommerce-page .checkout-button,
+    body.woocommerce-page .shipping-calculator-button,
+    body.woocommerce-page .wp-block-button__link,
+    body.woocommerce-page .product-interactions__submit,
+    body.woocommerce-page .product-interactions__reply-trigger
+  ):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button):hover {
+    opacity: 1 !important;
+    background: #075231 !important;
+    border-color: #075231 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 16px 34px rgba(3,69,38,0.22), 0 4px 10px rgba(7,5,5,0.08) !important;
+  }
+
+  :where(
+    body.woocommerce a.button,
+    body.woocommerce button.button,
+    body.woocommerce button[type="submit"],
+    body.woocommerce .checkout-button,
+    body.woocommerce .shipping-calculator-button,
+    body.woocommerce .wp-block-button__link,
+    body.woocommerce .product-interactions__submit,
+    body.woocommerce .product-interactions__reply-trigger,
+    body.woocommerce-page a.button,
+    body.woocommerce-page button.button,
+    body.woocommerce-page button[type="submit"],
+    body.woocommerce-page .checkout-button,
+    body.woocommerce-page .shipping-calculator-button,
+    body.woocommerce-page .wp-block-button__link,
+    body.woocommerce-page .product-interactions__submit,
+    body.woocommerce-page .product-interactions__reply-trigger
+  ):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button):hover::before {
+    transform: translateX(125%);
+  }
+}
+
+:where(
+  body.woocommerce a.button,
+  body.woocommerce button.button,
+  body.woocommerce input.button,
+  body.woocommerce button[type="submit"],
+  body.woocommerce input[type="submit"],
+  body.woocommerce .checkout-button,
+  body.woocommerce .shipping-calculator-button,
+  body.woocommerce .wp-block-button__link,
+  body.woocommerce .product-interactions__submit,
+  body.woocommerce .product-interactions__reply-trigger,
+  body.woocommerce-page a.button,
+  body.woocommerce-page button.button,
+  body.woocommerce-page input.button,
+  body.woocommerce-page button[type="submit"],
+  body.woocommerce-page input[type="submit"],
+  body.woocommerce-page .checkout-button,
+  body.woocommerce-page .shipping-calculator-button,
+  body.woocommerce-page .wp-block-button__link,
+  body.woocommerce-page .product-interactions__submit,
+  body.woocommerce-page .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button):active {
+  transform: translateY(0) scale(0.99) !important;
+  box-shadow: 0 8px 18px rgba(3,69,38,0.14) !important;
+}
+
+:where(
+  body.woocommerce a.button,
+  body.woocommerce button.button,
+  body.woocommerce input.button,
+  body.woocommerce button[type="submit"],
+  body.woocommerce input[type="submit"],
+  body.woocommerce .checkout-button,
+  body.woocommerce .shipping-calculator-button,
+  body.woocommerce .wp-block-button__link,
+  body.woocommerce .product-interactions__submit,
+  body.woocommerce .product-interactions__reply-trigger,
+  body.woocommerce-page a.button,
+  body.woocommerce-page button.button,
+  body.woocommerce-page input.button,
+  body.woocommerce-page button[type="submit"],
+  body.woocommerce-page input[type="submit"],
+  body.woocommerce-page .checkout-button,
+  body.woocommerce-page .shipping-calculator-button,
+  body.woocommerce-page .wp-block-button__link,
+  body.woocommerce-page .product-interactions__submit,
+  body.woocommerce-page .product-interactions__reply-trigger
+):not(.remove):not(.header__icon):not(.mobile-drawer__close):not(.manuals-drawer__close):not(.product-interactions__reply-dialog-close):not(.tabs-nav button):not(.beslock-qty button):focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.94),
+    0 0 0 6px rgba(3,69,38,0.26),
+    0 12px 28px rgba(3,69,38,0.18) !important;
+}
+
+body.woocommerce .product-interactions__reply-trigger:hover,
+body.woocommerce .product-interactions__reply-trigger:focus,
+body.woocommerce-page .product-interactions__reply-trigger:hover,
+body.woocommerce-page .product-interactions__reply-trigger:focus {
+  background: #075231 !important;
+  border-color: #075231 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 34px rgba(3,69,38,0.22), 0 4px 10px rgba(7,5,5,0.08) !important;
+}
+
+body.woocommerce .product-interactions__reply-trigger:hover::before,
+body.woocommerce .product-interactions__reply-trigger:focus::before,
+body.woocommerce-page .product-interactions__reply-trigger:hover::before,
+body.woocommerce-page .product-interactions__reply-trigger:focus::before {
+  transform: translateX(125%);
+}
+
 /* Note: we intentionally do not globally reset `a` on WooCommerce pages
    because that can unintentionally remove styling from theme components
    such as product-card anchors. Link styling should be controlled by the

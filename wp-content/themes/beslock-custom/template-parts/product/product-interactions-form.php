@@ -98,7 +98,7 @@ $reply_content_value = isset( $reply_form_values['content'] ) ? (string) $reply_
                     <?php checked( $rating_value, $rating ); ?>
                   >
                   <label for="beslock-interaction-rating-<?php echo esc_attr( $product_id ); ?>-<?php echo esc_attr( $rating ); ?>">
-                    <span class="product-interactions__star-number"><?php echo esc_html( $rating ); ?></span>
+                    <span class="screen-reader-text"><?php printf( esc_html( _n( '%d estrella', '%d estrellas', $rating, 'beslock' ) ), $rating ); ?></span>
                     <span class="product-interactions__star-icon" aria-hidden="true">&#9733;</span>
                   </label>
                 </div>
