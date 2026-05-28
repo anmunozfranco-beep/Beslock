@@ -1,7 +1,7 @@
 /**
  * assets/js/models-mobile.js
- * Toggle Products panel and manage focus.
- * Robust initialization: ensure panel is closed by default and only opens on click.
+ * Prepare Products panel model cards.
+ * The drawer controller owns open/close state and focus management.
  * Apply per-image focal point (object-position) from data attribute when provided.
  * Image fallback handling included.
  */
@@ -14,43 +14,6 @@
   var initEnforced = false;
 
   function getById(id) { return document.getElementById(id); }
-
-  function showPanel(panel, toggle) {
-    panel.classList.remove(clsHidden);
-    panel.classList.add(clsVisible);
-    panel.setAttribute('aria-hidden', 'false');
-    if ( toggle ) toggle.setAttribute('aria-expanded', 'true');
-
-    // Focus the first interactive card when available.
-    try {
-      var firstLink = panel.querySelector('.models__item-link');
-      if ( firstLink ) {
-        firstLink.focus({ preventScroll: false });
-        return;
-      }
-
-      var heading = panel.querySelector('[id^="models-item-title"]');
-      if ( heading ) {
-        heading.setAttribute('tabindex', '-1');
-        heading.focus({ preventScroll: false });
-      }
-    } catch (e) {
-      // silent fallback
-    }
-  }
-
-  function hidePanel(panel, toggle) {
-    panel.classList.remove(clsVisible);
-    panel.classList.add(clsHidden);
-    panel.setAttribute('aria-hidden', 'true');
-
-    if ( toggle ) {
-      toggle.setAttribute('aria-expanded', 'false');
-      try {
-        toggle.focus({ preventScroll: false });
-      } catch (e) {}
-    }
-  }
 
   function ensureClosedState(panel, toggle) {
     if ( panel ) {
@@ -118,47 +81,19 @@
 
     var toggle = getById('productsToggle');
     var panel = getById('productsPanel');
-    var closeBtn = getById('closeDrawer');
-    var backdrop = getById('drawerBackdrop');
 
     if ( ! panel ) {
       return;
     }
 
-    // Enforce closed state at initialization
-    ensureClosedState(panel, toggle);
+    // The drawer controller owns open/close state. This script only prepares
+    // model-card images and keeps the initial closed state before interaction.
+    if ( ! panel.classList.contains(clsVisible) ) {
+      ensureClosedState(panel, toggle);
+    }
 
     // Apply focal points immediately (for images present)
     applyFocalPoints(panel);
-
-    // Bind toggle click
-    if ( toggle ) {
-      toggle.addEventListener('click', function (e) {
-        var expanded = toggle.getAttribute('aria-expanded') === 'true';
-        if ( expanded ) {
-          hidePanel(panel, toggle);
-        } else {
-          showPanel(panel, toggle);
-        }
-      }, false);
-    }
-
-    // Close when clicking close button or backdrop
-    if ( closeBtn ) {
-      closeBtn.addEventListener('click', function () { hidePanel(panel, toggle); }, false);
-    }
-    if ( backdrop ) {
-      backdrop.addEventListener('click', function () { hidePanel(panel, toggle); }, false);
-    }
-
-    // Close on Escape
-    document.addEventListener('keydown', function (e) {
-      var isEsc = (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27);
-      if ( isEsc ) {
-        var isVisible = panel.getAttribute('aria-hidden') === 'false';
-        if ( isVisible ) hidePanel(panel, toggle);
-      }
-    }, false);
 
     // Initialize image fallback for all images inside the panel
     var imgs = panel.querySelectorAll('.models__item-img');
@@ -170,8 +105,6 @@
 
     // Extra enforcement shortly after load in case other scripts modify DOM early:
     setTimeout(function () {
-      ensureClosedState(panel, toggle);
-      // Reapply focal points in case images loaded later
       applyFocalPoints(panel);
     }, 120);
   }

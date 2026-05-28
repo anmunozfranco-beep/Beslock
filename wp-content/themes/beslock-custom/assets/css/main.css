@@ -594,7 +594,7 @@ body { overflow-x: hidden; }
   flex: 1;
   height: 48px;
 
-  background: #6b8f7c;
+  background: var(--beslock-green, #034526);
   color: #ffffff;
   border-radius: 12px;
   text-decoration: none;
@@ -1485,7 +1485,7 @@ body.single-product button.single_add_to_cart_button,
   background: var(--beslock-green) !important;
   color: #ffffff !important;
   border: 2px solid rgba(255,255,255,0.06) !important;
-  opacity: 0.95 !important;
+  opacity: 1 !important;
   box-shadow: 0 8px 20px rgba(3,69,38,0.09) !important;
   padding: 0.6rem 1rem !important;
   border-radius: 10px !important;
@@ -2962,4 +2962,150 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
     overflow: visible;
     text-overflow: clip;
   }
+}
+
+/* =========================
+   PRODUCT CTAS: solid Beslock green + premium interaction
+   Final cascade authority for cards across homepage, Woo grids and empty cart.
+========================= */
+.product-card .pc-actions a,
+.product-card .product-card__actions a,
+.product-card .bes-product-card__button,
+.woocommerce .product-card .pc-actions a,
+.woocommerce .product-card .product-card__actions a,
+.products-portfolio .product-card .pc-actions a,
+.products-portfolio .product-card .product-card__actions a,
+.beslock-cart--empty .product-card .pc-actions a,
+.beslock-cart--empty .product-card .product-card__actions a,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart a.wp-block-button__link,
+.product-card__btn {
+  opacity: 1 !important;
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  border: 1px solid var(--beslock-green, #034526) !important;
+  box-shadow: 0 10px 22px rgba(3,69,38,0.14) !important;
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease,
+    box-shadow 260ms cubic-bezier(.16,.84,.29,1),
+    transform 260ms cubic-bezier(.16,.84,.29,1) !important;
+  will-change: transform, box-shadow;
+  backface-visibility: hidden;
+}
+
+.product-card .pc-btn-main,
+.product-card .bes-product-card__button--primary,
+.product-card .product-card__actions a:first-child,
+.products-portfolio .product-card .pc-btn-main,
+.products-portfolio .product-card .product-card__actions a:first-child,
+.beslock-cart--empty .product-card .pc-btn-main,
+.beslock-cart--empty .product-card .product-card__actions a:first-child,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart a.wp-block-button__link,
+.product-card__btn {
+  background: var(--beslock-green, #034526) !important;
+  color: #ffffff !important;
+}
+
+.product-card .pc-btn-cart,
+.product-card .bes-product-card__button--cart,
+.product-card .product-card__actions a:last-child,
+.products-portfolio .product-card .pc-btn-cart,
+.products-portfolio .product-card .product-card__actions a:last-child,
+.beslock-cart--empty .product-card .pc-btn-cart,
+.beslock-cart--empty .product-card .product-card__actions a:last-child {
+  background: #ffffff !important;
+  color: var(--beslock-green, #034526) !important;
+  box-shadow: 0 8px 20px rgba(3,69,38,0.10) !important;
+}
+
+.product-card .pc-btn-cart i,
+.product-card .pc-btn-cart svg,
+.product-card .bes-product-card__button--cart i,
+.product-card .bes-product-card__button--cart svg,
+.product-card .product-card__actions a:last-child i,
+.product-card .product-card__actions a:last-child svg {
+  color: currentColor !important;
+  position: relative;
+  z-index: 1;
+}
+
+.product-card .pc-actions a::before,
+.product-card .product-card__actions a::before,
+.product-card .bes-product-card__button::before,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link::before,
+.product-card__btn::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 0 34%, rgba(255,255,255,0.22) 45%, transparent 58% 100%);
+  transform: translateX(-125%);
+  transition: transform 700ms cubic-bezier(.16,.84,.29,1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card .pc-actions a:hover,
+  .product-card .product-card__actions a:hover,
+  .product-card .bes-product-card__button:hover,
+  .woocommerce .product-card .pc-actions a:hover,
+  .woocommerce .product-card .product-card__actions a:hover,
+  .products-portfolio .product-card .pc-actions a:hover,
+  .products-portfolio .product-card .product-card__actions a:hover,
+  .beslock-cart--empty .product-card .pc-actions a:hover,
+  .beslock-cart--empty .product-card .product-card__actions a:hover,
+  .wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:hover,
+  .product-card__btn:hover {
+    opacity: 1 !important;
+    background: #075231 !important;
+    border-color: #075231 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 16px 34px rgba(3,69,38,0.22), 0 4px 10px rgba(7,5,5,0.08) !important;
+  }
+
+  .product-card .pc-btn-cart:hover,
+  .product-card .bes-product-card__button--cart:hover,
+  .product-card .product-card__actions a:last-child:hover,
+  .products-portfolio .product-card .pc-btn-cart:hover,
+  .products-portfolio .product-card .product-card__actions a:last-child:hover,
+  .beslock-cart--empty .product-card .pc-btn-cart:hover,
+  .beslock-cart--empty .product-card .product-card__actions a:last-child:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+  }
+
+  .product-card .pc-actions a:hover::before,
+  .product-card .product-card__actions a:hover::before,
+  .product-card .bes-product-card__button:hover::before,
+  .wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:hover::before,
+  .product-card__btn:hover::before {
+    transform: translateX(125%);
+  }
+}
+
+.product-card .pc-actions a:active,
+.product-card .product-card__actions a:active,
+.product-card .bes-product-card__button:active,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:active,
+.product-card__btn:active {
+  transform: translateY(0) scale(0.99) !important;
+  box-shadow: 0 8px 18px rgba(3,69,38,0.14) !important;
+}
+
+.product-card .pc-actions a:focus-visible,
+.product-card .product-card__actions a:focus-visible,
+.product-card .bes-product-card__button:focus-visible,
+.wc-block-grid__product .wc-block-grid__product-add-to-cart .wp-block-button__link:focus-visible,
+.product-card__btn:focus-visible {
+  outline: none !important;
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.94),
+    0 0 0 6px rgba(3,69,38,0.26),
+    0 12px 28px rgba(3,69,38,0.18) !important;
 }

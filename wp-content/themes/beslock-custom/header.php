@@ -4,8 +4,8 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Performance: preconnect a CDN / fonts -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- Performance: preconnect active CDN / fonts -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <?php wp_head(); ?>

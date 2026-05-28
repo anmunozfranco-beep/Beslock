@@ -12,10 +12,11 @@
 
   $startup_overlay_d_file = 'e-flex_d.png';
   $startup_overlay_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file;
-  $startup_overlay_d_url = file_exists( $startup_overlay_d_fs )
-    ? ( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file )
-    : '';
-?>
+	  $startup_overlay_d_url = file_exists( $startup_overlay_d_fs )
+	    ? ( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file )
+	    : '';
+	  $transparent_pixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+	?>
 <section class="beslock-hero" id="beslockHero" aria-roledescription="carousel" aria-label="Hero carousel" data-startup-state="booting">
   <div class="beslock-loader" id="beslockLoader" role="status" aria-live="polite" aria-label="<?php echo esc_attr__( 'Cargando presentación de Beslock', 'beslock' ); ?>" aria-hidden="false" data-loader-mode="auto" data-stage="booting">
     <div class="beslock-loader__bg" aria-hidden="true"></div>
@@ -36,7 +37,7 @@
         <?php if ( $startup_overlay_d_url ): ?>
           <source media="(min-width:600px)" srcset="<?php echo esc_url( $startup_overlay_d_url ); ?>">
         <?php endif; ?>
-        <img class="slide-overlay overlay--visible" src="<?php echo esc_url( $startup_overlay_url ); ?>" alt="" aria-hidden="true" />
+        <img class="slide-overlay overlay--visible" src="<?php echo esc_url( $startup_overlay_url ); ?>" alt="" aria-hidden="true" decoding="async" loading="eager" fetchpriority="high" />
       </picture>
       <div class="slide-content">
         <h1 class="hero__title"><?php echo esc_html( 'e-Flex' ); ?></h1>
@@ -73,10 +74,17 @@
         for ($i = 0; $i < $count; $i++):
           $vid = $videos[$i];
           $ov  = $overlays[$i];
+          $is_first_slide = ( 0 === $i );
           $video_fs = $video_base_fs . $vid;
           $video_url = $video_base_url . rawurlencode( $vid );
           if ( file_exists( $video_fs ) ) {
             $video_url .= '?v=' . filemtime( $video_fs );
+          }
+          $mobile_video_path = '/assets/images/Clips_hero/mobile/' . pathinfo( $vid, PATHINFO_FILENAME ) . '-mobile.mp4';
+          $mobile_video_fs = get_stylesheet_directory() . $mobile_video_path;
+          $mobile_video_url = '';
+          if ( file_exists( $mobile_video_fs ) ) {
+            $mobile_video_url = get_stylesheet_directory_uri() . $mobile_video_path . '?v=' . filemtime( $mobile_video_fs );
           }
           $poster_relative_path = '/assets/images/Clips_hero/posters/' . pathinfo( $vid, PATHINFO_FILENAME ) . '.webp';
           $poster_fs = get_stylesheet_directory() . $poster_relative_path;
@@ -96,13 +104,13 @@
       ?>
       <article class="hero-slide" data-index="<?php echo $i; ?>" aria-roledescription="slide" aria-label="Slide <?php echo $i+1; ?>">
         <div class="slide-inner">
-          <video class="slide-video" muted playsinline preload="auto" loop<?php echo $poster_url ? ' poster="' . esc_url( $poster_url ) . '"' : ''; ?> src="<?php echo esc_url( $video_url ); ?>"></video>
-          <!-- Dim layer strictly over the clip to improve white text contrast; overlays remain above -->
-          <div class="slide-dim" aria-hidden="true"></div>
-          <picture class="slide-overlay-frame" aria-hidden="true">
-            <?php if ($ov_d_url): ?>
-              <source media="(min-width:600px)" srcset="<?php echo esc_url( $ov_d_url ); ?>">
-            <?php endif; ?>
+          <video class="slide-video" muted playsinline preload="<?php echo $is_first_slide ? 'metadata' : 'none'; ?>" loop<?php echo $poster_url ? ( $is_first_slide ? ' poster="' . esc_url( $poster_url ) . '"' : ' data-poster="' . esc_url( $poster_url ) . '"' ) : ''; ?> data-src="<?php echo esc_url( $video_url ); ?>"<?php echo $mobile_video_url ? ' data-src-mobile="' . esc_url( $mobile_video_url ) . '"' : ''; ?>></video>
+	          <!-- Dim layer strictly over the clip to improve white text contrast; overlays remain above -->
+	          <div class="slide-dim" aria-hidden="true"></div>
+	          <picture class="slide-overlay-frame" aria-hidden="true">
+	            <?php if ($ov_d_url): ?>
+	              <source media="(min-width:600px)" <?php echo $is_first_slide ? 'srcset="' . esc_url( $ov_d_url ) . '"' : 'data-srcset="' . esc_url( $ov_d_url ) . '"'; ?>>
+	            <?php endif; ?>
             <?php
               if ($i === 0) {
                 $data_offset_attr = ' data-offset="10"';
@@ -122,8 +130,8 @@
                 $ov_url .= '?v=' . filemtime( $ov_fs );
               }
             ?>
-            <img class="slide-overlay" src="<?php echo esc_url( $ov_url ); ?>"<?php echo $data_offset_attr; ?> alt="" aria-hidden="true" />
-          </picture>
+	            <img class="slide-overlay" src="<?php echo $is_first_slide ? esc_url( $ov_url ) : esc_attr( $transparent_pixel ); ?>"<?php echo $is_first_slide ? '' : ' data-src="' . esc_url( $ov_url ) . '" data-defer-until="hero-slide"'; ?><?php echo $data_offset_attr; ?> alt="" aria-hidden="true" decoding="async" loading="<?php echo $is_first_slide ? 'eager' : 'lazy'; ?>" fetchpriority="<?php echo $is_first_slide ? 'high' : 'low'; ?>" />
+	          </picture>
           <?php if ($i === 5): // Add second orbit overlay image that enters at 3.55s ?>
             <?php
               $ov2 = 'e-orbit_2_hero.png';
@@ -136,12 +144,12 @@
               $ov2_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file;
               $ov2_d_url = file_exists($ov2_d_fs) ? (get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file) : '';
             ?>
-              <picture class="slide-overlay-frame" aria-hidden="true">
-              <?php if ($ov2_d_url): ?>
-                <source media="(min-width:600px)" srcset="<?php echo esc_url( $ov2_d_url ); ?>">
-              <?php endif; ?>
-              <img class="slide-overlay" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png' ); ?>" data-start="3.55" data-offset="27" alt="" aria-hidden="true" />
-            </picture>
+	              <picture class="slide-overlay-frame" aria-hidden="true">
+	              <?php if ($ov2_d_url): ?>
+	                <source media="(min-width:600px)" data-srcset="<?php echo esc_url( $ov2_d_url ); ?>">
+	              <?php endif; ?>
+	              <img class="slide-overlay" src="<?php echo esc_attr( $transparent_pixel ); ?>" data-src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png' ); ?>" data-defer-until="hero-slide" data-start="3.55" data-offset="27" alt="" aria-hidden="true" decoding="async" loading="lazy" fetchpriority="low" />
+	            </picture>
           <?php endif; ?>
           <div class="slide-content">
             <?php

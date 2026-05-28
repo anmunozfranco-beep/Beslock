@@ -89,9 +89,10 @@ input.qty {
   color: #fff;
   border: none;
   font-weight: 700;
-  opacity: 0.65; /* match product-card subtle disabled look */
-  transition: opacity 280ms cubic-bezier(.16,.84,.29,1), transform 360ms cubic-bezier(.16,.84,.29,1), box-shadow 360ms cubic-bezier(.16,.84,.29,1);
-  will-change: transform, opacity, box-shadow;
+  opacity: 1;
+  box-shadow: 0 10px 22px rgba(3,69,38,0.14);
+  transition: background-color 220ms ease, color 220ms ease, transform 260ms cubic-bezier(.16,.84,.29,1), box-shadow 260ms cubic-bezier(.16,.84,.29,1);
+  will-change: transform, box-shadow;
   backface-visibility: hidden;
 }
 
@@ -104,16 +105,15 @@ input.qty {
 .product-page__buy .button:hover {
   opacity: 1;
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 8px 24px rgba(3,69,38,0.10);
-  /* On product page hover: swap to gray background and beslock green text */
-  background: var(--beslock-bg-2, #f2f2f2) !important;
-  color: var(--beslock-green, #06a37a) !important;
+  box-shadow: 0 16px 34px rgba(3,69,38,0.22), 0 4px 10px rgba(7,5,5,0.08);
+  background: #075231 !important;
+  color: #ffffff !important;
 }
 .product-page__buy .single_add_to_cart_button:active,
 .product-page__buy .button.add_to_cart_button:active,
 .product-page__buy .button:active {
   transform: translateY(0) scale(0.995);
-  box-shadow: 0 4px 10px rgba(3,69,38,0.06);
+  box-shadow: 0 8px 18px rgba(3,69,38,0.14);
 }
 .product-page__buy .single_add_to_cart_button:focus,
 .product-page__buy .button.add_to_cart_button:focus,
@@ -124,7 +124,7 @@ input.qty {
 /* Ensure icon inside add-to-cart follows text color on hover */
 .product-page__buy .single_add_to_cart_button:hover .bi,
 .product-page__buy .button.add_to_cart_button:hover .bi {
-  color: var(--beslock-green, #06a37a) !important;
+  color: #ffffff !important;
 }
 
 /* Group wrapper used to precisely center qty + button */
@@ -917,4 +917,3 @@ body.single-product .product-page__media .woocommerce-product-gallery__image img
   display: block !important;
   object-fit: contain !important;
 }
-
