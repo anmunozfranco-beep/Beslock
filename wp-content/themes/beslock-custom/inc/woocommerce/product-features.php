@@ -92,6 +92,155 @@ if ( ! function_exists( 'beslock_normalize_product_feature_rows' ) ) {
   }
 }
 
+if ( ! function_exists( 'beslock_get_product_attribute_value_label' ) ) {
+  function beslock_get_product_attribute_value_label( $attribute, $product ) {
+    if ( ! is_object( $attribute ) || ! method_exists( $attribute, 'get_options' ) ) {
+      return '';
+    }
+
+    $values = array();
+
+    if ( method_exists( $attribute, 'is_taxonomy' ) && $attribute->is_taxonomy() && function_exists( 'wc_get_product_terms' ) ) {
+      $terms = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'names' ) );
+      if ( is_array( $terms ) ) {
+        $values = $terms;
+      }
+    } elseif ( method_exists( $attribute, 'get_options' ) ) {
+      $values = (array) $attribute->get_options();
+    }
+
+    $values = array_filter( array_map( static function( $value ) {
+      return trim( wp_strip_all_tags( (string) $value ) );
+    }, $values ) );
+
+    return implode( ', ', array_values( array_unique( $values ) ) );
+  }
+}
+
+if ( ! function_exists( 'beslock_get_product_attribute_feature_rows' ) ) {
+  function beslock_get_product_attribute_feature_rows( $product ) {
+    if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
+      $product = wc_get_product( intval( $product ) );
+    }
+
+    if ( ! $product || ! is_a( $product, 'WC_Product' ) || ! method_exists( $product, 'get_attributes' ) ) {
+      return array();
+    }
+
+    $attributes = $product->get_attributes();
+    if ( empty( $attributes ) || ! is_array( $attributes ) ) {
+      return array();
+    }
+
+    $feature_attribute_keys = get_post_meta( $product->get_id(), '_beslock_feature_attribute_keys', true );
+    $feature_attribute_keys = is_array( $feature_attribute_keys ) ? array_values( array_filter( array_map( 'sanitize_key', $feature_attribute_keys ) ) ) : array();
+    $candidate_keys = ! empty( $feature_attribute_keys ) ? $feature_attribute_keys : array_keys( $attributes );
+    $rows = array();
+
+    foreach ( $candidate_keys as $attribute_key ) {
+      if ( empty( $attributes[ $attribute_key ] ) || ! is_object( $attributes[ $attribute_key ] ) ) {
+        continue;
+      }
+
+      $attribute = $attributes[ $attribute_key ];
+
+      if ( method_exists( $attribute, 'get_visible' ) && ! $attribute->get_visible() ) {
+        continue;
+      }
+
+      $name = method_exists( $attribute, 'get_name' ) ? $attribute->get_name() : '';
+      $label = function_exists( 'wc_attribute_label' ) ? wc_attribute_label( $name, $product ) : $name;
+      $value = beslock_get_product_attribute_value_label( $attribute, $product );
+
+      $label = trim( wp_strip_all_tags( (string) $label ) );
+      $value = trim( wp_strip_all_tags( (string) $value ) );
+
+      if ( '' === $label || '' === $value ) {
+        continue;
+      }
+
+      $rows[] = array(
+        'label' => $label,
+        'value' => $value,
+      );
+    }
+
+    return $rows;
+  }
+}
+
+if ( ! function_exists( 'beslock_sync_product_features_to_wc_attributes' ) ) {
+  function beslock_sync_product_features_to_wc_attributes( $product, $features ) {
+    if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
+      $product = wc_get_product( intval( $product ) );
+    }
+
+    if ( ! $product || ! is_a( $product, 'WC_Product' ) || ! class_exists( 'WC_Product_Attribute' ) ) {
+      return new WP_Error( 'invalid_product', __( 'No valid WooCommerce product available for feature sync.', 'beslock' ) );
+    }
+
+    $feature_rows = beslock_normalize_product_feature_rows( $features );
+    $attributes = method_exists( $product, 'get_attributes' ) ? $product->get_attributes() : array();
+    $attributes = is_array( $attributes ) ? $attributes : array();
+    $previous_feature_keys = get_post_meta( $product->get_id(), '_beslock_feature_attribute_keys', true );
+    $previous_feature_keys = is_array( $previous_feature_keys ) ? array_values( array_filter( array_map( 'sanitize_key', $previous_feature_keys ) ) ) : array();
+
+    foreach ( $previous_feature_keys as $previous_feature_key ) {
+      unset( $attributes[ $previous_feature_key ] );
+    }
+
+    $feature_attribute_keys = array();
+    $position = count( $attributes );
+
+    foreach ( $feature_rows as $feature_row ) {
+      $label = trim( wp_strip_all_tags( (string) ( $feature_row['label'] ?? '' ) ) );
+      $value = trim( wp_strip_all_tags( (string) ( $feature_row['value'] ?? '' ) ) );
+
+      if ( '' === $label || '' === $value ) {
+        continue;
+      }
+
+      $base_attribute_key = sanitize_key( sanitize_title( $label ) );
+      if ( '' === $base_attribute_key ) {
+        $base_attribute_key = 'beslock-feature';
+      }
+      $attribute_key = $base_attribute_key;
+      $duplicate_index = 2;
+
+      while ( isset( $attributes[ $attribute_key ] ) ) {
+        $attribute_key = $base_attribute_key . '-' . $duplicate_index;
+        $duplicate_index++;
+      }
+
+      $attribute = new WC_Product_Attribute();
+      $attribute->set_id( 0 );
+      $attribute->set_name( $label );
+      $attribute->set_options( array( $value ) );
+      $attribute->set_position( $position );
+      $attribute->set_visible( true );
+      $attribute->set_variation( false );
+
+      $attributes[ $attribute_key ] = $attribute;
+      $feature_attribute_keys[] = $attribute_key;
+      $position++;
+    }
+
+    $product->set_attributes( $attributes );
+    $product_id = $product->save();
+    update_post_meta( $product_id, '_beslock_feature_attribute_keys', $feature_attribute_keys );
+
+    if ( function_exists( 'wc_delete_product_transients' ) ) {
+      wc_delete_product_transients( $product_id );
+    }
+
+    return array(
+      'product_id' => $product_id,
+      'attributes' => count( $feature_attribute_keys ),
+      'keys' => $feature_attribute_keys,
+    );
+  }
+}
+
 if ( ! function_exists( 'beslock_get_product_features_list' ) ) {
   function beslock_get_product_features_list( $product ) {
     if ( is_numeric( $product ) && function_exists( 'wc_get_product' ) ) {
@@ -100,6 +249,11 @@ if ( ! function_exists( 'beslock_get_product_features_list' ) ) {
 
     if ( ! $product || ! is_a( $product, 'WC_Product' ) ) {
       return array();
+    }
+
+    $attributes = beslock_get_product_attribute_feature_rows( $product );
+    if ( ! empty( $attributes ) ) {
+      return $attributes;
     }
 
     $features = beslock_normalize_product_feature_rows(
