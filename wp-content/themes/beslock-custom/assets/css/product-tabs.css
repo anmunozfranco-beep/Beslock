@@ -338,10 +338,12 @@ body.single-product .product-features-table thead th {
 
 body.single-product .product-features-table tbody th,
 body.single-product .product-features-table tbody td {
+  box-sizing: border-box;
   padding: 14px;
   text-align: left;
   vertical-align: top;
   border-bottom: 1px solid #e5e7eb;
+  overflow-wrap: break-word;
 }
 
 body.single-product .product-features-table tbody th {
