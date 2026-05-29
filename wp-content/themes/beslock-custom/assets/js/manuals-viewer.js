@@ -7,6 +7,8 @@
 
   var config = window.BESLOCK_MANUALS_CONFIG || {};
   var baseUrl = String(window.BESLOCK_MANUALS_BASE_URL || config.baseUrl || '').replace(/\/+$/, '');
+  var PAGER_EXIT_MS = 360;
+  var PAGER_ENTER_MS = 620;
 
   if (!baseUrl) {
     var currentScript = document.currentScript && document.currentScript.src ? document.currentScript.src : '';
@@ -19,33 +21,38 @@
     {
       id: 'conoce-tu-cerradura',
       label: 'Conoce tu cerradura',
+      manualGroups: ['conoce-tu-cerradura'],
       preferredIds: ['presentacion-producto', 'partes-principales', 'componentes'],
       aliases: ['conoce-tu-cerradura', 'presentacion', 'presentacion-producto', 'partes-principales', 'componentes', 'panel', 'mecanismo']
     },
     {
       id: 'instalacion',
       label: 'Instalación',
+      manualGroups: ['instalacion'],
       preferredIds: ['instalacion'],
       aliases: ['instalacion', 'installation']
     },
     {
       id: 'configuracion',
       label: 'Configuración',
+      manualGroups: ['configuracion-administracion', 'configuracion'],
       preferredIds: ['perfiles', 'crear-primer-administrador', 'entrar-menu-administrador', 'ajustes-generales', 'crear-administradores', 'crear-usuario', 'eliminar-perfil'],
       includeIds: ['perfiles', 'crear-primer-administrador', 'entrar-menu-administrador', 'ajustes-generales', 'crear-administradores', 'crear-usuario', 'eliminar-perfil'],
-      aliases: ['configuracion', 'configuration', 'ajustes', 'ajustes-generales', 'administrador', 'usuarios', 'perfiles']
+      aliases: ['configuracion', 'configuracion-administracion', 'configuration', 'ajustes', 'ajustes-generales', 'administrador', 'usuarios', 'perfiles']
     },
     {
       id: 'uso-diario',
       label: 'Uso diario',
+      manualGroups: ['uso-diario'],
       preferredIds: ['otras-configuraciones', 'uso-diario', 'operacion'],
       aliases: ['uso-diario', 'uso', 'daily-use', 'operacion', 'paso-libre', 'apertura', 'bloqueo-interior']
     },
     {
       id: 'soluciones-rapidas',
       label: 'Soluciones rápidas',
+      manualGroups: ['soluciones-rapidas', 'ayuda', 'troubleshooting'],
       preferredIds: ['soluciones-rapidas', 'troubleshooting', 'ayuda', 'otras-configuraciones'],
-      aliases: ['soluciones-rapidas', 'solucion', 'troubleshooting', 'ayuda', 'emergencia', 'energia-de-emergencia', 'bateria', 'bloqueo']
+      aliases: ['soluciones-rapidas', 'solucion', 'troubleshooting', 'ayuda', 'otras-configuraciones', 'emergencia', 'energia-de-emergencia', 'respaldo-mecanico', 'bateria', 'bloqueo']
     }
   ];
 
@@ -63,7 +70,9 @@
     indexFailed: false,
     selectedSection: null,
     selectedProduct: null,
-    productCache: {}
+    productCache: {},
+    pagerCleanup: null,
+    pendingPagerEnterDirection: ''
   };
 
   var els = {};
@@ -74,6 +83,10 @@
     } else {
       fn();
     }
+  }
+
+  function prefersReducedMotion() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   }
 
   function normalize(value) {
@@ -117,16 +130,109 @@
     return GUIDE_SECTIONS[0];
   }
 
+  function nextGuideSection(sectionDef) {
+    var wanted = normalize(sectionDef && sectionDef.id);
+    for (var i = 0; i < GUIDE_SECTIONS.length; i++) {
+      if (GUIDE_SECTIONS[i].id === wanted) {
+        return GUIDE_SECTIONS[i + 1] || GUIDE_SECTIONS[0];
+      }
+    }
+    return GUIDE_SECTIONS[0];
+  }
+
   function setDrawerHeader(eyebrow, title) {
     if (els.eyebrow) els.eyebrow.textContent = eyebrow || 'Guías BESLOCK';
     if (els.title) els.title.textContent = title || 'Manuales y ayuda';
   }
 
+  function clearPagerEffects() {
+    if (typeof state.pagerCleanup === 'function') {
+      state.pagerCleanup();
+      state.pagerCleanup = null;
+    }
+  }
+
   function setBody(node) {
     if (!els.body) return;
+    clearPagerEffects();
     els.body.innerHTML = '';
     els.body.appendChild(node);
     try { els.body.scrollTop = 0; } catch (e) {}
+  }
+
+  function bindPagerCompaction(pager) {
+    if (!els.body || !pager) return;
+
+    var frame = 0;
+
+    function update() {
+      frame = 0;
+      pager.classList.toggle('manuals-pager--compact', els.body.scrollTop > 18);
+    }
+
+    function requestUpdate() {
+      if (frame) return;
+      frame = window.requestAnimationFrame ? window.requestAnimationFrame(update) : window.setTimeout(update, 16);
+    }
+
+    els.body.addEventListener('scroll', requestUpdate, { passive: true });
+    state.pagerCleanup = function () {
+      els.body.removeEventListener('scroll', requestUpdate);
+      if (!frame) return;
+      if (window.cancelAnimationFrame) {
+        window.cancelAnimationFrame(frame);
+      } else {
+        window.clearTimeout(frame);
+      }
+      frame = 0;
+    };
+
+    update();
+  }
+
+  function playPagerEnter(content, direction) {
+    if (!content || !direction || prefersReducedMotion()) return;
+
+    content.classList.add('manuals-content--enter', 'manuals-content--direction-' + direction);
+    window.setTimeout(function () {
+      content.classList.remove('manuals-content--enter', 'manuals-content--direction-' + direction);
+    }, PAGER_ENTER_MS);
+  }
+
+  function setPagerActionState(action, active) {
+    if (!action) return;
+
+    action.classList.toggle('manuals-pager__action--reeling', active);
+    if (active) {
+      action.setAttribute('aria-disabled', 'true');
+    } else {
+      action.removeAttribute('aria-disabled');
+    }
+  }
+
+  function playPagerLeave(action, direction) {
+    var content = action && action.closest ? action.closest('.manuals-content') : null;
+
+    setPagerActionState(action, true);
+    if (content) {
+      content.classList.add('manuals-content--leaving', 'manuals-content--direction-' + direction);
+    }
+  }
+
+  function transitionToModels(sectionDef, trigger) {
+    if (prefersReducedMotion() || !trigger) {
+      state.selectedProduct = null;
+      renderModels(sectionDef, state.index);
+      return;
+    }
+
+    playPagerLeave(trigger, 'prev');
+
+    window.setTimeout(function () {
+      state.selectedProduct = null;
+      renderModels(sectionDef, state.index);
+      setPagerActionState(trigger, false);
+    }, PAGER_EXIT_MS);
   }
 
   function renderState(title, message, retry) {
@@ -172,7 +278,11 @@
     if (!els.mobileDrawer || !els.mobileDrawer.classList.contains('is-open')) {
       document.documentElement.classList.remove('has-drawer-open');
     }
+    clearPagerEffects();
+    state.pendingPagerEnterDirection = '';
+    state.selectedSection = null;
     state.selectedProduct = null;
+    markActiveSection(null);
   }
 
   function toggleSections(force) {
@@ -191,8 +301,10 @@
 
   function markActiveSection(sectionDef) {
     if (!els.sectionButtons) return;
+    var activeId = sectionDef && sectionDef.id ? normalize(sectionDef.id) : '';
+
     for (var i = 0; i < els.sectionButtons.length; i++) {
-      var isActive = normalize(els.sectionButtons[i].getAttribute('data-manual-section')) === sectionDef.id;
+      var isActive = activeId && normalize(els.sectionButtons[i].getAttribute('data-manual-section')) === activeId;
       els.sectionButtons[i].classList.toggle('is-active', isActive);
       if (isActive) {
         els.sectionButtons[i].setAttribute('aria-current', 'true');
@@ -311,6 +423,86 @@
     });
   }
 
+  function openGuideSection(sectionDef) {
+    state.selectedSection = sectionDef;
+    markActiveSection(sectionDef);
+
+    if (state.selectedProduct && state.selectedProduct.slug) {
+      openManualsDrawer();
+      openProduct(state.selectedProduct);
+      return;
+    }
+
+    openModels(sectionDef);
+  }
+
+  function transitionGuideSection(sectionDef, trigger) {
+    if (prefersReducedMotion() || !els.manualsDrawer) {
+      openGuideSection(sectionDef);
+      return;
+    }
+
+    var direction = trigger && trigger.classList.contains('manuals-pager__action--prev') ? 'prev' : 'next';
+    playPagerLeave(trigger, direction);
+
+    window.setTimeout(function () {
+      state.pendingPagerEnterDirection = direction;
+      openGuideSection(sectionDef);
+
+      window.setTimeout(function () {
+        setPagerActionState(trigger, false);
+      }, 260);
+    }, PAGER_EXIT_MS);
+  }
+
+  function createBackToModelsButton(sectionDef, className) {
+    var button = el('button', className || 'manuals-back-button', '← Volver a modelos');
+    button.type = 'button';
+    button.addEventListener('click', function () {
+      state.selectedProduct = null;
+      renderModels(sectionDef, state.index);
+    });
+    return button;
+  }
+
+  function createPagerAction(modifier, label, ariaLabel, onClick) {
+    var action = el('button', 'manuals-pager__action manuals-pager__action--' + modifier);
+    var meta = el('span', 'manuals-pager__meta');
+
+    meta.appendChild(el('span', 'manuals-pager__title', label));
+
+    if (modifier === 'prev') {
+      action.appendChild(el('span', 'manuals-pager__arrow manuals-pager__arrow--prev'));
+      action.appendChild(meta);
+    } else {
+      action.appendChild(meta);
+      action.appendChild(el('span', 'manuals-pager__arrow manuals-pager__arrow--next'));
+    }
+
+    action.type = 'button';
+    action.setAttribute('aria-label', ariaLabel);
+    action.addEventListener('click', onClick);
+    return action;
+  }
+
+  function createManualPager(sectionDef, productLabel) {
+    var pager = el('nav', 'manuals-pager');
+    pager.setAttribute('aria-label', 'Navegación del manual');
+
+    pager.appendChild(createPagerAction('prev', 'Volver a modelos', 'Volver a elegir modelo', function (event) {
+      transitionToModels(sectionDef, event.currentTarget);
+    }));
+
+    var nextSection = nextGuideSection(sectionDef);
+    if (nextSection) {
+      pager.appendChild(createPagerAction('next', nextSection.label, 'Ver ' + nextSection.label + ' de ' + productLabel, function (event) {
+        transitionGuideSection(nextSection, event.currentTarget);
+      }));
+    }
+
+    return pager;
+  }
+
   function createImage(path, altText, className) {
     if (!path) return createPlaceholder('Imagen no disponible', className);
 
@@ -408,17 +600,47 @@
     return product || {};
   }
 
+  function sectionManualGroup(section) {
+    return normalize(section && (section.manual_group || section.manualGroup || section.drawer_section || section.drawerSection || section.group));
+  }
+
+  function expectedManualGroups(sectionDef) {
+    var values = [sectionDef && sectionDef.id];
+    if (sectionDef && Array.isArray(sectionDef.manualGroups)) {
+      values = values.concat(sectionDef.manualGroups);
+    }
+
+    var seen = {};
+    return values.map(normalize).filter(function (value) {
+      if (!value || seen[value]) return false;
+      seen[value] = true;
+      return true;
+    });
+  }
+
+  function hasTaggedManualGroup(section, sectionDef) {
+    var sectionGroup = sectionManualGroup(section);
+    if (!sectionGroup || !sectionDef) return false;
+
+    var groups = expectedManualGroups(sectionDef);
+    for (var i = 0; i < groups.length; i++) {
+      if (sectionGroup === groups[i]) return true;
+    }
+
+    return false;
+  }
+
   function collectSectionText(section) {
-    var parts = [section.id, section.title, section.manual_image_key];
+    var parts = [section.id, section.title, section.manual_image_key, section.manual_group, section.manualGroup, section.content_kind];
     var images = Array.isArray(section.images) ? section.images : [];
     var blocks = Array.isArray(section.blocks) ? section.blocks : [];
 
     images.forEach(function (image) {
-      parts.push(image.section_id, image.heading);
+      parts.push(image.section_id, image.heading, image.manual_group, image.manualGroup, image.content_kind);
     });
     blocks.forEach(function (block) {
       if (!block) return;
-      parts.push(block.title, block.anchor, block.caption, block.text, block.image_id);
+      parts.push(block.title, block.anchor, block.caption, block.text, block.image_id, block.manual_group, block.manualGroup, block.content_kind);
     });
 
     return normalize(parts.join(' '));
@@ -428,8 +650,15 @@
     if (!section || !sectionDef) return 0;
     var sectionId = normalize(section.id);
     var title = normalize(section.title);
+    var sectionGroup = sectionManualGroup(section);
     var haystack = collectSectionText(section);
     var score = 0;
+    var manualGroups = expectedManualGroups(sectionDef);
+
+    manualGroups.forEach(function (group, index) {
+      if (!group || !sectionGroup) return;
+      if (sectionGroup === group) score += 320 - index;
+    });
 
     for (var p = 0; p < sectionDef.preferredIds.length; p++) {
       if (sectionId === normalize(sectionDef.preferredIds[p])) {
@@ -474,6 +703,16 @@
     var sections = Array.isArray(manual.sections) ? manual.sections : [];
     var matches = [];
     var used = {};
+
+    sections.forEach(function (section) {
+      var sectionId = normalize(section && section.id);
+      if (hasTaggedManualGroup(section, sectionDef) && !used[sectionId]) {
+        matches.push(section);
+        used[sectionId] = true;
+      }
+    });
+
+    if (matches.length) return matches;
 
     if (sectionDef && Array.isArray(sectionDef.includeIds) && sectionDef.includeIds.length) {
       sectionDef.includeIds.forEach(function (wantedId) {
@@ -528,30 +767,25 @@
     }
 
     var wrap = el('div', 'manuals-content');
-    var top = el('div', 'manuals-content__top');
-    var back = el('button', 'manuals-back-button', '← Volver a modelos');
-    back.type = 'button';
-    back.addEventListener('click', function () {
-      renderModels(sectionDef, state.index);
-    });
-    top.appendChild(back);
-    wrap.appendChild(top);
+    var desktopBack = createBackToModelsButton(sectionDef, 'manuals-back-button manuals-back-button--desktop');
+    var pager = createManualPager(sectionDef, productLabel);
+
+    wrap.appendChild(desktopBack);
+    wrap.appendChild(pager);
 
     allGroups.forEach(function (group) {
       wrap.appendChild(renderManualGroup(group));
     });
 
     setBody(wrap);
+    bindPagerCompaction(pager);
+    playPagerEnter(wrap, state.pendingPagerEnterDirection);
+    state.pendingPagerEnterDirection = '';
   }
 
   function renderSectionUnavailable(indexProduct, sectionDef) {
     var wrap = el('div', 'manuals-content');
-    var back = el('button', 'manuals-back-button', '← Volver a modelos');
-    back.type = 'button';
-    back.addEventListener('click', function () {
-      renderModels(sectionDef, state.index);
-    });
-    wrap.appendChild(back);
+    wrap.appendChild(createBackToModelsButton(sectionDef));
     wrap.appendChild(renderState('Sección no disponible', 'Este modelo no tiene contenido publicado para "' + sectionDef.label + '".'));
     return wrap;
   }
@@ -738,7 +972,7 @@
     for (var i = 0; i < els.sectionButtons.length; i++) {
       els.sectionButtons[i].addEventListener('click', function () {
         var sectionDef = getSectionDef(this.getAttribute('data-manual-section'));
-        openModels(sectionDef);
+        openGuideSection(sectionDef);
       });
     }
 

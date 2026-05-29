@@ -3,7 +3,7 @@
     "slug": "e-nova",
     "display_name": "e-Nova",
     "profile_public": {
-      "short_description": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
+      "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
       "commercial_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada. Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes.",
       "product_type": "Cerradura inteligente tipo pomo",
       "lock_architecture": "latch_lock",
@@ -170,14 +170,7 @@
         "Confirmar el flujo exacto para salir del modo normalmente abierto.",
         "Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
         "Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas. En el material operativo de e-Nova, Tuya Smart es la fuente más consistente."
-      ],
-      "section_teasers": {
-        "conoce-tu-cerradura": "Huella y Bluetooth Tuya modernizan accesos interiores con formato compacto y respaldo físico.",
-        "instalacion": "Reemplazo directo de pomo para actualizar puertas compatibles sin complicar la puesta en marcha.",
-        "configuracion": "Primeras huellas como administración y gestión Bluetooth para ordenar usuarios en minutos.",
-        "uso-diario": "Entrada en segundos por huella y modo normalmente abierto para espacios con movimiento constante.",
-        "soluciones-rapidas": "Batería recargable, aviso oportuno y llave mecánica protegen el acceso ante imprevistos."
-      }
+      ]
     },
     "manual": {
       "available": true,
@@ -191,13 +184,13 @@
         },
         {
           "order": 2,
-          "title": "Instalación",
-          "anchor": "instalacion"
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
         },
         {
           "order": 3,
-          "title": "Perfiles de administradores y usuarios",
-          "anchor": "perfiles"
+          "title": "Instalación",
+          "anchor": "instalacion"
         },
         {
           "order": 4,
@@ -231,6 +224,11 @@
         },
         {
           "order": 10,
+          "title": "Uso diario",
+          "anchor": "uso-diario"
+        },
+        {
+          "order": 11,
           "title": "Otras configuraciones",
           "anchor": "otras-configuraciones"
         }
@@ -241,6 +239,8 @@
           "id": "presentacion-producto",
           "title": "Presentación del producto",
           "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "referencia",
           "images": [
             {
               "section_id": "panel-exterior",
@@ -283,6 +283,8 @@
               "level": 3,
               "title": "Panel exterior",
               "anchor": "img-e-nova-001",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-ENOVA-001"
             },
             {
@@ -292,6 +294,8 @@
               "title": "Panel exterior",
               "caption": "Panel exterior.",
               "alt": "Panel exterior de la cerradura e-Nova con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-nova/manual/panel-exterior.webp",
               "available": true
             },
@@ -311,6 +315,8 @@
               "level": 3,
               "title": "Panel interior",
               "anchor": "img-e-nova-002",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-ENOVA-002"
             },
             {
@@ -320,6 +326,8 @@
               "title": "Panel interior",
               "caption": "Panel interior.",
               "alt": "Panel interior de la cerradura e-Nova con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-nova/manual/panel-interior.webp",
               "available": true
             },
@@ -338,6 +346,8 @@
               "level": 3,
               "title": "Mecanismo de bloqueo",
               "anchor": "img-e-nova-003",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-ENOVA-003"
             },
             {
@@ -347,6 +357,8 @@
               "title": "Mecanismo de bloqueo",
               "caption": "Mecanismo de bloqueo.",
               "alt": "Mecanismo de bloqueo de la cerradura e-Nova con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-nova/manual/mecanismo-de-bloqueo.webp",
               "available": true
             },
@@ -364,64 +376,11 @@
         },
         {
           "order": 2,
-          "id": "instalacion",
-          "title": "Instalación",
-          "manual_image_key": "H2-ENOVA-001",
-          "images": [
-            {
-              "section_id": "h2-instalacion",
-              "image_review_keys": [
-                "H2-ENOVA-001"
-              ],
-              "heading": "Instalación",
-              "image": "assets/e-nova/manual/select-instalacion.webp",
-              "format": "webp",
-              "available": true
-            }
-          ],
-          "blocks": [
-            {
-              "type": "heading",
-              "level": 2,
-              "title": "Instalación",
-              "anchor": "instalacion",
-              "related_manual_image_key": "H2-ENOVA-001"
-            },
-            {
-              "type": "figure",
-              "manual_image_key": "H2-ENOVA-001",
-              "image_id": "enova-02-instalacion",
-              "title": "Instalación",
-              "caption": "Instalación.",
-              "alt": "Secuencia de instalación de la cerradura e-Nova.",
-              "image": "assets/e-nova/manual/select-instalacion.webp",
-              "available": true
-            },
-            {
-              "type": "list",
-              "ordered": true,
-              "items": [
-                "Confirma que la puerta sea compatible con una cerradura tipo pomo.",
-                "Verifica que el grosor de la puerta esté dentro del rango permitido.",
-                "Revisa que el orificio principal y el borde de la puerta estén limpios.",
-                "Inserta el cuerpo tubular en el borde de la puerta.",
-                "Alinea el pestillo con el recibidor.",
-                "Fija la placa frontal del cuerpo tubular.",
-                "Coloca el pomo exterior desde el lado de acceso.",
-                "Alinea el eje o vástago con el cuerpo tubular.",
-                "Coloca el pomo interior desde el lado protegido.",
-                "Respeta la marca de orientación antes de apretar.",
-                "Ajusta los tornillos hasta que ambos pomos queden firmes.",
-                "Gira el pomo interior y confirma que el pestillo se mueva suavemente."
-              ]
-            }
-          ]
-        },
-        {
-          "order": 3,
           "id": "perfiles",
           "title": "Perfiles de administradores y usuarios",
           "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "concepto",
           "images": [
             {
               "section_id": "primer-administrador",
@@ -461,6 +420,8 @@
               "title": "Primer administrador",
               "anchor": "img-e-nova-004",
               "manual_image_key": "IMG-ENOVA-004",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-nova/manual/primer-administrador.webp"
             },
             {
@@ -473,6 +434,8 @@
               "title": "Administradores adicionales",
               "anchor": "img-e-nova-005",
               "manual_image_key": "IMG-ENOVA-005",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-nova/manual/administradores-adicionales.webp"
             },
             {
@@ -485,6 +448,8 @@
               "title": "Usuario regular",
               "anchor": "img-e-nova-006",
               "manual_image_key": "IMG-ENOVA-006",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-nova/manual/usuario-regular.webp"
             },
             {
@@ -494,10 +459,73 @@
           ]
         },
         {
+          "order": 3,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-ENOVA-001",
+          "manual_group": "instalacion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-ENOVA-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-nova/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-ENOVA-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-ENOVA-001",
+              "image_id": "enova-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Nova.",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-nova/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con una cerradura tipo pomo.",
+                "Verifica que el grosor de la puerta esté dentro del rango permitido.",
+                "Revisa que el orificio principal y el borde de la puerta estén limpios.",
+                "Inserta el cuerpo tubular en el borde de la puerta.",
+                "Alinea el pestillo con el recibidor.",
+                "Fija la placa frontal del cuerpo tubular.",
+                "Coloca el pomo exterior desde el lado de acceso.",
+                "Alinea el eje o vástago con el cuerpo tubular.",
+                "Coloca el pomo interior desde el lado protegido.",
+                "Respeta la marca de orientación antes de apretar.",
+                "Ajusta los tornillos hasta que ambos pomos queden firmes.",
+                "Gira el pomo interior y confirma que el pestillo se mueva suavemente."
+              ]
+            }
+          ]
+        },
+        {
           "order": 4,
           "id": "crear-primer-administrador",
           "title": "Creación del primer administrador",
           "manual_image_key": "H2-ENOVA-002",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-primer-administrador",
@@ -516,6 +544,8 @@
               "level": 2,
               "title": "Creación del primer administrador",
               "anchor": "crear-primer-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-ENOVA-002"
             },
             {
@@ -525,6 +555,8 @@
               "title": "Creación del primer administrador",
               "caption": "Creación del primer administrador.",
               "alt": "Creación del primer administrador en e-Nova.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/select-crear-primer-administrador.webp",
               "available": true
             },
@@ -550,6 +582,8 @@
           "id": "entrar-menu-administrador",
           "title": "Entrar al menú modo administrador",
           "manual_image_key": "H2-ENOVA-003",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-entrar-menu-administrador",
@@ -568,6 +602,8 @@
               "level": 2,
               "title": "Entrar al menú modo administrador",
               "anchor": "entrar-menu-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-ENOVA-003"
             },
             {
@@ -577,6 +613,8 @@
               "title": "Entrar al menú modo administrador",
               "caption": "Entrar al menú modo administrador.",
               "alt": "Acceso al menú modo administrador en e-Nova.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/select-entrar-menu-administrador.webp",
               "available": true
             },
@@ -603,6 +641,8 @@
           "id": "ajustes-generales",
           "title": "Ajustes generales",
           "manual_image_key": null,
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "gestion-de-huellas",
@@ -646,6 +686,8 @@
               "title": "Gestión de huellas",
               "anchor": "img-e-nova-007",
               "manual_image_key": "IMG-ENOVA-007",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/gestion-de-huellas.webp"
             },
             {
@@ -664,6 +706,8 @@
               "title": "Gestión de miembros",
               "anchor": "img-e-nova-008",
               "manual_image_key": "IMG-ENOVA-008",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/gestion-de-miembros.webp"
             },
             {
@@ -682,6 +726,8 @@
               "title": "Estado de batería",
               "anchor": "img-e-nova-009",
               "manual_image_key": "IMG-ENOVA-009",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/estado-de-bateria.webp"
             },
             {
@@ -700,6 +746,8 @@
           "id": "crear-administradores",
           "title": "Creación de otros administradores",
           "manual_image_key": "H2-ENOVA-004",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-administradores",
@@ -718,6 +766,8 @@
               "level": 2,
               "title": "Creación de otros administradores",
               "anchor": "crear-administradores",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-ENOVA-004"
             },
             {
@@ -727,6 +777,8 @@
               "title": "Creación de otros administradores",
               "caption": "Creación de otros administradores.",
               "alt": "Creación de otros administradores en e-Nova.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/select-crear-administradores.webp",
               "available": true
             },
@@ -750,6 +802,8 @@
           "id": "crear-usuario",
           "title": "Creación perfil usuario",
           "manual_image_key": "H2-ENOVA-005",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-usuario",
@@ -768,6 +822,8 @@
               "level": 2,
               "title": "Creación perfil usuario",
               "anchor": "crear-usuario",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-ENOVA-005"
             },
             {
@@ -777,6 +833,8 @@
               "title": "Creación perfil usuario",
               "caption": "Creación perfil usuario.",
               "alt": "Creación de perfil usuario en e-Nova.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/select-crear-usuario.webp",
               "available": true
             },
@@ -799,6 +857,8 @@
           "id": "eliminar-perfil",
           "title": "Eliminar un perfil",
           "manual_image_key": "H2-ENOVA-006",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-eliminar-perfil",
@@ -817,6 +877,8 @@
               "level": 2,
               "title": "Eliminar un perfil",
               "anchor": "eliminar-perfil",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-ENOVA-006"
             },
             {
@@ -826,6 +888,8 @@
               "title": "Eliminar un perfil",
               "caption": "Eliminar un perfil.",
               "alt": "Eliminación de un perfil en e-Nova.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-nova/manual/select-eliminar-perfil.webp",
               "available": true
             },
@@ -844,9 +908,146 @@
         },
         {
           "order": 10,
+          "id": "uso-diario",
+          "title": "Uso diario",
+          "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "operacion",
+          "images": [
+            {
+              "section_id": "apertura-diaria",
+              "image_review_keys": [
+                "IMG-ENOVA-014"
+              ],
+              "heading": "Apertura diaria",
+              "image": "assets/e-nova/manual/apertura-diaria.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "operacion-interior",
+              "image_review_keys": [
+                "IMG-ENOVA-015"
+              ],
+              "heading": "Operación interior",
+              "image": "assets/e-nova/manual/operacion-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "respaldo-mecanico-y-energia",
+              "image_review_keys": [
+                "IMG-ENOVA-016"
+              ],
+              "heading": "Respaldo mecánico y energía",
+              "image": "assets/e-nova/manual/respaldo-mecanico-y-energia.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Nova se usa como pomo inteligente Bluetooth. No requiere teclado ni tarjeta para la operación diaria."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Apertura diaria",
+              "anchor": "img-e-nova-014",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-ENOVA-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-014",
+              "image_id": "enova-11a-apertura-diaria",
+              "title": "Apertura diaria",
+              "caption": "Apertura diaria.",
+              "alt": "Apertura diaria de e-Nova con huella, app Bluetooth y llave mecánica.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-nova/manual/apertura-diaria.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Huella: toca o despierta el pomo y coloca la huella registrada sobre el lector frontal.",
+                "App Tuya Smart: activa Bluetooth en el teléfono, mantente cerca de la cerradura y abre desde la app.",
+                "Llave mecánica: úsala como respaldo cuando no puedas abrir con huella o app."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Operación interior",
+              "anchor": "img-e-nova-015",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-ENOVA-015"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-015",
+              "image_id": "enova-11b-operacion-interior",
+              "title": "Operación interior",
+              "caption": "Operación interior.",
+              "alt": "Operación interior de e-Nova con control de bloqueo y paso libre.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-nova/manual/operacion-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Desde el interior, usa el control mecánico para bloquear, desbloquear o dejar el pomo en modo de paso libre según la posición instalada."
+            },
+            {
+              "type": "paragraph",
+              "text": "Si activas doble cierre o anti-bloqueo, la apertura exterior puede quedar restringida. Usa esta función solo cuando quieras limitar el acceso desde fuera."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Respaldo mecánico y energía",
+              "anchor": "img-e-nova-016",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-ENOVA-016"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-ENOVA-016",
+              "image_id": "enova-11c-respaldo-mecanico-energia",
+              "title": "Respaldo mecánico y energía",
+              "caption": "Respaldo mecánico y energía.",
+              "alt": "Respaldo mecánico y alimentación exterior de emergencia en e-Nova.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-nova/manual/respaldo-mecanico-y-energia.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Guarda al menos una llave fuera del lugar protegido.",
+                "Cuando aparezca aviso de baja batería, recarga la batería cuanto antes.",
+                "Si la batería se agota, usa la llave mecánica o alimenta temporalmente desde el puerto exterior para poder abrir."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 11,
           "id": "otras-configuraciones",
           "title": "Otras configuraciones",
           "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "mixto",
           "images": [
             {
               "section_id": "paso-libre",
@@ -895,6 +1096,8 @@
               "level": 3,
               "title": "Paso libre",
               "anchor": "img-e-nova-010",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-ENOVA-010"
             },
             {
@@ -904,6 +1107,8 @@
               "title": "Paso libre",
               "caption": "Paso libre.",
               "alt": "Modo paso libre en e-Nova.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-nova/manual/paso-libre.webp",
               "available": true
             },
@@ -916,6 +1121,8 @@
               "level": 3,
               "title": "Bloqueo interior",
               "anchor": "img-e-nova-011",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-ENOVA-011"
             },
             {
@@ -925,6 +1132,8 @@
               "title": "Bloqueo interior",
               "caption": "Bloqueo interior.",
               "alt": "Bloqueo interior en e-Nova.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-nova/manual/bloqueo-interior.webp",
               "available": true
             },
@@ -937,6 +1146,8 @@
               "level": 3,
               "title": "Apertura desde app",
               "anchor": "img-e-nova-012",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-ENOVA-012"
             },
             {
@@ -946,6 +1157,8 @@
               "title": "Apertura desde app",
               "caption": "Apertura desde app.",
               "alt": "Apertura desde app en e-Nova.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-nova/manual/apertura-desde-app.webp",
               "available": true
             },
@@ -958,6 +1171,8 @@
               "level": 3,
               "title": "Energía de emergencia",
               "anchor": "img-e-nova-013",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-ENOVA-013"
             },
             {
@@ -967,6 +1182,8 @@
               "title": "Energía de emergencia",
               "caption": "Energía de emergencia.",
               "alt": "Energía de emergencia en e-Nova.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-nova/manual/energia-de-emergencia.webp",
               "available": true
             },
@@ -997,6 +1214,16 @@
           ],
           "heading": "Apertura desde app",
           "image": "assets/e-nova/manual/apertura-desde-app.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "apertura-diaria",
+          "image_review_keys": [
+            "IMG-ENOVA-014"
+          ],
+          "heading": "Apertura diaria",
+          "image": "assets/e-nova/manual/apertura-diaria.webp",
           "format": "webp",
           "available": true
         },
@@ -1061,6 +1288,16 @@
           "available": true
         },
         {
+          "section_id": "operacion-interior",
+          "image_review_keys": [
+            "IMG-ENOVA-015"
+          ],
+          "heading": "Operación interior",
+          "image": "assets/e-nova/manual/operacion-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
           "section_id": "panel-exterior",
           "image_review_keys": [
             "IMG-ENOVA-001"
@@ -1113,6 +1350,16 @@
           ],
           "heading": "Primer administrador",
           "image": "assets/e-nova/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "respaldo-mecanico-y-energia",
+          "image_review_keys": [
+            "IMG-ENOVA-016"
+          ],
+          "heading": "Respaldo mecánico y energía",
+          "image": "assets/e-nova/manual/respaldo-mecanico-y-energia.webp",
           "format": "webp",
           "available": true
         },
