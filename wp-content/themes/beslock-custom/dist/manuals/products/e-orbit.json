@@ -3,7 +3,7 @@
     "slug": "e-orbit",
     "display_name": "e-Orbit",
     "profile_public": {
-      "short_description": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
+      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
       "commercial_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos. Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
       "product_type": "Cerradura inteligente",
       "lock_architecture": "mortise_lock",
@@ -166,14 +166,7 @@
         "El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
         "La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
         "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video OEM."
-      ],
-      "section_teasers": {
-        "conoce-tu-cerradura": "Rostro, huella, timbre y app llevan el control de acceso a una experiencia premium.",
-        "instalacion": "Sistema multipunto y manija abatible suman presencia y seguridad en puertas compatibles.",
-        "configuracion": "Usuarios, registros y desbloqueo remoto bajo una arquitectura diseñada para control avanzado.",
-        "uso-diario": "Reconocimiento facial para entrar sin manos, con historial visible desde la app.",
-        "soluciones-rapidas": "Llave, energía de emergencia y alertas de eventos mantienen el acceso protegido fuera de rutina."
-      }
+      ]
     },
     "manual": {
       "available": true,
@@ -187,13 +180,13 @@
         },
         {
           "order": 2,
-          "title": "Instalación",
-          "anchor": "instalacion"
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
         },
         {
           "order": 3,
-          "title": "Perfiles de administradores y usuarios",
-          "anchor": "perfiles"
+          "title": "Instalación",
+          "anchor": "instalacion"
         },
         {
           "order": 4,
@@ -227,6 +220,11 @@
         },
         {
           "order": 10,
+          "title": "Uso diario",
+          "anchor": "uso-diario"
+        },
+        {
+          "order": 11,
           "title": "Otras configuraciones",
           "anchor": "otras-configuraciones"
         }
@@ -237,6 +235,8 @@
           "id": "presentacion-producto",
           "title": "Presentación del producto",
           "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "referencia",
           "images": [
             {
               "section_id": "panel-exterior",
@@ -279,6 +279,8 @@
               "level": 3,
               "title": "Panel exterior",
               "anchor": "img-e-orbit-001",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-EORBIT-001"
             },
             {
@@ -288,6 +290,8 @@
               "title": "Panel exterior",
               "caption": "Panel exterior.",
               "alt": "Panel exterior de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-orbit/manual/panel-exterior.webp",
               "available": true
             },
@@ -312,6 +316,8 @@
               "level": 3,
               "title": "Panel interior",
               "anchor": "img-e-orbit-002",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-EORBIT-002"
             },
             {
@@ -321,6 +327,8 @@
               "title": "Panel interior",
               "caption": "Panel interior.",
               "alt": "Panel interior de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-orbit/manual/panel-interior.webp",
               "available": true
             },
@@ -339,6 +347,8 @@
               "level": 3,
               "title": "Mecanismo de bloqueo",
               "anchor": "img-e-orbit-003",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "related_manual_image_key": "IMG-EORBIT-003"
             },
             {
@@ -348,6 +358,8 @@
               "title": "Mecanismo de bloqueo",
               "caption": "Mecanismo de bloqueo.",
               "alt": "Mecanismo de bloqueo de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
               "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
               "available": true
             },
@@ -366,62 +378,11 @@
         },
         {
           "order": 2,
-          "id": "instalacion",
-          "title": "Instalación",
-          "manual_image_key": "H2-EORBIT-001",
-          "images": [
-            {
-              "section_id": "h2-instalacion",
-              "image_review_keys": [
-                "H2-EORBIT-001"
-              ],
-              "heading": "Instalación",
-              "image": "assets/e-orbit/manual/select-instalacion.webp",
-              "format": "webp",
-              "available": true
-            }
-          ],
-          "blocks": [
-            {
-              "type": "heading",
-              "level": 2,
-              "title": "Instalación",
-              "anchor": "instalacion",
-              "related_manual_image_key": "H2-EORBIT-001"
-            },
-            {
-              "type": "figure",
-              "manual_image_key": "H2-EORBIT-001",
-              "image_id": "eorbit-02-instalacion",
-              "title": "Instalación",
-              "caption": "Instalación.",
-              "alt": "Secuencia de instalación de la cerradura e-Orbit.",
-              "image": "assets/e-orbit/manual/select-instalacion.webp",
-              "available": true
-            },
-            {
-              "type": "list",
-              "ordered": true,
-              "items": [
-                "Confirma que la puerta sea compatible con la plantilla de instalación.",
-                "Revisa el sentido de apertura antes de perforar o fijar piezas.",
-                "Instala el cuerpo de cerradura multipunto dentro de la puerta.",
-                "Fija el cuerpo con sus tornillos.",
-                "Pasa el cableado del panel exterior hacia el lado interior.",
-                "Coloca el panel exterior alineado con el cuerpo de cerradura.",
-                "Conecta el cableado al panel interior.",
-                "Coloca el panel interior y fija los tornillos.",
-                "Instala la batería o alimentación principal.",
-                "Acciona la manija y confirma que pestillo y pasadores se muevan sin fricción."
-              ]
-            }
-          ]
-        },
-        {
-          "order": 3,
           "id": "perfiles",
           "title": "Perfiles de administradores y usuarios",
           "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "concepto",
           "images": [
             {
               "section_id": "primer-administrador",
@@ -461,6 +422,8 @@
               "title": "Primer administrador",
               "anchor": "img-e-orbit-004",
               "manual_image_key": "IMG-EORBIT-004",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-orbit/manual/primer-administrador.webp"
             },
             {
@@ -473,6 +436,8 @@
               "title": "Administradores adicionales",
               "anchor": "img-e-orbit-005",
               "manual_image_key": "IMG-EORBIT-005",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-orbit/manual/administradores-adicionales.webp"
             },
             {
@@ -485,6 +450,8 @@
               "title": "Usuario regular",
               "anchor": "img-e-orbit-006",
               "manual_image_key": "IMG-EORBIT-006",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
               "image": "assets/e-orbit/manual/usuario-regular.webp"
             },
             {
@@ -494,10 +461,71 @@
           ]
         },
         {
+          "order": 3,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-EORBIT-001",
+          "manual_group": "instalacion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-EORBIT-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-001",
+              "image_id": "eorbit-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Orbit.",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con la plantilla de instalación.",
+                "Revisa el sentido de apertura antes de perforar o fijar piezas.",
+                "Instala el cuerpo de cerradura multipunto dentro de la puerta.",
+                "Fija el cuerpo con sus tornillos.",
+                "Pasa el cableado del panel exterior hacia el lado interior.",
+                "Coloca el panel exterior alineado con el cuerpo de cerradura.",
+                "Conecta el cableado al panel interior.",
+                "Coloca el panel interior y fija los tornillos.",
+                "Instala la batería o alimentación principal.",
+                "Acciona la manija y confirma que pestillo y pasadores se muevan sin fricción."
+              ]
+            }
+          ]
+        },
+        {
           "order": 4,
           "id": "crear-primer-administrador",
           "title": "Creación del primer administrador",
           "manual_image_key": "H2-EORBIT-002",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-primer-administrador",
@@ -516,6 +544,8 @@
               "level": 2,
               "title": "Creación del primer administrador",
               "anchor": "crear-primer-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-EORBIT-002"
             },
             {
@@ -525,6 +555,8 @@
               "title": "Creación del primer administrador",
               "caption": "Creación del primer administrador.",
               "alt": "Creación del primer administrador en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
               "available": true
             },
@@ -548,6 +580,8 @@
           "id": "entrar-menu-administrador",
           "title": "Entrar al menú modo administrador",
           "manual_image_key": "H2-EORBIT-003",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-entrar-menu-administrador",
@@ -566,6 +600,8 @@
               "level": 2,
               "title": "Entrar al menú modo administrador",
               "anchor": "entrar-menu-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-EORBIT-003"
             },
             {
@@ -575,6 +611,8 @@
               "title": "Entrar al menú modo administrador",
               "caption": "Entrar al menú modo administrador.",
               "alt": "Acceso al menú modo administrador en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
               "available": true
             },
@@ -596,6 +634,8 @@
           "id": "ajustes-generales",
           "title": "Ajustes generales",
           "manual_image_key": null,
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "fecha-y-hora",
@@ -649,6 +689,8 @@
               "title": "Fecha y hora",
               "anchor": "img-e-orbit-007",
               "manual_image_key": "IMG-EORBIT-007",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/fecha-y-hora.webp"
             },
             {
@@ -668,6 +710,8 @@
               "title": "Configuración de instalación",
               "anchor": "img-e-orbit-008",
               "manual_image_key": "IMG-EORBIT-008",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp"
             },
             {
@@ -686,6 +730,8 @@
               "title": "Volumen",
               "anchor": "img-e-orbit-009",
               "manual_image_key": "IMG-EORBIT-009",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/volumen.webp"
             },
             {
@@ -704,6 +750,8 @@
               "title": "Información y registros",
               "anchor": "img-e-orbit-010",
               "manual_image_key": "IMG-EORBIT-010",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/informacion-y-registros.webp"
             },
             {
@@ -722,6 +770,8 @@
           "id": "crear-administradores",
           "title": "Creación de otros administradores",
           "manual_image_key": "H2-EORBIT-004",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-administradores",
@@ -740,6 +790,8 @@
               "level": 2,
               "title": "Creación de otros administradores",
               "anchor": "crear-administradores",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-EORBIT-004"
             },
             {
@@ -749,6 +801,8 @@
               "title": "Creación de otros administradores",
               "caption": "Creación de otros administradores.",
               "alt": "Creación de otros administradores en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/select-crear-administradores.webp",
               "available": true
             },
@@ -771,6 +825,8 @@
           "id": "crear-usuario",
           "title": "Creación perfil usuario",
           "manual_image_key": "H2-EORBIT-005",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-crear-usuario",
@@ -789,6 +845,8 @@
               "level": 2,
               "title": "Creación perfil usuario",
               "anchor": "crear-usuario",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-EORBIT-005"
             },
             {
@@ -798,6 +856,8 @@
               "title": "Creación perfil usuario",
               "caption": "Creación perfil usuario.",
               "alt": "Creación de perfil usuario en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/select-crear-usuario.webp",
               "available": true
             },
@@ -820,6 +880,8 @@
           "id": "eliminar-perfil",
           "title": "Eliminar un perfil",
           "manual_image_key": "H2-EORBIT-006",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
           "images": [
             {
               "section_id": "h2-eliminar-perfil",
@@ -838,6 +900,8 @@
               "level": 2,
               "title": "Eliminar un perfil",
               "anchor": "eliminar-perfil",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "related_manual_image_key": "H2-EORBIT-006"
             },
             {
@@ -847,6 +911,8 @@
               "title": "Eliminar un perfil",
               "caption": "Eliminar un perfil.",
               "alt": "Eliminación de un perfil en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
               "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
               "available": true
             },
@@ -865,9 +931,185 @@
         },
         {
           "order": 10,
+          "id": "uso-diario",
+          "title": "Uso diario",
+          "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "operacion",
+          "images": [
+            {
+              "section_id": "apertura-diaria",
+              "image_review_keys": [
+                "IMG-EORBIT-016"
+              ],
+              "heading": "Apertura diaria",
+              "image": "assets/e-orbit/manual/apertura-diaria.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "timbre-video-e-intercom",
+              "image_review_keys": [
+                "IMG-EORBIT-017"
+              ],
+              "heading": "Timbre, video e intercom",
+              "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "operacion-interior",
+              "image_review_keys": [
+                "IMG-EORBIT-018"
+              ],
+              "heading": "Operación interior",
+              "image": "assets/e-orbit/manual/operacion-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "respaldo-mecanico-y-energia",
+              "image_review_keys": [
+                "IMG-EORBIT-019"
+              ],
+              "heading": "Respaldo mecánico y energía",
+              "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Orbit permite abrir sin entrar al menú usando los accesos registrados, la app móvil o los controles interiores."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Apertura diaria",
+              "anchor": "img-e-orbit-016",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-016"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-016",
+              "image_id": "eorbit-11a-apertura-diaria",
+              "title": "Apertura diaria",
+              "caption": "Apertura diaria.",
+              "alt": "Apertura diaria de e-Orbit con rostro, huella, PIN, tarjeta y app móvil.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/apertura-diaria.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Rostro: colócate frente al módulo de reconocimiento y espera la validación.",
+                "Huella: coloca el dedo registrado sobre el lector de la manija.",
+                "Clave: ingresa la clave registrada en el teclado y confirma según la indicación.",
+                "Tarjeta: acerca la tarjeta M1 registrada al área de lectura.",
+                "App móvil: abre desde el teléfono vinculado cuando la función esté configurada."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Timbre, video e intercom",
+              "anchor": "img-e-orbit-017",
+              "manual_group": "uso-diario",
+              "content_kind": "operacion",
+              "related_manual_image_key": "IMG-EORBIT-017"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-017",
+              "image_id": "eorbit-11b-timbre-video-intercom",
+              "title": "Timbre, video e intercom",
+              "caption": "Timbre, video e intercom.",
+              "alt": "Uso del timbre, video e intercom en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "operacion",
+              "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "La visita toca el botón de timbre del panel exterior.",
+                "La app puede mostrar la interacción de video o intercom según la configuración.",
+                "Si corresponde, autoriza la apertura desde la app."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Operación interior",
+              "anchor": "img-e-orbit-018",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-018"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-018",
+              "image_id": "eorbit-11c-operacion-interior",
+              "title": "Operación interior",
+              "caption": "Operación interior.",
+              "alt": "Operación interior de e-Orbit con controles internos de bloqueo y desbloqueo.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/operacion-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Desde el interior, usa la manija y los controles internos de bloqueo o desbloqueo para salir o asegurar la puerta sin usar credenciales exteriores."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Respaldo mecánico y energía",
+              "anchor": "img-e-orbit-019",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-019"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-019",
+              "image_id": "eorbit-11d-respaldo-mecanico-energia",
+              "title": "Respaldo mecánico y energía",
+              "caption": "Respaldo mecánico y energía.",
+              "alt": "Respaldo mecánico y alimentación Micro USB de emergencia en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Usa la llave mecánica desde el compartimento circular inferior cuando no puedas usar accesos electrónicos.",
+                "Si la batería está agotada, alimenta temporalmente por Micro USB 5 V / 1 A.",
+                "El desbloqueo con alimentación USB puede tardar cerca de 30 segundos.",
+                "Recarga o reemplaza la batería al primer aviso de baja energía."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 11,
           "id": "otras-configuraciones",
           "title": "Otras configuraciones",
           "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "mixto",
           "images": [
             {
               "section_id": "distancia-de-deteccion-facial",
@@ -926,6 +1168,8 @@
               "level": 3,
               "title": "Distancia de detección facial",
               "anchor": "img-e-orbit-011",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-EORBIT-011"
             },
             {
@@ -935,6 +1179,8 @@
               "title": "Distancia de detección facial",
               "caption": "Distancia de detección facial.",
               "alt": "Distancia de detección facial en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
               "available": true
             },
@@ -947,6 +1193,8 @@
               "level": 3,
               "title": "Detección humana",
               "anchor": "img-e-orbit-012",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-EORBIT-012"
             },
             {
@@ -956,6 +1204,8 @@
               "title": "Detección humana",
               "caption": "Detección humana.",
               "alt": "Detección humana en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-orbit/manual/deteccion-humana.webp",
               "available": true
             },
@@ -968,6 +1218,8 @@
               "level": 3,
               "title": "Verificación dual",
               "anchor": "img-e-orbit-013",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-EORBIT-013"
             },
             {
@@ -977,6 +1229,8 @@
               "title": "Verificación dual",
               "caption": "Verificación dual.",
               "alt": "Verificación dual en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-orbit/manual/verificacion-dual.webp",
               "available": true
             },
@@ -989,6 +1243,8 @@
               "level": 3,
               "title": "Bloqueo retardado",
               "anchor": "img-e-orbit-014",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-EORBIT-014"
             },
             {
@@ -998,6 +1254,8 @@
               "title": "Bloqueo retardado",
               "caption": "Bloqueo retardado.",
               "alt": "Bloqueo retardado en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
               "available": true
             },
@@ -1010,6 +1268,8 @@
               "level": 3,
               "title": "App móvil",
               "anchor": "img-e-orbit-015",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "related_manual_image_key": "IMG-EORBIT-015"
             },
             {
@@ -1019,6 +1279,8 @@
               "title": "App móvil",
               "caption": "App móvil.",
               "alt": "Uso de app móvil en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
               "image": "assets/e-orbit/manual/app-movil.webp",
               "available": true
             },
@@ -1039,6 +1301,16 @@
           ],
           "heading": "Administradores adicionales",
           "image": "assets/e-orbit/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "apertura-diaria",
+          "image_review_keys": [
+            "IMG-EORBIT-016"
+          ],
+          "heading": "Apertura diaria",
+          "image": "assets/e-orbit/manual/apertura-diaria.webp",
           "format": "webp",
           "available": true
         },
@@ -1123,6 +1395,16 @@
           "available": true
         },
         {
+          "section_id": "operacion-interior",
+          "image_review_keys": [
+            "IMG-EORBIT-018"
+          ],
+          "heading": "Operación interior",
+          "image": "assets/e-orbit/manual/operacion-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
           "section_id": "panel-exterior",
           "image_review_keys": [
             "IMG-EORBIT-001"
@@ -1165,6 +1447,26 @@
           ],
           "heading": "Primer administrador",
           "image": "assets/e-orbit/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "respaldo-mecanico-y-energia",
+          "image_review_keys": [
+            "IMG-EORBIT-019"
+          ],
+          "heading": "Respaldo mecánico y energía",
+          "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "timbre-video-e-intercom",
+          "image_review_keys": [
+            "IMG-EORBIT-017"
+          ],
+          "heading": "Timbre, video e intercom",
+          "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
           "format": "webp",
           "available": true
         },

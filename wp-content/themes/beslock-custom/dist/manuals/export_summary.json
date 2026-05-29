@@ -1,6 +1,6 @@
 {
   "schema": "beslock.manuals.web_export.summary.v1",
-  "created_at": "2026-05-28T01:29:01.978430+00:00",
+  "created_at": "2026-05-29T18:39:49.571602+00:00",
   "output_root": "dist/manuals",
   "debug_mode": false,
   "products_exported": [
@@ -35,12 +35,13 @@
     "e-shield": true,
     "e-touch": true
   },
-  "images_copied": 133,
-  "images_converted_to_webp": 151,
+  "images_copied": 152,
+  "images_converted_to_webp": 170,
   "hero_images_exported": 6,
   "ts_exported": 18,
   "legacy_html_figures_ignored": 12,
   "macos_metadata_removed": 0,
+  "backup_output_assets_skipped": 29,
   "missing_assets": [],
   "warnings": []
 }
