@@ -292,6 +292,27 @@ add_action( 'wp_enqueue_scripts', function() {
 
 }, 10 );
 
+add_action( 'wp_head', function() {
+  if ( is_admin() || ! function_exists( 'is_product' ) || ! is_product() ) {
+    return;
+  }
+  ?>
+  <script>
+  (function(){
+    try {
+      var direction = window.sessionStorage && window.sessionStorage.getItem('beslockProductPagerDirection');
+      if (direction !== 'prev' && direction !== 'next') return;
+      var root = document.documentElement;
+      root.classList.add('product-reel-pending', 'product-reel-pending--' + direction);
+      window.setTimeout(function(){
+        root.classList.remove('product-reel-pending', 'product-reel-pending--prev', 'product-reel-pending--next');
+      }, 1800);
+    } catch (error) {}
+  })();
+  </script>
+  <?php
+}, 0 );
+
 // Inline early-capture script: prevent navigation to raw uploads image URLs and open overlay
 add_action( 'wp_head', function(){
   ?>

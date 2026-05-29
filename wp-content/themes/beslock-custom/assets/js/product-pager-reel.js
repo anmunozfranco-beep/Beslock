@@ -38,7 +38,15 @@
     } catch (error) {}
   }
 
-  function clearMotionState(body) {
+  function clearPendingReelState() {
+    document.documentElement.classList.remove(
+      'product-reel-pending',
+      'product-reel-pending--prev',
+      'product-reel-pending--next'
+    );
+  }
+
+  function clearMotionState(body, preservePending) {
     body.classList.remove(
       'product-reel-enter',
       'product-reel-enter--prev',
@@ -48,6 +56,8 @@
       'product-reel-leaving--next'
     );
 
+    if (!preservePending) clearPendingReelState();
+
     document.querySelectorAll('.product-page__pager-link.is-reeling').forEach(function (link) {
       link.classList.remove('is-reeling');
       link.removeAttribute('aria-disabled');
@@ -56,9 +66,13 @@
 
   function playEnter(body) {
     var direction = getStoredDirection();
-    if (!direction || prefersReducedMotion()) return;
+    if (!direction || prefersReducedMotion()) {
+      clearPendingReelState();
+      return;
+    }
 
     body.classList.add('product-reel-enter', 'product-reel-enter--' + direction);
+    window.requestAnimationFrame(clearPendingReelState);
 
     window.setTimeout(function () {
       body.classList.remove('product-reel-enter', 'product-reel-enter--' + direction);
@@ -111,7 +125,7 @@
     var body = document.body;
     if (!body || !body.classList.contains('single-product')) return;
 
-    clearMotionState(body);
+    clearMotionState(body, true);
     playEnter(body);
     initPager(body);
 

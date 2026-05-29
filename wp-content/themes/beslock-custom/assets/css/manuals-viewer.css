@@ -195,17 +195,19 @@ nav#mobileDrawer .manuals-section-button.is-active {
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu {
-  height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-cover-height) - clamp(3rem, 8vh, 5rem)) !important;
-  min-height: 0 !important;
-  max-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-cover-height) - max(1rem, env(safe-area-inset-bottom))) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
+  min-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
+  max-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
   justify-content: space-between !important;
-  gap: clamp(1.2rem, 2.55vh, 1.9rem) !important;
+  gap: clamp(1.05rem, 2.35vh, 1.75rem) !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
   padding:
-    clamp(1.05rem, 2.35vh, 1.65rem)
+    clamp(0.85rem, 2vh, 1.35rem)
     0
-    max(1.25rem, calc(env(safe-area-inset-bottom) + 1rem)) !important;
+    max(0.75rem, env(safe-area-inset-bottom)) !important;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -251,7 +253,7 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
     calc(var(--drawer-main-inset) + var(--drawer-main-item-gap) + 1.35rem) !important;
 }
 
-@media (max-height: 760px) {
+@media (max-height: 620px) {
   nav#mobileDrawer.manuals-menu-open .mobile-menu {
     justify-content: flex-start !important;
     gap: 0.85rem !important;
@@ -512,11 +514,6 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   gap: clamp(1.2rem, 2.6vw, 2.1rem);
 }
 
-.manuals-content__top {
-  display: grid;
-  gap: 0.9rem;
-}
-
 .manuals-back-button {
   justify-self: start;
   display: inline-flex;
@@ -530,6 +527,10 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   font-size: 0.98rem;
   font-weight: 700;
   cursor: pointer;
+}
+
+.manuals-pager {
+  display: none;
 }
 
 .manuals-block {
@@ -615,6 +616,277 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
     padding-top: calc(0.9rem + env(safe-area-inset-top));
   }
 
+  .manuals-back-button--desktop {
+    display: none;
+  }
+
+  .manuals-pager {
+    position: sticky;
+    top: 0.55rem;
+    z-index: 6;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    align-items: start;
+    width: 100%;
+    margin: 0 auto 0.4rem;
+    padding: 0.8rem 0.85rem;
+    border: 1px solid rgba(216, 222, 230, 0.92);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+    transform-origin: top center;
+    will-change: top, padding, gap, background-color, box-shadow;
+    transition:
+      top 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      gap 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .manuals-pager.manuals-pager--compact {
+    top: -0.35rem;
+    gap: 0.55rem;
+    padding: 0.68rem 0.78rem;
+    border-color: rgba(216, 222, 230, 0.62);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.62);
+    -webkit-backdrop-filter: blur(18px) saturate(1.08);
+    backdrop-filter: blur(18px) saturate(1.08);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.075);
+  }
+
+  .manuals-pager__action {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    z-index: 0;
+    justify-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.15rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--menu-link-color, #16202f);
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+    transition:
+      gap 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      color 180ms ease;
+  }
+
+  .manuals-pager__action::before {
+    content: "";
+    position: absolute;
+    inset: -0.58rem -0.72rem;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 999px;
+    background:
+      linear-gradient(90deg, rgba(3, 69, 38, 0), rgba(3, 69, 38, 0.13), rgba(3, 69, 38, 0)),
+      rgba(3, 69, 38, 0.045);
+    opacity: 0;
+    transform: scaleX(0.72);
+    transition:
+      opacity 220ms ease,
+      transform 520ms cubic-bezier(.16, .84, .29, 1);
+  }
+
+  .manuals-pager__action:hover::before,
+  .manuals-pager__action:focus-visible::before,
+  .manuals-pager__action--reeling::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .manuals-pager__action:hover,
+  .manuals-pager__action:focus-visible,
+  .manuals-pager__action--reeling {
+    color: var(--beslock-green, #034526);
+  }
+
+  .manuals-pager__action:focus-visible {
+    outline: 2px solid rgba(6, 163, 122, 0.24);
+    outline-offset: 4px;
+    border-radius: 6px;
+  }
+
+  .manuals-pager__action--next {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  .manuals-pager.manuals-pager--compact .manuals-pager__action {
+    gap: 0.45rem;
+  }
+
+  .manuals-pager__meta {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .manuals-pager__title {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    color: currentColor;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.15;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: font-size 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .manuals-pager.manuals-pager--compact .manuals-pager__title {
+    font-size: 0.9rem;
+  }
+
+  .manuals-pager__arrow {
+    position: relative;
+    flex: 0 0 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-top: 0.08rem;
+    color: var(--menu-link-color, #0b0b0b);
+    transition:
+      width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      flex-basis 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .manuals-pager__arrow::before,
+  .manuals-pager__arrow::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  .manuals-pager__arrow::before {
+    top: 50%;
+    left: 4px;
+    width: 9px;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 999px;
+    transform: translateY(-50%);
+  }
+
+  .manuals-pager__arrow::after {
+    top: 50%;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    border-bottom: 1.5px solid currentColor;
+    border-left: 1.5px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .manuals-pager__arrow--next {
+    transform: scaleX(-1);
+  }
+
+  .manuals-pager.manuals-pager--compact .manuals-pager__arrow {
+    width: 14px;
+    height: 14px;
+    flex-basis: 14px;
+  }
+
+  .manuals-content {
+    --manuals-reel-x: 0px;
+    --manuals-reel-enter-x: 0px;
+  }
+
+  .manuals-content--leaving.manuals-content--direction-next {
+    --manuals-reel-x: -46px;
+  }
+
+  .manuals-content--leaving.manuals-content--direction-prev {
+    --manuals-reel-x: 46px;
+  }
+
+  .manuals-content--enter.manuals-content--direction-next {
+    --manuals-reel-enter-x: 46px;
+  }
+
+  .manuals-content--enter.manuals-content--direction-prev {
+    --manuals-reel-enter-x: -46px;
+  }
+
+  .manuals-content--enter,
+  .manuals-content--leaving {
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
+  .manuals-content--leaving .manuals-pager,
+  .manuals-content--leaving .manuals-block {
+    opacity: 0.36;
+    filter: blur(1px);
+    transform: translate3d(var(--manuals-reel-x), 0, 0) scale(0.985);
+    transition:
+      transform 360ms cubic-bezier(.16, .84, .29, 1),
+      opacity 260ms ease,
+      filter 360ms ease;
+  }
+
+  .manuals-content--leaving .manuals-pager__action {
+    pointer-events: none;
+  }
+
+  .manuals-content--enter .manuals-pager,
+  .manuals-content--enter .manuals-block {
+    animation: beslock-manuals-pager-enter 620ms cubic-bezier(.16, .84, .29, 1) both;
+  }
+
+  .manuals-content--enter .manuals-block {
+    animation-delay: 70ms;
+  }
+
+  @keyframes beslock-manuals-pager-enter {
+    from {
+      opacity: 0;
+      filter: blur(3px);
+      transform: translate3d(var(--manuals-reel-enter-x), 0, 0) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .manuals-pager,
+    .manuals-pager__action,
+    .manuals-pager__action::before,
+    .manuals-pager__title,
+    .manuals-pager__arrow,
+    .manuals-block {
+      animation: none !important;
+      filter: none !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
   .manuals-model-card {
     grid-template-columns: 5.4rem minmax(0, 1fr);
     gap: 0.8rem;
@@ -693,6 +965,33 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
 @media (max-width: 420px) {
   .manuals-drawer__eyebrow {
     font-size: clamp(1.28rem, 8vw, 1.7rem);
+  }
+
+  .manuals-pager {
+    gap: 0.55rem;
+    padding: 0.72rem 0.78rem;
+  }
+
+  .manuals-pager.manuals-pager--compact {
+    top: -0.35rem;
+    gap: 0.5rem;
+    padding: 0.62rem 0.7rem;
+  }
+
+  .manuals-pager__action {
+    gap: 0.42rem;
+  }
+
+  .manuals-pager.manuals-pager--compact .manuals-pager__action {
+    gap: 0.38rem;
+  }
+
+  .manuals-pager__title {
+    font-size: 0.86rem;
+  }
+
+  .manuals-pager.manuals-pager--compact .manuals-pager__title {
+    font-size: 0.82rem;
   }
 
   .manuals-model-card {
