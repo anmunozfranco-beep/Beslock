@@ -460,3 +460,55 @@ body { overflow-x: hidden; }
 	border: none !important;
 	box-shadow: none !important;
 }
+
+/* Center the full CTA pair inside the card, with balanced side gutters. */
+.product-card .pc-actions,
+.product-card .product-card__actions,
+body .products-portfolio .product-card .pc-actions,
+body .products-portfolio .product-card .product-card__actions,
+.products-portfolio .product-card .pc-actions,
+.products-portfolio .product-card .product-card__actions,
+.beslock-cart--empty .product-card .pc-actions,
+.beslock-cart--empty .product-card .product-card__actions {
+	--pc-actions-gap: 10px;
+	--pc-cart-button-size: 52px;
+	width: min(300px, 100%) !important;
+	max-width: 100% !important;
+	left: auto !important;
+	right: auto !important;
+	bottom: auto !important;
+	align-self: center !important;
+	margin: 16px auto 0 !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	gap: var(--pc-actions-gap) !important;
+}
+
+.product-card .pc-btn-main,
+.product-card .bes-product-card__button--primary,
+.product-card .product-card__actions a:first-child,
+body .products-portfolio .product-card .pc-btn-main,
+body .products-portfolio .product-card .product-card__actions a:first-child,
+.products-portfolio .product-card .pc-btn-main,
+.products-portfolio .product-card .product-card__actions a:first-child,
+.beslock-cart--empty .product-card .pc-btn-main,
+.beslock-cart--empty .product-card .product-card__actions a:first-child {
+	flex: 1 1 auto !important;
+	width: auto !important;
+	min-width: 0 !important;
+}
+
+.product-card .pc-btn-cart,
+.product-card .bes-product-card__button--cart,
+.product-card .product-card__actions a:last-child,
+body .products-portfolio .product-card .pc-btn-cart,
+body .products-portfolio .product-card .product-card__actions a:last-child,
+.products-portfolio .product-card .pc-btn-cart,
+.products-portfolio .product-card .product-card__actions a:last-child,
+.beslock-cart--empty .product-card .pc-btn-cart,
+.beslock-cart--empty .product-card .product-card__actions a:last-child {
+	flex: 0 0 var(--pc-cart-button-size) !important;
+	width: var(--pc-cart-button-size) !important;
+	min-width: var(--pc-cart-button-size) !important;
+}

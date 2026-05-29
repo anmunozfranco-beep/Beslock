@@ -195,13 +195,17 @@ nav#mobileDrawer .manuals-section-button.is-active {
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu {
-  height: calc(100dvh - var(--drawer-header-cover-height) - 1.2rem) !important;
+  height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-cover-height) - clamp(3rem, 8vh, 5rem)) !important;
   min-height: 0 !important;
-  justify-content: flex-start !important;
-  gap: 0 !important;
-  overflow-y: hidden !important;
+  max-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-cover-height) - max(1rem, env(safe-area-inset-bottom))) !important;
+  justify-content: space-between !important;
+  gap: clamp(1.2rem, 2.55vh, 1.9rem) !important;
+  overflow-y: auto !important;
   overflow-x: hidden !important;
-  padding: clamp(1.3rem, 2.8vh, 2.15rem) 0 clamp(2.3rem, 5.6vh, 4.5rem) !important;
+  padding:
+    clamp(1.05rem, 2.35vh, 1.65rem)
+    0
+    max(1.25rem, calc(env(safe-area-inset-bottom) + 1rem)) !important;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -213,28 +217,46 @@ nav#mobileDrawer.manuals-menu-open .mobile-menu::-webkit-scrollbar {
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu__item {
+  flex: 0 0 auto !important;
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu > .mobile-menu__item:first-child,
 nav#mobileDrawer.manuals-menu-open .mobile-menu > .mobile-menu__item:not(.mobile-menu__item--manuals):not(:first-child):not(:last-child) {
-  margin-bottom: var(--drawer-main-group-gap) !important;
+  margin-bottom: 0 !important;
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu__item--manuals {
   display: flex !important;
-  flex: 1 1 auto !important;
+  flex: 0 0 auto !important;
   flex-direction: column !important;
   min-height: 0 !important;
   margin: 0 !important;
 }
 
+nav#mobileDrawer.manuals-menu-open .mobile-menu__item--manuals .mobile-menu__link--manuals .mobile-menu__title {
+  color: var(--beslock-green, #034526) !important;
+  font-weight: 800 !important;
+}
+
+nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
+  align-content: start !important;
+  flex: 0 0 auto !important;
+  gap: clamp(0.72rem, 1.55vh, 1.08rem) !important;
+  padding:
+    clamp(0.9rem, 1.9vh, 1.24rem)
+    0
+    0.1rem
+    calc(var(--drawer-main-inset) + var(--drawer-main-item-gap) + 1.35rem) !important;
+}
+
 @media (max-height: 760px) {
   nav#mobileDrawer.manuals-menu-open .mobile-menu {
     justify-content: flex-start !important;
-    gap: 1.05rem !important;
+    gap: 0.85rem !important;
     overflow-y: auto !important;
-    padding-bottom: 1.5rem !important;
+    padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
   }
 
   nav#mobileDrawer.manuals-menu-open .mobile-menu > .mobile-menu__item:first-child,
