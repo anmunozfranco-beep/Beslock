@@ -176,15 +176,15 @@ add_action( 'wp_enqueue_scripts', function() {
     );
 
     $manuals_cache_bust = filemtime( $manuals_viewer_js );
-    $manuals_index_json = $theme_dir_path . '/dist/manuals/index.json';
-    if ( file_exists( $manuals_index_json ) ) {
-      $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_index_json ) );
-    }
-
-    $manuals_product_json_files = glob( $theme_dir_path . '/dist/manuals/products/*.json' );
-    if ( is_array( $manuals_product_json_files ) ) {
-      foreach ( $manuals_product_json_files as $manuals_product_json ) {
-        $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_product_json ) );
+    $manuals_dist_dir = $theme_dir_path . '/dist/manuals';
+    if ( is_dir( $manuals_dist_dir ) ) {
+      $manuals_files = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator( $manuals_dist_dir, FilesystemIterator::SKIP_DOTS )
+      );
+      foreach ( $manuals_files as $manuals_file ) {
+        if ( $manuals_file->isFile() ) {
+          $manuals_cache_bust = max( $manuals_cache_bust, $manuals_file->getMTime() );
+        }
       }
     }
 

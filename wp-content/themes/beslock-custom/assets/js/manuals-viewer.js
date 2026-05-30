@@ -111,6 +111,14 @@
     return baseUrl + '/' + cleaned;
   }
 
+  function versionedManualUrl(path) {
+    var url = manualUrl(path);
+    var cacheBust = config.cacheBust ? String(config.cacheBust) : '';
+    return cacheBust
+      ? url + (url.indexOf('?') === -1 ? '?' : '&') + 'v=' + encodeURIComponent(cacheBust)
+      : url;
+  }
+
   function text(value) {
     return document.createTextNode(String(value || ''));
   }
@@ -507,7 +515,7 @@
     if (!path) return createPlaceholder('Imagen no disponible', className);
 
     var image = document.createElement('img');
-    image.src = manualUrl(path);
+    image.src = versionedManualUrl(path);
     image.alt = altText || '';
     image.loading = 'lazy';
     image.decoding = 'async';
