@@ -7,7 +7,7 @@
 	overflow:hidden;
 }
 
-/* Force both images to fully cover the locked container without any transforms */
+/* Keep both product renders centered in the locked container without transforms. */
 /* Main image stays in normal flow to preserve layout; alt overlays absolutely */
 .products-portfolio .product-card__image.has-alt .product-card__image--main {
 	position:relative !important;
@@ -16,7 +16,7 @@
 	width:100% !important;
 	height:auto !important;
 	max-width:220px !important;
-	object-fit:cover !important;
+	object-fit:contain !important;
 	object-position:center !important;
 	transform:none !important;
 	scale:1 !important;
@@ -32,7 +32,7 @@
 	width:100% !important;
 	height:100% !important;
 	display:block !important;
-	object-fit:cover !important;
+	object-fit:contain !important;
 	object-position:center !important;
 	transform:none !important;
 	scale:1 !important;

@@ -553,6 +553,7 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   --manuals-pager-full-width: 100%;
   --manuals-pager-full-shift: 0px;
   --manuals-pager-content-inset: 0px;
+  --manuals-pager-edge-inset: 0.85rem;
   --manuals-pager-sticky-top: 0px;
   position: sticky;
   top: 0.55rem;
@@ -568,6 +569,7 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   border: 1px solid rgba(216, 222, 230, 0.92);
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
@@ -585,13 +587,12 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
 }
 
 .manuals-pager.manuals-pager--compact {
+  --manuals-pager-edge-inset: max(0.78rem, calc(var(--manuals-pager-content-inset, 0px) + 0.78rem));
   top: var(--manuals-pager-sticky-top, 0px);
   width: var(--manuals-pager-full-width, 100%);
   margin-left: var(--manuals-pager-full-shift, 0px);
   gap: 0.55rem;
-  padding:
-    0.68rem
-    max(0.78rem, calc(var(--manuals-pager-content-inset, 0px) + 0.78rem));
+  padding: 0.68rem var(--manuals-pager-edge-inset);
   border-color: rgba(216, 222, 230, 0.62);
   border-right: 0;
   border-left: 0;
@@ -631,25 +632,51 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
 .manuals-pager__action::before {
   content: "";
   position: absolute;
-  inset: -0.58rem -0.72rem;
+  inset: -0.9rem -1.35rem;
   z-index: -1;
   pointer-events: none;
-  border-radius: 999px;
-  background:
-    linear-gradient(90deg, rgba(3, 69, 38, 0), rgba(3, 69, 38, 0.13), rgba(3, 69, 38, 0)),
-    rgba(3, 69, 38, 0.045);
+  border-radius: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 69, 38, 0.16) 0%,
+    rgba(3, 69, 38, 0.1) 34%,
+    rgba(3, 69, 38, 0.035) 62%,
+    rgba(3, 69, 38, 0) 100%
+  );
+  filter: blur(10px);
   opacity: 0;
-  transform: scaleX(0.72);
+  transform: translate3d(-0.8rem, 0, 0) scaleX(0.72);
+  transform-origin: left center;
   transition:
     opacity 220ms ease,
     transform 520ms cubic-bezier(.16, .84, .29, 1);
+}
+
+.manuals-pager__action--next::before {
+  background: linear-gradient(
+    270deg,
+    rgba(3, 69, 38, 0.16) 0%,
+    rgba(3, 69, 38, 0.1) 34%,
+    rgba(3, 69, 38, 0.035) 62%,
+    rgba(3, 69, 38, 0) 100%
+  );
+  transform: translate3d(0.8rem, 0, 0) scaleX(0.72);
+  transform-origin: right center;
+}
+
+.manuals-pager.manuals-pager--compact .manuals-pager__action--prev::before {
+  inset-inline-start: calc(-1 * var(--manuals-pager-edge-inset, 0.78rem));
+}
+
+.manuals-pager.manuals-pager--compact .manuals-pager__action--next::before {
+  inset-inline-end: calc(-1 * var(--manuals-pager-edge-inset, 0.78rem));
 }
 
 .manuals-pager__action:hover::before,
 .manuals-pager__action:focus-visible::before,
 .manuals-pager__action--reeling::before {
   opacity: 1;
-  transform: scaleX(1);
+  transform: translate3d(0, 0, 0) scaleX(1);
 }
 
 .manuals-pager__action:hover,
@@ -1064,11 +1091,10 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   }
 
   .manuals-pager.manuals-pager--compact {
+    --manuals-pager-edge-inset: max(0.7rem, calc(var(--manuals-pager-content-inset, 0px) + 0.7rem));
     top: var(--manuals-pager-sticky-top, 0px);
     gap: 0.5rem;
-    padding:
-      0.62rem
-      max(0.7rem, calc(var(--manuals-pager-content-inset, 0px) + 0.7rem));
+    padding: 0.62rem var(--manuals-pager-edge-inset);
   }
 
   .manuals-pager__action {

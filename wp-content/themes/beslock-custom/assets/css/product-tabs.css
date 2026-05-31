@@ -703,6 +703,7 @@ body.single-product .product-interactions__submit {
   border-radius: 12px;
   background: var(--beslock-green, #034526);
   color: #ffffff;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
@@ -836,6 +837,7 @@ body.single-product .product-interactions__reply-trigger {
   border-radius: 12px;
   background: var(--beslock-green, #034526);
   color: #ffffff;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   list-style: none;

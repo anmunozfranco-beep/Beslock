@@ -58,6 +58,7 @@
   function normalizeSlideImages(reel){
     if(!reel) return;
     var targetWidth = Math.max(reel.clientWidth || 0, 480);
+    var eNovaGalleryImageVersion = '20260531-crop';
 
     Array.from(reel.querySelectorAll('img')).forEach(function(img){
       try{
@@ -67,6 +68,10 @@
 
         if(largeWidth) img.setAttribute('width', largeWidth);
         if(largeHeight) img.setAttribute('height', largeHeight);
+
+        if(highResSrc && /e-nova_s(?:-[0-9]+x[0-9]+)?\.webp(?:\?|$)/.test(highResSrc)){
+          highResSrc += (highResSrc.indexOf('?') === -1 ? '?' : '&') + 'beslock_gallery=' + eNovaGalleryImageVersion;
+        }
 
         if(highResSrc){
           img.setAttribute('src', highResSrc);

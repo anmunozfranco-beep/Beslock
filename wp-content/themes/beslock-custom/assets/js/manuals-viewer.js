@@ -370,33 +370,20 @@
     return product && (product.display_name || product.name || product.title || product.slug) || 'Producto BESLOCK';
   }
 
-  function productSlug(product) {
-    return normalize(product && (product.slug || product.display_name || product.name || product.title));
-  }
+  function nextManualSection(sectionDef) {
+    if (!sectionDef || !GUIDE_SECTIONS.length) return GUIDE_SECTIONS[0] || null;
 
-  function indexedProducts() {
-    if (state.index && Array.isArray(state.index.products) && state.index.products.length) {
-      return state.index.products;
-    }
-    return FALLBACK_PRODUCTS;
-  }
+    var currentId = normalize(sectionDef.id);
+    var currentIndex = 0;
 
-  function nextManualProduct(indexProduct) {
-    var products = indexedProducts();
-    if (!indexProduct || !products.length) return null;
-
-    var currentSlug = productSlug(indexProduct);
-    var currentIndex = -1;
-
-    for (var i = 0; i < products.length; i++) {
-      if (productSlug(products[i]) === currentSlug) {
+    for (var i = 0; i < GUIDE_SECTIONS.length; i++) {
+      if (GUIDE_SECTIONS[i].id === currentId) {
         currentIndex = i;
         break;
       }
     }
 
-    if (currentIndex === -1 || products.length < 2) return null;
-    return products[(currentIndex + 1) % products.length];
+    return GUIDE_SECTIONS[(currentIndex + 1) % GUIDE_SECTIONS.length];
   }
 
   function escapeRegExp(value) {
@@ -487,19 +474,23 @@
     openModels(sectionDef);
   }
 
-  function transitionProduct(indexProduct, trigger) {
-    if (!indexProduct || !state.selectedSection) return;
+  function transitionManualSection(sectionDef, trigger) {
+    if (!sectionDef || !state.selectedProduct) return;
 
     if (prefersReducedMotion() || !trigger) {
-      openProduct(indexProduct);
+      state.selectedSection = sectionDef;
+      markActiveSection(sectionDef);
+      openProduct(state.selectedProduct);
       return;
     }
 
     playPagerLeave(trigger, 'next');
 
     window.setTimeout(function () {
+      state.selectedSection = sectionDef;
+      markActiveSection(sectionDef);
       state.pendingPagerEnterDirection = 'next';
-      openProduct(indexProduct);
+      openProduct(state.selectedProduct);
 
       window.setTimeout(function () {
         setPagerActionState(trigger, false);
@@ -537,7 +528,7 @@
     return action;
   }
 
-  function createManualPager(sectionDef, indexProduct, productLabel) {
+  function createManualPager(sectionDef, productLabel) {
     var pager = el('nav', 'manuals-pager');
     pager.setAttribute('aria-label', 'Navegación del manual');
 
@@ -545,11 +536,10 @@
       transitionToModels(sectionDef, event.currentTarget);
     }));
 
-    var nextProduct = nextManualProduct(indexProduct);
-    if (nextProduct) {
-      var nextProductLabel = productName(nextProduct);
-      pager.appendChild(createPagerAction('next', nextProductLabel, 'Ver manual de ' + nextProductLabel, function (event) {
-        transitionProduct(nextProduct, event.currentTarget);
+    var nextSection = nextManualSection(sectionDef);
+    if (nextSection) {
+      pager.appendChild(createPagerAction('next', nextSection.label, 'Ver sección ' + nextSection.label + ' de ' + productLabel, function (event) {
+        transitionManualSection(nextSection, event.currentTarget);
       }));
     }
 
@@ -820,7 +810,7 @@
     }
 
     var wrap = el('div', 'manuals-content');
-    var pager = createManualPager(sectionDef, indexProduct, productLabel);
+    var pager = createManualPager(sectionDef, productLabel);
 
     wrap.appendChild(pager);
 
