@@ -138,17 +138,10 @@
     return GUIDE_SECTIONS[0];
   }
 
-  function nextGuideSection(sectionDef) {
-    var wanted = normalize(sectionDef && sectionDef.id);
-    for (var i = 0; i < GUIDE_SECTIONS.length; i++) {
-      if (GUIDE_SECTIONS[i].id === wanted) {
-        return GUIDE_SECTIONS[i + 1] || GUIDE_SECTIONS[0];
-      }
+  function setDrawerHeader(eyebrow, title, mode) {
+    if (els.manualsDrawer) {
+      els.manualsDrawer.classList.toggle('manuals-drawer--product', mode === 'product');
     }
-    return GUIDE_SECTIONS[0];
-  }
-
-  function setDrawerHeader(eyebrow, title) {
     if (els.eyebrow) els.eyebrow.textContent = eyebrow || 'Guías BESLOCK';
     if (els.title) els.title.textContent = title || 'Manuales y ayuda';
   }
@@ -173,8 +166,27 @@
 
     var frame = 0;
 
+    function updatePagerMetrics() {
+      var content = pager.closest ? pager.closest('.manuals-content') : null;
+      if (!content || !els.body.getBoundingClientRect) return;
+
+      var bodyRect = els.body.getBoundingClientRect();
+      var contentRect = content.getBoundingClientRect();
+      var bodyStyle = window.getComputedStyle ? window.getComputedStyle(els.body) : null;
+      var fullWidth = els.body.clientWidth || bodyRect.width;
+      var fullShift = bodyRect.left - contentRect.left;
+      var contentInset = Math.max(0, contentRect.left - bodyRect.left);
+      var stickyTop = -1 * (bodyStyle ? parseFloat(bodyStyle.paddingTop) || 0 : 0);
+
+      pager.style.setProperty('--manuals-pager-full-width', Math.max(0, Math.round(fullWidth)) + 'px');
+      pager.style.setProperty('--manuals-pager-full-shift', Math.round(fullShift) + 'px');
+      pager.style.setProperty('--manuals-pager-content-inset', Math.round(contentInset) + 'px');
+      pager.style.setProperty('--manuals-pager-sticky-top', Math.round(stickyTop) + 'px');
+    }
+
     function update() {
       frame = 0;
+      updatePagerMetrics();
       pager.classList.toggle('manuals-pager--compact', els.body.scrollTop > 18);
     }
 
@@ -184,8 +196,10 @@
     }
 
     els.body.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
     state.pagerCleanup = function () {
       els.body.removeEventListener('scroll', requestUpdate);
+      window.removeEventListener('resize', requestUpdate);
       if (!frame) return;
       if (window.cancelAnimationFrame) {
         window.cancelAnimationFrame(frame);
@@ -280,7 +294,7 @@
 
   function closeManualsDrawer() {
     if (!els.manualsDrawer) return;
-    els.manualsDrawer.classList.remove('is-open');
+    els.manualsDrawer.classList.remove('is-open', 'manuals-drawer--product');
     els.manualsDrawer.setAttribute('aria-hidden', 'true');
     if (els.mobileDrawer) els.mobileDrawer.classList.remove('manuals-sheet-open');
     if (!els.mobileDrawer || !els.mobileDrawer.classList.contains('is-open')) {
@@ -354,6 +368,35 @@
 
   function productName(product) {
     return product && (product.display_name || product.name || product.title || product.slug) || 'Producto BESLOCK';
+  }
+
+  function productSlug(product) {
+    return normalize(product && (product.slug || product.display_name || product.name || product.title));
+  }
+
+  function indexedProducts() {
+    if (state.index && Array.isArray(state.index.products) && state.index.products.length) {
+      return state.index.products;
+    }
+    return FALLBACK_PRODUCTS;
+  }
+
+  function nextManualProduct(indexProduct) {
+    var products = indexedProducts();
+    if (!indexProduct || !products.length) return null;
+
+    var currentSlug = productSlug(indexProduct);
+    var currentIndex = -1;
+
+    for (var i = 0; i < products.length; i++) {
+      if (productSlug(products[i]) === currentSlug) {
+        currentIndex = i;
+        break;
+      }
+    }
+
+    if (currentIndex === -1 || products.length < 2) return null;
+    return products[(currentIndex + 1) % products.length];
   }
 
   function escapeRegExp(value) {
@@ -444,18 +487,19 @@
     openModels(sectionDef);
   }
 
-  function transitionGuideSection(sectionDef, trigger) {
-    if (prefersReducedMotion() || !els.manualsDrawer) {
-      openGuideSection(sectionDef);
+  function transitionProduct(indexProduct, trigger) {
+    if (!indexProduct || !state.selectedSection) return;
+
+    if (prefersReducedMotion() || !trigger) {
+      openProduct(indexProduct);
       return;
     }
 
-    var direction = trigger && trigger.classList.contains('manuals-pager__action--prev') ? 'prev' : 'next';
-    playPagerLeave(trigger, direction);
+    playPagerLeave(trigger, 'next');
 
     window.setTimeout(function () {
-      state.pendingPagerEnterDirection = direction;
-      openGuideSection(sectionDef);
+      state.pendingPagerEnterDirection = 'next';
+      openProduct(indexProduct);
 
       window.setTimeout(function () {
         setPagerActionState(trigger, false);
@@ -464,7 +508,7 @@
   }
 
   function createBackToModelsButton(sectionDef, className) {
-    var button = el('button', className || 'manuals-back-button', '← Volver a modelos');
+    var button = el('button', className || 'manuals-back-button', '← Otros modelos');
     button.type = 'button';
     button.addEventListener('click', function () {
       state.selectedProduct = null;
@@ -493,18 +537,19 @@
     return action;
   }
 
-  function createManualPager(sectionDef, productLabel) {
+  function createManualPager(sectionDef, indexProduct, productLabel) {
     var pager = el('nav', 'manuals-pager');
     pager.setAttribute('aria-label', 'Navegación del manual');
 
-    pager.appendChild(createPagerAction('prev', 'Volver a modelos', 'Volver a elegir modelo', function (event) {
+    pager.appendChild(createPagerAction('prev', 'Otros modelos', 'Volver a elegir modelo', function (event) {
       transitionToModels(sectionDef, event.currentTarget);
     }));
 
-    var nextSection = nextGuideSection(sectionDef);
-    if (nextSection) {
-      pager.appendChild(createPagerAction('next', nextSection.label, 'Ver ' + nextSection.label + ' de ' + productLabel, function (event) {
-        transitionGuideSection(nextSection, event.currentTarget);
+    var nextProduct = nextManualProduct(indexProduct);
+    if (nextProduct) {
+      var nextProductLabel = productName(nextProduct);
+      pager.appendChild(createPagerAction('next', nextProductLabel, 'Ver manual de ' + nextProductLabel, function (event) {
+        transitionProduct(nextProduct, event.currentTarget);
       }));
     }
 
@@ -580,7 +625,7 @@
     }
 
     state.selectedProduct = indexProduct;
-    setDrawerHeader(productName(indexProduct), state.selectedSection.label);
+    setDrawerHeader(productName(indexProduct), state.selectedSection.label, 'product');
     setBody(renderState('Cargando manual', 'Leyendo el contenido del producto seleccionado.'));
 
     loadProduct(indexProduct).then(function (productData) {
@@ -759,7 +804,7 @@
     }
 
     var productLabel = product.display_name || productName(indexProduct);
-    setDrawerHeader(productLabel + ' · ' + sectionDef.label, sections.length > 1 ? sectionDef.label : (sections[0].title || sectionDef.label));
+    setDrawerHeader(productLabel, sectionDef.label, 'product');
 
     var allGroups = [];
     sections.forEach(function (section) {
@@ -775,10 +820,8 @@
     }
 
     var wrap = el('div', 'manuals-content');
-    var desktopBack = createBackToModelsButton(sectionDef, 'manuals-back-button manuals-back-button--desktop');
-    var pager = createManualPager(sectionDef, productLabel);
+    var pager = createManualPager(sectionDef, indexProduct, productLabel);
 
-    wrap.appendChild(desktopBack);
     wrap.appendChild(pager);
 
     allGroups.forEach(function (group) {
@@ -931,6 +974,36 @@
     return { intro: intro, groups: groups };
   }
 
+  function hasLabeledListItems(items) {
+    if (!Array.isArray(items) || items.length < 2) return false;
+
+    var labeled = items.filter(function (item) {
+      return /^[^:]{2,42}:\s+\S/.test(String(item || '').trim());
+    }).length;
+
+    return labeled >= Math.ceil(items.length * 0.6);
+  }
+
+  function shouldRenderOrderedList(block) {
+    if (block && block.ordered) return true;
+    return block && hasLabeledListItems(block.items);
+  }
+
+  function appendListItem(list, item) {
+    var node = document.createElement('li');
+    var value = String(item || '').trim();
+    var labeled = value.match(/^([^:]{2,42}:)\s+(.+)$/);
+
+    if (labeled) {
+      node.appendChild(el('span', 'manuals-list__label', labeled[1]));
+      node.appendChild(text(' ' + labeled[2]));
+    } else {
+      node.appendChild(text(value));
+    }
+
+    list.appendChild(node);
+  }
+
   function appendBlockText(target, blocks) {
     blocks.forEach(function (block) {
       if (!block) return;
@@ -938,9 +1011,10 @@
         target.appendChild(el('p', '', block.text));
       }
       if (block.type === 'list' && Array.isArray(block.items)) {
-        var list = document.createElement(block.ordered ? 'ol' : 'ul');
+        var list = document.createElement(shouldRenderOrderedList(block) ? 'ol' : 'ul');
+        list.className = 'manuals-list';
         block.items.forEach(function (item) {
-          list.appendChild(el('li', '', item));
+          appendListItem(list, item);
         });
         target.appendChild(list);
       }

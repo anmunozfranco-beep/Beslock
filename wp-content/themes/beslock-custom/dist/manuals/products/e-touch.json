@@ -2,6 +2,1535 @@
   "product": {
     "slug": "e-touch",
     "display_name": "e-Touch",
+    "profile": {
+      "identity": {
+        "display_name": "e-Touch",
+        "beslock_name": "e-Touch",
+        "oem_model": "e-Touch genérico",
+        "oem_related_names": "",
+        "product_type": "Cerradura inteligente tipo manija",
+        "lock_architecture": "rim_lock_integrated_mechanism",
+        "main_image": "e-Touch/e-Touch.png",
+        "variants": [],
+        "primary_use": "Puertas interiores, oficinas, habitaciones y accesos residenciales compatibles",
+        "source_file": "perfil_producto_e-touch.md"
+      },
+      "commercial": {
+        "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+        "commercial_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. La identidad visual base presenta manija negra horizontal, roseta circular, lector de huella en el extremo de la manija exterior, teclado numérico sobre la manija, aro luminoso verde y manija interior con botón o interruptor físico.",
+        "key_value_proposition": "",
+        "value_bullets": [],
+        "commercial_positioning": "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento. Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial.",
+        "emotional_angle": "control, privacidad"
+      },
+      "positioning": {
+        "summary": "e-Touch se posiciona para controlar accesos interiores con privacidad y flujo moderado, donde se necesita una solución compacta y fácil de usar sin llegar a un sistema de control de acceso pesado. Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados. Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento. Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial. - La imagen fija la geometría visual base del producto BESLOCK. - Las referencias N191, N191A, N191B y CS-9 se concilian como un solo producto genérico. Sirven para confirmar funciones, pero no para construir variantes dentro del manual. - Los manuales tecnico parecen compartir la misma base operativa. El OCR extrae el mismo flujo general de instalación, administración, app, modo paso libre, emergencia y restauración. - La caja BESLOCK está en español y confirma el enfoque comercial: 5 formas de acceso, 100 usuarios, modo paso libre, PIN superdiscreto, USB-C, 4 pilas AAA y puertas de 30-50 mm. - El manual tecnico confirma 100 huellas, 100 claves, 100 tarjetas y cuatro pilas AAA, pero menciona puerta de 3,5 a 6,5 cm y micro-USB. - Para el manual final, usar una redacción conservadora donde hay conflicto: puerto exterior de energía de emergencia y puertas compatibles según instalación. - No mezclar este producto con e-Flex, e-Prime, e-Nova, e-Orbit ni e-Shield. e-Touch es una cerradura de manija con teclado sobre la palanca.",
+        "differentiators": [
+          "Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial.",
+          "- Para el manual final, usar una redacción conservadora donde hay conflicto: puerto exterior de energía de emergencia y puertas compatibles según instalación."
+        ],
+        "commercial_promise": [
+          "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Touch se posiciona para controlar accesos interiores con privacidad y flujo moderado, donde se necesita una solución compacta y fácil de usar sin llegar a un sistema de control de acceso pesado. Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados.",
+        "primary_problem_solved": "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento.",
+        "target_user": "",
+        "target_environment": [
+          "oficinas",
+          "puertas interiores"
+        ],
+        "commercial_positioning": "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento. Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial.",
+        "emotional_angle": "control, privacidad",
+        "practical_value": [
+          "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento."
+        ]
+      },
+      "target_context": {
+        "environments": [
+          "oficinas",
+          "puertas interiores"
+        ],
+        "use_cases": [],
+        "installation_context": "Cerradura inteligente tipo manija"
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App móvil",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Control remoto",
+            "status": "Mencionado en íconos comerciales, validar si aplica"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "security_features": [
+          "Manija interior.",
+          "Botón o interruptor físico real sobre o junto a la manija interior.",
+          "El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual.",
+          "No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia.",
+          "No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración.",
+          "permitir que el usuario ingrese números antes o después de su clave real,",
+          "confirmar con #,",
+          "evitar que otra persona identifique fácilmente la clave.",
+          "restringir aperturas desde el exterior,",
+          "mantener control desde el interior,",
+          "permitir apertura por administrador según traducción tecnico."
+        ],
+        "comfort_features": [
+          "Para abrir con huella, colocar el dedo registrado en el lector circular del extremo de la manija exterior y accionar la manija cuando confirme.",
+          "Para abrir con clave/PIN, despertar el teclado integrado en la manija, ingresar la clave registrada y confirmar con #.",
+          "Para PIN con privacidad, escribir números antes y después de la clave real; la cerradura reconoce la clave correcta dentro de la secuencia.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura sobre la manija.",
+          "Para abrir desde app, usar Tuya Smart / Smart Life según la versión comercial y mantener el teléfono dentro del rango requerido.",
+          "El modo paso libre se activa o cancela con el botón/interruptor físico interior real; no mover esta función a un control inventado.",
+          "El bloqueo interior restringe aperturas desde el exterior cuando se requiere mayor control desde dentro.",
+          "La llave mecánica es respaldo y debe guardarse fuera del espacio protegido.",
+          "Si las pilas se agotan, abrir con llave mecánica o alimentar temporalmente desde el puerto exterior de energía de emergencia; usar esa redacción hasta confirmar si el conector final es USB-C o micro-USB.",
+          "Ante luz roja o aviso de baja batería, cambiar las cuatro pilas AAA cuanto antes. El tecnico menciona cerca de 50 usos restantes.",
+          "mantener presionado el botón interior de modo abierto durante 1 segundo,",
+          "ingresar una secuencia desde el teclado y verificar administrador, según manual,",
+          "el sistema confirma con sonido.",
+          "repetir el método de activación,",
+          "presionar #,",
+          "abrir con huella o clave registrada,",
+          "usar el botón interior.",
+          "abrir desde app dentro del rango Bluetooth,",
+          "gestión de miembros,",
+          "permisos por usuario,",
+          "huellas,",
+          "claves,",
+          "claves temporales,",
+          "registros de apertura,"
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App móvil",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Control remoto",
+            "status": "Mencionado en íconos comerciales, validar si aplica"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "Clave / PIN",
+                "value": "Confirmado por manual, caja y teclado físico"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado por manual, caja y material visual"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "App móvil",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Confirmado por flujo de app"
+              },
+              {
+                "label": "Control remoto",
+                "value": "Mencionado en íconos comerciales, validar si aplica"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "La caja BESLOCK lo llama Ingreso de clave en modo superdiscreto. El material tecnico lo llama peep-proof function.",
+        "paragraphs": [
+          "La caja BESLOCK lo llama Ingreso de clave en modo superdiscreto. El material tecnico lo llama peep-proof function.",
+          "Uso recomendado:",
+          "Nota editorial: llamarlo PIN con privacidad, como en los otros manuales BESLOCK.",
+          "El material visual menciona Anti-lock switch button. El manual lo asocia al botón o interruptor interior.",
+          "Uso probable:",
+          "Nota editorial: validar comportamiento exacto antes de afirmar si todos los usuarios quedan bloqueados o solo algunos métodos."
+        ],
+        "bullets": [
+          "Manija interior.",
+          "Botón o interruptor físico real sobre o junto a la manija interior.",
+          "El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual.",
+          "No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia.",
+          "No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración.",
+          "permitir que el usuario ingrese números antes o después de su clave real,",
+          "confirmar con #,",
+          "evitar que otra persona identifique fácilmente la clave.",
+          "restringir aperturas desde el exterior,",
+          "mantener control desde el interior,",
+          "permitir apertura por administrador según traducción tecnico."
+        ],
+        "tables": [],
+        "features": [
+          "Manija interior.",
+          "Botón o interruptor físico real sobre o junto a la manija interior.",
+          "El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual.",
+          "No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia.",
+          "No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración.",
+          "permitir que el usuario ingrese números antes o después de su clave real,",
+          "confirmar con #,",
+          "evitar que otra persona identifique fácilmente la clave.",
+          "restringir aperturas desde el exterior,",
+          "mantener control desde el interior,",
+          "permitir apertura por administrador según traducción tecnico."
+        ]
+      },
+      "installation": {
+        "summary": "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+        "paragraphs": [
+          "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+          "Datos de puerta:",
+          "Nota editorial: usar puertas compatibles según plantilla de instalación hasta validar rango final BESLOCK. Si se usa una cifra, priorizar la cifra de caja solo si aplica al SKU final que se venderá."
+        ],
+        "bullets": [
+          "Manija exterior.",
+          "Manija interior.",
+          "Eje cuadrado.",
+          "Tornillos de fijación.",
+          "Tubos o postes de conexión.",
+          "Pestillo / cuerpo de cierre.",
+          "Recibidor o placa del marco.",
+          "Llaves mecánicas.",
+          "Tarjetas IC.",
+          "Pilas AAA.",
+          "paso del eje cuadrado y cable,",
+          "elección de tornillos según grosor de puerta,",
+          "instalación de pilas,",
+          "conexión de la placa o circuito,",
+          "instalación del pestillo,",
+          "fijación de manija,",
+          "orientación correcta de la lengüeta o pestillo,",
+          "pruebas antes de cerrar.",
+          "Manual tecnico: puertas de más de 3,5 cm hasta 6,5 cm.",
+          "Caja BESLOCK: instalación directa en puertas de 30 a 50 mm."
+        ],
+        "tables": [],
+        "installation_type": "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+        "door_type": "Cerradura inteligente tipo manija",
+        "door_thickness": "Manual: 35-65 mm; caja: 30-50 mm",
+        "opening_direction": "",
+        "compatibility": [
+          "El manual incluye: - paso del eje cuadrado y cable, - elección de tornillos según grosor de puerta, - instalación de pilas, - conexión de la placa o circuito, - instalación del pestillo, - fijación de manija, - orientación correcta de la lengüeta o pestillo, - pruebas antes de cerrar.",
+          "Datos de puerta: - Manual tecnico: puertas de más de 3,5 cm hasta 6,5 cm.",
+          "- Caja BESLOCK: instalación directa en puertas de 30 a 50 mm.",
+          "Nota editorial: usar puertas compatibles según plantilla de instalación hasta validar rango final BESLOCK."
+        ]
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+        "paragraphs": [
+          "La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+          "Nota de fuente: este bloque concilia manuales N191/N191A/N191B/CS-9, OCR disponible y caja BESLOCK. No incluir timbre, video, cámara ni controles interiores que no aparezcan en el True Source.",
+          "El material lo llama Normally Open Mode, Always on mode, Normal Open o modo paso libre.",
+          "Formas observadas para activar:",
+          "Formas observadas para cancelar:",
+          "Nota editorial: en el manual final, explicar esta función con prudencia y recomendar volver al modo normal cuando ya no se necesite acceso frecuente."
+        ],
+        "bullets": [
+          "Para abrir con huella, colocar el dedo registrado en el lector circular del extremo de la manija exterior y accionar la manija cuando confirme.",
+          "Para abrir con clave/PIN, despertar el teclado integrado en la manija, ingresar la clave registrada y confirmar con #.",
+          "Para PIN con privacidad, escribir números antes y después de la clave real; la cerradura reconoce la clave correcta dentro de la secuencia.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura sobre la manija.",
+          "Para abrir desde app, usar Tuya Smart / Smart Life según la versión comercial y mantener el teléfono dentro del rango requerido.",
+          "El modo paso libre se activa o cancela con el botón/interruptor físico interior real; no mover esta función a un control inventado.",
+          "El bloqueo interior restringe aperturas desde el exterior cuando se requiere mayor control desde dentro.",
+          "La llave mecánica es respaldo y debe guardarse fuera del espacio protegido.",
+          "Si las pilas se agotan, abrir con llave mecánica o alimentar temporalmente desde el puerto exterior de energía de emergencia; usar esa redacción hasta confirmar si el conector final es USB-C o micro-USB.",
+          "Ante luz roja o aviso de baja batería, cambiar las cuatro pilas AAA cuanto antes. El tecnico menciona cerca de 50 usos restantes.",
+          "mantener presionado el botón interior de modo abierto durante 1 segundo,",
+          "ingresar una secuencia desde el teclado y verificar administrador, según manual,",
+          "el sistema confirma con sonido.",
+          "repetir el método de activación,",
+          "presionar #,",
+          "abrir con huella o clave registrada,",
+          "usar el botón interior."
+        ],
+        "tables": []
+      },
+      "configuration": {
+        "summary": "Nota editorial: para el manual final, conviene decir hasta 100 usuarios o hasta 100 registros por método, según se confirme la lógica comercial final. El manual tecnico separa 100 huellas, 100 claves y 100 tarjetas; la caja simplifica a 100 usuarios.",
+        "paragraphs": [
+          "Nota editorial: para el manual final, conviene decir hasta 100 usuarios o hasta 100 registros por método, según se confirme la lógica comercial final. El manual tecnico separa 100 huellas, 100 claves y 100 tarjetas; la caja simplifica a 100 usuarios.",
+          "El manual indica que la configuración local se hace desde la tecla de configuración ubicada en la manija interior o en un orificio del lado interior.",
+          "Funciones del botón de configuración observadas:",
+          "Registro inicial observado:",
+          "Advertencia editorial: el OCR es imperfecto. El flujo exacto debe revisarse contra el video o el PDF renderizado antes de convertirlo en pasos finales."
+        ],
+        "bullets": [
+          "pulsación corta: agregar administrador o usuario,",
+          "pulsación larga: entrar a inicialización / restauración sin verificar administrador,",
+          "botón de apertura o modo abierto: activar o cancelar modo paso libre,",
+          "5 segundos separan pulsación corta de pulsación larga según OCR."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Huellas",
+              "value": "100"
+            },
+            {
+              "label": "Claves / contraseñas",
+              "value": "100"
+            },
+            {
+              "label": "Tarjetas",
+              "value": "100"
+            },
+            {
+              "label": "Usuarios comerciales",
+              "value": "Caja BESLOCK: 100 usuarios"
+            },
+            {
+              "label": "Administradores",
+              "value": "Manual: los primeros 3 usuarios actúan como administradores"
+            },
+            {
+              "label": "Estado inicial",
+              "value": "Si no hay usuarios registrados, cualquier huella puede abrir"
+            },
+            {
+              "label": "Clave inicial tras restaurar",
+              "value": "123456 según Q&A tecnico"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "Nota de conciliación:",
+        "paragraphs": [
+          "Nota de conciliación:"
+        ],
+        "bullets": [
+          "Alimentación principal: 4 pilas AAA alcalinas de 1,5 V.",
+          "La caja BESLOCK menciona Funciona con 4 pilas alcalinas AAA.",
+          "El manual recomienda usar pilas alcalinas para evitar daños por fugas.",
+          "El manual indica reemplazo cada 2 años como buena práctica.",
+          "La cerradura avisa batería baja con luz roja.",
+          "Después de la alerta de batería baja, el material menciona energía suficiente para aproximadamente 50 usos.",
+          "Si las pilas se agotan, se puede abrir con llave mecánica o alimentar temporalmente desde el puerto exterior.",
+          "Caja BESLOCK: USB-C.",
+          "Manual tecnico: micro-USB.",
+          "Manual final: usar puerto exterior de energía de emergencia hasta confirmar con la unidad física."
+        ],
+        "tables": [],
+        "battery_type": "4 pilas AAA alcalinas de 1,5 V",
+        "emergency_power": "Puerto exterior USB; tipo exacto pendiente de validar"
+      },
+      "app_connectivity": {
+        "summary": "El manual menciona Tuya Smart y también indica que toma Smart Life como ejemplo para explicar la app y la cerradura. El flujo observado es:",
+        "paragraphs": [
+          "El manual menciona Tuya Smart y también indica que toma Smart Life como ejemplo para explicar la app y la cerradura. El flujo observado es:",
+          "Funciones de app observadas:",
+          "Nota editorial: para el manual final, se puede presentar la app como adicional después de la configuración local. El producto puede operar con huella, clave, tarjeta y llave sin depender de la app, pero la app facilita gestión y registros."
+        ],
+        "bullets": [
+          "abrir desde app dentro del rango Bluetooth,",
+          "gestión de miembros,",
+          "permisos por usuario,",
+          "huellas,",
+          "claves,",
+          "claves temporales,",
+          "registros de apertura,",
+          "eliminar o desvincular dispositivo,",
+          "restaurar fábrica cuando el teléfono está conectado por Bluetooth."
+        ],
+        "tables": [],
+        "app_status": "Tuya Smart / Smart Life",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Tipo",
+              "value": "Cerradura inteligente tipo manija"
+            },
+            {
+              "label": "Modelo final BESLOCK",
+              "value": "e-Touch genérico"
+            },
+            {
+              "label": "Serie tecnico de apoyo",
+              "value": "N191"
+            },
+            {
+              "label": "Alimentación",
+              "value": "4 pilas AAA alcalinas"
+            },
+            {
+              "label": "Huellas",
+              "value": "100"
+            },
+            {
+              "label": "Claves",
+              "value": "100"
+            },
+            {
+              "label": "Tarjetas",
+              "value": "100"
+            },
+            {
+              "label": "App",
+              "value": "Tuya Smart / Smart Life"
+            },
+            {
+              "label": "Conectividad",
+              "value": "Bluetooth"
+            },
+            {
+              "label": "Clave inicial",
+              "value": "123456"
+            },
+            {
+              "label": "Temperatura",
+              "value": "Caja: -20 °C a 60 °C"
+            },
+            {
+              "label": "Grosor de puerta",
+              "value": "Manual: 35-65 mm; caja: 30-50 mm"
+            },
+            {
+              "label": "Métodos de acceso",
+              "value": "Huella, clave, tarjeta, llave y app"
+            }
+          ]
+        ],
+        "highlights": [
+          {
+            "label": "Tipo",
+            "value": "Cerradura inteligente tipo manija"
+          },
+          {
+            "label": "Modelo final BESLOCK",
+            "value": "e-Touch genérico"
+          },
+          {
+            "label": "Serie tecnico de apoyo",
+            "value": "N191"
+          },
+          {
+            "label": "Alimentación",
+            "value": "4 pilas AAA alcalinas"
+          },
+          {
+            "label": "Huellas",
+            "value": "100"
+          },
+          {
+            "label": "Claves",
+            "value": "100"
+          },
+          {
+            "label": "Tarjetas",
+            "value": "100"
+          },
+          {
+            "label": "App",
+            "value": "Tuya Smart / Smart Life"
+          },
+          {
+            "label": "Conectividad",
+            "value": "Bluetooth"
+          },
+          {
+            "label": "Clave inicial",
+            "value": "123456"
+          },
+          {
+            "label": "Temperatura",
+            "value": "Caja: -20 °C a 60 °C"
+          },
+          {
+            "label": "Grosor de puerta",
+            "value": "Manual: 35-65 mm; caja: 30-50 mm"
+          },
+          {
+            "label": "Métodos de acceso",
+            "value": "Huella, clave, tarjeta, llave y app"
+          }
+        ],
+        "materials": [],
+        "finish": "",
+        "capacity_notes": [
+          "## Identificación consolidada | Campo | Información | |---|---| | Nombre BESLOCK | e-Touch | | Modelo final | e-Touch genérico | | Serie tecnico de apoyo | N191 | | Referencias tecnico de apoyo | N191, N191A, N191B, CS-9 | | Tipo de producto | Cerradura inteligente tipo manija | | Imagen principal | | | Uso principal | Puertas interiores, oficinas, habitaciones y accesos residenciales compatibles | | Métodos de apertura | Huella, clave, tarjeta IC, llave mecánica y app | | App observada | Tuya Smart / Smart Life | | Conectividad observada | Bluetooth | | Alimentación principal | 4 pilas AAA alcalinas de 1,5 V | | Energía de emergencia | Puerto exterior USB; tipo exacto pendiente de validar | | Capacidad funcional tecnico | 100 huellas, 100 claves y 100 tarjetas | | Capacidad comercial BESLOCK | Caja: 5 Accesos • 100 Usuarios | | Grosor de puerta | Manual: 3,5 a 6,5 cm; caja: 30 a 50 mm | | Funciones adicionales | PIN de privacidad, modo paso libre, bloqueo interior / anti-lock, registros en app | ## Fuentes tecnico revisadas ### Documentos - e-Touch/N191系列/说明书/N191A user manual.pdf - e-Touch/N191系列/说明书/N191B说明书.pdf - e-Touch/N191系列/说明书/CS9-N191A说明书/CS-9说明书.pdf - e-Touch/N191系列/彩盒图纸/N197-N191B BESLOCK -COLOR BOX-20251108.pdf ### Texto extraído y OCR - e-Touch/N191系列/extracted_text/N197-N191B BESLOCK -COLOR BOX-20251108.txt - e-Touch/N191系列/ocr_text/N191A_user_manual-1.txt - e-Touch/N191系列/ocr_text/N191A_user_manual-2.txt - e-Touch/N191系列/ocr_text/N191B说明书-1.txt - e-Touch/N191系列/ocr_text/N191B说明书-2.txt - e-Touch/N191系列/ocr_text/CS-9说明书-1.txt - e-Touch/N191系列/ocr_text/CS-9说明书-2.txt ### Imágenes y video - - - - - - e-Touch/N191系列/产品实拍图/DSC_0578.zip - Videos de operación en e-Touch/N191系列/产品视频/ - Hoja de revisión creada: - Hoja de páginas de manual creada: - Hoja de fotos reales creada: ## Criterio de conciliación - La imagen fija la geometría visual base del producto BESLOCK.",
+          "- La caja BESLOCK está en español y confirma el enfoque comercial: 5 formas de acceso, 100 usuarios, modo paso libre, PIN superdiscreto, USB-C, 4 pilas AAA y puertas de 30-50 mm.",
+          "- El manual tecnico confirma 100 huellas, 100 claves, 100 tarjetas y cuatro pilas AAA, pero menciona puerta de 3,5 a 6,5 cm y micro-USB.",
+          "Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados.",
+          "Pueden confirmar capacidades, secuencias de configuración, app, restauración, energía y señales de operación.",
+          "- Tarjetas IC.",
+          "## Usuarios y capacidades | Campo | Información encontrada | |---|---| | Huellas | 100 | | Claves / contraseñas | 100 | | Tarjetas | 100 | | Usuarios comerciales | Caja BESLOCK: 100 usuarios | | Administradores | Manual: los primeros 3 usuarios actúan como administradores | | Estado inicial | Si no hay usuarios registrados, cualquier huella puede abrir | | Clave inicial tras restaurar | 123456 según Q&A tecnico | Nota editorial: para el manual final, conviene decir hasta 100 usuarios o hasta 100 registros por método, según se confirme la lógica comercial final.",
+          "El manual tecnico separa 100 huellas, 100 claves y 100 tarjetas; la caja simplifica a 100 usuarios.",
+          "Los primeros 3 registros quedan como administradores.",
+          "Funciones de app observadas: - abrir desde app dentro del rango Bluetooth, - gestión de miembros, - permisos por usuario, - huellas, - claves, - claves temporales, - registros de apertura, - eliminar o desvincular dispositivo, - restaurar fábrica cuando el teléfono está conectado por Bluetooth.",
+          "Nota editorial: validar comportamiento exacto antes de afirmar si todos los usuarios quedan bloqueados o solo algunos métodos.",
+          "Advertencia editorial: restaurar fábrica borra huellas, claves, tarjetas, usuarios y ajustes.",
+          "## Especificaciones técnicas consolidadas | Campo | Información | |---|---| | Tipo | Cerradura inteligente tipo manija | | Modelo final BESLOCK | e-Touch genérico | | Serie tecnico de apoyo | N191 | | Alimentación | 4 pilas AAA alcalinas | | Huellas | 100 | | Claves | 100 | | Tarjetas | 100 | | App | Tuya Smart / Smart Life | | Conectividad | Bluetooth | | Clave inicial | 123456 | | Temperatura | Caja: -20 °C a 60 °C | | Grosor de puerta | Manual: 35-65 mm; caja: 30-50 mm | | Métodos de acceso | Huella, clave, tarjeta, llave y app | ## Reglas editoriales para el manual - Priorizar configuración local antes de app, porque el producto puede usarse sin depender de la app.",
+          "- Si la capacidad visible debe decir 100 usuarios o diferenciar 100 huellas, 100 claves y 100 tarjetas.",
+          "Agregar usuarios por huella, clave y tarjeta."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "Mantener siempre: - manija horizontal negra, - roseta circular, - lector de huella circular en el extremo de la manija exterior, - aro luminoso alrededor del lector, - teclado táctil integrado sobre la manija, - tecla #, - área de tarjeta IC sobre la manija, - acceso de llave mecánica, - puerto exterior de energía de emergencia, - manija interior con botón o interruptor físico, - alimentación por baterías en el conjunto interior, sin inventar un compartimento visible si no aparece en la referencia. Evitar siempre: - pomo redondo tipo e-Nova, - panel vertical tipo e-Prime/e-Orbit, - cerradura de sobreponer tipo e-Shield, - mecanismo multipunto, - cámara, - reconocimiento facial, - timbre, - pantalla de video, - caja rectangular de sobreponer, - botón SET expuesto en la cara exterior. Las carpetas y manuales N191, N191A, N191B y CS-9 se usan como evidencia funcional. Pueden confirmar capacidades, secuencias de configuración, app, restauración, energía y señales de operación. Para contenido visible al usuario: - no presentar variantes, - no crear comparaciones entre referencias tecnico, - no mezclar geometrías visuales distintas, - no usar nombres N191, N191A, N191B o CS-9 como modelo final, - representar siempre el producto como e-Touch genérico con base en. - Manija exterior. - Lector de huella. - Aro luminoso. - Teclado táctil. - Tecla #. - Área de lectura de tarjeta IC. - Acceso de llave mecánica. - Puerto exterior de energía de emergencia. - Manija interior. - Botón o interruptor físico real sobre o junto a la manija interior. - El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual. - No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia. - No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración. - Manija exterior. - Manija interior. - Eje cuadrado. - Tornillos de fijación. - Tubos o postes de conexión. - Pestillo / cuerpo de cierre. - Recibidor o placa del marco. - Llaves mecánicas. - Tarjetas IC. - Pilas AAA. Usar tres referencias base: 1., como referencia obligatoria y dominante. 2., solo como apoyo para detalles funcionales. 3. o el mejor JPG disponible del producto, solo como apoyo material. Control obligatorio: - mantener manija horizontal negra, - mantener lector de huella circular en el extremo de la manija exterior, - mantener teclado táctil sobre la manija, - mantener roseta circular como en la imagen entregada, - usar el botón/interruptor físico real sobre o cerca de la manija interior para paso libre, bloqueo interior y escenas de configuración local, - no generar variantes N191, N191A, N191B ni CS-9, - no cambiar la geometría para seguir una referencia tecnico secundaria, - no inventar panel vertical, - no transformar en pomo, - no inventar alojamiento visible de baterías, roseta abierta, mecanismo expuesto, slider de bloqueo, segundo botón ni panel de control adicional, - no mostrar cámara, timbre ni reconocimiento facial, - no usar logos Tuya o Smart Life en imágenes finales salvo decisión explícita. El verde de enriquecimiento visual debe seguir #034526. Si hay texto dentro de imágenes, debe estar en español correcto.",
+        "maintain": [
+          "manija horizontal negra,",
+          "roseta circular,",
+          "lector de huella circular en el extremo de la manija exterior,",
+          "aro luminoso alrededor del lector,",
+          "teclado táctil integrado sobre la manija,",
+          "tecla #,",
+          "área de tarjeta IC sobre la manija,",
+          "acceso de llave mecánica,",
+          "puerto exterior de energía de emergencia,",
+          "manija interior con botón o interruptor físico,",
+          "alimentación por baterías en el conjunto interior, sin inventar un compartimento visible si no aparece en la referencia."
+        ],
+        "avoid": [
+          "pomo redondo tipo e-Nova,",
+          "panel vertical tipo e-Prime/e-Orbit,",
+          "cerradura de sobreponer tipo e-Shield,",
+          "mecanismo multipunto,",
+          "cámara,",
+          "reconocimiento facial,",
+          "timbre,",
+          "pantalla de video,",
+          "caja rectangular de sobreponer,",
+          "botón SET expuesto en la cara exterior.",
+          "no presentar variantes,",
+          "no crear comparaciones entre referencias tecnico,",
+          "no mezclar geometrías visuales distintas,",
+          "no usar nombres N191, N191A, N191B o CS-9 como modelo final,",
+          "representar siempre el producto como e-Touch genérico con base en.",
+          "Manija exterior.",
+          "Lector de huella.",
+          "Aro luminoso.",
+          "Teclado táctil.",
+          "Tecla #.",
+          "Área de lectura de tarjeta IC.",
+          "Acceso de llave mecánica.",
+          "Puerto exterior de energía de emergencia.",
+          "Manija interior.",
+          "Botón o interruptor físico real sobre o junto a la manija interior.",
+          "El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual.",
+          "No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia.",
+          "No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración.",
+          "Eje cuadrado.",
+          "Tornillos de fijación.",
+          "Tubos o postes de conexión.",
+          "Pestillo / cuerpo de cierre.",
+          "Recibidor o placa del marco.",
+          "Llaves mecánicas.",
+          "Tarjetas IC.",
+          "Pilas AAA.",
+          "mantener manija horizontal negra,",
+          "mantener lector de huella circular en el extremo de la manija exterior,",
+          "mantener teclado táctil sobre la manija,",
+          "mantener roseta circular como en la imagen entregada,",
+          "usar el botón/interruptor físico real sobre o cerca de la manija interior para paso libre, bloqueo interior y escenas de configuración local,",
+          "no generar variantes N191, N191A, N191B ni CS-9,",
+          "no cambiar la geometría para seguir una referencia tecnico secundaria,",
+          "no inventar panel vertical,",
+          "no transformar en pomo,",
+          "no inventar alojamiento visible de baterías, roseta abierta, mecanismo expuesto, slider de bloqueo, segundo botón ni panel de control adicional,",
+          "no mostrar cámara, timbre ni reconocimiento facial,",
+          "no usar logos Tuya o Smart Life en imágenes finales salvo decisión explícita."
+        ],
+        "main_visual_reference": "",
+        "rules": [
+          "manija horizontal negra,",
+          "roseta circular,",
+          "lector de huella circular en el extremo de la manija exterior,",
+          "aro luminoso alrededor del lector,",
+          "teclado táctil integrado sobre la manija,",
+          "tecla #,",
+          "área de tarjeta IC sobre la manija,",
+          "acceso de llave mecánica,",
+          "puerto exterior de energía de emergencia,",
+          "manija interior con botón o interruptor físico,",
+          "alimentación por baterías en el conjunto interior, sin inventar un compartimento visible si no aparece en la referencia.",
+          "pomo redondo tipo e-Nova,",
+          "panel vertical tipo e-Prime/e-Orbit,",
+          "cerradura de sobreponer tipo e-Shield,",
+          "mecanismo multipunto,",
+          "cámara,",
+          "reconocimiento facial,",
+          "timbre,",
+          "pantalla de video,",
+          "caja rectangular de sobreponer,",
+          "botón SET expuesto en la cara exterior.",
+          "no presentar variantes,",
+          "no crear comparaciones entre referencias tecnico,",
+          "no mezclar geometrías visuales distintas,",
+          "no usar nombres N191, N191A, N191B o CS-9 como modelo final,",
+          "representar siempre el producto como e-Touch genérico con base en.",
+          "Manija exterior.",
+          "Lector de huella.",
+          "Aro luminoso.",
+          "Teclado táctil."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [
+          "Priorizar configuración local antes de app, porque el producto puede usarse sin depender de la app.",
+          "Presentar la app como función adicional para gestión, registros y accesos desde el teléfono.",
+          "Usar clave o PIN, no password.",
+          "Usar PIN con privacidad, no peep-proof.",
+          "Usar modo paso libre, no normally open.",
+          "Usar bloqueo interior, no anti-lock, salvo como nota interna.",
+          "Usar puerto exterior de energía de emergencia, no afirmar USB-C o micro-USB hasta validar físicamente.",
+          "Evitar textos tecnico como disclaimers, garantía, filosofía de fábrica o promesas comerciales exageradas.",
+          "No incluir referencias internas como tecnico, pendiente o validación en el manual visible."
+        ],
+        "tables": [],
+        "recommended_language": [
+          "Priorizar configuración local antes de app, porque el producto puede usarse sin depender de la app.",
+          "Presentar la app como función adicional para gestión, registros y accesos desde el teléfono.",
+          "Usar clave o PIN, no password.",
+          "Usar PIN con privacidad, no peep-proof.",
+          "Usar modo paso libre, no normally open.",
+          "Usar bloqueo interior, no anti-lock, salvo como nota interna.",
+          "Usar puerto exterior de energía de emergencia, no afirmar USB-C o micro-USB hasta validar físicamente.",
+          "Evitar textos tecnico como disclaimers, garantía, filosofía de fábrica o promesas comerciales exageradas.",
+          "No incluir referencias internas como tecnico, pendiente o validación en el manual visible."
+        ],
+        "avoid_terms": [
+          "- Evitar textos tecnico como disclaimers, garantía, filosofía de fábrica o promesas comerciales exageradas."
+        ],
+        "priority_callouts": []
+      },
+      "warnings": {
+        "items": [
+          "No deben aparecer como modelos separados, variantes comerciales ni opciones visuales dentro del manual final.",
+          "- No mezclar este producto con e-Flex, e-Prime, e-Nova, e-Orbit ni e-Shield.",
+          "Evitar siempre: - pomo redondo tipo e-Nova, - panel vertical tipo e-Prime/e-Orbit, - cerradura de sobreponer tipo e-Shield, - mecanismo multipunto, - cámara, - reconocimiento facial, - timbre, - pantalla de video, - caja rectangular de sobreponer, - botón SET expuesto en la cara exterior.",
+          "Para contenido visible al usuario: - no presentar variantes, - no crear comparaciones entre referencias tecnico, - no mezclar geometrías visuales distintas, - no usar nombres N191, N191A, N191B o CS-9 como modelo final, - representar siempre el producto como e-Touch genérico con base en.",
+          "## Métodos de apertura | Método | Estado | |---|---| | Huella | Confirmado por manual y material visual | | Clave / PIN | Confirmado por manual, caja y teclado físico | | Tarjeta IC | Confirmado por manual, caja y material visual | | Llave mecánica | Confirmado por manual y material visual | | App móvil | Confirmado por manual y material visual | | Bluetooth | Confirmado por flujo de app | | Control remoto | Mencionado en íconos comerciales, validar si aplica | | Reconocimiento facial | No aplica | | Video / timbre | No aplica | ## Uso diario La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+          "- El bloqueo interior restringe aperturas desde el exterior cuando se requiere mayor control desde dentro.",
+          "Advertencia editorial: el OCR es imperfecto.",
+          "Uso recomendado: - permitir que el usuario ingrese números antes o después de su clave real, - confirmar con #, - evitar que otra persona identifique fácilmente la clave.",
+          "Advertencia editorial: restaurar fábrica borra huellas, claves, tarjetas, usuarios y ajustes.",
+          "- El manual recomienda usar pilas alcalinas para evitar daños por fugas.",
+          "- Evitar textos tecnico como disclaimers, garantía, filosofía de fábrica o promesas comerciales exageradas.",
+          "## Actualizaciones de revisión visual 2026-05-28 - La imagen del panel interior no debe mostrar un alojamiento de baterías ni controles 2/3 inventados; esos elementos no existen en el True Source visible."
+        ]
+      },
+      "pending_validation": [
+        "Tipo exacto del puerto de emergencia: USB-C según caja, micro-USB según manual.",
+        "Rango final de grosor de puerta: 30-50 mm según caja, 35-65 mm según manual.",
+        "App final BESLOCK: Tuya Smart, Smart Life o ambas como compatibles.",
+        "Duración exacta para restaurar con botón interior: 5 o 9 segundos.",
+        "Comportamiento exacto del bloqueo interior / anti-lock.",
+        "Si control remoto aplica realmente al SKU final o solo aparece como icono comercial genérico.",
+        "Si la capacidad visible debe decir 100 usuarios o diferenciar 100 huellas, 100 claves y 100 tarjetas.",
+        "Los nombres tecnico N191, N191A, N191B y CS-9 se usan solo como fuentes de apoyo para confirmar funciones, instalación y operación.",
+        "La caja BESLOCK habla de USB-C, mientras el manual tecnico menciona micro-USB; para el manual final conviene usar puerto exterior de energía de emergencia hasta confirmar físicamente el conector.",
+        "## Identificación consolidada | Campo | Información | |---|---| | Nombre BESLOCK | e-Touch | | Modelo final | e-Touch genérico | | Serie tecnico de apoyo | N191 | | Referencias tecnico de apoyo | N191, N191A, N191B, CS-9 | | Tipo de producto | Cerradura inteligente tipo manija | | Imagen principal | | | Uso principal | Puertas interiores, oficinas, habitaciones y accesos residenciales compatibles | | Métodos de apertura | Huella, clave, tarjeta IC, llave mecánica y app | | App observada | Tuya Smart / Smart Life | | Conectividad observada | Bluetooth | | Alimentación principal | 4 pilas AAA alcalinas de 1,5 V | | Energía de emergencia | Puerto exterior USB; tipo exacto pendiente de validar | | Capacidad funcional tecnico | 100 huellas, 100 claves y 100 tarjetas | | Capacidad comercial BESLOCK | Caja: 5 Accesos • 100 Usuarios | | Grosor de puerta | Manual: 3,5 a 6,5 cm; caja: 30 a 50 mm | | Funciones adicionales | PIN de privacidad, modo paso libre, bloqueo interior / anti-lock, registros en app | ## Fuentes tecnico revisadas ### Documentos - e-Touch/N191系列/说明书/N191A user manual.pdf - e-Touch/N191系列/说明书/N191B说明书.pdf - e-Touch/N191系列/说明书/CS9-N191A说明书/CS-9说明书.pdf - e-Touch/N191系列/彩盒图纸/N197-N191B BESLOCK -COLOR BOX-20251108.pdf ### Texto extraído y OCR - e-Touch/N191系列/extracted_text/N197-N191B BESLOCK -COLOR BOX-20251108.txt - e-Touch/N191系列/ocr_text/N191A_user_manual-1.txt - e-Touch/N191系列/ocr_text/N191A_user_manual-2.txt - e-Touch/N191系列/ocr_text/N191B说明书-1.txt - e-Touch/N191系列/ocr_text/N191B说明书-2.txt - e-Touch/N191系列/ocr_text/CS-9说明书-1.txt - e-Touch/N191系列/ocr_text/CS-9说明书-2.txt ### Imágenes y video - - - - - - e-Touch/N191系列/产品实拍图/DSC_0578.zip - Videos de operación en e-Touch/N191系列/产品视频/ - Hoja de revisión creada: - Hoja de páginas de manual creada: - Hoja de fotos reales creada: ## Criterio de conciliación - La imagen fija la geometría visual base del producto BESLOCK.",
+        "Sirven para confirmar funciones, pero no para construir variantes dentro del manual.",
+        "Pueden confirmar capacidades, secuencias de configuración, app, restauración, energía y señales de operación.",
+        "## Métodos de apertura | Método | Estado | |---|---| | Huella | Confirmado por manual y material visual | | Clave / PIN | Confirmado por manual, caja y teclado físico | | Tarjeta IC | Confirmado por manual, caja y material visual | | Llave mecánica | Confirmado por manual y material visual | | App móvil | Confirmado por manual y material visual | | Bluetooth | Confirmado por flujo de app | | Control remoto | Mencionado en íconos comerciales, validar si aplica | | Reconocimiento facial | No aplica | | Video / timbre | No aplica | ## Uso diario La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+        "- Para abrir con clave/PIN, despertar el teclado integrado en la manija, ingresar la clave registrada y confirmar con #.",
+        "- Si las pilas se agotan, abrir con llave mecánica o alimentar temporalmente desde el puerto exterior de energía de emergencia; usar esa redacción hasta confirmar si el conector final es USB-C o micro-USB.",
+        "Confirmar el registro con señales luminosas o sonido.",
+        "Confirmar que la cerradura emite dos sonidos o aparece agregada.",
+        "Uso recomendado: - permitir que el usuario ingrese números antes o después de su clave real, - confirmar con #, - evitar que otra persona identifique fácilmente la clave.",
+        "Nota editorial: validar comportamiento exacto antes de afirmar si todos los usuarios quedan bloqueados o solo algunos métodos.",
+        "Para el manual final, validar duración exacta con video o unidad física.",
+        "- Manual final: usar puerto exterior de energía de emergencia hasta confirmar con la unidad física.",
+        "Nota editorial: usar puertas compatibles según plantilla de instalación hasta validar rango final BESLOCK.",
+        "- Usar puerto exterior de energía de emergencia, no afirmar USB-C o micro-USB hasta validar físicamente.",
+        "- No incluir referencias internas como tecnico, pendiente o validación en el manual visible.",
+        "## Riesgos y puntos a validar - Tipo exacto del puerto de emergencia: USB-C según caja, micro-USB según manual."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Touch",
+          "BESLOCK e-Touch",
+          "cerradura inteligente",
+          "Cerradura inteligente tipo manija",
+          "Tuya Smart / Smart Life",
+          "Bluetooth",
+          "Huella",
+          "Clave / PIN",
+          "Tarjeta IC",
+          "Llave mecánica",
+          "App móvil",
+          "Control remoto",
+          "Reconocimiento facial",
+          "Video / timbre"
+        ],
+        "use_cases": [],
+        "target_environment": [
+          "oficinas",
+          "puertas interiores"
+        ],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "sobreponer",
+          "exterior",
+          "huella",
+          "PIN",
+          "tarjeta",
+          "app",
+          "seguridad",
+          "privacidad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-beslock-e-touch": {
+          "title": "Perfil de producto: BESLOCK e-Touch",
+          "level": 1,
+          "order": 1,
+          "summary": "Fecha de consolidación: 2026-05-23 Carpeta fuente: e-Touch",
+          "paragraphs": [
+            "Fecha de consolidación: 2026-05-23 Carpeta fuente: e-Touch"
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. Para BESLOCK, todo el material disponible se consolida como un único modelo genérico: e-Touch.",
+          "paragraphs": [
+            "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. Para BESLOCK, todo el material disponible se consolida como un único modelo genérico: e-Touch.",
+            "La identidad visual base presenta manija negra horizontal, roseta circular, lector de huella en el extremo de la manija exterior, teclado numérico sobre la manija, aro luminoso verde y manija interior con botón o interruptor físico.",
+            "Los nombres tecnico N191, N191A, N191B y CS-9 se usan solo como fuentes de apoyo para confirmar funciones, instalación y operación. No deben aparecer como modelos separados, variantes comerciales ni opciones visuales dentro del manual final.",
+            "El material disponible confirma cinco formas de acceso:",
+            "El producto funciona con cuatro pilas AAA alcalinas. El material menciona apertura de emergencia con llave y alimentación exterior por USB. La caja BESLOCK habla de USB-C, mientras el manual tecnico menciona micro-USB; para el manual final conviene usar puerto exterior de energía de emergencia hasta confirmar físicamente el conector."
+          ],
+          "bullets": [
+            "huella,",
+            "clave / PIN,",
+            "tarjeta IC,",
+            "llave mecánica,",
+            "app móvil compatible."
+          ],
+          "tables": []
+        },
+        "identificacion-consolidada": {
+          "title": "Identificación consolidada",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Nombre BESLOCK",
+                "value": "e-Touch"
+              },
+              {
+                "label": "Modelo final",
+                "value": "e-Touch genérico"
+              },
+              {
+                "label": "Serie tecnico de apoyo",
+                "value": "N191"
+              },
+              {
+                "label": "Referencias tecnico de apoyo",
+                "value": "N191, N191A, N191B, CS-9"
+              },
+              {
+                "label": "Tipo de producto",
+                "value": "Cerradura inteligente tipo manija"
+              },
+              {
+                "label": "Imagen principal",
+                "value": ""
+              },
+              {
+                "label": "Uso principal",
+                "value": "Puertas interiores, oficinas, habitaciones y accesos residenciales compatibles"
+              },
+              {
+                "label": "Métodos de apertura",
+                "value": "Huella, clave, tarjeta IC, llave mecánica y app"
+              },
+              {
+                "label": "App observada",
+                "value": "Tuya Smart / Smart Life"
+              },
+              {
+                "label": "Conectividad observada",
+                "value": "Bluetooth"
+              },
+              {
+                "label": "Alimentación principal",
+                "value": "4 pilas AAA alcalinas de 1,5 V"
+              },
+              {
+                "label": "Energía de emergencia",
+                "value": "Puerto exterior USB; tipo exacto pendiente de validar"
+              },
+              {
+                "label": "Capacidad funcional tecnico",
+                "value": "100 huellas, 100 claves y 100 tarjetas"
+              },
+              {
+                "label": "Capacidad comercial BESLOCK",
+                "value": "Caja: 5 Accesos • 100 Usuarios"
+              },
+              {
+                "label": "Grosor de puerta",
+                "value": "Manual: 3,5 a 6,5 cm; caja: 30 a 50 mm"
+              },
+              {
+                "label": "Funciones adicionales",
+                "value": "PIN de privacidad, modo paso libre, bloqueo interior / anti-lock, registros en app"
+              }
+            ]
+          ]
+        },
+        "fuentes-oem-revisadas": {
+          "title": "Fuentes OEM revisadas",
+          "level": 2,
+          "order": 4,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "documentos": {
+          "title": "Documentos",
+          "level": 3,
+          "order": 5,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "texto-extraido-y-ocr": {
+          "title": "Texto extraído y OCR",
+          "level": 3,
+          "order": 6,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "imagenes-y-video": {
+          "title": "Imágenes y video",
+          "level": 3,
+          "order": 7,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "e-Touch/N191系列/产品实拍图/DSC_0578.zip",
+            "Videos de operación en e-Touch/N191系列/产品视频/",
+            "Hoja de revisión creada:",
+            "Hoja de páginas de manual creada:",
+            "Hoja de fotos reales creada:"
+          ],
+          "tables": []
+        },
+        "criterio-de-conciliacion": {
+          "title": "Criterio de conciliación",
+          "level": 2,
+          "order": 8,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "La imagen fija la geometría visual base del producto BESLOCK.",
+            "Las referencias N191, N191A, N191B y CS-9 se concilian como un solo producto genérico. Sirven para confirmar funciones, pero no para construir variantes dentro del manual.",
+            "Los manuales tecnico parecen compartir la misma base operativa. El OCR extrae el mismo flujo general de instalación, administración, app, modo paso libre, emergencia y restauración.",
+            "La caja BESLOCK está en español y confirma el enfoque comercial: 5 formas de acceso, 100 usuarios, modo paso libre, PIN superdiscreto, USB-C, 4 pilas AAA y puertas de 30-50 mm.",
+            "El manual tecnico confirma 100 huellas, 100 claves, 100 tarjetas y cuatro pilas AAA, pero menciona puerta de 3,5 a 6,5 cm y micro-USB.",
+            "Para el manual final, usar una redacción conservadora donde hay conflicto: puerto exterior de energía de emergencia y puertas compatibles según instalación.",
+            "No mezclar este producto con e-Flex, e-Prime, e-Nova, e-Orbit ni e-Shield. e-Touch es una cerradura de manija con teclado sobre la palanca."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 9,
+          "summary": "e-Touch se posiciona para controlar accesos interiores con privacidad y flujo moderado, donde se necesita una solución compacta y fácil de usar sin llegar a un sistema de control de acceso pesado. Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados.",
+          "paragraphs": [
+            "e-Touch se posiciona para controlar accesos interiores con privacidad y flujo moderado, donde se necesita una solución compacta y fácil de usar sin llegar a un sistema de control de acceso pesado. Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados.",
+            "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento. Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "geometria-del-producto": {
+          "title": "Geometría del producto",
+          "level": 2,
+          "order": 10,
+          "summary": "Mantener siempre:",
+          "paragraphs": [
+            "Mantener siempre:",
+            "Evitar siempre:"
+          ],
+          "bullets": [
+            "manija horizontal negra,",
+            "roseta circular,",
+            "lector de huella circular en el extremo de la manija exterior,",
+            "aro luminoso alrededor del lector,",
+            "teclado táctil integrado sobre la manija,",
+            "tecla #,",
+            "área de tarjeta IC sobre la manija,",
+            "acceso de llave mecánica,",
+            "puerto exterior de energía de emergencia,",
+            "manija interior con botón o interruptor físico,",
+            "alimentación por baterías en el conjunto interior, sin inventar un compartimento visible si no aparece en la referencia.",
+            "pomo redondo tipo e-Nova,",
+            "panel vertical tipo e-Prime/e-Orbit,",
+            "cerradura de sobreponer tipo e-Shield,",
+            "mecanismo multipunto,",
+            "cámara,",
+            "reconocimiento facial,",
+            "timbre,",
+            "pantalla de video,",
+            "caja rectangular de sobreponer,",
+            "botón SET expuesto en la cara exterior."
+          ],
+          "tables": []
+        },
+        "material-oem-de-apoyo": {
+          "title": "Material OEM de apoyo",
+          "level": 2,
+          "order": 11,
+          "summary": "Las carpetas y manuales N191, N191A, N191B y CS-9 se usan como evidencia funcional. Pueden confirmar capacidades, secuencias de configuración, app, restauración, energía y señales de operación.",
+          "paragraphs": [
+            "Las carpetas y manuales N191, N191A, N191B y CS-9 se usan como evidencia funcional. Pueden confirmar capacidades, secuencias de configuración, app, restauración, energía y señales de operación.",
+            "Para contenido visible al usuario:"
+          ],
+          "bullets": [
+            "no presentar variantes,",
+            "no crear comparaciones entre referencias tecnico,",
+            "no mezclar geometrías visuales distintas,",
+            "no usar nombres N191, N191A, N191B o CS-9 como modelo final,",
+            "representar siempre el producto como e-Touch genérico con base en."
+          ],
+          "tables": []
+        },
+        "partes-principales": {
+          "title": "Partes principales",
+          "level": 2,
+          "order": 12,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "exterior": {
+          "title": "Exterior",
+          "level": 3,
+          "order": 13,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Manija exterior.",
+            "Lector de huella.",
+            "Aro luminoso.",
+            "Teclado táctil.",
+            "Tecla #.",
+            "Área de lectura de tarjeta IC.",
+            "Acceso de llave mecánica.",
+            "Puerto exterior de energía de emergencia."
+          ],
+          "tables": []
+        },
+        "interior": {
+          "title": "Interior",
+          "level": 3,
+          "order": 14,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Manija interior.",
+            "Botón o interruptor físico real sobre o junto a la manija interior.",
+            "El mismo control físico interior puede servir como referencia visual para bloqueo interior, paso libre o configuración, según el flujo del manual.",
+            "No hay alojamiento de baterías visible en la geometría True Source usada para el panel interior; no representarlo como parte visible si no aparece en la referencia.",
+            "No inventar botón SET, reset, slider, tapa abierta ni panel vertical adicional para explicar la configuración."
+          ],
+          "tables": []
+        },
+        "instalacion": {
+          "title": "Instalación",
+          "level": 3,
+          "order": 15,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Manija exterior.",
+            "Manija interior.",
+            "Eje cuadrado.",
+            "Tornillos de fijación.",
+            "Tubos o postes de conexión.",
+            "Pestillo / cuerpo de cierre.",
+            "Recibidor o placa del marco.",
+            "Llaves mecánicas.",
+            "Tarjetas IC.",
+            "Pilas AAA."
+          ],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 16,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "Clave / PIN",
+                "value": "Confirmado por manual, caja y teclado físico"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado por manual, caja y material visual"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "App móvil",
+                "value": "Confirmado por manual y material visual"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Confirmado por flujo de app"
+              },
+              {
+                "label": "Control remoto",
+                "value": "Mencionado en íconos comerciales, validar si aplica"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 17,
+          "summary": "La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+          "paragraphs": [
+            "La sección de uso diario debe presentar e-Touch como cerradura de manija con cinco accesos confirmados y sin timbre/video.",
+            "Nota de fuente: este bloque concilia manuales N191/N191A/N191B/CS-9, OCR disponible y caja BESLOCK. No incluir timbre, video, cámara ni controles interiores que no aparezcan en el True Source."
+          ],
+          "bullets": [
+            "Para abrir con huella, colocar el dedo registrado en el lector circular del extremo de la manija exterior y accionar la manija cuando confirme.",
+            "Para abrir con clave/PIN, despertar el teclado integrado en la manija, ingresar la clave registrada y confirmar con #.",
+            "Para PIN con privacidad, escribir números antes y después de la clave real; la cerradura reconoce la clave correcta dentro de la secuencia.",
+            "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura sobre la manija.",
+            "Para abrir desde app, usar Tuya Smart / Smart Life según la versión comercial y mantener el teléfono dentro del rango requerido.",
+            "El modo paso libre se activa o cancela con el botón/interruptor físico interior real; no mover esta función a un control inventado.",
+            "El bloqueo interior restringe aperturas desde el exterior cuando se requiere mayor control desde dentro.",
+            "La llave mecánica es respaldo y debe guardarse fuera del espacio protegido.",
+            "Si las pilas se agotan, abrir con llave mecánica o alimentar temporalmente desde el puerto exterior de energía de emergencia; usar esa redacción hasta confirmar si el conector final es USB-C o micro-USB.",
+            "Ante luz roja o aviso de baja batería, cambiar las cuatro pilas AAA cuanto antes. El tecnico menciona cerca de 50 usos restantes."
+          ],
+          "tables": []
+        },
+        "usuarios-y-capacidades": {
+          "title": "Usuarios y capacidades",
+          "level": 2,
+          "order": 18,
+          "summary": "Nota editorial: para el manual final, conviene decir hasta 100 usuarios o hasta 100 registros por método, según se confirme la lógica comercial final. El manual tecnico separa 100 huellas, 100 claves y 100 tarjetas; la caja simplifica a 100 usuarios.",
+          "paragraphs": [
+            "Nota editorial: para el manual final, conviene decir hasta 100 usuarios o hasta 100 registros por método, según se confirme la lógica comercial final. El manual tecnico separa 100 huellas, 100 claves y 100 tarjetas; la caja simplifica a 100 usuarios."
+          ],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huellas",
+                "value": "100"
+              },
+              {
+                "label": "Claves / contraseñas",
+                "value": "100"
+              },
+              {
+                "label": "Tarjetas",
+                "value": "100"
+              },
+              {
+                "label": "Usuarios comerciales",
+                "value": "Caja BESLOCK: 100 usuarios"
+              },
+              {
+                "label": "Administradores",
+                "value": "Manual: los primeros 3 usuarios actúan como administradores"
+              },
+              {
+                "label": "Estado inicial",
+                "value": "Si no hay usuarios registrados, cualquier huella puede abrir"
+              },
+              {
+                "label": "Clave inicial tras restaurar",
+                "value": "123456 según Q&A tecnico"
+              }
+            ]
+          ]
+        },
+        "configuracion-inicial": {
+          "title": "Configuración inicial",
+          "level": 2,
+          "order": 19,
+          "summary": "El manual indica que la configuración local se hace desde la tecla de configuración ubicada en la manija interior o en un orificio del lado interior.",
+          "paragraphs": [
+            "El manual indica que la configuración local se hace desde la tecla de configuración ubicada en la manija interior o en un orificio del lado interior.",
+            "Funciones del botón de configuración observadas:",
+            "Registro inicial observado:",
+            "Advertencia editorial: el OCR es imperfecto. El flujo exacto debe revisarse contra el video o el PDF renderizado antes de convertirlo en pasos finales."
+          ],
+          "bullets": [
+            "pulsación corta: agregar administrador o usuario,",
+            "pulsación larga: entrar a inicialización / restauración sin verificar administrador,",
+            "botón de apertura o modo abierto: activar o cancelar modo paso libre,",
+            "5 segundos separan pulsación corta de pulsación larga según OCR."
+          ],
+          "tables": []
+        },
+        "app-movil": {
+          "title": "App móvil",
+          "level": 2,
+          "order": 20,
+          "summary": "El manual menciona Tuya Smart y también indica que toma Smart Life como ejemplo para explicar la app y la cerradura. El flujo observado es:",
+          "paragraphs": [
+            "El manual menciona Tuya Smart y también indica que toma Smart Life como ejemplo para explicar la app y la cerradura. El flujo observado es:",
+            "Funciones de app observadas:",
+            "Nota editorial: para el manual final, se puede presentar la app como adicional después de la configuración local. El producto puede operar con huella, clave, tarjeta y llave sin depender de la app, pero la app facilita gestión y registros."
+          ],
+          "bullets": [
+            "abrir desde app dentro del rango Bluetooth,",
+            "gestión de miembros,",
+            "permisos por usuario,",
+            "huellas,",
+            "claves,",
+            "claves temporales,",
+            "registros de apertura,",
+            "eliminar o desvincular dispositivo,",
+            "restaurar fábrica cuando el teléfono está conectado por Bluetooth."
+          ],
+          "tables": []
+        },
+        "modo-paso-libre": {
+          "title": "Modo paso libre",
+          "level": 2,
+          "order": 21,
+          "summary": "El material lo llama Normally Open Mode, Always on mode, Normal Open o modo paso libre.",
+          "paragraphs": [
+            "El material lo llama Normally Open Mode, Always on mode, Normal Open o modo paso libre.",
+            "Formas observadas para activar:",
+            "Formas observadas para cancelar:",
+            "Nota editorial: en el manual final, explicar esta función con prudencia y recomendar volver al modo normal cuando ya no se necesite acceso frecuente."
+          ],
+          "bullets": [
+            "mantener presionado el botón interior de modo abierto durante 1 segundo,",
+            "ingresar una secuencia desde el teclado y verificar administrador, según manual,",
+            "el sistema confirma con sonido.",
+            "repetir el método de activación,",
+            "presionar #,",
+            "abrir con huella o clave registrada,",
+            "usar el botón interior."
+          ],
+          "tables": []
+        },
+        "pin-de-privacidad": {
+          "title": "PIN de privacidad",
+          "level": 2,
+          "order": 22,
+          "summary": "La caja BESLOCK lo llama Ingreso de clave en modo superdiscreto. El material tecnico lo llama peep-proof function.",
+          "paragraphs": [
+            "La caja BESLOCK lo llama Ingreso de clave en modo superdiscreto. El material tecnico lo llama peep-proof function.",
+            "Uso recomendado:",
+            "Nota editorial: llamarlo PIN con privacidad, como en los otros manuales BESLOCK."
+          ],
+          "bullets": [
+            "permitir que el usuario ingrese números antes o después de su clave real,",
+            "confirmar con #,",
+            "evitar que otra persona identifique fácilmente la clave."
+          ],
+          "tables": []
+        },
+        "bloqueo-interior-anti-lock": {
+          "title": "Bloqueo interior / anti-lock",
+          "level": 2,
+          "order": 23,
+          "summary": "El material visual menciona Anti-lock switch button. El manual lo asocia al botón o interruptor interior.",
+          "paragraphs": [
+            "El material visual menciona Anti-lock switch button. El manual lo asocia al botón o interruptor interior.",
+            "Uso probable:",
+            "Nota editorial: validar comportamiento exacto antes de afirmar si todos los usuarios quedan bloqueados o solo algunos métodos."
+          ],
+          "bullets": [
+            "restringir aperturas desde el exterior,",
+            "mantener control desde el interior,",
+            "permitir apertura por administrador según traducción tecnico."
+          ],
+          "tables": []
+        },
+        "restaurar-fabrica": {
+          "title": "Restaurar fábrica",
+          "level": 2,
+          "order": 24,
+          "summary": "El material documenta dos rutas:",
+          "paragraphs": [
+            "El material documenta dos rutas:"
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "desde-boton-interior": {
+          "title": "Desde botón interior",
+          "level": 3,
+          "order": 25,
+          "summary": "El OCR menciona 9 segundos en una sección y 5 segundos en Q&A. Para el manual final, validar duración exacta con video o unidad física.",
+          "paragraphs": [
+            "El OCR menciona 9 segundos en una sección y 5 segundos en Q&A. Para el manual final, validar duración exacta con video o unidad física."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "desde-teclado": {
+          "title": "Desde teclado",
+          "level": 3,
+          "order": 26,
+          "summary": "Advertencia editorial: restaurar fábrica borra huellas, claves, tarjetas, usuarios y ajustes. Después de restaurar, la clave inicial puede volver a 123456 según Q&A tecnico.",
+          "paragraphs": [
+            "Advertencia editorial: restaurar fábrica borra huellas, claves, tarjetas, usuarios y ajustes. Después de restaurar, la clave inicial puede volver a 123456 según Q&A tecnico."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 27,
+          "summary": "Nota de conciliación:",
+          "paragraphs": [
+            "Nota de conciliación:"
+          ],
+          "bullets": [
+            "Alimentación principal: 4 pilas AAA alcalinas de 1,5 V.",
+            "La caja BESLOCK menciona Funciona con 4 pilas alcalinas AAA.",
+            "El manual recomienda usar pilas alcalinas para evitar daños por fugas.",
+            "El manual indica reemplazo cada 2 años como buena práctica.",
+            "La cerradura avisa batería baja con luz roja.",
+            "Después de la alerta de batería baja, el material menciona energía suficiente para aproximadamente 50 usos.",
+            "Si las pilas se agotan, se puede abrir con llave mecánica o alimentar temporalmente desde el puerto exterior.",
+            "Caja BESLOCK: USB-C.",
+            "Manual tecnico: micro-USB.",
+            "Manual final: usar puerto exterior de energía de emergencia hasta confirmar con la unidad física."
+          ],
+          "tables": []
+        },
+        "instalacion-28": {
+          "title": "Instalación",
+          "level": 2,
+          "order": 28,
+          "summary": "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+          "paragraphs": [
+            "La instalación corresponde a una cerradura tipo manija con eje cuadrado y pestillo/cuerpo de cierre. El manual incluye:",
+            "Datos de puerta:",
+            "Nota editorial: usar puertas compatibles según plantilla de instalación hasta validar rango final BESLOCK. Si se usa una cifra, priorizar la cifra de caja solo si aplica al SKU final que se venderá."
+          ],
+          "bullets": [
+            "paso del eje cuadrado y cable,",
+            "elección de tornillos según grosor de puerta,",
+            "instalación de pilas,",
+            "conexión de la placa o circuito,",
+            "instalación del pestillo,",
+            "fijación de manija,",
+            "orientación correcta de la lengüeta o pestillo,",
+            "pruebas antes de cerrar.",
+            "Manual tecnico: puertas de más de 3,5 cm hasta 6,5 cm.",
+            "Caja BESLOCK: instalación directa en puertas de 30 a 50 mm."
+          ],
+          "tables": []
+        },
+        "senales-y-estados": {
+          "title": "Señales y estados",
+          "level": 2,
+          "order": 29,
+          "summary": "Nota: las señales exactas deben revisarse con video o unidad física antes de convertirlas en microcopy final.",
+          "paragraphs": [
+            "Nota: las señales exactas deben revisarse con video o unidad física antes de convertirlas en microcopy final."
+          ],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Batería baja",
+                "value": "Indicador rojo parpadea"
+              },
+              {
+                "label": "Restauración por botón",
+                "value": "Luz azul o roja y sonido según OCR"
+              },
+              {
+                "label": "Registro correcto",
+                "value": "Sonido / buzzer de confirmación"
+              },
+              {
+                "label": "App agregada",
+                "value": "Dos sonidos según OCR"
+              },
+              {
+                "label": "Modo paso libre",
+                "value": "Sonido breve al activar o cancelar"
+              }
+            ]
+          ]
+        },
+        "especificaciones-tecnicas-consolidadas": {
+          "title": "Especificaciones técnicas consolidadas",
+          "level": 2,
+          "order": 30,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Tipo",
+                "value": "Cerradura inteligente tipo manija"
+              },
+              {
+                "label": "Modelo final BESLOCK",
+                "value": "e-Touch genérico"
+              },
+              {
+                "label": "Serie tecnico de apoyo",
+                "value": "N191"
+              },
+              {
+                "label": "Alimentación",
+                "value": "4 pilas AAA alcalinas"
+              },
+              {
+                "label": "Huellas",
+                "value": "100"
+              },
+              {
+                "label": "Claves",
+                "value": "100"
+              },
+              {
+                "label": "Tarjetas",
+                "value": "100"
+              },
+              {
+                "label": "App",
+                "value": "Tuya Smart / Smart Life"
+              },
+              {
+                "label": "Conectividad",
+                "value": "Bluetooth"
+              },
+              {
+                "label": "Clave inicial",
+                "value": "123456"
+              },
+              {
+                "label": "Temperatura",
+                "value": "Caja: -20 °C a 60 °C"
+              },
+              {
+                "label": "Grosor de puerta",
+                "value": "Manual: 35-65 mm; caja: 30-50 mm"
+              },
+              {
+                "label": "Métodos de acceso",
+                "value": "Huella, clave, tarjeta, llave y app"
+              }
+            ]
+          ]
+        },
+        "reglas-editoriales-para-el-manual": {
+          "title": "Reglas editoriales para el manual",
+          "level": 2,
+          "order": 31,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Priorizar configuración local antes de app, porque el producto puede usarse sin depender de la app.",
+            "Presentar la app como función adicional para gestión, registros y accesos desde el teléfono.",
+            "Usar clave o PIN, no password.",
+            "Usar PIN con privacidad, no peep-proof.",
+            "Usar modo paso libre, no normally open.",
+            "Usar bloqueo interior, no anti-lock, salvo como nota interna.",
+            "Usar puerto exterior de energía de emergencia, no afirmar USB-C o micro-USB hasta validar físicamente.",
+            "Evitar textos tecnico como disclaimers, garantía, filosofía de fábrica o promesas comerciales exageradas.",
+            "No incluir referencias internas como tecnico, pendiente o validación en el manual visible."
+          ],
+          "tables": []
+        },
+        "reglas-visuales-para-comfy": {
+          "title": "Reglas visuales para Comfy",
+          "level": 2,
+          "order": 32,
+          "summary": "Usar tres referencias base:",
+          "paragraphs": [
+            "Usar tres referencias base:",
+            "Control obligatorio:",
+            "El verde de enriquecimiento visual debe seguir #034526. Si hay texto dentro de imágenes, debe estar en español correcto."
+          ],
+          "bullets": [
+            "mantener manija horizontal negra,",
+            "mantener lector de huella circular en el extremo de la manija exterior,",
+            "mantener teclado táctil sobre la manija,",
+            "mantener roseta circular como en la imagen entregada,",
+            "usar el botón/interruptor físico real sobre o cerca de la manija interior para paso libre, bloqueo interior y escenas de configuración local,",
+            "no generar variantes N191, N191A, N191B ni CS-9,",
+            "no cambiar la geometría para seguir una referencia tecnico secundaria,",
+            "no inventar panel vertical,",
+            "no transformar en pomo,",
+            "no inventar alojamiento visible de baterías, roseta abierta, mecanismo expuesto, slider de bloqueo, segundo botón ni panel de control adicional,",
+            "no mostrar cámara, timbre ni reconocimiento facial,",
+            "no usar logos Tuya o Smart Life en imágenes finales salvo decisión explícita."
+          ],
+          "tables": []
+        },
+        "actualizaciones-de-revision-visual-2026-05-28": {
+          "title": "Actualizaciones de revisión visual 2026-05-28",
+          "level": 2,
+          "order": 33,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "La imagen del panel interior no debe mostrar un alojamiento de baterías ni controles 2/3 inventados; esos elementos no existen en el True Source visible.",
+            "El callout del botón real debe apuntar al botón físico ubicado sobre o cerca de la manija interior, no a una roseta abierta ni a un panel vertical inventado.",
+            "Para paso libre, mostrar la interacción con ese mismo botón/interruptor interior; no mover el comando al teclado exterior, a una app, a un slider falso ni a iconos impresos en el producto.",
+            "Para Creación del primer administrador y Entrar al menú modo administrador, usar solo geometría TS_EXTERIOR_PANEL y TS_INTERIOR_PANEL: manija exterior horizontal con lector de huella, teclado y #, más el botón interior real como disparador de configuración.",
+            "No usar texto explicativo pequeño en imágenes H2; preferir flechas, zooms, checks, iconos planos y numerales conectados."
+          ],
+          "tables": []
+        },
+        "riesgos-y-puntos-a-validar": {
+          "title": "Riesgos y puntos a validar",
+          "level": 2,
+          "order": 34,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Tipo exacto del puerto de emergencia: USB-C según caja, micro-USB según manual.",
+            "Rango final de grosor de puerta: 30-50 mm según caja, 35-65 mm según manual.",
+            "App final BESLOCK: Tuya Smart, Smart Life o ambas como compatibles.",
+            "Duración exacta para restaurar con botón interior: 5 o 9 segundos.",
+            "Comportamiento exacto del bloqueo interior / anti-lock.",
+            "Si control remoto aplica realmente al SKU final o solo aparece como icono comercial genérico.",
+            "Si la capacidad visible debe decir 100 usuarios o diferenciar 100 huellas, 100 claves y 100 tarjetas."
+          ],
+          "tables": []
+        },
+        "flujo-recomendado-para-construir-el-manual": {
+          "title": "Flujo recomendado para construir el manual",
+          "level": 2,
+          "order": 35,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        }
+      }
+    },
     "profile_public": {
       "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
       "commercial_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app. La identidad visual base presenta manija negra horizontal, roseta circular, lector de huella en el extremo de la manija exterior, teclado numérico sobre la manija, aro luminoso verde y manija interior con botón o interruptor físico.",

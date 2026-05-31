@@ -2,6 +2,1195 @@
   "product": {
     "slug": "e-flex",
     "display_name": "e-Flex",
+    "profile": {
+      "identity": {
+        "display_name": "e-Flex",
+        "beslock_name": "e-Flex",
+        "oem_model": "LPL015",
+        "oem_related_names": "",
+        "product_type": "Cerradura inteligente",
+        "lock_architecture": "mortise_lock",
+        "main_image": "",
+        "variants": [],
+        "primary_use": "",
+        "source_file": "perfil_producto_e-flex_LPL015.md"
+      },
+      "commercial": {
+        "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+        "commercial_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. Incluye cinco formas de acceso: huella, clave, tarjeta, llave mecánica y app. El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz. Apertura diaria con huella, clave, tarjeta, llave mecánica o app. Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. Respaldo físico con llave mecánica. Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. Administración local de usuarios desde el teclado.",
+        "key_value_proposition": "Apertura diaria con huella, clave, tarjeta, llave mecánica o app. Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. Respaldo físico con llave mecánica. Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. Administración local de usuarios desde el teclado. Conexión con app Tuya por WiFi 2.4 GHz.",
+        "value_bullets": [
+          "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+          "Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+          "Respaldo físico con llave mecánica.",
+          "Alimentación exterior de emergencia por USB-C cuando las baterías se agotan.",
+          "Administración local de usuarios desde el teclado.",
+          "Conexión con app Tuya por WiFi 2.4 GHz.",
+          "Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos."
+        ],
+        "commercial_positioning": "Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas. Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica.",
+        "emotional_angle": "seguridad, control"
+      },
+      "positioning": {
+        "summary": "e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas. Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia. Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas. Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica. - Apertura diaria con huella, clave, tarjeta, llave mecánica o app. - Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. - Respaldo físico con llave mecánica. - Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. - Administración local de usuarios desde el teclado. - Conexión con app Tuya por WiFi 2.4 GHz. - Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos. - El manual visible debe incluir solo funciones confirmadas por el material tecnico de e-Flex. - El flujo F7 puede orientar la forma de organizar instalación, administrador, usuarios, app y restauración, pero no aporta contenido funcional. - Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente tecnico específica. - Cuando una función aparece en empaque pero no en manual operativo, puede mencionarse con redacción conservadora o quedar como pendiente según su impacto.",
+        "differentiators": [
+          "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+          "Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+          "Respaldo físico con llave mecánica.",
+          "Alimentación exterior de emergencia por USB-C cuando las baterías se agotan.",
+          "Administración local de usuarios desde el teclado.",
+          "Conexión con app Tuya por WiFi 2.4 GHz.",
+          "Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos.",
+          "- Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+          "- Alimentación exterior de emergencia por USB-C cuando las baterías se agotan."
+        ],
+        "commercial_promise": [
+          "- El flujo F7 puede orientar la forma de organizar instalación, administrador, usuarios, app y restauración, pero no aporta contenido funcional."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas. Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia.",
+        "primary_problem_solved": "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+        "target_user": "administrador",
+        "target_environment": [
+          "oficinas",
+          "rentas"
+        ],
+        "commercial_positioning": "Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas. Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica.",
+        "emotional_angle": "control",
+        "practical_value": [
+          "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+          "Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+          "Respaldo físico con llave mecánica.",
+          "Alimentación exterior de emergencia por USB-C cuando las baterías se agotan.",
+          "Administración local de usuarios desde el teclado.",
+          "Conexión con app Tuya por WiFi 2.4 GHz.",
+          "Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos.",
+          "Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia.",
+          "Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas."
+        ]
+      },
+      "target_context": {
+        "environments": [
+          "oficinas",
+          "rentas"
+        ],
+        "use_cases": [],
+        "installation_context": "Notas confirmadas:"
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / contraseña",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC / proximidad",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya",
+            "status": "Confirmado"
+          }
+        ],
+        "security_features": [],
+        "comfort_features": [
+          "Para abrir con huella, el usuario debe colocar un dedo registrado sobre el lector de la manija y accionar la manija cuando la cerradura confirme el acceso.",
+          "Para abrir con clave, debe despertar el teclado, ingresar la clave registrada y confirmar con #.",
+          "Para abrir con tarjeta, debe acercar una tarjeta registrada al área de lectura del panel exterior.",
+          "Para abrir desde app, la cerradura debe estar vinculada con Tuya y conectada a la red WiFi 2.4 GHz configurada.",
+          "El botón de timbre del panel exterior puede usarse para anunciar una visita, sin entrar al menú.",
+          "La llave mecánica es respaldo de emergencia y debe guardarse fuera del lugar protegido.",
+          "Si las baterías se agotan, el puerto exterior USB-C permite alimentación temporal para poder verificar un acceso y abrir; no debe presentarse como carga permanente.",
+          "Ante el aviso Low battery, please replace, cambiar las cuatro pilas AA cuanto antes; el manual indica aproximadamente 100 aperturas restantes, pero no debe tratarse como margen operativo garantizado.",
+          "El modo paso libre, verificación dual, modo silencioso y seguro nocturno son funciones de uso frecuente, pero se activan desde ajustes y deben explicarse como configuraciones, no como métodos de apertura independientes."
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / contraseña",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC / proximidad",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya",
+            "status": "Confirmado"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual tecnico, empaque, imagen del producto y videos"
+              },
+              {
+                "label": "Clave / contraseña",
+                "value": "Confirmado por manual tecnico, empaque e imagen del producto"
+              },
+              {
+                "label": "Tarjeta IC / proximidad",
+                "value": "Confirmado por manual tecnico, empaque e imagen del producto"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual tecnico, empaque y videos"
+              },
+              {
+                "label": "App Tuya",
+                "value": "Confirmado por manual tecnico, empaque y videos de conexión"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Bloqueo por intentos incorrectos",
+              "value": "Confirmado: después de cinco intentos erróneos con huella, tarjeta o contraseña, se activa alarma y el uso electrónico queda inoperable durante 90 segundos"
+            },
+            {
+              "label": "Verificación dual",
+              "value": "Confirmada como opción de ajustes de funciones"
+            },
+            {
+              "label": "Modo silencioso",
+              "value": "Confirmado como opción de ajustes de funciones"
+            },
+            {
+              "label": "Modo siempre abierto",
+              "value": "Confirmado como opción de ajustes de funciones"
+            },
+            {
+              "label": "Alarma antipalanca",
+              "value": "Confirmada como opción de ajustes de funciones, con redacción tecnico ambigua sobre activar/desactivar"
+            },
+            {
+              "label": "Llave mecánica",
+              "value": "Confirmada como respaldo de apertura"
+            },
+            {
+              "label": "Alimentación de emergencia",
+              "value": "Confirmada por manual y empaque"
+            }
+          ]
+        ],
+        "features": []
+      },
+      "installation": {
+        "summary": "Notas confirmadas:",
+        "paragraphs": [
+          "Notas confirmadas:"
+        ],
+        "bullets": [
+          "Panel exterior.",
+          "Panel interior.",
+          "Cuerpo de cerradura.",
+          "Eje cuadrado.",
+          "Pernos de montaje.",
+          "Tornillos de montaje.",
+          "Cable de conexión de datos.",
+          "Tapa de baterías.",
+          "Baterías AA.",
+          "Llaves mecánicas.",
+          "Tarjetas de proximidad.",
+          "El eje cuadrado debe sobresalir entre 10 y 30 mm desde la superficie de la puerta.",
+          "Para puertas fuera de ese rango, se debe usar un eje de longitud adecuada o recortar el existente.",
+          "El empaque indica compatibilidad con puertas de 30 a 60 mm de espesor.",
+          "Si el pestillo no se mueve suavemente, se debe reajustar el panel antes de apretar por completo.",
+          "No se deben colgar objetos en la manija."
+        ],
+        "tables": [],
+        "installation_type": "Notas confirmadas:",
+        "door_type": "",
+        "door_thickness": "30 a 60 mm",
+        "opening_direction": "",
+        "compatibility": [
+          "Ajustar el sentido del pestillo según el sentido real de apertura de la puerta.",
+          "Insertar el cuerpo de cerradura en el alojamiento preparado de la puerta.",
+          "Recortar o ajustar el eje si el espesor real de la puerta lo exige.",
+          "Alinear el panel exterior con el eje y apoyar el panel contra la puerta.",
+          "Notas confirmadas: - El eje cuadrado debe sobresalir entre 10 y 30 mm desde la superficie de la puerta.",
+          "- Para puertas fuera de ese rango, se debe usar un eje de longitud adecuada o recortar el existente.",
+          "- El empaque indica compatibilidad con puertas de 30 a 60 mm de espesor."
+        ]
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe explicar operaciones que no requieren entrar al menú de configuración. Para e-Flex, el material tecnico confirma apertura cotidiana con huella, clave, tarjeta, app Tuya y llave mecánica.",
+        "paragraphs": [
+          "La sección de uso diario debe explicar operaciones que no requieren entrar al menú de configuración. Para e-Flex, el material tecnico confirma apertura cotidiana con huella, clave, tarjeta, app Tuya y llave mecánica.",
+          "Nota de fuente: este bloque concilia LPL015电子说明书.pdf, LPL015涂鸦WiFi.pdf, el empaque BESLOCK y los videos de demostración/conexión. No incorporar funciones de app no confirmadas para e-Flex."
+        ],
+        "bullets": [
+          "Para abrir con huella, el usuario debe colocar un dedo registrado sobre el lector de la manija y accionar la manija cuando la cerradura confirme el acceso.",
+          "Para abrir con clave, debe despertar el teclado, ingresar la clave registrada y confirmar con #.",
+          "Para abrir con tarjeta, debe acercar una tarjeta registrada al área de lectura del panel exterior.",
+          "Para abrir desde app, la cerradura debe estar vinculada con Tuya y conectada a la red WiFi 2.4 GHz configurada.",
+          "El botón de timbre del panel exterior puede usarse para anunciar una visita, sin entrar al menú.",
+          "La llave mecánica es respaldo de emergencia y debe guardarse fuera del lugar protegido.",
+          "Si las baterías se agotan, el puerto exterior USB-C permite alimentación temporal para poder verificar un acceso y abrir; no debe presentarse como carga permanente.",
+          "Ante el aviso Low battery, please replace, cambiar las cuatro pilas AA cuanto antes; el manual indica aproximadamente 100 aperturas restantes, pero no debe tratarse como margen operativo garantizado.",
+          "El modo paso libre, verificación dual, modo silencioso y seguro nocturno son funciones de uso frecuente, pero se activan desde ajustes y deben explicarse como configuraciones, no como métodos de apertura independientes."
+        ],
+        "tables": []
+      },
+      "configuration": {
+        "summary": "Dentro de configuración de cerradura, el manual tecnico documenta estas opciones:",
+        "paragraphs": [
+          "Dentro de configuración de cerradura, el manual tecnico documenta estas opciones:",
+          "En ajustes de funciones aparecen:",
+          "En volumen:",
+          "En voz:",
+          "En hora:",
+          "Nota de conciliación: el empaque indica 9 idiomas, pero el manual operativo extraído solo detalla chino e inglés. Esta diferencia debe resolverse antes de afirmar en el manual visible que el usuario puede elegir 9 idiomas desde el menú."
+        ],
+        "bullets": [
+          "El primer administrador es obligatorio antes de usar configuración avanzada o vincular la app.",
+          "El administrador puede entrar a gestión de funciones.",
+          "Los usuarios pueden registrarse con huella, contraseña o tarjeta.",
+          "La eliminación puede hacerse con huella, contraseña, tarjeta o número ID.",
+          "El empaque indica capacidad de 300 usuarios.",
+          "La cantidad máxima de administradores no aparece confirmada en el material tecnico revisado.",
+          "Modo siempre abierto / paso libre.",
+          "Verificación dual.",
+          "Ajuste de alarma antipalanca, documentado en el manual como desactivar alarma antipalanca.",
+          "Modo silencioso.",
+          "1 aumenta volumen.",
+          "2 disminuye volumen.",
+          "1 voz en chino.",
+          "2 voz en inglés.",
+          "Ingresar año, mes, día, hora y minuto.",
+          "Usar * para borrar.",
+          "Usar # para confirmar."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Inicializar",
+              "value": "Retirar la tapa de baterías y mantener presionado SET durante 5 segundos; el sistema confirma la inicialización"
+            },
+            {
+              "label": "Activar / entrar al menú",
+              "value": "Despertar el teclado y usar * + #"
+            },
+            {
+              "label": "Tecla *",
+              "value": "Volver, salir o borrar"
+            },
+            {
+              "label": "Tecla #",
+              "value": "Confirmar, entrar o repetir indicación de voz"
+            },
+            {
+              "label": "Crear primer administrador",
+              "value": "En estado inicial, usar * + # y luego presionar 4; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Entrar a gestión",
+              "value": "Después de crear administrador, verificar un administrador cada vez que se ingresa a funciones"
+            },
+            {
+              "label": "Configuración de cerradura",
+              "value": "Presionar 3 después de verificar administrador"
+            },
+            {
+              "label": "Agregar usuario",
+              "value": "Presionar 1; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Eliminar usuario",
+              "value": "Presionar 2; elimina por huella, contraseña, tarjeta o número ID"
+            },
+            {
+              "label": "Restaurar fábrica",
+              "value": "Mantener presionado el botón de restauración/SET durante 5 segundos"
+            }
+          ],
+          [
+            {
+              "label": "1",
+              "value": "Ajustes de funciones"
+            },
+            {
+              "label": "2",
+              "value": "Ajuste de volumen"
+            },
+            {
+              "label": "3",
+              "value": "Ajustes de voz"
+            },
+            {
+              "label": "4",
+              "value": "Ajustes de hora"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Baterías",
+              "value": "4 pilas AA alcalinas de alto rendimiento"
+            },
+            {
+              "label": "Voltaje de baterías",
+              "value": "1,5 V por pila"
+            },
+            {
+              "label": "Rango de operación indicado",
+              "value": "4,5 V a 6,5 V"
+            },
+            {
+              "label": "Alimentación de emergencia",
+              "value": "Puerto exterior USB-C"
+            },
+            {
+              "label": "Aviso de baja energía",
+              "value": "Mensaje de voz \"Low battery, please replace\""
+            },
+            {
+              "label": "Uso tras primer aviso",
+              "value": "Aproximadamente 100 aperturas, según capacidad restante"
+            },
+            {
+              "label": "Mantenimiento recomendado",
+              "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas"
+            },
+            {
+              "label": "Conservación de datos",
+              "value": "Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía"
+            }
+          ]
+        ],
+        "battery_type": "4 pilas AA alcalinas de 1,5 V",
+        "emergency_power": ""
+      },
+      "app_connectivity": {
+        "summary": "El material tecnico confirma conexión con Tuya por WiFi de 2.4 GHz.",
+        "paragraphs": [
+          "El material tecnico confirma conexión con Tuya por WiFi de 2.4 GHz.",
+          "Flujo consolidado:",
+          "Los videos muestran el producto junto a un teléfono durante la conexión y subtítulos de soporte Tuya WiFi remoto. El manual visible debe mantener esta sección como vinculación básica, sin añadir funciones de app no confirmadas por e-Flex."
+        ],
+        "bullets": [],
+        "tables": [],
+        "app_status": "Tuya",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "highlights": [
+          {
+            "label": "Baterías",
+            "value": "4 pilas AA alcalinas de alto rendimiento"
+          },
+          {
+            "label": "Voltaje de baterías",
+            "value": "1,5 V por pila"
+          },
+          {
+            "label": "Rango de operación indicado",
+            "value": "4,5 V a 6,5 V"
+          },
+          {
+            "label": "Alimentación de emergencia",
+            "value": "Puerto exterior USB-C"
+          },
+          {
+            "label": "Aviso de baja energía",
+            "value": "Mensaje de voz \"Low battery, please replace\""
+          },
+          {
+            "label": "Uso tras primer aviso",
+            "value": "Aproximadamente 100 aperturas, según capacidad restante"
+          },
+          {
+            "label": "Mantenimiento recomendado",
+            "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas"
+          },
+          {
+            "label": "Conservación de datos",
+            "value": "Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía"
+          },
+          {
+            "label": "Bloqueo por intentos incorrectos",
+            "value": "Confirmado: después de cinco intentos erróneos con huella, tarjeta o contraseña, se activa alarma y el uso electrónico queda inoperable durante 90 segundos"
+          },
+          {
+            "label": "Verificación dual",
+            "value": "Confirmada como opción de ajustes de funciones"
+          },
+          {
+            "label": "Modo silencioso",
+            "value": "Confirmado como opción de ajustes de funciones"
+          },
+          {
+            "label": "Modo siempre abierto",
+            "value": "Confirmado como opción de ajustes de funciones"
+          },
+          {
+            "label": "Alarma antipalanca",
+            "value": "Confirmada como opción de ajustes de funciones, con redacción tecnico ambigua sobre activar/desactivar"
+          },
+          {
+            "label": "Llave mecánica",
+            "value": "Confirmada como respaldo de apertura"
+          },
+          {
+            "label": "Alimentación de emergencia",
+            "value": "Confirmada por manual y empaque"
+          }
+        ],
+        "materials": [],
+        "finish": "",
+        "capacity_notes": [
+          "El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz.",
+          "## Identificación | Campo | Información consolidada | |---|---| | Producto | Cerradura inteligente | | Modelo tecnico | LPL015 | | Nombre de proyecto | e-Flex | | Tipo de operación | Semiautomática, con manija | | Alimentación principal | 4 pilas AA alcalinas de 1,5 V | | Rango eléctrico indicado en empaque | 4,5 V a 6,5 V | | Alimentación de emergencia | Puerto exterior USB-C | | Conectividad | WiFi 2.4 GHz para app Tuya | | App documentada | Tuya | | Capacidad indicada | 300 usuarios | | Idiomas indicados en empaque | 9 idiomas | | Espesor de puerta indicado | 30 a 60 mm | | Accesorios indicados en empaque | 2 llaves mecánicas y 2 tarjetas de proximidad | ## Criterio de conciliación - El manual visible debe incluir solo funciones confirmadas por el material tecnico de e-Flex.",
+          "- El flujo F7 puede orientar la forma de organizar instalación, administrador, usuarios, app y restauración, pero no aporta contenido funcional.",
+          "- Administración local de usuarios desde el teclado.",
+          "## Intención de uso e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas.",
+          "Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica.",
+          "- Tarjetas de proximidad.",
+          "## Energía | Campo | Información | |---|---| | Baterías | 4 pilas AA alcalinas de alto rendimiento | | Voltaje de baterías | 1,5 V por pila | | Rango de operación indicado | 4,5 V a 6,5 V | | Alimentación de emergencia | Puerto exterior USB-C | | Aviso de baja energía | Mensaje de voz \"Low battery, please replace\" | | Uso tras primer aviso | Aproximadamente 100 aperturas, según capacidad restante | | Mantenimiento recomendado | Reemplazar baterías al menos cada 6 meses para evitar fugas | | Conservación de datos | Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía | ## Instalación 1.",
+          "## Configuración local | Acción | Procedimiento tecnico consolidado | |---|---| | Inicializar | Retirar la tapa de baterías y mantener presionado SET durante 5 segundos; el sistema confirma la inicialización | | Activar / entrar al menú | Despertar el teclado y usar * + # | | Tecla * | Volver, salir o borrar | | Tecla # | Confirmar, entrar o repetir indicación de voz | | Crear primer administrador | En estado inicial, usar * + # y luego presionar 4; permite registrar huella, contraseña o tarjeta | | Entrar a gestión | Después de crear administrador, verificar un administrador cada vez que se ingresa a funciones | | Configuración de cerradura | Presionar 3 después de verificar administrador | | Agregar usuario | Presionar 1; permite registrar huella, contraseña o tarjeta | | Eliminar usuario | Presionar 2; elimina por huella, contraseña, tarjeta o número ID | | Restaurar fábrica | Mantener presionado el botón de restauración/SET durante 5 segundos | ## Administradores y usuarios - El primer administrador es obligatorio antes de usar configuración avanzada o vincular la app.",
+          "- Los usuarios pueden registrarse con huella, contraseña o tarjeta.",
+          "- El empaque indica capacidad de 300 usuarios.",
+          "- La cantidad máxima de administradores no aparece confirmada en el material tecnico revisado.",
+          "## Puntos pendientes por confirmar - Cantidad máxima de administradores."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "- Teclado táctil de contraseña. - Área de lectura de tarjeta. - Botón de timbre. - Lector de huella en la zona de la manija. - Manija exterior. - Acceso de llave mecánica. - Puerto exterior de alimentación de emergencia. - Compartimento de baterías. - Tapa de baterías. - Botón SET / reinicio dentro o junto al compartimento de baterías. - Manija interior. - Orificios de montaje. - Seguro nocturno interior / control interior de bloqueo visible en imágenes del producto. - Panel exterior. - Panel interior. - Cuerpo de cerradura. - Eje cuadrado. - Pernos de montaje. - Tornillos de montaje. - Cable de conexión de datos. - Tapa de baterías. - Baterías AA. - Llaves mecánicas. - Tarjetas de proximidad.",
+        "maintain": [
+          "Teclado táctil de contraseña.",
+          "Área de lectura de tarjeta.",
+          "Botón de timbre.",
+          "Lector de huella en la zona de la manija.",
+          "Manija exterior.",
+          "Acceso de llave mecánica.",
+          "Puerto exterior de alimentación de emergencia.",
+          "Compartimento de baterías.",
+          "Tapa de baterías.",
+          "Botón SET / reinicio dentro o junto al compartimento de baterías.",
+          "Manija interior.",
+          "Orificios de montaje.",
+          "Seguro nocturno interior / control interior de bloqueo visible en imágenes del producto.",
+          "Panel exterior.",
+          "Panel interior.",
+          "Cuerpo de cerradura.",
+          "Eje cuadrado.",
+          "Pernos de montaje."
+        ],
+        "avoid": [],
+        "main_visual_reference": "",
+        "rules": [
+          "Teclado táctil de contraseña.",
+          "Área de lectura de tarjeta.",
+          "Botón de timbre.",
+          "Lector de huella en la zona de la manija.",
+          "Manija exterior.",
+          "Acceso de llave mecánica.",
+          "Puerto exterior de alimentación de emergencia.",
+          "Compartimento de baterías.",
+          "Tapa de baterías.",
+          "Botón SET / reinicio dentro o junto al compartimento de baterías.",
+          "Manija interior.",
+          "Orificios de montaje.",
+          "Seguro nocturno interior / control interior de bloqueo visible en imágenes del producto.",
+          "Panel exterior.",
+          "Panel interior.",
+          "Cuerpo de cerradura.",
+          "Eje cuadrado.",
+          "Pernos de montaje.",
+          "Tornillos de montaje.",
+          "Cable de conexión de datos.",
+          "Baterías AA.",
+          "Llaves mecánicas.",
+          "Tarjetas de proximidad."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "No incluir en el manual de e-Flex hasta que exista fuente tecnico específica dentro del material e-Flex:",
+        "paragraphs": [
+          "No incluir en el manual de e-Flex hasta que exista fuente tecnico específica dentro del material e-Flex:"
+        ],
+        "bullets": [
+          "Cámara interior o exterior.",
+          "Reconocimiento facial.",
+          "Pantalla interior.",
+          "Batería recargable de 4200 mAh.",
+          "Contraseñas temporales online/offline desde app.",
+          "Gestión avanzada de miembros desde app.",
+          "Consulta de registros desde app.",
+          "Funciones derivadas del manual F7."
+        ],
+        "tables": [],
+        "recommended_language": [],
+        "avoid_terms": [],
+        "priority_callouts": []
+      },
+      "warnings": {
+        "items": [
+          "- Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente tecnico específica.",
+          "Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica.",
+          "- Si las baterías se agotan, el puerto exterior USB-C permite alimentación temporal para poder verificar un acceso y abrir; no debe presentarse como carga permanente.",
+          "- Ante el aviso Low battery, please replace, cambiar las cuatro pilas AA cuanto antes; el manual indica aproximadamente 100 aperturas restantes, pero no debe tratarse como margen operativo garantizado.",
+          "## Energía | Campo | Información | |---|---| | Baterías | 4 pilas AA alcalinas de alto rendimiento | | Voltaje de baterías | 1,5 V por pila | | Rango de operación indicado | 4,5 V a 6,5 V | | Alimentación de emergencia | Puerto exterior USB-C | | Aviso de baja energía | Mensaje de voz \"Low battery, please replace\" | | Uso tras primer aviso | Aproximadamente 100 aperturas, según capacidad restante | | Mantenimiento recomendado | Reemplazar baterías al menos cada 6 meses para evitar fugas | | Conservación de datos | Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía | ## Instalación 1.",
+          "- Las imágenes de instalación no deben contener texto, listas ni instrucciones legibles; usar solo flechas, callouts, zooms, numerales conectados y checks simples."
+        ]
+      },
+      "pending_validation": [
+        "Cantidad máxima de administradores.",
+        "Contraseña inicial o método inicial exacto si aplica en variante comercial.",
+        "Si la interfaz real comercial tendrá 9 idiomas o solo chino/inglés desde menú local.",
+        "Tipo exacto y ubicación física del puerto USB-C de emergencia.",
+        "Ubicación exacta del acceso de llave mecánica en la versión comercial final.",
+        "Estado exacto de la alarma antipalanca: el manual la presenta como opción de desactivación, no como flujo completo de activación.",
+        "Si Smart Life es compatible además de Tuya.",
+        "- Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente tecnico específica.",
+        "- Cuando una función aparece en empaque pero no en manual operativo, puede mencionarse con redacción conservadora o quedar como pendiente según su impacto.",
+        "- Para abrir con clave, debe despertar el teclado, ingresar la clave registrada y confirmar con #.",
+        "- El modo paso libre, verificación dual, modo silencioso y seguro nocturno son funciones de uso frecuente, pero se activan desde ajustes y deben explicarse como configuraciones, no como métodos de apertura independientes.",
+        "## Configuración local | Acción | Procedimiento tecnico consolidado | |---|---| | Inicializar | Retirar la tapa de baterías y mantener presionado SET durante 5 segundos; el sistema confirma la inicialización | | Activar / entrar al menú | Despertar el teclado y usar * + # | | Tecla * | Volver, salir o borrar | | Tecla # | Confirmar, entrar o repetir indicación de voz | | Crear primer administrador | En estado inicial, usar * + # y luego presionar 4; permite registrar huella, contraseña o tarjeta | | Entrar a gestión | Después de crear administrador, verificar un administrador cada vez que se ingresa a funciones | | Configuración de cerradura | Presionar 3 después de verificar administrador | | Agregar usuario | Presionar 1; permite registrar huella, contraseña o tarjeta | | Eliminar usuario | Presionar 2; elimina por huella, contraseña, tarjeta o número ID | | Restaurar fábrica | Mantener presionado el botón de restauración/SET durante 5 segundos | ## Administradores y usuarios - El primer administrador es obligatorio antes de usar configuración avanzada o vincular la app.",
+        "- Usar # para confirmar.",
+        "## Puntos pendientes por confirmar - Cantidad máxima de administradores."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Flex",
+          "BESLOCK e-Flex",
+          "cerradura inteligente",
+          "Cerradura inteligente",
+          "Tuya",
+          "WiFi 2.4 GHz para app Tuya",
+          "Huella",
+          "Clave / contraseña",
+          "Tarjeta IC / proximidad",
+          "Llave mecánica",
+          "App Tuya"
+        ],
+        "use_cases": [],
+        "target_environment": [
+          "oficinas",
+          "rentas"
+        ],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "exterior",
+          "huella",
+          "tarjeta",
+          "app",
+          "seguridad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-e-flex-lpl015": {
+          "title": "Perfil de producto: e-Flex LPL015",
+          "level": 1,
+          "order": 1,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. El material tecnico disponible la presenta como una cerradura para puertas residenciales, oficinas, habitaciones, estancias cortas y accesos interiores donde se requiere apertura sin llave, respaldo mecánico y conexión con app.",
+          "paragraphs": [
+            "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. El material tecnico disponible la presenta como una cerradura para puertas residenciales, oficinas, habitaciones, estancias cortas y accesos interiores donde se requiere apertura sin llave, respaldo mecánico y conexión con app.",
+            "Incluye cinco formas de acceso: huella, clave, tarjeta, llave mecánica y app. El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz.",
+            "Este perfil se construye únicamente con material tecnico de la carpeta e-Flex. El documento Manual cerradura 3D F7.docx no se usa como fuente funcional; solo puede servir como referencia de forma o lógica editorial para ordenar flujos de configuración cuando coincida con la información tecnico de e-Flex."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "identificacion": {
+          "title": "Identificación",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Producto",
+                "value": "Cerradura inteligente"
+              },
+              {
+                "label": "Modelo tecnico",
+                "value": "LPL015"
+              },
+              {
+                "label": "Nombre de proyecto",
+                "value": "e-Flex"
+              },
+              {
+                "label": "Tipo de operación",
+                "value": "Semiautomática, con manija"
+              },
+              {
+                "label": "Alimentación principal",
+                "value": "4 pilas AA alcalinas de 1,5 V"
+              },
+              {
+                "label": "Rango eléctrico indicado en empaque",
+                "value": "4,5 V a 6,5 V"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "Puerto exterior USB-C"
+              },
+              {
+                "label": "Conectividad",
+                "value": "WiFi 2.4 GHz para app Tuya"
+              },
+              {
+                "label": "App documentada",
+                "value": "Tuya"
+              },
+              {
+                "label": "Capacidad indicada",
+                "value": "300 usuarios"
+              },
+              {
+                "label": "Idiomas indicados en empaque",
+                "value": "9 idiomas"
+              },
+              {
+                "label": "Espesor de puerta indicado",
+                "value": "30 a 60 mm"
+              },
+              {
+                "label": "Accesorios indicados en empaque",
+                "value": "2 llaves mecánicas y 2 tarjetas de proximidad"
+              }
+            ]
+          ]
+        },
+        "criterio-de-conciliacion": {
+          "title": "Criterio de conciliación",
+          "level": 2,
+          "order": 4,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El manual visible debe incluir solo funciones confirmadas por el material tecnico de e-Flex.",
+            "El flujo F7 puede orientar la forma de organizar instalación, administrador, usuarios, app y restauración, pero no aporta contenido funcional.",
+            "Las funciones de cámara, reconocimiento facial, batería recargable, pantalla interior, contraseñas temporales avanzadas o administración de miembros desde app no deben publicarse para e-Flex salvo validación posterior con fuente tecnico específica.",
+            "Cuando una función aparece en empaque pero no en manual operativo, puede mencionarse con redacción conservadora o quedar como pendiente según su impacto."
+          ],
+          "tables": []
+        },
+        "propuesta-de-valor": {
+          "title": "Propuesta de valor",
+          "level": 2,
+          "order": 5,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura diaria con huella, clave, tarjeta, llave mecánica o app.",
+            "Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija.",
+            "Respaldo físico con llave mecánica.",
+            "Alimentación exterior de emergencia por USB-C cuando las baterías se agotan.",
+            "Administración local de usuarios desde el teclado.",
+            "Conexión con app Tuya por WiFi 2.4 GHz.",
+            "Funciones de seguridad como verificación dual, modo silencioso, modo de paso libre, alarma antipalanca e inhabilitación temporal por intentos incorrectos."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 6,
+          "summary": "e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas. Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia.",
+          "paragraphs": [
+            "e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas. Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia.",
+            "Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas. Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 7,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual tecnico, empaque, imagen del producto y videos"
+              },
+              {
+                "label": "Clave / contraseña",
+                "value": "Confirmado por manual tecnico, empaque e imagen del producto"
+              },
+              {
+                "label": "Tarjeta IC / proximidad",
+                "value": "Confirmado por manual tecnico, empaque e imagen del producto"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual tecnico, empaque y videos"
+              },
+              {
+                "label": "App Tuya",
+                "value": "Confirmado por manual tecnico, empaque y videos de conexión"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 8,
+          "summary": "La sección de uso diario debe explicar operaciones que no requieren entrar al menú de configuración. Para e-Flex, el material tecnico confirma apertura cotidiana con huella, clave, tarjeta, app Tuya y llave mecánica.",
+          "paragraphs": [
+            "La sección de uso diario debe explicar operaciones que no requieren entrar al menú de configuración. Para e-Flex, el material tecnico confirma apertura cotidiana con huella, clave, tarjeta, app Tuya y llave mecánica.",
+            "Nota de fuente: este bloque concilia LPL015电子说明书.pdf, LPL015涂鸦WiFi.pdf, el empaque BESLOCK y los videos de demostración/conexión. No incorporar funciones de app no confirmadas para e-Flex."
+          ],
+          "bullets": [
+            "Para abrir con huella, el usuario debe colocar un dedo registrado sobre el lector de la manija y accionar la manija cuando la cerradura confirme el acceso.",
+            "Para abrir con clave, debe despertar el teclado, ingresar la clave registrada y confirmar con #.",
+            "Para abrir con tarjeta, debe acercar una tarjeta registrada al área de lectura del panel exterior.",
+            "Para abrir desde app, la cerradura debe estar vinculada con Tuya y conectada a la red WiFi 2.4 GHz configurada.",
+            "El botón de timbre del panel exterior puede usarse para anunciar una visita, sin entrar al menú.",
+            "La llave mecánica es respaldo de emergencia y debe guardarse fuera del lugar protegido.",
+            "Si las baterías se agotan, el puerto exterior USB-C permite alimentación temporal para poder verificar un acceso y abrir; no debe presentarse como carga permanente.",
+            "Ante el aviso Low battery, please replace, cambiar las cuatro pilas AA cuanto antes; el manual indica aproximadamente 100 aperturas restantes, pero no debe tratarse como margen operativo garantizado.",
+            "El modo paso libre, verificación dual, modo silencioso y seguro nocturno son funciones de uso frecuente, pero se activan desde ajustes y deben explicarse como configuraciones, no como métodos de apertura independientes."
+          ],
+          "tables": []
+        },
+        "componentes-visibles": {
+          "title": "Componentes visibles",
+          "level": 2,
+          "order": 9,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "panel-exterior": {
+          "title": "Panel exterior",
+          "level": 3,
+          "order": 10,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Teclado táctil de contraseña.",
+            "Área de lectura de tarjeta.",
+            "Botón de timbre.",
+            "Lector de huella en la zona de la manija.",
+            "Manija exterior.",
+            "Acceso de llave mecánica.",
+            "Puerto exterior de alimentación de emergencia."
+          ],
+          "tables": []
+        },
+        "panel-interior": {
+          "title": "Panel interior",
+          "level": 3,
+          "order": 11,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Compartimento de baterías.",
+            "Tapa de baterías.",
+            "Botón SET / reinicio dentro o junto al compartimento de baterías.",
+            "Manija interior.",
+            "Orificios de montaje.",
+            "Seguro nocturno interior / control interior de bloqueo visible en imágenes del producto."
+          ],
+          "tables": []
+        },
+        "componentes-de-instalacion": {
+          "title": "Componentes de instalación",
+          "level": 3,
+          "order": 12,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Panel exterior.",
+            "Panel interior.",
+            "Cuerpo de cerradura.",
+            "Eje cuadrado.",
+            "Pernos de montaje.",
+            "Tornillos de montaje.",
+            "Cable de conexión de datos.",
+            "Tapa de baterías.",
+            "Baterías AA.",
+            "Llaves mecánicas.",
+            "Tarjetas de proximidad."
+          ],
+          "tables": []
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 13,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Baterías",
+                "value": "4 pilas AA alcalinas de alto rendimiento"
+              },
+              {
+                "label": "Voltaje de baterías",
+                "value": "1,5 V por pila"
+              },
+              {
+                "label": "Rango de operación indicado",
+                "value": "4,5 V a 6,5 V"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "Puerto exterior USB-C"
+              },
+              {
+                "label": "Aviso de baja energía",
+                "value": "Mensaje de voz \"Low battery, please replace\""
+              },
+              {
+                "label": "Uso tras primer aviso",
+                "value": "Aproximadamente 100 aperturas, según capacidad restante"
+              },
+              {
+                "label": "Mantenimiento recomendado",
+                "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas"
+              },
+              {
+                "label": "Conservación de datos",
+                "value": "Al retirar baterías, usuarios y ajustes se mantienen al reinstalar energía"
+              }
+            ]
+          ]
+        },
+        "instalacion": {
+          "title": "Instalación",
+          "level": 2,
+          "order": 14,
+          "summary": "Notas confirmadas:",
+          "paragraphs": [
+            "Notas confirmadas:"
+          ],
+          "bullets": [
+            "El eje cuadrado debe sobresalir entre 10 y 30 mm desde la superficie de la puerta.",
+            "Para puertas fuera de ese rango, se debe usar un eje de longitud adecuada o recortar el existente.",
+            "El empaque indica compatibilidad con puertas de 30 a 60 mm de espesor.",
+            "Si el pestillo no se mueve suavemente, se debe reajustar el panel antes de apretar por completo.",
+            "No se deben colgar objetos en la manija."
+          ],
+          "tables": []
+        },
+        "configuracion-local": {
+          "title": "Configuración local",
+          "level": 2,
+          "order": 15,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Inicializar",
+                "value": "Retirar la tapa de baterías y mantener presionado SET durante 5 segundos; el sistema confirma la inicialización"
+              },
+              {
+                "label": "Activar / entrar al menú",
+                "value": "Despertar el teclado y usar * + #"
+              },
+              {
+                "label": "Tecla *",
+                "value": "Volver, salir o borrar"
+              },
+              {
+                "label": "Tecla #",
+                "value": "Confirmar, entrar o repetir indicación de voz"
+              },
+              {
+                "label": "Crear primer administrador",
+                "value": "En estado inicial, usar * + # y luego presionar 4; permite registrar huella, contraseña o tarjeta"
+              },
+              {
+                "label": "Entrar a gestión",
+                "value": "Después de crear administrador, verificar un administrador cada vez que se ingresa a funciones"
+              },
+              {
+                "label": "Configuración de cerradura",
+                "value": "Presionar 3 después de verificar administrador"
+              },
+              {
+                "label": "Agregar usuario",
+                "value": "Presionar 1; permite registrar huella, contraseña o tarjeta"
+              },
+              {
+                "label": "Eliminar usuario",
+                "value": "Presionar 2; elimina por huella, contraseña, tarjeta o número ID"
+              },
+              {
+                "label": "Restaurar fábrica",
+                "value": "Mantener presionado el botón de restauración/SET durante 5 segundos"
+              }
+            ]
+          ]
+        },
+        "administradores-y-usuarios": {
+          "title": "Administradores y usuarios",
+          "level": 2,
+          "order": 16,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El primer administrador es obligatorio antes de usar configuración avanzada o vincular la app.",
+            "El administrador puede entrar a gestión de funciones.",
+            "Los usuarios pueden registrarse con huella, contraseña o tarjeta.",
+            "La eliminación puede hacerse con huella, contraseña, tarjeta o número ID.",
+            "El empaque indica capacidad de 300 usuarios.",
+            "La cantidad máxima de administradores no aparece confirmada en el material tecnico revisado."
+          ],
+          "tables": []
+        },
+        "ajustes-de-cerradura": {
+          "title": "Ajustes de cerradura",
+          "level": 2,
+          "order": 17,
+          "summary": "Dentro de configuración de cerradura, el manual tecnico documenta estas opciones:",
+          "paragraphs": [
+            "Dentro de configuración de cerradura, el manual tecnico documenta estas opciones:",
+            "En ajustes de funciones aparecen:",
+            "En volumen:",
+            "En voz:",
+            "En hora:",
+            "Nota de conciliación: el empaque indica 9 idiomas, pero el manual operativo extraído solo detalla chino e inglés. Esta diferencia debe resolverse antes de afirmar en el manual visible que el usuario puede elegir 9 idiomas desde el menú."
+          ],
+          "bullets": [
+            "Modo siempre abierto / paso libre.",
+            "Verificación dual.",
+            "Ajuste de alarma antipalanca, documentado en el manual como desactivar alarma antipalanca.",
+            "Modo silencioso.",
+            "1 aumenta volumen.",
+            "2 disminuye volumen.",
+            "1 voz en chino.",
+            "2 voz en inglés.",
+            "Ingresar año, mes, día, hora y minuto.",
+            "Usar * para borrar.",
+            "Usar # para confirmar."
+          ],
+          "tables": [
+            [
+              {
+                "label": "1",
+                "value": "Ajustes de funciones"
+              },
+              {
+                "label": "2",
+                "value": "Ajuste de volumen"
+              },
+              {
+                "label": "3",
+                "value": "Ajustes de voz"
+              },
+              {
+                "label": "4",
+                "value": "Ajustes de hora"
+              }
+            ]
+          ]
+        },
+        "app-tuya-y-wifi": {
+          "title": "App Tuya y WiFi",
+          "level": 2,
+          "order": 18,
+          "summary": "El material tecnico confirma conexión con Tuya por WiFi de 2.4 GHz.",
+          "paragraphs": [
+            "El material tecnico confirma conexión con Tuya por WiFi de 2.4 GHz.",
+            "Flujo consolidado:",
+            "Los videos muestran el producto junto a un teléfono durante la conexión y subtítulos de soporte Tuya WiFi remoto. El manual visible debe mantener esta sección como vinculación básica, sin añadir funciones de app no confirmadas por e-Flex."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "seguridad": {
+          "title": "Seguridad",
+          "level": 2,
+          "order": 19,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Bloqueo por intentos incorrectos",
+                "value": "Confirmado: después de cinco intentos erróneos con huella, tarjeta o contraseña, se activa alarma y el uso electrónico queda inoperable durante 90 segundos"
+              },
+              {
+                "label": "Verificación dual",
+                "value": "Confirmada como opción de ajustes de funciones"
+              },
+              {
+                "label": "Modo silencioso",
+                "value": "Confirmado como opción de ajustes de funciones"
+              },
+              {
+                "label": "Modo siempre abierto",
+                "value": "Confirmado como opción de ajustes de funciones"
+              },
+              {
+                "label": "Alarma antipalanca",
+                "value": "Confirmada como opción de ajustes de funciones, con redacción tecnico ambigua sobre activar/desactivar"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmada como respaldo de apertura"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "Confirmada por manual y empaque"
+              }
+            ]
+          ]
+        },
+        "funciones-demostradas-en-video": {
+          "title": "Funciones demostradas en video",
+          "level": 2,
+          "order": 20,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura por huella.",
+            "Apertura con llave mecánica.",
+            "Uso de teclado exterior.",
+            "Conexión con app Tuya.",
+            "Secuencia de conexión con * + #, verificación de administrador, opción 2 y opción 1.",
+            "Producto montado en display BESLOCK.",
+            "Panel exterior con lector de huella iluminado."
+          ],
+          "tables": []
+        },
+        "material-visual-disponible": {
+          "title": "Material visual disponible",
+          "level": 2,
+          "order": 21,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Imagen principal de producto:.",
+            "Imagen equivalente tecnico:.",
+            "Foto real del producto: e-Flex/LPL015/产品实拍图/LPL015.",
+            "Imágenes comerciales en alta resolución:,,, smart, smart lock.",
+            "Videos de demostración y conexión Tuya en e-Flex/LPL015/产品视频/LPL015/.",
+            "Frames extraídos para planeación visual en Manuales/e-Flex/assets/image-planning/video-frames/.",
+            "Referencias seleccionadas para generación de imágenes en Manuales/e-Flex/assets/image-planning/selected-references/."
+          ],
+          "tables": []
+        },
+        "exclusiones-para-el-manual-visible": {
+          "title": "Exclusiones para el manual visible",
+          "level": 2,
+          "order": 22,
+          "summary": "No incluir en el manual de e-Flex hasta que exista fuente tecnico específica dentro del material e-Flex:",
+          "paragraphs": [
+            "No incluir en el manual de e-Flex hasta que exista fuente tecnico específica dentro del material e-Flex:"
+          ],
+          "bullets": [
+            "Cámara interior o exterior.",
+            "Reconocimiento facial.",
+            "Pantalla interior.",
+            "Batería recargable de 4200 mAh.",
+            "Contraseñas temporales online/offline desde app.",
+            "Gestión avanzada de miembros desde app.",
+            "Consulta de registros desde app.",
+            "Funciones derivadas del manual F7."
+          ],
+          "tables": []
+        },
+        "actualizaciones-de-revision-visual-2026-05-28": {
+          "title": "Actualizaciones de revisión visual 2026-05-28",
+          "level": 2,
+          "order": 23,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "En el panel exterior, el acceso de llave mecánica y el puerto exterior de emergencia deben representarse como detalles/zooms separados cuando la vista frontal no los muestre con claridad.",
+            "No dibujar orificios, tapas, puertos ni ranuras frontales adicionales sobre el panel principal si no aparecen en la referencia real; conectar los detalles a la zona inferior o inferior-lateral con guías finas.",
+            "En imágenes operativas ya aprobadas, retirar cualquier numeral aislado que no apunte a un componente, acción o estado real.",
+            "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo de cerradura, montaje de panel exterior con eje/cable, y conexión/fijación del panel interior con prueba de manija/pestillo.",
+            "Las imágenes de instalación no deben contener texto, listas ni instrucciones legibles; usar solo flechas, callouts, zooms, numerales conectados y checks simples."
+          ],
+          "tables": []
+        },
+        "puntos-pendientes-por-confirmar": {
+          "title": "Puntos pendientes por confirmar",
+          "level": 2,
+          "order": 24,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Cantidad máxima de administradores.",
+            "Contraseña inicial o método inicial exacto si aplica en variante comercial.",
+            "Si la interfaz real comercial tendrá 9 idiomas o solo chino/inglés desde menú local.",
+            "Tipo exacto y ubicación física del puerto USB-C de emergencia.",
+            "Ubicación exacta del acceso de llave mecánica en la versión comercial final.",
+            "Estado exacto de la alarma antipalanca: el manual la presenta como opción de desactivación, no como flujo completo de activación.",
+            "Si Smart Life es compatible además de Tuya."
+          ],
+          "tables": []
+        },
+        "fuentes-revisadas": {
+          "title": "Fuentes revisadas",
+          "level": 2,
+          "order": 25,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        }
+      }
+    },
     "profile_public": {
       "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
       "commercial_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías. Incluye cinco formas de acceso: huella, clave, tarjeta, llave mecánica y app. El producto funciona con cuatro pilas AA alcalinas, cuenta con alimentación exterior de emergencia por puerto USB-C, admite hasta 300 usuarios según arte de empaque y se vincula con la app Tuya mediante red WiFi de 2.4 GHz. Apertura diaria con huella, clave, tarjeta, llave mecánica o app. Panel exterior táctil con teclado, área de tarjeta, botón de timbre y lector de huella en la manija. Respaldo físico con llave mecánica. Alimentación exterior de emergencia por USB-C cuando las baterías se agotan. Administración local de usuarios desde el teclado.",

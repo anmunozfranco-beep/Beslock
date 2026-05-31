@@ -2,6 +2,1310 @@
   "product": {
     "slug": "e-nova",
     "display_name": "e-Nova",
+    "profile": {
+      "identity": {
+        "display_name": "e-Nova",
+        "beslock_name": "e-Nova",
+        "oem_model": "NK23",
+        "oem_related_names": "",
+        "product_type": "Cerradura inteligente tipo pomo",
+        "lock_architecture": "latch_lock",
+        "main_image": "e-Nova/e-Nova.png",
+        "variants": [],
+        "primary_use": "",
+        "source_file": "perfil_producto_e-nova_NK23.md"
+      },
+      "commercial": {
+        "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
+        "commercial_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada. Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes.",
+        "key_value_proposition": "Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes. Bloqueo interior / doble cierre mediante pomo interior.",
+        "value_bullets": [
+          "Apertura sin llave mediante huella.",
+          "Control y gestión desde app Tuya Smart por Bluetooth.",
+          "Llave mecánica como respaldo.",
+          "Puerto exterior para energía de emergencia.",
+          "Modo normalmente abierto para accesos frecuentes.",
+          "Bloqueo interior / doble cierre mediante pomo interior.",
+          "Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles.",
+          "Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja."
+        ],
+        "commercial_positioning": "La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica. No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional.",
+        "emotional_angle": "comodidad, control"
+      },
+      "positioning": {
+        "summary": "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias. Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico. La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica. No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional. - Apertura sin llave mediante huella. - Control y gestión desde app Tuya Smart por Bluetooth. - Llave mecánica como respaldo. - Puerto exterior para energía de emergencia. - Modo normalmente abierto para accesos frecuentes. - Bloqueo interior / doble cierre mediante pomo interior. - Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles. - Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja. - El manual visible debe tomar como fuente funcional principal el PDF NK23 - 说明书.pdf y su versión traducida CL03 - manual.pdf. - La imagen fija la geometría del producto: pomo redondo, no cerradura de manija ni panel vertical. - Las imágenes CL-03 se pueden usar como referencia visual porque muestran el mismo tipo de producto, sus piezas y parámetros. - La caja BESLOCK menciona 3 Accesos • 50 Usuarios, pero el manual técnico y la ficha visual en inglés confirman 20 huellas, con las primeras 3 como administradores y las 17 restantes como usuarios regulares. Para el manual visible, conviene no prometer 50 usuarios hasta validar si esa cifra aplica a usuarios de app, miembros compartidos o una variante comercial. - El material menciona USB, micro-USB y USB-C en distintas piezas. Para el manual visible, usar una redacción conservadora como puerto exterior de energía de emergencia hasta confirmar físicamente el conector. - Algunas capturas de Tuya muestran opciones genéricas como código, tarjeta o contraseña temporal. Como el producto no tiene teclado ni lector de tarjeta visibles, esas opciones no deben presentarse como métodos de apertura de e-Nova sin validación adicional. - No mezclar este producto con flujos, imágenes o mecanismos de e-Flex, e-Orbit o e-Prime. e-Nova no usa cerradura de incrustar con manija larga.",
+        "differentiators": [
+          "Apertura sin llave mediante huella.",
+          "Control y gestión desde app Tuya Smart por Bluetooth.",
+          "Llave mecánica como respaldo.",
+          "Puerto exterior para energía de emergencia.",
+          "Modo normalmente abierto para accesos frecuentes.",
+          "Bloqueo interior / doble cierre mediante pomo interior.",
+          "Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles.",
+          "Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja.",
+          "- Puerto exterior para energía de emergencia.",
+          "Para el manual visible, usar una redacción conservadora como puerto exterior de energía de emergencia hasta confirmar físicamente el conector."
+        ],
+        "commercial_promise": [
+          "Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias. Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico.",
+        "primary_problem_solved": "Apertura sin llave mediante huella.",
+        "target_user": "",
+        "target_environment": [],
+        "commercial_positioning": "La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica. No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional.",
+        "emotional_angle": "comodidad, control",
+        "practical_value": [
+          "Apertura sin llave mediante huella.",
+          "Control y gestión desde app Tuya Smart por Bluetooth.",
+          "Llave mecánica como respaldo.",
+          "Puerto exterior para energía de emergencia.",
+          "Modo normalmente abierto para accesos frecuentes.",
+          "Bloqueo interior / doble cierre mediante pomo interior.",
+          "Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles.",
+          "Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja.",
+          "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias.",
+          "Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico.",
+          "La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica.",
+          "No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional."
+        ]
+      },
+      "target_context": {
+        "environments": [],
+        "use_cases": [],
+        "installation_context": ""
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya Smart",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Confirmado"
+          },
+          {
+            "name": "PIN / clave",
+            "status": "No confirmado para uso en el producto físico"
+          },
+          {
+            "name": "Tarjeta",
+            "status": "No confirmado para uso en el producto físico"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "security_features": [
+          "Guardar al menos una llave fuera del espacio protegido.",
+          "Usar la llave mecánica si la batería se agota.",
+          "Usar energía exterior por el puerto USB para abrir de emergencia.",
+          "Cargar la batería al recibir aviso de baja energía.",
+          "El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+          "El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos."
+        ],
+        "comfort_features": [
+          "Para abrir con huella, tocar o despertar el pomo y colocar una huella registrada sobre el lector frontal.",
+          "Para abrir desde la app, el teléfono debe tener Bluetooth activo, estar cerca de la cerradura y conectarse desde Tuya Smart.",
+          "Para abrir con llave mecánica, usar el acceso físico del pomo exterior como respaldo cuando no pueda usarse huella o app.",
+          "No presentar PIN, tarjeta, teclado, rostro ni timbre como uso diario de e-Nova; aparecen en pantallas genéricas de app o en otros productos, pero no están confirmados en el hardware NK23.",
+          "Desde el interior, el control mecánico permite bloquear/desbloquear y puede dejar el pomo en modo de paso libre o doble cierre según la posición documentada.",
+          "En modo anti-bloqueo/doble cierre, la apertura exterior queda restringida; usar redacción conservadora hasta validar si abre con administrador, app o ambos.",
+          "Cuando aparezca alarma de baja batería, recargar la batería. El manual menciona alrededor de 50 aperturas restantes tras el aviso.",
+          "Si la batería se agota, usar llave mecánica o alimentación exterior por el puerto USB/micro-USB para permitir una apertura temporal.",
+          "Pantalla de inicio Tuya.",
+          "Búsqueda y agregado de dispositivo.",
+          "Conexión exitosa.",
+          "Panel principal de cerradura.",
+          "Gestión de miembros.",
+          "Pantalla de eliminación / desvinculación."
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya Smart",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Confirmado"
+          },
+          {
+            "name": "PIN / clave",
+            "status": "No confirmado para uso en el producto físico"
+          },
+          {
+            "name": "Tarjeta",
+            "status": "No confirmado para uso en el producto físico"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual, ficha visual y producto"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual, despiece e imágenes"
+              },
+              {
+                "label": "App Tuya Smart",
+                "value": "Confirmado por manual y capturas de app"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Confirmado por manual, caja y material visual"
+              },
+              {
+                "label": "PIN / clave",
+                "value": "No confirmado para uso en el producto físico"
+              },
+              {
+                "label": "Tarjeta",
+                "value": "No confirmado para uso en el producto físico"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "Cuando el pomo interior gira a posición horizontal, el manual lo describe como anti-bloqueo o doble cierre. En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico. Desde el interior la cerradura puede abrirse normalmente.",
+        "paragraphs": [
+          "Cuando el pomo interior gira a posición horizontal, el manual lo describe como anti-bloqueo o doble cierre. En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico. Desde el interior la cerradura puede abrirse normalmente."
+        ],
+        "bullets": [
+          "Guardar al menos una llave fuera del espacio protegido.",
+          "Usar la llave mecánica si la batería se agota.",
+          "Usar energía exterior por el puerto USB para abrir de emergencia.",
+          "Cargar la batería al recibir aviso de baja energía.",
+          "El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+          "El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos."
+        ],
+        "tables": [],
+        "features": [
+          "Guardar al menos una llave fuera del espacio protegido.",
+          "Usar la llave mecánica si la batería se agota.",
+          "Usar energía exterior por el puerto USB para abrir de emergencia.",
+          "Cargar la batería al recibir aviso de baja energía.",
+          "El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+          "El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos."
+        ]
+      },
+      "installation": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [
+          "Panel exterior / front panel.",
+          "Panel interior / rear panel.",
+          "Cuerpo tubular de cerradura.",
+          "Caja de recibidor / buckle box.",
+          "Placa de refuerzo o placa frontal / gusset plate.",
+          "Tornillos del cuerpo.",
+          "Tornillos de tracción.",
+          "Llave mecánica.",
+          "Llave o herramienta de instalación."
+        ],
+        "tables": [],
+        "installation_type": "",
+        "door_type": "",
+        "door_thickness": "35 a 55 mm",
+        "opening_direction": "",
+        "compatibility": []
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe mantener e-Nova como cerradura tipo pomo Bluetooth. El tecnico confirma solo tres accesos cotidianos: huella, llave mecánica y app Tuya Smart dentro de rango Bluetooth.",
+        "paragraphs": [
+          "La sección de uso diario debe mantener e-Nova como cerradura tipo pomo Bluetooth. El tecnico confirma solo tres accesos cotidianos: huella, llave mecánica y app Tuya Smart dentro de rango Bluetooth.",
+          "Nota de fuente: este bloque concilia NK23 - 说明书.pdf, CL03 - manual.pdf, capturas Tuya Smart y material visual NK23/CL-03. La caja comercial indica 3 accesos, lo que coincide con huella, llave y app.",
+          "El material tecnico indica que al girar el pomo interior a posición vertical se activa el modo normalmente abierto. Este modo permite el paso frecuente sin repetir verificación.",
+          "La traducción tecnico sobre cómo salir del modo normalmente abierto es confusa. El manual menciona verificar dos veces dentro de 3 segundos y luego verificar una vez más con huella para cerrar. Conviene validar este flujo antes de convertirlo en una instrucción final de usuario.",
+          "Cuando el pomo interior gira a posición horizontal, el manual lo describe como anti-bloqueo o doble cierre. En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico. Desde el interior la cerradura puede abrirse normalmente.",
+          "El manual menciona bloqueo automático después de 5 segundos en modo cerrado o anti-bloqueo."
+        ],
+        "bullets": [
+          "Para abrir con huella, tocar o despertar el pomo y colocar una huella registrada sobre el lector frontal.",
+          "Para abrir desde la app, el teléfono debe tener Bluetooth activo, estar cerca de la cerradura y conectarse desde Tuya Smart.",
+          "Para abrir con llave mecánica, usar el acceso físico del pomo exterior como respaldo cuando no pueda usarse huella o app.",
+          "No presentar PIN, tarjeta, teclado, rostro ni timbre como uso diario de e-Nova; aparecen en pantallas genéricas de app o en otros productos, pero no están confirmados en el hardware NK23.",
+          "Desde el interior, el control mecánico permite bloquear/desbloquear y puede dejar el pomo en modo de paso libre o doble cierre según la posición documentada.",
+          "En modo anti-bloqueo/doble cierre, la apertura exterior queda restringida; usar redacción conservadora hasta validar si abre con administrador, app o ambos.",
+          "Cuando aparezca alarma de baja batería, recargar la batería. El manual menciona alrededor de 50 aperturas restantes tras el aviso.",
+          "Si la batería se agota, usar llave mecánica o alimentación exterior por el puerto USB/micro-USB para permitir una apertura temporal."
+        ],
+        "tables": []
+      },
+      "configuration": {
+        "summary": "Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación. La capacidad funcional más segura para el manual es 20 huellas, si no se confirma otra fuente comercial.",
+        "paragraphs": [
+          "Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación. La capacidad funcional más segura para el manual es 20 huellas, si no se confirma otra fuente comercial.",
+          "El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth. El manual indica que, antes de enlazar el dispositivo, hay que tocar o despertar la cerradura para que pueda aparecer en la búsqueda Bluetooth. Después de enlazarla, la app puede conectarse directamente dentro del rango Bluetooth.",
+          "Flujo documentado:",
+          "Capturas de app revisadas:"
+        ],
+        "bullets": [
+          "Pantalla de inicio Tuya.",
+          "Búsqueda y agregado de dispositivo.",
+          "Conexión exitosa.",
+          "Panel principal de cerradura.",
+          "Gestión de miembros.",
+          "Pantalla de eliminación / desvinculación."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Capacidad de huellas",
+              "value": "20 huellas"
+            },
+            {
+              "label": "Administradores",
+              "value": "Primeras 3 huellas"
+            },
+            {
+              "label": "Usuarios regulares",
+              "value": "17 huellas restantes"
+            },
+            {
+              "label": "Texto comercial de caja",
+              "value": "3 Accesos • 50 Usuarios"
+            },
+            {
+              "label": "Estado inicial",
+              "value": "Si no hay usuarios registrados, cualquier huella puede abrir"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "Nota de conciliación: el manual traducido menciona micro-USB; la caja BESLOCK menciona USB-C; las fichas visuales hablan de puerto USB. Validar el tipo exacto antes de generar imagen cerrada del conector.",
+        "paragraphs": [
+          "Nota de conciliación: el manual traducido menciona micro-USB; la caja BESLOCK menciona USB-C; las fichas visuales hablan de puerto USB. Validar el tipo exacto antes de generar imagen cerrada del conector."
+        ],
+        "bullets": [
+          "Batería interna recargable de litio ternaria de 3,7 V / 400 mAh.",
+          "Tensión de funcionamiento: 3,3 V a 4,2 V.",
+          "Tensión de alarma: 3,5 V ± 0,1 V.",
+          "Consumo en sueño profundo: ≤ 30 uA.",
+          "Consumo estático: ≤ 50 uA.",
+          "Consumo dinámico: ≤ 200 mA.",
+          "El material indica aproximadamente 50 aperturas después de la alarma de baja batería.",
+          "La apertura de emergencia puede hacerse con llave mecánica o energía exterior por el puerto USB."
+        ],
+        "tables": [],
+        "battery_type": "Batería de litio ternaria 3,7 V / 400 mAh",
+        "emergency_power": ""
+      },
+      "app_connectivity": {
+        "summary": "El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth. El manual indica que, antes de enlazar el dispositivo, hay que tocar o despertar la cerradura para que pueda aparecer en la búsqueda Bluetooth. Después de enlazarla, la app puede conectarse directamente dentro del rango Bluetooth.",
+        "paragraphs": [
+          "El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth. El manual indica que, antes de enlazar el dispositivo, hay que tocar o despertar la cerradura para que pueda aparecer en la búsqueda Bluetooth. Después de enlazarla, la app puede conectarse directamente dentro del rango Bluetooth.",
+          "Flujo documentado:",
+          "Capturas de app revisadas:"
+        ],
+        "bullets": [
+          "Pantalla de inicio Tuya.",
+          "Búsqueda y agregado de dispositivo.",
+          "Conexión exitosa.",
+          "Panel principal de cerradura.",
+          "Gestión de miembros.",
+          "Pantalla de eliminación / desvinculación."
+        ],
+        "tables": [],
+        "app_status": "Tuya Smart",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Tensión de funcionamiento",
+              "value": "3,3 V a 4,2 V"
+            },
+            {
+              "label": "Tensión nominal",
+              "value": "3,7 V"
+            },
+            {
+              "label": "Tensión de alarma",
+              "value": "3,5 V ± 0,1 V"
+            },
+            {
+              "label": "Batería",
+              "value": "Litio ternaria 400 mAh"
+            },
+            {
+              "label": "Capacidad de huella",
+              "value": "20 huellas"
+            },
+            {
+              "label": "Administradores",
+              "value": "Primeras 3 huellas"
+            },
+            {
+              "label": "Usuarios regulares",
+              "value": "17 huellas"
+            },
+            {
+              "label": "Temperatura de trabajo",
+              "value": "-25 °C a +70 °C"
+            },
+            {
+              "label": "Temperatura de almacenamiento",
+              "value": "-40 °C a +85 °C"
+            },
+            {
+              "label": "Humedad",
+              "value": "< 93% RH"
+            },
+            {
+              "label": "Protección ESD",
+              "value": "Contacto ±8 kV, aire ±15 kV"
+            },
+            {
+              "label": "Material indicado en manual",
+              "value": "Aleación de aluminio + acero inoxidable"
+            },
+            {
+              "label": "Material indicado en ficha inglesa",
+              "value": "Acero inoxidable"
+            },
+            {
+              "label": "Grosor de puerta",
+              "value": "35 a 55 mm"
+            },
+            {
+              "label": "Métodos de apertura",
+              "value": "Huella / llave / app"
+            },
+            {
+              "label": "Puertas aplicables",
+              "value": "Madera, oficina, puertas ultraestrechas y ecológicas"
+            },
+            {
+              "label": "Dimensión visual del pomo",
+              "value": "70 mm x 75 mm según ficha visual"
+            },
+            {
+              "label": "Cuerpo tubular",
+              "value": "60 mm a 70 mm ajustable según ficha visual"
+            }
+          ]
+        ],
+        "highlights": [
+          {
+            "label": "Tensión de funcionamiento",
+            "value": "3,3 V a 4,2 V"
+          },
+          {
+            "label": "Tensión nominal",
+            "value": "3,7 V"
+          },
+          {
+            "label": "Tensión de alarma",
+            "value": "3,5 V ± 0,1 V"
+          },
+          {
+            "label": "Batería",
+            "value": "Litio ternaria 400 mAh"
+          },
+          {
+            "label": "Capacidad de huella",
+            "value": "20 huellas"
+          },
+          {
+            "label": "Administradores",
+            "value": "Primeras 3 huellas"
+          },
+          {
+            "label": "Usuarios regulares",
+            "value": "17 huellas"
+          },
+          {
+            "label": "Temperatura de trabajo",
+            "value": "-25 °C a +70 °C"
+          },
+          {
+            "label": "Temperatura de almacenamiento",
+            "value": "-40 °C a +85 °C"
+          },
+          {
+            "label": "Humedad",
+            "value": "< 93% RH"
+          },
+          {
+            "label": "Protección ESD",
+            "value": "Contacto ±8 kV, aire ±15 kV"
+          },
+          {
+            "label": "Material indicado en manual",
+            "value": "Aleación de aluminio + acero inoxidable"
+          },
+          {
+            "label": "Material indicado en ficha inglesa",
+            "value": "Acero inoxidable"
+          },
+          {
+            "label": "Grosor de puerta",
+            "value": "35 a 55 mm"
+          },
+          {
+            "label": "Métodos de apertura",
+            "value": "Huella / llave / app"
+          },
+          {
+            "label": "Puertas aplicables",
+            "value": "Madera, oficina, puertas ultraestrechas y ecológicas"
+          },
+          {
+            "label": "Dimensión visual del pomo",
+            "value": "70 mm x 75 mm según ficha visual"
+          },
+          {
+            "label": "Cuerpo tubular",
+            "value": "60 mm a 70 mm ajustable según ficha visual"
+          }
+        ],
+        "materials": [
+          "Aleación de aluminio + acero inoxidable",
+          "Acero inoxidable"
+        ],
+        "finish": "Negro y plateado",
+        "capacity_notes": [
+          "El manual operativo confirma instalación en puertas de 35 a 55 mm, app Tuya Smart, registro de huellas por Bluetooth, batería de litio recargable de 400 mAh, alarma de baja batería, apertura de emergencia con llave y alimentación exterior.",
+          "- La caja BESLOCK menciona 3 Accesos • 50 Usuarios, pero el manual técnico y la ficha visual en inglés confirman 20 huellas, con las primeras 3 como administradores y las 17 restantes como usuarios regulares.",
+          "Para el manual visible, conviene no prometer 50 usuarios hasta validar si esa cifra aplica a usuarios de app, miembros compartidos o una variante comercial.",
+          "## Usuarios y capacidades | Campo | Información tecnico | |---|---| | Capacidad de huellas | 20 huellas | | Administradores | Primeras 3 huellas | | Usuarios regulares | 17 huellas restantes | | Texto comercial de caja | 3 Accesos • 50 Usuarios | | Estado inicial | Si no hay usuarios registrados, cualquier huella puede abrir | Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación.",
+          "La capacidad funcional más segura para el manual es 20 huellas, si no se confirma otra fuente comercial.",
+          "## Configuración y app El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth.",
+          "En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico.",
+          "Advertencia editorial: este flujo debe explicarse con mucho cuidado en el manual, porque borra usuarios y accesos.",
+          "## Especificaciones técnicas documentadas | Campo | Información tecnico | |---|---| | Tensión de funcionamiento | 3,3 V a 4,2 V | | Tensión nominal | 3,7 V | | Tensión de alarma | 3,5 V ± 0,1 V | | Batería | Litio ternaria 400 mAh | | Capacidad de huella | 20 huellas | | Administradores | Primeras 3 huellas | | Usuarios regulares | 17 huellas | | Temperatura de trabajo | -25 °C a +70 °C | | Temperatura de almacenamiento | -40 °C a +85 °C | | Humedad | < 93% RH | | Protección ESD | Contacto ±8 kV, aire ±15 kV | | Material indicado en manual | Aleación de aluminio + acero inoxidable | | Material indicado en ficha inglesa | Acero inoxidable | | Grosor de puerta | 35 a 55 mm | | Métodos de apertura | Huella / llave / app | | Puertas aplicables | Madera, oficina, puertas ultraestrechas y ecológicas | | Dimensión visual del pomo | 70 mm x 75 mm según ficha visual | | Cuerpo tubular | 60 mm a 70 mm ajustable según ficha visual | ## Seguridad y respaldo - Guardar al menos una llave fuera del espacio protegido.",
+          "- El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+          "- La estructura debe priorizar: - revisión inicial, - instalación, - vinculación con Tuya, - registro de huellas, - uso diario, - modo normalmente abierto, - bloqueo interior, - batería y respaldo, - restaurar fábrica.",
+          "- El primer aviso fuerte debe explicar que, antes de registrar huellas, cualquier huella puede abrir.",
+          "## Pendientes de validación - Confirmar si la capacidad comercial final será 20 huellas o 50 usuarios.",
+          "- Confirmar si 50 usuarios se refiere a miembros de app, accesos compartidos o una variante del producto."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "- Pomo exterior circular. - Lector de huella en el frente del pomo. - Aro luminoso alrededor del lector. - Acceso de llave mecánica integrado en el frente o zona exterior del pomo, según imagen tecnico. - Puerto exterior de energía de emergencia, visible en material de producto y despiece. - Pomo interior circular. - Perilla o control central de bloqueo. - Iconos de bloqueo y desbloqueo alrededor del control. - Marca UP para orientar el montaje. - Vástago o eje de conexión hacia el cuerpo de cerradura. - Panel exterior / front panel. - Panel interior / rear panel. - Cuerpo tubular de cerradura. - Caja de recibidor / buckle box. - Placa de refuerzo o placa frontal / gusset plate. - Tornillos del cuerpo. - Tornillos de tracción. - Llave mecánica. - Llave o herramienta de instalación. Referencia base obligatoria: - Referencias recomendadas del producto: - para vista de panel exterior e interior en negro. - para piezas del producto. - para dimensiones y cuerpo tubular. - para puerto de emergencia y llave. Control visual: - Mantener siempre la geometría de pomo circular. - No convertirlo en cerradura de manija larga. - No agregar teclado, tarjeta, cámara, pantalla ni timbre. - No inventar botón SET ni compartimiento de baterías AA. - Representar el cuerpo de cerradura como tubular / ball lock, con recibidor y placa correspondientes. - Si se muestra el puerto de emergencia, no fijar USB-C o micro-USB hasta validar con producto físico. - Si se usa texto en imagen, debe estar en español y con el verde BESLOCK #034526.",
+        "maintain": [
+          "Pomo exterior circular.",
+          "Lector de huella en el frente del pomo.",
+          "Aro luminoso alrededor del lector.",
+          "Acceso de llave mecánica integrado en el frente o zona exterior del pomo, según imagen tecnico.",
+          "Puerto exterior de energía de emergencia, visible en material de producto y despiece.",
+          "Pomo interior circular.",
+          "Perilla o control central de bloqueo.",
+          "Iconos de bloqueo y desbloqueo alrededor del control.",
+          "Marca UP para orientar el montaje.",
+          "Vástago o eje de conexión hacia el cuerpo de cerradura.",
+          "Panel exterior / front panel.",
+          "Panel interior / rear panel.",
+          "Cuerpo tubular de cerradura.",
+          "Caja de recibidor / buckle box.",
+          "Placa de refuerzo o placa frontal / gusset plate.",
+          "Tornillos del cuerpo.",
+          "Tornillos de tracción.",
+          "Llave mecánica."
+        ],
+        "avoid": [],
+        "main_visual_reference": "",
+        "rules": [
+          "Pomo exterior circular.",
+          "Lector de huella en el frente del pomo.",
+          "Aro luminoso alrededor del lector.",
+          "Acceso de llave mecánica integrado en el frente o zona exterior del pomo, según imagen tecnico.",
+          "Puerto exterior de energía de emergencia, visible en material de producto y despiece.",
+          "Pomo interior circular.",
+          "Perilla o control central de bloqueo.",
+          "Iconos de bloqueo y desbloqueo alrededor del control.",
+          "Marca UP para orientar el montaje.",
+          "Vástago o eje de conexión hacia el cuerpo de cerradura.",
+          "Panel exterior / front panel.",
+          "Panel interior / rear panel.",
+          "Cuerpo tubular de cerradura.",
+          "Caja de recibidor / buckle box.",
+          "Placa de refuerzo o placa frontal / gusset plate.",
+          "Tornillos del cuerpo.",
+          "Tornillos de tracción.",
+          "Llave mecánica.",
+          "Llave o herramienta de instalación.",
+          "para vista de panel exterior e interior en negro.",
+          "para piezas del producto.",
+          "para dimensiones y cuerpo tubular.",
+          "para puerto de emergencia y llave.",
+          "Mantener siempre la geometría de pomo circular.",
+          "No convertirlo en cerradura de manija larga.",
+          "No agregar teclado, tarjeta, cámara, pantalla ni timbre.",
+          "No inventar botón SET ni compartimiento de baterías AA.",
+          "Representar el cuerpo de cerradura como tubular / ball lock, con recibidor y placa correspondientes.",
+          "Si se muestra el puerto de emergencia, no fijar USB-C o micro-USB hasta validar con producto físico.",
+          "Si se usa texto en imagen, debe estar en español y con el verde BESLOCK #034526."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [
+          "Título recomendado: Conoce tu e-Nova o Conoce tu cerradura.",
+          "Presentar el producto como cerradura tipo pomo, no como cerradura de manija.",
+          "La estructura debe priorizar:",
+          "revisión inicial,",
+          "instalación,",
+          "vinculación con Tuya,",
+          "registro de huellas,",
+          "uso diario,",
+          "modo normalmente abierto,",
+          "bloqueo interior,",
+          "batería y respaldo,",
+          "restaurar fábrica.",
+          "El primer aviso fuerte debe explicar que, antes de registrar huellas, cualquier huella puede abrir.",
+          "No incluir secciones de PIN, tarjeta, rostro, timbre, video o teclado.",
+          "Evitar lenguaje como credencial; usar huella, llave, app y acceso.",
+          "Explicar la app como control Bluetooth local, salvo que se confirme gateway o control remoto fuera de rango.",
+          "Las instrucciones de emergencia deben separar llave mecánica y energía exterior."
+        ],
+        "tables": [],
+        "recommended_language": [],
+        "avoid_terms": [
+          "- Evitar lenguaje como credencial; usar huella, llave, app y acceso."
+        ],
+        "priority_callouts": []
+      },
+      "warnings": {
+        "items": [
+          "Como el producto no tiene teclado ni lector de tarjeta visibles, esas opciones no deben presentarse como métodos de apertura de e-Nova sin validación adicional.",
+          "- No mezclar este producto con flujos, imágenes o mecanismos de e-Flex, e-Orbit o e-Prime.",
+          "## Métodos de apertura | Método | Estado en fuentes | |---|---| | Huella | Confirmado por manual, ficha visual y producto | | Llave mecánica | Confirmado por manual, despiece e imágenes | | App Tuya Smart | Confirmado por manual y capturas de app | | Bluetooth | Confirmado por manual, caja y material visual | | PIN / clave | No confirmado para uso en el producto físico | | Tarjeta | No confirmado para uso en el producto físico | | Reconocimiento facial | No aplica | | Video / timbre | No aplica | ## Uso diario La sección de uso diario debe mantener e-Nova como cerradura tipo pomo Bluetooth.",
+          "- Para abrir desde la app, el teléfono debe tener Bluetooth activo, estar cerca de la cerradura y conectarse desde Tuya Smart.",
+          "Advertencia editorial: este flujo debe explicarse con mucho cuidado en el manual, porque borra usuarios y accesos.",
+          "- El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos.",
+          "- Evitar lenguaje como credencial; usar huella, llave, app y acceso.",
+          "- Evitar texto dentro de las imágenes de instalación."
+        ]
+      },
+      "pending_validation": [
+        "Confirmar si la capacidad comercial final será 20 huellas o 50 usuarios.",
+        "Confirmar si 50 usuarios se refiere a miembros de app, accesos compartidos o una variante del producto.",
+        "Confirmar tipo exacto de puerto exterior: USB-C, micro-USB u otro.",
+        "Confirmar el flujo exacto para salir del modo normalmente abierto.",
+        "Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
+        "Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas. En el material operativo de e-Nova, Tuya Smart es la fuente más consistente.",
+        "## Identificación | Campo | Información consolidada | |---|---| | Producto | Cerradura inteligente tipo pomo | | Nombre de proyecto | e-Nova | | Modelo tecnico principal | NK23 | | Referencia visual recurrente | CL-03 | | Tipo de operación | Pomo inteligente con cuerpo tubular / ball lock | | Imagen principal | | | App documentada | Tuya Smart | | Conectividad documentada | Bluetooth | | Métodos de apertura confirmados | Huella, llave mecánica y app | | Alimentación principal | Batería de litio ternaria 3,7 V / 400 mAh | | Puerto de emergencia | USB exterior; tipo exacto pendiente de validar | | Grosor de puerta | 35 a 55 mm | | Colores observados | Negro y plateado | ## Fuentes tecnico revisadas - - e-Nova/NK23/说明书/NK23 - 说明书.pdf - e-Nova/NK23/说明书/NK23说明书翻译西班牙文/CL03 - manual.pdf - e-Nova/NK23/彩盒图纸/NK23 BESLOCK -COLOR BOX -20251108.pdf - - - - - Videos de instalación, demostración y vinculación en e-Nova/NK23/产品视频/NK23/ ## Criterio de conciliación - El manual visible debe tomar como fuente funcional principal el PDF NK23 - 说明书.pdf y su versión traducida CL03 - manual.pdf.",
+        "Para el manual visible, conviene no prometer 50 usuarios hasta validar si esa cifra aplica a usuarios de app, miembros compartidos o una variante comercial.",
+        "Para el manual visible, usar una redacción conservadora como puerto exterior de energía de emergencia hasta confirmar físicamente el conector.",
+        "Como el producto no tiene teclado ni lector de tarjeta visibles, esas opciones no deben presentarse como métodos de apertura de e-Nova sin validación adicional.",
+        "- Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja.",
+        "No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional.",
+        "- En modo anti-bloqueo/doble cierre, la apertura exterior queda restringida; usar redacción conservadora hasta validar si abre con administrador, app o ambos.",
+        "## Usuarios y capacidades | Campo | Información tecnico | |---|---| | Capacidad de huellas | 20 huellas | | Administradores | Primeras 3 huellas | | Usuarios regulares | 17 huellas restantes | | Texto comercial de caja | 3 Accesos • 50 Usuarios | | Estado inicial | Si no hay usuarios registrados, cualquier huella puede abrir | Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación.",
+        "Conviene validar este flujo antes de convertirlo en una instrucción final de usuario.",
+        "El zumbador emite un pitido largo para confirmar.",
+        "Validar el tipo exacto antes de generar imagen cerrada del conector.",
+        "- El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos.",
+        "- Si se muestra el puerto de emergencia, no fijar USB-C o micro-USB hasta validar con producto físico.",
+        "- Si se representa energía de emergencia, mantener el puerto como referencia visual genérica hasta confirmar físicamente el tipo exacto.",
+        "## Pendientes de validación - Confirmar si la capacidad comercial final será 20 huellas o 50 usuarios.",
+        "- Confirmar si 50 usuarios se refiere a miembros de app, accesos compartidos o una variante del producto.",
+        "- Confirmar tipo exacto de puerto exterior: USB-C, micro-USB u otro.",
+        "- Confirmar el flujo exacto para salir del modo normalmente abierto.",
+        "- Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
+        "- Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Nova",
+          "BESLOCK e-Nova",
+          "cerradura inteligente",
+          "Cerradura inteligente tipo pomo",
+          "Tuya Smart",
+          "Bluetooth",
+          "Huella",
+          "Llave mecánica",
+          "App Tuya Smart",
+          "PIN / clave",
+          "Tarjeta",
+          "Reconocimiento facial",
+          "Video / timbre"
+        ],
+        "use_cases": [],
+        "target_environment": [],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "exterior",
+          "huella",
+          "PIN",
+          "tarjeta",
+          "app",
+          "seguridad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-e-nova-nk23": {
+          "title": "Perfil de producto: e-Nova NK23",
+          "level": 1,
+          "order": 1,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. El material tecnico la presenta también como Nano cerradura pomo inteligente, Smart knob lock, Smart ball lock y, en varias piezas visuales, como CL-03.",
+          "paragraphs": [
+            "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. El material tecnico la presenta también como Nano cerradura pomo inteligente, Smart knob lock, Smart ball lock y, en varias piezas visuales, como CL-03.",
+            "La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada.",
+            "El manual operativo confirma instalación en puertas de 35 a 55 mm, app Tuya Smart, registro de huellas por Bluetooth, batería de litio recargable de 400 mAh, alarma de baja batería, apertura de emergencia con llave y alimentación exterior. Este perfil se construye únicamente con material tecnico de la carpeta e-Nova. La imagen principal del producto es."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "identificacion": {
+          "title": "Identificación",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Producto",
+                "value": "Cerradura inteligente tipo pomo"
+              },
+              {
+                "label": "Nombre de proyecto",
+                "value": "e-Nova"
+              },
+              {
+                "label": "Modelo tecnico principal",
+                "value": "NK23"
+              },
+              {
+                "label": "Referencia visual recurrente",
+                "value": "CL-03"
+              },
+              {
+                "label": "Tipo de operación",
+                "value": "Pomo inteligente con cuerpo tubular / ball lock"
+              },
+              {
+                "label": "Imagen principal",
+                "value": ""
+              },
+              {
+                "label": "App documentada",
+                "value": "Tuya Smart"
+              },
+              {
+                "label": "Conectividad documentada",
+                "value": "Bluetooth"
+              },
+              {
+                "label": "Métodos de apertura confirmados",
+                "value": "Huella, llave mecánica y app"
+              },
+              {
+                "label": "Alimentación principal",
+                "value": "Batería de litio ternaria 3,7 V / 400 mAh"
+              },
+              {
+                "label": "Puerto de emergencia",
+                "value": "USB exterior; tipo exacto pendiente de validar"
+              },
+              {
+                "label": "Grosor de puerta",
+                "value": "35 a 55 mm"
+              },
+              {
+                "label": "Colores observados",
+                "value": "Negro y plateado"
+              }
+            ]
+          ]
+        },
+        "fuentes-oem-revisadas": {
+          "title": "Fuentes OEM revisadas",
+          "level": 2,
+          "order": 4,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "criterio-de-conciliacion": {
+          "title": "Criterio de conciliación",
+          "level": 2,
+          "order": 5,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El manual visible debe tomar como fuente funcional principal el PDF NK23 - 说明书.pdf y su versión traducida CL03 - manual.pdf.",
+            "La imagen fija la geometría del producto: pomo redondo, no cerradura de manija ni panel vertical.",
+            "Las imágenes CL-03 se pueden usar como referencia visual porque muestran el mismo tipo de producto, sus piezas y parámetros.",
+            "La caja BESLOCK menciona 3 Accesos • 50 Usuarios, pero el manual técnico y la ficha visual en inglés confirman 20 huellas, con las primeras 3 como administradores y las 17 restantes como usuarios regulares. Para el manual visible, conviene no prometer 50 usuarios hasta validar si esa cifra aplica a usuarios de app, miembros compartidos o una variante comercial.",
+            "El material menciona USB, micro-USB y USB-C en distintas piezas. Para el manual visible, usar una redacción conservadora como puerto exterior de energía de emergencia hasta confirmar físicamente el conector.",
+            "Algunas capturas de Tuya muestran opciones genéricas como código, tarjeta o contraseña temporal. Como el producto no tiene teclado ni lector de tarjeta visibles, esas opciones no deben presentarse como métodos de apertura de e-Nova sin validación adicional.",
+            "No mezclar este producto con flujos, imágenes o mecanismos de e-Flex, e-Orbit o e-Prime. e-Nova no usa cerradura de incrustar con manija larga."
+          ],
+          "tables": []
+        },
+        "propuesta-de-valor": {
+          "title": "Propuesta de valor",
+          "level": 2,
+          "order": 6,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura sin llave mediante huella.",
+            "Control y gestión desde app Tuya Smart por Bluetooth.",
+            "Llave mecánica como respaldo.",
+            "Puerto exterior para energía de emergencia.",
+            "Modo normalmente abierto para accesos frecuentes.",
+            "Bloqueo interior / doble cierre mediante pomo interior.",
+            "Instalación directa como reemplazo de cerradura tipo pomo en puertas compatibles.",
+            "Indicadores luminosos y zumbador para confirmar acciones, errores y batería baja."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 7,
+          "summary": "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias. Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico.",
+          "paragraphs": [
+            "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias. Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico.",
+            "La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica. No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "componentes-visibles": {
+          "title": "Componentes visibles",
+          "level": 2,
+          "order": 8,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "panel-exterior": {
+          "title": "Panel exterior",
+          "level": 3,
+          "order": 9,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Pomo exterior circular.",
+            "Lector de huella en el frente del pomo.",
+            "Aro luminoso alrededor del lector.",
+            "Acceso de llave mecánica integrado en el frente o zona exterior del pomo, según imagen tecnico.",
+            "Puerto exterior de energía de emergencia, visible en material de producto y despiece."
+          ],
+          "tables": []
+        },
+        "panel-interior": {
+          "title": "Panel interior",
+          "level": 3,
+          "order": 10,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Pomo interior circular.",
+            "Perilla o control central de bloqueo.",
+            "Iconos de bloqueo y desbloqueo alrededor del control.",
+            "Marca UP para orientar el montaje.",
+            "Vástago o eje de conexión hacia el cuerpo de cerradura."
+          ],
+          "tables": []
+        },
+        "componentes-de-instalacion": {
+          "title": "Componentes de instalación",
+          "level": 3,
+          "order": 11,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Panel exterior / front panel.",
+            "Panel interior / rear panel.",
+            "Cuerpo tubular de cerradura.",
+            "Caja de recibidor / buckle box.",
+            "Placa de refuerzo o placa frontal / gusset plate.",
+            "Tornillos del cuerpo.",
+            "Tornillos de tracción.",
+            "Llave mecánica.",
+            "Llave o herramienta de instalación."
+          ],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 12,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual, ficha visual y producto"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual, despiece e imágenes"
+              },
+              {
+                "label": "App Tuya Smart",
+                "value": "Confirmado por manual y capturas de app"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Confirmado por manual, caja y material visual"
+              },
+              {
+                "label": "PIN / clave",
+                "value": "No confirmado para uso en el producto físico"
+              },
+              {
+                "label": "Tarjeta",
+                "value": "No confirmado para uso en el producto físico"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 13,
+          "summary": "La sección de uso diario debe mantener e-Nova como cerradura tipo pomo Bluetooth. El tecnico confirma solo tres accesos cotidianos: huella, llave mecánica y app Tuya Smart dentro de rango Bluetooth.",
+          "paragraphs": [
+            "La sección de uso diario debe mantener e-Nova como cerradura tipo pomo Bluetooth. El tecnico confirma solo tres accesos cotidianos: huella, llave mecánica y app Tuya Smart dentro de rango Bluetooth.",
+            "Nota de fuente: este bloque concilia NK23 - 说明书.pdf, CL03 - manual.pdf, capturas Tuya Smart y material visual NK23/CL-03. La caja comercial indica 3 accesos, lo que coincide con huella, llave y app."
+          ],
+          "bullets": [
+            "Para abrir con huella, tocar o despertar el pomo y colocar una huella registrada sobre el lector frontal.",
+            "Para abrir desde la app, el teléfono debe tener Bluetooth activo, estar cerca de la cerradura y conectarse desde Tuya Smart.",
+            "Para abrir con llave mecánica, usar el acceso físico del pomo exterior como respaldo cuando no pueda usarse huella o app.",
+            "No presentar PIN, tarjeta, teclado, rostro ni timbre como uso diario de e-Nova; aparecen en pantallas genéricas de app o en otros productos, pero no están confirmados en el hardware NK23.",
+            "Desde el interior, el control mecánico permite bloquear/desbloquear y puede dejar el pomo en modo de paso libre o doble cierre según la posición documentada.",
+            "En modo anti-bloqueo/doble cierre, la apertura exterior queda restringida; usar redacción conservadora hasta validar si abre con administrador, app o ambos.",
+            "Cuando aparezca alarma de baja batería, recargar la batería. El manual menciona alrededor de 50 aperturas restantes tras el aviso.",
+            "Si la batería se agota, usar llave mecánica o alimentación exterior por el puerto USB/micro-USB para permitir una apertura temporal."
+          ],
+          "tables": []
+        },
+        "usuarios-y-capacidades": {
+          "title": "Usuarios y capacidades",
+          "level": 2,
+          "order": 14,
+          "summary": "Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación. La capacidad funcional más segura para el manual es 20 huellas, si no se confirma otra fuente comercial.",
+          "paragraphs": [
+            "Nota editorial: la capacidad de 50 usuarios debe quedar como dato pendiente de validación. La capacidad funcional más segura para el manual es 20 huellas, si no se confirma otra fuente comercial."
+          ],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Capacidad de huellas",
+                "value": "20 huellas"
+              },
+              {
+                "label": "Administradores",
+                "value": "Primeras 3 huellas"
+              },
+              {
+                "label": "Usuarios regulares",
+                "value": "17 huellas restantes"
+              },
+              {
+                "label": "Texto comercial de caja",
+                "value": "3 Accesos • 50 Usuarios"
+              },
+              {
+                "label": "Estado inicial",
+                "value": "Si no hay usuarios registrados, cualquier huella puede abrir"
+              }
+            ]
+          ]
+        },
+        "configuracion-y-app": {
+          "title": "Configuración y app",
+          "level": 2,
+          "order": 15,
+          "summary": "El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth. El manual indica que, antes de enlazar el dispositivo, hay que tocar o despertar la cerradura para que pueda aparecer en la búsqueda Bluetooth. Después de enlazarla, la app puede conectarse directamente dentro del rango Bluetooth.",
+          "paragraphs": [
+            "El registro de huellas se realiza desde la app Tuya Smart mediante Bluetooth. El manual indica que, antes de enlazar el dispositivo, hay que tocar o despertar la cerradura para que pueda aparecer en la búsqueda Bluetooth. Después de enlazarla, la app puede conectarse directamente dentro del rango Bluetooth.",
+            "Flujo documentado:",
+            "Capturas de app revisadas:"
+          ],
+          "bullets": [
+            "Pantalla de inicio Tuya.",
+            "Búsqueda y agregado de dispositivo.",
+            "Conexión exitosa.",
+            "Panel principal de cerradura.",
+            "Gestión de miembros.",
+            "Pantalla de eliminación / desvinculación."
+          ],
+          "tables": []
+        },
+        "operacion-local": {
+          "title": "Operación local",
+          "level": 2,
+          "order": 16,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "modo-normalmente-abierto": {
+          "title": "Modo normalmente abierto",
+          "level": 3,
+          "order": 17,
+          "summary": "El material tecnico indica que al girar el pomo interior a posición vertical se activa el modo normalmente abierto. Este modo permite el paso frecuente sin repetir verificación.",
+          "paragraphs": [
+            "El material tecnico indica que al girar el pomo interior a posición vertical se activa el modo normalmente abierto. Este modo permite el paso frecuente sin repetir verificación.",
+            "La traducción tecnico sobre cómo salir del modo normalmente abierto es confusa. El manual menciona verificar dos veces dentro de 3 segundos y luego verificar una vez más con huella para cerrar. Conviene validar este flujo antes de convertirlo en una instrucción final de usuario."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "bloqueo-interior-doble-cierre": {
+          "title": "Bloqueo interior / doble cierre",
+          "level": 3,
+          "order": 18,
+          "summary": "Cuando el pomo interior gira a posición horizontal, el manual lo describe como anti-bloqueo o doble cierre. En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico. Desde el interior la cerradura puede abrirse normalmente.",
+          "paragraphs": [
+            "Cuando el pomo interior gira a posición horizontal, el manual lo describe como anti-bloqueo o doble cierre. En este modo, el desbloqueo exterior queda restringido, al menos, a huellas de administrador o app según la traducción tecnico. Desde el interior la cerradura puede abrirse normalmente."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "cierre-automatico": {
+          "title": "Cierre automático",
+          "level": 3,
+          "order": 19,
+          "summary": "El manual menciona bloqueo automático después de 5 segundos en modo cerrado o anti-bloqueo.",
+          "paragraphs": [
+            "El manual menciona bloqueo automático después de 5 segundos en modo cerrado o anti-bloqueo."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "restaurar-fabrica": {
+          "title": "Restaurar fábrica",
+          "level": 2,
+          "order": 20,
+          "summary": "El restablecimiento se puede hacer desde la app Tuya o mediante operación local.",
+          "paragraphs": [
+            "El restablecimiento se puede hacer desde la app Tuya o mediante operación local.",
+            "Procedimiento local documentado:",
+            "Advertencia editorial: este flujo debe explicarse con mucho cuidado en el manual, porque borra usuarios y accesos. No representar un botón SET o reset físico si no aparece en el producto tecnico."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "luces-zumbador-y-estados": {
+          "title": "Luces, zumbador y estados",
+          "level": 2,
+          "order": 21,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Identificación exitosa",
+                "value": "Luz verde y 1 sonido"
+              },
+              {
+                "label": "Identificación fallida",
+                "value": "Luz roja parpadea 3 veces y zumbador emite 2 sonidos"
+              },
+              {
+                "label": "Carga en proceso",
+                "value": "Luz roja encendida"
+              },
+              {
+                "label": "Carga completa",
+                "value": "Luz verde encendida"
+              },
+              {
+                "label": "Batería baja",
+                "value": "Luz roja parpadea 5 veces después de abrir"
+              },
+              {
+                "label": "Restablecimiento exitoso",
+                "value": "Pitido largo"
+              }
+            ]
+          ]
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 22,
+          "summary": "Nota de conciliación: el manual traducido menciona micro-USB; la caja BESLOCK menciona USB-C; las fichas visuales hablan de puerto USB. Validar el tipo exacto antes de generar imagen cerrada del conector.",
+          "paragraphs": [
+            "Nota de conciliación: el manual traducido menciona micro-USB; la caja BESLOCK menciona USB-C; las fichas visuales hablan de puerto USB. Validar el tipo exacto antes de generar imagen cerrada del conector."
+          ],
+          "bullets": [
+            "Batería interna recargable de litio ternaria de 3,7 V / 400 mAh.",
+            "Tensión de funcionamiento: 3,3 V a 4,2 V.",
+            "Tensión de alarma: 3,5 V ± 0,1 V.",
+            "Consumo en sueño profundo: ≤ 30 uA.",
+            "Consumo estático: ≤ 50 uA.",
+            "Consumo dinámico: ≤ 200 mA.",
+            "El material indica aproximadamente 50 aperturas después de la alarma de baja batería.",
+            "La apertura de emergencia puede hacerse con llave mecánica o energía exterior por el puerto USB."
+          ],
+          "tables": []
+        },
+        "especificaciones-tecnicas-documentadas": {
+          "title": "Especificaciones técnicas documentadas",
+          "level": 2,
+          "order": 23,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Tensión de funcionamiento",
+                "value": "3,3 V a 4,2 V"
+              },
+              {
+                "label": "Tensión nominal",
+                "value": "3,7 V"
+              },
+              {
+                "label": "Tensión de alarma",
+                "value": "3,5 V ± 0,1 V"
+              },
+              {
+                "label": "Batería",
+                "value": "Litio ternaria 400 mAh"
+              },
+              {
+                "label": "Capacidad de huella",
+                "value": "20 huellas"
+              },
+              {
+                "label": "Administradores",
+                "value": "Primeras 3 huellas"
+              },
+              {
+                "label": "Usuarios regulares",
+                "value": "17 huellas"
+              },
+              {
+                "label": "Temperatura de trabajo",
+                "value": "-25 °C a +70 °C"
+              },
+              {
+                "label": "Temperatura de almacenamiento",
+                "value": "-40 °C a +85 °C"
+              },
+              {
+                "label": "Humedad",
+                "value": "< 93% RH"
+              },
+              {
+                "label": "Protección ESD",
+                "value": "Contacto ±8 kV, aire ±15 kV"
+              },
+              {
+                "label": "Material indicado en manual",
+                "value": "Aleación de aluminio + acero inoxidable"
+              },
+              {
+                "label": "Material indicado en ficha inglesa",
+                "value": "Acero inoxidable"
+              },
+              {
+                "label": "Grosor de puerta",
+                "value": "35 a 55 mm"
+              },
+              {
+                "label": "Métodos de apertura",
+                "value": "Huella / llave / app"
+              },
+              {
+                "label": "Puertas aplicables",
+                "value": "Madera, oficina, puertas ultraestrechas y ecológicas"
+              },
+              {
+                "label": "Dimensión visual del pomo",
+                "value": "70 mm x 75 mm según ficha visual"
+              },
+              {
+                "label": "Cuerpo tubular",
+                "value": "60 mm a 70 mm ajustable según ficha visual"
+              }
+            ]
+          ]
+        },
+        "seguridad-y-respaldo": {
+          "title": "Seguridad y respaldo",
+          "level": 2,
+          "order": 24,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Guardar al menos una llave fuera del espacio protegido.",
+            "Usar la llave mecánica si la batería se agota.",
+            "Usar energía exterior por el puerto USB para abrir de emergencia.",
+            "Cargar la batería al recibir aviso de baja energía.",
+            "El estado sin usuarios es inseguro para uso real: cualquier huella puede abrir hasta registrar usuarios.",
+            "El modo de doble cierre restringe la apertura exterior, pero debe validarse con producto físico para definir si admite app, administrador o ambos."
+          ],
+          "tables": []
+        },
+        "implicaciones-para-el-manual-de-usuario": {
+          "title": "Implicaciones para el manual de usuario",
+          "level": 2,
+          "order": 25,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Título recomendado: Conoce tu e-Nova o Conoce tu cerradura.",
+            "Presentar el producto como cerradura tipo pomo, no como cerradura de manija.",
+            "La estructura debe priorizar:",
+            "revisión inicial,",
+            "instalación,",
+            "vinculación con Tuya,",
+            "registro de huellas,",
+            "uso diario,",
+            "modo normalmente abierto,",
+            "bloqueo interior,",
+            "batería y respaldo,",
+            "restaurar fábrica.",
+            "El primer aviso fuerte debe explicar que, antes de registrar huellas, cualquier huella puede abrir.",
+            "No incluir secciones de PIN, tarjeta, rostro, timbre, video o teclado.",
+            "Evitar lenguaje como credencial; usar huella, llave, app y acceso.",
+            "Explicar la app como control Bluetooth local, salvo que se confirme gateway o control remoto fuera de rango.",
+            "Las instrucciones de emergencia deben separar llave mecánica y energía exterior."
+          ],
+          "tables": []
+        },
+        "referencias-visuales-para-comfy": {
+          "title": "Referencias visuales para Comfy",
+          "level": 2,
+          "order": 26,
+          "summary": "Referencia base obligatoria:",
+          "paragraphs": [
+            "Referencia base obligatoria:",
+            "Referencias recomendadas del producto:",
+            "Control visual:"
+          ],
+          "bullets": [
+            "para vista de panel exterior e interior en negro.",
+            "para piezas del producto.",
+            "para dimensiones y cuerpo tubular.",
+            "para puerto de emergencia y llave.",
+            "Mantener siempre la geometría de pomo circular.",
+            "No convertirlo en cerradura de manija larga.",
+            "No agregar teclado, tarjeta, cámara, pantalla ni timbre.",
+            "No inventar botón SET ni compartimiento de baterías AA.",
+            "Representar el cuerpo de cerradura como tubular / ball lock, con recibidor y placa correspondientes.",
+            "Si se muestra el puerto de emergencia, no fijar USB-C o micro-USB hasta validar con producto físico.",
+            "Si se usa texto en imagen, debe estar en español y con el verde BESLOCK #034526."
+          ],
+          "tables": []
+        },
+        "actualizaciones-de-revision-visual-2026-05-28": {
+          "title": "Actualizaciones de revisión visual 2026-05-28",
+          "level": 2,
+          "order": 27,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "La imagen H2 de instalación debe ser una composición de tres mini-escenas grandes: preparación de puerta para pomo, inserción/alineación del latch tubular con recibidor, y montaje de pomo exterior/interior con prueba final.",
+            "Mantener el hardware cilíndrico de e-Nova; no sustituirlo por mortaja, manija larga, cerradura multipunto ni arquitectura de otros productos.",
+            "Evitar texto dentro de las imágenes de instalación. La lectura debe depender de flechas, callouts, numerales conectados, zooms y checks.",
+            "En escenas operativas ya aprobadas, eliminar numerales aislados que no tengan guía o objetivo visual real.",
+            "Si se representa energía de emergencia, mantener el puerto como referencia visual genérica hasta confirmar físicamente el tipo exacto."
+          ],
+          "tables": []
+        },
+        "pendientes-de-validacion": {
+          "title": "Pendientes de validación",
+          "level": 2,
+          "order": 28,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Confirmar si la capacidad comercial final será 20 huellas o 50 usuarios.",
+            "Confirmar si 50 usuarios se refiere a miembros de app, accesos compartidos o una variante del producto.",
+            "Confirmar tipo exacto de puerto exterior: USB-C, micro-USB u otro.",
+            "Confirmar el flujo exacto para salir del modo normalmente abierto.",
+            "Confirmar qué accesos funcionan en modo doble cierre: solo administrador, app o ambos.",
+            "Confirmar si la app final se presentará como Tuya Smart, Smart Life o ambas. En el material operativo de e-Nova, Tuya Smart es la fuente más consistente."
+          ],
+          "tables": []
+        }
+      }
+    },
     "profile_public": {
       "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
       "commercial_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth. La identidad visual del producto corresponde a un pomo doble de geometría circular: panel exterior con lector de huella en el frente, aro luminoso azul, acceso mecánico de llave y puerto exterior de energía de emergencia; panel interior con perilla mecánica de bloqueo, marcas de bloqueo/desbloqueo y control para modo abierto/cerrado. No tiene teclado, tarjeta, cámara, reconocimiento facial ni manija alargada. Apertura sin llave mediante huella. Control y gestión desde app Tuya Smart por Bluetooth. Llave mecánica como respaldo. Puerto exterior para energía de emergencia. Modo normalmente abierto para accesos frecuentes.",

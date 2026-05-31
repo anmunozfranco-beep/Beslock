@@ -2,6 +2,2137 @@
   "product": {
     "slug": "e-shield",
     "display_name": "e-Shield",
+    "profile": {
+      "identity": {
+        "display_name": "e-Shield",
+        "beslock_name": "e-Shield",
+        "oem_model": "NX5-L",
+        "oem_related_names": "NX5, X5-L, SMART OUTDOOR LOCK",
+        "product_type": "Cerradura inteligente exterior de sobreponer",
+        "lock_architecture": "rim_lock_integrated_mechanism",
+        "main_image": "e-Shield/e-Shield.png",
+        "variants": [
+          "NX5-L单面",
+          "NX5-L双面",
+          "Versión de un panel",
+          "Versión doble"
+        ],
+        "primary_use": "Rejas, portones, puertas metálicas, accesos exteriores y patios",
+        "source_file": "perfil_producto_e-shield_NX5-L.md"
+      },
+      "commercial": {
+        "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
+        "commercial_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. La geometría principal presenta panel exterior vertical negro con lector de huella circular superior, teclado táctil, acceso inferior de llave mecánica y cuerpo de cierre rectangular de sobreponer con pestillo visible.",
+        "key_value_proposition": "",
+        "value_bullets": [],
+        "commercial_positioning": "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK.",
+        "emotional_angle": "robustez"
+      },
+      "positioning": {
+        "summary": "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer. Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo. Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK. Este perfil toma como fuente principal el manual NX5 más reciente y la imagen. Reglas de conciliación: - Si una función aparece en el manual NX5 reciente y coincide con el producto visual, se considera confirmada. - Si una función aparece solo en material comercial visual, se marca como observada y pendiente de validación. - Si una función aparece en un manual antiguo X5-L pero no en el manual NX5 reciente, se conserva como antecedente, no como instrucción final. - Si Tuya y TTLock aparecen en fuentes distintas, no se mezclan en el manual final sin decisión comercial. - Las plantillas de corte se usan para comprender instalación, no como contenido editorial para usuario final. - La variante doble se trata como variante específica, no como la versión base del manual salvo confirmación.",
+        "differentiators": [
+          "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer.",
+          "Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+          "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK."
+        ],
+        "commercial_promise": [
+          "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer.",
+          "Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+          "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer. Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+        "primary_problem_solved": "Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+        "target_user": "hogares",
+        "target_environment": [
+          "hogares tradicionales",
+          "accesos exteriores",
+          "rejas",
+          "portones",
+          "patios",
+          "puertas metálicas"
+        ],
+        "commercial_positioning": "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK.",
+        "emotional_angle": "robustez",
+        "practical_value": [
+          "Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo."
+        ]
+      },
+      "target_context": {
+        "environments": [
+          "hogares tradicionales",
+          "accesos exteriores",
+          "rejas",
+          "portones",
+          "patios",
+          "puertas metálicas"
+        ],
+        "use_cases": [
+          "puertas metálicas",
+          "rejas",
+          "portones",
+          "accesos tipo patio"
+        ],
+        "installation_context": "Salir / regresar"
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Control remoto",
+            "status": "Observado en imagen comercial, validar si aplica"
+          },
+          {
+            "name": "Doble verificación",
+            "status": "Documentado en manual antiguo como modo combinado"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "security_features": [
+          "después de 5 intentos incorrectos seguidos con huella, clave o tarjeta,",
+          "la cerradura emite advertencia,",
+          "bloquea operaciones durante 90 segundos.",
+          "menciona 30 segundos.",
+          "máximo 16 dígitos en total.",
+          "al activarse desde el interior, usuarios regulares no pueden abrir desde afuera,",
+          "administrador sí puede abrir.",
+          "cilindro clase C,",
+          "anti-tailgating,",
+          "anti-black box,",
+          "anti-peeping,",
+          "clave virtual para proteger el PIN."
+        ],
+        "comfort_features": [
+          "Para abrir con huella, colocar un dedo registrado sobre el lector circular superior y accionar el cuerpo de cierre cuando confirme.",
+          "Para abrir con clave/PIN, despertar el teclado, ingresar una clave registrada de 6 a 8 dígitos y confirmar con #.",
+          "Para PIN con privacidad, se pueden agregar números antes y después de la clave real; la clave correcta debe quedar dentro del conjunto ingresado.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura del panel exterior.",
+          "Para abrir desde app, usar la app definida para la versión comercial; las fuentes mencionan Tuya y TTLock en contextos distintos, por lo que el manual visible debe mantener app móvil hasta decisión final.",
+          "La llave mecánica es respaldo físico y debe guardarse fuera del área protegida.",
+          "El modo paso libre se usa solo cuando se requiere entrada frecuente; debe desactivarse cuando el acceso deba quedar protegido.",
+          "El bloqueo interior/anti-lock restringe aperturas desde afuera para usuarios regulares; mantener la nota de que un administrador puede abrir si corresponde a la versión instalada.",
+          "Tras cinco intentos incorrectos, el manual NX5 reciente indica bloqueo temporal de 90 segundos; presentar esta condición como protección, no como falla.",
+          "Con batería baja, el manual NX5 reciente indica aviso por debajo de 25% y alrededor de 50 aperturas restantes. Recomendar cambio inmediato de las cuatro AA.",
+          "Si no hay energía suficiente, el puerto USB exterior permite alimentación temporal para abrir; no representarlo como carga permanente.",
+          "涂鸦WiFi英文版说明书新.pdf: Tuya WiFi.",
+          "X5涂鸦WiFi中文说明书.pdf: Tuya WiFi.",
+          "通通锁三代锁APP使用手册英文版（中性出货版本）.pdf: TTLock / Tongtong Lock.",
+          "Imagen comercial: menciona TTlock Unlock, App Unlock y Remote Control.",
+          "Videos: conexión del panel frontal y del panel trasero con app.",
+          "agregar cerradura,",
+          "abrir desde app,",
+          "eKey permanente o temporal,",
+          "claves temporales,",
+          "registros de apertura,",
+          "gestión de usuarios,",
+          "eliminar o congelar accesos,",
+          "renombrar dispositivo,"
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Clave / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Control remoto",
+            "status": "Observado en imagen comercial, validar si aplica"
+          },
+          {
+            "name": "Doble verificación",
+            "status": "Documentado en manual antiguo como modo combinado"
+          },
+          {
+            "name": "Reconocimiento facial",
+            "status": "No aplica"
+          },
+          {
+            "name": "Video / timbre",
+            "status": "No aplica"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Clave / PIN",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado"
+              },
+              {
+                "label": "App",
+                "value": "Confirmado, app final pendiente"
+              },
+              {
+                "label": "Control remoto",
+                "value": "Observado en imagen comercial, validar si aplica"
+              },
+              {
+                "label": "Doble verificación",
+                "value": "Documentado en manual antiguo como modo combinado"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "Manual NX5 reciente:",
+        "paragraphs": [
+          "Manual NX5 reciente:",
+          "Manual antiguo:",
+          "Recomendación:",
+          "Usar 90 segundos si el manual NX5 reciente queda como fuente principal.",
+          "Permite escribir números antes y después de la clave real. La clave correcta debe estar dentro de la secuencia y se confirma con #.",
+          "Límite documentado:",
+          "Función documentada:",
+          "Debe explicarse con calma en el manual:",
+          "\"Úsalo cuando quieras restringir aperturas desde el exterior. Un administrador podrá abrir si es necesario.\"",
+          "El manual reciente lista:",
+          "El material visual también resalta uso exterior y antirobo en rejas."
+        ],
+        "bullets": [
+          "después de 5 intentos incorrectos seguidos con huella, clave o tarjeta,",
+          "la cerradura emite advertencia,",
+          "bloquea operaciones durante 90 segundos.",
+          "menciona 30 segundos.",
+          "máximo 16 dígitos en total.",
+          "al activarse desde el interior, usuarios regulares no pueden abrir desde afuera,",
+          "administrador sí puede abrir.",
+          "cilindro clase C,",
+          "anti-tailgating,",
+          "anti-black box,",
+          "anti-peeping,",
+          "clave virtual para proteger el PIN."
+        ],
+        "tables": [],
+        "features": [
+          "después de 5 intentos incorrectos seguidos con huella, clave o tarjeta,",
+          "la cerradura emite advertencia,",
+          "bloquea operaciones durante 90 segundos.",
+          "menciona 30 segundos.",
+          "máximo 16 dígitos en total.",
+          "al activarse desde el interior, usuarios regulares no pueden abrir desde afuera,",
+          "administrador sí puede abrir.",
+          "cilindro clase C,",
+          "anti-tailgating,",
+          "anti-black box,",
+          "anti-peeping,",
+          "clave virtual para proteger el PIN."
+        ]
+      },
+      "installation": {
+        "summary": "Documentado:",
+        "paragraphs": [
+          "Documentado:",
+          "Recomendación:",
+          "Validar con BESLOCK el rango de instalación comercial antes de ponerlo en el manual final. Si no se valida, usar \"verifica que la puerta sea compatible con la plantilla incluida\".",
+          "Material disponible:",
+          "Videos disponibles:",
+          "Implicación para el manual:",
+          "Debe existir una etapa inicial de revisión de sentido de apertura antes de fijar definitivamente el producto."
+        ],
+        "bullets": [
+          "puerta de hierro,",
+          "puerta de acero inoxidable,",
+          "puerta tipo patio,",
+          "rejas / rail gates en material visual,",
+          "portones exteriores.",
+          "plantilla single,",
+          "plantilla doble derecha,",
+          "plantilla doble izquierda.",
+          "cambio de dirección del pestillo,",
+          "cambio de dirección del panel trasero,",
+          "instalación de cerradura exterior."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Manual NX5 reciente",
+              "value": "30 a 110 mm"
+            },
+            {
+              "label": "Manual Tuya WiFi chino",
+              "value": "35 a 50 mm"
+            },
+            {
+              "label": "Plantillas de corte",
+              "value": "Incluyen medidas de perforación y orientación, no sustituyen el rango final"
+            }
+          ]
+        ],
+        "installation_type": "Hierro, acero inoxidable, patio",
+        "door_type": "Salir / regresar",
+        "door_thickness": "Salir / regresar",
+        "opening_direction": "Salir / regresar",
+        "compatibility": [
+          "Documentado: - puerta de hierro, - puerta de acero inoxidable, - puerta tipo patio, - rejas / rail gates en material visual, - portones exteriores.",
+          "Si no se valida, usar \"verifica que la puerta sea compatible con la plantilla incluida\"."
+        ]
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+        "paragraphs": [
+          "La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+          "Nota de fuente: este bloque concilia el manual NX5 reciente, el manual X5-L como antecedente, material de app y la geometría de sobreponer validada para e-Shield."
+        ],
+        "bullets": [
+          "Para abrir con huella, colocar un dedo registrado sobre el lector circular superior y accionar el cuerpo de cierre cuando confirme.",
+          "Para abrir con clave/PIN, despertar el teclado, ingresar una clave registrada de 6 a 8 dígitos y confirmar con #.",
+          "Para PIN con privacidad, se pueden agregar números antes y después de la clave real; la clave correcta debe quedar dentro del conjunto ingresado.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura del panel exterior.",
+          "Para abrir desde app, usar la app definida para la versión comercial; las fuentes mencionan Tuya y TTLock en contextos distintos, por lo que el manual visible debe mantener app móvil hasta decisión final.",
+          "La llave mecánica es respaldo físico y debe guardarse fuera del área protegida.",
+          "El modo paso libre se usa solo cuando se requiere entrada frecuente; debe desactivarse cuando el acceso deba quedar protegido.",
+          "El bloqueo interior/anti-lock restringe aperturas desde afuera para usuarios regulares; mantener la nota de que un administrador puede abrir si corresponde a la versión instalada.",
+          "Tras cinco intentos incorrectos, el manual NX5 reciente indica bloqueo temporal de 90 segundos; presentar esta condición como protección, no como falla.",
+          "Con batería baja, el manual NX5 reciente indica aviso por debajo de 25% y alrededor de 50 aperturas restantes. Recomendar cambio inmediato de las cuatro AA.",
+          "Si no hay energía suficiente, el puerto USB exterior permite alimentación temporal para abrir; no representarlo como carga permanente."
+        ],
+        "tables": []
+      },
+      "configuration": {
+        "summary": "El material tiene inconsistencias internas. Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+        "paragraphs": [
+          "El material tiene inconsistencias internas. Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+          "Recomendación para manual:",
+          "Flujo tecnico:",
+          "Menú documentado:",
+          "En estado inicial se entra con la clave 123456. Después se debe crear el primer administrador. El administrador puede ser huella, clave o tarjeta.",
+          "Recomendación editorial:",
+          "El manual final debe decirlo en lenguaje de usuario:",
+          "\"Antes de usar la cerradura todos los días, registra un administrador. Así evitas que el estado de fábrica permita aperturas sin configuración.\"",
+          "Métodos documentados:",
+          "La huella se registra colocando el mismo dedo varias veces. El manual NX5 reciente menciona tres capturas consecutivas; el manual antiguo menciona cuatro. Usar tres si se toma el manual NX5 reciente como fuente principal.",
+          "El usuario regular se agrega desde el menú de usuarios y puede abrir la cerradura. No debe gestionar otros usuarios ni cambiar ajustes.",
+          "El material documenta eliminación por número desde el menú. También aparece eliminación de todos los usuarios en material antiguo.",
+          "Para el manual final:",
+          "Funciones documentadas:",
+          "Recomendación editorial:"
+        ],
+        "bullets": [
+          "Decir que admite administradores y usuarios.",
+          "Indicar 10 administradores si se mantiene el manual NX5 como fuente.",
+          "Evitar una promesa total única hasta validar si el límite comercial será 100, 240 o una combinación por método.",
+          "Explicar claramente que el estado de fábrica debe configurarse antes del uso diario.",
+          "huella,",
+          "clave de 6 a 8 dígitos,",
+          "tarjeta IC.",
+          "priorizar eliminación individual,",
+          "mencionar restaurar fábrica solo como opción completa,",
+          "advertir que restaurar borra administradores, usuarios, huellas, claves, tarjetas y ajustes.",
+          "fecha y hora,",
+          "número de habitación,",
+          "voz activada o desactivada,",
+          "idioma,",
+          "modo de apertura simple o combinado,",
+          "modo normalmente abierto,",
+          "bloqueo interior / anti-lock,",
+          "restaurar fábrica.",
+          "Omitir \"número de habitación\" si el producto no se venderá para hotelería o administración de propiedades.",
+          "Traducir \"normally open\" como \"paso libre\" o \"modo de paso libre\".",
+          "Traducir \"anti-lock\" según función real: \"bloqueo interior\" o \"seguro interior\"."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Administradores",
+              "value": "Manual NX5: máximo 10 administradores"
+            },
+            {
+              "label": "Usuarios regulares",
+              "value": "Manual NX5: máximo 240 usuarios regulares"
+            },
+            {
+              "label": "Huellas",
+              "value": "Tabla NX5: 100 huellas; texto operativo: hasta 40 usuarios de huella"
+            },
+            {
+              "label": "Tarjetas",
+              "value": "Tabla NX5: 100 tarjetas"
+            },
+            {
+              "label": "Claves/PIN",
+              "value": "Tabla NX5: 100 claves"
+            },
+            {
+              "label": "Distribución por método",
+              "value": "Tabla NX5: 9 administradores y 91 usuarios por huella/tarjeta/clave"
+            },
+            {
+              "label": "Longitud de clave",
+              "value": "6 a 8 dígitos"
+            },
+            {
+              "label": "Clave inicial",
+              "value": "123456"
+            },
+            {
+              "label": "Estado de fábrica",
+              "value": "Cualquier huella o clave puede abrir antes de configurar usuarios"
+            }
+          ],
+          [
+            {
+              "label": "1",
+              "value": "Ajustes de administrador"
+            },
+            {
+              "label": "2",
+              "value": "Ajustes de usuario"
+            },
+            {
+              "label": "3",
+              "value": "Ajustes del sistema"
+            },
+            {
+              "label": "4",
+              "value": "Restaurar fábrica"
+            },
+            {
+              "label": "*",
+              "value": "Salir / regresar"
+            },
+            {
+              "label": "#",
+              "value": "Confirmar"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "Manual antiguo:",
+        "paragraphs": [
+          "Manual antiguo:",
+          "Recomendación:",
+          "Usar la versión más conservadora en el manual: cambiar baterías al primer aviso y tratar el USB solo como apertura temporal."
+        ],
+        "bullets": [
+          "menciona alarma bajo 4,8 V,",
+          "indica hasta 200 aperturas tras aviso."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Alimentación principal",
+              "value": "4 baterías AA alcalinas"
+            },
+            {
+              "label": "Voltaje",
+              "value": "4,8 V a 6,5 V"
+            },
+            {
+              "label": "Corriente de trabajo",
+              "value": "< 200 mA"
+            },
+            {
+              "label": "Aviso de batería baja",
+              "value": "Menos de 25% en manual NX5 reciente"
+            },
+            {
+              "label": "Aperturas tras aviso",
+              "value": "Aproximadamente 50 según manual NX5 reciente"
+            },
+            {
+              "label": "Emergencia",
+              "value": "Puerto USB exterior conectado a power bank"
+            },
+            {
+              "label": "Tiempo con USB",
+              "value": "Cerca de 30 segundos antes de abrir"
+            }
+          ]
+        ],
+        "battery_type": "4 baterías AA alcalinas",
+        "emergency_power": "Puerto USB exterior"
+      },
+      "app_connectivity": {
+        "summary": "Fuentes disponibles:",
+        "paragraphs": [
+          "Fuentes disponibles:",
+          "Funciones observadas en material de app:",
+          "Decisión necesaria:",
+          "El manual final debe elegir:",
+          "No conviene mezclar Tuya y TTLock en un mismo flujo de usuario."
+        ],
+        "bullets": [
+          "涂鸦WiFi英文版说明书新.pdf: Tuya WiFi.",
+          "X5涂鸦WiFi中文说明书.pdf: Tuya WiFi.",
+          "通通锁三代锁APP使用手册英文版（中性出货版本）.pdf: TTLock / Tongtong Lock.",
+          "Imagen comercial: menciona TTlock Unlock, App Unlock y Remote Control.",
+          "Videos: conexión del panel frontal y del panel trasero con app.",
+          "agregar cerradura,",
+          "abrir desde app,",
+          "eKey permanente o temporal,",
+          "claves temporales,",
+          "registros de apertura,",
+          "gestión de usuarios,",
+          "eliminar o congelar accesos,",
+          "renombrar dispositivo,",
+          "ajustes de seguridad."
+        ],
+        "tables": [],
+        "app_status": "Confirmado, app final pendiente",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Modelo",
+              "value": "NX5-L"
+            },
+            {
+              "label": "Material",
+              "value": "Aleación de aluminio + hierro inoxidable"
+            },
+            {
+              "label": "Tamaño frontal",
+              "value": "145 x 58 x 50 mm"
+            },
+            {
+              "label": "Tamaño trasero",
+              "value": "130 x 110 x 50 mm"
+            },
+            {
+              "label": "Grosor de puerta",
+              "value": "30 a 110 mm según manual NX5 reciente"
+            },
+            {
+              "label": "Tipo de puerta",
+              "value": "Hierro, acero inoxidable, patio"
+            },
+            {
+              "label": "Cilindro",
+              "value": "Clase C"
+            },
+            {
+              "label": "Pestillo",
+              "value": "Acero inoxidable 304"
+            },
+            {
+              "label": "Tipo de cierre",
+              "value": "Semiautomático"
+            },
+            {
+              "label": "Vida útil",
+              "value": "100.000 ciclos en tabla técnica; 200.000 ciclos en imagen comercial"
+            },
+            {
+              "label": "Huellas",
+              "value": "100 en tabla; otra fuente menciona 40 usuarios de huella"
+            },
+            {
+              "label": "Tarjetas",
+              "value": "100"
+            },
+            {
+              "label": "Claves",
+              "value": "100"
+            },
+            {
+              "label": "Longitud de clave",
+              "value": "6 a 8 dígitos"
+            },
+            {
+              "label": "Llaves físicas",
+              "value": "2 llaves de latón"
+            },
+            {
+              "label": "Tasa de falsa aceptación",
+              "value": "< 0,001%"
+            },
+            {
+              "label": "Tasa de falso rechazo",
+              "value": "< 0,1%"
+            },
+            {
+              "label": "Temperatura",
+              "value": "-10 °C a 65 °C en tabla; -25 °C a 60 °C en imagen comercial"
+            },
+            {
+              "label": "Humedad",
+              "value": "20% a 93% RH"
+            },
+            {
+              "label": "Voltaje",
+              "value": "4,8 V a 6,5 V"
+            },
+            {
+              "label": "Baterías",
+              "value": "4 AA alcalinas"
+            },
+            {
+              "label": "Emergencia",
+              "value": "USB"
+            },
+            {
+              "label": "Protección exterior",
+              "value": "IP65 en imagen comercial"
+            }
+          ]
+        ],
+        "highlights": [
+          {
+            "label": "Alimentación principal",
+            "value": "4 baterías AA alcalinas"
+          },
+          {
+            "label": "Voltaje",
+            "value": "4,8 V a 6,5 V"
+          },
+          {
+            "label": "Corriente de trabajo",
+            "value": "< 200 mA"
+          },
+          {
+            "label": "Aviso de batería baja",
+            "value": "Menos de 25% en manual NX5 reciente"
+          },
+          {
+            "label": "Aperturas tras aviso",
+            "value": "Aproximadamente 50 según manual NX5 reciente"
+          },
+          {
+            "label": "Emergencia",
+            "value": "Puerto USB exterior conectado a power bank"
+          },
+          {
+            "label": "Tiempo con USB",
+            "value": "Cerca de 30 segundos antes de abrir"
+          },
+          {
+            "label": "Modelo",
+            "value": "NX5-L"
+          },
+          {
+            "label": "Material",
+            "value": "Aleación de aluminio + hierro inoxidable"
+          },
+          {
+            "label": "Tamaño frontal",
+            "value": "145 x 58 x 50 mm"
+          },
+          {
+            "label": "Tamaño trasero",
+            "value": "130 x 110 x 50 mm"
+          },
+          {
+            "label": "Grosor de puerta",
+            "value": "30 a 110 mm según manual NX5 reciente"
+          },
+          {
+            "label": "Tipo de puerta",
+            "value": "Hierro, acero inoxidable, patio"
+          },
+          {
+            "label": "Cilindro",
+            "value": "Clase C"
+          },
+          {
+            "label": "Pestillo",
+            "value": "Acero inoxidable 304"
+          },
+          {
+            "label": "Tipo de cierre",
+            "value": "Semiautomático"
+          },
+          {
+            "label": "Vida útil",
+            "value": "100.000 ciclos en tabla técnica; 200.000 ciclos en imagen comercial"
+          },
+          {
+            "label": "Huellas",
+            "value": "100 en tabla; otra fuente menciona 40 usuarios de huella"
+          },
+          {
+            "label": "Tarjetas",
+            "value": "100"
+          },
+          {
+            "label": "Claves",
+            "value": "100"
+          }
+        ],
+        "materials": [
+          "Aleación de aluminio + hierro inoxidable"
+        ],
+        "finish": "",
+        "capacity_notes": [
+          "## Identificación consolidada | Campo | Información | |---|---| | Nombre BESLOCK | e-Shield | | Modelo tecnico principal | NX5-L | | Nombres tecnico relacionados | NX5, X5-L, SMART OUTDOOR LOCK | | Tipo de producto | Cerradura inteligente exterior de sobreponer | | Uso principal | Rejas, portones, puertas metálicas, accesos exteriores y patios | | Imagen principal | | | Variante single | NX5-L单面 | | Variante doble | NX5-L双面 | | Alimentación principal | 4 baterías AA | | Energía de emergencia | Puerto USB exterior | | Métodos de apertura base | Huella, clave, tarjeta IC, llave mecánica y app | | Funciones adicionales observadas | Modo normalmente abierto, anti-lock, PIN con privacidad, bloqueo por intentos | | Protección exterior | IP65 aparece en material visual, pendiente de validación comercial final | ## Fuentes revisadas ### Documentos - e-Shield/NX5-L/NX5-L单面/说明书/NX5 英文说明书-20250919.pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5 英文说明书-20250919re.pdf - e-Shield/NX5-L/NX5-L单面/说明书/X5-L英文版说明书.pdf - e-Shield/NX5-L/NX5-L单面/说明书/X5涂鸦WiFi中文说明书.pdf - e-Shield/NX5-L/NX5-L单面/说明书/涂鸦WiFi英文版说明书新.pdf - e-Shield/NX5-L/NX5-L单面/说明书/通通锁三代锁APP使用手册英文版（中性出货版本）.pdf - e-Shield/NX5-L/NX5-L单面/说明书/NX5单面板开孔图纸(3).pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5双面板（右开）开孔图纸(3).pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5双面板（左开）开孔图纸(3).pdf ### Imágenes y piezas visuales - - e-Shield/NX5-L/NX5-L单面/高清图/Single - a - a - - - Hoja de revisión creada: ### Videos disponibles - Videos de instalación de cerradura exterior.",
+          "- El bloqueo interior/anti-lock restringe aperturas desde afuera para usuarios regulares; mantener la nota de que un administrador puede abrir si corresponde a la versión instalada.",
+          "## Usuarios y capacidades El material tiene inconsistencias internas.",
+          "Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+          "| Campo | Información encontrada | |---|---| | Administradores | Manual NX5: máximo 10 administradores | | Usuarios regulares | Manual NX5: máximo 240 usuarios regulares | | Huellas | Tabla NX5: 100 huellas; texto operativo: hasta 40 usuarios de huella | | Tarjetas | Tabla NX5: 100 tarjetas | | Claves/PIN | Tabla NX5: 100 claves | | Distribución por método | Tabla NX5: 9 administradores y 91 usuarios por huella/tarjeta/clave | | Longitud de clave | 6 a 8 dígitos | | Clave inicial | 123456 | | Estado de fábrica | Cualquier huella o clave puede abrir antes de configurar usuarios | Recomendación para manual: - Decir que admite administradores y usuarios.",
+          "- Indicar 10 administradores si se mantiene el manual NX5 como fuente.",
+          "### Agregar usuario El usuario regular se agrega desde el menú de usuarios y puede abrir la cerradura.",
+          "No debe gestionar otros usuarios ni cambiar ajustes.",
+          "### Eliminar usuarios El material documenta eliminación por número desde el menú.",
+          "También aparece eliminación de todos los usuarios en material antiguo.",
+          "Para el manual final: - priorizar eliminación individual, - mencionar restaurar fábrica solo como opción completa, - advertir que restaurar borra administradores, usuarios, huellas, claves, tarjetas y ajustes.",
+          "### Bloqueo interior / anti-lock Función documentada: - al activarse desde el interior, usuarios regulares no pueden abrir desde afuera, - administrador sí puede abrir.",
+          "Funciones observadas en material de app: - agregar cerradura, - abrir desde app, - eKey permanente o temporal, - claves temporales, - registros de apertura, - gestión de usuarios, - eliminar o congelar accesos, - renombrar dispositivo, - ajustes de seguridad.",
+          "Advertencia para manual: Restaurar fábrica borra usuarios y ajustes.",
+          "Además, el estado de fábrica permite abrir antes de configurar administradores; por eso debe configurarse nuevamente antes de usar la cerradura.",
+          "## Especificaciones técnicas | Campo | Valor tecnico | |---|---| | Modelo | NX5-L | | Material | Aleación de aluminio + hierro inoxidable | | Tamaño frontal | 145 x 58 x 50 mm | | Tamaño trasero | 130 x 110 x 50 mm | | Grosor de puerta | 30 a 110 mm según manual NX5 reciente | | Tipo de puerta | Hierro, acero inoxidable, patio | | Cilindro | Clase C | | Pestillo | Acero inoxidable 304 | | Tipo de cierre | Semiautomático | | Vida útil | 100.000 ciclos en tabla técnica; 200.000 ciclos en imagen comercial | | Huellas | 100 en tabla; otra fuente menciona 40 usuarios de huella | | Tarjetas | 100 | | Claves | 100 | | Longitud de clave | 6 a 8 dígitos | | Llaves físicas | 2 llaves de latón | | Tasa de falsa aceptación | < 0,001% | | Tasa de falso rechazo | < 0,1% | | Temperatura | -10 °C a 65 °C en tabla; -25 °C a 60 °C en imagen comercial | | Humedad | 20% a 93% RH | | Voltaje | 4,8 V a 6,5 V | | Baterías | 4 AA alcalinas | | Emergencia | USB | | Protección exterior | IP65 en imagen comercial | ## Señales y comportamientos | Situación | Comportamiento | |---|---| | Acceso correcto | La cerradura abre después de verificar huella, clave, tarjeta, llave o app | | 5 intentos incorrectos | Bloqueo temporal de 90 segundos según manual reciente | | Batería baja | Aviso de voz al abrir | | Batería agotada | Usar USB exterior con power bank | | USB exterior | Esperar cerca de 30 segundos antes de abrir | | Estado de fábrica | Cualquier huella o clave puede abrir | | Inactividad en menú | El sistema sale después de 10 segundos sin operación | | Anti-lock activo | Usuario regular no abre desde afuera; administrador sí | ## Implicaciones para el manual de usuario ### Flujo recomendado 1."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "La e-Shield no debe confundirse con cerraduras de manija, pomo redondo ni cerraduras de incrustar. Mantener siempre: - panel exterior vertical negro, - lector de huella circular en la parte superior, - aro luminoso azul alrededor del lector, - teclado táctil con números, * y #, - zona inferior para llave mecánica, - cuerpo rectangular de sobreponer, - pestillo principal visible, - pieza de posicionamiento / lengüeta secundaria según despiece, - asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura, - pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre, - recibidor o placa de cierre para el marco, - tornillos de fijación, - diseño de instalación sobre reja o puerta metálica. Evitar siempre: - manija horizontal tipo e-Flex/e-Prime, - pomo circular tipo e-Nova, - cámara o reconocimiento facial, - pantalla de video, - timbre, - cuerpo tubular, - cuerpo multipunto de incrustar, - botón SET expuesto en el exterior, - app o funciones no decididas comercialmente. - Lector de huella. - Aro luminoso del lector. - Teclado táctil. - Tecla *. - Tecla #. - Área de lectura de tarjeta IC. - Acceso de llave mecánica. - Puerto USB exterior para emergencia. - Caja rectangular de sobreponer. - Pestillo principal. - Lengüeta o pestillo auxiliar de posicionamiento. - Caja / compartimento interno de baterías para 4 baterías AA. - Interruptor SET / reset interno. - Botón físico o cilindro visible en el cuerpo interior; no duplicar controles si la referencia True Source muestra un solo control redondo. - Asa / manija fija del cuerpo interior, ubicada al lado derecho. - Tornillos de fijación. - Tapa / cubierta del cuerpo. - Placa o recibidor del marco. - Placa interna de fijación. - Tornillos M4 y M3 según despiece. - Plantilla de perforación para variante simple. - Plantillas izquierda y derecha para variante doble. Nota de orientación: el recibidor se alinea con el pestillo principal y la lengüeta/pasador auxiliar del lado de las piezas de latón. El asa lateral negra es solo un apoyo de apertura y no debe representarse como pieza que acopla con el recibidor. - Cubierta impermeable:. - La imagen indica dimensiones aproximadas: - frontal: 70 x 115 x 68 mm, - parte trasera: 200 x 37 x 82 mm. Referencia principal obligatoria: - Referencias recomendadas: - e-Shield/NX5-L/NX5-L单面/高清图/Single - - - - - Reglas visuales: - Mantener panel vertical negro con huella superior y teclado táctil. - Mantener cuerpo rectangular de sobreponer. - Mantener pestillo visible y recibidor de marco. - Mostrar uso en reja, portón o puerta metálica cuando aplique. - No convertir el producto en manija, pomo o cerradura de incrustar. - No mostrar SET en la cara exterior. - No inventar cámara, timbre, pantalla ni reconocimiento facial. - Si hay numerales, deben coincidir con la lista final del manual. - Si se usa app, representar solo la app comercial decidida.",
+        "maintain": [
+          "panel exterior vertical negro,",
+          "lector de huella circular en la parte superior,",
+          "aro luminoso azul alrededor del lector,",
+          "teclado táctil con números, * y #,",
+          "zona inferior para llave mecánica,",
+          "cuerpo rectangular de sobreponer,",
+          "pestillo principal visible,",
+          "pieza de posicionamiento / lengüeta secundaria según despiece,",
+          "asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura,",
+          "pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre,",
+          "recibidor o placa de cierre para el marco,",
+          "tornillos de fijación,",
+          "diseño de instalación sobre reja o puerta metálica."
+        ],
+        "avoid": [
+          "manija horizontal tipo e-Flex/e-Prime,",
+          "pomo circular tipo e-Nova,",
+          "cámara o reconocimiento facial,",
+          "pantalla de video,",
+          "timbre,",
+          "cuerpo tubular,",
+          "cuerpo multipunto de incrustar,",
+          "botón SET expuesto en el exterior,",
+          "app o funciones no decididas comercialmente.",
+          "Lector de huella.",
+          "Aro luminoso del lector.",
+          "Teclado táctil.",
+          "Tecla *.",
+          "Tecla #.",
+          "Área de lectura de tarjeta IC.",
+          "Acceso de llave mecánica.",
+          "Puerto USB exterior para emergencia.",
+          "Caja rectangular de sobreponer.",
+          "Pestillo principal.",
+          "Lengüeta o pestillo auxiliar de posicionamiento.",
+          "Caja / compartimento interno de baterías para 4 baterías AA.",
+          "Interruptor SET / reset interno.",
+          "Botón físico o cilindro visible en el cuerpo interior; no duplicar controles si la referencia True Source muestra un solo control redondo.",
+          "Asa / manija fija del cuerpo interior, ubicada al lado derecho.",
+          "Tornillos de fijación.",
+          "Tapa / cubierta del cuerpo.",
+          "Placa o recibidor del marco.",
+          "Placa interna de fijación.",
+          "Tornillos M4 y M3 según despiece.",
+          "Plantilla de perforación para variante simple.",
+          "Plantillas izquierda y derecha para variante doble.",
+          "Cubierta impermeable:.",
+          "La imagen indica dimensiones aproximadas:",
+          "frontal: 70 x 115 x 68 mm,",
+          "parte trasera: 200 x 37 x 82 mm.",
+          "e-Shield/NX5-L/NX5-L单面/高清图/Single",
+          "Mantener panel vertical negro con huella superior y teclado táctil.",
+          "Mantener cuerpo rectangular de sobreponer.",
+          "Mantener pestillo visible y recibidor de marco.",
+          "Mostrar uso en reja, portón o puerta metálica cuando aplique.",
+          "No convertir el producto en manija, pomo o cerradura de incrustar.",
+          "No mostrar SET en la cara exterior.",
+          "No inventar cámara, timbre, pantalla ni reconocimiento facial.",
+          "Si hay numerales, deben coincidir con la lista final del manual.",
+          "Si se usa app, representar solo la app comercial decidida."
+        ],
+        "main_visual_reference": "",
+        "rules": [
+          "panel exterior vertical negro,",
+          "lector de huella circular en la parte superior,",
+          "aro luminoso azul alrededor del lector,",
+          "teclado táctil con números, * y #,",
+          "zona inferior para llave mecánica,",
+          "cuerpo rectangular de sobreponer,",
+          "pestillo principal visible,",
+          "pieza de posicionamiento / lengüeta secundaria según despiece,",
+          "asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura,",
+          "pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre,",
+          "recibidor o placa de cierre para el marco,",
+          "tornillos de fijación,",
+          "diseño de instalación sobre reja o puerta metálica.",
+          "manija horizontal tipo e-Flex/e-Prime,",
+          "pomo circular tipo e-Nova,",
+          "cámara o reconocimiento facial,",
+          "pantalla de video,",
+          "timbre,",
+          "cuerpo tubular,",
+          "cuerpo multipunto de incrustar,",
+          "botón SET expuesto en el exterior,",
+          "app o funciones no decididas comercialmente.",
+          "Lector de huella.",
+          "Aro luminoso del lector.",
+          "Teclado táctil.",
+          "Tecla *.",
+          "Tecla #.",
+          "Área de lectura de tarjeta IC.",
+          "Acceso de llave mecánica.",
+          "Puerto USB exterior para emergencia."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "Usar:",
+        "paragraphs": [
+          "Usar:",
+          "Evitar:"
+        ],
+        "bullets": [
+          "huella,",
+          "clave,",
+          "PIN con privacidad,",
+          "tarjeta,",
+          "llave mecánica,",
+          "app,",
+          "administrador,",
+          "usuario,",
+          "puerta abierta,",
+          "batería externa,",
+          "puerto USB,",
+          "bloqueo interior,",
+          "paso libre.",
+          "información de usuario,",
+          "información de administrador,",
+          "autenticación,",
+          "validación,",
+          "alimentación energética,",
+          "contraseña de doble lado,",
+          "TTlock y Tuya juntos sin separar variantes.",
+          "Configura un administrador antes de usar.",
+          "Prueba con la puerta o reja abierta.",
+          "El estado de fábrica no es para uso diario.",
+          "Cambia las baterías al primer aviso.",
+          "El USB solo sirve para abrir temporalmente.",
+          "Restaurar fábrica borra usuarios y ajustes.",
+          "El botón SET va en el lado protegido / interno."
+        ],
+        "tables": [],
+        "recommended_language": [
+          "huella,",
+          "clave,",
+          "PIN con privacidad,",
+          "tarjeta,",
+          "llave mecánica,",
+          "app,",
+          "administrador,",
+          "usuario,",
+          "puerta abierta,",
+          "batería externa,",
+          "puerto USB,",
+          "bloqueo interior,",
+          "paso libre.",
+          "información de usuario,",
+          "información de administrador,",
+          "autenticación,",
+          "validación,",
+          "alimentación energética,",
+          "contraseña de doble lado,",
+          "TTlock y Tuya juntos sin separar variantes."
+        ],
+        "avoid_terms": [
+          "Evitar: - información de usuario, - información de administrador, - autenticación, - validación, - alimentación energética, - contraseña de doble lado, - TTlock y Tuya juntos sin separar variantes."
+        ],
+        "priority_callouts": [
+          "Configura un administrador antes de usar.",
+          "Prueba con la puerta o reja abierta.",
+          "El estado de fábrica no es para uso diario.",
+          "Cambia las baterías al primer aviso.",
+          "El USB solo sirve para abrir temporalmente.",
+          "Restaurar fábrica borra usuarios y ajustes.",
+          "El botón SET va en el lado protegido / interno."
+        ]
+      },
+      "warnings": {
+        "items": [
+          "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK.",
+          "## Geometría del producto La e-Shield no debe confundirse con cerraduras de manija, pomo redondo ni cerraduras de incrustar.",
+          "Mantener siempre: - panel exterior vertical negro, - lector de huella circular en la parte superior, - aro luminoso azul alrededor del lector, - teclado táctil con números, * y #, - zona inferior para llave mecánica, - cuerpo rectangular de sobreponer, - pestillo principal visible, - pieza de posicionamiento / lengüeta secundaria según despiece, - asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura, - pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre, - recibidor o placa de cierre para el marco, - tornillos de fijación, - diseño de instalación sobre reja o puerta metálica.",
+          "Evitar siempre: - manija horizontal tipo e-Flex/e-Prime, - pomo circular tipo e-Nova, - cámara o reconocimiento facial, - pantalla de video, - timbre, - cuerpo tubular, - cuerpo multipunto de incrustar, - botón SET expuesto en el exterior, - app o funciones no decididas comercialmente.",
+          "El asa lateral negra es solo un apoyo de apertura y no debe representarse como pieza que acopla con el recibidor.",
+          "## Métodos de apertura | Método | Estado | |---|---| | Huella | Confirmado | | Clave / PIN | Confirmado | | Tarjeta IC | Confirmado | | Llave mecánica | Confirmado | | App | Confirmado, app final pendiente | | Control remoto | Observado en imagen comercial, validar si aplica | | Doble verificación | Documentado en manual antiguo como modo combinado | | Reconocimiento facial | No aplica | | Video / timbre | No aplica | ## Uso diario La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+          "- El bloqueo interior/anti-lock restringe aperturas desde afuera para usuarios regulares; mantener la nota de que un administrador puede abrir si corresponde a la versión instalada.",
+          "- Evitar una promesa total única hasta validar si el límite comercial será 100, 240 o una combinación por método.",
+          "No debe gestionar otros usuarios ni cambiar ajustes.",
+          "## Seguridad ### Bloqueo por intentos incorrectos Manual NX5 reciente: - después de 5 intentos incorrectos seguidos con huella, clave o tarjeta, - la cerradura emite advertencia, - bloquea operaciones durante 90 segundos.",
+          "Advertencia para imágenes: El botón SET no debe mostrarse expuesto en el panel exterior.",
+          "Advertencia para manual: Restaurar fábrica borra usuarios y ajustes.",
+          "Evitar: - información de usuario, - información de administrador, - autenticación, - validación, - alimentación energética, - contraseña de doble lado, - TTlock y Tuya juntos sin separar variantes.",
+          "Evitar texto, listas y miniaturas densas."
+        ]
+      },
+      "pending_validation": [
+        "Confirmar app final: Tuya WiFi, TTLock/Tongtong o ambas por variante.",
+        "Confirmar si se cubrirá versión single, doble o ambas.",
+        "Confirmar rango final de grosor de puerta.",
+        "Confirmar capacidad máxima final de huellas, claves, tarjetas y usuarios.",
+        "Confirmar si IP65 y rango de temperatura se pueden publicar.",
+        "Confirmar si el control remoto forma parte del paquete comercial o es accesorio.",
+        "Confirmar ubicación física exacta del SET en la unidad BESLOCK final.",
+        "Confirmar si se incluirá cubierta impermeable como accesorio del paquete.",
+        "El punto más importante pendiente de validación es la app comercial final.",
+        "## Identificación consolidada | Campo | Información | |---|---| | Nombre BESLOCK | e-Shield | | Modelo tecnico principal | NX5-L | | Nombres tecnico relacionados | NX5, X5-L, SMART OUTDOOR LOCK | | Tipo de producto | Cerradura inteligente exterior de sobreponer | | Uso principal | Rejas, portones, puertas metálicas, accesos exteriores y patios | | Imagen principal | | | Variante single | NX5-L单面 | | Variante doble | NX5-L双面 | | Alimentación principal | 4 baterías AA | | Energía de emergencia | Puerto USB exterior | | Métodos de apertura base | Huella, clave, tarjeta IC, llave mecánica y app | | Funciones adicionales observadas | Modo normalmente abierto, anti-lock, PIN con privacidad, bloqueo por intentos | | Protección exterior | IP65 aparece en material visual, pendiente de validación comercial final | ## Fuentes revisadas ### Documentos - e-Shield/NX5-L/NX5-L单面/说明书/NX5 英文说明书-20250919.pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5 英文说明书-20250919re.pdf - e-Shield/NX5-L/NX5-L单面/说明书/X5-L英文版说明书.pdf - e-Shield/NX5-L/NX5-L单面/说明书/X5涂鸦WiFi中文说明书.pdf - e-Shield/NX5-L/NX5-L单面/说明书/涂鸦WiFi英文版说明书新.pdf - e-Shield/NX5-L/NX5-L单面/说明书/通通锁三代锁APP使用手册英文版（中性出货版本）.pdf - e-Shield/NX5-L/NX5-L单面/说明书/NX5单面板开孔图纸(3).pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5双面板（右开）开孔图纸(3).pdf - e-Shield/NX5-L/NX5-L双面/说明书/NX5双面板（左开）开孔图纸(3).pdf ### Imágenes y piezas visuales - - e-Shield/NX5-L/NX5-L单面/高清图/Single - a - a - - - Hoja de revisión creada: ### Videos disponibles - Videos de instalación de cerradura exterior.",
+        "- Si una función aparece solo en material comercial visual, se marca como observada y pendiente de validación.",
+        "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK.",
+        "## Métodos de apertura | Método | Estado | |---|---| | Huella | Confirmado | | Clave / PIN | Confirmado | | Tarjeta IC | Confirmado | | Llave mecánica | Confirmado | | App | Confirmado, app final pendiente | | Control remoto | Observado en imagen comercial, validar si aplica | | Doble verificación | Documentado en manual antiguo como modo combinado | | Reconocimiento facial | No aplica | | Video / timbre | No aplica | ## Uso diario La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+        "- Para abrir con clave/PIN, despertar el teclado, ingresar una clave registrada de 6 a 8 dígitos y confirmar con #.",
+        "Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+        "- Evitar una promesa total única hasta validar si el límite comercial será 100, 240 o una combinación por método.",
+        "Menú documentado: | Tecla | Función | |---|---| | 1 | Ajustes de administrador | | 2 | Ajustes de usuario | | 3 | Ajustes del sistema | | 4 | Restaurar fábrica | | * | Salir / regresar | | # | Confirmar | ### Primer administrador En estado inicial se entra con la clave 123456.",
+        "### Grosor de puerta | Fuente | Rango | |---|---| | Manual NX5 reciente | 30 a 110 mm | | Manual Tuya WiFi chino | 35 a 50 mm | | Plantillas de corte | Incluyen medidas de perforación y orientación, no sustituyen el rango final | Recomendación: Validar con BESLOCK el rango de instalación comercial antes de ponerlo en el manual final.",
+        "Presionar # para confirmar.",
+        "Confirmar.",
+        "Evitar: - información de usuario, - información de administrador, - autenticación, - validación, - alimentación energética, - contraseña de doble lado, - TTlock y Tuya juntos sin separar variantes.",
+        "## Pendientes antes del manual final - Confirmar app final: Tuya WiFi, TTLock/Tongtong o ambas por variante.",
+        "- Confirmar si se cubrirá versión single, doble o ambas.",
+        "- Confirmar rango final de grosor de puerta.",
+        "- Confirmar capacidad máxima final de huellas, claves, tarjetas y usuarios.",
+        "- Confirmar si IP65 y rango de temperatura se pueden publicar.",
+        "- Confirmar si el control remoto forma parte del paquete comercial o es accesorio.",
+        "- Confirmar ubicación física exacta del SET en la unidad BESLOCK final.",
+        "- Confirmar si se incluirá cubierta impermeable como accesorio del paquete."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Shield",
+          "BESLOCK e-Shield",
+          "cerradura inteligente",
+          "Cerradura inteligente exterior de sobreponer",
+          "Huella",
+          "Clave / PIN",
+          "Tarjeta IC",
+          "Llave mecánica",
+          "App",
+          "Control remoto",
+          "Doble verificación",
+          "Reconocimiento facial",
+          "Video / timbre"
+        ],
+        "use_cases": [
+          "puertas metálicas",
+          "rejas",
+          "portones",
+          "accesos tipo patio"
+        ],
+        "target_environment": [
+          "hogares tradicionales",
+          "accesos exteriores",
+          "rejas",
+          "portones",
+          "patios",
+          "puertas metálicas"
+        ],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "sobreponer",
+          "exterior",
+          "huella",
+          "PIN",
+          "tarjeta",
+          "app",
+          "seguridad",
+          "privacidad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-beslock-e-shield": {
+          "title": "Perfil de producto: BESLOCK e-Shield",
+          "level": 1,
+          "order": 1,
+          "summary": "Fecha de consolidación: 2026-05-23 Carpeta fuente: e-Shield",
+          "paragraphs": [
+            "Fecha de consolidación: 2026-05-23 Carpeta fuente: e-Shield"
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. El material tecnico la identifica principalmente como NX5-L, NX5, X5-L y SMART OUTDOOR LOCK.",
+          "paragraphs": [
+            "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. El material tecnico la identifica principalmente como NX5-L, NX5, X5-L y SMART OUTDOOR LOCK.",
+            "La geometría principal presenta panel exterior vertical negro con lector de huella circular superior, teclado táctil, acceso inferior de llave mecánica y cuerpo de cierre rectangular de sobreponer con pestillo visible.",
+            "El material disponible incluye dos variantes:",
+            "Funciones confirmadas en fuentes tecnico:",
+            "El punto más importante pendiente de validación es la app comercial final. El material mezcla Tuya WiFi, TTLock/Tongtong Lock y referencias a TTlock Unlock en imágenes comerciales. El manual final debe elegir una sola ruta de app, o separar variantes si BESLOCK venderá más de una versión."
+          ],
+          "bullets": [
+            "NX5-L单面: versión de un solo panel electrónico.",
+            "NX5-L双面: versión doble o de dos lados, pensada para rejas o accesos donde se requiere control desde ambos lados.",
+            "apertura por huella,",
+            "clave/PIN,",
+            "tarjeta IC,",
+            "llave mecánica,",
+            "app,",
+            "puerto USB de emergencia,",
+            "PIN con privacidad,",
+            "bloqueo temporal por intentos incorrectos,",
+            "modo normalmente abierto,",
+            "bloqueo interior / anti-lock,",
+            "restauración de fábrica por botón SET interno o menú."
+          ],
+          "tables": []
+        },
+        "identificacion-consolidada": {
+          "title": "Identificación consolidada",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Nombre BESLOCK",
+                "value": "e-Shield"
+              },
+              {
+                "label": "Modelo tecnico principal",
+                "value": "NX5-L"
+              },
+              {
+                "label": "Nombres tecnico relacionados",
+                "value": "NX5, X5-L, SMART OUTDOOR LOCK"
+              },
+              {
+                "label": "Tipo de producto",
+                "value": "Cerradura inteligente exterior de sobreponer"
+              },
+              {
+                "label": "Uso principal",
+                "value": "Rejas, portones, puertas metálicas, accesos exteriores y patios"
+              },
+              {
+                "label": "Imagen principal",
+                "value": ""
+              },
+              {
+                "label": "Variante single",
+                "value": "NX5-L单面"
+              },
+              {
+                "label": "Variante doble",
+                "value": "NX5-L双面"
+              },
+              {
+                "label": "Alimentación principal",
+                "value": "4 baterías AA"
+              },
+              {
+                "label": "Energía de emergencia",
+                "value": "Puerto USB exterior"
+              },
+              {
+                "label": "Métodos de apertura base",
+                "value": "Huella, clave, tarjeta IC, llave mecánica y app"
+              },
+              {
+                "label": "Funciones adicionales observadas",
+                "value": "Modo normalmente abierto, anti-lock, PIN con privacidad, bloqueo por intentos"
+              },
+              {
+                "label": "Protección exterior",
+                "value": "IP65 aparece en material visual, pendiente de validación comercial final"
+              }
+            ]
+          ]
+        },
+        "fuentes-revisadas": {
+          "title": "Fuentes revisadas",
+          "level": 2,
+          "order": 4,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "documentos": {
+          "title": "Documentos",
+          "level": 3,
+          "order": 5,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "imagenes-y-piezas-visuales": {
+          "title": "Imágenes y piezas visuales",
+          "level": 3,
+          "order": 6,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "videos-disponibles": {
+          "title": "Videos disponibles",
+          "level": 3,
+          "order": 7,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "criterio-de-conciliacion": {
+          "title": "Criterio de conciliación",
+          "level": 2,
+          "order": 8,
+          "summary": "Este perfil toma como fuente principal el manual NX5 más reciente y la imagen.",
+          "paragraphs": [
+            "Este perfil toma como fuente principal el manual NX5 más reciente y la imagen.",
+            "Reglas de conciliación:"
+          ],
+          "bullets": [
+            "Si una función aparece en el manual NX5 reciente y coincide con el producto visual, se considera confirmada.",
+            "Si una función aparece solo en material comercial visual, se marca como observada y pendiente de validación.",
+            "Si una función aparece en un manual antiguo X5-L pero no en el manual NX5 reciente, se conserva como antecedente, no como instrucción final.",
+            "Si Tuya y TTLock aparecen en fuentes distintas, no se mezclan en el manual final sin decisión comercial.",
+            "Las plantillas de corte se usan para comprender instalación, no como contenido editorial para usuario final.",
+            "La variante doble se trata como variante específica, no como la versión base del manual salvo confirmación."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 9,
+          "summary": "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer. Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+          "paragraphs": [
+            "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer. Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+            "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "geometria-del-producto": {
+          "title": "Geometría del producto",
+          "level": 2,
+          "order": 10,
+          "summary": "La e-Shield no debe confundirse con cerraduras de manija, pomo redondo ni cerraduras de incrustar.",
+          "paragraphs": [
+            "La e-Shield no debe confundirse con cerraduras de manija, pomo redondo ni cerraduras de incrustar.",
+            "Mantener siempre:",
+            "Evitar siempre:"
+          ],
+          "bullets": [
+            "panel exterior vertical negro,",
+            "lector de huella circular en la parte superior,",
+            "aro luminoso azul alrededor del lector,",
+            "teclado táctil con números, * y #,",
+            "zona inferior para llave mecánica,",
+            "cuerpo rectangular de sobreponer,",
+            "pestillo principal visible,",
+            "pieza de posicionamiento / lengüeta secundaria según despiece,",
+            "asa o manija fija al lado derecho del cuerpo de cierre para sujetar y facilitar la apertura,",
+            "pestillo principal y pasador orientados hacia el lado izquierdo del cuerpo de cierre,",
+            "recibidor o placa de cierre para el marco,",
+            "tornillos de fijación,",
+            "diseño de instalación sobre reja o puerta metálica.",
+            "manija horizontal tipo e-Flex/e-Prime,",
+            "pomo circular tipo e-Nova,",
+            "cámara o reconocimiento facial,",
+            "pantalla de video,",
+            "timbre,",
+            "cuerpo tubular,",
+            "cuerpo multipunto de incrustar,",
+            "botón SET expuesto en el exterior,",
+            "app o funciones no decididas comercialmente."
+          ],
+          "tables": []
+        },
+        "variantes": {
+          "title": "Variantes",
+          "level": 2,
+          "order": 11,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "version-de-un-panel": {
+          "title": "Versión de un panel",
+          "level": 3,
+          "order": 12,
+          "summary": "Ruta tecnico: e-Shield/NX5-L/NX5-L单面",
+          "paragraphs": [
+            "Ruta tecnico: e-Shield/NX5-L/NX5-L单面",
+            "Características:",
+            "Esta variante parece ser la mejor candidata para el manual base si BESLOCK vende una sola versión."
+          ],
+          "bullets": [
+            "panel electrónico principal en un lado,",
+            "cuerpo de cierre rectangular al lado protegido,",
+            "uso típico en portones, rejas y puertas metálicas,",
+            "panel exterior con huella, teclado, tarjeta y llave mecánica,",
+            "cuerpo de cierre rectangular de sobreponer, con asa de apoyo a la derecha y pestillo/pasador hacia el recibidor."
+          ],
+          "tables": []
+        },
+        "version-doble": {
+          "title": "Versión doble",
+          "level": 3,
+          "order": 13,
+          "summary": "Ruta tecnico: e-Shield/NX5-L/NX5-L双面",
+          "paragraphs": [
+            "Ruta tecnico: e-Shield/NX5-L/NX5-L双面",
+            "Características observadas:",
+            "Nota editorial:",
+            "No traducir literalmente como \"contraseña de doble lado\". Para usuario final conviene hablar de \"versión de doble acceso\" o \"control desde ambos lados\", si se incluye esta variante."
+          ],
+          "bullets": [
+            "control desde ambos lados,",
+            "útil en rejas donde una persona podría alcanzar el lado interior,",
+            "material visual habla de Double Side Password y Single Side Password."
+          ],
+          "tables": []
+        },
+        "partes-principales": {
+          "title": "Partes principales",
+          "level": 2,
+          "order": 14,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "panel-exterior": {
+          "title": "Panel exterior",
+          "level": 3,
+          "order": 15,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Lector de huella.",
+            "Aro luminoso del lector.",
+            "Teclado táctil.",
+            "Tecla *.",
+            "Tecla #.",
+            "Área de lectura de tarjeta IC.",
+            "Acceso de llave mecánica.",
+            "Puerto USB exterior para emergencia."
+          ],
+          "tables": []
+        },
+        "cuerpo-de-cierre": {
+          "title": "Cuerpo de cierre",
+          "level": 3,
+          "order": 16,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Caja rectangular de sobreponer.",
+            "Pestillo principal.",
+            "Lengüeta o pestillo auxiliar de posicionamiento.",
+            "Caja / compartimento interno de baterías para 4 baterías AA.",
+            "Interruptor SET / reset interno.",
+            "Botón físico o cilindro visible en el cuerpo interior; no duplicar controles si la referencia True Source muestra un solo control redondo.",
+            "Asa / manija fija del cuerpo interior, ubicada al lado derecho.",
+            "Tornillos de fijación.",
+            "Tapa / cubierta del cuerpo."
+          ],
+          "tables": []
+        },
+        "recibidor-y-montaje": {
+          "title": "Recibidor y montaje",
+          "level": 3,
+          "order": 17,
+          "summary": "Nota de orientación: el recibidor se alinea con el pestillo principal y la lengüeta/pasador auxiliar del lado de las piezas de latón. El asa lateral negra es solo un apoyo de apertura y no debe representarse como pieza que acopla con el recibidor.",
+          "paragraphs": [
+            "Nota de orientación: el recibidor se alinea con el pestillo principal y la lengüeta/pasador auxiliar del lado de las piezas de latón. El asa lateral negra es solo un apoyo de apertura y no debe representarse como pieza que acopla con el recibidor."
+          ],
+          "bullets": [
+            "Placa o recibidor del marco.",
+            "Placa interna de fijación.",
+            "Tornillos M4 y M3 según despiece.",
+            "Plantilla de perforación para variante simple.",
+            "Plantillas izquierda y derecha para variante doble."
+          ],
+          "tables": []
+        },
+        "accesorio-opcional": {
+          "title": "Accesorio opcional",
+          "level": 3,
+          "order": 18,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Cubierta impermeable:.",
+            "La imagen indica dimensiones aproximadas:",
+            "frontal: 70 x 115 x 68 mm,",
+            "parte trasera: 200 x 37 x 82 mm."
+          ],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 19,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Clave / PIN",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado"
+              },
+              {
+                "label": "App",
+                "value": "Confirmado, app final pendiente"
+              },
+              {
+                "label": "Control remoto",
+                "value": "Observado en imagen comercial, validar si aplica"
+              },
+              {
+                "label": "Doble verificación",
+                "value": "Documentado en manual antiguo como modo combinado"
+              },
+              {
+                "label": "Reconocimiento facial",
+                "value": "No aplica"
+              },
+              {
+                "label": "Video / timbre",
+                "value": "No aplica"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 20,
+          "summary": "La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+          "paragraphs": [
+            "La sección de uso diario debe conservar e-Shield como cerradura exterior de sobreponer para rejas, portones y puertas metálicas compatibles.",
+            "Nota de fuente: este bloque concilia el manual NX5 reciente, el manual X5-L como antecedente, material de app y la geometría de sobreponer validada para e-Shield."
+          ],
+          "bullets": [
+            "Para abrir con huella, colocar un dedo registrado sobre el lector circular superior y accionar el cuerpo de cierre cuando confirme.",
+            "Para abrir con clave/PIN, despertar el teclado, ingresar una clave registrada de 6 a 8 dígitos y confirmar con #.",
+            "Para PIN con privacidad, se pueden agregar números antes y después de la clave real; la clave correcta debe quedar dentro del conjunto ingresado.",
+            "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura del panel exterior.",
+            "Para abrir desde app, usar la app definida para la versión comercial; las fuentes mencionan Tuya y TTLock en contextos distintos, por lo que el manual visible debe mantener app móvil hasta decisión final.",
+            "La llave mecánica es respaldo físico y debe guardarse fuera del área protegida.",
+            "El modo paso libre se usa solo cuando se requiere entrada frecuente; debe desactivarse cuando el acceso deba quedar protegido.",
+            "El bloqueo interior/anti-lock restringe aperturas desde afuera para usuarios regulares; mantener la nota de que un administrador puede abrir si corresponde a la versión instalada.",
+            "Tras cinco intentos incorrectos, el manual NX5 reciente indica bloqueo temporal de 90 segundos; presentar esta condición como protección, no como falla.",
+            "Con batería baja, el manual NX5 reciente indica aviso por debajo de 25% y alrededor de 50 aperturas restantes. Recomendar cambio inmediato de las cuatro AA.",
+            "Si no hay energía suficiente, el puerto USB exterior permite alimentación temporal para abrir; no representarlo como carga permanente."
+          ],
+          "tables": []
+        },
+        "usuarios-y-capacidades": {
+          "title": "Usuarios y capacidades",
+          "level": 2,
+          "order": 21,
+          "summary": "El material tiene inconsistencias internas. Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+          "paragraphs": [
+            "El material tiene inconsistencias internas. Para el manual final conviene usar una redacción conservadora hasta validar capacidades comerciales.",
+            "Recomendación para manual:"
+          ],
+          "bullets": [
+            "Decir que admite administradores y usuarios.",
+            "Indicar 10 administradores si se mantiene el manual NX5 como fuente.",
+            "Evitar una promesa total única hasta validar si el límite comercial será 100, 240 o una combinación por método.",
+            "Explicar claramente que el estado de fábrica debe configurarse antes del uso diario."
+          ],
+          "tables": [
+            [
+              {
+                "label": "Administradores",
+                "value": "Manual NX5: máximo 10 administradores"
+              },
+              {
+                "label": "Usuarios regulares",
+                "value": "Manual NX5: máximo 240 usuarios regulares"
+              },
+              {
+                "label": "Huellas",
+                "value": "Tabla NX5: 100 huellas; texto operativo: hasta 40 usuarios de huella"
+              },
+              {
+                "label": "Tarjetas",
+                "value": "Tabla NX5: 100 tarjetas"
+              },
+              {
+                "label": "Claves/PIN",
+                "value": "Tabla NX5: 100 claves"
+              },
+              {
+                "label": "Distribución por método",
+                "value": "Tabla NX5: 9 administradores y 91 usuarios por huella/tarjeta/clave"
+              },
+              {
+                "label": "Longitud de clave",
+                "value": "6 a 8 dígitos"
+              },
+              {
+                "label": "Clave inicial",
+                "value": "123456"
+              },
+              {
+                "label": "Estado de fábrica",
+                "value": "Cualquier huella o clave puede abrir antes de configurar usuarios"
+              }
+            ]
+          ]
+        },
+        "configuracion-local": {
+          "title": "Configuración local",
+          "level": 2,
+          "order": 22,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "acceso-al-menu": {
+          "title": "Acceso al menú",
+          "level": 3,
+          "order": 23,
+          "summary": "Flujo tecnico:",
+          "paragraphs": [
+            "Flujo tecnico:",
+            "Menú documentado:"
+          ],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "1",
+                "value": "Ajustes de administrador"
+              },
+              {
+                "label": "2",
+                "value": "Ajustes de usuario"
+              },
+              {
+                "label": "3",
+                "value": "Ajustes del sistema"
+              },
+              {
+                "label": "4",
+                "value": "Restaurar fábrica"
+              },
+              {
+                "label": "*",
+                "value": "Salir / regresar"
+              },
+              {
+                "label": "#",
+                "value": "Confirmar"
+              }
+            ]
+          ]
+        },
+        "primer-administrador": {
+          "title": "Primer administrador",
+          "level": 3,
+          "order": 24,
+          "summary": "En estado inicial se entra con la clave 123456. Después se debe crear el primer administrador. El administrador puede ser huella, clave o tarjeta.",
+          "paragraphs": [
+            "En estado inicial se entra con la clave 123456. Después se debe crear el primer administrador. El administrador puede ser huella, clave o tarjeta.",
+            "Recomendación editorial:",
+            "El manual final debe decirlo en lenguaje de usuario:",
+            "\"Antes de usar la cerradura todos los días, registra un administrador. Así evitas que el estado de fábrica permita aperturas sin configuración.\""
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "agregar-administrador": {
+          "title": "Agregar administrador",
+          "level": 3,
+          "order": 25,
+          "summary": "Métodos documentados:",
+          "paragraphs": [
+            "Métodos documentados:",
+            "La huella se registra colocando el mismo dedo varias veces. El manual NX5 reciente menciona tres capturas consecutivas; el manual antiguo menciona cuatro. Usar tres si se toma el manual NX5 reciente como fuente principal."
+          ],
+          "bullets": [
+            "huella,",
+            "clave de 6 a 8 dígitos,",
+            "tarjeta IC."
+          ],
+          "tables": []
+        },
+        "agregar-usuario": {
+          "title": "Agregar usuario",
+          "level": 3,
+          "order": 26,
+          "summary": "El usuario regular se agrega desde el menú de usuarios y puede abrir la cerradura. No debe gestionar otros usuarios ni cambiar ajustes.",
+          "paragraphs": [
+            "El usuario regular se agrega desde el menú de usuarios y puede abrir la cerradura. No debe gestionar otros usuarios ni cambiar ajustes."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "eliminar-usuarios": {
+          "title": "Eliminar usuarios",
+          "level": 3,
+          "order": 27,
+          "summary": "El material documenta eliminación por número desde el menú. También aparece eliminación de todos los usuarios en material antiguo.",
+          "paragraphs": [
+            "El material documenta eliminación por número desde el menú. También aparece eliminación de todos los usuarios en material antiguo.",
+            "Para el manual final:"
+          ],
+          "bullets": [
+            "priorizar eliminación individual,",
+            "mencionar restaurar fábrica solo como opción completa,",
+            "advertir que restaurar borra administradores, usuarios, huellas, claves, tarjetas y ajustes."
+          ],
+          "tables": []
+        },
+        "ajustes-del-sistema": {
+          "title": "Ajustes del sistema",
+          "level": 2,
+          "order": 28,
+          "summary": "Funciones documentadas:",
+          "paragraphs": [
+            "Funciones documentadas:",
+            "Recomendación editorial:"
+          ],
+          "bullets": [
+            "fecha y hora,",
+            "número de habitación,",
+            "voz activada o desactivada,",
+            "idioma,",
+            "modo de apertura simple o combinado,",
+            "modo normalmente abierto,",
+            "bloqueo interior / anti-lock,",
+            "restaurar fábrica.",
+            "Omitir \"número de habitación\" si el producto no se venderá para hotelería o administración de propiedades.",
+            "Traducir \"normally open\" como \"paso libre\" o \"modo de paso libre\".",
+            "Traducir \"anti-lock\" según función real: \"bloqueo interior\" o \"seguro interior\"."
+          ],
+          "tables": []
+        },
+        "seguridad": {
+          "title": "Seguridad",
+          "level": 2,
+          "order": 29,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "bloqueo-por-intentos-incorrectos": {
+          "title": "Bloqueo por intentos incorrectos",
+          "level": 3,
+          "order": 30,
+          "summary": "Manual NX5 reciente:",
+          "paragraphs": [
+            "Manual NX5 reciente:",
+            "Manual antiguo:",
+            "Recomendación:",
+            "Usar 90 segundos si el manual NX5 reciente queda como fuente principal."
+          ],
+          "bullets": [
+            "después de 5 intentos incorrectos seguidos con huella, clave o tarjeta,",
+            "la cerradura emite advertencia,",
+            "bloquea operaciones durante 90 segundos.",
+            "menciona 30 segundos."
+          ],
+          "tables": []
+        },
+        "pin-con-privacidad": {
+          "title": "PIN con privacidad",
+          "level": 3,
+          "order": 31,
+          "summary": "Permite escribir números antes y después de la clave real. La clave correcta debe estar dentro de la secuencia y se confirma con #.",
+          "paragraphs": [
+            "Permite escribir números antes y después de la clave real. La clave correcta debe estar dentro de la secuencia y se confirma con #.",
+            "Límite documentado:"
+          ],
+          "bullets": [
+            "máximo 16 dígitos en total."
+          ],
+          "tables": []
+        },
+        "bloqueo-interior-anti-lock": {
+          "title": "Bloqueo interior / anti-lock",
+          "level": 3,
+          "order": 32,
+          "summary": "Función documentada:",
+          "paragraphs": [
+            "Función documentada:",
+            "Debe explicarse con calma en el manual:",
+            "\"Úsalo cuando quieras restringir aperturas desde el exterior. Un administrador podrá abrir si es necesario.\""
+          ],
+          "bullets": [
+            "al activarse desde el interior, usuarios regulares no pueden abrir desde afuera,",
+            "administrador sí puede abrir."
+          ],
+          "tables": []
+        },
+        "diseno-de-seguridad-observado": {
+          "title": "Diseño de seguridad observado",
+          "level": 3,
+          "order": 33,
+          "summary": "El manual reciente lista:",
+          "paragraphs": [
+            "El manual reciente lista:",
+            "El material visual también resalta uso exterior y antirobo en rejas."
+          ],
+          "bullets": [
+            "cilindro clase C,",
+            "anti-tailgating,",
+            "anti-black box,",
+            "anti-peeping,",
+            "clave virtual para proteger el PIN."
+          ],
+          "tables": []
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 34,
+          "summary": "Manual antiguo:",
+          "paragraphs": [
+            "Manual antiguo:",
+            "Recomendación:",
+            "Usar la versión más conservadora en el manual: cambiar baterías al primer aviso y tratar el USB solo como apertura temporal."
+          ],
+          "bullets": [
+            "menciona alarma bajo 4,8 V,",
+            "indica hasta 200 aperturas tras aviso."
+          ],
+          "tables": [
+            [
+              {
+                "label": "Alimentación principal",
+                "value": "4 baterías AA alcalinas"
+              },
+              {
+                "label": "Voltaje",
+                "value": "4,8 V a 6,5 V"
+              },
+              {
+                "label": "Corriente de trabajo",
+                "value": "< 200 mA"
+              },
+              {
+                "label": "Aviso de batería baja",
+                "value": "Menos de 25% en manual NX5 reciente"
+              },
+              {
+                "label": "Aperturas tras aviso",
+                "value": "Aproximadamente 50 según manual NX5 reciente"
+              },
+              {
+                "label": "Emergencia",
+                "value": "Puerto USB exterior conectado a power bank"
+              },
+              {
+                "label": "Tiempo con USB",
+                "value": "Cerca de 30 segundos antes de abrir"
+              }
+            ]
+          ]
+        },
+        "instalacion": {
+          "title": "Instalación",
+          "level": 2,
+          "order": 35,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "tipo-de-puerta": {
+          "title": "Tipo de puerta",
+          "level": 3,
+          "order": 36,
+          "summary": "Documentado:",
+          "paragraphs": [
+            "Documentado:"
+          ],
+          "bullets": [
+            "puerta de hierro,",
+            "puerta de acero inoxidable,",
+            "puerta tipo patio,",
+            "rejas / rail gates en material visual,",
+            "portones exteriores."
+          ],
+          "tables": []
+        },
+        "grosor-de-puerta": {
+          "title": "Grosor de puerta",
+          "level": 3,
+          "order": 37,
+          "summary": "Recomendación:",
+          "paragraphs": [
+            "Recomendación:",
+            "Validar con BESLOCK el rango de instalación comercial antes de ponerlo en el manual final. Si no se valida, usar \"verifica que la puerta sea compatible con la plantilla incluida\"."
+          ],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Manual NX5 reciente",
+                "value": "30 a 110 mm"
+              },
+              {
+                "label": "Manual Tuya WiFi chino",
+                "value": "35 a 50 mm"
+              },
+              {
+                "label": "Plantillas de corte",
+                "value": "Incluyen medidas de perforación y orientación, no sustituyen el rango final"
+              }
+            ]
+          ]
+        },
+        "plantillas-y-sentido": {
+          "title": "Plantillas y sentido",
+          "level": 3,
+          "order": 38,
+          "summary": "Material disponible:",
+          "paragraphs": [
+            "Material disponible:",
+            "Videos disponibles:",
+            "Implicación para el manual:",
+            "Debe existir una etapa inicial de revisión de sentido de apertura antes de fijar definitivamente el producto."
+          ],
+          "bullets": [
+            "plantilla single,",
+            "plantilla doble derecha,",
+            "plantilla doble izquierda.",
+            "cambio de dirección del pestillo,",
+            "cambio de dirección del panel trasero,",
+            "instalación de cerradura exterior."
+          ],
+          "tables": []
+        },
+        "app-y-conectividad": {
+          "title": "App y conectividad",
+          "level": 2,
+          "order": 39,
+          "summary": "Fuentes disponibles:",
+          "paragraphs": [
+            "Fuentes disponibles:",
+            "Funciones observadas en material de app:",
+            "Decisión necesaria:",
+            "El manual final debe elegir:",
+            "No conviene mezclar Tuya y TTLock en un mismo flujo de usuario."
+          ],
+          "bullets": [
+            "涂鸦WiFi英文版说明书新.pdf: Tuya WiFi.",
+            "X5涂鸦WiFi中文说明书.pdf: Tuya WiFi.",
+            "通通锁三代锁APP使用手册英文版（中性出货版本）.pdf: TTLock / Tongtong Lock.",
+            "Imagen comercial: menciona TTlock Unlock, App Unlock y Remote Control.",
+            "Videos: conexión del panel frontal y del panel trasero con app.",
+            "agregar cerradura,",
+            "abrir desde app,",
+            "eKey permanente o temporal,",
+            "claves temporales,",
+            "registros de apertura,",
+            "gestión de usuarios,",
+            "eliminar o congelar accesos,",
+            "renombrar dispositivo,",
+            "ajustes de seguridad."
+          ],
+          "tables": []
+        },
+        "restaurar-fabrica": {
+          "title": "Restaurar fábrica",
+          "level": 2,
+          "order": 40,
+          "summary": "Rutas documentadas:",
+          "paragraphs": [
+            "Rutas documentadas:"
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "boton-set-interno": {
+          "title": "Botón SET interno",
+          "level": 3,
+          "order": 41,
+          "summary": "El manual NX5 reciente indica:",
+          "paragraphs": [
+            "El manual NX5 reciente indica:"
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "menu": {
+          "title": "Menú",
+          "level": 3,
+          "order": 42,
+          "summary": "Advertencia para imágenes:",
+          "paragraphs": [
+            "Advertencia para imágenes:",
+            "El botón SET no debe mostrarse expuesto en el panel exterior. El despiece lo ubica como interruptor interno del cuerpo/caja protegida.",
+            "Para imágenes de usuario final, no mostrar motor, resortes, engranajes, placa electrónica ni carcasa abierta del cuerpo de cierre. Usar el despiece solo para entender orientación externa: asa a la derecha, pestillo principal y pasador hacia la izquierda, recibidor alineado a esas dos piezas.",
+            "Advertencia para manual:",
+            "Restaurar fábrica borra usuarios y ajustes. Además, el estado de fábrica permite abrir antes de configurar administradores; por eso debe configurarse nuevamente antes de usar la cerradura."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "especificaciones-tecnicas": {
+          "title": "Especificaciones técnicas",
+          "level": 2,
+          "order": 43,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Modelo",
+                "value": "NX5-L"
+              },
+              {
+                "label": "Material",
+                "value": "Aleación de aluminio + hierro inoxidable"
+              },
+              {
+                "label": "Tamaño frontal",
+                "value": "145 x 58 x 50 mm"
+              },
+              {
+                "label": "Tamaño trasero",
+                "value": "130 x 110 x 50 mm"
+              },
+              {
+                "label": "Grosor de puerta",
+                "value": "30 a 110 mm según manual NX5 reciente"
+              },
+              {
+                "label": "Tipo de puerta",
+                "value": "Hierro, acero inoxidable, patio"
+              },
+              {
+                "label": "Cilindro",
+                "value": "Clase C"
+              },
+              {
+                "label": "Pestillo",
+                "value": "Acero inoxidable 304"
+              },
+              {
+                "label": "Tipo de cierre",
+                "value": "Semiautomático"
+              },
+              {
+                "label": "Vida útil",
+                "value": "100.000 ciclos en tabla técnica; 200.000 ciclos en imagen comercial"
+              },
+              {
+                "label": "Huellas",
+                "value": "100 en tabla; otra fuente menciona 40 usuarios de huella"
+              },
+              {
+                "label": "Tarjetas",
+                "value": "100"
+              },
+              {
+                "label": "Claves",
+                "value": "100"
+              },
+              {
+                "label": "Longitud de clave",
+                "value": "6 a 8 dígitos"
+              },
+              {
+                "label": "Llaves físicas",
+                "value": "2 llaves de latón"
+              },
+              {
+                "label": "Tasa de falsa aceptación",
+                "value": "< 0,001%"
+              },
+              {
+                "label": "Tasa de falso rechazo",
+                "value": "< 0,1%"
+              },
+              {
+                "label": "Temperatura",
+                "value": "-10 °C a 65 °C en tabla; -25 °C a 60 °C en imagen comercial"
+              },
+              {
+                "label": "Humedad",
+                "value": "20% a 93% RH"
+              },
+              {
+                "label": "Voltaje",
+                "value": "4,8 V a 6,5 V"
+              },
+              {
+                "label": "Baterías",
+                "value": "4 AA alcalinas"
+              },
+              {
+                "label": "Emergencia",
+                "value": "USB"
+              },
+              {
+                "label": "Protección exterior",
+                "value": "IP65 en imagen comercial"
+              }
+            ]
+          ]
+        },
+        "senales-y-comportamientos": {
+          "title": "Señales y comportamientos",
+          "level": 2,
+          "order": 44,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Acceso correcto",
+                "value": "La cerradura abre después de verificar huella, clave, tarjeta, llave o app"
+              },
+              {
+                "label": "5 intentos incorrectos",
+                "value": "Bloqueo temporal de 90 segundos según manual reciente"
+              },
+              {
+                "label": "Batería baja",
+                "value": "Aviso de voz al abrir"
+              },
+              {
+                "label": "Batería agotada",
+                "value": "Usar USB exterior con power bank"
+              },
+              {
+                "label": "USB exterior",
+                "value": "Esperar cerca de 30 segundos antes de abrir"
+              },
+              {
+                "label": "Estado de fábrica",
+                "value": "Cualquier huella o clave puede abrir"
+              },
+              {
+                "label": "Inactividad en menú",
+                "value": "El sistema sale después de 10 segundos sin operación"
+              },
+              {
+                "label": "Anti-lock activo",
+                "value": "Usuario regular no abre desde afuera; administrador sí"
+              }
+            ]
+          ]
+        },
+        "implicaciones-para-el-manual-de-usuario": {
+          "title": "Implicaciones para el manual de usuario",
+          "level": 2,
+          "order": 45,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "flujo-recomendado": {
+          "title": "Flujo recomendado",
+          "level": 3,
+          "order": 46,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "lenguaje-recomendado": {
+          "title": "Lenguaje recomendado",
+          "level": 3,
+          "order": 47,
+          "summary": "Usar:",
+          "paragraphs": [
+            "Usar:",
+            "Evitar:"
+          ],
+          "bullets": [
+            "huella,",
+            "clave,",
+            "PIN con privacidad,",
+            "tarjeta,",
+            "llave mecánica,",
+            "app,",
+            "administrador,",
+            "usuario,",
+            "puerta abierta,",
+            "batería externa,",
+            "puerto USB,",
+            "bloqueo interior,",
+            "paso libre.",
+            "información de usuario,",
+            "información de administrador,",
+            "autenticación,",
+            "validación,",
+            "alimentación energética,",
+            "contraseña de doble lado,",
+            "TTlock y Tuya juntos sin separar variantes."
+          ],
+          "tables": []
+        },
+        "callouts-prioritarios": {
+          "title": "Callouts prioritarios",
+          "level": 3,
+          "order": 48,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Configura un administrador antes de usar.",
+            "Prueba con la puerta o reja abierta.",
+            "El estado de fábrica no es para uso diario.",
+            "Cambia las baterías al primer aviso.",
+            "El USB solo sirve para abrir temporalmente.",
+            "Restaurar fábrica borra usuarios y ajustes.",
+            "El botón SET va en el lado protegido / interno."
+          ],
+          "tables": []
+        },
+        "referencias-visuales-para-comfy": {
+          "title": "Referencias visuales para Comfy",
+          "level": 2,
+          "order": 49,
+          "summary": "Referencia principal obligatoria:",
+          "paragraphs": [
+            "Referencia principal obligatoria:",
+            "Referencias recomendadas:",
+            "Reglas visuales:"
+          ],
+          "bullets": [
+            "e-Shield/NX5-L/NX5-L单面/高清图/Single",
+            "Mantener panel vertical negro con huella superior y teclado táctil.",
+            "Mantener cuerpo rectangular de sobreponer.",
+            "Mantener pestillo visible y recibidor de marco.",
+            "Mostrar uso en reja, portón o puerta metálica cuando aplique.",
+            "No convertir el producto en manija, pomo o cerradura de incrustar.",
+            "No mostrar SET en la cara exterior.",
+            "No inventar cámara, timbre, pantalla ni reconocimiento facial.",
+            "Si hay numerales, deben coincidir con la lista final del manual.",
+            "Si se usa app, representar solo la app comercial decidida."
+          ],
+          "tables": []
+        },
+        "actualizaciones-oem-y-revision-visual-2026-05-28": {
+          "title": "Actualizaciones OEM y revisión visual 2026-05-28",
+          "level": 2,
+          "order": 50,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El manual NX5 reciente confirma Working Power Supply 4 AA batteries; el despiece marca la caja interna como 电池盒.",
+            "En imágenes del panel interior, el numeral del compartimento de baterías debe mostrar un zoom/corte del portapilas con exactamente cuatro AA y polaridad visible. El cuerpo principal debe mantenerse cerrado y fiel al True Source.",
+            "No dibujar portapilas expuesto sobre la superficie principal, tapas extra, sliders, botones o controles que no estén en el producto real.",
+            "Si SET/reset y control interior se representan visualmente, no crear un segundo botón. Usar el control redondo visible del cuerpo interior cuando el True Source solo muestra un control.",
+            "En instalación H2, la mini-escena de alineación debe mostrar el recibidor frente al pestillo principal y la lengüeta/pasador auxiliar. Nunca sugerir que el asa lateral negra acopla con el recibidor.",
+            "Para instalación, usar tres mini-escenas grandes: panel exterior y paso de cable, cuerpo interior con conexión/batería, y alineación de pestillo/pasador con recibidor. Evitar texto, listas y miniaturas densas."
+          ],
+          "tables": []
+        },
+        "pendientes-antes-del-manual-final": {
+          "title": "Pendientes antes del manual final",
+          "level": 2,
+          "order": 51,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Confirmar app final: Tuya WiFi, TTLock/Tongtong o ambas por variante.",
+            "Confirmar si se cubrirá versión single, doble o ambas.",
+            "Confirmar rango final de grosor de puerta.",
+            "Confirmar capacidad máxima final de huellas, claves, tarjetas y usuarios.",
+            "Confirmar si IP65 y rango de temperatura se pueden publicar.",
+            "Confirmar si el control remoto forma parte del paquete comercial o es accesorio.",
+            "Confirmar ubicación física exacta del SET en la unidad BESLOCK final.",
+            "Confirmar si se incluirá cubierta impermeable como accesorio del paquete."
+          ],
+          "tables": []
+        }
+      }
+    },
     "profile_public": {
       "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
       "commercial_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio. La geometría principal presenta panel exterior vertical negro con lector de huella circular superior, teclado táctil, acceso inferior de llave mecánica y cuerpo de cierre rectangular de sobreponer con pestillo visible.",

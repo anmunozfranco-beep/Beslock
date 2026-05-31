@@ -1,11 +1,30 @@
 {
   "schema": "beslock.manuals.web_export.v1",
-  "created_at": "2026-05-29T18:39:49.566601+00:00",
+  "created_at": "2026-05-30T17:22:19.374388+00:00",
   "products": [
     {
       "slug": "e-flex",
       "display_name": "e-Flex",
       "short_description": "e-Flex LPL015 es una cerradura inteligente de manija, con panel exterior táctil y panel interior con compartimento de baterías.",
+      "product_intent": "e-Flex se posiciona como una cerradura versátil para espacios con rotación frecuente de usuarios, como rentas cortas, habitaciones por días, accesos temporales o estancias compartidas. Su valor está en entregar acceso sin llave mediante huella, clave, tarjeta o app, permitiendo que cada usuario reciba un privilegio propio durante su estancia.",
+      "target_environment": [
+        "oficinas",
+        "rentas"
+      ],
+      "commercial_positioning": "Al finalizar el uso, el administrador debe eliminar o reemplazar ese acceso desde la gestión local o la app Tuya, recuperando el control del espacio sin cambiar llaves físicas. Esta intención se apoya en su capacidad de usuarios, múltiples credenciales, respaldo mecánico y conectividad Tuya; no debe presentarse como gestión hotelera avanzada ni como automatización de reservas si no hay fuente tecnico específica.",
+      "seo_keywords": [
+        "e-Flex",
+        "BESLOCK e-Flex",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Tuya",
+        "WiFi 2.4 GHz para app Tuya",
+        "Huella",
+        "Clave / contraseña",
+        "Tarjeta IC / proximidad",
+        "Llave mecánica",
+        "App Tuya"
+      ],
       "hero_image": "assets/e-flex/hero/e-flex-hero.webp",
       "product_json": "products/e-flex.json",
       "manual_sections": [
@@ -76,6 +95,24 @@
       "slug": "e-nova",
       "display_name": "e-Nova",
       "short_description": "e-Nova NK23 es una cerradura inteligente tipo pomo, compacta, con apertura por huella, llave mecánica y app móvil por Bluetooth.",
+      "product_intent": "e-Nova se posiciona como una solución lifestyle para accesos cotidianos donde se busca comodidad sin cargar llaves: salir a caminar, hacer deporte, moverse dentro de una vivienda o cuidar un espacio mientras se realizan actividades diarias. Su formato de pomo compacto, apertura por huella y control por app Bluetooth la hacen adecuada para puertas compatibles de bajo a medio flujo, especialmente cuando el usuario principal quiere entrar rápido y mantener un respaldo mecánico.",
+      "target_environment": [],
+      "commercial_positioning": "La intención debe mantenerse dentro de lo confirmado por el material conciliado: huella, app cercana por Bluetooth y llave mecánica. No asociarla con PIN, tarjeta, video o control remoto permanente sin validación adicional.",
+      "seo_keywords": [
+        "e-Nova",
+        "BESLOCK e-Nova",
+        "cerradura inteligente",
+        "Cerradura inteligente tipo pomo",
+        "Tuya Smart",
+        "Bluetooth",
+        "Huella",
+        "Llave mecánica",
+        "App Tuya Smart",
+        "PIN / clave",
+        "Tarjeta",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
       "hero_image": "assets/e-nova/hero/e-nova-hero.webp",
       "product_json": "products/e-nova.json",
       "manual_sections": [
@@ -146,6 +183,23 @@
       "slug": "e-orbit",
       "display_name": "e-Orbit",
       "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "product_intent": "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa. Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica.",
+      "target_environment": [],
+      "commercial_positioning": "Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior. La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva.",
+      "seo_keywords": [
+        "e-Orbit",
+        "BESLOCK e-Orbit",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Reconocimiento facial",
+        "Huella",
+        "Contraseña / PIN",
+        "Tarjeta M1 / IC",
+        "Llave mecánica",
+        "App móvil",
+        "Desbloqueo remoto",
+        "Apertura interior"
+      ],
       "hero_image": "assets/e-orbit/hero/e-orbit-hero.webp",
       "product_json": "products/e-orbit.json",
       "manual_sections": [
@@ -216,6 +270,26 @@
       "slug": "e-prime",
       "display_name": "e-Prime",
       "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+      "product_intent": "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables. Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+      "target_environment": [
+        "oficinas"
+      ],
+      "commercial_positioning": "Esta intención debe comunicarse como control de acceso práctico para operación diaria y administración local. Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada.",
+      "seo_keywords": [
+        "e-Prime",
+        "BESLOCK e-Prime",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Tuya / Smart Life compatible, según video",
+        "Módulo de red opcional según manual de serie Z; soporte de app sujeto a configuración/version",
+        "Huella dactilar",
+        "Contraseña",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App Tuya",
+        "Mini-programa WeChat",
+        "Bluetooth"
+      ],
       "hero_image": "assets/e-prime/hero/e-prime-hero.webp",
       "product_json": "products/e-prime.json",
       "manual_sections": [
@@ -286,6 +360,31 @@
       "slug": "e-shield",
       "display_name": "e-Shield",
       "short_description": "e-Shield es una cerradura inteligente exterior de sobreponer para puertas metálicas, rejas, portones y accesos tipo patio.",
+      "product_intent": "e-Shield se orienta a hogares tradicionales y accesos exteriores que quieren incorporar tecnología sin abandonar una solución robusta de sobreponer. Es adecuada para rejas, portones, patios y puertas metálicas compatibles donde se necesitan métodos prácticos como PIN, huella, tarjeta, llave mecánica y app, con respaldo de energía exterior y funciones de bloqueo.",
+      "target_environment": [
+        "hogares tradicionales",
+        "accesos exteriores",
+        "rejas",
+        "portones",
+        "patios",
+        "puertas metálicas"
+      ],
+      "commercial_positioning": "Su posicionamiento debe destacar robustez y uso exterior de forma conservadora: el material visual menciona protección IP, pero la afirmación final de resistencia debe quedar sujeta a validación comercial del modelo BESLOCK.",
+      "seo_keywords": [
+        "e-Shield",
+        "BESLOCK e-Shield",
+        "cerradura inteligente",
+        "Cerradura inteligente exterior de sobreponer",
+        "Huella",
+        "Clave / PIN",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App",
+        "Control remoto",
+        "Doble verificación",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
       "hero_image": "assets/e-shield/hero/e-shield-hero.webp",
       "product_json": "products/e-shield.json",
       "manual_sections": [
@@ -356,6 +455,28 @@
       "slug": "e-touch",
       "display_name": "e-Touch",
       "short_description": "e-Touch es una cerradura inteligente tipo manija con teclado táctil integrado en la palanca, lector de huella circular, apertura por clave, tarjeta, llave mecánica y app.",
+      "product_intent": "e-Touch se posiciona para controlar accesos interiores con privacidad y flujo moderado, donde se necesita una solución compacta y fácil de usar sin llegar a un sistema de control de acceso pesado. Encaja en aulas o salones donde se guarda equipo tecnológico, baños, áreas de piscina, gimnasios, oficinas internas o espacios compartidos con usuarios autorizados.",
+      "target_environment": [
+        "oficinas",
+        "puertas interiores"
+      ],
+      "commercial_positioning": "Sus cinco métodos de apertura, teclado integrado en la manija, lector de huella, tarjeta, app y llave mecánica permiten operar con flexibilidad, mientras el modo paso libre y el bloqueo interior ayudan a adaptar el acceso según el momento. Esta intención debe limitarse a puertas compatibles y ambientes acordes con su geometría de manija; no presentarla como solución exterior ni de alto tráfico industrial.",
+      "seo_keywords": [
+        "e-Touch",
+        "BESLOCK e-Touch",
+        "cerradura inteligente",
+        "Cerradura inteligente tipo manija",
+        "Tuya Smart / Smart Life",
+        "Bluetooth",
+        "Huella",
+        "Clave / PIN",
+        "Tarjeta IC",
+        "Llave mecánica",
+        "App móvil",
+        "Control remoto",
+        "Reconocimiento facial",
+        "Video / timbre"
+      ],
       "hero_image": "assets/e-touch/hero/e-touch-hero.webp",
       "product_json": "products/e-touch.json",
       "manual_sections": [
