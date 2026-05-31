@@ -3,8 +3,6 @@
  * Admin utility pages and import/assignment helpers.
  */
 
-error_log( 'Loaded OK: inc/admin-tools.php' );
-
 if ( is_admin() ) {
 
   add_action( 'admin_menu', function() {

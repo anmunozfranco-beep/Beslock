@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/debug/debug.php' );
-
 if ( ! function_exists( 'beslock_log_enqueued_styles' ) ) {
   function beslock_log_enqueued_styles() {
     $styles = wp_styles();

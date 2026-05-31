@@ -8,8 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * rendering to template parts to keep markup out of logic files.
  */
 
-error_log( 'Loaded OK: inc/woocommerce/product-features.php' );
-
 if ( ! function_exists( 'beslock_normalize_product_feature_list' ) ) {
   function beslock_normalize_product_feature_list( $features ) {
     if ( is_string( $features ) ) {

@@ -342,7 +342,7 @@
       ? url + (url.indexOf('?') === -1 ? '?' : '&') + 'v=' + encodeURIComponent(cacheBust)
       : url;
 
-    return fetch(requestUrl, { cache: 'no-store', headers: { Accept: 'application/json' } }).then(function (response) {
+    return fetch(requestUrl, { cache: 'force-cache', headers: { Accept: 'application/json' } }).then(function (response) {
       if (!response.ok) throw new Error('HTTP ' + response.status);
       return response.json();
     });

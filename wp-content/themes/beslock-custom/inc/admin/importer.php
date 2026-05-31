@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/admin/importer.php' );
-
 // Importer helpers and product-image assignment functions
 if ( ! function_exists( 'beslock_import_portfolio_images' ) ) {
   function beslock_import_portfolio_images() {

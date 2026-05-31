@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/features/product-features.php' );
-
 // Product features hooks: CTA, badges, free shipping bar
 if ( ! function_exists( 'beslock_product_cta' ) ) {
   function beslock_product_cta() {

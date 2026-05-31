@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/features/header.php' );
-
 if ( ! function_exists( 'beslock_get_header_widget_html' ) ) {
   function beslock_get_header_widget_html() {
     $tpl = get_stylesheet_directory() . '/template-parts/header/header-widget.php';
