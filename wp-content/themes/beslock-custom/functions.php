@@ -3,6 +3,11 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
+// Keep public pages CDN-friendly even when production deploys only the theme.
+if ( file_exists( get_stylesheet_directory() . '/inc/performance/public-cache.php' ) ) {
+  require_once get_stylesheet_directory() . '/inc/performance/public-cache.php';
+}
+
 /**
  * Ensure the main theme stylesheet handle is registered very early so other
  * styles can safely declare it as a dependency. This registers `beslock-main-style`
@@ -1069,5 +1074,4 @@ function beslock_kadence_archive_hero_buffer_end() {
     <?php
     return ob_get_clean();
   }
-
 
