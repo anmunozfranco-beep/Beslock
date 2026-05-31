@@ -13,6 +13,7 @@
 }
 
 .single-product .product-page__pager {
+  --product-pager-edge-inset: 1rem;
   width: min(100%, 1100px);
   position: sticky;
   top: calc(var(--header-height, 70px) + 0.85rem);
@@ -26,6 +27,7 @@
   border: 1px solid rgba(216, 222, 230, 0.92);
   border-radius: 18px;
   background-color: rgba(255, 255, 255, 0.9);
+  overflow: hidden;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
@@ -60,25 +62,43 @@
 .single-product .product-page__pager-link::before {
   content: "";
   position: absolute;
-  inset: -0.58rem -0.72rem;
+  inset: -0.9rem -1.35rem;
   z-index: -1;
   pointer-events: none;
-  border-radius: 999px;
-  background:
-    linear-gradient(90deg, rgba(3, 69, 38, 0), rgba(3, 69, 38, 0.13), rgba(3, 69, 38, 0)),
-    rgba(3, 69, 38, 0.045);
+  border-radius: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 69, 38, 0.16) 0%,
+    rgba(3, 69, 38, 0.1) 34%,
+    rgba(3, 69, 38, 0.035) 62%,
+    rgba(3, 69, 38, 0) 100%
+  );
+  filter: blur(10px);
   opacity: 0;
-  transform: scaleX(0.72);
+  transform: translate3d(-0.8rem, 0, 0) scaleX(0.72);
+  transform-origin: left center;
   transition:
     opacity 220ms ease,
     transform 520ms cubic-bezier(.16, .84, .29, 1);
+}
+
+.single-product .product-page__pager-link--next::before {
+  background: linear-gradient(
+    270deg,
+    rgba(3, 69, 38, 0.16) 0%,
+    rgba(3, 69, 38, 0.1) 34%,
+    rgba(3, 69, 38, 0.035) 62%,
+    rgba(3, 69, 38, 0) 100%
+  );
+  transform: translate3d(0.8rem, 0, 0) scaleX(0.72);
+  transform-origin: right center;
 }
 
 .single-product .product-page__pager-link:hover::before,
 .single-product .product-page__pager-link:focus-visible::before,
 .single-product .product-page__pager-link.is-reeling::before {
   opacity: 1;
-  transform: scaleX(1);
+  transform: translate3d(0, 0, 0) scaleX(1);
 }
 
 .single-product .product-page__pager-link:hover {
@@ -171,14 +191,13 @@
 
 .header.header--scrolled ~ .product-page .product-page__pager,
 [data-js="header"].header--scrolled ~ .product-page .product-page__pager {
+  --product-pager-edge-inset: max(0.85rem, calc((100vw - var(--product-active-width, min(1180px, 100vw))) / 2 + 0.85rem));
   top: var(--product-pager-sticky-top, var(--header-height, 70px));
   width: 100%;
   max-width: 100%;
   margin: 0 0 0.4rem;
   gap: 0.68rem;
-  padding:
-    0.72rem
-    max(0.85rem, calc((100% - var(--product-active-width, min(1180px, 100%))) / 2 + 0.85rem));
+  padding: 0.72rem var(--product-pager-edge-inset);
   border-right: 0;
   border-left: 0;
   border-radius: 0;
@@ -186,6 +205,16 @@
   -webkit-backdrop-filter: blur(18px) saturate(1.08);
   backdrop-filter: blur(18px) saturate(1.08);
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.09);
+}
+
+.header.header--scrolled ~ .product-page .product-page__pager-link--prev::before,
+[data-js="header"].header--scrolled ~ .product-page .product-page__pager-link--prev::before {
+  inset-inline-start: calc(-1 * var(--product-pager-edge-inset, 1rem));
+}
+
+.header.header--scrolled ~ .product-page .product-page__pager-link--next::before,
+[data-js="header"].header--scrolled ~ .product-page .product-page__pager-link--next::before {
+  inset-inline-end: calc(-1 * var(--product-pager-edge-inset, 1rem));
 }
 
 .header.header--scrolled ~ .product-page .product-page__pager-link,
@@ -550,11 +579,10 @@ body.single-product.product-reel-enter .product-page__details {
 
   .header.header--scrolled ~ .product-page .product-page__pager,
   [data-js="header"].header--scrolled ~ .product-page .product-page__pager {
+    --product-pager-edge-inset: max(0.78rem, calc((100vw - var(--product-active-width, min(1180px, 100vw))) / 2 + 0.78rem));
     top: var(--product-pager-sticky-top, var(--header-height, 70px));
     gap: 0.55rem;
-    padding:
-      0.68rem
-      max(0.78rem, calc((100% - var(--product-active-width, min(1180px, 100%))) / 2 + 0.78rem));
+    padding: 0.68rem var(--product-pager-edge-inset);
   }
 
   .header.header--scrolled ~ .product-page .product-page__pager-title,
@@ -645,6 +673,10 @@ body.single-product .wp-post-image {
   object-position: center center !important;
 }
 
+body.single-product .product-page__gallery-slide {
+  overflow: hidden;
+}
+
 body.single-product .product-page__info {
   width: min(100%, 28rem);
   max-width: 28rem !important;
@@ -705,7 +737,7 @@ body.single-product .summary .woocommerce-product-details__short-description p {
 
 @media (max-width: 767px) {
   body.single-product main.product-page {
-    --product-active-width: min(100%, calc(100vw - 2rem));
+    --product-active-width: calc(100vw - 2rem);
   }
 
   body.single-product .product-page__hero {

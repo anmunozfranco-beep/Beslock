@@ -49,7 +49,7 @@ body.beslock-frontpage-motion #main-content .product-card.is-motion-visible {
 }
 
 body.beslock-frontpage-motion #main-content .product-card::after {
-  content: "";
+  content: none;
   position: absolute;
   inset: 1px;
   z-index: 0;
@@ -68,29 +68,28 @@ body.beslock-frontpage-motion #main-content .product-card > * {
 }
 
 body.beslock-frontpage-motion #main-content .product-card .product-card__image img:not(.product-card__badge) {
-  transform: translate3d(0, 0, 0) scale(1) !important;
+  transform: none !important;
   transition:
-    transform 520ms cubic-bezier(.16, .84, .29, 1),
     filter 520ms cubic-bezier(.16, .84, .29, 1) !important;
-  will-change: transform, filter;
+  will-change: filter;
 }
 
 @media (hover: hover) and (pointer: fine) {
   body.beslock-frontpage-motion #main-content .product-card:hover,
   body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover {
-    transform: translate3d(0, -8px, 0) scale(1.012);
+    transform: translate3d(0, -8px, 0) scale(1.012) !important;
     box-shadow: 0 24px 58px rgba(15, 23, 42, 0.13), 0 10px 24px rgba(3, 69, 38, 0.08);
   }
 
   body.beslock-frontpage-motion #main-content .product-card:hover::after,
   body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover::after {
-    opacity: 1;
+    opacity: 0;
   }
 
   body.beslock-frontpage-motion #main-content .product-card:hover .product-card__image img:not(.product-card__badge),
   body.beslock-frontpage-motion #main-content .product-card.bes-product-card--hover .product-card__image img:not(.product-card__badge) {
-    transform: translate3d(0, -8px, 0) scale(1.035) !important;
-    filter: drop-shadow(0 22px 20px rgba(15, 23, 42, 0.14));
+    transform: none !important;
+    filter: none !important;
   }
 }
 
