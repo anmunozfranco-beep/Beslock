@@ -546,14 +546,20 @@
     return pager;
   }
 
-  function createImage(path, altText, className) {
+  function createImage(path, altText, className, options) {
     if (!path) return createPlaceholder('Imagen no disponible', className);
 
+    options = options || {};
+
     var image = document.createElement('img');
+    if (className) image.className = className;
     image.src = versionedManualUrl(path);
     image.alt = altText || '';
-    image.loading = 'lazy';
-    image.decoding = 'async';
+    image.loading = options.loading || 'lazy';
+    image.decoding = options.decoding || 'async';
+    if (options.fetchPriority) {
+      image.setAttribute('fetchpriority', options.fetchPriority);
+    }
     image.addEventListener('error', function () {
       var placeholder = createPlaceholder('Imagen no disponible', className);
       if (image.parentNode) image.parentNode.replaceChild(placeholder, image);
@@ -565,6 +571,16 @@
     var placeholder = el('div', className ? className + ' manuals-media-placeholder' : 'manuals-media-placeholder');
     placeholder.appendChild(el('span', '', message || 'Imagen no disponible'));
     return placeholder;
+  }
+
+  function modelCardImage(product) {
+    if (!product) return '';
+    if (product.hero_thumbnail) return product.hero_thumbnail;
+    if (product.thumbnail_image) return product.thumbnail_image;
+
+    var heroImage = product.hero_image || '';
+    if (/-hero\.webp$/i.test(heroImage)) return heroImage.replace(/-hero\.webp$/i, '-hero-thumb.webp');
+    return heroImage;
   }
 
   function renderModels(sectionDef, indexData) {
@@ -582,14 +598,18 @@
       wrap.appendChild(warning);
     }
 
-    products.forEach(function (product) {
+    products.forEach(function (product, index) {
       var card = el('button', 'manuals-model-card');
       card.type = 'button';
       card.setAttribute('data-manual-product', product.slug || '');
 
       var media = el('span', 'manuals-model-card__media');
-      if (product.hero_image) {
-        media.appendChild(createImage(product.hero_image, productName(product)));
+      var imagePath = modelCardImage(product);
+      if (imagePath) {
+        media.appendChild(createImage(imagePath, productName(product), '', {
+          loading: 'eager',
+          fetchPriority: index < 3 ? 'high' : 'auto'
+        }));
       } else {
         media.appendChild(createPlaceholder('Modelo BESLOCK'));
       }
@@ -814,8 +834,11 @@
 
     wrap.appendChild(pager);
 
-    allGroups.forEach(function (group) {
-      wrap.appendChild(renderManualGroup(group));
+    allGroups.forEach(function (group, index) {
+      wrap.appendChild(renderManualGroup(group, {
+        loading: index < 2 ? 'eager' : 'lazy',
+        fetchPriority: index === 0 ? 'high' : 'auto'
+      }));
     });
 
     setBody(wrap);
@@ -1011,7 +1034,7 @@
     });
   }
 
-  function renderManualGroup(group) {
+  function renderManualGroup(group, imageOptions) {
     var block = el('section', 'manuals-block');
     var copy = el('div', 'manuals-block__copy');
     copy.appendChild(el('h4', '', group.title || 'Detalle de la guía'));
@@ -1022,7 +1045,7 @@
 
     var media = el('div', 'manuals-block__media');
     if (group.image) {
-      media.appendChild(createImage(group.image, group.alt || group.title || 'Imagen del manual'));
+      media.appendChild(createImage(group.image, group.alt || group.title || 'Imagen del manual', '', imageOptions));
     } else {
       media.appendChild(createPlaceholder('Imagen no disponible'));
     }
