@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/woocommerce/setup.php' );
-
 // WooCommerce theme support and gallery tweaks
 if ( class_exists( 'WooCommerce' ) && WC() ) {
   add_action( 'after_setup_theme', function() {

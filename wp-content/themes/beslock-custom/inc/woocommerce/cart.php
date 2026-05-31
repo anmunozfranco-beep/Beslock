@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/woocommerce/cart.php' );
-
 // WooCommerce cart/shop related logic
 if ( class_exists( 'WooCommerce' ) && WC() ) {
   // Redirect the WooCommerce Shop page to the front-page products portfolio section.

@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/admin/tools.php' );
-
 // Admin menu pages and wiring. Importer helper functions live in importer.php
 if ( ! function_exists( 'beslock_admin_tools_menu' ) ) {
   function beslock_admin_tools_menu() {

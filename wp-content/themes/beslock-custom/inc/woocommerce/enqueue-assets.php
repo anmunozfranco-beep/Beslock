@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/woocommerce/enqueue-assets.php' );
-
 /**
  * Minimal WooCommerce-related asset registration. Keeps handles available
  * for WooCommerce templates and product-card component.

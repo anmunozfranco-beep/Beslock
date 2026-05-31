@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/core/enqueue.php' );
-
 // Move of previous enqueue logic. No functional change — only relocated.
 add_action( 'wp_enqueue_scripts', function() {
 
@@ -117,7 +115,7 @@ add_action( 'wp_enqueue_scripts', function() {
   );
 
   $hero_telemetry_config = array(
-    'enabled'  => (bool) apply_filters( 'beslock_hero_startup_telemetry_enabled', true ),
+    'enabled'  => (bool) apply_filters( 'beslock_hero_startup_telemetry_enabled', false ),
     'endpoint' => esc_url_raw( rest_url( 'beslock/v1/hero-startup' ) ),
   );
 
@@ -177,13 +175,22 @@ add_action( 'wp_enqueue_scripts', function() {
 
     $manuals_cache_bust = filemtime( $manuals_viewer_js );
     $manuals_dist_dir = $theme_dir_path . '/dist/manuals';
-    if ( is_dir( $manuals_dist_dir ) ) {
-      $manuals_files = new RecursiveIteratorIterator(
-        new RecursiveDirectoryIterator( $manuals_dist_dir, FilesystemIterator::SKIP_DOTS )
-      );
-      foreach ( $manuals_files as $manuals_file ) {
-        if ( $manuals_file->isFile() ) {
-          $manuals_cache_bust = max( $manuals_cache_bust, $manuals_file->getMTime() );
+    $manuals_manifest_candidates = array(
+      $manuals_dist_dir . '/index.json',
+      $manuals_dist_dir . '/export_summary.json',
+    );
+
+    foreach ( $manuals_manifest_candidates as $manuals_manifest ) {
+      if ( file_exists( $manuals_manifest ) ) {
+        $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_manifest ) );
+      }
+    }
+
+    $manuals_product_manifests = glob( $manuals_dist_dir . '/products/*.json' );
+    if ( is_array( $manuals_product_manifests ) ) {
+      foreach ( $manuals_product_manifests as $manuals_product_manifest ) {
+        if ( is_file( $manuals_product_manifest ) ) {
+          $manuals_cache_bust = max( $manuals_cache_bust, filemtime( $manuals_product_manifest ) );
         }
       }
     }

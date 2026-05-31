@@ -3,8 +3,6 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-error_log( 'Loaded OK: inc/integrations/kadence-cleanup.php' );
-
 // Remove or override Kadence-specific theme behaviors that conflict with Beslock layout
 if ( ! function_exists( 'beslock_strip_kadence_css' ) ) {
   function beslock_strip_kadence_css() {
