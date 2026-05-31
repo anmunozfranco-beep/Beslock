@@ -64,6 +64,42 @@
     });
   }
 
+  function bindPagerMetrics() {
+    var pager = document.querySelector('.product-page__pager');
+    var header = document.querySelector('[data-js="header"], .header');
+    if (!pager) return;
+
+    var frame = 0;
+
+    function update() {
+      frame = 0;
+      var headerBottom = 0;
+
+      if (header && header.getBoundingClientRect) {
+        headerBottom = Math.max(0, header.getBoundingClientRect().bottom);
+      }
+
+      document.documentElement.style.setProperty('--product-pager-sticky-top', Math.round(headerBottom) + 'px');
+    }
+
+    function requestUpdate() {
+      if (frame) return;
+      frame = window.requestAnimationFrame ? window.requestAnimationFrame(update) : window.setTimeout(update, 16);
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate, { passive: true });
+
+    if (window.ResizeObserver && header) {
+      try {
+        var observer = new ResizeObserver(requestUpdate);
+        observer.observe(header);
+      } catch (error) {}
+    }
+
+    requestUpdate();
+  }
+
   function playEnter(body) {
     var direction = getStoredDirection();
     if (!direction || prefersReducedMotion()) {
@@ -128,6 +164,7 @@
     clearMotionState(body, true);
     playEnter(body);
     initPager(body);
+    bindPagerMetrics();
 
     window.addEventListener('pageshow', function (event) {
       if (event.persisted) clearMotionState(body);

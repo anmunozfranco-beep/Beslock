@@ -2,6 +2,1223 @@
   "product": {
     "slug": "e-prime",
     "display_name": "e-Prime",
+    "profile": {
+      "identity": {
+        "display_name": "e-Prime",
+        "beslock_name": "e-Prime",
+        "oem_model": "P14",
+        "oem_related_names": "",
+        "product_type": "Cerradura inteligente",
+        "lock_architecture": "mortise_lock",
+        "main_image": "",
+        "variants": [],
+        "primary_use": "",
+        "source_file": "perfil_producto_e-prime_P14.md"
+      },
+      "commercial": {
+        "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+        "commercial_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V. Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. Respaldo físico mediante llave mecánica. Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. Administración local de usuarios y administradores.",
+        "key_value_proposition": "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. Respaldo físico mediante llave mecánica. Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. Administración local de usuarios y administradores. Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+        "value_bullets": [
+          "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+          "Respaldo físico mediante llave mecánica.",
+          "Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías.",
+          "Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real.",
+          "Administración local de usuarios y administradores.",
+          "Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+          "Timbre integrado en el panel exterior.",
+          "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+          "Seguridad práctica para accesos residenciales y oficinas.",
+          "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+          "Sensor semiconductor de huella con reconocimiento 360 grados.",
+          "Administración de hasta 300 usuarios y 9 administradores.",
+          "Alimentación de emergencia por puerto 5 V.",
+          "Timbre integrado y alertas de baja batería."
+        ],
+        "commercial_positioning": "Esta intención debe comunicarse como control de acceso práctico para operación diaria y administración local. Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada.",
+        "emotional_angle": "seguridad, control, privacidad"
+      },
+      "positioning": {
+        "summary": "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables. Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple. Esta intención debe comunicarse como control de acceso práctico para operación diaria y administración local. Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada. - Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. - Respaldo físico mediante llave mecánica. - Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. - Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. - Administración local de usuarios y administradores. - Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada. - Timbre integrado en el panel exterior. - Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app. - Seguridad práctica para accesos residenciales y oficinas. - Contraseña antiespía para mayor privacidad al abrir frente a otras personas. - Sensor semiconductor de huella con reconocimiento 360 grados. - Administración de hasta 300 usuarios y 9 administradores. - Alimentación de emergencia por puerto 5 V. - Timbre integrado y alertas de baja batería.",
+        "differentiators": [
+          "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+          "Respaldo físico mediante llave mecánica.",
+          "Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías.",
+          "Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real.",
+          "Administración local de usuarios y administradores.",
+          "Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+          "Timbre integrado en el panel exterior.",
+          "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+          "Seguridad práctica para accesos residenciales y oficinas.",
+          "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+          "Sensor semiconductor de huella con reconocimiento 360 grados.",
+          "Administración de hasta 300 usuarios y 9 administradores.",
+          "Alimentación de emergencia por puerto 5 V.",
+          "Timbre integrado y alertas de baja batería.",
+          "- Timbre integrado en el panel exterior."
+        ],
+        "commercial_promise": [
+          "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables.",
+          "Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+          "- Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables. Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+        "primary_problem_solved": "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+        "target_user": "administrador",
+        "target_environment": [
+          "oficinas"
+        ],
+        "commercial_positioning": "Esta intención debe comunicarse como control de acceso práctico para operación diaria y administración local. Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada.",
+        "emotional_angle": "control",
+        "practical_value": [
+          "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+          "Respaldo físico mediante llave mecánica.",
+          "Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías.",
+          "Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real.",
+          "Administración local de usuarios y administradores.",
+          "Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+          "Timbre integrado en el panel exterior.",
+          "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+          "Seguridad práctica para accesos residenciales y oficinas.",
+          "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+          "Sensor semiconductor de huella con reconocimiento 360 grados.",
+          "Administración de hasta 300 usuarios y 9 administradores.",
+          "Alimentación de emergencia por puerto 5 V.",
+          "Timbre integrado y alertas de baja batería.",
+          "Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+          "Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada."
+        ]
+      },
+      "target_context": {
+        "environments": [
+          "oficinas"
+        ],
+        "use_cases": [],
+        "installation_context": "Notas técnicas de instalación:"
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Huella dactilar",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Contraseña",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Mini-programa WeChat",
+            "status": "Mencionado en manual P14/serie Z; puede depender de variante o mercado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Icono visible en portada P14; no aparece desarrollado como especificación técnica en el texto"
+          }
+        ],
+        "security_features": [],
+        "comfort_features": [
+          "Para abrir con huella, colocar el dedo registrado en el lector de la manija y accionar la manija cuando la cerradura confirme.",
+          "Para abrir con clave, despertar el teclado, ingresar la clave registrada y confirmar con #.",
+          "Para PIN con privacidad, se pueden agregar dígitos antes y después de la clave real; la clave correcta debe quedar dentro de la secuencia y confirmarse con #.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura.",
+          "Para abrir desde app, vincular primero la cerradura desde el menú inalámbrico y usar la app compatible definida para la versión comercial.",
+          "El botón de timbre del panel exterior puede usarse para anunciar una visita.",
+          "La llave mecánica está en el compartimento rectangular frontal inferior y debe guardarse fuera del lugar protegido.",
+          "El puerto inferior de 5 V permite alimentación temporal desde power bank cuando las pilas se agotan; no debe mostrarse como el mismo compartimento de llave.",
+          "Cambiar las cuatro pilas AA al primer aviso de baja tensión. El material indica aperturas restantes después del aviso, pero la recomendación debe ser reemplazo inmediato.",
+          "Paso libre, verificación dual, alarma antipalanca y modo silencioso son funciones de ajuste; el uso diario debe referirse a ellas solo como modos previamente configurados."
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Huella dactilar",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Contraseña",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App Tuya",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Mini-programa WeChat",
+            "status": "Mencionado en manual P14/serie Z; puede depender de variante o mercado"
+          },
+          {
+            "name": "Bluetooth",
+            "status": "Icono visible en portada P14; no aparece desarrollado como especificación técnica en el texto"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella dactilar",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Contraseña",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual P14 y video de funciones"
+              },
+              {
+                "label": "App Tuya",
+                "value": "Confirmado visualmente en videos de demostración/conexión"
+              },
+              {
+                "label": "Mini-programa WeChat",
+                "value": "Mencionado en manual P14/serie Z; puede depender de variante o mercado"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Icono visible en portada P14; no aparece desarrollado como especificación técnica en el texto"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Sensor de huella",
+              "value": "Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución"
+            },
+            {
+              "label": "Antifalsificación de huella",
+              "value": "El manual indica prevención efectiva de huellas falsas"
+            },
+            {
+              "label": "Contraseña antiespía",
+              "value": "Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta"
+            },
+            {
+              "label": "Verificación dual",
+              "value": "Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir"
+            },
+            {
+              "label": "Administradores",
+              "value": "Hasta 9 administradores, como huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Capacidad total",
+              "value": "Hasta 300 usuarios/credenciales según manual de serie Z"
+            },
+            {
+              "label": "Usuarios normales",
+              "value": "Pueden abrir/cerrar; no administran configuración"
+            },
+            {
+              "label": "Alarmas",
+              "value": "Antipalanca/antirrobo, baja tensión e intentos incorrectos"
+            },
+            {
+              "label": "Bloqueo por error",
+              "value": "Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas"
+            }
+          ]
+        ],
+        "features": []
+      },
+      "installation": {
+        "summary": "Notas técnicas de instalación:",
+        "paragraphs": [
+          "Notas técnicas de instalación:",
+          "Nota del manual P14: no retirar los tornillos del orificio de la manija al cambiar la dirección."
+        ],
+        "bullets": [
+          "Cuerpo del cerrojo/cerradura.",
+          "Eje cuadrado/husillo.",
+          "Pernos de montaje.",
+          "Tornillos de montaje.",
+          "Cable de conexión de datos entre panel exterior e interior.",
+          "Tapa de batería.",
+          "Resorte de manija, según instrucciones de montaje.",
+          "La longitud del eje cuadrado que sobresale de la superficie de la puerta debe estar entre 10 y 30 mm.",
+          "Para puertas fuera del rango previsto, se debe solicitar un eje/husillo de longitud personalizada o recortar el existente.",
+          "Si el pasador no se mueve suavemente, se debe reajustar el panel antes de apretar por completo."
+        ],
+        "tables": [],
+        "installation_type": "Notas técnicas de instalación:",
+        "door_type": "",
+        "door_thickness": "",
+        "opening_direction": "",
+        "compatibility": [
+          "Ajustar la dirección del pasador/cuerpo de cerradura según el sentido de apertura de la puerta.",
+          "Insertar el eje cuadrado en el cuerpo de la cerradura; recortarlo si es necesario según el grosor real de la puerta.",
+          "Alinear el orificio cuadrado de la manija con el eje y presionar el panel exterior contra la superficie de la puerta.",
+          "Notas técnicas de instalación: - La longitud del eje cuadrado que sobresale de la superficie de la puerta debe estar entre 10 y 30 mm.",
+          "- Para puertas fuera del rango previsto, se debe solicitar un eje/husillo de longitud personalizada o recortar el existente."
+        ]
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe explicar aperturas y respaldos sin entrar al menú. Para e-Prime, el tecnico confirma apertura con huella, clave/contraseña, tarjeta IC, llave mecánica, app móvil y manija interior.",
+        "paragraphs": [
+          "La sección de uso diario debe explicar aperturas y respaldos sin entrar al menú. Para e-Prime, el tecnico confirma apertura con huella, clave/contraseña, tarjeta IC, llave mecánica, app móvil y manija interior.",
+          "Nota de fuente: este bloque concilia P14 manual.pdf, Z系列半自动说明书.pdf, videos de demostración/conexión y las reglas visuales 2026-05-28 sobre llave frontal y puerto inferior separado."
+        ],
+        "bullets": [
+          "Para abrir con huella, colocar el dedo registrado en el lector de la manija y accionar la manija cuando la cerradura confirme.",
+          "Para abrir con clave, despertar el teclado, ingresar la clave registrada y confirmar con #.",
+          "Para PIN con privacidad, se pueden agregar dígitos antes y después de la clave real; la clave correcta debe quedar dentro de la secuencia y confirmarse con #.",
+          "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura.",
+          "Para abrir desde app, vincular primero la cerradura desde el menú inalámbrico y usar la app compatible definida para la versión comercial.",
+          "El botón de timbre del panel exterior puede usarse para anunciar una visita.",
+          "La llave mecánica está en el compartimento rectangular frontal inferior y debe guardarse fuera del lugar protegido.",
+          "El puerto inferior de 5 V permite alimentación temporal desde power bank cuando las pilas se agotan; no debe mostrarse como el mismo compartimento de llave.",
+          "Cambiar las cuatro pilas AA al primer aviso de baja tensión. El material indica aperturas restantes después del aviso, pero la recomendación debe ser reemplazo inmediato.",
+          "Paso libre, verificación dual, alarma antipalanca y modo silencioso son funciones de ajuste; el uso diario debe referirse a ellas solo como modos previamente configurados."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Inicialización",
+              "value": "Retirar tapa de batería y mantener presionado SET durante 5 segundos; la voz indica inicialización exitosa"
+            },
+            {
+              "label": "Activar pantalla / entrar a menú",
+              "value": "En estado inicial o normal: despertar pantalla y usar * + # según manual de serie Z"
+            },
+            {
+              "label": "Tecla *",
+              "value": "Volver, salir o borrar"
+            },
+            {
+              "label": "Tecla #",
+              "value": "Confirmar, entrar o repetir indicación de voz"
+            },
+            {
+              "label": "Agregar administrador",
+              "value": "En estado inicial, entrar al menú y presionar 4; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Agregar usuario",
+              "value": "Tras verificar administrador, presionar 1; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Eliminar usuario",
+              "value": "Tras verificar administrador, presionar 2; se elimina por huella, contraseña, tarjeta o número"
+            },
+            {
+              "label": "Configuración de cerradura",
+              "value": "Tras verificar administrador, presionar 3"
+            },
+            {
+              "label": "Funciones",
+              "value": "Dentro de configuración, 1 para funciones: modo normalmente abierto, verificación dual, alarma antipalanca, modo silencio"
+            },
+            {
+              "label": "Volumen",
+              "value": "Dentro de configuración, 2; 1 sube volumen y 2 baja volumen"
+            },
+            {
+              "label": "Voz",
+              "value": "Dentro de configuración, 3; 1 chino y 2 inglés"
+            },
+            {
+              "label": "Hora",
+              "value": "Dentro de configuración, 4; introducir año, mes, día, hora y minuto"
+            },
+            {
+              "label": "Restaurar fábrica",
+              "value": "Mantener presionado el botón de reinicio/SET durante 5 segundos"
+            }
+          ]
+        ]
+      },
+      "configuration": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Inicialización",
+              "value": "Retirar tapa de batería y mantener presionado SET durante 5 segundos; la voz indica inicialización exitosa"
+            },
+            {
+              "label": "Activar pantalla / entrar a menú",
+              "value": "En estado inicial o normal: despertar pantalla y usar * + # según manual de serie Z"
+            },
+            {
+              "label": "Tecla *",
+              "value": "Volver, salir o borrar"
+            },
+            {
+              "label": "Tecla #",
+              "value": "Confirmar, entrar o repetir indicación de voz"
+            },
+            {
+              "label": "Agregar administrador",
+              "value": "En estado inicial, entrar al menú y presionar 4; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Agregar usuario",
+              "value": "Tras verificar administrador, presionar 1; permite registrar huella, contraseña o tarjeta"
+            },
+            {
+              "label": "Eliminar usuario",
+              "value": "Tras verificar administrador, presionar 2; se elimina por huella, contraseña, tarjeta o número"
+            },
+            {
+              "label": "Configuración de cerradura",
+              "value": "Tras verificar administrador, presionar 3"
+            },
+            {
+              "label": "Funciones",
+              "value": "Dentro de configuración, 1 para funciones: modo normalmente abierto, verificación dual, alarma antipalanca, modo silencio"
+            },
+            {
+              "label": "Volumen",
+              "value": "Dentro de configuración, 2; 1 sube volumen y 2 baja volumen"
+            },
+            {
+              "label": "Voz",
+              "value": "Dentro de configuración, 3; 1 chino y 2 inglés"
+            },
+            {
+              "label": "Hora",
+              "value": "Dentro de configuración, 4; introducir año, mes, día, hora y minuto"
+            },
+            {
+              "label": "Restaurar fábrica",
+              "value": "Mantener presionado el botón de reinicio/SET durante 5 segundos"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Baterías",
+              "value": "4 pilas AA alcalinas de 1,5 V"
+            },
+            {
+              "label": "Alimentación de emergencia",
+              "value": "Puerto externo de 5 V para power bank o fuente equivalente"
+            },
+            {
+              "label": "Umbral de baja tensión",
+              "value": "4,8 V según manual de serie Z"
+            },
+            {
+              "label": "Uso tras primer aviso",
+              "value": "Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería"
+            },
+            {
+              "label": "Mantenimiento recomendado",
+              "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo"
+            }
+          ]
+        ],
+        "battery_type": "4 pilas AA alcalinas de 1,5 V",
+        "emergency_power": ""
+      },
+      "app_connectivity": {
+        "summary": "Los videos muestran conexión con aplicación Tuya:",
+        "paragraphs": [
+          "Los videos muestran conexión con aplicación Tuya:",
+          "Esta función puede requerir módulo de red opcional o variante compatible, porque el manual de serie Z indica \"módulo de red opcional\"."
+        ],
+        "bullets": [],
+        "tables": [],
+        "app_status": "Tuya / Smart Life compatible, según video",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [],
+        "highlights": [
+          {
+            "label": "Baterías",
+            "value": "4 pilas AA alcalinas de 1,5 V"
+          },
+          {
+            "label": "Alimentación de emergencia",
+            "value": "Puerto externo de 5 V para power bank o fuente equivalente"
+          },
+          {
+            "label": "Umbral de baja tensión",
+            "value": "4,8 V según manual de serie Z"
+          },
+          {
+            "label": "Uso tras primer aviso",
+            "value": "Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería"
+          },
+          {
+            "label": "Mantenimiento recomendado",
+            "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo"
+          },
+          {
+            "label": "Sensor de huella",
+            "value": "Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución"
+          },
+          {
+            "label": "Antifalsificación de huella",
+            "value": "El manual indica prevención efectiva de huellas falsas"
+          },
+          {
+            "label": "Contraseña antiespía",
+            "value": "Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta"
+          },
+          {
+            "label": "Verificación dual",
+            "value": "Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir"
+          },
+          {
+            "label": "Administradores",
+            "value": "Hasta 9 administradores, como huella, contraseña o tarjeta"
+          },
+          {
+            "label": "Capacidad total",
+            "value": "Hasta 300 usuarios/credenciales según manual de serie Z"
+          },
+          {
+            "label": "Usuarios normales",
+            "value": "Pueden abrir/cerrar; no administran configuración"
+          },
+          {
+            "label": "Alarmas",
+            "value": "Antipalanca/antirrobo, baja tensión e intentos incorrectos"
+          },
+          {
+            "label": "Bloqueo por error",
+            "value": "Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas"
+          }
+        ],
+        "materials": [],
+        "finish": "",
+        "capacity_notes": [
+          "- Administración local de usuarios y administradores.",
+          "## Intención de uso e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables.",
+          "Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+          "## Seguridad y control de acceso | Función | Detalle | |---|---| | Sensor de huella | Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución | | Antifalsificación de huella | El manual indica prevención efectiva de huellas falsas | | Contraseña antiespía | Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta | | Verificación dual | Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir | | Administradores | Hasta 9 administradores, como huella, contraseña o tarjeta | | Capacidad total | Hasta 300 usuarios/credenciales según manual de serie Z | | Usuarios normales | Pueden abrir/cerrar; no administran configuración | | Alarmas | Antipalanca/antirrobo, baja tensión e intentos incorrectos | | Bloqueo por error | Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas | ## Energía | Campo | Información | |---|---| | Baterías | 4 pilas AA alcalinas de 1,5 V | | Alimentación de emergencia | Puerto externo de 5 V para power bank o fuente equivalente | | Umbral de baja tensión | 4,8 V según manual de serie Z | | Uso tras primer aviso | Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería | | Mantenimiento recomendado | Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo | ## Instalación 1.",
+          "- Administración de hasta 300 usuarios y 9 administradores."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "- Teclado táctil de contraseña digital. - Área de lectura de tarjeta IC. - Botón de timbre. - Lector de huella dactilar integrado en la zona de la manija. - Manija exterior. - Compartimento rectangular frontal inferior del panel exterior: cubierta de acceso para llave mecánica de emergencia (key hole unlock en video tecnico). - Puerto inferior de carga/alimentación de emergencia de 5 V, separado del compartimento de llave cuando se represente con detalle. - Compartimento de baterías en la parte superior del panel interior. - Botón de reinicio dentro del compartimento de la batería. - Manija interior. - Perilla o control de bloqueo interior, según diagramas de la serie Z. - Orificios para tornillos de montaje. - Cuerpo del cerrojo/cerradura. - Eje cuadrado/husillo. - Pernos de montaje. - Tornillos de montaje. - Cable de conexión de datos entre panel exterior e interior. - Tapa de batería. - Resorte de manija, según instrucciones de montaje.",
+        "maintain": [
+          "Teclado táctil de contraseña digital.",
+          "Área de lectura de tarjeta IC.",
+          "Botón de timbre.",
+          "Lector de huella dactilar integrado en la zona de la manija.",
+          "Manija exterior.",
+          "Compartimento rectangular frontal inferior del panel exterior: cubierta de acceso para llave mecánica de emergencia (key hole unlock en video tecnico).",
+          "Puerto inferior de carga/alimentación de emergencia de 5 V, separado del compartimento de llave cuando se represente con detalle.",
+          "Compartimento de baterías en la parte superior del panel interior.",
+          "Botón de reinicio dentro del compartimento de la batería.",
+          "Manija interior.",
+          "Perilla o control de bloqueo interior, según diagramas de la serie Z.",
+          "Orificios para tornillos de montaje.",
+          "Cuerpo del cerrojo/cerradura.",
+          "Eje cuadrado/husillo.",
+          "Pernos de montaje.",
+          "Tornillos de montaje.",
+          "Cable de conexión de datos entre panel exterior e interior.",
+          "Tapa de batería."
+        ],
+        "avoid": [],
+        "main_visual_reference": "",
+        "rules": [
+          "Teclado táctil de contraseña digital.",
+          "Área de lectura de tarjeta IC.",
+          "Botón de timbre.",
+          "Lector de huella dactilar integrado en la zona de la manija.",
+          "Manija exterior.",
+          "Compartimento rectangular frontal inferior del panel exterior: cubierta de acceso para llave mecánica de emergencia (key hole unlock en video tecnico).",
+          "Puerto inferior de carga/alimentación de emergencia de 5 V, separado del compartimento de llave cuando se represente con detalle.",
+          "Compartimento de baterías en la parte superior del panel interior.",
+          "Botón de reinicio dentro del compartimento de la batería.",
+          "Manija interior.",
+          "Perilla o control de bloqueo interior, según diagramas de la serie Z.",
+          "Orificios para tornillos de montaje.",
+          "Cuerpo del cerrojo/cerradura.",
+          "Eje cuadrado/husillo.",
+          "Pernos de montaje.",
+          "Tornillos de montaje.",
+          "Cable de conexión de datos entre panel exterior e interior.",
+          "Tapa de batería.",
+          "Resorte de manija, según instrucciones de montaje."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [
+          "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+          "Seguridad práctica para accesos residenciales y oficinas.",
+          "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+          "Sensor semiconductor de huella con reconocimiento 360 grados.",
+          "Administración de hasta 300 usuarios y 9 administradores.",
+          "Alimentación de emergencia por puerto 5 V.",
+          "Timbre integrado y alertas de baja batería."
+        ],
+        "tables": [],
+        "recommended_language": [],
+        "avoid_terms": [],
+        "priority_callouts": [
+          "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+          "Seguridad práctica para accesos residenciales y oficinas.",
+          "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+          "Sensor semiconductor de huella con reconocimiento 360 grados.",
+          "Administración de hasta 300 usuarios y 9 administradores.",
+          "Alimentación de emergencia por puerto 5 V.",
+          "Timbre integrado y alertas de baja batería."
+        ]
+      },
+      "warnings": {
+        "items": [
+          "- El puerto inferior de 5 V permite alimentación temporal desde power bank cuando las pilas se agotan; no debe mostrarse como el mismo compartimento de llave.",
+          "## Seguridad y control de acceso | Función | Detalle | |---|---| | Sensor de huella | Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución | | Antifalsificación de huella | El manual indica prevención efectiva de huellas falsas | | Contraseña antiespía | Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta | | Verificación dual | Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir | | Administradores | Hasta 9 administradores, como huella, contraseña o tarjeta | | Capacidad total | Hasta 300 usuarios/credenciales según manual de serie Z | | Usuarios normales | Pueden abrir/cerrar; no administran configuración | | Alarmas | Antipalanca/antirrobo, baja tensión e intentos incorrectos | | Bloqueo por error | Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas | ## Energía | Campo | Información | |---|---| | Baterías | 4 pilas AA alcalinas de 1,5 V | | Alimentación de emergencia | Puerto externo de 5 V para power bank o fuente equivalente | | Umbral de baja tensión | 4,8 V según manual de serie Z | | Uso tras primer aviso | Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería | | Mantenimiento recomendado | Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo | ## Instalación 1.",
+          "- En imágenes operativas aprobadas, retirar numerales aislados y evitar texto pequeño dentro de la imagen."
+        ]
+      },
+      "pending_validation": [
+        "Dimensiones físicas exactas de paneles y cuerpo de cerradura.",
+        "Materiales del panel y acabado final comercial.",
+        "Grosor de puerta compatible en mm.",
+        "Tipo exacto de mortaja/cuerpo de cerradura suministrado.",
+        "Si P14 incluye de serie módulo Tuya o si es opcional.",
+        "Si la app opera por Bluetooth, Wi-Fi, gateway o módulo de red.",
+        "Color comercial definitivo para e-Prime P14.",
+        "Certificaciones aplicables al P14 específico, ya que los estándares visibles están en empaque genérico/serie Z.",
+        "Contraseña inicial de fábrica; el manual la menciona, pero no muestra el valor.",
+        "Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada.",
+        "- Para abrir con clave, despertar el teclado, ingresar la clave registrada y confirmar con #.",
+        "- Para PIN con privacidad, se pueden agregar dígitos antes y después de la clave real; la clave correcta debe quedar dentro de la secuencia y confirmarse con #.",
+        "## Configuración y operación local | Acción | Procedimiento documentado | |---|---| | Inicialización | Retirar tapa de batería y mantener presionado SET durante 5 segundos; la voz indica inicialización exitosa | | Activar pantalla / entrar a menú | En estado inicial o normal: despertar pantalla y usar * + # según manual de serie Z | | Tecla * | Volver, salir o borrar | | Tecla # | Confirmar, entrar o repetir indicación de voz | | Agregar administrador | En estado inicial, entrar al menú y presionar 4; permite registrar huella, contraseña o tarjeta | | Agregar usuario | Tras verificar administrador, presionar 1; permite registrar huella, contraseña o tarjeta | | Eliminar usuario | Tras verificar administrador, presionar 2; se elimina por huella, contraseña, tarjeta o número | | Configuración de cerradura | Tras verificar administrador, presionar 3 | | Funciones | Dentro de configuración, 1 para funciones: modo normalmente abierto, verificación dual, alarma antipalanca, modo silencio | | Volumen | Dentro de configuración, 2; 1 sube volumen y 2 baja volumen | | Voz | Dentro de configuración, 3; 1 chino y 2 inglés | | Hora | Dentro de configuración, 4; introducir año, mes, día, hora y minuto | | Restaurar fábrica | Mantener presionado el botón de reinicio/SET durante 5 segundos | ## Vinculación con app Tuya Los videos muestran conexión con aplicación Tuya: 1.",
+        "## Puntos pendientes por confirmar - Dimensiones físicas exactas de paneles y cuerpo de cerradura."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Prime",
+          "BESLOCK e-Prime",
+          "cerradura inteligente",
+          "Cerradura inteligente",
+          "Tuya / Smart Life compatible, según video",
+          "Módulo de red opcional según manual de serie Z; soporte de app sujeto a configuración/version",
+          "Huella dactilar",
+          "Contraseña",
+          "Tarjeta IC",
+          "Llave mecánica",
+          "App Tuya",
+          "Mini-programa WeChat",
+          "Bluetooth"
+        ],
+        "use_cases": [],
+        "target_environment": [
+          "oficinas"
+        ],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "exterior",
+          "huella",
+          "PIN",
+          "tarjeta",
+          "app",
+          "seguridad",
+          "privacidad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-e-prime-p14": {
+          "title": "Perfil de producto: e-Prime P14",
+          "level": 1,
+          "order": 1,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+          "paragraphs": [
+            "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
+            "El material disponible lo presenta como una cerradura tipo \"Smart Lock / Fingerprint Lock\" con panel exterior alargado, manija horizontal, teclado táctil, lector de tarjeta, lector de huella en la zona de la manija, timbre y puerto de alimentación de emergencia. Los videos de demostración muestran el equipo en acabado negro brillante con app Tuya, mientras que los artes de empaque incluidos son genéricos de cerraduras inteligentes/serie Z y deben tratarse como referencia de empaque y posicionamiento, no como ficha definitiva exclusiva del P14."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "identificacion": {
+          "title": "Identificación",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Producto",
+                "value": "Cerradura inteligente"
+              },
+              {
+                "label": "Modelo",
+                "value": "P14"
+              },
+              {
+                "label": "Familia / categoría",
+                "value": "Cerradura inteligente de huella y contraseña"
+              },
+              {
+                "label": "Tipo de operación",
+                "value": "Semiautomática, con manija"
+              },
+              {
+                "label": "Marca observada en video",
+                "value": "NASENTONS"
+              },
+              {
+                "label": "Marca/proyecto de carpeta",
+                "value": "e-Prime"
+              },
+              {
+                "label": "Idiomas documentados",
+                "value": "Manual P14 en español; manual de serie Z en chino; menú de voz chino/inglés según manual de serie Z"
+              },
+              {
+                "label": "App observada",
+                "value": "Tuya / Smart Life compatible, según video"
+              },
+              {
+                "label": "Conectividad",
+                "value": "Módulo de red opcional según manual de serie Z; soporte de app sujeto a configuración/version"
+              }
+            ]
+          ]
+        },
+        "propuesta-de-valor": {
+          "title": "Propuesta de valor",
+          "level": 2,
+          "order": 4,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app.",
+            "Respaldo físico mediante llave mecánica.",
+            "Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías.",
+            "Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real.",
+            "Administración local de usuarios y administradores.",
+            "Alarmas integradas para baja tensión, intentos erróneos y manipulación/apertura forzada.",
+            "Timbre integrado en el panel exterior."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 5,
+          "summary": "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables. Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+          "paragraphs": [
+            "e-Prime se orienta a espacios con flujo más exigente que requieren control ordenado de usuarios y trazabilidad básica de acceso, como oficinas, lugares de trabajo, consultorios, habitaciones de personal o áreas internas con varios responsables. Su combinación de huella, contraseña, tarjeta, llave, app, administradores y usuarios permite operar múltiples credenciales y conservar un marco de gestión más formal que una cerradura doméstica simple.",
+            "Esta intención debe comunicarse como control de acceso práctico para operación diaria y administración local. Si se requiere historial detallado de ingresos, debe validarse contra la app, el módulo de red y la variante comercial final antes de presentarlo como función garantizada."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 6,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Huella dactilar",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Contraseña",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Tarjeta IC",
+                "value": "Confirmado por manual P14, manual serie Z y video de funciones"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por manual P14 y video de funciones"
+              },
+              {
+                "label": "App Tuya",
+                "value": "Confirmado visualmente en videos de demostración/conexión"
+              },
+              {
+                "label": "Mini-programa WeChat",
+                "value": "Mencionado en manual P14/serie Z; puede depender de variante o mercado"
+              },
+              {
+                "label": "Bluetooth",
+                "value": "Icono visible en portada P14; no aparece desarrollado como especificación técnica en el texto"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 7,
+          "summary": "La sección de uso diario debe explicar aperturas y respaldos sin entrar al menú. Para e-Prime, el tecnico confirma apertura con huella, clave/contraseña, tarjeta IC, llave mecánica, app móvil y manija interior.",
+          "paragraphs": [
+            "La sección de uso diario debe explicar aperturas y respaldos sin entrar al menú. Para e-Prime, el tecnico confirma apertura con huella, clave/contraseña, tarjeta IC, llave mecánica, app móvil y manija interior.",
+            "Nota de fuente: este bloque concilia P14 manual.pdf, Z系列半自动说明书.pdf, videos de demostración/conexión y las reglas visuales 2026-05-28 sobre llave frontal y puerto inferior separado."
+          ],
+          "bullets": [
+            "Para abrir con huella, colocar el dedo registrado en el lector de la manija y accionar la manija cuando la cerradura confirme.",
+            "Para abrir con clave, despertar el teclado, ingresar la clave registrada y confirmar con #.",
+            "Para PIN con privacidad, se pueden agregar dígitos antes y después de la clave real; la clave correcta debe quedar dentro de la secuencia y confirmarse con #.",
+            "Para abrir con tarjeta IC, acercar la tarjeta registrada al área de lectura.",
+            "Para abrir desde app, vincular primero la cerradura desde el menú inalámbrico y usar la app compatible definida para la versión comercial.",
+            "El botón de timbre del panel exterior puede usarse para anunciar una visita.",
+            "La llave mecánica está en el compartimento rectangular frontal inferior y debe guardarse fuera del lugar protegido.",
+            "El puerto inferior de 5 V permite alimentación temporal desde power bank cuando las pilas se agotan; no debe mostrarse como el mismo compartimento de llave.",
+            "Cambiar las cuatro pilas AA al primer aviso de baja tensión. El material indica aperturas restantes después del aviso, pero la recomendación debe ser reemplazo inmediato.",
+            "Paso libre, verificación dual, alarma antipalanca y modo silencioso son funciones de ajuste; el uso diario debe referirse a ellas solo como modos previamente configurados."
+          ],
+          "tables": []
+        },
+        "componentes-visibles": {
+          "title": "Componentes visibles",
+          "level": 2,
+          "order": 8,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "panel-exterior": {
+          "title": "Panel exterior",
+          "level": 3,
+          "order": 9,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Teclado táctil de contraseña digital.",
+            "Área de lectura de tarjeta IC.",
+            "Botón de timbre.",
+            "Lector de huella dactilar integrado en la zona de la manija.",
+            "Manija exterior.",
+            "Compartimento rectangular frontal inferior del panel exterior: cubierta de acceso para llave mecánica de emergencia (key hole unlock en video tecnico).",
+            "Puerto inferior de carga/alimentación de emergencia de 5 V, separado del compartimento de llave cuando se represente con detalle."
+          ],
+          "tables": []
+        },
+        "panel-interior": {
+          "title": "Panel interior",
+          "level": 3,
+          "order": 10,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Compartimento de baterías en la parte superior del panel interior.",
+            "Botón de reinicio dentro del compartimento de la batería.",
+            "Manija interior.",
+            "Perilla o control de bloqueo interior, según diagramas de la serie Z.",
+            "Orificios para tornillos de montaje."
+          ],
+          "tables": []
+        },
+        "componentes-de-instalacion": {
+          "title": "Componentes de instalación",
+          "level": 3,
+          "order": 11,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Cuerpo del cerrojo/cerradura.",
+            "Eje cuadrado/husillo.",
+            "Pernos de montaje.",
+            "Tornillos de montaje.",
+            "Cable de conexión de datos entre panel exterior e interior.",
+            "Tapa de batería.",
+            "Resorte de manija, según instrucciones de montaje."
+          ],
+          "tables": []
+        },
+        "seguridad-y-control-de-acceso": {
+          "title": "Seguridad y control de acceso",
+          "level": 2,
+          "order": 12,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Sensor de huella",
+                "value": "Sensor semiconductor avanzado, reconocimiento 360 grados, área amplia de captura y alta resolución"
+              },
+              {
+                "label": "Antifalsificación de huella",
+                "value": "El manual indica prevención efectiva de huellas falsas"
+              },
+              {
+                "label": "Contraseña antiespía",
+                "value": "Permite introducir hasta 12 dígitos irrelevantes antes/después de la contraseña correcta"
+              },
+              {
+                "label": "Verificación dual",
+                "value": "Puede combinar dos credenciales entre huella, contraseña y tarjeta; requiere dos verificaciones para abrir"
+              },
+              {
+                "label": "Administradores",
+                "value": "Hasta 9 administradores, como huella, contraseña o tarjeta"
+              },
+              {
+                "label": "Capacidad total",
+                "value": "Hasta 300 usuarios/credenciales según manual de serie Z"
+              },
+              {
+                "label": "Usuarios normales",
+                "value": "Pueden abrir/cerrar; no administran configuración"
+              },
+              {
+                "label": "Alarmas",
+                "value": "Antipalanca/antirrobo, baja tensión e intentos incorrectos"
+              },
+              {
+                "label": "Bloqueo por error",
+                "value": "Tras 5 intentos incorrectos, el equipo emite alarma y queda inoperable durante 90 segundos; el manual de serie Z también menciona bloqueo de teclado de 3 minutos para exceso de contraseñas erróneas"
+              }
+            ]
+          ]
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 13,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Baterías",
+                "value": "4 pilas AA alcalinas de 1,5 V"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "Puerto externo de 5 V para power bank o fuente equivalente"
+              },
+              {
+                "label": "Umbral de baja tensión",
+                "value": "4,8 V según manual de serie Z"
+              },
+              {
+                "label": "Uso tras primer aviso",
+                "value": "Aproximadamente 100 aperturas restantes, dependiendo de la capacidad de la batería"
+              },
+              {
+                "label": "Mantenimiento recomendado",
+                "value": "Reemplazar baterías al menos cada 6 meses para evitar fugas y daño al equipo"
+              }
+            ]
+          ]
+        },
+        "instalacion": {
+          "title": "Instalación",
+          "level": 2,
+          "order": 14,
+          "summary": "Notas técnicas de instalación:",
+          "paragraphs": [
+            "Notas técnicas de instalación:"
+          ],
+          "bullets": [
+            "La longitud del eje cuadrado que sobresale de la superficie de la puerta debe estar entre 10 y 30 mm.",
+            "Para puertas fuera del rango previsto, se debe solicitar un eje/husillo de longitud personalizada o recortar el existente.",
+            "Si el pasador no se mueve suavemente, se debe reajustar el panel antes de apretar por completo."
+          ],
+          "tables": []
+        },
+        "cambio-de-direccion": {
+          "title": "Cambio de dirección",
+          "level": 2,
+          "order": 15,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "manija": {
+          "title": "Manija",
+          "level": 3,
+          "order": 16,
+          "summary": "Nota del manual P14: no retirar los tornillos del orificio de la manija al cambiar la dirección.",
+          "paragraphs": [
+            "Nota del manual P14: no retirar los tornillos del orificio de la manija al cambiar la dirección."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "cuerpo-de-cerradura-pestillo": {
+          "title": "Cuerpo de cerradura / pestillo",
+          "level": 3,
+          "order": 17,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "configuracion-y-operacion-local": {
+          "title": "Configuración y operación local",
+          "level": 2,
+          "order": 18,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Inicialización",
+                "value": "Retirar tapa de batería y mantener presionado SET durante 5 segundos; la voz indica inicialización exitosa"
+              },
+              {
+                "label": "Activar pantalla / entrar a menú",
+                "value": "En estado inicial o normal: despertar pantalla y usar * + # según manual de serie Z"
+              },
+              {
+                "label": "Tecla *",
+                "value": "Volver, salir o borrar"
+              },
+              {
+                "label": "Tecla #",
+                "value": "Confirmar, entrar o repetir indicación de voz"
+              },
+              {
+                "label": "Agregar administrador",
+                "value": "En estado inicial, entrar al menú y presionar 4; permite registrar huella, contraseña o tarjeta"
+              },
+              {
+                "label": "Agregar usuario",
+                "value": "Tras verificar administrador, presionar 1; permite registrar huella, contraseña o tarjeta"
+              },
+              {
+                "label": "Eliminar usuario",
+                "value": "Tras verificar administrador, presionar 2; se elimina por huella, contraseña, tarjeta o número"
+              },
+              {
+                "label": "Configuración de cerradura",
+                "value": "Tras verificar administrador, presionar 3"
+              },
+              {
+                "label": "Funciones",
+                "value": "Dentro de configuración, 1 para funciones: modo normalmente abierto, verificación dual, alarma antipalanca, modo silencio"
+              },
+              {
+                "label": "Volumen",
+                "value": "Dentro de configuración, 2; 1 sube volumen y 2 baja volumen"
+              },
+              {
+                "label": "Voz",
+                "value": "Dentro de configuración, 3; 1 chino y 2 inglés"
+              },
+              {
+                "label": "Hora",
+                "value": "Dentro de configuración, 4; introducir año, mes, día, hora y minuto"
+              },
+              {
+                "label": "Restaurar fábrica",
+                "value": "Mantener presionado el botón de reinicio/SET durante 5 segundos"
+              }
+            ]
+          ]
+        },
+        "vinculacion-con-app-tuya": {
+          "title": "Vinculación con app Tuya",
+          "level": 2,
+          "order": 19,
+          "summary": "Los videos muestran conexión con aplicación Tuya:",
+          "paragraphs": [
+            "Los videos muestran conexión con aplicación Tuya:",
+            "Esta función puede requerir módulo de red opcional o variante compatible, porque el manual de serie Z indica \"módulo de red opcional\"."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "funciones-demostradas-en-video": {
+          "title": "Funciones demostradas en video",
+          "level": 2,
+          "order": 20,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura por huella dactilar.",
+            "Apertura por tarjeta.",
+            "Apertura por contraseña.",
+            "Apertura con llave mecánica.",
+            "Puerto de carga/alimentación de emergencia.",
+            "Timbre integrado.",
+            "Soporte de aplicación Tuya.",
+            "Procedimiento de conexión a app mediante contraseña de administrador y combinación 2 + 1."
+          ],
+          "tables": []
+        },
+        "empaque-y-presentacion": {
+          "title": "Empaque y presentación",
+          "level": 2,
+          "order": 21,
+          "summary": "Los artes de empaque incluidos no parecen ser exclusivos de P14, sino plantillas o materiales genéricos de cerraduras inteligentes semiautomáticas/serie Z.",
+          "paragraphs": [
+            "Los artes de empaque incluidos no parecen ser exclusivos de P14, sino plantillas o materiales genéricos de cerraduras inteligentes semiautomáticas/serie Z."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "empaque-con-diseno-negro-dorado": {
+          "title": "Empaque con diseño negro/dorado",
+          "level": 3,
+          "order": 22,
+          "summary": "Texto y claims visibles:",
+          "paragraphs": [
+            "Texto y claims visibles:",
+            "Información del panel de selección:"
+          ],
+          "bullets": [
+            "\"SMART LOCKS\"",
+            "\"FINGERPRINT & PASSWORD\"",
+            "\"FINGERPRINT LOCK\"",
+            "Apertura por huella.",
+            "Contraseña antiespía.",
+            "Timbre inteligente.",
+            "Chip inteligente.",
+            "Apertura por tarjeta.",
+            "App remota.",
+            "Navegación por voz.",
+            "Alarma de baja tensión.",
+            "Nombre de producto: cerradura inteligente de huella.",
+            "Colores marcables: bronce rojizo y negro mate.",
+            "Modelos marcables: Z10, Z11, Z12, Z13, Z13-L, Z14, TZ13B, HZ13B, TZ13BF, HZ13BF.",
+            "Estándares impresos: GB21556-2008 (B) y GA374-2019 (A)."
+          ],
+          "tables": []
+        },
+        "troqueles-dimensiones-de-empaque": {
+          "title": "Troqueles/dimensiones de empaque",
+          "level": 3,
+          "order": 23,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Archivo 半自动套盒386x170x86.pdf: el nombre indica caja/tapa semiautomática de 386 x 170 x 86 mm.",
+            "El arte del troquel muestra cotas visibles como 530,5; 170; 86; 386,5, coherentes con un empaque tipo caja alargada.",
+            "Archivo s系列包装彩盒_复制.pdf: troquel de caja serie S/P con cotas visibles 972, 713, 488, 482, 222 y 120 mm en el plano desplegado."
+          ],
+          "tables": []
+        },
+        "mensajes-comerciales-sugeridos": {
+          "title": "Mensajes comerciales sugeridos",
+          "level": 2,
+          "order": 24,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Cerradura inteligente P14 con huella, contraseña, tarjeta, llave y app.",
+            "Seguridad práctica para accesos residenciales y oficinas.",
+            "Contraseña antiespía para mayor privacidad al abrir frente a otras personas.",
+            "Sensor semiconductor de huella con reconocimiento 360 grados.",
+            "Administración de hasta 300 usuarios y 9 administradores.",
+            "Alimentación de emergencia por puerto 5 V.",
+            "Timbre integrado y alertas de baja batería."
+          ],
+          "tables": []
+        },
+        "actualizaciones-oem-y-revision-visual-2026-05-28": {
+          "title": "Actualizaciones OEM y revisión visual 2026-05-28",
+          "level": 2,
+          "order": 25,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "el compartimento rectangular frontal inferior del panel exterior es el acceso de llave mecánica de emergencia (key hole unlock).",
+            "El puerto de alimentación de emergencia de 5 V debe mostrarse como puerto inferior separado, no como función del compartimento rectangular frontal.",
+            "No identificar el compartimento rectangular inferior como tapa de batería, reset, sensor, pieza decorativa, servicio genérico ni puerto de energía.",
+            "Si se necesita detalle, mostrar el mismo compartimento rectangular abierto con cilindro/keyhole visible y conectado con guía al componente real; no inventar un segundo keyhole en la base.",
+            "El compartimento de baterías del panel interior debe ubicarse en la zona superior del panel; no desplazarlo a la parte baja.",
+            "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo de cerradura, montaje de panel exterior con eje cuadrado y cable, y conexión/fijación del panel interior con batería y prueba final.",
+            "En imágenes operativas aprobadas, retirar numerales aislados y evitar texto pequeño dentro de la imagen."
+          ],
+          "tables": []
+        },
+        "puntos-pendientes-por-confirmar": {
+          "title": "Puntos pendientes por confirmar",
+          "level": 2,
+          "order": 26,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Dimensiones físicas exactas de paneles y cuerpo de cerradura.",
+            "Materiales del panel y acabado final comercial.",
+            "Grosor de puerta compatible en mm.",
+            "Tipo exacto de mortaja/cuerpo de cerradura suministrado.",
+            "Si P14 incluye de serie módulo Tuya o si es opcional.",
+            "Si la app opera por Bluetooth, Wi-Fi, gateway o módulo de red.",
+            "Color comercial definitivo para e-Prime P14.",
+            "Certificaciones aplicables al P14 específico, ya que los estándares visibles están en empaque genérico/serie Z.",
+            "Contraseña inicial de fábrica; el manual la menciona, pero no muestra el valor."
+          ],
+          "tables": []
+        },
+        "fuentes-revisadas": {
+          "title": "Fuentes revisadas",
+          "level": 2,
+          "order": 27,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        }
+      }
+    },
     "profile_public": {
       "short_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V.",
       "commercial_description": "e-Prime P14 es una cerradura inteligente de manija, de operación semiautomática, orientada a puertas residenciales, oficinas pequeñas, habitaciones y accesos interiores donde se requiere control de entrada con múltiples credenciales. El producto combina apertura por huella dactilar, contraseña, tarjeta IC, llave mecánica y soporte de aplicación móvil, con funciones de seguridad como contraseña antiespía, alarma de baja batería, alarma por intentos fallidos y suministro de emergencia de 5 V. Acceso sin llave con varias credenciales: huella, contraseña, tarjeta IC y app. Respaldo físico mediante llave mecánica. Operación de emergencia con alimentación externa de 5 V cuando se agotan las baterías. Mayor privacidad al introducir contraseña gracias a la función antiespía, que permite añadir dígitos aleatorios antes y después del código real. Administración local de usuarios y administradores.",
