@@ -20,6 +20,22 @@ defined( 'ABSPATH' ) || exit;
 if ( ! function_exists( 'beslock_cart_get_product_thumbnail_html' ) ) {
     function beslock_cart_get_product_thumbnail_html( WC_Product $product ) {
         $alt = $product->get_name();
+        $image_id = $product->get_image_id();
+
+        if ( $image_id ) {
+            return wp_get_attachment_image(
+                $image_id,
+                'woocommerce_thumbnail',
+                false,
+                array(
+                    'alt'      => $alt,
+                    'loading'  => 'lazy',
+                    'decoding' => 'async',
+                    'class'    => 'attachment-woocommerce_thumbnail size-woocommerce_thumbnail beslock-cart-product__image',
+                )
+            );
+        }
+
         $asset_relative_path = 'assets/images/products/' . sanitize_title( $product->get_slug() ) . '.webp';
         $asset_path = get_stylesheet_directory() . '/' . $asset_relative_path;
 
@@ -31,22 +47,7 @@ if ( ! function_exists( 'beslock_cart_get_product_thumbnail_html' ) ) {
             );
         }
 
-        $image_id = $product->get_image_id();
-
-        if ( $image_id ) {
-            return wp_get_attachment_image(
-                $image_id,
-                'medium',
-                false,
-                array(
-                    'alt'      => $alt,
-                    'loading'  => 'lazy',
-                    'decoding' => 'async',
-                )
-            );
-        }
-
-        return $product->get_image( 'medium' );
+        return $product->get_image( 'woocommerce_thumbnail' );
     }
 }
 

@@ -1766,20 +1766,22 @@ body.single-product a.single_add_to_cart_button .bi {
   transform: translateY(-1px);
 }
 
-.site-footer__payment-logo {
-  display: block;
-  width: auto;
-  height: 1.28rem;
-  max-width: 6.75rem;
-  object-fit: contain;
+.site-footer .site-footer__payment-link img.site-footer__payment-logo {
+  display: block !important;
+  width: auto !important;
+  height: 1.28rem !important;
+  max-width: 6.75rem !important;
+  object-fit: contain !important;
 }
 
-.site-footer__payment-logo--wompi {
-  height: 1.38rem;
+.site-footer .site-footer__payment-link img.site-footer__payment-logo--wompi {
+  height: 1.38rem !important;
+  max-height: 1.38rem !important;
 }
 
-.site-footer__payment-logo--paypal {
-  height: 1.18rem;
+.site-footer .site-footer__payment-link img.site-footer__payment-logo--paypal {
+  height: 1.18rem !important;
+  max-height: 1.18rem !important;
 }
 
 @media (min-width: 821px) {
