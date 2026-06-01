@@ -74,11 +74,16 @@
 
     var department = form.querySelector('#calc_shipping_state');
     var city = form.querySelector('#calc_shipping_city');
+    var localityField = form.querySelector('#calc_shipping_locality_field');
+    var neighborhoodField = form.querySelector('#calc_shipping_neighborhood_field');
     var locality = form.querySelector('#calc_shipping_locality');
-    var neighborhood = form.querySelector('#calc_shipping_neighborhood');
+    var neighborhoodSelect = form.querySelector('#calc_shipping_neighborhood_select');
+    var neighborhoodManual = form.querySelector('#calc_shipping_neighborhood');
     var address = form.querySelector('#calc_shipping_address_1');
+    var areaHelp = form.querySelector('#beslock-shipping-area-help');
+    var isManualNeighborhood = false;
 
-    if (!department || !city || !locality || !neighborhood || !address) return;
+    if (!department || !city || !localityField || !neighborhoodField || !locality || !neighborhoodSelect || !neighborhoodManual || !address) return;
 
     form.dataset.beslockShippingValidation = 'ready';
 
@@ -86,7 +91,7 @@
       var cityLabel = form.querySelector('label[for="calc_shipping_city"]');
       var stateLabel = form.querySelector('label[for="calc_shipping_state"]');
 
-      if (cityLabel) cityLabel.textContent = 'Ciudad / municipio';
+      if (cityLabel) cityLabel.textContent = 'Ciudad / Municipio';
       if (stateLabel) stateLabel.textContent = 'Departamento';
     }
 
@@ -94,10 +99,68 @@
       return field && field.tagName && field.tagName.toLowerCase() === 'select';
     }
 
-    function setOptionAvailability(option, isAvailable) {
-      option.disabled = !isAvailable;
-      option.hidden = !isAvailable;
-      option.style.display = isAvailable ? '' : 'none';
+    function getOriginalOptions(select) {
+      if (!select._beslockOriginalOptions) {
+        select._beslockOriginalOptions = Array.prototype.map.call(select.options, function (option) {
+          return option.cloneNode(true);
+        });
+      }
+
+      return select._beslockOriginalOptions;
+    }
+
+    function resetOptionState(option) {
+      option.disabled = false;
+      option.hidden = false;
+      option.style.display = '';
+      option.selected = false;
+    }
+
+    function replaceSelectOptions(select, sourceOptions, selectedValue) {
+      var fragment = document.createDocumentFragment();
+      var selectedStillAvailable = !selectedValue;
+
+      sourceOptions.forEach(function (sourceOption) {
+        var option = sourceOption.cloneNode(true);
+        resetOptionState(option);
+
+        if (option.value === selectedValue) {
+          selectedStillAvailable = true;
+        }
+
+        fragment.appendChild(option);
+      });
+
+      while (select.firstChild) {
+        select.removeChild(select.firstChild);
+      }
+
+      select.appendChild(fragment);
+      select.value = selectedStillAvailable ? selectedValue : '';
+    }
+
+    function normalizeOptionValue(value) {
+      return String(value || '').trim().toLowerCase();
+    }
+
+    function isPlaceholderValue(value) {
+      var normalizedValue = normalizeOptionValue(value);
+      return !normalizedValue ||
+        normalizedValue === 'no aplica' ||
+        normalizedValue === 'no aplica en mi ciudad' ||
+        normalizedValue === 'no aparece en la lista';
+    }
+
+    function isRealScopedOption(option, scopeAttribute, scopeValue) {
+      return !isPlaceholderValue(option.value) && optionMatchesScope(option, scopeAttribute, scopeValue);
+    }
+
+    function selectHasRealOptions(select, scopeAttribute, scopeValue) {
+      if (!isSelect(select) || !scopeValue) return false;
+
+      return getOriginalOptions(select).some(function (option) {
+        return isRealScopedOption(option, scopeAttribute, scopeValue);
+      });
     }
 
     function optionMatchesScope(option, scopeAttribute, scopeValue) {
@@ -117,57 +180,97 @@
       if (!isSelect(select)) return;
 
       var selectedValue = select.value;
-      var selectedStillAvailable = !selectedValue;
-
-      Array.prototype.forEach.call(select.options, function (option) {
-        var isAvailable = optionMatchesScope(option, scopeAttribute, scopeValue);
-        setOptionAvailability(option, isAvailable);
-
-        if (isAvailable && option.value === selectedValue) {
-          selectedStillAvailable = true;
-        }
+      var availableOptions = getOriginalOptions(select).filter(function (option) {
+        return optionMatchesScope(option, scopeAttribute, scopeValue);
       });
 
+      replaceSelectOptions(select, availableOptions, selectedValue);
       select.disabled = !scopeValue;
-
-      if (!selectedStillAvailable) {
-        select.value = '';
-      }
     }
 
     function filterNeighborhoodSelect() {
-      if (!isSelect(neighborhood)) return;
+      if (!isSelect(neighborhoodSelect)) return;
 
       var cityValue = city.value;
       var areaValue = locality.value;
-      var selectedValue = neighborhood.value;
-      var selectedStillAvailable = !selectedValue;
-
-      Array.prototype.forEach.call(neighborhood.options, function (option) {
+      var selectedValue = neighborhoodSelect.value;
+      var availableOptions = getOriginalOptions(neighborhoodSelect).filter(function (option) {
         var isAvailable = optionMatchesScope(option, 'data-city', cityValue);
 
         if (isAvailable && areaValue) {
           isAvailable = optionMatchesScope(option, 'data-area', areaValue);
         }
 
-        setOptionAvailability(option, isAvailable);
-
-        if (isAvailable && option.value === selectedValue) {
-          selectedStillAvailable = true;
-        }
+        return isAvailable;
       });
 
-      neighborhood.disabled = !cityValue;
+      replaceSelectOptions(neighborhoodSelect, availableOptions, selectedValue);
+      neighborhoodSelect.disabled = !cityValue;
+    }
 
-      if (!selectedStillAvailable) {
-        neighborhood.value = '';
+    function setLocalityVisible(isVisible) {
+      localityField.hidden = !isVisible;
+      locality.disabled = !isVisible || !city.value;
+
+      if (!isVisible) {
+        locality.value = '';
+        locality.setCustomValidity('');
       }
+    }
+
+    function setNeighborhoodMode(isManual) {
+      var label = neighborhoodField.querySelector('label');
+
+      isManualNeighborhood = isManual;
+
+      if (isManual) {
+        if (!neighborhoodManual.value && !isPlaceholderValue(neighborhoodSelect.value)) {
+          neighborhoodManual.value = neighborhoodSelect.value;
+        }
+
+        neighborhoodSelect.disabled = true;
+        neighborhoodSelect.hidden = true;
+        neighborhoodSelect.required = false;
+        neighborhoodSelect.setCustomValidity('');
+
+        neighborhoodManual.disabled = false;
+        neighborhoodManual.hidden = false;
+        neighborhoodManual.required = true;
+
+        if (label) label.setAttribute('for', 'calc_shipping_neighborhood');
+        if (areaHelp) areaHelp.textContent = 'Ingresa el barrio o sector para calcular la entrega.';
+
+        return;
+      }
+
+      neighborhoodManual.disabled = true;
+      neighborhoodManual.hidden = true;
+      neighborhoodManual.required = false;
+      neighborhoodManual.setCustomValidity('');
+
+      neighborhoodSelect.hidden = false;
+      neighborhoodSelect.disabled = !city.value;
+
+      if (label) label.setAttribute('for', 'calc_shipping_neighborhood_select');
+      if (areaHelp) areaHelp.textContent = 'Localidad/Comuna y Barrio son opcionales, pero debes ingresar al menos uno.';
     }
 
     function syncDependentFields() {
       filterSelect(city, 'data-department', department.value);
-      filterSelect(locality, 'data-city', city.value);
-      filterNeighborhoodSelect();
+
+      var cityValue = city.value;
+      var hasLocalityCatalog = selectHasRealOptions(locality, 'data-city', cityValue);
+      var hasNeighborhoodCatalog = selectHasRealOptions(neighborhoodSelect, 'data-city', cityValue);
+
+      setLocalityVisible(!cityValue || hasLocalityCatalog);
+      if (hasLocalityCatalog) {
+        filterSelect(locality, 'data-city', cityValue);
+      }
+
+      setNeighborhoodMode(Boolean(cityValue) && !hasNeighborhoodCatalog);
+      if (!isManualNeighborhood) {
+        filterNeighborhoodSelect();
+      }
 
       validateDepartment();
       validateCity();
@@ -175,11 +278,21 @@
     }
 
     function validateArea() {
-      var hasArea = locality.value.trim() || neighborhood.value.trim();
-      var message = hasArea ? '' : 'Ingresa una localidad/comuna o un barrio.';
+      var localityValue = localityField.hidden ? '' : locality.value.trim();
+      var neighborhoodValue = isManualNeighborhood ? neighborhoodManual.value.trim() : neighborhoodSelect.value.trim();
+      var cleanLocality = isPlaceholderValue(localityValue) ? '' : localityValue;
+      var cleanNeighborhood = isPlaceholderValue(neighborhoodValue) ? '' : neighborhoodValue;
+      var message = '';
 
-      locality.setCustomValidity(message);
-      neighborhood.setCustomValidity(message);
+      if (isManualNeighborhood && !cleanNeighborhood) {
+        message = 'Ingresa el barrio o sector.';
+      } else if (!isManualNeighborhood && !cleanLocality && !cleanNeighborhood) {
+        message = 'Ingresa una localidad/comuna o un barrio.';
+      }
+
+      locality.setCustomValidity(localityField.hidden || isManualNeighborhood ? '' : message);
+      neighborhoodSelect.setCustomValidity(isManualNeighborhood ? '' : message);
+      neighborhoodManual.setCustomValidity(isManualNeighborhood ? message : '');
     }
 
     function validateDepartment() {
@@ -188,7 +301,7 @@
     }
 
     function validateCity() {
-      var message = city.value.trim() ? '' : 'Selecciona la ciudad/municipio.';
+      var message = city.value.trim() ? '' : 'Selecciona la Ciudad/Municipio.';
       city.setCustomValidity(message);
     }
 
@@ -197,12 +310,25 @@
       address.setCustomValidity(message);
     }
 
+    function keepAddressTypingInsideField(event) {
+      var isSpace = event.key === ' ' || event.code === 'Space' || event.keyCode === 32;
+
+      if (isSpace) {
+        event.stopPropagation();
+      }
+    }
+
     ['input', 'change'].forEach(function (eventName) {
       department.addEventListener(eventName, syncDependentFields);
       city.addEventListener(eventName, syncDependentFields);
       locality.addEventListener(eventName, syncDependentFields);
-      neighborhood.addEventListener(eventName, validateArea);
+      neighborhoodSelect.addEventListener(eventName, validateArea);
+      neighborhoodManual.addEventListener(eventName, validateArea);
       address.addEventListener(eventName, validateAddress);
+    });
+
+    ['keydown', 'keypress', 'keyup'].forEach(function (eventName) {
+      address.addEventListener(eventName, keepAddressTypingInsideField, true);
     });
 
     form.addEventListener('submit', function () {

@@ -222,6 +222,30 @@ function beslock_get_shipping_neighborhood_area_options() {
   );
 }
 
+function beslock_shipping_city_has_locality_options( $city ) {
+  $city         = trim( (string) $city );
+  $area_options = beslock_get_shipping_area_options();
+
+  return '' !== $city && ! empty( $area_options[ $city ] ) && is_array( $area_options[ $city ] );
+}
+
+function beslock_shipping_city_has_neighborhood_options( $city ) {
+  $city         = trim( (string) $city );
+  $area_options = beslock_get_shipping_neighborhood_area_options();
+
+  if ( '' === $city || empty( $area_options[ $city ] ) || ! is_array( $area_options[ $city ] ) ) {
+    return false;
+  }
+
+  foreach ( $area_options[ $city ] as $neighborhoods ) {
+    if ( ! empty( $neighborhoods ) && is_array( $neighborhoods ) ) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function beslock_shipping_neighborhood_matches_area( $city, $locality, $neighborhood ) {
   if ( '' === $locality || '' === $neighborhood ) {
     return true;
@@ -373,7 +397,7 @@ function beslock_format_cart_shipping_destination( $destination = array() ) {
 
 add_filter( 'woocommerce_get_country_locale', function( $locale ) {
   if ( isset( $locale['CO']['city'] ) ) {
-    $locale['CO']['city']['label'] = __( 'Ciudad / municipio', 'beslock-custom' );
+    $locale['CO']['city']['label'] = __( 'Ciudad / Municipio', 'beslock-custom' );
   }
 
   if ( isset( $locale['CO']['state'] ) ) {
@@ -413,10 +437,18 @@ add_filter( 'woocommerce_cart_calculate_shipping_address', function( $address ) 
   }
 
   if ( empty( $address['city'] ) ) {
-    throw new Exception( __( 'Selecciona la ciudad o municipio para calcular la entrega.', 'beslock-custom' ) );
+    throw new Exception( __( 'Selecciona la Ciudad/Municipio para calcular la entrega.', 'beslock-custom' ) );
   }
 
-  if ( '' === $locality && '' === $neighborhood ) {
+  $clean_locality     = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $locality ) : $locality;
+  $clean_neighborhood = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $neighborhood ) : $neighborhood;
+  $has_catalog        = function_exists( 'beslock_shipping_city_has_neighborhood_options' ) && beslock_shipping_city_has_neighborhood_options( $address['city'] );
+
+  if ( ! $has_catalog && '' === $clean_neighborhood ) {
+    throw new Exception( __( 'Ingresa el barrio o sector para calcular la entrega.', 'beslock-custom' ) );
+  }
+
+  if ( $has_catalog && '' === $clean_locality && '' === $clean_neighborhood ) {
     throw new Exception( __( 'Selecciona una localidad/comuna o ingresa un barrio para calcular la entrega.', 'beslock-custom' ) );
   }
 
