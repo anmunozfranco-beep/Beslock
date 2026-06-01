@@ -817,7 +817,7 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   color: #4d5b54;
   font-size: clamp(1.04rem, 1.16vw, 1.12rem);
   line-height: 1.64;
-  text-align: justify;
+  text-align: left;
   text-align-last: left;
   text-wrap: pretty;
   hyphens: none;
@@ -836,7 +836,7 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   color: #37433c;
   font-size: clamp(1.02rem, 1.12vw, 1.1rem);
   line-height: 1.7;
-  text-align: justify;
+  text-align: left;
   text-align-last: left;
   text-wrap: pretty;
   hyphens: none;
@@ -1012,7 +1012,13 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   }
 
   .manuals-block__copy p {
-    text-align: justify;
+    text-align: left;
+    text-align-last: left;
+  }
+
+  .manuals-block__copy ol,
+  .manuals-block__copy ul {
+    text-align: left;
     text-align-last: left;
   }
 

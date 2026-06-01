@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
         <?php if ( apply_filters( 'woocommerce_shipping_calculator_enable_city', true ) ) : ?>
             <p class="form-row form-row-wide" id="calc_shipping_city_field">
-                <label for="calc_shipping_city"><?php esc_html_e( 'Ciudad / municipio', 'beslock-custom' ); ?></label>
+                <label for="calc_shipping_city"><?php esc_html_e( 'Ciudad / Municipio', 'beslock-custom' ); ?></label>
                 <?php $current_city = WC()->customer->get_shipping_city(); ?>
                 <select
                     name="calc_shipping_city"
@@ -82,7 +82,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
                     data-current-value="<?php echo esc_attr( $current_city ); ?>"
                     required
                 >
-                    <option value=""><?php esc_html_e( 'Selecciona ciudad / municipio', 'beslock-custom' ); ?></option>
+                    <option value=""><?php esc_html_e( 'Selecciona Ciudad / Municipio', 'beslock-custom' ); ?></option>
                     <?php
                     $city_option_values = array();
                     foreach ( $shipping_city_options as $department_code => $city_options ) :
@@ -138,10 +138,10 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
         </p>
 
         <p class="form-row form-row-wide" id="calc_shipping_neighborhood_field">
-            <label for="calc_shipping_neighborhood"><?php esc_html_e( 'Barrio', 'beslock-custom' ); ?></label>
+            <label for="calc_shipping_neighborhood_select"><?php esc_html_e( 'Barrio', 'beslock-custom' ); ?></label>
             <select
                 name="calc_shipping_neighborhood"
-                id="calc_shipping_neighborhood"
+                id="calc_shipping_neighborhood_select"
                 class="beslock-shipping-neighborhood-select"
                 data-current-value="<?php echo esc_attr( $shipping_neighborhood ); ?>"
                 aria-describedby="beslock-shipping-area-help"
@@ -199,25 +199,38 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
                     <option value="<?php echo esc_attr( $shipping_neighborhood ); ?>" data-city="<?php echo esc_attr( $current_city ); ?>" data-area="<?php echo esc_attr( $shipping_locality ); ?>" selected><?php echo esc_html( $shipping_neighborhood ); ?></option>
                 <?php endif; ?>
             </select>
+            <input
+                type="text"
+                name="calc_shipping_neighborhood"
+                id="calc_shipping_neighborhood"
+                class="input-text beslock-shipping-neighborhood-manual"
+                value="<?php echo esc_attr( $shipping_neighborhood ); ?>"
+                placeholder="<?php esc_attr_e( 'Escribe barrio o sector', 'beslock-custom' ); ?>"
+                autocomplete="shipping address-level4"
+                aria-describedby="beslock-shipping-area-help"
+                disabled
+                hidden
+            />
             <span id="beslock-shipping-area-help" class="beslock-cart-field-help"><?php esc_html_e( 'Localidad/Comuna y Barrio son opcionales, pero debes ingresar al menos uno.', 'beslock-custom' ); ?></span>
         </p>
 
         <p class="form-row form-row-wide" id="calc_shipping_address_1_field">
             <label for="calc_shipping_address_1"><?php esc_html_e( 'Dirección completa', 'beslock-custom' ); ?></label>
-            <textarea
+            <input
+                type="text"
                 class="input-text"
                 name="calc_shipping_address_1"
                 id="calc_shipping_address_1"
+                value="<?php echo esc_attr( $shipping_address_1 ); ?>"
                 placeholder="<?php esc_attr_e( 'Calle/carrera, número, torre, apto o interior', 'beslock-custom' ); ?>"
                 autocomplete="shipping address-line1"
-                rows="2"
                 required
-            ><?php echo esc_textarea( $shipping_address_1 ); ?></textarea>
+            />
         </p>
 
         <input type="hidden" name="calc_shipping_postcode" id="calc_shipping_postcode" value="<?php echo esc_attr( WC()->customer->get_shipping_postcode() ); ?>" />
 
-        <p><button type="submit" name="calc_shipping" value="1" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Actualizar entrega', 'beslock-custom' ); ?></button></p>
+        <p><button type="submit" name="calc_shipping" value="1" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Actualizar dirección', 'beslock-custom' ); ?></button></p>
         <?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>
     </section>
 </form>
