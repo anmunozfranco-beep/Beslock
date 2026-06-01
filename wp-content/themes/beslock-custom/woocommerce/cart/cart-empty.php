@@ -22,7 +22,7 @@ do_action( 'woocommerce_cart_is_empty' );
 
 ?>
 
-<div class="beslock-cart beslock-cart--empty beslock-cart--offset">
+<div class="beslock-cart beslock-cart--empty beslock-cart--offset wc-empty-cart-message">
     <div class="beslock-cart__container">
 
         <h2 class="beslock-cart__empty-title">

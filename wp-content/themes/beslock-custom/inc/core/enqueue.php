@@ -114,6 +114,40 @@ add_action( 'wp_enqueue_scripts', function() {
     true
   );
 
+  $add_to_cart_feedback_css = $theme_dir_path . '/assets/css/add-to-cart-feedback.css';
+  if ( file_exists( $add_to_cart_feedback_css ) ) {
+    wp_enqueue_style(
+      'beslock-add-to-cart-feedback',
+      $theme_dir_uri . '/assets/css/add-to-cart-feedback.css',
+      array( 'beslock-main-style', 'beslock-header-component' ),
+      filemtime( $add_to_cart_feedback_css )
+    );
+  }
+
+  $add_to_cart_feedback_js = $theme_dir_path . '/assets/js/add-to-cart-feedback.js';
+  if ( file_exists( $add_to_cart_feedback_js ) ) {
+    wp_enqueue_script(
+      'beslock-add-to-cart-feedback',
+      $theme_dir_uri . '/assets/js/add-to-cart-feedback.js',
+      array( 'jquery', 'wc-add-to-cart' ),
+      filemtime( $add_to_cart_feedback_js ),
+      true
+    );
+
+    wp_add_inline_script(
+      'beslock-add-to-cart-feedback',
+      'window.BESLOCK_ADD_TO_CART = ' . wp_json_encode(
+        array(
+          'cartUrl'            => function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/carrito/' ),
+          'wcAjaxUrl'          => class_exists( 'WC_AJAX' ) ? WC_AJAX::get_endpoint( '%%endpoint%%' ) : '',
+          'isCart'             => function_exists( 'is_cart' ) && is_cart(),
+          'defaultProductName' => __( 'Producto', 'beslock-custom' ),
+        )
+      ) . ';',
+      'before'
+    );
+  }
+
   $hero_telemetry_config = array(
     'enabled'  => (bool) apply_filters( 'beslock_hero_startup_telemetry_enabled', false ),
     'endpoint' => esc_url_raw( rest_url( 'beslock/v1/hero-startup' ) ),
@@ -464,6 +498,100 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_style( 'beslock-wc-scope-fix', get_stylesheet_directory_uri() . '/assets/css/wc-scope-fix.css', [ 'beslock-main-style' ], filemtime( $css_file ) );
   }
 }, 20 );
+
+add_action( 'wp_enqueue_scripts', function() {
+  if ( ! function_exists( 'is_cart' ) || ! is_cart() ) {
+    return;
+  }
+
+  $theme_dir_path = get_stylesheet_directory();
+  $theme_dir_uri  = get_stylesheet_directory_uri();
+
+  $cart_css = $theme_dir_path . '/assets/css/beslock-cart.css';
+  if ( file_exists( $cart_css ) ) {
+    wp_enqueue_style(
+      'beslock-cart',
+      $theme_dir_uri . '/assets/css/beslock-cart.css',
+      [ 'beslock-main-style', 'beslock-wc-scope-fix' ],
+      filemtime( $cart_css )
+    );
+  }
+
+  $cart_js = $theme_dir_path . '/assets/js/cart-quantity-controls.js';
+  if ( file_exists( $cart_js ) ) {
+    wp_enqueue_script(
+      'beslock-cart-quantity-controls',
+      $theme_dir_uri . '/assets/js/cart-quantity-controls.js',
+      [],
+      filemtime( $cart_js ),
+      true
+    );
+  }
+}, 30 );
+
+add_action( 'wp_enqueue_scripts', function() {
+  if ( ! function_exists( 'is_checkout' ) || ! is_checkout() ) {
+    return;
+  }
+
+  if ( function_exists( 'is_order_received_page' ) && is_order_received_page() ) {
+    return;
+  }
+
+  $theme_dir_path = get_stylesheet_directory();
+  $theme_dir_uri  = get_stylesheet_directory_uri();
+
+  $checkout_css = $theme_dir_path . '/assets/css/beslock-checkout.css';
+  if ( file_exists( $checkout_css ) ) {
+    wp_enqueue_style(
+      'beslock-checkout',
+      $theme_dir_uri . '/assets/css/beslock-checkout.css',
+      [ 'beslock-main-style', 'beslock-wc-scope-fix' ],
+      filemtime( $checkout_css )
+    );
+  }
+
+  $checkout_js = $theme_dir_path . '/assets/js/beslock-checkout.js';
+  if ( file_exists( $checkout_js ) ) {
+    wp_enqueue_script(
+      'beslock-checkout',
+      $theme_dir_uri . '/assets/js/beslock-checkout.js',
+      [],
+      filemtime( $checkout_js ),
+      true
+    );
+
+    $shipping_destination = function_exists( 'beslock_format_cart_shipping_destination' ) ? beslock_format_cart_shipping_destination() : '';
+    $customer             = function_exists( 'WC' ) && WC()->customer ? WC()->customer : null;
+
+    wp_add_inline_script(
+      'beslock-checkout',
+      'window.BESLOCK_CHECKOUT = ' . wp_json_encode(
+        array(
+          'cartUrl'             => function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/carrito/' ),
+          'shippingDestination' => $shipping_destination,
+          'contact'             => array(
+            'firstName' => $customer ? $customer->get_shipping_first_name() : '',
+            'lastName'  => $customer ? $customer->get_shipping_last_name() : '',
+            'email'     => $customer ? $customer->get_billing_email() : '',
+          ),
+          'labels'              => array(
+            'contactTitle'     => __( 'Datos de contacto', 'beslock-custom' ),
+            'firstName'        => __( 'Nombre', 'beslock-custom' ),
+            'lastName'         => __( 'Apellido', 'beslock-custom' ),
+            'email'            => __( 'Correo electrónico', 'beslock-custom' ),
+            'orderNote'        => __( 'Añadir una nota a tu pedido', 'beslock-custom' ),
+            'orderNoteHelp'    => __( 'Puedes contarnos detalles de entrega, instalación o coordinación.', 'beslock-custom' ),
+            'shippingTitle'    => __( 'Datos de envío', 'beslock-custom' ),
+            'shippingFallback' => __( 'La entrega se tomará de la dirección confirmada en el carrito.', 'beslock-custom' ),
+            'editShipping'     => __( 'Editar en carrito', 'beslock-custom' ),
+          ),
+        )
+      ) . ';',
+      'before'
+    );
+  }
+}, 31 );
 
 // Dequeue Kadence styles late to allow parent enqueues first
 add_action( 'wp_enqueue_scripts', function() {

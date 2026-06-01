@@ -36,9 +36,13 @@ if ( class_exists( 'WooCommerce' ) && WC()->cart ) {
       aria-label="<?php esc_attr_e( 'Go to cart', 'beslock' ); ?>"
     >
       <i class="bi bi-cart" aria-hidden="true"></i>
-      <?php if ( $cart_count > 0 ) : ?>
-        <span class="header__cart-count" aria-hidden="true"><?php echo esc_html( $cart_count ); ?></span>
-      <?php endif; ?>
+      <?php
+      if ( function_exists( 'beslock_render_header_cart_count' ) ) {
+        echo beslock_render_header_cart_count( $cart_count ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+      } elseif ( $cart_count > 0 ) {
+        echo '<span class="header__cart-count" aria-hidden="true">' . esc_html( $cart_count ) . '</span>';
+      }
+      ?>
     </a>
   </div>
 </header>
