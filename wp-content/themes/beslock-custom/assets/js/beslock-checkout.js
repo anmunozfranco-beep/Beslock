@@ -19,7 +19,15 @@
       'input[id*="email"]',
       'input[name*="email"]'
     ],
+    phone: [
+      'input[type="tel"]',
+      'input[autocomplete="tel"]',
+      'input[id*="phone"]',
+      'input[name*="phone"]'
+    ],
     orderNote: [
+      '#order-notes textarea.wc-block-components-textarea',
+      'textarea.wc-block-components-textarea',
       'textarea[id*="order"]',
       'textarea[name*="order"]',
       'textarea[id*="note"]',
@@ -40,12 +48,20 @@
     "Free shipping": "Envío gratis",
     "Free Shipping": "Envío gratis",
     "Phone (optional)": "Teléfono (opcional)",
+    "Phone": "Celular",
     "Postcode (optional)": "Código postal (opcional)",
     "Place Order": "Confirmar pedido",
     "Place order": "Confirmar pedido",
     "There are no payment methods available. Please contact us for help placing your order.": "Estamos preparando las opciones de pago para tu ubicación. Escríbenos y finalizamos tu pedido contigo."
   };
   var touchedFields = {};
+  var alternateContactKeys = [
+    "alternateFirstName",
+    "alternateLastName",
+    "alternatePhone",
+    "alternateEmail"
+  ];
+  var alternateContactMarker = "[Contacto alterno de envío]";
 
   function normalizeText(value) {
     return String(value || "").replace(/\s+/g, " ").trim();
@@ -105,13 +121,16 @@
   function getNativeField(key) {
     var selectors = nativeSelectors[key] || [];
     var index;
-    var field;
+    var fields;
+    var fieldIndex;
 
     for (index = 0; index < selectors.length; index += 1) {
-      field = document.querySelector(selectors[index]);
+      fields = document.querySelectorAll(selectors[index]);
 
-      if (field) {
-        return field;
+      for (fieldIndex = 0; fieldIndex < fields.length; fieldIndex += 1) {
+        if (!fields[fieldIndex].hasAttribute("data-beslock-checkout-field")) {
+          return fields[fieldIndex];
+        }
       }
     }
 
@@ -138,8 +157,24 @@
     field.dispatchEvent(new Event("change", { bubbles: true }));
   }
 
-  function syncNativeField(key, value) {
+  function revealNativeOrderNoteField() {
+    var checkbox = document.querySelector('#order-notes input[type="checkbox"]');
+
+    if (checkbox && !checkbox.checked) {
+      checkbox.click();
+    }
+  }
+
+  function syncNativeField(key, value, retryCount) {
     var field = getNativeField(key);
+
+    if (!field && key === "orderNote" && value && !retryCount) {
+      revealNativeOrderNoteField();
+      window.setTimeout(function () {
+        syncNativeField(key, value, 1);
+      }, 80);
+      return;
+    }
 
     if (!field || field.value === value) {
       return;
@@ -148,7 +183,65 @@
     setNativeValue(field, value);
   }
 
-  function createField(key, label, type) {
+  function getCustomFieldValue(key) {
+    var field = document.querySelector('[data-beslock-checkout-field="' + key + '"]');
+
+    return field ? field.value.trim() : "";
+  }
+
+  function stripAlternateContactNote(value) {
+    var note = String(value || "");
+    var markerIndex = note.indexOf(alternateContactMarker);
+
+    if (markerIndex < 0) {
+      return note;
+    }
+
+    return note.slice(0, markerIndex).trim();
+  }
+
+  function buildAlternateContactNote() {
+    var firstName = getCustomFieldValue("alternateFirstName");
+    var lastName = getCustomFieldValue("alternateLastName");
+    var phone = getCustomFieldValue("alternatePhone");
+    var email = getCustomFieldValue("alternateEmail");
+    var fullName = [firstName, lastName].filter(Boolean).join(" ");
+    var lines = [];
+
+    if (!fullName && !phone && !email) {
+      return "";
+    }
+
+    lines.push(alternateContactMarker);
+
+    if (fullName) {
+      lines.push("Nombre: " + fullName);
+    }
+
+    if (phone) {
+      lines.push("Celular: " + phone);
+    }
+
+    if (email) {
+      lines.push("Correo: " + email);
+    }
+
+    return lines.join("\n");
+  }
+
+  function syncOrderNoteToNative() {
+    var note = stripAlternateContactNote(getCustomFieldValue("orderNote"));
+    var alternateContactNote = buildAlternateContactNote();
+
+    if (alternateContactNote) {
+      note = note ? note + "\n\n" + alternateContactNote : alternateContactNote;
+    }
+
+    syncNativeField("orderNote", note);
+  }
+
+  function createField(key, label, type, options) {
+    var fieldOptions = options || {};
     var wrapper = document.createElement("label");
     wrapper.className = "beslock-checkout-contact__field beslock-checkout-contact__field--" + key;
 
@@ -167,12 +260,30 @@
       input.type = type || "text";
     }
 
-    if (key !== "orderNote") {
+    if (fieldOptions.autocomplete) {
+      input.autocomplete = fieldOptions.autocomplete;
+    }
+
+    if (fieldOptions.inputMode) {
+      input.inputMode = fieldOptions.inputMode;
+    }
+
+    if (fieldOptions.placeholder) {
+      input.placeholder = fieldOptions.placeholder;
+    }
+
+    if (fieldOptions.required) {
       input.required = true;
     }
 
     input.addEventListener("input", function () {
       touchedFields[key] = true;
+
+      if (key === "orderNote" || alternateContactKeys.indexOf(key) !== -1) {
+        syncOrderNoteToNative();
+        return;
+      }
+
       syncNativeField(key, input.value);
     });
 
@@ -180,6 +291,44 @@
     wrapper.appendChild(input);
 
     return wrapper;
+  }
+
+  function createAlternateContact(labels) {
+    var details = document.createElement("details");
+    details.className = "beslock-checkout-alt-contact";
+
+    var summary = document.createElement("summary");
+    summary.className = "beslock-checkout-alt-contact__summary";
+
+    var summaryText = document.createElement("span");
+    summaryText.className = "beslock-checkout-alt-contact__summary-text";
+    summaryText.textContent = labels.alternateContactTitle || "Añadir otro contacto para el envío";
+
+    var summaryHint = document.createElement("span");
+    summaryHint.className = "beslock-checkout-alt-contact__summary-hint";
+    summaryHint.textContent = labels.optionalLabel || "Opcional";
+
+    summary.appendChild(summaryText);
+    summary.appendChild(summaryHint);
+
+    var help = document.createElement("p");
+    help.className = "beslock-checkout-alt-contact__help";
+    help.textContent = labels.alternateContactHelp || "Úsalo si otra persona recibirá o coordinará la entrega.";
+
+    var fields = document.createElement("div");
+    fields.className = "beslock-checkout-contact__fields beslock-checkout-alt-contact__fields";
+    fields.appendChild(createField("alternateFirstName", labels.firstName || "Nombre", "text", { autocomplete: "off" }));
+    fields.appendChild(createField("alternateLastName", labels.lastName || "Apellido", "text", { autocomplete: "off" }));
+    fields.appendChild(createField("alternatePhone", labels.phone || "Celular", "tel", { autocomplete: "off", inputMode: "tel" }));
+    fields.appendChild(createField("alternateEmail", labels.email || "Correo electrónico", "email", { autocomplete: "off" }));
+
+    details.appendChild(summary);
+    details.appendChild(help);
+    details.appendChild(fields);
+
+    details.addEventListener("toggle", syncOrderNoteToNative);
+
+    return details;
   }
 
   function ensureCheckoutDetails() {
@@ -218,9 +367,10 @@
 
     var fields = document.createElement("div");
     fields.className = "beslock-checkout-contact__fields";
-    fields.appendChild(createField("firstName", labels.firstName || "Nombre", "text"));
-    fields.appendChild(createField("lastName", labels.lastName || "Apellido", "text"));
-    fields.appendChild(createField("email", labels.email || "Correo electrónico", "email"));
+    fields.appendChild(createField("firstName", labels.firstName || "Nombre", "text", { required: true, autocomplete: "given-name" }));
+    fields.appendChild(createField("lastName", labels.lastName || "Apellido", "text", { required: true, autocomplete: "family-name" }));
+    fields.appendChild(createField("phone", labels.phone || "Celular", "tel", { required: true, autocomplete: "tel", inputMode: "tel" }));
+    fields.appendChild(createField("email", labels.email || "Correo electrónico", "email", { required: true, autocomplete: "email" }));
 
     var noteField = createField("orderNote", labels.orderNote || "Añadir una nota a tu pedido", "textarea");
     noteField.classList.add("beslock-checkout-contact__field--full");
@@ -233,6 +383,7 @@
 
     contact.appendChild(title);
     contact.appendChild(fields);
+    contact.appendChild(createAlternateContact(labels));
 
     shipping = document.createElement("aside");
     shipping.className = "beslock-checkout-shipping-summary";
@@ -274,8 +425,9 @@
     var values = {
       firstName: getNativeValue("firstName") || (config.contact && config.contact.firstName) || "",
       lastName: getNativeValue("lastName") || (config.contact && config.contact.lastName) || "",
+      phone: getNativeValue("phone") || (config.contact && config.contact.phone) || "",
       email: getNativeValue("email") || (config.contact && config.contact.email) || "",
-      orderNote: getNativeValue("orderNote") || ""
+      orderNote: stripAlternateContactNote(getNativeValue("orderNote")) || ""
     };
 
     Object.keys(values).forEach(function (key) {
@@ -286,7 +438,11 @@
       }
 
       if (customField && customField.value) {
-        syncNativeField(key, customField.value);
+        if (key === "orderNote") {
+          syncOrderNoteToNative();
+        } else {
+          syncNativeField(key, customField.value);
+        }
       }
     });
   }

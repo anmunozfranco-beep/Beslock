@@ -222,7 +222,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                                         </details>
                                     <?php } ?>
 
-                                    <button type="submit" class="button beslock-cart__update<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Actualizar carrito', 'beslock-custom' ); ?></button>
+                                    <span class="beslock-cart__update-status" aria-live="polite"><?php esc_html_e( 'Carrito actualizado', 'beslock-custom' ); ?></span>
+                                    <button type="submit" class="button beslock-cart__update<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>" disabled hidden><?php esc_html_e( 'Actualizar carrito', 'beslock-custom' ); ?></button>
 
                                     <?php do_action( 'woocommerce_cart_actions' ); ?>
 
