@@ -5,14 +5,118 @@
 // la sincronizaci���n de la variable CSS del logo (para que el footer calcule 40%),
 // y la llamada a wp_footer() seguida de los cierres </body></html>.
 ?>
-<footer class="site-footer">
-  <div class="u-container" style="padding:2rem 0; text-align:center;">
-    <img
-      class="footer-logo"
-      src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-white.png' ); ?>"
-      alt="<?php echo esc_attr_x( 'Beslock logo blanco', 'alt text', 'beslock' ); ?>"
-      loading="lazy"
-    />
+<footer class="site-footer" aria-label="<?php echo esc_attr_x( 'Pie de página BESLOCK', 'footer landmark', 'beslock' ); ?>">
+  <div class="site-footer__inner">
+    <div class="site-footer__grid">
+      <section class="site-footer__brand" aria-label="<?php echo esc_attr_x( 'BESLOCK', 'footer brand section', 'beslock' ); ?>">
+        <a class="site-footer__logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr_x( 'Volver al inicio', 'footer home link', 'beslock' ); ?>">
+          <span class="site-footer__logo-mark">
+            <img
+              class="footer-logo"
+              src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>"
+              alt="<?php echo esc_attr_x( 'BESLOCK', 'alt text', 'beslock' ); ?>"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="site-footer__registered" aria-hidden="true">&#174;</span>
+          </span>
+        </a>
+        <p class="site-footer__brand-copy">
+          Seguridad inteligente para hogares, oficinas y accesos exteriores.
+        </p>
+
+        <div class="site-footer__payments" aria-label="<?php echo esc_attr_x( 'Pagos seguros', 'footer payments label', 'beslock' ); ?>">
+          <span class="site-footer__payments-label">Pagos seguros mediante</span>
+          <div class="site-footer__payment-logos">
+            <a class="site-footer__payment-link" href="https://wompi.co/" target="_blank" rel="noopener noreferrer" aria-label="Wompi">
+              <img
+                class="site-footer__payment-logo site-footer__payment-logo--wompi"
+                src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/payment/wompi.svg' ); ?>"
+                alt="Wompi"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a class="site-footer__payment-link" href="https://paypal.com/" target="_blank" rel="noopener noreferrer" aria-label="PayPal">
+              <img
+                class="site-footer__payment-logo site-footer__payment-logo--paypal"
+                src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/payment/paypal.png' ); ?>"
+                alt="PayPal"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <nav class="site-footer__nav" aria-label="<?php echo esc_attr_x( 'Centro de ayuda', 'footer nav label', 'beslock' ); ?>">
+        <h2 class="site-footer__heading">Centro de ayuda</h2>
+        <ul class="site-footer__list">
+          <li><a href="<?php echo esc_url( home_url( '/consulta-pedido/' ) ); ?>">Consulta tu pedido</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Guías BESLOCK</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav site-footer__nav--products" aria-label="<?php echo esc_attr_x( 'Productos', 'footer nav label', 'beslock' ); ?>">
+        <h2 class="site-footer__heading">Productos</h2>
+        <ul class="site-footer__list site-footer__list--products">
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-shield/' ) ); ?>">
+              <span class="site-footer__product-name">e-Shield</span>
+              <span class="site-footer__product-note">Exterior robusto.</span>
+            </a>
+          </li>
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-orbit/' ) ); ?>">
+              <span class="site-footer__product-name">e-Orbit</span>
+              <span class="site-footer__product-note">Experiencia avanzada.</span>
+            </a>
+          </li>
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-prime/' ) ); ?>">
+              <span class="site-footer__product-name">e-Prime</span>
+              <span class="site-footer__product-note">Control elegante.</span>
+            </a>
+          </li>
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-flex/' ) ); ?>">
+              <span class="site-footer__product-name">e-Flex</span>
+              <span class="site-footer__product-note">Acceso flexible.</span>
+            </a>
+          </li>
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-touch/' ) ); ?>">
+              <span class="site-footer__product-name">e-Touch</span>
+              <span class="site-footer__product-note">Privacidad interior.</span>
+            </a>
+          </li>
+          <li class="site-footer__product-item">
+            <a class="site-footer__product-link" href="<?php echo esc_url( home_url( '/producto/e-nova/' ) ); ?>">
+              <span class="site-footer__product-name">e-Nova</span>
+              <span class="site-footer__product-note">Entrada personal.</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="site-footer__nav" aria-label="<?php echo esc_attr_x( 'Información', 'footer nav label', 'beslock' ); ?>">
+        <h2 class="site-footer__heading">Información</h2>
+        <ul class="site-footer__list">
+          <li><a href="<?php echo esc_url( home_url( '/carrito/' ) ); ?>">Carrito</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/terminos-y-condiciones/' ) ); ?>">Términos y condiciones</a></li>
+          <li><a href="<?php echo esc_url( get_privacy_policy_url() ?: home_url( '/politica-de-privacidad/' ) ); ?>">Política de privacidad</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p class="site-footer__copyright">
+        © 2026 BESLOCK.<br>
+        Todos los derechos reservados.
+      </p>
+    </div>
   </div>
 </footer>
 
