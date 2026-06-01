@@ -12,13 +12,35 @@
     return value;
   }
 
-  function enableCartUpdate(form) {
+  function setCartUpdateState(form, isDirty) {
     if (!form) return;
     var button = form.querySelector('button[name="update_cart"]');
-    if (!button) return;
-    button.disabled = false;
-    button.removeAttribute('disabled');
-    button.classList.remove('disabled');
+    var status = form.querySelector('.beslock-cart__update-status');
+
+    if (button) {
+      button.hidden = !isDirty;
+      button.disabled = !isDirty;
+
+      if (isDirty) {
+        button.style.removeProperty('display');
+        button.removeAttribute('disabled');
+        button.classList.remove('disabled');
+      } else {
+        button.style.setProperty('display', 'none', 'important');
+        button.setAttribute('disabled', 'disabled');
+        button.classList.add('disabled');
+      }
+    }
+
+    if (status) {
+      status.hidden = isDirty;
+    }
+
+    form.classList.toggle('beslock-cart-form--dirty', Boolean(isDirty));
+  }
+
+  function enableCartUpdate(form) {
+    setCartUpdateState(form, true);
   }
 
   function buildButton(label, delta, input, form) {
@@ -48,6 +70,8 @@
   function init(root) {
     var form = root.querySelector('.woocommerce-cart-form');
     var inputs = root.querySelectorAll('.woocommerce-cart-form .quantity input.qty');
+
+    setCartUpdateState(form, false);
 
     inputs.forEach(function (input) {
       var wrapper = input.closest('.quantity');
@@ -81,7 +105,7 @@
     var neighborhoodManual = form.querySelector('#calc_shipping_neighborhood');
     var address = form.querySelector('#calc_shipping_address_1');
     var areaHelp = form.querySelector('#beslock-shipping-area-help');
-    var isManualNeighborhood = false;
+    var isBogota = false;
 
     if (!department || !city || !localityField || !neighborhoodField || !locality || !neighborhoodSelect || !neighborhoodManual || !address) return;
 
@@ -140,7 +164,16 @@
     }
 
     function normalizeOptionValue(value) {
-      return String(value || '').trim().toLowerCase();
+      return String(value || '')
+        .trim()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase();
+    }
+
+    function isBogotaCity(value) {
+      var normalizedValue = normalizeOptionValue(value);
+      return normalizedValue === 'bogota' || normalizedValue === 'bogota d.c.' || normalizedValue === 'bogota dc';
     }
 
     function isPlaceholderValue(value) {
@@ -149,18 +182,6 @@
         normalizedValue === 'no aplica' ||
         normalizedValue === 'no aplica en mi ciudad' ||
         normalizedValue === 'no aparece en la lista';
-    }
-
-    function isRealScopedOption(option, scopeAttribute, scopeValue) {
-      return !isPlaceholderValue(option.value) && optionMatchesScope(option, scopeAttribute, scopeValue);
-    }
-
-    function selectHasRealOptions(select, scopeAttribute, scopeValue) {
-      if (!isSelect(select) || !scopeValue) return false;
-
-      return getOriginalOptions(select).some(function (option) {
-        return isRealScopedOption(option, scopeAttribute, scopeValue);
-      });
     }
 
     function optionMatchesScope(option, scopeAttribute, scopeValue) {
@@ -172,7 +193,7 @@
 
       return optionScope.split('|').some(function (scope) {
         var normalizedScope = scope.trim();
-        return normalizedScope === '*' || normalizedScope === scopeValue;
+        return normalizedScope === '*' || normalizeOptionValue(normalizedScope) === normalizeOptionValue(scopeValue);
       });
     }
 
@@ -188,26 +209,6 @@
       select.disabled = !scopeValue;
     }
 
-    function filterNeighborhoodSelect() {
-      if (!isSelect(neighborhoodSelect)) return;
-
-      var cityValue = city.value;
-      var areaValue = locality.value;
-      var selectedValue = neighborhoodSelect.value;
-      var availableOptions = getOriginalOptions(neighborhoodSelect).filter(function (option) {
-        var isAvailable = optionMatchesScope(option, 'data-city', cityValue);
-
-        if (isAvailable && areaValue) {
-          isAvailable = optionMatchesScope(option, 'data-area', areaValue);
-        }
-
-        return isAvailable;
-      });
-
-      replaceSelectOptions(neighborhoodSelect, availableOptions, selectedValue);
-      neighborhoodSelect.disabled = !cityValue;
-    }
-
     function setLocalityVisible(isVisible) {
       localityField.hidden = !isVisible;
       locality.disabled = !isVisible || !city.value;
@@ -218,59 +219,48 @@
       }
     }
 
-    function setNeighborhoodMode(isManual) {
+    function setManualNeighborhood() {
       var label = neighborhoodField.querySelector('label');
 
-      isManualNeighborhood = isManual;
-
-      if (isManual) {
-        if (!neighborhoodManual.value && !isPlaceholderValue(neighborhoodSelect.value)) {
-          neighborhoodManual.value = neighborhoodSelect.value;
-        }
-
-        neighborhoodSelect.disabled = true;
-        neighborhoodSelect.hidden = true;
-        neighborhoodSelect.required = false;
-        neighborhoodSelect.setCustomValidity('');
-
-        neighborhoodManual.disabled = false;
-        neighborhoodManual.hidden = false;
-        neighborhoodManual.required = true;
-
-        if (label) label.setAttribute('for', 'calc_shipping_neighborhood');
-        if (areaHelp) areaHelp.textContent = 'Ingresa el barrio o sector para calcular la entrega.';
-
-        return;
+      if (!neighborhoodManual.value && !isPlaceholderValue(neighborhoodSelect.value)) {
+        neighborhoodManual.value = neighborhoodSelect.value;
       }
 
-      neighborhoodManual.disabled = true;
-      neighborhoodManual.hidden = true;
-      neighborhoodManual.required = false;
-      neighborhoodManual.setCustomValidity('');
+      if (isPlaceholderValue(neighborhoodManual.value)) {
+        neighborhoodManual.value = '';
+      }
 
-      neighborhoodSelect.hidden = false;
-      neighborhoodSelect.disabled = !city.value;
+      neighborhoodSelect.disabled = true;
+      neighborhoodSelect.hidden = true;
+      neighborhoodSelect.required = false;
+      neighborhoodSelect.setCustomValidity('');
 
-      if (label) label.setAttribute('for', 'calc_shipping_neighborhood_select');
-      if (areaHelp) areaHelp.textContent = 'Localidad/Comuna y Barrio son opcionales, pero debes ingresar al menos uno.';
+      neighborhoodManual.disabled = false;
+      neighborhoodManual.hidden = false;
+      neighborhoodManual.required = !isBogota;
+
+      if (label) label.setAttribute('for', 'calc_shipping_neighborhood');
+      if (areaHelp) {
+        areaHelp.textContent = isBogota ?
+          'Selecciona la localidad o ingresa el barrio para calcular la entrega.' :
+          'Ingresa el barrio o sector para calcular la entrega.';
+      }
     }
 
     function syncDependentFields() {
       filterSelect(city, 'data-department', department.value);
 
       var cityValue = city.value;
-      var hasLocalityCatalog = selectHasRealOptions(locality, 'data-city', cityValue);
-      var hasNeighborhoodCatalog = selectHasRealOptions(neighborhoodSelect, 'data-city', cityValue);
+      isBogota = isBogotaCity(cityValue);
 
-      setLocalityVisible(!cityValue || hasLocalityCatalog);
-      if (hasLocalityCatalog) {
+      setLocalityVisible(isBogota);
+      if (isBogota) {
         filterSelect(locality, 'data-city', cityValue);
+      } else {
+        locality.value = '';
       }
 
-      setNeighborhoodMode(Boolean(cityValue) && !hasNeighborhoodCatalog);
-      if (!isManualNeighborhood) {
-        filterNeighborhoodSelect();
-      }
+      setManualNeighborhood();
 
       validateDepartment();
       validateCity();
@@ -278,21 +268,23 @@
     }
 
     function validateArea() {
-      var localityValue = localityField.hidden ? '' : locality.value.trim();
-      var neighborhoodValue = isManualNeighborhood ? neighborhoodManual.value.trim() : neighborhoodSelect.value.trim();
+      var localityValue = isBogota && !localityField.hidden ? locality.value.trim() : '';
+      var neighborhoodValue = neighborhoodManual.value.trim();
       var cleanLocality = isPlaceholderValue(localityValue) ? '' : localityValue;
       var cleanNeighborhood = isPlaceholderValue(neighborhoodValue) ? '' : neighborhoodValue;
       var message = '';
 
-      if (isManualNeighborhood && !cleanNeighborhood) {
+      if (isBogota && !cleanLocality && !cleanNeighborhood) {
+        message = 'Selecciona la localidad o ingresa el barrio.';
+      } else if (!isBogota && !cleanNeighborhood) {
         message = 'Ingresa el barrio o sector.';
-      } else if (!isManualNeighborhood && !cleanLocality && !cleanNeighborhood) {
-        message = 'Ingresa una localidad/comuna o un barrio.';
       }
 
-      locality.setCustomValidity(localityField.hidden || isManualNeighborhood ? '' : message);
-      neighborhoodSelect.setCustomValidity(isManualNeighborhood ? '' : message);
-      neighborhoodManual.setCustomValidity(isManualNeighborhood ? message : '');
+      locality.required = isBogota && !cleanNeighborhood;
+      neighborhoodManual.required = !isBogota || (isBogota && !cleanLocality);
+      locality.setCustomValidity(isBogota ? message : '');
+      neighborhoodSelect.setCustomValidity('');
+      neighborhoodManual.setCustomValidity(message);
     }
 
     function validateDepartment() {
@@ -310,11 +302,12 @@
       address.setCustomValidity(message);
     }
 
-    function keepAddressTypingInsideField(event) {
+    function keepTypingInsideField(event) {
       var isSpace = event.key === ' ' || event.code === 'Space' || event.keyCode === 32;
 
       if (isSpace) {
         event.stopPropagation();
+        event.stopImmediatePropagation();
       }
     }
 
@@ -328,7 +321,8 @@
     });
 
     ['keydown', 'keypress', 'keyup'].forEach(function (eventName) {
-      address.addEventListener(eventName, keepAddressTypingInsideField, true);
+      address.addEventListener(eventName, keepTypingInsideField, true);
+      neighborhoodManual.addEventListener(eventName, keepTypingInsideField, true);
     });
 
     form.addEventListener('submit', function () {

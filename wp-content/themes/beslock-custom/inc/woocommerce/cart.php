@@ -48,6 +48,79 @@ add_filter( 'woocommerce_add_to_cart_fragments', function( $fragments ) {
 
 add_filter( 'wc_add_to_cart_message_html', '__return_empty_string', 10 );
 
+function beslock_normalize_location_label( $value ) {
+  $value = trim( wp_strip_all_tags( (string) $value ) );
+  $value = function_exists( 'remove_accents' ) ? remove_accents( $value ) : $value;
+  $value = strtolower( $value );
+
+  return preg_replace( '/\s+/', ' ', $value );
+}
+
+function beslock_get_colombia_state_code_for_label( $department ) {
+  $normalized_department = beslock_normalize_location_label( $department );
+
+  if ( '' === $normalized_department ) {
+    return '';
+  }
+
+  $aliases = array(
+    'amazonas'                  => 'CO-AMA',
+    'antioquia'                 => 'CO-ANT',
+    'arauca'                    => 'CO-ARA',
+    'atlantico'                 => 'CO-ATL',
+    'bogota'                    => 'CO-DC',
+    'bogota d.c.'               => 'CO-DC',
+    'bogota dc'                 => 'CO-DC',
+    'bolivar'                   => 'CO-BOL',
+    'boyaca'                    => 'CO-BOY',
+    'caldas'                    => 'CO-CAL',
+    'caqueta'                   => 'CO-CAQ',
+    'casanare'                  => 'CO-CAS',
+    'cauca'                     => 'CO-CAU',
+    'cesar'                     => 'CO-CES',
+    'choco'                     => 'CO-CHO',
+    'cordoba'                   => 'CO-COR',
+    'cundinamarca'              => 'CO-CUN',
+    'guainia'                   => 'CO-GUA',
+    'guaviare'                  => 'CO-GUV',
+    'huila'                     => 'CO-HUI',
+    'la guajira'                => 'CO-LAG',
+    'magdalena'                 => 'CO-MAG',
+    'meta'                      => 'CO-MET',
+    'narino'                    => 'CO-NAR',
+    'norte de santander'        => 'CO-NSA',
+    'putumayo'                  => 'CO-PUT',
+    'quindio'                   => 'CO-QUI',
+    'risaralda'                 => 'CO-RIS',
+    'san andres y providencia'  => 'CO-SAP',
+    'san andres, providencia y santa catalina' => 'CO-SAP',
+    'santander'                 => 'CO-SAN',
+    'sucre'                     => 'CO-SUC',
+    'tolima'                    => 'CO-TOL',
+    'valle del cauca'           => 'CO-VAC',
+    'vaupes'                    => 'CO-VAU',
+    'vichada'                   => 'CO-VID',
+  );
+
+  if ( isset( $aliases[ $normalized_department ] ) ) {
+    return $aliases[ $normalized_department ];
+  }
+
+  if ( function_exists( 'WC' ) && WC()->countries ) {
+    $states = WC()->countries->get_states( 'CO' );
+
+    if ( is_array( $states ) ) {
+      foreach ( $states as $state_code => $state_label ) {
+        if ( beslock_normalize_location_label( $state_label ) === $normalized_department ) {
+          return $state_code;
+        }
+      }
+    }
+  }
+
+  return '';
+}
+
 function beslock_get_shipping_area_options() {
   return apply_filters(
     'beslock_shipping_area_options',
@@ -101,34 +174,112 @@ function beslock_get_shipping_area_options() {
   );
 }
 
-function beslock_get_shipping_city_options() {
-  return apply_filters(
-    'beslock_shipping_city_options',
-    array(
-      'CO-DC'  => array( 'Bogotá' ),
-      'CO-ANT' => array( 'Medellín', 'Bello', 'Envigado', 'Itagüí', 'Sabaneta', 'Rionegro' ),
-      'CO-ATL' => array( 'Barranquilla', 'Soledad' ),
-      'CO-BOL' => array( 'Cartagena' ),
-      'CO-BOY' => array( 'Tunja', 'Duitama', 'Sogamoso' ),
-      'CO-CAL' => array( 'Manizales' ),
-      'CO-CAU' => array( 'Popayán' ),
-      'CO-CES' => array( 'Valledupar' ),
-      'CO-COR' => array( 'Montería' ),
-      'CO-CUN' => array( 'Chía', 'Cajicá', 'Funza', 'Mosquera', 'Soacha', 'Zipaquirá' ),
-      'CO-HUI' => array( 'Neiva' ),
-      'CO-LAG' => array( 'Riohacha' ),
-      'CO-MAG' => array( 'Santa Marta' ),
-      'CO-MET' => array( 'Villavicencio' ),
-      'CO-NAR' => array( 'Pasto' ),
-      'CO-NSA' => array( 'Cúcuta' ),
-      'CO-QUI' => array( 'Armenia' ),
-      'CO-RIS' => array( 'Pereira', 'Dosquebradas' ),
-      'CO-SAN' => array( 'Bucaramanga', 'Floridablanca', 'Girón', 'Piedecuesta' ),
-      'CO-SUC' => array( 'Sincelejo' ),
-      'CO-TOL' => array( 'Ibagué' ),
-      'CO-VAC' => array( 'Cali', 'Buenaventura', 'Jamundí', 'Palmira', 'Tuluá', 'Yumbo' ),
-    )
+function beslock_get_shipping_city_fallback_options() {
+  return array(
+    'CO-DC'  => array( 'Bogotá' ),
+    'CO-ANT' => array( 'Medellín', 'Bello', 'Envigado', 'Itagüí', 'Sabaneta', 'Rionegro' ),
+    'CO-ATL' => array( 'Barranquilla', 'Soledad' ),
+    'CO-BOL' => array( 'Cartagena' ),
+    'CO-BOY' => array( 'Tunja', 'Duitama', 'Sogamoso' ),
+    'CO-CAL' => array( 'Manizales' ),
+    'CO-CAU' => array( 'Popayán' ),
+    'CO-CES' => array( 'Valledupar' ),
+    'CO-COR' => array( 'Montería' ),
+    'CO-CUN' => array( 'Chía', 'Cajicá', 'Funza', 'Mosquera', 'Soacha', 'Zipaquirá' ),
+    'CO-HUI' => array( 'Neiva' ),
+    'CO-LAG' => array( 'Riohacha' ),
+    'CO-MAG' => array( 'Santa Marta' ),
+    'CO-MET' => array( 'Villavicencio' ),
+    'CO-NAR' => array( 'Pasto' ),
+    'CO-NSA' => array( 'Cúcuta' ),
+    'CO-QUI' => array( 'Armenia' ),
+    'CO-RIS' => array( 'Pereira', 'Dosquebradas' ),
+    'CO-SAN' => array( 'Bucaramanga', 'Floridablanca', 'Girón', 'Piedecuesta' ),
+    'CO-SUC' => array( 'Sincelejo' ),
+    'CO-TOL' => array( 'Ibagué' ),
+    'CO-VAC' => array( 'Cali', 'Buenaventura', 'Jamundí', 'Palmira', 'Tuluá', 'Yumbo' ),
   );
+}
+
+function beslock_get_shipping_city_options() {
+  static $city_options = null;
+
+  if ( null !== $city_options ) {
+    return apply_filters( 'beslock_shipping_city_options', $city_options );
+  }
+
+  $city_options  = array();
+  $csv_path      = trailingslashit( get_stylesheet_directory() ) . 'worldcities.csv';
+  $csv_is_ready  = is_readable( $csv_path );
+  $cache_key     = $csv_is_ready ? 'beslock_shipping_city_options_' . filemtime( $csv_path ) : '';
+
+  if ( '' !== $cache_key && function_exists( 'get_transient' ) ) {
+    $cached_city_options = get_transient( $cache_key );
+
+    if ( is_array( $cached_city_options ) && ! empty( $cached_city_options ) ) {
+      $city_options = $cached_city_options;
+
+      return apply_filters( 'beslock_shipping_city_options', $city_options );
+    }
+  }
+
+  if ( $csv_is_ready ) {
+    $handle = fopen( $csv_path, 'r' ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
+
+    if ( false !== $handle ) {
+      $header  = fgetcsv( $handle );
+      $columns = is_array( $header ) ? array_flip( $header ) : array();
+
+      $city_index       = isset( $columns['city'] ) ? $columns['city'] : null;
+      $city_fallback    = isset( $columns['Ciudad'] ) ? $columns['Ciudad'] : null;
+      $iso2_index       = isset( $columns['iso2'] ) ? $columns['iso2'] : null;
+      $department_index = isset( $columns['Departamento'] ) ? $columns['Departamento'] : null;
+
+      while ( false !== ( $row = fgetcsv( $handle ) ) ) { // phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
+        if ( null === $city_index || null === $iso2_index || null === $department_index || empty( $row[ $iso2_index ] ) || 'CO' !== $row[ $iso2_index ] ) {
+          continue;
+        }
+
+        $state_code = beslock_get_colombia_state_code_for_label( isset( $row[ $department_index ] ) ? $row[ $department_index ] : '' );
+        $city_label = isset( $row[ $city_index ] ) ? trim( (string) $row[ $city_index ] ) : '';
+
+        if ( '' === $city_label && null !== $city_fallback && isset( $row[ $city_fallback ] ) ) {
+          $city_label = trim( (string) $row[ $city_fallback ] );
+        }
+
+        if ( '' === $state_code || '' === $city_label ) {
+          continue;
+        }
+
+        if ( ! isset( $city_options[ $state_code ] ) ) {
+          $city_options[ $state_code ] = array();
+        }
+
+        $normalized_city = beslock_normalize_location_label( $city_label );
+
+        if ( ! isset( $city_options[ $state_code ][ $normalized_city ] ) ) {
+          $city_options[ $state_code ][ $normalized_city ] = $city_label;
+        }
+      }
+
+      fclose( $handle ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
+    }
+  }
+
+  if ( empty( $city_options ) ) {
+    $city_options = beslock_get_shipping_city_fallback_options();
+  } else {
+    foreach ( $city_options as $state_code => $cities ) {
+      natcasesort( $cities );
+      $city_options[ $state_code ] = array_values( $cities );
+    }
+  }
+
+  if ( '' !== $cache_key && function_exists( 'set_transient' ) && ! empty( $city_options ) ) {
+    set_transient( $cache_key, $city_options, WEEK_IN_SECONDS );
+  }
+
+  return apply_filters( 'beslock_shipping_city_options', $city_options );
 }
 
 function beslock_get_shipping_neighborhood_options() {
@@ -244,6 +395,12 @@ function beslock_shipping_city_has_neighborhood_options( $city ) {
   }
 
   return false;
+}
+
+function beslock_shipping_city_uses_locality( $city ) {
+  $normalized_city = beslock_normalize_location_label( $city );
+
+  return in_array( $normalized_city, array( 'bogota', 'bogota d.c.', 'bogota dc' ), true );
 }
 
 function beslock_shipping_neighborhood_matches_area( $city, $locality, $neighborhood ) {
@@ -442,18 +599,23 @@ add_filter( 'woocommerce_cart_calculate_shipping_address', function( $address ) 
 
   $clean_locality     = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $locality ) : $locality;
   $clean_neighborhood = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $neighborhood ) : $neighborhood;
-  $has_catalog        = function_exists( 'beslock_shipping_city_has_neighborhood_options' ) && beslock_shipping_city_has_neighborhood_options( $address['city'] );
+  $uses_locality      = function_exists( 'beslock_shipping_city_uses_locality' ) && beslock_shipping_city_uses_locality( $address['city'] );
 
-  if ( ! $has_catalog && '' === $clean_neighborhood ) {
+  if ( ! $uses_locality ) {
+    $locality       = '';
+    $clean_locality = '';
+  }
+
+  if ( ! $uses_locality && '' === $clean_neighborhood ) {
     throw new Exception( __( 'Ingresa el barrio o sector para calcular la entrega.', 'beslock-custom' ) );
   }
 
-  if ( $has_catalog && '' === $clean_locality && '' === $clean_neighborhood ) {
-    throw new Exception( __( 'Selecciona una localidad/comuna o ingresa un barrio para calcular la entrega.', 'beslock-custom' ) );
+  if ( $uses_locality && '' === $clean_locality && '' === $clean_neighborhood ) {
+    throw new Exception( __( 'Selecciona la localidad o ingresa el barrio para calcular la entrega.', 'beslock-custom' ) );
   }
 
-  if ( function_exists( 'beslock_shipping_neighborhood_matches_area' ) && ! beslock_shipping_neighborhood_matches_area( $address['city'], $locality, $neighborhood ) ) {
-    throw new Exception( __( 'El barrio seleccionado no corresponde a la localidad/comuna elegida. Ajusta esa combinación para calcular la entrega.', 'beslock-custom' ) );
+  if ( $uses_locality && function_exists( 'beslock_shipping_neighborhood_matches_area' ) && ! beslock_shipping_neighborhood_matches_area( $address['city'], $locality, $neighborhood ) ) {
+    throw new Exception( __( 'El barrio seleccionado no corresponde a la localidad elegida. Ajusta esa combinación para calcular la entrega.', 'beslock-custom' ) );
   }
 
   $resolved_postcode = apply_filters(
@@ -484,6 +646,12 @@ add_action( 'woocommerce_calculated_shipping', function() {
   $address_1    = isset( $_POST['calc_shipping_address_1'] ) ? wc_clean( wp_unslash( $_POST['calc_shipping_address_1'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing
   $locality     = isset( $_POST['calc_shipping_locality'] ) ? wc_clean( wp_unslash( $_POST['calc_shipping_locality'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing
   $neighborhood = isset( $_POST['calc_shipping_neighborhood'] ) ? wc_clean( wp_unslash( $_POST['calc_shipping_neighborhood'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing
+  $shipping_city = isset( $_POST['calc_shipping_city'] ) ? wc_clean( wp_unslash( $_POST['calc_shipping_city'] ) ) : WC()->customer->get_shipping_city(); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+
+  if ( function_exists( 'beslock_shipping_city_uses_locality' ) && ! beslock_shipping_city_uses_locality( $shipping_city ) ) {
+    $locality = '';
+  }
+
   $area         = function_exists( 'beslock_get_clean_shipping_area' ) ? beslock_get_clean_shipping_area( $locality, $neighborhood ) : trim( $locality . ( '' !== $locality && '' !== $neighborhood ? ' / ' : '' ) . $neighborhood );
 
   WC()->customer->set_shipping_address_1( $address_1 );

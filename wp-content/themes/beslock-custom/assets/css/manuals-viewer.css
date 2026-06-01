@@ -126,6 +126,152 @@ nav#mobileDrawer .mobile-menu__icon--guides::after {
   transform: skewY(4deg);
 }
 
+nav#mobileDrawer .mobile-menu__link--order-lookup {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+nav#mobileDrawer .mobile-menu__link--order-lookup .mobile-menu__meta {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+nav#mobileDrawer .mobile-menu__icon--order-lookup {
+  border: 1.8px solid currentColor;
+  border-radius: 0.34rem;
+}
+
+nav#mobileDrawer .mobile-menu__icon--order-lookup::before,
+nav#mobileDrawer .mobile-menu__icon--order-lookup::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+
+nav#mobileDrawer .mobile-menu__icon--order-lookup::before {
+  top: 0.28rem;
+  right: 0.18rem;
+  left: 0.18rem;
+  border-top: 1.8px solid currentColor;
+}
+
+nav#mobileDrawer .mobile-menu__icon--order-lookup::after {
+  width: 0.42rem;
+  height: 0.24rem;
+  right: 0.22rem;
+  bottom: 0.25rem;
+  border-bottom: 1.9px solid currentColor;
+  border-left: 1.9px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+nav#mobileDrawer .mobile-menu__item--order-lookup.is-open .mobile-menu__title {
+  color: var(--beslock-green, #034526) !important;
+  font-weight: 800 !important;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup {
+  padding:
+    clamp(0.84rem, 1.85vh, 1.18rem)
+    clamp(0.8rem, 2.6vw, 1.35rem)
+    0
+    calc(var(--drawer-main-inset) + var(--drawer-main-item-gap) + 1.35rem);
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup[hidden] {
+  display: none !important;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__form {
+  display: grid;
+  gap: clamp(0.66rem, 1.2vh, 0.92rem);
+  max-width: min(24rem, 100%);
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__field {
+  display: grid;
+  gap: 0.32rem;
+  margin: 0;
+  color: #5f6d62;
+  font-size: clamp(0.78rem, 1.35vw, 0.88rem);
+  font-weight: 800;
+  line-height: 1.18;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__field input {
+  width: 100%;
+  min-height: 2.78rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(3, 69, 38, 0.2);
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.92);
+  color: #081b12;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  padding: 0.72rem 0.92rem;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__field input:focus {
+  border-color: rgba(3, 69, 38, 0.46);
+  box-shadow: 0 0 0 3px rgba(3, 69, 38, 0.1);
+  background: #fff;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__field input[aria-invalid="true"] {
+  border-color: rgba(128, 38, 38, 0.62);
+  box-shadow: 0 0 0 3px rgba(128, 38, 38, 0.08);
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__error {
+  margin: -0.18rem 0 0;
+  color: #8a2d2d;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+nav#mobileDrawer .mobile-menu-order-lookup__error[hidden] {
+  display: none !important;
+}
+
+nav#mobileDrawer .mobile-menu__item button.mobile-menu-order-lookup__submit,
+nav#mobileDrawer .mobile-menu-order-lookup__submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: fit-content !important;
+  min-width: 8.7rem !important;
+  min-height: 2.92rem !important;
+  border: 0 !important;
+  border-radius: 0.78rem !important;
+  background: var(--beslock-green, #034526) !important;
+  color: #fff !important;
+  font-size: 0.98rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  padding: 0.84rem 1.4rem !important;
+  box-shadow: 0 1rem 1.7rem rgba(3, 69, 38, 0.18) !important;
+  cursor: pointer !important;
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease !important;
+}
+
+nav#mobileDrawer .mobile-menu__item button.mobile-menu-order-lookup__submit:hover,
+nav#mobileDrawer .mobile-menu__item button.mobile-menu-order-lookup__submit:focus-visible,
+nav#mobileDrawer .mobile-menu-order-lookup__submit:hover,
+nav#mobileDrawer .mobile-menu-order-lookup__submit:focus-visible {
+  background: #005331 !important;
+  box-shadow: 0 1.15rem 2rem rgba(3, 69, 38, 0.24) !important;
+  transform: translate3d(0, -1px, 0) !important;
+}
+
 nav#mobileDrawer .manuals-chevron {
   margin-left: auto;
   transition: transform 180ms ease;

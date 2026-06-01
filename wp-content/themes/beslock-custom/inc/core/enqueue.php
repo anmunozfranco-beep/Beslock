@@ -186,6 +186,17 @@ add_action( 'wp_enqueue_scripts', function() {
     true
   );
 
+  $order_lookup_js = $theme_dir_path . '/assets/js/order-lookup.js';
+  if ( file_exists( $order_lookup_js ) ) {
+    wp_enqueue_script(
+      'beslock-order-lookup-js',
+      $theme_dir_uri . '/assets/js/order-lookup.js',
+      [ 'beslock-main-js', 'beslock-menu-products-mobile-js' ],
+      filemtime( $order_lookup_js ),
+      true
+    );
+  }
+
   $models_js_path = $theme_dir_path . '/assets/js/models-mobile.js';
   $ver_models_js = file_exists( $models_js_path ) ? filemtime( $models_js_path ) : null;
 
@@ -573,13 +584,18 @@ add_action( 'wp_enqueue_scripts', function() {
           'contact'             => array(
             'firstName' => $customer ? $customer->get_shipping_first_name() : '',
             'lastName'  => $customer ? $customer->get_shipping_last_name() : '',
+            'phone'     => $customer ? $customer->get_billing_phone() : '',
             'email'     => $customer ? $customer->get_billing_email() : '',
           ),
           'labels'              => array(
             'contactTitle'     => __( 'Datos de contacto', 'beslock-custom' ),
             'firstName'        => __( 'Nombre', 'beslock-custom' ),
             'lastName'         => __( 'Apellido', 'beslock-custom' ),
+            'phone'            => __( 'Celular', 'beslock-custom' ),
             'email'            => __( 'Correo electrónico', 'beslock-custom' ),
+            'alternateContactTitle' => __( 'Añadir otro contacto para el envío', 'beslock-custom' ),
+            'alternateContactHelp' => __( 'Úsalo si otra persona recibirá o coordinará la entrega.', 'beslock-custom' ),
+            'optionalLabel'    => __( 'Opcional', 'beslock-custom' ),
             'orderNote'        => __( 'Añadir una nota a tu pedido', 'beslock-custom' ),
             'orderNoteHelp'    => __( 'Puedes contarnos detalles de entrega, instalación o coordinación.', 'beslock-custom' ),
             'shippingTitle'    => __( 'Datos de envío', 'beslock-custom' ),

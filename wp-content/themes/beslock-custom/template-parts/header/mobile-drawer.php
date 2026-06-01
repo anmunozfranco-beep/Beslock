@@ -30,6 +30,34 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </li>
 
+      <li class="mobile-menu__item mobile-menu__item--order-lookup" role="none">
+        <button type="button" class="mobile-menu__link mobile-menu__link--order-lookup" id="orderLookupToggle" data-js="order-lookup-toggle" aria-expanded="false" aria-controls="orderLookupPanel" role="menuitem">
+          <span class="mobile-menu__icon mobile-menu__icon--order-lookup" aria-hidden="true"></span>
+          <div class="mobile-menu__meta">
+            <span class="mobile-menu__title">Consulta tu pedido</span>
+            <span class="mobile-menu__subtitle">Revisa el estado de tu compra</span>
+          </div>
+        </button>
+
+        <div id="orderLookupPanel" class="mobile-menu-order-lookup" data-js="order-lookup-panel" role="region" aria-labelledby="orderLookupToggle" hidden>
+          <form class="mobile-menu-order-lookup__form" action="<?php echo esc_url( home_url( '/consulta-pedido/' ) ); ?>" method="post" data-js="order-lookup-form" novalidate>
+            <label class="mobile-menu-order-lookup__field">
+              <span>Número de pedido</span>
+              <input type="text" name="beslock_order_number" inputmode="numeric" autocomplete="off" data-js="order-lookup-order" />
+            </label>
+
+            <label class="mobile-menu-order-lookup__field">
+              <span>Correo electrónico</span>
+              <input type="email" name="beslock_order_email" autocomplete="email" data-js="order-lookup-email" />
+            </label>
+
+            <p class="mobile-menu-order-lookup__error" data-js="order-lookup-error" hidden></p>
+
+            <button type="submit" class="mobile-menu-order-lookup__submit">Consultar</button>
+          </form>
+        </div>
+      </li>
+
       <li class="mobile-menu__item mobile-menu__item--manuals" role="none">
         <button class="mobile-menu__link mobile-menu__link--manuals" id="manualsToggle" data-js="drawer-manuals-toggle" aria-expanded="false" aria-controls="manualsSectionsPanel" role="menuitem">
           <span class="mobile-menu__icon mobile-menu__icon--guides" aria-hidden="true"></span>
@@ -49,21 +77,11 @@ if ( ! defined( 'ABSPATH' ) ) {
       </li>
 
       <li class="mobile-menu__item" role="none">
-        <a class="mobile-menu__link" href="<?php echo esc_url( home_url( '/offers' ) ); ?>" role="menuitem">
-          <i class="bi bi-percent" aria-hidden="true"></i>
-          <div class="mobile-menu__meta">
-            <span class="mobile-menu__title">Catch our Limited Offers</span>
-            <span class="mobile-menu__subtitle">Save and boost profits</span>
-          </div>
-        </a>
-      </li>
-
-      <li class="mobile-menu__item" role="none">
         <a class="mobile-menu__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>" role="menuitem">
           <i class="bi bi-headset" aria-hidden="true"></i>
           <div class="mobile-menu__meta">
-            <span class="mobile-menu__title">Contact us Now</span>
-            <span class="mobile-menu__subtitle">We are right back with you</span>
+            <span class="mobile-menu__title">Contacto</span>
+            <span class="mobile-menu__subtitle">Estamos para ayudarte</span>
           </div>
         </a>
       </li>

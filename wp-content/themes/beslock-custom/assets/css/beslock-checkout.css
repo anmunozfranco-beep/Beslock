@@ -195,7 +195,6 @@ body.woocommerce-checkout:not(.woocommerce-order-received) :where(
   min-width: 0;
 }
 
-.beslock-checkout-contact__field--email,
 .beslock-checkout-contact__field--full {
   grid-column: 1 / -1;
 }
@@ -238,6 +237,76 @@ textarea.beslock-checkout-contact__control {
   color: var(--checkout-muted);
   font-size: 0.9rem;
   line-height: 1.45;
+}
+
+.beslock-checkout-alt-contact {
+  margin-top: clamp(1.05rem, 2vw, 1.35rem);
+  padding-top: clamp(1rem, 2vw, 1.25rem);
+  border-top: 1px solid var(--checkout-border);
+}
+
+.beslock-checkout-alt-contact__summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 1rem;
+  min-height: 48px;
+  color: var(--checkout-green);
+  font-size: 0.98rem;
+  font-weight: 850;
+  line-height: 1.15;
+  cursor: pointer;
+  list-style: none;
+}
+
+.beslock-checkout-alt-contact__summary::-webkit-details-marker {
+  display: none;
+}
+
+.beslock-checkout-alt-contact__summary::after {
+  content: "";
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(3, 69, 38, 0.2);
+  border-radius: 999px;
+  color: var(--checkout-green);
+  background:
+    linear-gradient(currentColor 0 0) center / 13px 3px no-repeat,
+    linear-gradient(currentColor 0 0) center / 3px 13px no-repeat,
+    #ffffff;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.beslock-checkout-alt-contact[open] .beslock-checkout-alt-contact__summary::after {
+  border-color: rgba(3, 69, 38, 0.32);
+  background:
+    linear-gradient(currentColor 0 0) center / 13px 3px no-repeat,
+    rgba(3, 69, 38, 0.055);
+}
+
+.beslock-checkout-alt-contact__summary-hint {
+  justify-self: end;
+  padding: 0.34rem 0.55rem;
+  border: 1px solid rgba(3, 69, 38, 0.14);
+  border-radius: 999px;
+  color: var(--checkout-muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.beslock-checkout-alt-contact__help {
+  margin: 0.15rem 0 1rem;
+  color: var(--checkout-muted);
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.beslock-checkout-alt-contact__fields {
+  padding-top: 0.1rem;
 }
 
 .beslock-checkout-shipping-summary__address {

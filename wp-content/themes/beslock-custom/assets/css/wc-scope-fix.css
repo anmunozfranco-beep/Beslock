@@ -661,3 +661,7 @@ body.woocommerce-page .page-title {
     width: auto !important;
   }
 }
+
+body.woocommerce-cart .beslock-cart--checkout button.beslock-cart__update[hidden] {
+  display: none !important;
+}

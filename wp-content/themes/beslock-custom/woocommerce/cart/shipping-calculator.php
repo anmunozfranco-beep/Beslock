@@ -22,9 +22,10 @@ $shipping_locality       = function_exists( 'beslock_get_shipping_session_value'
 $shipping_neighborhood   = function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_neighborhood', WC()->customer->get_meta( 'beslock_shipping_neighborhood' ) ) : WC()->customer->get_meta( 'beslock_shipping_neighborhood' );
 $shipping_area_options   = function_exists( 'beslock_get_shipping_area_options' ) ? beslock_get_shipping_area_options() : array();
 $shipping_city_options   = function_exists( 'beslock_get_shipping_city_options' ) ? beslock_get_shipping_city_options() : array();
-$shipping_barrio_options = function_exists( 'beslock_get_shipping_neighborhood_options' ) ? beslock_get_shipping_neighborhood_options() : array();
-$shipping_barrio_groups  = function_exists( 'beslock_get_shipping_neighborhood_area_options' ) ? beslock_get_shipping_neighborhood_area_options() : array();
 $colombia_states         = WC()->countries->get_states( 'CO' );
+$shipping_neighborhood_input = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $shipping_neighborhood ) : $shipping_neighborhood;
+$current_city            = WC()->customer->get_shipping_city();
+$uses_locality           = function_exists( 'beslock_shipping_city_uses_locality' ) && beslock_shipping_city_uses_locality( $current_city );
 
 do_action( 'woocommerce_before_shipping_calculator' ); ?>
 
@@ -74,7 +75,6 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
         <?php if ( apply_filters( 'woocommerce_shipping_calculator_enable_city', true ) ) : ?>
             <p class="form-row form-row-wide" id="calc_shipping_city_field">
                 <label for="calc_shipping_city"><?php esc_html_e( 'Ciudad / Municipio', 'beslock-custom' ); ?></label>
-                <?php $current_city = WC()->customer->get_shipping_city(); ?>
                 <select
                     name="calc_shipping_city"
                     id="calc_shipping_city"
@@ -105,16 +105,17 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
             </p>
         <?php endif; ?>
 
-        <p class="form-row form-row-wide" id="calc_shipping_locality_field">
-            <label for="calc_shipping_locality"><?php esc_html_e( 'Localidad / Comuna', 'beslock-custom' ); ?></label>
+        <p class="form-row form-row-wide" id="calc_shipping_locality_field" <?php echo $uses_locality ? '' : 'hidden'; ?>>
+            <label for="calc_shipping_locality"><?php esc_html_e( 'Localidad', 'beslock-custom' ); ?></label>
             <select
                 name="calc_shipping_locality"
                 id="calc_shipping_locality"
                 class="beslock-shipping-locality-select"
                 data-current-value="<?php echo esc_attr( $shipping_locality ); ?>"
                 aria-describedby="beslock-shipping-area-help"
+                <?php disabled( ! $uses_locality ); ?>
             >
-                <option value=""><?php esc_html_e( 'Selecciona localidad / comuna', 'beslock-custom' ); ?></option>
+                <option value=""><?php esc_html_e( 'Selecciona localidad', 'beslock-custom' ); ?></option>
                 <option value="No aplica" data-city="*"><?php esc_html_e( 'No aplica en mi ciudad', 'beslock-custom' ); ?></option>
                 <?php
                 $locality_option_values = array();
@@ -138,80 +139,31 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
         </p>
 
         <p class="form-row form-row-wide" id="calc_shipping_neighborhood_field">
-            <label for="calc_shipping_neighborhood_select"><?php esc_html_e( 'Barrio', 'beslock-custom' ); ?></label>
+            <label for="calc_shipping_neighborhood"><?php esc_html_e( 'Barrio', 'beslock-custom' ); ?></label>
             <select
                 name="calc_shipping_neighborhood"
                 id="calc_shipping_neighborhood_select"
                 class="beslock-shipping-neighborhood-select"
                 data-current-value="<?php echo esc_attr( $shipping_neighborhood ); ?>"
                 aria-describedby="beslock-shipping-area-help"
+                disabled
+                hidden
+                aria-hidden="true"
             >
                 <option value=""><?php esc_html_e( 'Selecciona barrio', 'beslock-custom' ); ?></option>
-                <option value="No aparece en la lista" data-city="*" data-area="*"><?php esc_html_e( 'No aparece en la lista', 'beslock-custom' ); ?></option>
-                <?php
-                $barrio_option_values = array();
-                $barrio_option_scopes = array();
-
-                if ( ! empty( $shipping_barrio_groups ) ) {
-                    foreach ( $shipping_barrio_groups as $city_label => $area_groups ) {
-                        foreach ( $area_groups as $area_label => $barrio_options ) {
-                            foreach ( $barrio_options as $barrio_option ) {
-                                $scope_key = $city_label . '|' . $barrio_option;
-
-                                if ( ! isset( $barrio_option_scopes[ $scope_key ] ) ) {
-                                    $barrio_option_scopes[ $scope_key ] = array(
-                                        'city'  => $city_label,
-                                        'label' => $barrio_option,
-                                        'areas' => array(),
-                                    );
-                                }
-
-                                $barrio_option_scopes[ $scope_key ]['areas'][] = '' === $area_label ? '*' : $area_label;
-                            }
-                        }
-                    }
-                } else {
-                    foreach ( $shipping_barrio_options as $city_label => $barrio_options ) {
-                        foreach ( $barrio_options as $barrio_option ) {
-                            $barrio_option_scopes[ $city_label . '|' . $barrio_option ] = array(
-                                'city'  => $city_label,
-                                'label' => $barrio_option,
-                                'areas' => array( '*' ),
-                            );
-                        }
-                    }
-                }
-
-                foreach ( $barrio_option_scopes as $barrio_scope ) :
-                    $barrio_option_values[] = $barrio_scope['label'];
-                    $barrio_area_scope      = in_array( '*', $barrio_scope['areas'], true ) ? '*' : implode( '|', array_unique( $barrio_scope['areas'] ) );
-                    ?>
-                    <option
-                        value="<?php echo esc_attr( $barrio_scope['label'] ); ?>"
-                        data-city="<?php echo esc_attr( $barrio_scope['city'] ); ?>"
-                        data-area="<?php echo esc_attr( $barrio_area_scope ); ?>"
-                        <?php selected( $shipping_neighborhood, $barrio_scope['label'] ); ?>
-                    >
-                        <?php echo esc_html( $barrio_scope['label'] ); ?>
-                    </option>
-                <?php endforeach; ?>
-                <?php if ( '' !== $shipping_neighborhood && ! in_array( $shipping_neighborhood, $barrio_option_values, true ) && 'No aparece en la lista' !== $shipping_neighborhood ) : ?>
-                    <option value="<?php echo esc_attr( $shipping_neighborhood ); ?>" data-city="<?php echo esc_attr( $current_city ); ?>" data-area="<?php echo esc_attr( $shipping_locality ); ?>" selected><?php echo esc_html( $shipping_neighborhood ); ?></option>
-                <?php endif; ?>
             </select>
             <input
                 type="text"
                 name="calc_shipping_neighborhood"
                 id="calc_shipping_neighborhood"
                 class="input-text beslock-shipping-neighborhood-manual"
-                value="<?php echo esc_attr( $shipping_neighborhood ); ?>"
+                value="<?php echo esc_attr( $shipping_neighborhood_input ); ?>"
                 placeholder="<?php esc_attr_e( 'Escribe barrio o sector', 'beslock-custom' ); ?>"
                 autocomplete="shipping address-level4"
                 aria-describedby="beslock-shipping-area-help"
-                disabled
-                hidden
+                required
             />
-            <span id="beslock-shipping-area-help" class="beslock-cart-field-help"><?php esc_html_e( 'Localidad/Comuna y Barrio son opcionales, pero debes ingresar al menos uno.', 'beslock-custom' ); ?></span>
+            <span id="beslock-shipping-area-help" class="beslock-cart-field-help"><?php esc_html_e( 'Ingresa el barrio o sector para calcular la entrega.', 'beslock-custom' ); ?></span>
         </p>
 
         <p class="form-row form-row-wide" id="calc_shipping_address_1_field">
