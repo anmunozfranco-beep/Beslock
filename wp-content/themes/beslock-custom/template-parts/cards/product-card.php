@@ -173,7 +173,8 @@ $show_badge = function_exists( 'beslock_product_card_has_install_badge' )
 $badge_src = get_template_directory_uri() . '/assets/images/instal.png';
 $badge_path = get_template_directory() . '/assets/images/instal.png';
 $permalink = get_permalink( $product->get_id() );
-$add_to_cart_url = add_query_arg( 'add-to-cart', $product->get_id(), home_url( '/' ) );
+$add_to_cart_url = $product->add_to_cart_url();
+$product_sku = $product->get_sku();
 ?>
 
 <article class="<?php echo esc_attr( implode( ' ', $card_classes ) ); ?>" data-js="product-card" data-product-id="<?php echo esc_attr( $product->get_id() ); ?>">
@@ -210,7 +211,12 @@ $add_to_cart_url = add_query_arg( 'add-to-cart', $product->get_id(), home_url( '
         href="<?php echo esc_url( $add_to_cart_url ); ?>"
         class="<?php echo esc_attr( implode( ' ', $cart_action_classes ) ); ?>"
         aria-label="<?php echo esc_attr( sprintf( __( 'Add %s to cart', 'beslock' ), $product->get_name() ) ); ?>"
+        data-product_id="<?php echo esc_attr( $product->get_id() ); ?>"
+        data-product_sku="<?php echo esc_attr( $product_sku ); ?>"
+        data-quantity="1"
         data-product-id="<?php echo esc_attr( $product->get_id() ); ?>"
+        data-product-name="<?php echo esc_attr( $product->get_name() ); ?>"
+        data-success_message="<?php echo esc_attr( sprintf( __( '"%s" se ha añadido a tu carrito.', 'beslock-custom' ), $product->get_name() ) ); ?>"
         data-js="product-card-add-to-cart"
       >
         <i class="bi bi-cart" aria-hidden="true"></i>

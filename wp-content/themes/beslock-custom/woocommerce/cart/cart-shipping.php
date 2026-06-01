@@ -20,13 +20,18 @@
 defined( 'ABSPATH' ) || exit;
 
 $formatted_destination    = isset( $formatted_destination ) ? $formatted_destination : WC()->countries->get_formatted_address( $package['destination'], ', ' );
+$beslock_destination      = function_exists( 'beslock_format_cart_shipping_destination' ) ? beslock_format_cart_shipping_destination( isset( $package['destination'] ) ? $package['destination'] : array() ) : '';
 $has_calculated_shipping  = ! empty( $has_calculated_shipping );
 $show_shipping_calculator = ! empty( $show_shipping_calculator );
 $calculator_text          = '';
+
+if ( '' !== $beslock_destination ) {
+    $formatted_destination = $beslock_destination;
+}
 ?>
 <tr class="woocommerce-shipping-totals shipping">
-    <th><?php echo wp_kses_post( $package_name ); ?></th>
-    <td data-title="<?php echo esc_attr( $package_name ); ?>">
+    <th><?php esc_html_e( 'Envío', 'beslock-custom' ); ?></th>
+    <td data-title="<?php esc_attr_e( 'Envío', 'beslock-custom' ); ?>">
         <?php if ( ! empty( $available_methods ) && is_array( $available_methods ) ) : ?>
             <ul id="shipping_method" class="woocommerce-shipping-methods">
                 <?php foreach ( $available_methods as $method ) : ?>
@@ -37,7 +42,14 @@ $calculator_text          = '';
                         } else {
                             printf( '<input type="hidden" name="shipping_method[%1$d]" data-index="%1$d" id="shipping_method_%1$d_%2$s" value="%3$s" class="shipping_method" />', $index, esc_attr( sanitize_title( $method->id ) ), esc_attr( $method->id ) ); // WPCS: XSS ok.
                         }
-                        printf( '<label for="shipping_method_%1$s_%2$s">%3$s</label>', $index, esc_attr( sanitize_title( $method->id ) ), wc_cart_totals_shipping_method_label( $method ) ); // WPCS: XSS ok.
+                        $shipping_method_label = wc_cart_totals_shipping_method_label( $method );
+                        if ( isset( $method->method_id ) && 'free_shipping' === $method->method_id ) {
+                            $shipping_method_label = esc_html__( 'Envío gratis', 'beslock-custom' );
+                        } else {
+                            $shipping_method_label = str_replace( array( 'Free shipping', 'Free Shipping' ), esc_html__( 'Envío gratis', 'beslock-custom' ), $shipping_method_label );
+                        }
+
+                        printf( '<label for="shipping_method_%1$s_%2$s">%3$s</label>', $index, esc_attr( sanitize_title( $method->id ) ), wp_kses_post( $shipping_method_label ) ); // WPCS: XSS ok.
                         do_action( 'woocommerce_after_shipping_rate', $method, $index );
                         ?>
                     </li>
@@ -48,10 +60,10 @@ $calculator_text          = '';
                     <?php
                     if ( $formatted_destination ) {
                         // Translators: $s shipping destination.
-                        printf( esc_html__( 'Shipping to %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
-                        $calculator_text = esc_html__( 'Change address', 'woocommerce' );
+                        printf( esc_html__( 'Enviar a %s.', 'beslock-custom' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
+                        $calculator_text = esc_html__( 'Cambiar dirección', 'beslock-custom' );
                     } else {
-                        echo wp_kses_post( apply_filters( 'woocommerce_shipping_estimate_html', __( 'Shipping options will be updated during checkout.', 'woocommerce' ) ) );
+                        echo wp_kses_post( apply_filters( 'woocommerce_shipping_estimate_html', __( 'Las opciones de envío se actualizarán durante el pago.', 'beslock-custom' ) ) );
                     }
                     ?>
                 </p>
@@ -59,12 +71,12 @@ $calculator_text          = '';
             <?php
         elseif ( ! $has_calculated_shipping || ! $formatted_destination ) :
             if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
-                echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Shipping costs are calculated during checkout.', 'woocommerce' ) ) );
+                echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Los costos de envío se calculan durante el pago.', 'beslock-custom' ) ) );
             } else {
-                echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Enter your address to view shipping options.', 'woocommerce' ) ) );
+                echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Ingresa tu dirección para ver las opciones de envío.', 'beslock-custom' ) ) );
             }
         elseif ( ! is_cart() ) :
-            echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce' ) ) );
+            echo wp_kses_post( apply_filters( 'woocommerce_no_shipping_available_html', __( 'No hay opciones de envío disponibles. Verifica que la dirección esté correcta o contáctanos si necesitas ayuda.', 'beslock-custom' ) ) );
         else :
             echo wp_kses_post(
                 /**
@@ -78,11 +90,11 @@ $calculator_text          = '';
                 apply_filters(
                     'woocommerce_cart_no_shipping_available_html',
                     // Translators: $s shipping destination.
-                    sprintf( esc_html__( 'No shipping options were found for %s.', 'woocommerce' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ),
+                    sprintf( esc_html__( 'No encontramos opciones de envío para %s.', 'beslock-custom' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' ),
                     $formatted_destination
                 )
             );
-            $calculator_text = esc_html__( 'Enter a different address', 'woocommerce' );
+            $calculator_text = esc_html__( 'Ingresar otra dirección', 'beslock-custom' );
         endif;
         ?>
 

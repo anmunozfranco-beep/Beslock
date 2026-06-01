@@ -23,9 +23,14 @@ $site_name = get_bloginfo( 'name' );
       <?php $cart_url = esc_url( wc_get_cart_url() ); ?>
       <a class="header__icon header__icon--cart" href="<?php echo $cart_url; ?>" aria-label="Go to cart">
         <i class="bi bi-cart" aria-hidden="true"></i>
-        <?php if ( class_exists( 'WooCommerce' ) && WC()->cart && WC()->cart->get_cart_contents_count() > 0 ) : ?>
-          <span class="header__cart-count" aria-hidden="true"><?php echo intval( WC()->cart->get_cart_contents_count() ); ?></span>
-        <?php endif; ?>
+        <?php
+        $cart_count = class_exists( 'WooCommerce' ) && WC()->cart ? (int) WC()->cart->get_cart_contents_count() : 0;
+        if ( function_exists( 'beslock_render_header_cart_count' ) ) {
+          echo beslock_render_header_cart_count( $cart_count ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        } elseif ( $cart_count > 0 ) {
+          echo '<span class="header__cart-count" aria-hidden="true">' . esc_html( $cart_count ) . '</span>';
+        }
+        ?>
       </a>
     <?php else : ?>
       <a class="header__icon header__icon--cart" href="<?php echo $home_url; ?>" aria-label="Go to cart">
