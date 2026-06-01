@@ -1134,3 +1134,89 @@ body.woocommerce-cart .beslock-cart--checkout .beslock-cart__summary .woocommerc
 body.woocommerce-cart .beslock-cart--checkout button.beslock-cart__update[hidden] {
   display: none !important;
 }
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table thead,
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table tbody,
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table tr,
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table th,
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table td {
+  border-right: 0 !important;
+  border-left: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table thead th {
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.12) !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table tbody tr.cart_item {
+  border-top: 0 !important;
+  border-bottom: 1px solid rgba(16, 32, 24, 0.08) !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table tbody tr.cart_item:last-of-type {
+  border-bottom: 0 !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table td.actions {
+  border-top: 1px solid rgba(16, 32, 24, 0.12) !important;
+}
+
+@media (min-width: 721px) {
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table .product-thumbnail {
+    width: 108px !important;
+    min-width: 108px !important;
+    padding-right: 0.7rem !important;
+  }
+
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table .product-thumbnail a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 88px !important;
+    min-width: 88px !important;
+    height: 88px !important;
+  }
+
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table .product-thumbnail img {
+    display: block !important;
+    width: 88px !important;
+    max-width: 88px !important;
+    height: 88px !important;
+    object-fit: contain !important;
+    border-radius: 8px !important;
+    background: #f7f9f7 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table {
+    display: block !important;
+    border: 0 !important;
+  }
+
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table tbody tr.cart_item {
+    border-bottom: 1px solid rgba(16, 32, 24, 0.08) !important;
+  }
+
+  body.woocommerce-cart .beslock-cart--checkout table.shop_table.beslock-cart-table .product-thumbnail img {
+    width: 76px !important;
+    max-width: 76px !important;
+    height: 76px !important;
+  }
+}

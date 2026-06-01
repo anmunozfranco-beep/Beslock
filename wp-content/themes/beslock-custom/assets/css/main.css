@@ -1540,35 +1540,316 @@ body.single-product a.single_add_to_cart_button .bi {
 /* .footer (global) se mantiene por compatibilidad, pero .site-footer
    anula lo que haga falta para el footer real que usamos en footer.php */
 .site-footer {
-  background: transparent; /* deja el fondo del tema */
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.66) 0%, rgba(247, 248, 245, 0) 34%),
+    #f7f8f5;
+  border-top: 1px solid rgba(16, 32, 24, 0.08);
   color: var(--beslock-text-main);
-  padding: 2rem 0;
-  text-align: center;
-  position: static; /* importante: anulamos sticky si heredó */
+  padding: clamp(3.4rem, 7vw, 5.6rem) 0 1.35rem;
+  position: static;
   top: auto;
   z-index: auto;
 }
 
-/* Footer logo: tamaño = 40% del logo del header (usamos --site-logo-height) */
-/* Aquí usamos la variable definida en .header__logo img (fallback 32px) */
+.site-footer__inner {
+  width: min(100% - clamp(2rem, 6vw, 6rem), 1320px);
+  margin: 0 auto;
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns:
+    minmax(270px, 1.32fr)
+    minmax(150px, 0.7fr)
+    minmax(310px, 1.18fr)
+    minmax(190px, 0.86fr);
+  gap: clamp(2.35rem, 4.8vw, 5.4rem);
+  align-items: center;
+}
+
+.site-footer__brand {
+  display: grid;
+  gap: 1.05rem;
+  justify-items: center;
+  max-width: 24rem;
+  text-align: center;
+}
+
+.site-footer__logo-link {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer__logo-mark {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
 .footer-logo {
-  display: inline-block;
-  height: calc(var(--site-logo-height, 32px) * 0.85);
+  display: block;
+  height: clamp(2.35rem, 4.6vw, 3.35rem);
   width: auto;
-  max-width: 40vw; /* protección en pantallas muy pequeñas */
-  vertical-align: middle;
+  max-width: 17.8rem;
   -webkit-user-drag: none;
   user-select: none;
   object-fit: contain;
 }
 
-/* Si necesitas una variante que use width (en lugar de height), descomenta y ajusta:
-.footer-logo { width: calc(var(--site-logo-width, 128px) * 0.4); height: auto; }
-*/
+.site-footer__registered {
+  margin-left: 0.14rem;
+  color: var(--beslock-green, #034526);
+  font-size: clamp(0.78rem, 1.25vw, 0.96rem);
+  font-weight: 850;
+  line-height: 1;
+  transform: translateY(-0.18em);
+}
 
-/* Ajustes adicionales visuales */
-.site-footer .u-container {
-  padding: 2rem 0;
+.site-footer__brand-copy {
+  max-width: 22rem;
+  margin: 0;
+  color: #637166;
+  font-size: clamp(0.96rem, 1.1vw, 1.08rem);
+  font-weight: 720;
+  line-height: 1.68;
+}
+
+.site-footer__nav {
+  display: grid;
+  gap: 1.12rem;
+  padding-top: 0.16rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.site-footer__nav--products {
+  min-width: 0;
+  justify-items: center;
+  text-align: center;
+}
+
+.site-footer__nav--products .site-footer__heading {
+  text-align: center;
+}
+
+.site-footer__heading {
+  margin: 0;
+  color: #0f2017;
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.site-footer__list {
+  display: grid;
+  gap: 0.82rem;
+  margin: 0;
+  padding: 0;
+  justify-items: center;
+  list-style: none;
+}
+
+.site-footer__list--products {
+  grid-template-columns: repeat(2, minmax(8.2rem, 1fr));
+  column-gap: clamp(1.35rem, 2.8vw, 2.35rem);
+  row-gap: 0.92rem;
+  justify-content: center;
+}
+
+.site-footer__list a {
+  display: inline-flex;
+  justify-content: center;
+  color: #4c5b50;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-decoration: none;
+  transform: translateX(0);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.site-footer__list a:hover,
+.site-footer__list a:focus {
+  color: var(--beslock-green, #034526);
+  transform: translateX(0.18rem);
+}
+
+.site-footer__product-link {
+  display: grid !important;
+  gap: 0.18rem;
+  max-width: 10.8rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.site-footer__product-name {
+  color: inherit;
+}
+
+.site-footer__product-note {
+  color: #6f7b72;
+  font-size: 0.72rem;
+  font-weight: 620;
+  line-height: 1.42;
+  white-space: nowrap;
+}
+
+.site-footer__product-link:hover .site-footer__product-note,
+.site-footer__product-link:focus .site-footer__product-note {
+  color: #58665d;
+}
+
+.site-footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: clamp(3rem, 6vw, 4.6rem);
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(16, 32, 24, 0.1);
+  text-align: center;
+}
+
+.site-footer__copyright {
+  margin: 0;
+  color: #637166;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.site-footer__payments {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 0.7rem;
+  width: min(100%, 20rem);
+  margin-top: 0.35rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(16, 32, 24, 0.1);
+  color: #637166;
+  text-align: center;
+}
+
+.site-footer__payments-label {
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.site-footer__payment-logos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+  width: 100%;
+}
+
+.site-footer__payment-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.94;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.site-footer__payment-link:hover,
+.site-footer__payment-link:focus {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.site-footer__payment-logo {
+  display: block;
+  width: auto;
+  height: 1.28rem;
+  max-width: 6.75rem;
+  object-fit: contain;
+}
+
+.site-footer__payment-logo--wompi {
+  height: 1.38rem;
+}
+
+.site-footer__payment-logo--paypal {
+  height: 1.18rem;
+}
+
+@media (min-width: 821px) {
+  .site-footer__logo-link,
+  .site-footer__brand-copy,
+  .site-footer__payments-label,
+  .site-footer__payment-logos {
+    will-change: transform;
+  }
+
+  .site-footer__logo-link,
+  .site-footer__brand-copy {
+    transform: translateY(0.7rem);
+  }
+
+  .site-footer__payments-label,
+  .site-footer__payment-logos {
+    transform: translateY(2.75rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .site-footer {
+    padding-top: 3rem;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    align-items: start;
+    text-align: center;
+  }
+
+  .site-footer__brand,
+  .site-footer__nav {
+    justify-items: center;
+  }
+
+  .site-footer__brand-copy {
+    max-width: 24rem;
+  }
+
+  .site-footer__list a:hover,
+  .site-footer__list a:focus {
+    transform: none;
+  }
+
+  .site-footer__product-link {
+    max-width: 9.5rem;
+    justify-items: center;
+  }
+
+  .site-footer__list--products {
+    grid-template-columns: repeat(2, minmax(7.5rem, auto));
+    justify-content: center;
+    column-gap: clamp(1.35rem, 7vw, 2.2rem);
+    row-gap: 1rem;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-footer__payments {
+    justify-items: center;
+    gap: 0.7rem;
+    width: min(100%, 18rem);
+  }
 }
 
 /* ==========================
@@ -2581,11 +2862,9 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   display: block !important;
 }
 
-/* Responsive: si quieres cambiar el ratio en pantallas grandes */
 @media (min-width: 900px) {
   .footer-logo {
-    /* ejemplo: en desktop el footer usa 40% pero del header mayor */
-    height: calc(var(--site-logo-height, 32px) * 0.4);
+    height: 2.6rem;
   }
 }
 

@@ -17,6 +17,39 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'beslock_cart_get_product_thumbnail_html' ) ) {
+    function beslock_cart_get_product_thumbnail_html( WC_Product $product ) {
+        $alt = $product->get_name();
+        $asset_relative_path = 'assets/images/products/' . sanitize_title( $product->get_slug() ) . '.webp';
+        $asset_path = get_stylesheet_directory() . '/' . $asset_relative_path;
+
+        if ( file_exists( $asset_path ) ) {
+            return sprintf(
+                '<img src="%1$s" alt="%2$s" loading="lazy" decoding="async" width="120" height="120" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail beslock-cart-product__image">',
+                esc_url( get_stylesheet_directory_uri() . '/' . $asset_relative_path . '?v=' . filemtime( $asset_path ) ),
+                esc_attr( $alt )
+            );
+        }
+
+        $image_id = $product->get_image_id();
+
+        if ( $image_id ) {
+            return wp_get_attachment_image(
+                $image_id,
+                'medium',
+                false,
+                array(
+                    'alt'      => $alt,
+                    'loading'  => 'lazy',
+                    'decoding' => 'async',
+                )
+            );
+        }
+
+        return $product->get_image( 'medium' );
+    }
+}
+
 if ( WC()->cart && WC()->cart->is_empty() ) {
     if ( isset( $_GET['beslock_empty_cart'] ) && function_exists( 'wc_clear_notices' ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
         wc_clear_notices();
@@ -124,7 +157,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                                          *
                                          * @since 2.1.0
                                          */
-                                        $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
+                                        $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', beslock_cart_get_product_thumbnail_html( $_product ), $cart_item, $cart_item_key );
 
                                         if ( ! $product_permalink ) {
                                             echo $thumbnail; // PHPCS: XSS ok.
