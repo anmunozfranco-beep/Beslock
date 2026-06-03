@@ -18,18 +18,29 @@ unset( $GLOBALS['beslock_email_order'] );
 	<p class="beslock-lead">
 		<?php
 		if ( $order->get_billing_first_name() ) {
-			printf(
-				/* translators: %s: customer first name */
-				esc_html__( 'Hola %s, tu pedido BESLOCK está reservado.', 'beslock-custom' ),
-				esc_html( $order->get_billing_first_name() )
+			echo wp_kses(
+				sprintf(
+					/* translators: 1: customer first name, 2: BESLOCK brand */
+					esc_html__( 'Hola %1$s, tu pedido %2$s está reservado.', 'beslock-custom' ),
+					esc_html( $order->get_billing_first_name() ),
+					beslock_email_registered_brand()
+				),
+				beslock_email_registered_mark_allowed_html()
 			);
 		} else {
-			esc_html_e( 'Hola, tu pedido BESLOCK está reservado.', 'beslock-custom' );
+			echo wp_kses(
+				sprintf(
+					/* translators: %s: BESLOCK brand */
+					esc_html__( 'Hola, tu pedido %s está reservado.', 'beslock-custom' ),
+					beslock_email_registered_brand()
+				),
+				beslock_email_registered_mark_allowed_html()
+			);
 		}
 		?>
 	</p>
 	<?php if ( $order->needs_payment() ) : ?>
-		<p><?php esc_html_e( 'Aún aparece pendiente de pago. Puedes revisar el detalle y finalizarlo desde el enlace seguro de WooCommerce cuando estés listo.', 'beslock-custom' ); ?></p>
+		<p><?php esc_html_e( 'Tu pedido aparece pendiente de pago. Puedes revisar el detalle y finalizarlo desde el enlace seguro de WooCommerce cuando estés listo.', 'beslock-custom' ); ?></p>
 		<p>
 			<a class="beslock-button" href="<?php echo esc_url( $order->get_checkout_payment_url() ); ?>">
 				<?php esc_html_e( 'Finalizar pago', 'beslock-custom' ); ?>
