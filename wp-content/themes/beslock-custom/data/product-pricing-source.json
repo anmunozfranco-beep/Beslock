@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "currency": "COP",
+  "source": {
+    "document": "Zonas_Smart_Manual_Cerrajero_Aliado (1).docx",
+    "section": "3. Estructura de comisiones por SKU",
+    "rule": "precio_producto = pvp_con_instalacion - precio_instalacion",
+    "variation_policy": "Por ahora no se consideran variaciones. Para e-Nova y e-Touch se toma la primera referencia que aparece en la tabla. Para e-Shield se conserva la referencia principal NX5-L."
+  },
+  "installation_policy": {
+    "available_cities": [
+      {
+        "label": "Bogotá",
+        "normalized": "bogota"
+      },
+      {
+        "label": "Medellín",
+        "normalized": "medellin"
+      },
+      {
+        "label": "Cali",
+        "normalized": "cali"
+      },
+      {
+        "label": "Barranquilla",
+        "normalized": "barranquilla"
+      }
+    ],
+    "available_city_behavior": "La instalación se puede seleccionar como servicio opcional en la finalización del producto.",
+    "unavailable_city_behavior": "Mostrar el precio de instalación, bloquear selección inmediata y llevar a Consultar instalación.",
+    "unavailable_city_message": "Para otras ciudades, podemos validar cobertura. Consulta la instalación cuando tengas el número de pedido.",
+    "consult_target": "support-drawer:consult-installation"
+  },
+  "installation_types": [
+    {
+      "id": "tipo_1",
+      "sku": "BESLOCK-INST-TIPO-1",
+      "name": "Instalación BESLOCK tipo 1",
+      "price": 80000,
+      "applies_to": [
+        "e-nova",
+        "e-touch"
+      ],
+      "description": "Instalación para cerraduras de volumen: e-Nova y e-Touch."
+    },
+    {
+      "id": "tipo_2",
+      "sku": "BESLOCK-INST-TIPO-2",
+      "name": "Instalación BESLOCK tipo 2",
+      "price": 150000,
+      "applies_to": [
+        "e-flex",
+        "e-prime",
+        "e-shield"
+      ],
+      "description": "Instalación para cerraduras competitivas y premium: e-Flex, e-Prime y e-Shield."
+    },
+    {
+      "id": "tipo_3",
+      "sku": "BESLOCK-INST-TIPO-3",
+      "name": "Instalación BESLOCK tipo 3",
+      "price": 180000,
+      "applies_to": [
+        "e-orbit"
+      ],
+      "description": "Instalación para cerraduras flagship: e-Orbit."
+    }
+  ],
+  "products": [
+    {
+      "slug": "e-flex",
+      "title": "e-Flex",
+      "sku": "LPL015",
+      "source_model": "E-Flex (Manija)",
+      "segment": "Competitivo",
+      "pvp_with_installation": 689000,
+      "installation_type": "tipo_2",
+      "installation_price": 150000,
+      "product_price": 539000,
+      "commission_rate": 0.07,
+      "commission_amount": 48230,
+      "locksmith_total_when_sold_and_installed": 198230
+    },
+    {
+      "slug": "e-nova",
+      "title": "e-Nova",
+      "sku": "NK21",
+      "source_model": "E-Nova bola",
+      "segment": "Volumen",
+      "pvp_with_installation": 412000,
+      "installation_type": "tipo_1",
+      "installation_price": 80000,
+      "product_price": 332000,
+      "commission_rate": 0.07,
+      "commission_amount": 28840,
+      "locksmith_total_when_sold_and_installed": 108840
+    },
+    {
+      "slug": "e-orbit",
+      "title": "e-Orbit",
+      "sku": "NF14",
+      "source_model": "E-Orbit (Facial)",
+      "segment": "Premium/Flagship",
+      "pvp_with_installation": 1734000,
+      "installation_type": "tipo_3",
+      "installation_price": 180000,
+      "product_price": 1554000,
+      "commission_rate": 0.1,
+      "commission_amount": 173400,
+      "locksmith_total_when_sold_and_installed": 353400
+    },
+    {
+      "slug": "e-prime",
+      "title": "e-Prime",
+      "sku": "P14",
+      "source_model": "E-Prime (Touch)",
+      "segment": "Competitivo",
+      "pvp_with_installation": 941000,
+      "installation_type": "tipo_2",
+      "installation_price": 150000,
+      "product_price": 791000,
+      "commission_rate": 0.1,
+      "commission_amount": 94100,
+      "locksmith_total_when_sold_and_installed": 244100
+    },
+    {
+      "slug": "e-shield",
+      "title": "e-Shield",
+      "sku": "NX5-L",
+      "source_model": "E-Shield (Outdoor)",
+      "segment": "Premium",
+      "pvp_with_installation": 982000,
+      "installation_type": "tipo_2",
+      "installation_price": 150000,
+      "product_price": 832000,
+      "commission_rate": 0.1,
+      "commission_amount": 98200,
+      "locksmith_total_when_sold_and_installed": 248200
+    },
+    {
+      "slug": "e-touch",
+      "title": "e-Touch",
+      "sku": "N191A",
+      "source_model": "E-Touch redonda",
+      "segment": "Volumen",
+      "pvp_with_installation": 435000,
+      "installation_type": "tipo_1",
+      "installation_price": 80000,
+      "product_price": 355000,
+      "commission_rate": 0.07,
+      "commission_amount": 30450,
+      "locksmith_total_when_sold_and_installed": 110450
+    }
+  ]
+}

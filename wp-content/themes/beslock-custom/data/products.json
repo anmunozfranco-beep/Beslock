@@ -2,7 +2,12 @@
   {
     "slug": "e-flex",
     "title": "e-Flex",
-    "price": "689000",
+    "sku": "LPL015",
+    "price": "539000",
+    "pvp": "689000",
+    "installation_type": "tipo_2",
+    "installation_product_sku": "BESLOCK-INST-TIPO-2",
+    "installation_price": "150000",
     "short_description": "Para puertas con movimiento diario: diseño moderno, acceso cómodo y control sin fricción.",
     "badge": "Ideal para estancias cortas",
     "features": [
@@ -27,7 +32,12 @@
   {
     "slug": "e-nova",
     "title": "e-Nova",
-    "price": "412000",
+    "sku": "NK21",
+    "price": "332000",
+    "pvp": "412000",
+    "installation_type": "tipo_1",
+    "installation_product_sku": "BESLOCK-INST-TIPO-1",
+    "installation_price": "80000",
     "short_description": "Privacidad compacta para habitaciones y oficinas donde el acceso personal debe ser simple y seguro.",
     "badge": "Privacidad sin complicaciones",
     "features": [
@@ -53,7 +63,12 @@
   {
     "slug": "e-orbit",
     "title": "e-Orbit",
-    "price": "1734000",
+    "sku": "NF14",
+    "price": "1554000",
+    "pvp": "1734000",
+    "installation_type": "tipo_3",
+    "installation_product_sku": "BESLOCK-INST-TIPO-3",
+    "installation_price": "180000",
     "short_description": "Tecnología sin concesiones para ver, validar y controlar cada acceso con la experiencia más completa de BESLOCK.",
     "badge": "Desde donde te encuentres",
     "features": [
@@ -78,7 +93,12 @@
   {
     "slug": "e-prime",
     "title": "e-Prime",
-    "price": "941000",
+    "sku": "P14",
+    "price": "791000",
+    "pvp": "941000",
+    "installation_type": "tipo_2",
+    "installation_product_sku": "BESLOCK-INST-TIPO-2",
+    "installation_price": "150000",
     "short_description": "Seguridad elegante para hogares y oficinas donde cada entrada necesita orden, control y diseño.",
     "badge": "Pensada para oficinas",
     "features": [
@@ -103,7 +123,12 @@
   {
     "slug": "e-shield",
     "title": "e-Shield",
-    "price": "982000",
+    "sku": "NX5-L",
+    "price": "832000",
+    "pvp": "982000",
+    "installation_type": "tipo_2",
+    "installation_product_sku": "BESLOCK-INST-TIPO-2",
+    "installation_price": "150000",
     "short_description": "La evolución inteligente de la cerradura tradicional para rejas, portones y accesos exteriores exigentes.",
     "badge": "Máxima protección en tu hogar",
     "features": [
@@ -129,7 +154,12 @@
   {
     "slug": "e-touch",
     "title": "e-Touch",
-    "price": "435000",
+    "sku": "N191A",
+    "price": "355000",
+    "pvp": "435000",
+    "installation_type": "tipo_1",
+    "installation_product_sku": "BESLOCK-INST-TIPO-1",
+    "installation_price": "80000",
     "short_description": "Una manija inteligente para entrar rápido en espacios compartidos, con una experiencia intuitiva desde el primer día.",
     "badge": "Acceso para todos",
     "features": [
