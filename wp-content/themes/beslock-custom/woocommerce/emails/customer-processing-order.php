@@ -25,7 +25,7 @@ unset( $GLOBALS['beslock_email_order'] );
 			echo wp_kses(
 				sprintf(
 					/* translators: 1: customer first name, 2: BESLOCK brand */
-					esc_html__( 'Hola %1$s, gracias por comprar en %2$s.', 'beslock-custom' ),
+					esc_html__( 'Hola %1$s, gracias por comprar en %2$s', 'beslock-custom' ),
 					esc_html( $order->get_billing_first_name() ),
 					beslock_email_registered_brand()
 				),
@@ -35,7 +35,7 @@ unset( $GLOBALS['beslock_email_order'] );
 			echo wp_kses(
 				sprintf(
 					/* translators: %s: BESLOCK brand */
-					esc_html__( 'Hola, gracias por comprar en %s.', 'beslock-custom' ),
+					esc_html__( 'Hola, gracias por comprar en %s', 'beslock-custom' ),
 					beslock_email_registered_brand()
 				),
 				beslock_email_registered_mark_allowed_html()

@@ -61,15 +61,17 @@ if ( ! $store_email ) {
 															<p>
 																<?php
 																echo wp_kses(
-																	sprintf(
-																		/* translators: %s: BESLOCK brand */
-																		esc_html__( 'Gracias por confiar en %s. Si necesitas ayuda con tu pedido, estamos atentos para acompañarte.', 'beslock-custom' ),
-																		beslock_email_registered_brand()
-																	),
-																	beslock_email_registered_mark_allowed_html()
-																);
-																?>
-															</p>
+																		sprintf(
+																			/* translators: %s: BESLOCK brand */
+																			esc_html__( 'Gracias por confiar en %s', 'beslock-custom' ),
+																			beslock_email_registered_brand()
+																		),
+																		beslock_email_registered_mark_allowed_html()
+																	);
+																	?>
+																	<br>
+																	<?php esc_html_e( 'Si necesitas ayuda con tu pedido, estamos atentos para acompañarte.', 'beslock-custom' ); ?>
+																</p>
 														</td>
 													</tr>
 												</table>
