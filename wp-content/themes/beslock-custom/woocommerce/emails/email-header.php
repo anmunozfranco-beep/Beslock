@@ -9,8 +9,50 @@
 
 defined( 'ABSPATH' ) || exit;
 
+if ( ! function_exists( 'beslock_email_registered_mark_allowed_html' ) ) {
+	/**
+	 * Allowed markup for the BESLOCK registered mark in email templates.
+	 *
+	 * @return array<string, array<string, bool>>
+	 */
+	function beslock_email_registered_mark_allowed_html() {
+		return array(
+			'sup' => array(
+				'aria-hidden' => true,
+				'class'       => true,
+			),
+		);
+	}
+}
+
+if ( ! function_exists( 'beslock_email_registered_brand' ) ) {
+	/**
+	 * Return the BESLOCK brand with the registered mark as superscript.
+	 *
+	 * @return string
+	 */
+	function beslock_email_registered_brand() {
+		return 'BESLOCK<sup class="beslock-registered-mark" aria-hidden="true">®</sup>';
+	}
+}
+
+if ( ! function_exists( 'beslock_email_format_registered_brand' ) ) {
+	/**
+	 * Format any visible BESLOCK registered mark as superscript.
+	 *
+	 * @param string $text Text to format.
+	 * @return string
+	 */
+	function beslock_email_format_registered_brand( $text ) {
+		return wp_kses(
+			str_replace( 'BESLOCK®', beslock_email_registered_brand(), esc_html( $text ) ),
+			beslock_email_registered_mark_allowed_html()
+		);
+	}
+}
+
 $email      = $email ?? null;
-$store_name = $store_name ?? get_bloginfo( 'name', 'display' );
+$store_name = 'BESLOCK®';
 
 $header_image_url = apply_filters( 'woocommerce_email_header_image_url', home_url() );
 $img              = get_option( 'woocommerce_email_header_image' );
@@ -56,7 +98,7 @@ $date_created       = $beslock_order ? $beslock_order->get_date_created() : null
 										<tr>
 											<td id="template_header_image" class="beslock-email-logo" valign="middle">
 												<?php
-												$image_html = '<img src="' . esc_url( $img ) . '" alt="' . esc_attr( $store_name ) . '" />';
+												$image_html = '<span class="beslock-logo-wrap"><img src="' . esc_url( $img ) . '" alt="' . esc_attr( $store_name ) . '" /><sup class="beslock-registered-mark beslock-logo-mark" aria-hidden="true">®</sup></span>';
 												if ( $header_image_url ) {
 													echo '<a href="' . esc_url( $header_image_url ) . '" target="_blank" style="display:inline-block;text-decoration:none;">' . wp_kses_post( $image_html ) . '</a>';
 												} else {
@@ -78,7 +120,7 @@ $date_created       = $beslock_order ? $beslock_order->get_date_created() : null
 													<tr>
 														<td id="header_wrapper">
 															<p class="beslock-eyebrow"><?php esc_html_e( 'Actualización de pedido', 'beslock-custom' ); ?></p>
-															<h1><?php echo esc_html( $email_heading ); ?></h1>
+															<h1><?php echo beslock_email_format_registered_brand( $email_heading ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h1>
 															<?php if ( $beslock_order ) : ?>
 																<table border="0" cellpadding="0" cellspacing="0" width="100%" class="beslock-order-hero" role="presentation">
 																	<tr>

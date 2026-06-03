@@ -19,8 +19,19 @@ if ( ! $store_email ) {
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%" class="beslock-footer-support" role="presentation">
 																			<tr>
 																				<td>
-																					<strong><?php esc_html_e( 'Soporte BESLOCK', 'beslock-custom' ); ?></strong><br>
-																					<?php esc_html_e( 'Si necesitas ayuda con tu pedido o instalación, responde este correo y el equipo te acompaña.', 'beslock-custom' ); ?>
+																					<strong>
+																						<?php
+																						echo wp_kses(
+																							sprintf(
+																								/* translators: %s: BESLOCK brand */
+																								esc_html__( 'Soporte %s', 'beslock-custom' ),
+																								beslock_email_registered_brand()
+																							),
+																							beslock_email_registered_mark_allowed_html()
+																						);
+																						?>
+																					</strong><br>
+																					<?php esc_html_e( 'Si necesitas ayuda con tu pedido o instalación, responde este correo y nuestro equipo te acompaña.', 'beslock-custom' ); ?>
 																					<?php if ( $store_email ) : ?>
 																						<br><a href="mailto:<?php echo esc_attr( $store_email ); ?>"><?php echo esc_html( $store_email ); ?></a>
 																					<?php endif; ?>
@@ -47,21 +58,18 @@ if ( ! $store_email ) {
 												<table border="0" cellpadding="0" cellspacing="0" width="100%" role="presentation">
 													<tr>
 														<td colspan="2" valign="middle" id="credit">
-															<?php
-															$email_footer_text = get_option( 'woocommerce_email_footer_text' );
-															if ( apply_filters( 'woocommerce_is_email_preview', false ) ) {
-																$text_transient    = get_transient( 'woocommerce_email_footer_text' );
-																$email_footer_text = false !== $text_transient ? $text_transient : $email_footer_text;
-															}
-
-															echo wp_kses_post(
-																wpautop(
-																	wptexturize(
-																		apply_filters( 'woocommerce_email_footer_text', $email_footer_text, $email )
-																	)
-																)
-															);
-															?>
+															<p>
+																<?php
+																echo wp_kses(
+																	sprintf(
+																		/* translators: %s: BESLOCK brand */
+																		esc_html__( 'Gracias por confiar en %s. Si necesitas ayuda con tu pedido, estamos atentos para acompañarte.', 'beslock-custom' ),
+																		beslock_email_registered_brand()
+																	),
+																	beslock_email_registered_mark_allowed_html()
+																);
+																?>
+															</p>
 														</td>
 													</tr>
 												</table>

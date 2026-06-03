@@ -45,12 +45,56 @@ body {
 	text-align: <?php echo esc_attr( $text_align ); ?>;
 }
 
+.beslock-logo-wrap {
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+	position: relative;
+	white-space: nowrap;
+}
+
 #template_header_image img {
 	display: inline-block;
 	height: auto;
 	margin: 0;
-	max-width: 178px;
-	width: 178px;
+	max-width: 224px;
+	vertical-align: top;
+	width: 224px;
+}
+
+.beslock-registered-mark {
+	display: inline-block;
+	font-size: 52%;
+	font-weight: 700;
+	line-height: 1;
+	margin-left: 2px;
+	position: relative;
+	top: -0.65em;
+	vertical-align: baseline;
+}
+
+h1 .beslock-registered-mark {
+	font-size: 48%;
+	top: -0.78em;
+}
+
+.beslock-lead .beslock-registered-mark,
+.beslock-footer-support .beslock-registered-mark,
+#credit .beslock-registered-mark {
+	font-size: 58%;
+	top: -0.55em;
+}
+
+.beslock-logo-mark {
+	color: #034526;
+	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-size: 15px;
+	left: 100%;
+	margin-left: -2px;
+	position: absolute;
+	right: auto;
+	top: 0;
+	vertical-align: baseline;
 }
 
 .beslock-email-kicker {
@@ -122,17 +166,17 @@ h1 {
 
 .beslock-order-hero {
 	background-color: rgba(255, 255, 255, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.16);
+	border: 0;
 	border-radius: 8px;
 	margin-top: 24px;
 	width: 100%;
 }
 
 .beslock-order-hero-cell {
-	border-<?php echo esc_attr( $opposite_align ); ?>: 1px solid rgba(255, 255, 255, 0.14);
+	border-<?php echo esc_attr( $opposite_align ); ?>: 0;
 	color: #ffffff;
 	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
-	padding: 16px 18px;
+	padding: 16px 20px;
 	text-align: <?php echo esc_attr( $text_align ); ?>;
 }
 
@@ -191,11 +235,10 @@ h1 {
 }
 
 .email-introduction {
-	background-color: #f8faf8;
-	border: 1px solid #e3e9e4;
-	border-radius: 8px;
+	background-color: transparent;
+	border-bottom: 1px solid #e3e9e4;
 	margin-bottom: 28px;
-	padding: 22px 24px 8px;
+	padding: 0 0 12px;
 }
 
 .beslock-lead {
@@ -206,9 +249,9 @@ h1 {
 }
 
 .beslock-note-card {
-	background-color: #f6f7f5;
-	border: 1px solid #dbe3dd;
-	border-radius: 8px;
+	background-color: transparent;
+	border-left: 3px solid #034526;
+	border-radius: 0;
 	margin: 18px 0 24px;
 }
 
@@ -217,7 +260,7 @@ h1 {
 	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 14px;
 	line-height: 160%;
-	padding: 18px 20px;
+	padding: 4px 0 4px 18px;
 }
 
 .beslock-note-card strong {
@@ -322,7 +365,7 @@ img {
 }
 
 .email-order-details thead th {
-	background-color: #f6f7f5;
+	background-color: transparent;
 	border-bottom: 1px solid #dbe3dd;
 	color: #667266;
 	font-size: 11px;
@@ -383,10 +426,9 @@ img {
 }
 
 .beslock-totals-table {
-	background-color: #f8faf8;
-	border: 1px solid #e3e9e4;
-	border-radius: 8px;
-	margin-top: 14px;
+	background-color: transparent;
+	border-top: 1px solid #dbe3dd;
+	margin-top: 18px;
 	width: 100%;
 }
 
@@ -414,6 +456,15 @@ img {
 	font-weight: 700;
 }
 
+.beslock-totals-table .order-totals-payment-method th,
+.beslock-totals-table .order-totals-payment-method td {
+	border-bottom: 0;
+	color: #28392f;
+	font-size: 14px;
+	font-weight: 700;
+	padding-top: 14px;
+}
+
 .beslock-customer-note {
 	background-color: #fffdf7;
 	border: 1px solid #eee1bd;
@@ -431,15 +482,15 @@ img {
 }
 
 #addresses {
-	margin: 28px 0 0;
+	margin: 30px 0 0;
 	width: 100%;
 }
 
 .beslock-address-card {
-	background-color: #f8faf8;
-	border: 1px solid #e3e9e4;
-	border-radius: 8px;
-	padding: 18px 18px 16px !important;
+	background-color: transparent;
+	border-top: 1px solid #dbe3dd;
+	border-radius: 0;
+	padding: 20px 0 0 !important;
 }
 
 .address-title {
@@ -459,10 +510,10 @@ img {
 }
 
 .beslock-footer-support {
-	background-color: #f6f7f5;
-	border: 1px solid #dbe3dd;
-	border-radius: 8px;
-	margin-top: 30px;
+	background-color: transparent;
+	border-top: 1px solid #dbe3dd;
+	border-radius: 0;
+	margin-top: 34px;
 }
 
 .beslock-footer-support td {
@@ -470,7 +521,7 @@ img {
 	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 13px;
 	line-height: 160%;
-	padding: 18px 20px;
+	padding: 18px 0 0;
 	text-align: <?php echo esc_attr( $text_align ); ?>;
 }
 
@@ -511,7 +562,15 @@ img {
 	}
 
 	#template_header_image img {
-		width: 150px !important;
+		width: 176px !important;
+	}
+
+	.beslock-logo-mark {
+		font-size: 13px !important;
+		left: 100% !important;
+		margin-left: -2px !important;
+		right: auto !important;
+		top: 0 !important;
 	}
 
 	#header_wrapper {
@@ -529,7 +588,7 @@ img {
 	.beslock-order-hero-cell {
 		display: block !important;
 		border-right: 0 !important;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+		border-bottom: 0 !important;
 		width: auto !important;
 	}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * BESLOCK customer completed order email.
+ * BESLOCK customer processing order email.
  *
  * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates\Emails
@@ -12,11 +12,7 @@ defined( 'ABSPATH' ) || exit;
 $GLOBALS['beslock_email_order'] = $order;
 do_action(
 	'woocommerce_email_header',
-	sprintf(
-		/* translators: %s: order number */
-			esc_html__( 'Tu pedido #%s está completado', 'beslock-custom' ),
-		esc_html( $order->get_order_number() )
-	),
+	esc_html__( 'Recibimos tu pedido en BESLOCK®', 'beslock-custom' ),
 	$email
 );
 unset( $GLOBALS['beslock_email_order'] );
@@ -29,7 +25,7 @@ unset( $GLOBALS['beslock_email_order'] );
 			echo wp_kses(
 				sprintf(
 					/* translators: 1: customer first name, 2: BESLOCK brand */
-					esc_html__( 'Hola %1$s, tu pedido %2$s ya está completado.', 'beslock-custom' ),
+					esc_html__( 'Hola %1$s, gracias por comprar en %2$s.', 'beslock-custom' ),
 					esc_html( $order->get_billing_first_name() ),
 					beslock_email_registered_brand()
 				),
@@ -39,7 +35,7 @@ unset( $GLOBALS['beslock_email_order'] );
 			echo wp_kses(
 				sprintf(
 					/* translators: %s: BESLOCK brand */
-					esc_html__( 'Hola, tu pedido %s ya está completado.', 'beslock-custom' ),
+					esc_html__( 'Hola, gracias por comprar en %s.', 'beslock-custom' ),
 					beslock_email_registered_brand()
 				),
 				beslock_email_registered_mark_allowed_html()
@@ -47,28 +43,8 @@ unset( $GLOBALS['beslock_email_order'] );
 		}
 		?>
 	</p>
-	<p>
-		<?php
-		echo wp_kses(
-			sprintf(
-				/* translators: %s: BESLOCK brand */
-				esc_html__( 'Gracias por confiar en %s. Te dejamos el resumen de tu compra y los datos de envío para que tengas todo a la mano.', 'beslock-custom' ),
-				beslock_email_registered_brand()
-			),
-			beslock_email_registered_mark_allowed_html()
-		);
-		?>
-	</p>
+	<p><?php esc_html_e( 'Ya recibimos tu pedido y lo estamos preparando. Te compartimos el resumen de la compra, el método de pago y la dirección de envío registrada.', 'beslock-custom' ); ?></p>
 </div>
-
-<table border="0" cellpadding="0" cellspacing="0" width="100%" class="beslock-note-card" role="presentation">
-	<tr>
-		<td>
-			<strong><?php esc_html_e( 'Próximo paso', 'beslock-custom' ); ?></strong><br>
-			<?php esc_html_e( 'Conserva este correo como soporte de tu compra. Si necesitas ayuda con instalación, garantía o acompañamiento, responde este mensaje y te ayudamos.', 'beslock-custom' ); ?>
-		</td>
-	</tr>
-</table>
 
 <?php
 do_action( 'woocommerce_email_order_details', $order, $sent_to_admin, $plain_text, $email );

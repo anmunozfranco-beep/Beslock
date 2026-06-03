@@ -13,6 +13,29 @@ $text_align       = is_rtl() ? 'right' : 'left';
 $opposite_align   = is_rtl() ? 'left' : 'right';
 $date_created     = $order->get_date_created();
 $order_table_class = 'email-order-details';
+$tax_display       = get_option( 'woocommerce_tax_display_cart' );
+$price_args        = array(
+	'currency' => $order->get_currency(),
+);
+$shipping_total    = (float) $order->get_shipping_total();
+$shipping_tax      = (float) $order->get_shipping_tax();
+$shipping_amount   = 'incl' === $tax_display ? $shipping_total + $shipping_tax : $shipping_total;
+$subtotal_amount   = max( 0, (float) $order->get_total() - $shipping_amount );
+$payment_method    = $order->get_payment_method_title();
+$payment_labels     = array(
+	'direct bank transfer' => esc_html__( 'Transferencia bancaria directa', 'beslock-custom' ),
+	'bank transfer'        => esc_html__( 'Transferencia bancaria', 'beslock-custom' ),
+	'check payments'       => esc_html__( 'Pago con cheque', 'beslock-custom' ),
+	'cash on delivery'     => esc_html__( 'Pago contra entrega', 'beslock-custom' ),
+	'credit card'          => esc_html__( 'Tarjeta de crédito', 'beslock-custom' ),
+	'debit card'           => esc_html__( 'Tarjeta débito', 'beslock-custom' ),
+);
+
+if ( ! $payment_method ) {
+	$payment_method = esc_html__( 'Por confirmar', 'beslock-custom' );
+} elseif ( isset( $payment_labels[ strtolower( trim( wp_strip_all_tags( $payment_method ) ) ) ] ) ) {
+	$payment_method = $payment_labels[ strtolower( trim( wp_strip_all_tags( $payment_method ) ) ) ];
+}
 
 do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text, $email );
 ?>
@@ -57,29 +80,30 @@ do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plai
 	</table>
 
 	<table class="td font-family beslock-totals-table" cellspacing="0" cellpadding="0" style="width: 100%;" border="0" role="presentation">
-		<?php
-		$item_totals       = $order->get_order_item_totals();
-		$item_totals_count = count( $item_totals );
-
-		if ( $item_totals ) {
-			$i = 0;
-			foreach ( $item_totals as $total ) {
-				++$i;
-				$last_class = ( $i === $item_totals_count ) ? ' order-totals-last' : '';
-				?>
-				<tr class="order-totals order-totals-<?php echo esc_attr( $total['type'] ?? 'unknown' ); ?><?php echo esc_attr( $last_class ); ?>">
-					<th class="td text-align-left" scope="row" colspan="2">
-						<?php
-						echo wp_kses_post( $total['label'] ) . ' ';
-						echo isset( $total['meta'] ) ? wp_kses_post( $total['meta'] ) : '';
-						?>
-					</th>
-					<td class="td text-align-right"><?php echo wp_kses_post( $total['value'] ); ?></td>
-				</tr>
+		<tr class="order-totals order-totals-subtotal">
+			<th class="td text-align-left" scope="row" colspan="2"><?php esc_html_e( 'Subtotal', 'beslock-custom' ); ?></th>
+			<td class="td text-align-right"><?php echo wp_kses_post( wc_price( $subtotal_amount, $price_args ) ); ?></td>
+		</tr>
+		<tr class="order-totals order-totals-shipping">
+			<th class="td text-align-left" scope="row" colspan="2"><?php esc_html_e( 'Envío', 'beslock-custom' ); ?></th>
+			<td class="td text-align-right">
 				<?php
-			}
-		}
-		?>
+				echo wp_kses_post(
+					$shipping_amount > 0
+						? wc_price( $shipping_amount, $price_args )
+						: esc_html__( 'Sin costo', 'beslock-custom' )
+				);
+				?>
+			</td>
+		</tr>
+		<tr class="order-totals order-totals-total order-totals-last">
+			<th class="td text-align-left" scope="row" colspan="2"><?php esc_html_e( 'Total', 'beslock-custom' ); ?></th>
+			<td class="td text-align-right"><?php echo wp_kses_post( $order->get_formatted_order_total() ); ?></td>
+		</tr>
+		<tr class="order-totals order-totals-payment-method">
+			<th class="td text-align-left" scope="row" colspan="2"><?php esc_html_e( 'Método de pago', 'beslock-custom' ); ?></th>
+			<td class="td text-align-right"><?php echo esc_html( $payment_method ); ?></td>
+		</tr>
 	</table>
 
 	<?php if ( $order->get_customer_note() ) : ?>
