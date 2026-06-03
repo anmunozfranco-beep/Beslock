@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WPCode &#8211; Insert Headers and Footers + Custom Code Snippets &#8211; WordPress Code Manager - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-05 08:36:28+0000\n"
+"PO-Revision-Date: 2026-05-24 10:55:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -70,6 +70,50 @@ msgstr "WPCode Insights"
 #: includes/class-wpcode-abilities-api.php:48
 msgid "WPCode Library"
 msgstr "Biblioteca de WPCode"
+
+#: includes/class-wpcode-abilities-api.php:49
+msgid "Abilities for searching pre-built templates"
+msgstr "Capacidades para buscar plantillas prediseñadas"
+
+#: includes/class-wpcode-abilities-api.php:284
+msgid "Get WPCode Settings"
+msgstr "Obtener ajustes de WPCode"
+
+#: includes/class-wpcode-abilities-api.php:172
+msgid "Snippet ID to check"
+msgstr "ID del fragmento de código a comprobar"
+
+#: includes/class-wpcode-abilities-api.php:40
+msgid "Abilities for checking snippet health"
+msgstr "Capacidades para comprobar la salud de los fragmentos de código"
+
+#: includes/class-wpcode-abilities-api.php:39
+msgid "WPCode Diagnostics"
+msgstr "Diagnóstico de WPCode"
+
+#: includes/class-wpcode-abilities-api.php:58
+msgid "Abilities for reading current snippet configurations"
+msgstr "Capacidades para leer las configuraciones de los fragmentos de código actuales"
+
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:264
+msgid "Note: In multisite networks, each site has its own file directory to prevent cross-site conflicts."
+msgstr "Nota: En redes multisitio, cada sitio tiene su propio directorio de archivos para evitar conflictos entre sitios."
+
+#: includes/admin/admin-scripts.php:73
+msgid "Upgrade to PRO today and load your snippets from files instead of the database. This improves performance and allows for easier version control of your code snippets."
+msgstr "Actualiza a PRO hoy mismo y carga tus fragmentos de código desde archivos en lugar de la base de datos. Esto mejora el rendimiento y facilita el control de versiones de tus fragmentos de código."
+
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:268
+msgid "Load PHP Snippets as Files"
+msgstr "Cargar fragmentos de código de PHP como archivos"
+
+#: includes/admin/pages/class-wpcode-admin-page-settings.php:247
+msgid "When enabled, all active PHP, HTML, and Universal snippets will be loaded from files instead of the database. Files are stored in "
+msgstr "Al estar activo, todos los fragmentos de código PHP, HTML y Universal se cargarán desde archivos, en vez de la base de datos. Los archivos se guardan en "
+
+#: includes/admin/admin-scripts.php:72
+msgid "File-Based Loading is a Premium Feature"
+msgstr "Cargar desde archivos es una función Premium"
 
 #: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:1902
 msgid "Please save your CSS snippet first before using Live Preview. This will allow you to preview your changes in real-time."
@@ -259,6 +303,37 @@ msgstr "Más información sobre WPCode Pro"
 #: includes/admin/admin-scripts.php:85
 msgid "Upgrade today and get access to a private snippet library that you can use to manage snippets on multiple sites."
 msgstr "Actualiza hoy mismo y accede a una biblioteca privada de fragmentos de código que podrás usar para gestionar fragmentos en varios sitios web."
+
+#: includes/admin/admin-scripts.php:81
+msgid "Updating this snippet will overwrite your current local changes with the latest version from the library."
+msgstr "Actualizar este fragmento de código reemplazará tus cambios locales actuales por la última versión de la biblioteca."
+
+#: includes/admin/admin-scripts.php:79
+msgid "Connect with WPCode Library"
+msgstr "Conectar con la biblioteca de WPCode"
+
+#: includes/admin/admin-scripts.php:78
+msgid "Before syncing your snippets, you must connect to WPCode Library, so we can securely access and update them."
+msgstr "Antes de sincronizar tus fragmentos de código, debes conectarte a la biblioteca de WPCode, para que podamos acceder a a ellos y actualizarlos con seguridad."
+
+#: includes/admin/admin-scripts.php:77
+msgid "Connect with WPCode Library to Sync Snippets"
+msgstr "Conéctate a la biblioteca de WPCode para sincronizar los fragmentos de código"
+
+#: includes/admin/admin-ajax-handlers.php:501
+#: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:2573
+msgid "Failed to update snippet from library."
+msgstr "Error al actualizar el fragmento de código desde la biblioteca."
+
+#: includes/admin/admin-ajax-handlers.php:488
+#: includes/admin/admin-ajax-handlers.php:526
+#: includes/admin/admin-ajax-handlers.php:643
+msgid "You do not have permission to edit snippets."
+msgstr "No tienes permiso para editar los fragmentos de código."
+
+#: includes/admin/admin-scripts.php:84
+msgid "The Private Snippet Library is a Premium Feature"
+msgstr "La biblioteca privada de fragmentos de código es una función Premium"
 
 #: includes/class-wpcode-smart-tags.php:537
 msgid "No smart tags found"
@@ -1282,6 +1357,102 @@ msgstr "Código de país"
 #: includes/generator/class-wpcode-generator-schema-job-posting.php:229
 msgid "10001"
 msgstr "10001"
+
+#: includes/generator/class-wpcode-generator-schema-product.php:165
+msgid "The price of the product."
+msgstr "El precio del producto."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:147
+msgid "Offer Details"
+msgstr "Detalles de la oferta"
+
+#: includes/generator/class-wpcode-generator-schema-product.php:137
+msgid "The GTIN (UPC, EAN, ISBN) of the product."
+msgstr "El GTIN (UPC, EAN, ISBN) del producto."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:136
+msgid "Product GTIN"
+msgstr "GTIN del producto"
+
+#: includes/generator/class-wpcode-generator-schema-product.php:87
+msgid "Describe the product..."
+msgstr "Describe el producto..."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:84
+msgid "A detailed description of the product."
+msgstr "Una descripción detallada del producto."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:74
+msgid "The name of the product."
+msgstr "El nombre del producto."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:61
+msgid "This generator creates Product schema.org markup for improved SEO and rich search results."
+msgstr "Este generador crea el marcado schema.org del producto para mejorar el SEO y obtener resultados de búsqueda más completos."
+
+#: includes/generator/class-wpcode-generator-schema-product.php:43
+msgid "Generate schema markup for products to enhance search results."
+msgstr "Generar marcado de esquema para productos con el fin de mejorar los resultados de búsqueda."
+
+#: includes/generator/class-wpcode-generator-schema-service.php:43
+msgid "Generate schema markup for services to enhance search results."
+msgstr "Genera el marcado schema de los servicios para mejorar los resultados de búsqueda."
+
+#: includes/generator/class-wpcode-generator-schema-service.php:42
+msgid "Service Schema"
+msgstr "Schema de servicio"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:216
+msgid "Preheat the oven to 350°F (175°C). Line a baking sheet with parchment paper."
+msgstr "Precalienta el horno a 350ºF (175ºC). Cubre una bandeja con papel de horno."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:205
+msgid "Preheat the oven"
+msgstr "Precalienta el horno"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:181
+msgid "Recipe Yield"
+msgstr "Rendimiento de la receta"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:177
+msgid "PT1H30M (1 hour 30 minutes)"
+msgstr "PT1H30M (1 hora 30 minutos)"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:173
+msgid "Total time in ISO 8601 format."
+msgstr "Tiempo total en formato ISO 8601."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:159
+msgid "PT30M (30 minutes)"
+msgstr "PT30M (30 minutos)"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:155
+msgid "Preparation time in ISO 8601 format (PT30M for 30 minutes)."
+msgstr "Tiempo de preparación en formato ISO 8601 (PT30M para 30 minutos)."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:144
+msgid "The cuisine type (Italian, Mexican)."
+msgstr "El tipo de cocina (italiana, mexicana)."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:139
+msgid "2 cups all-purpose flour, 1 cup butter, 2 eggs, 1 cup sugar"
+msgstr "2 tazas de harina de trigo, 1 taza de mantequilla, 2 huevos, 1 taza de azúcar"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:126
+msgid "The calorie content of the recipe."
+msgstr "La cantidad de calorías de la receta."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:121
+msgid "Dessert, Main Course, Appetizer"
+msgstr "Postre, plato principal, entrante"
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:94
+msgid "URL of the recipe image."
+msgstr "URL de la imagen de la receta."
+
+#: includes/generator/class-wpcode-generator-schema-recipe.php:135
+msgid "List all ingredients, separated by commas."
+msgstr "Enumera todos los ingredientes, separados por comas."
 
 #: includes/admin/pages/class-wpcode-admin-page-snippet-manager.php:2157
 msgid "Compress Output"

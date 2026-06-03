@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-14 15:14:47+0000\n"
+"PO-Revision-Date: 2026-05-27 19:23:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -450,15 +450,15 @@ msgstr "Los artículos de {order_number} pedido {site_title} se han procesado."
 msgid "Failed to delete the shipping provider."
 msgstr "No se ha podido eliminar el proveedor de envío."
 
-#. translators: %s: URL to blog post about this change.
-#: includes/admin/views/html-notice-sync-on-read-disabled.php:20
-msgid "Compatibility mode for HPOS no longer pulls order changes made to the posts database back into your orders automatically. If your site uses custom code or plugins that modify orders outside of WooCommerce, this may affect how order data is handled. <a href=\"%s\">Learn more about this change and what to do</a>."
-msgstr "El modo de compatibilidad para HPOS ya no vuelve a incluir automáticamente en tus pedidos los cambios de pedido realizados en la base de datos de entradas. Si tu sitio utiliza código personalizado o plugins que modifican pedidos fuera de WooCommerce, esto puede afectar a cómo se manejan los datos de los pedidos. <a href=\"%s\">Obtén más información sobre este cambio y qué hacer</a>."
-
 #. translators: %s: provider name
 #: includes/class-wc-ajax.php:3894
 msgid "Cannot delete \"%s\" because it is used by existing fulfillments. Remove all fulfillments using this provider first."
 msgstr "No se puede eliminar \"%s\" porque lo utilizan los pedidos existentes. Primero elimina todos los pedidos con este proveedor."
+
+#. translators: %s: URL to blog post about this change.
+#: includes/admin/views/html-notice-sync-on-read-disabled.php:20
+msgid "Compatibility mode for HPOS no longer pulls order changes made to the posts database back into your orders automatically. If your site uses custom code or plugins that modify orders outside of WooCommerce, this may affect how order data is handled. <a href=\"%s\">Learn more about this change and what to do</a>."
+msgstr "El modo de compatibilidad para HPOS ya no vuelve a incluir automáticamente en tus pedidos los cambios de pedido realizados en la base de datos de entradas. Si tu sitio utiliza código personalizado o plugins que modifican pedidos fuera de WooCommerce, esto puede afectar a cómo se manejan los datos de los pedidos. <a href=\"%s\">Obtén más información sobre este cambio y qué hacer</a>."
 
 #: includes/admin/views/html-notice-sync-on-read-disabled.php:15
 msgid "HPOS order \"sync on read\" has been disabled"
@@ -1512,10 +1512,6 @@ msgstr "Título del grupo de ajustes."
 msgid "Description of the settings group."
 msgstr "Descripción del grupo de ajustes."
 
-#: src/Internal/RestApi/Routes/V4/Settings/OfflinePaymentMethods/Schema/OfflinePaymentMethodSchema.php:54
-msgid "Current enabled state for all payment methods."
-msgstr "Estado actual habilitado para todos los métodos de pago."
-
 #: src/Internal/RestApi/Routes/V4/Settings/OfflinePaymentMethods/Schema/OfflinePaymentMethodSchema.php:63
 msgid "Grouped settings for offline payment methods."
 msgstr "Ajustes agrupados para los métodos de pago sin conexión."
@@ -1592,6 +1588,10 @@ msgstr "La cuenta del índice %d debe ser un objeto."
 #: src/Internal/RestApi/Routes/V4/Settings/Products/Controller.php:105
 msgid "Sorry, you are not allowed to access product settings."
 msgstr "No tienes permiso para acceder a los ajustes de productos."
+
+#: src/Internal/RestApi/Routes/V4/Settings/OfflinePaymentMethods/Schema/OfflinePaymentMethodSchema.php:54
+msgid "Current enabled state for all payment methods."
+msgstr "Estado actual activado para todos los métodos de pago."
 
 #: src/Internal/RestApi/Routes/V4/Refunds/Schema/RefundSchema.php:238
 msgid "Total refunded for this item."
@@ -1741,25 +1741,13 @@ msgstr "Excluye los productos que pertenecen a ID de categorías de productos es
 msgid "Filter refunds by order ID."
 msgstr "Filtra los reembolsos por el ID del pedido."
 
-#: src/Internal/Features/FeaturesController.php:386
-msgid "Enable order data caching in the datastore. This feature only works with high-performance order storage and is recommended for stores using object caching."
-msgstr "Habilita el caché de datos de pedidos en el almacén de datos. Esta función solo funciona con almacenamiento de pedidos de alto rendimiento y se recomienda para tiendas que usan caché de objetos."
-
 #: src/Internal/Features/FeaturesController.php:546
 msgid "Agentic Checkout API"
 msgstr "API Agentic Checkout"
 
-#: src/Internal/Features/FeaturesController.php:547
-msgid "Enable the Agentic Checkout API for AI-powered checkout experiences (e.g., ChatGPT). This adds REST API endpoints that allow AI agents to create and manage checkout sessions."
-msgstr "Habilita la API Agentic Checkout para experiencias de pago basadas en IA (por ejemplo, ChatGPT). Esto añade variables de la API REST que permiten a los agentes de IA crear y gestionar sesiones de pago."
-
 #: src/Internal/Features/FeaturesController.php:558
 msgid "Push Notifications"
 msgstr "Notificaciones push"
-
-#: src/Internal/Features/FeaturesController.php:559
-msgid "Enable push notifications for the WooCommerce mobile apps to receive order notifications and store updates."
-msgstr "Habilita las notificaciones push de las aplicaciones móviles de WooCommerce para recibir notificaciones de pedidos y actualizaciones de la tienda."
 
 #. translators: 1. The name of an email template; 2. Email address.
 #: src/Internal/Orders/OrderActionsRestController.php:612
@@ -1802,6 +1790,18 @@ msgstr "El título del grupo de notas del pedido."
 #: src/Internal/RestApi/Routes/V4/OrderNotes/Schema/OrderNoteSchema.php:85
 msgid "The group of order note."
 msgstr "El grupo de notas del pedido."
+
+#: src/Internal/Features/FeaturesController.php:386
+msgid "Enable order data caching in the datastore. This feature only works with high-performance order storage and is recommended for stores using object caching."
+msgstr "Activa la caché de datos de pedidos en el almacén de datos. Esta función solo funciona con almacenamiento de pedidos de alto rendimiento y se recomienda para tiendas que usan caché de objetos."
+
+#: src/Internal/Features/FeaturesController.php:547
+msgid "Enable the Agentic Checkout API for AI-powered checkout experiences (e.g., ChatGPT). This adds REST API endpoints that allow AI agents to create and manage checkout sessions."
+msgstr "Activa la la API Agentic Checkout para experiencias de pago basadas en IA (por ejemplo, ChatGPT). Esto añade variables de la API REST que permiten a los agentes de IA crear y gestionar sesiones de pago."
+
+#: src/Internal/Features/FeaturesController.php:559
+msgid "Enable push notifications for the WooCommerce mobile apps to receive order notifications and store updates."
+msgstr "Activa las notificaciones push de las aplicaciones móviles de WooCommerce para recibir avisos de pedidos y actualizaciones de la tienda."
 
 #. translators: %d: number of orders updated
 #: src/Internal/Admin/Analytics.php:270
@@ -1962,7 +1962,7 @@ msgstr "Tu cuenta de PayPal está restringida desde PayPal. Esto podría impedir
 #. translators: %s: Link to PayPal sandbox testing guide page
 #: src/Blocks/Payments/Integrations/PayPal.php:106
 msgid "<strong>Sandbox mode enabled</strong>. Only sandbox test accounts can be used. See the <a href=\"%s\">PayPal Sandbox Testing Guide</a> for more details."
-msgstr "<strong>Modo de entorno de pruebas habilitado</strong>. Solo se pueden utilizar cuentas de prueba de entornos de pruebas. Para obtener más información, consulta la <a href=\"%s\">guía de pruebas del entorno de pruebas de PayPal</a>."
+msgstr "<strong>Modo de entorno de pruebas activo</strong>. Solo se pueden utilizar cuentas de prueba de entornos de pruebas. Para obtener más información, consulta la <a href=\"%s\">guía de pruebas del entorno de pruebas de PayPal</a>."
 
 #: includes/emails/class-wc-email-customer-refunded-order.php:71
 msgid "Notifies customers when their order has been partially or fully refunded."
@@ -2438,10 +2438,6 @@ msgstr "Escuchar el audio"
 msgid "Description for the setting field."
 msgstr "Descripción del campo de ajuste."
 
-#: src/Internal/RestApi/Routes/V4/Settings/General/Schema/GeneralSettingsSchema.php:209
-msgid "Set your store's address, visibility, currency, language, and timezone."
-msgstr "Establece la dirección, visibilidad, moneda, idioma y zona horaria de tu tienda."
-
 #: src/Internal/RestApi/Routes/V4/Settings/Account/Schema/AccountSettingsSchema.php:54
 #: src/Internal/RestApi/Routes/V4/Settings/Email/Schema/EmailSettingsSchema.php:61
 #: src/Internal/RestApi/Routes/V4/Settings/Emails/Schema/EmailsSettingsSchema.php:128
@@ -2452,6 +2448,10 @@ msgstr "Establece la dirección, visibilidad, moneda, idioma y zona horaria de t
 #: src/Internal/RestApi/Routes/V4/Settings/Tax/Schema/TaxSettingsSchema.php:54
 msgid "Flat key-value mapping of all setting field values."
 msgstr "Asignación de clave-valor plana de todos los valores de campo de ajuste."
+
+#: src/Internal/RestApi/Routes/V4/Settings/General/Schema/GeneralSettingsSchema.php:209
+msgid "Set your store's address, visibility, currency, language, and timezone."
+msgstr "Establece la dirección, visibilidad, moneda, idioma y zona horaria de tu tienda."
 
 #: src/Internal/RestApi/Routes/V4/Settings/Account/Schema/AccountSettingsSchema.php:124
 #: src/Internal/RestApi/Routes/V4/Settings/Emails/Schema/EmailsSettingsSchema.php:203
@@ -2666,10 +2666,6 @@ msgstr "Añadir a la descripción del carrito."
 msgid "Add to cart details."
 msgstr "Añadir a los detalles del carrito."
 
-#: includes/gateways/paypal/includes/settings-paypal.php:93
-msgid "When enabled, PayPal will use the address provided by the checkout form, and prevent the buyer from changing it inside the PayPal payment page. Disable this to let buyers choose a shipping address from their PayPal account. PayPal verifies addresses therefore this setting can cause errors (we recommend keeping it disabled)."
-msgstr "Cuando se activa, PayPal utilizará la dirección proporcionada por el formulario de pago y evitará que el comprador la cambie dentro de la página de pago de PayPal. Desactiva esta opción para que los compradores puedan elegir una dirección de envío de su cuenta de PayPal. PayPal verifica las direcciones por lo que este ajuste puede causar errores (recomendamos mantenerlo desactivado)."
-
 #: src/Internal/RestApi/Routes/V4/AbstractController.php:269
 #: src/Internal/RestApi/Routes/V4/AbstractController.php:273
 msgid "Sorry, you cannot update resources."
@@ -2693,6 +2689,10 @@ msgstr "El ID de pedido es obligatorio."
 #: includes/rest-api/Controllers/Version4/class-wc-rest-v4-controller.php:52
 msgid "Sorry, you are not allowed to perform this action."
 msgstr "No tienes permisos realizar esta acción."
+
+#: includes/gateways/paypal/includes/settings-paypal.php:93
+msgid "When enabled, PayPal will use the address provided by the checkout form, and prevent the buyer from changing it inside the PayPal payment page. Disable this to let buyers choose a shipping address from their PayPal account. PayPal verifies addresses therefore this setting can cause errors (we recommend keeping it disabled)."
+msgstr "Cuando se activa, PayPal utilizará la dirección proporcionada por el formulario de pago y evitará que el comprador la cambie dentro de la página de pago de PayPal. Desactiva esta opción para que los compradores puedan elegir una dirección de envío de su cuenta de PayPal. PayPal verifica las direcciones por lo que este ajuste puede causar errores (recomendamos mantenerlo desactivado)."
 
 #: includes/admin/settings/class-wc-settings-emails.php:167
 msgid "\"Reply-to\" name"
@@ -3620,12 +3620,6 @@ msgstr "En este momento, no hay información de seguimiento disponible para este
 msgid "Here’s the latest info we have:"
 msgstr "Esta es la información más reciente que tenemos:"
 
-#: templates/emails/block/customer-fulfillment-deleted.php:32
-#: templates/emails/customer-fulfillment-deleted.php:32
-#: templates/emails/plain/customer-fulfillment-deleted.php:24
-msgid "We wanted to let you know that one of the previously fulfilled shipments from your order has been removed from our system. This may have been due to a correction or an update in our fulfillment records. Don’t worry — this won’t affect any items you’ve already received."
-msgstr "Queríamos informarte de que uno de los envíos completados anteriormente de tu pedido se ha eliminado de nuestro sistema. Esto puede deberse a una corrección o a una actualización en nuestros registros de pedidos. No te preocupes: esto no afectará a ningún artículo que ya hayas recibido."
-
 #. translators: %s: Link to My Account > Orders page.
 #: templates/emails/email-fulfillment-details.php:42
 msgid "You can access more details of your order by visiting <a href=\"%s\" target=\"_blank\">My Account > Orders</a>, and selecting the order you wish to see the latest status for."
@@ -3637,6 +3631,12 @@ msgstr "Puedes acceder a más detalles de tu pedido accediendo a <a href=\"%s\" 
 #: templates/emails/plain/customer-fulfillment-updated.php:25
 msgid "Some details of your shipment have recently been updated. This may include tracking information, item contents, or delivery status."
 msgstr "Recientemente se han actualizado algunos datos de tu envío. Esto puede incluir la información de seguimiento, los artículos que contiene o el estado de la entrega."
+
+#: templates/emails/block/customer-fulfillment-deleted.php:32
+#: templates/emails/customer-fulfillment-deleted.php:32
+#: templates/emails/plain/customer-fulfillment-deleted.php:24
+msgid "We wanted to let you know that one of the previously fulfilled shipments from your order has been removed from our system. This may have been due to a correction or an update in our fulfillment records. Don’t worry — this won’t affect any items you’ve already received."
+msgstr "Queríamos informarte de que uno de los envíos completados anteriormente de tu pedido se ha eliminado de nuestro sistema. Esto puede deberse a una corrección o a una actualización en nuestros registros de pedidos. No te preocupes: esto no afectará a ningún artículo que ya hayas recibido."
 
 #: templates/emails/block/customer-fulfillment-created.php:32
 #: templates/emails/customer-fulfillment-created.php:32
@@ -3824,18 +3824,6 @@ msgstr "Respuesta al actualizar el pedido."
 msgid "Get fulfillment response."
 msgstr "Respuesta al obtener el pedido."
 
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:751
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:809
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:857
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:897
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:947
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:1044
-#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:1117
-#: src/Internal/RestApi/Routes/V4/Fulfillments/Controller.php:113
-#: src/Internal/RestApi/Routes/V4/Fulfillments/Schema/FulfillmentSchema.php:41
-msgid "Unique identifier for the fulfillment."
-msgstr "Identificador único para el pedido."
-
 #: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:732
 msgid "Create fulfillment response."
 msgstr "Respuesta al crear el pedido."
@@ -3851,6 +3839,18 @@ msgstr "El ID de pedido es necesario."
 #: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:510
 msgid "Fulfillment deleted successfully."
 msgstr "Pedido eliminado correctamente."
+
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:751
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:809
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:857
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:897
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:947
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:1044
+#: src/Admin/Features/Fulfillments/OrderFulfillmentsRestController.php:1117
+#: src/Internal/RestApi/Routes/V4/Fulfillments/Controller.php:113
+#: src/Internal/RestApi/Routes/V4/Fulfillments/Schema/FulfillmentSchema.php:41
+msgid "Unique identifier for the fulfillment."
+msgstr "Identificador único para el pedido."
 
 #: src/Admin/Features/Fulfillments/FulfillmentUtils.php:483
 msgid "No fulfillments"
@@ -3964,10 +3964,6 @@ msgstr "En curso"
 msgid "Stats about groups of customers."
 msgstr "Estadísticas sobre grupos de clientes."
 
-#: src/Internal/Features/FeaturesController.php:516
-msgid "Enable the Order Fulfillments feature to manage order fulfillment and shipping."
-msgstr "Activa la función Pedidos completados para gestionar la finalización de los pedidos y el envío."
-
 #: src/Internal/Features/FeaturesController.php:515
 msgid "Order Fulfillments"
 msgstr "Pedidos completados"
@@ -4041,6 +4037,10 @@ msgstr "Elige algunos productos para añadirlos al carrito."
 #: src/Internal/RestApi/Routes/V4/Products/Controller.php:2004
 msgid "Limit search to specific fields when used with search parameter. Available fields: name, sku, global_unique_id, description, short_description. This argument takes precedence over all other search parameters."
 msgstr "Limita la búsqueda a campos específicos cuando se usa con un parámetro de búsqueda. Campos disponibles: name, sku, global_unique_id, description y short_description. Este argumento tiene prioridad sobre todos los demás parámetros de búsqueda."
+
+#: src/Internal/Features/FeaturesController.php:516
+msgid "Enable the Order Fulfillments feature to manage order fulfillment and shipping."
+msgstr "Activa la función de pedidos completados para gestionar la finalización de los pedidos y el envío."
 
 #: includes/rest-api/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php:157
 msgid "This tool will repair the coupons lookup table data with missing discount amounts. This process may take a while."
@@ -5248,18 +5248,6 @@ msgstr "Desde qué punto del flujo de incorporación se ha activado esta solicit
 msgid "The upmost entry point from where the merchant entered the onboarding flow."
 msgstr "El punto de entrada más avanzado desde el que el vendedor entró en el flujo de incorporación."
 
-#: src/Internal/Admin/RemoteFreeExtensions/DefaultFreeExtensions.php:535
-msgid "Save on shipping with WooCommerce Shipping"
-msgstr "Ahorra en los envíos con WooCommerce Shipping"
-
-#: includes/admin/meta-boxes/views/html-product-data-advanced.php:85
-#: includes/admin/settings/class-wc-settings-point-of-sale.php:30
-#: src/Internal/Admin/Orders/ListTable.php:611
-#: src/Internal/Features/FeaturesController.php:494
-#: src/Internal/Traits/OrderAttributionMeta.php:318
-msgid "Point of Sale"
-msgstr "Punto de venta"
-
 #: src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsRestController.php:77
 #: src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsRestController.php:105
 #: src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsRestController.php:132
@@ -5276,6 +5264,18 @@ msgstr "Punto de venta"
 #: src/Internal/Admin/Settings/PaymentsProviders/WooPayments/WooPaymentsRestController.php:442
 msgid "ISO3166 alpha-2 country code. Defaults to the stored providers business location country code."
 msgstr "Código de país ISO3166 alpha-2. Por defecto, es el código de país de la ubicación de la empresa de los proveedores guardados."
+
+#: src/Internal/Admin/RemoteFreeExtensions/DefaultFreeExtensions.php:535
+msgid "Save on shipping with WooCommerce Shipping"
+msgstr "Ahorra en los envíos con WooCommerce Shipping"
+
+#: includes/admin/meta-boxes/views/html-product-data-advanced.php:85
+#: includes/admin/settings/class-wc-settings-point-of-sale.php:30
+#: src/Internal/Admin/Orders/ListTable.php:611
+#: src/Internal/Features/FeaturesController.php:494
+#: src/Internal/Traits/OrderAttributionMeta.php:318
+msgid "Point of Sale"
+msgstr "Punto de venta"
 
 #: src/Internal/Admin/RemoteFreeExtensions/DefaultFreeExtensions.php:537
 msgid "Print discounted USPS, UPS, and DHL labels"
@@ -6218,7 +6218,7 @@ msgstr "Esta herramienta generará las columnas relacionadas con el coste de los
 
 #: src/Internal/Features/FeaturesController.php:475
 msgid "Enable the block-based email editor for transactional emails."
-msgstr "Habilitar el editor de correo electrónico basado en bloques para los correos electrónicos transaccionales."
+msgstr "Activa el editor de correo electrónico basado en bloques para los correos electrónicos transaccionales."
 
 #: src/Internal/Admin/Suggestions/PaymentsExtensionSuggestions.php:4192
 msgid "GoCardless"
@@ -42623,12 +42623,6 @@ msgstr "Nombre de la nueva clase de envío"
 msgid "Sorry, you have reached your download limit for this file"
 msgstr "Lo siento, has alcanzado el límite de descargas para este archivo"
 
-#. translators: %s: shipping location (prefix e.g. 'to' + ISO 3166-1 alpha-2
-#. country code)
-#: includes/class-wc-checkout.php:961
-msgid "Unfortunately <strong>we do not ship %s</strong>. Please enter an alternative shipping address."
-msgstr "Desafortunadamente, <strong>no enviamos a %s</strong>. Por favor, introduce una dirección de envío alternativa."
-
 #. translators: %s: product name
 #: includes/class-wc-cart.php:1320
 #: src/Blocks/BlockTypes/AddToCartWithOptions/AddToCartWithOptions.php:266
@@ -42806,6 +42800,12 @@ msgstr "Lo siento, el cupón «%s» no se puede aplicar al contenido de tu carri
 #: includes/class-wc-coupon.php:1259 includes/class-wc-discounts.php:895
 msgid "Sorry, coupon \"%s\" is not valid for sale items."
 msgstr "Lo siento, el cupón «%s» no es válido para artículos rebajados."
+
+#. translators: %s: shipping location (prefix e.g. 'to' + ISO 3166-1 alpha-2
+#. country code)
+#: includes/class-wc-checkout.php:961
+msgid "Unfortunately <strong>we do not ship %s</strong>. Please enter an alternative shipping address."
+msgstr "Desafortunadamente, <strong>no enviamos %s</strong>. Introduce una dirección de envío alternativa."
 
 #: includes/admin/views/html-admin-page-status-report.php:204
 msgid "Displays whether or not WordPress is in Debug Mode."

@@ -1,7 +1,9 @@
 (function () {
   "use strict";
 
-  var checkoutSelector = ".wp-block-woocommerce-checkout, .wc-block-checkout";
+  var blockCheckoutSelector = ".wp-block-woocommerce-checkout, .wc-block-checkout";
+  var classicCheckoutSelector = "form.checkout.woocommerce-checkout";
+  var checkoutSelector = blockCheckoutSelector + ", " + classicCheckoutSelector;
   var nativeSelectors = {
     firstName: [
       'input[autocomplete="given-name"]',
@@ -50,8 +52,9 @@
     "Phone (optional)": "Teléfono (opcional)",
     "Phone": "Celular",
     "Postcode (optional)": "Código postal (opcional)",
-    "Place Order": "Confirmar pedido",
-    "Place order": "Confirmar pedido",
+    "Place Order": "Realizar el pedido",
+    "Place order": "Realizar el pedido",
+    "Pay via Wompi gateway.": "Paga de forma segura con Wompi.",
     "There are no payment methods available. Please contact us for help placing your order.": "Estamos preparando las opciones de pago para tu ubicación. Escríbenos y finalizamos tu pedido contigo."
   };
   var touchedFields = {};
@@ -106,6 +109,14 @@
 
     checkout.parentNode.insertBefore(top, checkout);
     document.body.classList.add("beslock-checkout-ready");
+
+    if (isClassicCheckout(checkout)) {
+      document.body.classList.add("beslock-checkout-classic");
+    }
+  }
+
+  function isClassicCheckout(checkout) {
+    return !!(checkout && checkout.matches && checkout.matches(classicCheckoutSelector));
   }
 
   function getConfig() {
@@ -230,7 +241,8 @@
   }
 
   function syncOrderNoteToNative() {
-    var note = stripAlternateContactNote(getCustomFieldValue("orderNote"));
+    var customNote = getCustomFieldValue("orderNote");
+    var note = stripAlternateContactNote(customNote || getNativeValue("orderNote"));
     var alternateContactNote = buildAlternateContactNote();
 
     if (alternateContactNote) {
@@ -347,6 +359,10 @@
       return;
     }
 
+    if (isClassicCheckout(checkout)) {
+      return;
+    }
+
     if (existing) {
       if (checkoutMain && existing.parentNode !== checkoutMain) {
         checkoutMain.insertBefore(existing, checkoutMain.firstChild);
@@ -420,7 +436,305 @@
     }
   }
 
+  function setClassicFieldLabel(fieldId, label) {
+    var field = document.getElementById(fieldId + "_field");
+    var labelNode = field ? field.querySelector("label") : null;
+
+    if (labelNode && labelNode.childNodes.length) {
+      labelNode.childNodes[0].nodeValue = label + " ";
+    } else if (labelNode) {
+      labelNode.textContent = label;
+    }
+  }
+
+  function moveClassicField(wrapper, fieldId, extraClass) {
+    var field = document.getElementById(fieldId + "_field");
+
+    if (!field || !wrapper) {
+      return null;
+    }
+
+    if (field.parentNode !== wrapper) {
+      wrapper.appendChild(field);
+    }
+
+    if (extraClass) {
+      field.classList.add(extraClass);
+    }
+
+    return field;
+  }
+
+  function ensureClassicContactDetails(checkout) {
+    var customerDetails = checkout.querySelector("#customer_details");
+    var billing = customerDetails ? customerDetails.querySelector(".woocommerce-billing-fields") : null;
+    var fields = billing ? billing.querySelector(".woocommerce-billing-fields__field-wrapper") : null;
+    var labels = getLabels();
+    var heading;
+    var noteField;
+    var noteHelp;
+    var additionalFields;
+
+    if (!customerDetails || !billing || !fields) {
+      return;
+    }
+
+    customerDetails.classList.add("beslock-classic-customer-details");
+    fields.classList.add("beslock-classic-contact-grid");
+
+    heading = billing.querySelector("h3");
+    if (heading) {
+      heading.textContent = labels.contactTitle || "Datos de contacto";
+      heading.classList.add("beslock-checkout-section-title");
+    }
+
+    setClassicFieldLabel("billing_first_name", labels.firstName || "Nombre");
+    setClassicFieldLabel("billing_last_name", labels.lastName || "Apellido");
+    setClassicFieldLabel("billing_phone", labels.phone || "Celular");
+    setClassicFieldLabel("billing_email", labels.email || "Correo electrónico");
+
+    moveClassicField(fields, "billing_first_name", "beslock-classic-contact-field");
+    moveClassicField(fields, "billing_last_name", "beslock-classic-contact-field");
+    moveClassicField(fields, "billing_phone", "beslock-classic-contact-field");
+    moveClassicField(fields, "billing_email", "beslock-classic-contact-field");
+
+    [
+      "billing_company",
+      "billing_country",
+      "billing_address_1",
+      "billing_address_2",
+      "billing_city",
+      "billing_state",
+      "billing_postcode"
+    ].forEach(function (fieldId) {
+      var field = moveClassicField(fields, fieldId, "beslock-classic-address-field");
+
+      if (field) {
+        field.setAttribute("aria-hidden", "true");
+      }
+    });
+
+    additionalFields = checkout.querySelector(".woocommerce-additional-fields");
+    noteField = document.getElementById("order_comments_field");
+    if (noteField) {
+      moveClassicField(fields, "order_comments", "beslock-classic-note-field");
+      noteField.classList.add("beslock-checkout-contact__field--full");
+      setClassicFieldLabel("order_comments", labels.orderNote || "Añadir una nota a tu pedido");
+
+      if (!noteField.querySelector(".beslock-classic-note-help")) {
+        noteHelp = document.createElement("span");
+        noteHelp.className = "beslock-classic-note-help";
+        noteHelp.textContent = labels.orderNoteHelp || "Puedes contarnos detalles de entrega, instalación o coordinación.";
+        noteField.appendChild(noteHelp);
+      }
+    }
+
+    if (additionalFields) {
+      additionalFields.classList.add("beslock-classic-hidden-shell");
+    }
+
+    if (!billing.querySelector(".beslock-checkout-alt-contact")) {
+      billing.appendChild(createAlternateContact(labels));
+    }
+  }
+
+  function ensureClassicShippingSummary(checkout) {
+    var customerDetails = checkout.querySelector("#customer_details");
+    var labels = getLabels();
+    var config = getConfig();
+    var summary = checkout.querySelector(".beslock-classic-shipping-summary");
+    var addressText;
+    var editLink;
+
+    if (!customerDetails) {
+      return null;
+    }
+
+    if (!summary) {
+      summary = document.createElement("section");
+      summary.className = "beslock-checkout-shipping-summary beslock-classic-shipping-summary";
+      summary.innerHTML = [
+        '<h2 class="beslock-checkout-section-title"></h2>',
+        '<div class="beslock-checkout-shipping-summary__address">',
+        '<p class="beslock-checkout-shipping-summary__text" data-beslock-shipping-summary-text="true"></p>',
+        '<a class="beslock-checkout-shipping-summary__edit"></a>',
+        '</div>'
+      ].join("");
+    }
+
+    summary.querySelector(".beslock-checkout-section-title").textContent = labels.shippingTitle || "Datos de envío";
+
+    addressText = summary.querySelector("[data-beslock-shipping-summary-text]");
+    if (addressText) {
+      addressText.textContent = config.shippingDestination || labels.shippingFallback || "La entrega se tomará de la dirección confirmada en el carrito.";
+    }
+
+    editLink = summary.querySelector(".beslock-checkout-shipping-summary__edit");
+    if (editLink) {
+      editLink.href = config.cartUrl || "/carrito/";
+      editLink.textContent = labels.editShipping || "Editar en carrito";
+    }
+
+    if (summary.parentNode !== checkout || summary.previousElementSibling !== customerDetails) {
+      checkout.insertBefore(summary, customerDetails.nextSibling);
+    }
+
+    return summary;
+  }
+
+  function ensureClassicPaymentSection(checkout, shippingSummary) {
+    var payment = checkout.querySelector("#payment");
+    var heading = checkout.querySelector(".beslock-classic-payment-heading");
+    var insertAfter = shippingSummary || checkout.querySelector("#customer_details");
+    var placeOrder;
+    var returnLink;
+    var placeButton;
+
+    if (!payment || !insertAfter) {
+      return;
+    }
+
+    if (!heading) {
+      heading = document.createElement("h2");
+      heading.className = "beslock-checkout-section-title beslock-classic-payment-heading";
+      heading.textContent = "Opciones de pago";
+    }
+
+    if (heading.parentNode !== checkout || heading.previousElementSibling !== insertAfter) {
+      checkout.insertBefore(heading, insertAfter.nextSibling);
+    }
+
+    if (payment.parentNode !== checkout || payment.previousElementSibling !== heading) {
+      checkout.insertBefore(payment, heading.nextSibling);
+    }
+
+    placeOrder = payment.querySelector(".place-order");
+    placeButton = placeOrder ? placeOrder.querySelector("#place_order") : null;
+    if (placeOrder && placeButton && !placeOrder.querySelector(".beslock-classic-return-cart")) {
+      returnLink = document.createElement("a");
+      returnLink.className = "beslock-classic-return-cart";
+      returnLink.href = (getConfig().cartUrl || "/carrito/");
+      returnLink.textContent = "← Volver al carrito";
+      placeOrder.insertBefore(returnLink, placeButton);
+    }
+  }
+
+  function buildClassicTotalsMarkup(tfoot) {
+    var rows = tfoot ? Array.prototype.slice.call(tfoot.querySelectorAll("tr")) : [];
+
+    return rows.map(function (row) {
+      var label = row.querySelector("th");
+      var value = row.querySelector("td");
+      var className = row.className ? " " + row.className : "";
+
+      if (!label || !value) {
+        return "";
+      }
+
+      return [
+        '<div class="beslock-classic-total-row',
+        className,
+        '"><span class="beslock-classic-total-row__label">',
+        label.textContent.trim(),
+        '</span><span class="beslock-classic-total-row__value">',
+        value.innerHTML,
+        '</span></div>'
+      ].join("");
+    }).join("");
+  }
+
+  function ensureClassicCouponRow(orderReview) {
+    var couponRow = orderReview.querySelector(".beslock-classic-coupon-row");
+    var couponToggle = document.querySelector(".woocommerce-form-coupon-toggle");
+    var couponForm = document.querySelector("form.checkout_coupon");
+
+    if (couponToggle) {
+      couponToggle.classList.add("beslock-classic-coupon-source");
+    }
+
+    if (couponForm) {
+      couponForm.classList.add("beslock-classic-coupon-source");
+    }
+
+    if (couponRow) {
+      couponRow.remove();
+    }
+
+    return null;
+  }
+
+  function ensureClassicTotals(orderReview, table, couponRow) {
+    var tfoot = table ? table.querySelector("tfoot") : null;
+    var totals = orderReview.querySelector(".beslock-classic-totals");
+    var markup = buildClassicTotalsMarkup(tfoot);
+
+    if (!totals) {
+      totals = document.createElement("div");
+      totals.className = "beslock-classic-totals";
+    }
+
+    if (totals.getAttribute("data-beslock-totals") !== markup) {
+      totals.innerHTML = markup;
+      totals.setAttribute("data-beslock-totals", markup);
+    }
+
+    if (table && totals.parentNode !== orderReview) {
+      orderReview.insertBefore(totals, table.nextSibling);
+    } else if (couponRow && totals.parentNode !== orderReview) {
+      orderReview.insertBefore(totals, couponRow.nextSibling);
+    }
+  }
+
+  function ensureClassicOrderSummary(checkout) {
+    var orderReview = checkout.querySelector("#order_review");
+    var heading = checkout.querySelector("#order_review_heading");
+    var table = orderReview ? orderReview.querySelector(".woocommerce-checkout-review-order-table") : null;
+    var couponRow;
+
+    if (!orderReview) {
+      return;
+    }
+
+    orderReview.classList.add("beslock-classic-order-card");
+
+    if (heading) {
+      heading.textContent = "Resumen del pedido";
+      heading.classList.add("beslock-checkout-section-title");
+
+      if (heading.parentNode !== orderReview) {
+        orderReview.insertBefore(heading, orderReview.firstChild);
+      }
+    }
+
+    if (table) {
+      table.classList.add("beslock-classic-order-table");
+      couponRow = ensureClassicCouponRow(orderReview);
+      ensureClassicTotals(orderReview, table, couponRow);
+    }
+  }
+
+  function ensureClassicCheckoutLayout() {
+    var checkout = document.querySelector(classicCheckoutSelector);
+    var shippingSummary;
+
+    if (!checkout) {
+      return;
+    }
+
+    checkout.classList.add("beslock-classic-checkout");
+    ensureClassicContactDetails(checkout);
+    shippingSummary = ensureClassicShippingSummary(checkout);
+    ensureClassicPaymentSection(checkout, shippingSummary);
+    ensureClassicOrderSummary(checkout);
+  }
+
   function hydrateCustomFields() {
+    var checkout = document.querySelector(checkoutSelector);
+
+    if (isClassicCheckout(checkout)) {
+      return;
+    }
+
     var config = getConfig();
     var values = {
       firstName: getNativeValue("firstName") || (config.contact && config.contact.firstName) || "",
@@ -485,9 +799,21 @@
   }
 
   function enhanceCheckout() {
+    var checkout = document.querySelector(checkoutSelector);
+
+    if (!checkout) {
+      return;
+    }
+
     ensureCheckoutTop();
-    ensureCheckoutDetails();
-    hydrateCustomFields();
+
+    if (isClassicCheckout(checkout)) {
+      ensureClassicCheckoutLayout();
+    } else {
+      ensureCheckoutDetails();
+      hydrateCustomFields();
+    }
+
     translateCheckoutText(document.body);
   }
 
