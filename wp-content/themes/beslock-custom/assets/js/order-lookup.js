@@ -20,6 +20,14 @@
     errorEl.hidden = !message;
   }
 
+  function announceSectionChange(section) {
+    try {
+      document.dispatchEvent(new CustomEvent('beslock:drawer-section-change', {
+        detail: { section: section || 'order-lookup' }
+      }));
+    } catch (error) {}
+  }
+
   function setupForm(form) {
     if (!form || form.dataset.orderLookupReady === 'true') return;
     form.dataset.orderLookupReady = 'true';
@@ -77,6 +85,7 @@
 
     toggle.addEventListener('click', function () {
       var willOpen = panel.hidden;
+      if (willOpen) announceSectionChange('order-lookup');
       panel.hidden = !willOpen;
       toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
       if (item) item.classList.toggle('is-open', willOpen);
@@ -86,6 +95,16 @@
           try { orderInput.focus({ preventScroll: true }); } catch (error) { orderInput.focus(); }
         }, 120);
       }
+    });
+
+    document.addEventListener('beslock:drawer-section-change', function (event) {
+      var section = event && event.detail ? event.detail.section : '';
+      if (!section || section === 'order-lookup') return;
+
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      if (item) item.classList.remove('is-open');
+      showError(errorEl, '');
     });
   }
 

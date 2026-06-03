@@ -282,6 +282,14 @@
     setCloseMode('close');
   }
 
+  function announceSectionChange(section) {
+    try {
+      document.dispatchEvent(new CustomEvent('beslock:drawer-section-change', {
+        detail: { section: section || 'products' }
+      }));
+    } catch (e) {}
+  }
+
   function productsBackAction() {
     if (!productsPanel || !productsToggle) return;
     try {
@@ -520,6 +528,7 @@
           setCloseMode('close');
         } else {
 	          // open products: slide panel in
+	          announceSectionChange('products');
 	          warmProductsPanelImages();
 	          productsToggle.setAttribute('aria-expanded', 'true');
           productsPanel.setAttribute('aria-hidden', 'false');
@@ -545,6 +554,7 @@
           // fallback simple toggle (attempt to animate then hide)
 	          if (productsPanel.hidden) {
 	            // open
+	            announceSectionChange('products');
 	            warmProductsPanelImages();
 	            productsPanel.hidden = false;
             productsPanel.setAttribute('aria-hidden', 'false');
@@ -659,6 +669,14 @@
 
     menuBtn.addEventListener('click', function (e) { e && e.preventDefault(); openDrawer(); });
     if (backdrop) backdrop.addEventListener('click', function (e) { e && e.preventDefault(); closeDrawerAction(); });
+
+    document.addEventListener('beslock:drawer-section-change', function (event) {
+      var section = event && event.detail ? event.detail.section : '';
+      if (section && section !== 'products') {
+        resetProductsNavigation();
+        setCloseMode('close');
+      }
+    });
 
     window.addEventListener('keydown', function (e) {
       if ((e.key === 'Escape' || e.key === 'Esc') && mobileDrawer.classList.contains('is-open')) {
