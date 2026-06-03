@@ -28,7 +28,7 @@
     ],
     "available_city_behavior": "La instalación se puede seleccionar como servicio opcional en la finalización del producto.",
     "unavailable_city_behavior": "Mostrar el precio de instalación, bloquear selección inmediata y llevar a Consultar instalación.",
-    "unavailable_city_message": "Para otras ciudades, podemos validar cobertura. Consulta la instalación cuando tengas el número de pedido.",
+    "unavailable_city_message": "Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.",
     "consult_target": "support-drawer:consult-installation"
   },
   "installation_types": [

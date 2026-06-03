@@ -60,7 +60,7 @@ body.woocommerce-cart .woocommerce-info .button {
   --cart-muted: #637166;
   --cart-ink: #0f2017;
   --cart-panel: #ffffff;
-  padding: clamp(1.25rem, 3vw, 2.5rem) 1rem clamp(3.5rem, 7vw, 6rem);
+  padding: clamp(0.45rem, 1.35vw, 1rem) 1rem clamp(2.5rem, 5vw, 4rem);
 }
 
 .beslock-cart--checkout .beslock-cart__container {
@@ -75,14 +75,14 @@ body.woocommerce-cart .woocommerce-info .button {
 .beslock-cart__header {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: clamp(0.45rem, 1.35vw, 0.9rem);
 }
 
 .beslock-cart-progress {
   position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(74px, 1fr));
-  width: min(100%, 430px);
+  width: min(100%, 400px);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -91,9 +91,9 @@ body.woocommerce-cart .woocommerce-info .button {
 .beslock-cart-progress::before {
   content: "";
   position: absolute;
-  top: 15px;
-  right: calc(16.666% + 15px);
-  left: calc(16.666% + 15px);
+  top: 13px;
+  right: calc(16.666% + 13px);
+  left: calc(16.666% + 13px);
   height: 1px;
   background: rgba(16, 32, 24, 0.14);
 }
@@ -102,11 +102,11 @@ body.woocommerce-cart .woocommerce-info .button {
   position: relative;
   display: grid;
   justify-items: center;
-  gap: 0.45rem;
+  gap: 0.25rem;
   min-height: 0;
   padding: 0;
   color: var(--cart-muted);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
@@ -119,13 +119,13 @@ body.woocommerce-cart .woocommerce-info .button {
 .beslock-cart-progress__number {
   display: grid;
   place-items: center;
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   border: 1px solid rgba(16, 32, 24, 0.16);
   border-radius: 999px;
   background: #fff;
   color: var(--cart-muted);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 850;
   font-variant-numeric: tabular-nums;
   box-shadow: 0 8px 20px rgba(16, 32, 24, 0.045);
@@ -546,8 +546,8 @@ body.woocommerce-cart .woocommerce-info .button {
 }
 
 .beslock-cart__summary .cart_totals > h2 {
-  margin-bottom: 0.85rem;
-  padding-bottom: 0.85rem;
+  margin-bottom: 0.55rem;
+  padding-bottom: 0.55rem;
   border-bottom: 1px solid rgba(16, 32, 24, 0.12);
 }
 
@@ -571,8 +571,8 @@ body.woocommerce-cart .woocommerce-info .button {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) auto !important;
   align-items: start !important;
-  gap: 1rem !important;
-  padding: 0.9rem 0 !important;
+  gap: 0.7rem !important;
+  padding: 0.7rem 0 !important;
   border: 0 !important;
   border-bottom: 1px solid rgba(16, 32, 24, 0.09) !important;
   background: transparent !important;
@@ -619,8 +619,8 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
 
 .beslock-cart__summary .woocommerce-shipping-totals.shipping {
   grid-template-columns: minmax(0, 1fr) auto !important;
-  gap: 0.85rem 1rem !important;
-  padding: 1.15rem 0 1.25rem !important;
+  gap: 0.55rem 0.7rem !important;
+  padding: 0.78rem 0 0.85rem !important;
 }
 
 .beslock-cart__summary .woocommerce-shipping-totals.shipping > td {
@@ -636,7 +636,7 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
 
 .beslock-cart__summary .shop_table .order-total {
   margin: 0.15rem 0 0;
-  padding: 1rem 0 0;
+  padding: 0.72rem 0 0;
   border-top: 1px solid rgba(16, 32, 24, 0.1);
   border-bottom: 0;
   background: transparent;
@@ -646,7 +646,7 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
 .beslock-cart__summary .shop_table .order-total td,
 .beslock-cart__summary .shop_table .order-total strong {
   color: var(--cart-ink);
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 900;
 }
 
@@ -655,7 +655,7 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
   margin: 0;
   padding: 0;
   color: var(--cart-muted);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   list-style: none;
 }
 
@@ -666,7 +666,7 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
   align-self: start;
   justify-self: end;
   justify-items: end;
-  gap: 0.28rem;
+  gap: 0.18rem;
 }
 
 .beslock-cart__summary .woocommerce-shipping-methods li {
@@ -677,7 +677,7 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
 .beslock-cart__summary .woocommerce-shipping-methods label {
   display: block;
   color: #5f6b61;
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 850;
   line-height: 1.18;
 }
@@ -689,15 +689,152 @@ body.woocommerce-cart .beslock-cart__summary .shop_table td::before {
   width: 100%;
   max-width: none;
   color: #657066;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 650;
-  line-height: 1.42;
+  line-height: 1.3;
   text-align: left;
 }
 
 .beslock-cart__summary .woocommerce-shipping-destination strong {
   color: inherit;
   font-weight: 760;
+}
+
+body.woocommerce-cart .beslock-cart--checkout .beslock-cart__summary .shop_table tr.beslock-cart-installation {
+  grid-template-columns: 1fr !important;
+  gap: 0.55rem !important;
+  padding: 0.82rem 0 0.9rem !important;
+}
+
+body.woocommerce-cart .beslock-cart--checkout .beslock-cart__summary .shop_table tr.beslock-cart-installation > th,
+body.woocommerce-cart .beslock-cart--checkout .beslock-cart__summary .shop_table tr.beslock-cart-installation > td {
+  grid-column: 1 / -1 !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.beslock-cart-installation__form {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.beslock-cart-installation__choice {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.65rem;
+  margin: 0;
+  color: #223329;
+  cursor: pointer;
+}
+
+.beslock-cart-installation__choice input[type="checkbox"] {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin: 0.06rem 0 0;
+  border: 1px solid rgba(3, 69, 38, 0.3);
+  border-radius: 6px;
+  background: #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.beslock-cart-installation__choice input[type="checkbox"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--beslock-green, #034526);
+  transform: scale(0);
+  transition: transform 150ms ease;
+}
+
+.beslock-cart-installation__choice input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.beslock-cart-installation__choice input[type="checkbox"]:disabled {
+  border-color: rgba(16, 32, 24, 0.18);
+  background: rgba(16, 32, 24, 0.04);
+  cursor: not-allowed;
+}
+
+.beslock-cart-installation__copy {
+  display: grid;
+  gap: 0.16rem;
+  min-width: 0;
+}
+
+.beslock-cart-installation__title {
+  color: var(--cart-ink);
+  font-size: 0.92rem;
+  font-weight: 850;
+  line-height: 1.22;
+}
+
+.beslock-cart-installation__message {
+  color: var(--cart-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.beslock-cart-installation__price {
+  color: var(--cart-ink);
+  font-size: 0.94rem;
+  font-weight: 850;
+  line-height: 1.22;
+  white-space: nowrap;
+}
+
+.beslock-cart-installation__items {
+  display: grid;
+  gap: 0.18rem;
+  margin: 0;
+  padding: 0 0 0 1.45rem;
+  list-style: none;
+}
+
+.beslock-cart-installation__items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--cart-muted);
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+.beslock-cart-installation.is-unavailable .beslock-cart-installation__choice {
+  cursor: default;
+}
+
+.beslock-cart-installation.is-unavailable .beslock-cart-installation__title,
+.beslock-cart-installation.is-unavailable .beslock-cart-installation__price {
+  color: #4f5d54;
+}
+
+.beslock-cart-installation__form.is-updating {
+  opacity: 0.68;
+  pointer-events: none;
+}
+
+.beslock-cart-installation__form .screen-reader-text,
+.beslock-cart-installation__submit {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
 }
 
 .beslock-cart__summary .woocommerce-shipping-calculator {
@@ -838,17 +975,17 @@ body.woocommerce-cart .beslock-cart--checkout .beslock-cart__summary .woocommerc
 }
 
 .beslock-cart__summary .wc-proceed-to-checkout {
-  padding: 1rem 0 0;
+  padding: 0.62rem 0 0;
 }
 
 .beslock-cart__summary .checkout-button {
   display: flex !important;
   width: 100% !important;
-  min-height: 50px !important;
+  min-height: 46px !important;
   align-items: center;
   justify-content: center;
   font-size: 1rem !important;
-  line-height: 50px !important;
+  line-height: 46px !important;
 }
 
 .beslock-cart__summary .cross-sells {

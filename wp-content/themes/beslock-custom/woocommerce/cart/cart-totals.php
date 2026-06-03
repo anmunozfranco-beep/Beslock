@@ -55,7 +55,16 @@ defined( 'ABSPATH' ) || exit;
 
         <?php endif; ?>
 
+        <?php
+        if ( function_exists( 'beslock_render_cart_installation_option' ) ) {
+            beslock_render_cart_installation_option();
+        }
+        ?>
+
         <?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
+            <?php if ( isset( $fee->name ) && 'Instalación BESLOCK' === $fee->name ) : ?>
+                <?php continue; ?>
+            <?php endif; ?>
             <tr class="fee">
                 <th><?php echo esc_html( $fee->name ); ?></th>
                 <td data-title="<?php echo esc_attr( $fee->name ); ?>"><?php wc_cart_totals_fee_html( $fee ); ?></td>
