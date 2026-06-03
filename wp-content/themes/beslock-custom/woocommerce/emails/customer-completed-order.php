@@ -49,17 +49,19 @@ unset( $GLOBALS['beslock_email_order'] );
 	</p>
 	<p>
 		<?php
-		echo wp_kses(
-			sprintf(
-				/* translators: %s: BESLOCK brand */
-				esc_html__( 'Gracias por confiar en %s. Te dejamos el resumen de tu compra y los datos de envío para que tengas todo a la mano.', 'beslock-custom' ),
-				beslock_email_registered_brand()
-			),
-			beslock_email_registered_mark_allowed_html()
-		);
-		?>
-	</p>
-</div>
+			echo wp_kses(
+				sprintf(
+					/* translators: %s: BESLOCK brand */
+					esc_html__( 'Gracias por confiar en %s', 'beslock-custom' ),
+					beslock_email_registered_brand()
+				),
+				beslock_email_registered_mark_allowed_html()
+			);
+			?>
+			<br>
+			<?php esc_html_e( 'Te dejamos el resumen de tu compra y los datos de envío para que tengas todo a la mano.', 'beslock-custom' ); ?>
+		</p>
+	</div>
 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" class="beslock-note-card" role="presentation">
 	<tr>

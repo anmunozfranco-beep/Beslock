@@ -98,12 +98,14 @@ $date_created       = $beslock_order ? $beslock_order->get_date_created() : null
 										<tr>
 											<td id="template_header_image" class="beslock-email-logo" valign="middle">
 												<?php
-												$image_html = '<span class="beslock-logo-wrap"><img src="' . esc_url( $img ) . '" alt="' . esc_attr( $store_name ) . '" /><sup class="beslock-registered-mark beslock-logo-mark" aria-hidden="true">®</sup></span>';
+												$logo_image = '<img src="' . esc_url( $img ) . '" alt="' . esc_attr( $store_name ) . '" />';
+												$logo_mark  = '<sup class="beslock-registered-mark beslock-logo-mark" aria-hidden="true">®</sup>';
 												if ( $header_image_url ) {
-													echo '<a href="' . esc_url( $header_image_url ) . '" target="_blank" style="display:inline-block;text-decoration:none;">' . wp_kses_post( $image_html ) . '</a>';
-												} else {
-													echo wp_kses_post( $image_html );
+													$logo_image = '<a href="' . esc_url( $header_image_url ) . '" target="_blank" style="display:inline-block;text-decoration:none;">' . $logo_image . '</a>';
+													$logo_mark  = '<a href="' . esc_url( $header_image_url ) . '" target="_blank" style="color:#034526;text-decoration:none;">' . $logo_mark . '</a>';
 												}
+												$image_html = '<table border="0" cellpadding="0" cellspacing="0" class="beslock-logo-table" role="presentation"><tr><td class="beslock-logo-image-cell" valign="top">' . $logo_image . '</td><td class="beslock-logo-mark-cell" valign="top">' . $logo_mark . '</td></tr></table>';
+												echo wp_kses_post( $image_html );
 												?>
 											</td>
 											<td class="beslock-email-kicker" valign="middle">
