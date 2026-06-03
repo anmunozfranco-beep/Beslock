@@ -76,14 +76,20 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </li>
 
-      <li class="mobile-menu__item" role="none">
-        <a class="mobile-menu__link" href="<?php echo esc_url( home_url( '/contact' ) ); ?>" role="menuitem">
+      <li class="mobile-menu__item mobile-menu__item--support" role="none">
+        <button type="button" class="mobile-menu__link mobile-menu__link--support" id="supportToggle" data-js="support-toggle" aria-expanded="false" aria-controls="supportOptionsPanel" role="menuitem">
           <i class="bi bi-headset" aria-hidden="true"></i>
           <div class="mobile-menu__meta">
             <span class="mobile-menu__title">Contacto</span>
             <span class="mobile-menu__subtitle">Estamos para ayudarte</span>
           </div>
-        </a>
+        </button>
+
+        <div id="supportOptionsPanel" class="support-options-panel" data-js="support-options" role="region" aria-hidden="true" hidden>
+          <button type="button" class="support-option-button" data-support-target="consult-installation">Consultar instalación</button>
+          <button type="button" class="support-option-button" data-support-target="schedule-installation">Programar instalación</button>
+          <button type="button" class="support-option-button" data-support-target="project-purchases">Compras para proyectos</button>
+        </div>
       </li>
 
     </ul>
@@ -101,6 +107,211 @@ if ( ! defined( 'ABSPATH' ) ) {
         </button>
       </header>
       <div class="manuals-drawer__body" data-js="manuals-drawer-body" tabindex="-1"></div>
+    </div>
+  </aside>
+
+  <aside id="supportDrawer" class="manuals-drawer support-drawer" data-js="support-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'Soporte BESLOCK', 'beslock' ); ?>">
+    <div class="manuals-drawer__shell support-drawer__shell">
+      <header class="manuals-drawer__header support-drawer__header">
+        <div>
+          <p class="manuals-drawer__eyebrow" data-js="support-drawer-eyebrow">Contacto</p>
+          <h2 class="manuals-drawer__title" data-js="support-drawer-title">Estamos para ayudarte</h2>
+        </div>
+        <button type="button" class="manuals-drawer__close support-drawer__close" data-js="support-drawer-close" aria-label="<?php esc_attr_e( 'Cerrar soporte', 'beslock' ); ?>">
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <div class="manuals-drawer__body support-drawer__body" data-js="support-drawer-body" tabindex="-1">
+        <section id="supportPanelConsultInstallation" class="support-drawer__panel" data-js="support-panel" data-support-panel="consult-installation" data-support-title="Consultar instalación" hidden>
+          <div class="support-drawer__content">
+            <p class="support-drawer__intro">Consulta si tu pedido incluye servicio de instalación y conoce el siguiente paso según el estado de tu compra.</p>
+
+            <form class="support-form" data-js="support-installation-check-form" novalidate>
+              <label class="support-form__field">
+                <span>Número de pedido</span>
+                <input type="text" name="order_number" inputmode="numeric" autocomplete="off" required>
+              </label>
+
+              <button type="submit" class="support-button support-button--primary">Consultar pedido</button>
+              <p class="support-form__message" data-js="support-installation-message" hidden></p>
+            </form>
+
+            <div class="support-status-grid" data-js="support-installation-results" hidden>
+              <article class="support-status-card" data-support-result="included" hidden>
+                <strong>Tu pedido incluye servicio de instalación.</strong>
+                <p>Puedes proceder a programar tu visita con uno de nuestros cerrajeros afiliados.</p>
+                <button type="button" class="support-button support-button--secondary" data-support-target="schedule-installation">Programar instalación</button>
+              </article>
+
+              <article class="support-status-card" data-support-result="not-included" hidden>
+                <strong>Tu pedido no incluye servicio de instalación.</strong>
+                <p>Si necesitas apoyo, podemos revisar opciones disponibles para tu caso.</p>
+                <button type="button" class="support-button support-button--secondary" data-support-target="schedule-installation">Solicitar ayuda</button>
+              </article>
+
+              <article class="support-status-card" data-support-result="out-of-coverage" hidden>
+                <strong>Cobertura por validar.</strong>
+                <p>Actualmente la instalación está disponible inicialmente en Bogotá, Medellín, Cali y Barranquilla. Si tu pedido corresponde a otra ciudad, contáctanos para validar cobertura.</p>
+                <button type="button" class="support-button support-button--secondary" data-support-target="schedule-installation">Validar cobertura</button>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="supportPanelScheduleInstallation" class="support-drawer__panel" data-js="support-panel" data-support-panel="schedule-installation" data-support-title="Programar instalación" hidden>
+          <div class="support-drawer__content">
+            <p class="support-drawer__intro">Si tu pedido incluye instalación, completa la información para coordinar la visita con nuestro equipo de soporte.</p>
+
+            <form class="support-form support-form--grid" data-js="support-schedule-form" novalidate>
+              <label class="support-form__field">
+                <span>Número de pedido</span>
+                <input type="text" name="order_number" inputmode="numeric" autocomplete="off" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Ciudad</span>
+                <select name="city" required>
+                  <option value="">Selecciona una ciudad</option>
+                  <option value="bogota">Bogotá</option>
+                  <option value="medellin">Medellín</option>
+                  <option value="cali">Cali</option>
+                  <option value="barranquilla">Barranquilla</option>
+                </select>
+              </label>
+
+              <label class="support-form__field">
+                <span>Nombre de contacto</span>
+                <input type="text" name="contact_name" autocomplete="name" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Teléfono</span>
+                <input type="tel" name="phone" autocomplete="tel" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Correo electrónico</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+
+              <label class="support-form__field support-form__field--full">
+                <span>Dirección de instalación</span>
+                <input type="text" name="installation_address" autocomplete="street-address" required>
+              </label>
+
+              <label class="support-form__field support-form__field--full">
+                <span>Observaciones</span>
+                <textarea name="notes" rows="4"></textarea>
+              </label>
+
+              <p class="support-note support-form__field--full">La instalación está disponible inicialmente en Bogotá, Medellín, Cali y Barranquilla. Para otras ciudades, nuestro equipo validará cobertura antes de confirmar el servicio.</p>
+
+              <button type="submit" class="support-button support-button--primary">Solicitar programación</button>
+              <p class="support-form__message support-form__field--full" data-js="support-schedule-message" hidden></p>
+            </form>
+          </div>
+        </section>
+
+        <section id="supportPanelProjectPurchases" class="support-drawer__panel support-drawer__panel--project" data-js="support-panel" data-support-panel="project-purchases" data-support-title="Compras para proyectos" hidden>
+          <div class="support-drawer__content">
+            <p class="support-drawer__intro">Solicita una cotización para proyectos residenciales, comerciales, institucionales o compras por volumen.</p>
+
+            <?php // Este flujo aplica especialmente para compras superiores a COP $2.400.000. ?>
+            <form class="support-form support-form--grid" data-js="support-project-form" novalidate>
+              <label class="support-form__field support-form__field--full">
+                <span>Empresa o proyecto</span>
+                <input type="text" name="project_name" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Nombre de contacto</span>
+                <input type="text" name="contact_name" autocomplete="name" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Correo electrónico</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Teléfono</span>
+                <input type="tel" name="phone" autocomplete="tel" required>
+              </label>
+
+              <label class="support-form__field">
+                <span>Ciudad</span>
+                <input type="text" name="city" required>
+              </label>
+
+              <label class="support-form__field support-form__field--full">
+                <span>Tipo de proyecto</span>
+                <select name="project_type" required>
+                  <option value="">Selecciona el tipo de proyecto</option>
+                  <option value="hogar">Hogar</option>
+                  <option value="comercial">Comercial</option>
+                  <option value="constructor">Constructor</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="oficina">Oficina</option>
+                  <option value="institucional">Institucional</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </label>
+
+              <div class="support-project-products support-form__field--full" data-js="support-project-products">
+                <div class="support-project-products__header">
+                  <span>Referencias</span>
+                  <button type="button" class="support-button support-button--ghost" data-js="support-add-product-row">Agregar referencia</button>
+                </div>
+
+                <div class="support-project-products__rows" data-js="support-project-rows">
+                  <div class="support-project-row" data-js="support-project-row">
+                    <label class="support-form__field">
+                      <span>Modelo</span>
+                      <select name="product_model[]" required>
+                        <option value="">Modelo</option>
+                        <option value="e-flex">e-Flex</option>
+                        <option value="e-nova">e-Nova</option>
+                        <option value="e-touch">e-Touch</option>
+                        <option value="e-prime">e-Prime</option>
+                        <option value="e-orbit">Órbita electrónica</option>
+                        <option value="e-shield">Escudo electrónico</option>
+                      </select>
+                    </label>
+
+                    <label class="support-form__field">
+                      <span>Cantidad</span>
+                      <input type="number" name="quantity[]" min="1" inputmode="numeric" required>
+                    </label>
+
+                    <label class="support-form__field">
+                      <span>Ubicación de instalación</span>
+                      <input type="text" name="installation_location[]" required>
+                    </label>
+
+                    <button type="button" class="support-project-row__remove" data-js="support-remove-product-row" aria-label="Eliminar referencia" hidden>
+                      <i class="bi bi-x-lg" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <label class="support-checkbox support-form__field--full">
+                <input type="checkbox" name="include_installation_quote">
+                <span>Incluir cotización de instalación</span>
+              </label>
+
+              <label class="support-form__field support-form__field--full">
+                <span>Comentarios del proyecto</span>
+                <textarea name="project_comments" rows="4"></textarea>
+              </label>
+
+              <button type="submit" class="support-button support-button--primary">Solicitar cotización</button>
+              <p class="support-form__message support-form__field--full" data-js="support-project-message" hidden></p>
+            </form>
+          </div>
+        </section>
+      </div>
     </div>
   </aside>
 
