@@ -283,12 +283,12 @@ nav#mobileDrawer .mobile-menu__item--manuals.is-open .manuals-chevron {
 
 nav#mobileDrawer .manuals-sections-panel {
   display: grid;
-  gap: var(--drawer-section-gap);
+  gap: clamp(0.62rem, 1.4vh, 0.95rem);
   align-content: center;
   max-width: 100%;
   flex: 1 1 auto;
   min-height: 0;
-  padding: clamp(1rem, 2.1vh, 1.55rem) 0 clamp(1rem, 2.1vh, 1.55rem) calc(var(--drawer-main-inset) + var(--drawer-main-item-gap) + 1.35rem);
+  padding: clamp(0.95rem, 2vh, 1.35rem) 0 clamp(1rem, 2.1vh, 1.55rem) calc(var(--drawer-main-inset) + var(--drawer-main-item-gap) + 1.35rem);
   overflow-x: hidden !important;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -305,39 +305,57 @@ nav#mobileDrawer .manuals-sections-panel[hidden] {
 }
 
 nav#mobileDrawer .manuals-section-button {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
-  min-height: 0;
-  padding: clamp(0.14rem, 0.45vh, 0.34rem) 0 !important;
+  min-height: 2.35rem;
+  padding: clamp(0.38rem, 0.9vh, 0.55rem) 0 clamp(0.38rem, 0.9vh, 0.55rem) 0.9rem !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
   color: #17211b !important;
   box-shadow: none !important;
   font: inherit !important;
-  font-size: var(--drawer-section-font-size) !important;
-  font-weight: 500 !important;
-  line-height: 1.32 !important;
+  font-size: var(--drawer-section-font-size, clamp(1rem, 1.65vw, 1.1rem)) !important;
+  font-weight: 650 !important;
+  line-height: 1.22 !important;
   text-align: left !important;
   cursor: pointer;
   white-space: normal;
-  transition: color 160ms ease, font-weight 160ms ease;
+  transition: color 180ms ease, transform 180ms ease, font-weight 180ms ease;
+}
+
+nav#mobileDrawer .manuals-section-button::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: rgba(3, 69, 38, 0);
+  transform: scaleY(0.35);
+  transform-origin: center;
+  transition: background-color 180ms ease, transform 180ms ease;
 }
 
 nav#mobileDrawer .manuals-section-button:hover,
-nav#mobileDrawer .manuals-section-button:focus-visible {
-  background: transparent !important;
-  border-color: transparent !important;
-  color: #034526 !important;
-  font-weight: 800 !important;
-  outline: none !important;
-}
-
+nav#mobileDrawer .manuals-section-button:focus-visible,
 nav#mobileDrawer .manuals-section-button.is-active {
   background: transparent !important;
   border-color: transparent !important;
   color: #034526 !important;
   font-weight: 800 !important;
+  outline: none !important;
+  transform: translate3d(0.18rem, 0, 0);
+}
+
+nav#mobileDrawer .manuals-section-button:hover::before,
+nav#mobileDrawer .manuals-section-button:focus-visible::before,
+nav#mobileDrawer .manuals-section-button.is-active::before {
+  background: var(--beslock-green, #034526);
+  transform: scaleY(1);
 }
 
 nav#mobileDrawer.manuals-menu-open .mobile-menu {
@@ -432,17 +450,22 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   pointer-events: none;
   visibility: hidden;
   transform: translate3d(calc(-100% - var(--manuals-drawer-offset)), 0, 0);
+  opacity: 0.98;
   transition:
-    transform 340ms cubic-bezier(.22,.9,.28,1),
+    transform 420ms cubic-bezier(0.2, 0.82, 0.18, 1),
+    opacity 260ms ease,
     visibility 0s linear 340ms;
+  will-change: transform, opacity;
 }
 
 .manuals-drawer.is-open {
   pointer-events: auto;
   visibility: visible;
   transform: translate3d(0, 0, 0);
+  opacity: 1;
   transition:
-    transform 340ms cubic-bezier(.22,.9,.28,1),
+    transform 420ms cubic-bezier(0.2, 0.82, 0.18, 1),
+    opacity 260ms ease,
     visibility 0s;
 }
 
@@ -451,9 +474,11 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  border-left: 1px solid rgba(17, 24, 39, 0.08);
-  background: #fbfcfb;
-  box-shadow: -18px 0 45px rgba(8, 17, 12, 0.12);
+  border-left: 1px solid rgba(3, 69, 38, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 247, 0.96)),
+    #fbfcfb;
+  box-shadow: -24px 0 60px rgba(8, 17, 12, 0.14);
   overflow: hidden;
 }
 
@@ -538,6 +563,15 @@ nav#mobileDrawer.manuals-menu-open .manuals-sections-panel {
   color: var(--menu-link-color, #0b0b0b);
   box-shadow: none;
   cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.manuals-drawer__close:hover,
+.manuals-drawer__close:focus-visible {
+  outline: none;
+  background: rgba(3, 69, 38, 0.08);
+  color: var(--beslock-green, #034526);
+  transform: translate3d(0, -1px, 0);
 }
 
 .manuals-drawer__close .bi {
