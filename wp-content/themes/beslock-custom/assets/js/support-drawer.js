@@ -53,6 +53,14 @@
     if (orderItem) orderItem.classList.remove('is-open');
   }
 
+  function announceSectionChange(section) {
+    try {
+      document.dispatchEvent(new CustomEvent('beslock:drawer-section-change', {
+        detail: { section: section || 'support' }
+      }));
+    } catch (e) {}
+  }
+
   function toggleSupportMenu(force) {
     if (!els.toggle || !els.optionsPanel) return;
 
@@ -106,6 +114,7 @@
 
   function openSupportDrawer(target) {
     if (!els.drawer || !els.body) return;
+    announceSectionChange('support');
 
     var panel = showPanel(target || 'consult-installation');
     if (!panel) return;
@@ -301,17 +310,20 @@
 
     els.toggle.addEventListener('click', function (event) {
       event.preventDefault();
+      announceSectionChange('support');
       toggleSupportMenu();
     });
 
     if (manualsToggle) {
       manualsToggle.addEventListener('click', function () {
+        closeSupportDrawer();
         toggleSupportMenu(false);
       });
     }
 
     if (orderToggle) {
       orderToggle.addEventListener('click', function () {
+        closeSupportDrawer();
         toggleSupportMenu(false);
       });
     }
@@ -343,6 +355,12 @@
     }, true);
 
     document.addEventListener('beslock:mobile-drawer-reset', resetSupportNavigation);
+    document.addEventListener('beslock:drawer-section-change', function (event) {
+      var section = event && event.detail ? event.detail.section : '';
+      if (section && section !== 'support') {
+        resetSupportNavigation();
+      }
+    });
 
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {

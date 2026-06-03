@@ -272,6 +272,14 @@
     return wrap;
   }
 
+  function announceSectionChange(section) {
+    try {
+      document.dispatchEvent(new CustomEvent('beslock:drawer-section-change', {
+        detail: { section: section || 'manuals' }
+      }));
+    } catch (e) {}
+  }
+
   function openManualsDrawer() {
     if (!els.manualsDrawer) return;
     if (els.mobileDrawer) {
@@ -1070,13 +1078,16 @@
 
     els.manualsToggle.addEventListener('click', function (event) {
       event.preventDefault();
-      toggleSections();
+      announceSectionChange('manuals');
+      toggleSections(true);
+      openModels(GUIDE_SECTIONS[0]);
     });
 
     els.sectionButtons = els.sectionsPanel.querySelectorAll('[data-manual-section]');
     for (var i = 0; i < els.sectionButtons.length; i++) {
       els.sectionButtons[i].addEventListener('click', function () {
         var sectionDef = getSectionDef(this.getAttribute('data-manual-section'));
+        announceSectionChange('manuals');
         openGuideSection(sectionDef);
       });
     }
@@ -1096,6 +1107,12 @@
     }, true);
 
     document.addEventListener('beslock:mobile-drawer-reset', resetManualsNavigation);
+    document.addEventListener('beslock:drawer-section-change', function (event) {
+      var section = event && event.detail ? event.detail.section : '';
+      if (section && section !== 'manuals') {
+        resetManualsNavigation();
+      }
+    });
 
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {
