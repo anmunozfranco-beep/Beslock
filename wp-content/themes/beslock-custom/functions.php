@@ -49,6 +49,9 @@ if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/product-hooks.p
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/cart.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/cart.php';
 }
+if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/checkout.php' ) ) {
+  require_once get_stylesheet_directory() . '/inc/woocommerce/checkout.php';
+}
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/order-lookup.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/order-lookup.php';
 }

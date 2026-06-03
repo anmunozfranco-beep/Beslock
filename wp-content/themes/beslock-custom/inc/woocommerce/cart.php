@@ -910,6 +910,43 @@ add_filter( 'woocommerce_cart_shipping_method_full_label', function( $label, $me
   );
 }, 20, 2 );
 
+function beslock_get_free_shipping_rate_id() {
+  return 'beslock_free_shipping';
+}
+
+add_filter( 'woocommerce_package_rates', function( $rates, $package ) {
+  if ( is_admin() && ! wp_doing_ajax() ) {
+    return $rates;
+  }
+
+  if ( ! class_exists( 'WC_Shipping_Rate' ) ) {
+    return $rates;
+  }
+
+  $rate_id = beslock_get_free_shipping_rate_id();
+  $rate    = new WC_Shipping_Rate(
+    $rate_id,
+    __( 'Envío gratis', 'beslock-custom' ),
+    0,
+    array(),
+    'beslock_free_shipping'
+  );
+
+  return array(
+    $rate_id => $rate,
+  );
+}, 100, 2 );
+
+add_filter( 'woocommerce_shipping_chosen_method', function( $default, $rates, $chosen_method ) {
+  $rate_id = beslock_get_free_shipping_rate_id();
+
+  if ( isset( $rates[ $rate_id ] ) ) {
+    return $rate_id;
+  }
+
+  return $default;
+}, 100, 3 );
+
 add_filter( 'woocommerce_cart_calculate_shipping_address', function( $address ) {
   if ( empty( $_POST['calc_shipping'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
     return $address;
