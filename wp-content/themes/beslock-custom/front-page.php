@@ -34,12 +34,7 @@ get_header();
     get_template_part( 'templates/blocks/products-portfolio' );
   }
 
-  // Discover / CTA section
-  if ( file_exists( get_stylesheet_directory() . '/template-parts/discover.php' ) ) {
-    get_template_part( 'template-parts/discover' );
-  } elseif ( file_exists( get_stylesheet_directory() . '/templates/blocks/discover.php' ) ) {
-    get_template_part( 'templates/blocks/discover' );
-  }
+  // Discover / CTA section intentionally hidden from the front page.
   ?>
 
   <?php if ( ! file_exists( get_stylesheet_directory() . '/template-parts/hero.php' ) && ! file_exists( get_stylesheet_directory() . '/templates/blocks/hero.php' ) ) : ?>
