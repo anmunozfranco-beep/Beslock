@@ -582,15 +582,22 @@
     }, { passive: false });
   }
 
-  // touch-only helper: blur on touch to avoid focus rectangle
+  // Touch-only helper: keep non-form drawer taps tidy without stealing focus
+  // from inputs/selects on mobile Safari.
   (function touchBlurHelper() {
     var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
     if (!isTouch) return;
+
+    function isEditableDrawerTarget(target) {
+      if (!target || !target.closest) return false;
+      return !!target.closest('input, textarea, select, option, label, form, [contenteditable="true"]');
+    }
+
     document.addEventListener('touchstart', function (ev) {
       try {
         var t = ev.target;
         var inside = t && t.closest && t.closest('#mobileDrawer');
-        if (inside) {
+        if (inside && !isEditableDrawerTarget(t)) {
           if (document.activeElement && document.activeElement !== document.body) {
             try { document.activeElement.blur && document.activeElement.blur(); } catch (e) {}
           }
@@ -603,7 +610,7 @@
       try {
         var t = ev.target;
         var inside = t && t.closest && t.closest('#mobileDrawer');
-        if (inside) {
+        if (inside && !isEditableDrawerTarget(t)) {
           setTimeout(function () {
             try { if (document.activeElement && document.activeElement !== document.body) document.activeElement.blur(); } catch (e) {}
           }, 0);
