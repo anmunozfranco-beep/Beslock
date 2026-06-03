@@ -345,6 +345,23 @@
     validateAddress();
   }
 
+  function initInstallationOption(root) {
+    var forms = root.querySelectorAll('.beslock-cart-installation__form');
+
+    forms.forEach(function (form) {
+      if (form.dataset.beslockInstallation === 'ready') return;
+
+      var checkbox = form.querySelector('input[name="beslock_include_installation"]');
+      if (!checkbox || checkbox.disabled) return;
+
+      form.dataset.beslockInstallation = 'ready';
+      checkbox.addEventListener('change', function () {
+        form.classList.add('is-updating');
+        form.submit();
+      });
+    });
+  }
+
   function getCartUrl() {
     if (window.wc_cart_params && window.wc_cart_params.cart_url) {
       return window.wc_cart_params.cart_url;
@@ -456,6 +473,7 @@
   function refreshCartEnhancements() {
     init(document);
     initShippingAddressValidation(document);
+    initInstallationOption(document);
     recoverEmptyCartViewIfBlank();
   }
 

@@ -12,6 +12,128 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
+if ( ! function_exists( 'beslock_get_portfolio_installation_policy' ) ) {
+  function beslock_get_portfolio_installation_policy() {
+    $policy = array(
+      'available_cities' => array( 'Bogotá', 'Medellín', 'Cali', 'Barranquilla' ),
+      'consult_target' => 'support-drawer:consult-installation',
+      'unavailable_city_message' => 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.',
+      'available_city_behavior' => 'La instalación se puede seleccionar como servicio opcional en la finalización del producto.',
+      'unavailable_city_behavior' => 'Mostrar el precio de instalación, bloquear selección inmediata y llevar a Consultar instalación.',
+    );
+
+    $source_file = get_stylesheet_directory() . '/data/product-pricing-source.json';
+    if ( ! file_exists( $source_file ) ) {
+      return $policy;
+    }
+
+    $source = json_decode( file_get_contents( $source_file ), true );
+    if ( ! is_array( $source ) || empty( $source['installation_policy'] ) || ! is_array( $source['installation_policy'] ) ) {
+      return $policy;
+    }
+
+    $source_policy = $source['installation_policy'];
+    if ( ! empty( $source_policy['available_cities'] ) && is_array( $source_policy['available_cities'] ) ) {
+      $cities = array();
+      foreach ( $source_policy['available_cities'] as $city ) {
+        if ( is_array( $city ) && ! empty( $city['label'] ) ) {
+          $cities[] = sanitize_text_field( $city['label'] );
+        } elseif ( is_string( $city ) && $city !== '' ) {
+          $cities[] = sanitize_text_field( $city );
+        }
+      }
+      if ( ! empty( $cities ) ) {
+        $policy['available_cities'] = array_values( array_unique( $cities ) );
+      }
+    }
+
+    foreach ( array( 'consult_target', 'unavailable_city_message', 'available_city_behavior', 'unavailable_city_behavior' ) as $key ) {
+      if ( ! empty( $source_policy[ $key ] ) && is_string( $source_policy[ $key ] ) ) {
+        $policy[ $key ] = $source_policy[ $key ];
+      }
+    }
+
+    return $policy;
+  }
+}
+
+if ( ! function_exists( 'beslock_format_portfolio_price_meta' ) ) {
+  function beslock_format_portfolio_price_meta( $value ) {
+    $value = trim( (string) $value );
+    if ( $value === '' ) {
+      return '';
+    }
+
+    if ( function_exists( 'wc_format_decimal' ) ) {
+      return wc_format_decimal( $value );
+    }
+
+    return preg_replace( '/[^0-9.]/', '', $value );
+  }
+}
+
+if ( ! function_exists( 'beslock_sync_portfolio_pricing_meta' ) ) {
+  function beslock_sync_portfolio_pricing_meta( $pid, $prod, $policy, $is_dry, $slug, &$log ) {
+    if ( ! $pid || ! is_array( $prod ) ) {
+      return;
+    }
+
+    $product_price = isset( $prod['price'] ) ? beslock_format_portfolio_price_meta( $prod['price'] ) : '';
+    $installation_price = isset( $prod['installation_price'] ) ? beslock_format_portfolio_price_meta( $prod['installation_price'] ) : '';
+    $pvp = '';
+
+    if ( isset( $prod['pvp'] ) ) {
+      $pvp = beslock_format_portfolio_price_meta( $prod['pvp'] );
+    } elseif ( isset( $prod['pvp_with_installation'] ) ) {
+      $pvp = beslock_format_portfolio_price_meta( $prod['pvp_with_installation'] );
+    } elseif ( $product_price !== '' && $installation_price !== '' ) {
+      $pvp = (string) ( (float) $product_price + (float) $installation_price );
+    }
+
+    $meta = array(
+      '_beslock_pvp' => $pvp,
+      '_beslock_product_price_without_installation' => $product_price,
+      '_beslock_installation_type' => isset( $prod['installation_type'] ) ? sanitize_text_field( $prod['installation_type'] ) : '',
+      '_beslock_installation_sku' => isset( $prod['installation_product_sku'] ) ? sanitize_text_field( $prod['installation_product_sku'] ) : '',
+      '_beslock_installation_price' => $installation_price,
+      '_beslock_installation_available_cities' => implode( '|', array_map( 'sanitize_text_field', (array) ( $policy['available_cities'] ?? array() ) ) ),
+      '_beslock_installation_consult_target' => sanitize_text_field( $policy['consult_target'] ?? 'support-drawer:consult-installation' ),
+      '_beslock_installation_unavailable_city_message' => sanitize_textarea_field( $policy['unavailable_city_message'] ?? '' ),
+      '_beslock_installation_available_city_behavior' => sanitize_textarea_field( $policy['available_city_behavior'] ?? '' ),
+      '_beslock_installation_unavailable_city_behavior' => sanitize_textarea_field( $policy['unavailable_city_behavior'] ?? '' ),
+    );
+
+    if ( $is_dry ) {
+      $log[] = sprintf(
+        '(dry-run) Would set pricing metadata for %s: pvp=%s product_price=%s installation_type=%s installation_price=%s',
+        $slug,
+        $meta['_beslock_pvp'],
+        $meta['_beslock_product_price_without_installation'],
+        $meta['_beslock_installation_type'],
+        $meta['_beslock_installation_price']
+      );
+      return;
+    }
+
+    foreach ( $meta as $key => $value ) {
+      if ( $value === '' ) {
+        delete_post_meta( $pid, $key );
+      } else {
+        update_post_meta( $pid, $key, $value );
+      }
+    }
+
+    $log[] = sprintf(
+      'Synced pricing metadata for %s: pvp=%s product_price=%s installation_type=%s installation_price=%s',
+      $slug,
+      $meta['_beslock_pvp'],
+      $meta['_beslock_product_price_without_installation'],
+      $meta['_beslock_installation_type'],
+      $meta['_beslock_installation_price']
+    );
+  }
+}
+
 if ( ! function_exists( 'beslock_import_images_from_assets' ) ) {
   /**
    * Import images from theme assets into uploads and assign featured/gallery to products.
@@ -169,6 +291,8 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
       try { update_option( 'beslock_last_import_log', $err->get_error_message() ); } catch ( Exception $e ) { }
       return $err;
     }
+
+    $installation_policy = beslock_get_portfolio_installation_policy();
 
     // helper: persist current log to WP option so admin UI can show progress even on crash
     $persist_log = function() use ( &$log ) {
@@ -532,16 +656,27 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
             $wc = wc_get_product( $pid );
             if ( $wc ) {
               $wc->set_regular_price( $price );
+              if ( method_exists( $wc, 'set_sale_price' ) ) {
+                $wc->set_sale_price( '' );
+              }
+              if ( method_exists( $wc, 'set_price' ) ) {
+                $wc->set_price( $price );
+              }
               $wc->save();
               update_post_meta( $pid, '_regular_price', $price );
               update_post_meta( $pid, '_price', $price );
+              delete_post_meta( $pid, '_sale_price' );
             }
           } else {
             update_post_meta( $pid, '_regular_price', $price );
             update_post_meta( $pid, '_price', $price );
+            delete_post_meta( $pid, '_sale_price' );
           }
         }
       }
+
+      beslock_sync_portfolio_pricing_meta( $pid, $prod, $installation_policy, $is_dry, $slug, $log );
+      $persist_log();
 
       // handle featured image + gallery
       $gallery_ids = array();

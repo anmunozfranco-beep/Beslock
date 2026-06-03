@@ -552,6 +552,340 @@ function beslock_format_cart_shipping_destination( $destination = array() ) {
   return implode( ', ', array_values( $unique_parts ) );
 }
 
+function beslock_get_cart_installation_policy() {
+  static $policy = null;
+
+  if ( null !== $policy ) {
+    return $policy;
+  }
+
+  $policy = array(
+    'available_cities' => array( 'Bogotá', 'Medellín', 'Cali', 'Barranquilla' ),
+    'consult_target' => 'support-drawer:consult-installation',
+    'unavailable_city_message' => __( 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.', 'beslock-custom' ),
+  );
+
+  $source_file = trailingslashit( get_stylesheet_directory() ) . 'data/product-pricing-source.json';
+  if ( is_readable( $source_file ) ) {
+    $source = json_decode( file_get_contents( $source_file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+
+    if ( is_array( $source ) && ! empty( $source['installation_policy'] ) && is_array( $source['installation_policy'] ) ) {
+      $source_policy = $source['installation_policy'];
+
+      if ( ! empty( $source_policy['available_cities'] ) && is_array( $source_policy['available_cities'] ) ) {
+        $cities = array();
+
+        foreach ( $source_policy['available_cities'] as $city ) {
+          if ( is_array( $city ) && ! empty( $city['label'] ) ) {
+            $cities[] = sanitize_text_field( $city['label'] );
+          } elseif ( is_string( $city ) && '' !== $city ) {
+            $cities[] = sanitize_text_field( $city );
+          }
+        }
+
+        if ( ! empty( $cities ) ) {
+          $policy['available_cities'] = array_values( array_unique( $cities ) );
+        }
+      }
+
+      if ( ! empty( $source_policy['consult_target'] ) && is_string( $source_policy['consult_target'] ) ) {
+        $policy['consult_target'] = sanitize_text_field( $source_policy['consult_target'] );
+      }
+
+      if ( ! empty( $source_policy['unavailable_city_message'] ) && is_string( $source_policy['unavailable_city_message'] ) ) {
+        $policy['unavailable_city_message'] = sanitize_textarea_field( $source_policy['unavailable_city_message'] );
+      }
+    }
+  }
+
+  return apply_filters( 'beslock_cart_installation_policy', $policy );
+}
+
+function beslock_normalize_installation_city_key( $city ) {
+  $city = function_exists( 'beslock_normalize_location_label' ) ? beslock_normalize_location_label( $city ) : strtolower( trim( (string) $city ) );
+
+  if ( in_array( $city, array( 'bogota d.c.', 'bogota dc' ), true ) ) {
+    return 'bogota';
+  }
+
+  return $city;
+}
+
+function beslock_is_cart_installation_city_available( $city ) {
+  $city_key = beslock_normalize_installation_city_key( $city );
+
+  if ( '' === $city_key ) {
+    return false;
+  }
+
+  $policy = beslock_get_cart_installation_policy();
+  foreach ( (array) $policy['available_cities'] as $available_city ) {
+    if ( $city_key === beslock_normalize_installation_city_key( $available_city ) ) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function beslock_get_cart_installation_city() {
+  if ( ! function_exists( 'WC' ) || ! WC()->customer ) {
+    return '';
+  }
+
+  $city = WC()->customer->get_shipping_city();
+
+  if ( '' === trim( (string) $city ) ) {
+    $city = WC()->customer->get_billing_city();
+  }
+
+  return trim( (string) $city );
+}
+
+function beslock_get_portfolio_product_data_by_slug( $slug ) {
+  static $products = null;
+
+  $slug = sanitize_title( $slug );
+  if ( '' === $slug ) {
+    return array();
+  }
+
+  if ( null === $products ) {
+    $products  = array();
+    $data_file = trailingslashit( get_stylesheet_directory() ) . 'data/products.json';
+
+    if ( is_readable( $data_file ) ) {
+      $data = json_decode( file_get_contents( $data_file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+
+      if ( is_array( $data ) ) {
+        foreach ( $data as $product_data ) {
+          if ( ! empty( $product_data['slug'] ) ) {
+            $products[ sanitize_title( $product_data['slug'] ) ] = $product_data;
+          }
+        }
+      }
+    }
+  }
+
+  return isset( $products[ $slug ] ) && is_array( $products[ $slug ] ) ? $products[ $slug ] : array();
+}
+
+function beslock_get_cart_item_installation_data( $cart_item ) {
+  if ( empty( $cart_item['data'] ) || ! $cart_item['data'] instanceof WC_Product ) {
+    return array();
+  }
+
+  $product    = $cart_item['data'];
+  $product_id = ! empty( $cart_item['product_id'] ) ? absint( $cart_item['product_id'] ) : $product->get_id();
+  $sku        = (string) $product->get_sku();
+
+  if ( 0 === strpos( $sku, 'BESLOCK-INST-' ) ) {
+    return array();
+  }
+
+  $price = get_post_meta( $product_id, '_beslock_installation_price', true );
+  $type  = get_post_meta( $product_id, '_beslock_installation_type', true );
+  $inst_sku = get_post_meta( $product_id, '_beslock_installation_sku', true );
+
+  if ( '' === (string) $price || '' === (string) $type ) {
+    $source = beslock_get_portfolio_product_data_by_slug( $product->get_slug() );
+
+    if ( '' === (string) $price && isset( $source['installation_price'] ) ) {
+      $price = $source['installation_price'];
+    }
+
+    if ( '' === (string) $type && isset( $source['installation_type'] ) ) {
+      $type = $source['installation_type'];
+    }
+
+    if ( '' === (string) $inst_sku && isset( $source['installation_product_sku'] ) ) {
+      $inst_sku = $source['installation_product_sku'];
+    }
+  }
+
+  $price = (float) wc_format_decimal( $price );
+
+  if ( $price <= 0 ) {
+    return array();
+  }
+
+  $quantity = isset( $cart_item['quantity'] ) ? max( 1, (int) $cart_item['quantity'] ) : 1;
+
+  return array(
+    'product_id' => $product_id,
+    'name'       => $product->get_name(),
+    'slug'       => $product->get_slug(),
+    'sku'        => $inst_sku,
+    'type'       => $type,
+    'price'      => $price,
+    'quantity'   => $quantity,
+    'total'      => $price * $quantity,
+  );
+}
+
+function beslock_get_cart_installation_quote() {
+  $quote = array(
+    'has_installable_items' => false,
+    'items'                 => array(),
+    'total'                 => 0.0,
+    'city'                  => beslock_get_cart_installation_city(),
+    'is_city_available'     => false,
+    'available_cities'      => beslock_get_cart_installation_policy()['available_cities'],
+  );
+
+  if ( ! function_exists( 'WC' ) || ! WC()->cart ) {
+    return $quote;
+  }
+
+  foreach ( WC()->cart->get_cart() as $cart_item ) {
+    $item = beslock_get_cart_item_installation_data( $cart_item );
+
+    if ( empty( $item ) ) {
+      continue;
+    }
+
+    $quote['has_installable_items'] = true;
+    $quote['items'][]              = $item;
+    $quote['total']               += $item['total'];
+  }
+
+  $quote['is_city_available'] = beslock_is_cart_installation_city_available( $quote['city'] );
+
+  return $quote;
+}
+
+function beslock_cart_installation_is_selected() {
+  return function_exists( 'WC' ) && WC()->session && 'yes' === WC()->session->get( 'beslock_cart_include_installation' );
+}
+
+function beslock_set_cart_installation_selected( $selected ) {
+  if ( function_exists( 'WC' ) && WC()->session ) {
+    WC()->session->set( 'beslock_cart_include_installation', $selected ? 'yes' : 'no' );
+  }
+}
+
+add_action( 'wp_loaded', function() {
+  if ( empty( $_POST['beslock_cart_installation_action'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+    return;
+  }
+
+  if ( ! isset( $_POST['beslock_cart_installation_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['beslock_cart_installation_nonce'] ) ), 'beslock-cart-installation' ) ) {
+    return;
+  }
+
+  $quote    = beslock_get_cart_installation_quote();
+  $selected = ! empty( $_POST['beslock_include_installation'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
+
+  if ( $selected && ! $quote['is_city_available'] ) {
+    beslock_set_cart_installation_selected( false );
+
+    if ( function_exists( 'wc_add_notice' ) ) {
+      wc_add_notice( __( 'La instalación no se puede adicionar directamente para esta ciudad. Al finalizar la compra podrás consultar disponibilidad con el número de pedido.', 'beslock-custom' ), 'notice' );
+    }
+  } else {
+    beslock_set_cart_installation_selected( $selected );
+  }
+
+  if ( function_exists( 'WC' ) && WC()->cart ) {
+    WC()->cart->calculate_totals();
+  }
+
+  wp_safe_redirect( wc_get_cart_url() );
+  exit;
+}, 20 );
+
+add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
+  if ( is_admin() && ! wp_doing_ajax() ) {
+    return;
+  }
+
+  if ( ! beslock_cart_installation_is_selected() ) {
+    return;
+  }
+
+  $quote = beslock_get_cart_installation_quote();
+
+  if ( empty( $quote['has_installable_items'] ) || empty( $quote['is_city_available'] ) || $quote['total'] <= 0 ) {
+    beslock_set_cart_installation_selected( false );
+    return;
+  }
+
+  $cart->add_fee( __( 'Instalación BESLOCK', 'beslock-custom' ), $quote['total'], false );
+}, 30 );
+
+function beslock_render_cart_installation_option() {
+  $quote = beslock_get_cart_installation_quote();
+
+  if ( empty( $quote['has_installable_items'] ) || $quote['total'] <= 0 ) {
+    return;
+  }
+
+  $is_available = ! empty( $quote['is_city_available'] );
+  $is_selected  = $is_available && beslock_cart_installation_is_selected();
+  $city         = trim( (string) $quote['city'] );
+  $city_label   = '' !== $city ? $city : __( 'tu ciudad', 'beslock-custom' );
+  $policy       = beslock_get_cart_installation_policy();
+  $cities_label = implode( ', ', (array) $quote['available_cities'] );
+
+  if ( ! $is_available && beslock_cart_installation_is_selected() ) {
+    beslock_set_cart_installation_selected( false );
+    $is_selected = false;
+  }
+
+  if ( $is_available ) {
+    $message = $is_selected
+      ? __( 'Incluida en el total.', 'beslock-custom' )
+      : sprintf( __( 'Disponible en %s.', 'beslock-custom' ), $city_label );
+  } elseif ( '' === $city ) {
+    $message = sprintf( __( 'Actualiza la dirección para validar instalación. Disponible directamente en %s.', 'beslock-custom' ), $cities_label );
+  } else {
+    $message = ! empty( $policy['unavailable_city_message'] )
+      ? $policy['unavailable_city_message']
+      : __( 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.', 'beslock-custom' );
+  }
+
+  ?>
+  <tr class="beslock-cart-installation <?php echo $is_available ? 'is-available' : 'is-unavailable'; ?>">
+    <th><?php esc_html_e( 'Instalación', 'beslock-custom' ); ?></th>
+    <td data-title="<?php esc_attr_e( 'Instalación', 'beslock-custom' ); ?>">
+      <form class="beslock-cart-installation__form" method="post" action="<?php echo esc_url( wc_get_cart_url() ); ?>">
+        <input type="hidden" name="beslock_cart_installation_action" value="1">
+        <?php wp_nonce_field( 'beslock-cart-installation', 'beslock_cart_installation_nonce' ); ?>
+        <label class="beslock-cart-installation__choice">
+          <input
+            type="checkbox"
+            name="beslock_include_installation"
+            value="1"
+            <?php checked( $is_selected ); ?>
+            <?php disabled( ! $is_available ); ?>
+          >
+          <span class="beslock-cart-installation__copy">
+            <span class="beslock-cart-installation__title">
+              <?php echo esc_html( $is_available ? __( 'Agregar instalación BESLOCK', 'beslock-custom' ) : __( 'Instalación bajo consulta', 'beslock-custom' ) ); ?>
+            </span>
+            <span class="beslock-cart-installation__message"><?php echo esc_html( $message ); ?></span>
+          </span>
+          <strong class="beslock-cart-installation__price"><?php echo wp_kses_post( wc_price( $quote['total'] ) ); ?></strong>
+        </label>
+        <?php if ( count( (array) $quote['items'] ) > 1 ) : ?>
+          <ul class="beslock-cart-installation__items">
+            <?php foreach ( $quote['items'] as $item ) : ?>
+              <li>
+                <span><?php echo esc_html( $item['name'] ); ?></span>
+                <span><?php echo wp_kses_post( wc_price( $item['total'] ) ); ?></span>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        <?php endif; ?>
+        <?php if ( $is_available ) : ?>
+          <button type="submit" class="beslock-cart-installation__submit"><?php esc_html_e( 'Actualizar instalación', 'beslock-custom' ); ?></button>
+        <?php endif; ?>
+      </form>
+    </td>
+  </tr>
+  <?php
+}
+
 add_filter( 'woocommerce_get_country_locale', function( $locale ) {
   if ( isset( $locale['CO']['city'] ) ) {
     $locale['CO']['city']['label'] = __( 'Ciudad / Municipio', 'beslock-custom' );
