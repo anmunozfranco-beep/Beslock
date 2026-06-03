@@ -3,17 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 ?>
-<nav id="mobileDrawer" class="mobile-drawer" data-js="mobile-drawer" aria-hidden="true" role="dialog" aria-label="<?php esc_attr_e( 'Mobile menu', 'beslock' ); ?>">
+<nav id="mobileDrawer" class="mobile-drawer" data-js="mobile-drawer" aria-hidden="true" role="dialog" aria-label="<?php esc_attr_e( 'Menú móvil', 'beslock' ); ?>">
   <div class="mobile-drawer__panel" data-js="mobile-drawer-panel" role="document">
     <div class="drawer-header" data-js="mobile-drawer-header" role="banner">
-      <button id="closeDrawer" class="mobile-drawer__close" data-js="drawer-close" aria-label="<?php esc_attr_e( 'Close menu', 'beslock' ); ?>">
+      <button id="closeDrawer" class="mobile-drawer__close" data-js="drawer-close" aria-label="<?php esc_attr_e( 'Cerrar menú', 'beslock' ); ?>">
         <span class="mobile-drawer__control-icon mobile-drawer__close-icon" aria-hidden="true"></span>
-        <span class="screen-reader-text"><?php esc_html_e( 'Close navigation', 'beslock' ); ?></span>
+        <span class="screen-reader-text"><?php esc_html_e( 'Cerrar navegación', 'beslock' ); ?></span>
       </button>
 
-      <a class="drawer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-js="drawer-logo" aria-label="<?php esc_attr_e( 'Home', 'beslock' ); ?>">
+      <a class="drawer__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" data-js="drawer-logo" aria-label="<?php esc_attr_e( 'Inicio', 'beslock' ); ?>">
         <span class="logo-wrapper">
-          <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="<?php esc_attr_e( 'BESLOCK Logo', 'beslock' ); ?>" />
+          <img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/logo-green.png' ); ?>" alt="<?php esc_attr_e( 'Logo BESLOCK', 'beslock' ); ?>" />
           <span class="logo__tm" aria-hidden="true">&#174;</span>
         </span>
       </a>
@@ -95,14 +95,14 @@ if ( ! defined( 'ABSPATH' ) ) {
     </ul>
   </div>
 
-  <aside id="manualsDrawer" class="manuals-drawer" data-js="manuals-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'BESLOCK guides', 'beslock' ); ?>">
+  <aside id="manualsDrawer" class="manuals-drawer" data-js="manuals-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'Guías BESLOCK', 'beslock' ); ?>">
     <div class="manuals-drawer__shell" data-js="manuals-drawer-shell">
       <header class="manuals-drawer__header">
         <div>
           <p class="manuals-drawer__eyebrow" data-js="manuals-drawer-eyebrow">Guías BESLOCK</p>
           <h2 class="manuals-drawer__title" data-js="manuals-drawer-title">Manuales y ayuda</h2>
         </div>
-        <button type="button" class="manuals-drawer__close" data-js="manuals-drawer-close" aria-label="<?php esc_attr_e( 'Close guides', 'beslock' ); ?>">
+        <button type="button" class="manuals-drawer__close" data-js="manuals-drawer-close" aria-label="<?php esc_attr_e( 'Cerrar guías', 'beslock' ); ?>">
           <i class="bi bi-x-lg" aria-hidden="true"></i>
         </button>
       </header>
@@ -274,8 +274,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                         <option value="e-nova">e-Nova</option>
                         <option value="e-touch">e-Touch</option>
                         <option value="e-prime">e-Prime</option>
-                        <option value="e-orbit">Órbita electrónica</option>
-                        <option value="e-shield">Escudo electrónico</option>
+                        <option value="e-orbit">e-Orbit</option>
+                        <option value="e-shield">e-Shield</option>
                       </select>
                     </label>
 
@@ -285,8 +285,18 @@ if ( ! defined( 'ABSPATH' ) ) {
                     </label>
 
                     <label class="support-form__field">
-                      <span>Ubicación de instalación</span>
-                      <input type="text" name="installation_location[]" required>
+                      <span>Ubicación de la instalación</span>
+                      <select name="installation_location[]" required>
+                        <option value="">Selecciona la ubicación</option>
+                        <option value="puerta-principal">Puerta principal</option>
+                        <option value="puerta-auxiliar">Puerta auxiliar</option>
+                        <option value="acceso-peatonal">Acceso peatonal</option>
+                        <option value="puerta-interior">Puerta interior</option>
+                        <option value="oficina-recepcion">Oficina o recepción</option>
+                        <option value="habitacion">Habitación</option>
+                        <option value="bodega-cuarto-tecnico">Bodega o cuarto técnico</option>
+                        <option value="otra">Otra ubicación</option>
+                      </select>
                     </label>
 
                     <button type="button" class="support-project-row__remove" data-js="support-remove-product-row" aria-label="Eliminar referencia" hidden>

@@ -18,6 +18,18 @@
     node.textContent = message || '';
     node.hidden = !message;
     node.setAttribute('data-tone', tone || 'success');
+    node.classList.toggle('is-visible', !!message);
+  }
+
+  function setDrawerMotionState(state) {
+    if (!els.drawer) return;
+    els.drawer.classList.remove('is-opening', 'is-closing');
+    if (state) {
+      els.drawer.classList.add(state);
+      window.setTimeout(function () {
+        if (els.drawer) els.drawer.classList.remove(state);
+      }, 440);
+    }
   }
 
   function closeSiblingPanels() {
@@ -79,6 +91,7 @@
       var panel = els.panels[i];
       var isActive = panel.getAttribute('data-support-panel') === target;
       panel.hidden = !isActive;
+      panel.setAttribute('aria-hidden', isActive ? 'false' : 'true');
       panel.classList.toggle('is-active', isActive);
       if (isActive) activePanel = panel;
     }
@@ -105,6 +118,7 @@
     if (els.menuButton) els.menuButton.setAttribute('aria-expanded', 'true');
 
     els.drawer.classList.add('is-open');
+    setDrawerMotionState('is-opening');
     els.drawer.setAttribute('aria-hidden', 'false');
     document.documentElement.classList.add('has-drawer-open');
     setActiveOption(target);
@@ -118,12 +132,40 @@
     if (!els.drawer) return;
 
     els.drawer.classList.remove('is-open');
+    setDrawerMotionState('is-closing');
     els.drawer.setAttribute('aria-hidden', 'true');
     if (els.mobileDrawer) els.mobileDrawer.classList.remove('support-sheet-open');
     if (!els.mobileDrawer || !els.mobileDrawer.classList.contains('is-open')) {
       document.documentElement.classList.remove('has-drawer-open');
     }
     setActiveOption(null);
+  }
+
+  function resetSupportNavigation() {
+    closeSupportDrawer();
+    toggleSupportMenu(false);
+
+    if (els.panels) {
+      for (var i = 0; i < els.panels.length; i++) {
+        els.panels[i].hidden = true;
+        els.panels[i].setAttribute('aria-hidden', 'true');
+        els.panels[i].classList.remove('is-active');
+      }
+    }
+
+    if (els.eyebrow) els.eyebrow.textContent = 'Contacto';
+    if (els.title) els.title.textContent = 'Estamos para ayudarte';
+    setActiveOption(null);
+
+    try {
+      document.querySelectorAll('[data-js="support-installation-results"], [data-support-result]').forEach(function (node) {
+        node.hidden = true;
+        node.classList.remove('is-active');
+      });
+      document.querySelectorAll('.support-form__message').forEach(function (node) {
+        setMessage(node, '', 'success');
+      });
+    } catch (e) {}
   }
 
   function chooseMockInstallationResult(orderValue) {
@@ -210,8 +252,17 @@
         field.value = '';
       }
     });
+    clone.classList.add('is-new');
     rows.appendChild(clone);
     updateProjectRemoveButtons();
+    window.setTimeout(function () {
+      clone.classList.remove('is-new');
+    }, 360);
+
+    var firstField = clone.querySelector('select, input');
+    if (firstField && typeof firstField.focus === 'function') {
+      try { firstField.focus({ preventScroll: true }); } catch (error) { firstField.focus(); }
+    }
   }
 
   function setupProjectRows() {
@@ -229,8 +280,13 @@
 
         var row = remove.closest('[data-js="support-project-row"]');
         if (row && rows.querySelectorAll('[data-js="support-project-row"]').length > 1) {
-          row.remove();
-          updateProjectRemoveButtons();
+          row.classList.add('is-removing');
+          window.setTimeout(function () {
+            if (row && row.parentNode) {
+              row.parentNode.removeChild(row);
+              updateProjectRemoveButtons();
+            }
+          }, 180);
         }
       });
     }
@@ -285,6 +341,8 @@
         closeSupportDrawer();
       }
     }, true);
+
+    document.addEventListener('beslock:mobile-drawer-reset', resetSupportNavigation);
 
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {

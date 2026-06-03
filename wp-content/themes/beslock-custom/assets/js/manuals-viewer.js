@@ -307,6 +307,16 @@
     markActiveSection(null);
   }
 
+  function resetManualsNavigation() {
+    closeManualsDrawer();
+    toggleSections(false);
+    setDrawerHeader('Guías BESLOCK', 'Manuales y ayuda');
+    if (els.body) {
+      els.body.innerHTML = '';
+      try { els.body.scrollTop = 0; } catch (e) {}
+    }
+  }
+
   function toggleSections(force) {
     if (!els.manualsToggle || !els.sectionsPanel) return;
     var willOpen = typeof force === 'boolean'
@@ -1084,6 +1094,8 @@
         closeManualsDrawer();
       }
     }, true);
+
+    document.addEventListener('beslock:mobile-drawer-reset', resetManualsNavigation);
 
     if (window.MutationObserver) {
       var observer = new MutationObserver(function () {

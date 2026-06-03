@@ -192,12 +192,94 @@
     if (!closeDrawer) return;
     closeDrawer.dataset.mode = mode;
     if (mode === 'back') {
-      closeDrawer.innerHTML = '<i class="bi bi-arrow-left" aria-hidden="true"></i><span class="u-visually-hidden">Back</span>';
-      closeDrawer.setAttribute('aria-label', 'Back to menu');
+      closeDrawer.innerHTML = '<i class="bi bi-arrow-left" aria-hidden="true"></i><span class="u-visually-hidden">Volver al menú</span>';
+      closeDrawer.setAttribute('aria-label', 'Volver al menú');
     } else {
-      closeDrawer.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i><span class="u-visually-hidden">Close menu</span>';
-      closeDrawer.setAttribute('aria-label', 'Close menu');
+      closeDrawer.innerHTML = '<i class="bi bi-x-lg" aria-hidden="true"></i><span class="u-visually-hidden">Cerrar menú</span>';
+      closeDrawer.setAttribute('aria-label', 'Cerrar menú');
     }
+  }
+
+  function closeExpandableSection(toggleSelector, panelSelector, itemSelector, openClass) {
+    var toggle = $(toggleSelector);
+    var sectionPanel = $(panelSelector);
+    var item = toggle && toggle.closest ? toggle.closest(itemSelector) : null;
+
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    if (sectionPanel) {
+      sectionPanel.hidden = true;
+      sectionPanel.setAttribute('aria-hidden', 'true');
+    }
+    if (item) item.classList.remove('is-open');
+    if (openClass) mobileDrawer.classList.remove(openClass);
+  }
+
+  function resetProductsNavigation() {
+    try {
+      mobileDrawer.classList.remove('products-open', 'products-opening', 'products-closing');
+      if (productsToggle) productsToggle.setAttribute('aria-expanded', 'false');
+      if (productsPanel) {
+        productsPanel.setAttribute('aria-hidden', 'true');
+        productsPanel.classList.remove('models--visible');
+        productsPanel.classList.add('models--hidden');
+        productsPanel.hidden = true;
+        productsPanel.style.transitionDelay = '';
+        productsPanel.scrollTop = 0;
+      }
+      var chevron = productsToggle && productsToggle.querySelector('.products-chevron');
+      if (chevron) chevron.classList.remove('hidden');
+    } catch (e) {}
+  }
+
+  function resetDrawerNavigation() {
+    resetProductsNavigation();
+
+    closeExpandableSection(
+      '[data-js="drawer-manuals-toggle"]',
+      '[data-js="drawer-manuals-sections"]',
+      '.mobile-menu__item--manuals',
+      'manuals-menu-open'
+    );
+    closeExpandableSection(
+      '[data-js="support-toggle"]',
+      '[data-js="support-options"]',
+      '.mobile-menu__item--support',
+      'support-menu-open'
+    );
+    closeExpandableSection(
+      '[data-js="order-lookup-toggle"]',
+      '[data-js="order-lookup-panel"]',
+      '.mobile-menu__item--order-lookup',
+      null
+    );
+
+    mobileDrawer.classList.remove('manuals-sheet-open', 'support-sheet-open');
+
+    try {
+      mobileDrawer.querySelectorAll('.manuals-section-button.is-active, .support-option-button.is-active').forEach(function (button) {
+        button.classList.remove('is-active');
+        button.removeAttribute('aria-current');
+      });
+    } catch (e) {}
+
+    try {
+      var manualsDrawer = document.querySelector('[data-js="manuals-drawer"]');
+      if (manualsDrawer) {
+        manualsDrawer.classList.remove('is-open', 'manuals-drawer--product');
+        manualsDrawer.setAttribute('aria-hidden', 'true');
+      }
+      var supportDrawer = document.querySelector('[data-js="support-drawer"]');
+      if (supportDrawer) {
+        supportDrawer.classList.remove('is-open', 'is-opening', 'is-closing');
+        supportDrawer.setAttribute('aria-hidden', 'true');
+      }
+    } catch (e) {}
+
+    try {
+      document.dispatchEvent(new CustomEvent('beslock:mobile-drawer-reset'));
+    } catch (e) {}
+
+    setCloseMode('close');
   }
 
   function productsBackAction() {
@@ -313,38 +395,29 @@
 
   function closeDrawerAction() {
     if (!mobileDrawer.classList.contains('is-open')) return;
-    try {
-      mobileDrawer.classList.remove('products-open');
-      mobileDrawer.classList.remove('products-opening');
-      mobileDrawer.classList.remove('products-closing');
-      if (productsToggle) productsToggle.setAttribute('aria-expanded', 'false');
-      if (productsPanel) {
-        productsPanel.setAttribute('aria-hidden', 'true');
-        productsPanel.classList.remove('models--visible');
-        productsPanel.classList.add('models--hidden');
-        productsPanel.hidden = true;
-        productsPanel.style.transitionDelay = '';
-      }
-    } catch (e) {}
+    resetProductsNavigation();
     mobileDrawer.classList.remove('is-open');
     backdrop.classList.remove('backdrop-visible');
     try { menuBtn.setAttribute('aria-expanded', 'false'); } catch (e) {}
     mobileDrawer.setAttribute('aria-hidden', 'true');
     if (typeof removeFocusTrap === 'function') { removeFocusTrap(); removeFocusTrap = null; }
+    var finalizedClose = false;
+    function finalizeClose() {
+      if (finalizedClose) return;
+      finalizedClose = true;
+      try { panel.removeEventListener('transitionend', onTransitionEnd); } catch (e) {}
+      try { clearTimeout(closeFallback); } catch (e) {}
+      unlockScroll();
+      resetDrawerNavigation();
+      try { if (previousActiveElement && typeof previousActiveElement.focus === 'function') previousActiveElement.focus({ preventScroll: true }); } catch (e) {}
+      startObserver();
+    }
     var onTransitionEnd = function (ev) {
       if (ev && ev.propertyName && ev.propertyName.indexOf('transform') === -1) return;
-      try { panel.removeEventListener('transitionend', onTransitionEnd); } catch (e) {}
-      unlockScroll();
-      try { if (previousActiveElement && typeof previousActiveElement.focus === 'function') previousActiveElement.focus({ preventScroll: true }); } catch (e) {}
-      startObserver();
+      finalizeClose();
     };
     panel.addEventListener('transitionend', onTransitionEnd);
-    setTimeout(function () {
-      try { panel.removeEventListener('transitionend', onTransitionEnd); } catch (e) {}
-      unlockScroll();
-      try { if (previousActiveElement && typeof previousActiveElement.focus === 'function') previousActiveElement.focus({ preventScroll: true }); } catch (e) {}
-      startObserver();
-    }, 600);
+    var closeFallback = setTimeout(finalizeClose, 620);
   }
 
   // Products toggle init & behavior (slide + scroll)
