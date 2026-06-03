@@ -81,6 +81,7 @@ add_action( 'wp_enqueue_scripts', function() {
   $enqueue_optional_theme_style( 'beslock-button-utilities', '/assets/css/utilities/buttons.css' );
   $enqueue_optional_theme_style( 'beslock-header-component', '/assets/css/components/header.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile' ] );
   $enqueue_optional_theme_style( 'beslock-manuals-viewer', '/assets/css/manuals-viewer.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile', 'beslock-header-component' ] );
+  $enqueue_optional_theme_style( 'beslock-support-drawer', '/assets/css/support-drawer.css', [ 'beslock-manuals-viewer' ] );
   $enqueue_optional_theme_style( 'beslock-discover-component', '/assets/css/components/discover.css' );
   $enqueue_optional_theme_style( 'beslock-homepage-layout', '/assets/css/layout/homepage.css' );
   $enqueue_optional_theme_style( 'beslock-recommendations-layout', '/assets/css/layout/recommendations.css' );
@@ -249,6 +250,17 @@ add_action( 'wp_enqueue_scripts', function() {
       'beslock-manuals-viewer-js',
       'window.BESLOCK_MANUALS_BASE_URL = ' . wp_json_encode( $manuals_config['baseUrl'] ) . '; window.BESLOCK_MANUALS_CONFIG = ' . wp_json_encode( $manuals_config ) . ';',
       'before'
+    );
+  }
+
+  $support_drawer_js = $theme_dir_path . '/assets/js/support-drawer.js';
+  if ( file_exists( $support_drawer_js ) ) {
+    wp_enqueue_script(
+      'beslock-support-drawer-js',
+      $theme_dir_uri . '/assets/js/support-drawer.js',
+      [ 'beslock-main-js', 'beslock-menu-products-mobile-js' ],
+      filemtime( $support_drawer_js ),
+      true
     );
   }
 
