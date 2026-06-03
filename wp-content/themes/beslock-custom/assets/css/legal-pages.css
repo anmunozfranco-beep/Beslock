@@ -1,0 +1,120 @@
+.beslock-legal {
+  --legal-green: #004f2b;
+  --legal-ink: #10241a;
+  --legal-muted: #637064;
+  --legal-line: #dbe5dd;
+  --legal-soft: #f7faf8;
+  color: var(--legal-ink);
+  font-family: var(--font-sans, inherit);
+  padding: clamp(7rem, 13vh, 10rem) clamp(1.25rem, 5vw, 5rem) clamp(4rem, 8vw, 7rem);
+}
+
+.beslock-legal__hero,
+.beslock-legal__content {
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.beslock-legal__hero {
+  padding-bottom: clamp(1.8rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--legal-line);
+}
+
+.beslock-legal__eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--legal-green);
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.beslock-legal h1 {
+  max-width: 840px;
+  margin: 0;
+  color: var(--legal-green);
+  font-size: clamp(2.25rem, 5vw, 4.6rem);
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.beslock-legal__updated {
+  margin: clamp(1rem, 2vw, 1.45rem) 0 0;
+  color: var(--legal-muted);
+  font-weight: 800;
+}
+
+.beslock-legal__hero p:last-child {
+  max-width: 790px;
+  margin: clamp(1rem, 2vw, 1.4rem) 0 0;
+  color: var(--legal-muted);
+  font-size: clamp(1.02rem, 1.45vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.beslock-legal__content {
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+  padding-top: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.beslock-legal__section {
+  padding: 0 0 clamp(1.4rem, 3vw, 2.2rem);
+  border-bottom: 1px solid var(--legal-line);
+}
+
+.beslock-legal__section:last-child {
+  border-bottom: 0;
+}
+
+.beslock-legal h2 {
+  margin: 0 0 0.85rem;
+  color: var(--legal-ink);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  line-height: 1.16;
+  letter-spacing: 0;
+}
+
+.beslock-legal p,
+.beslock-legal li {
+  color: var(--legal-muted);
+  font-size: clamp(0.98rem, 1.25vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.beslock-legal p {
+  margin: 0 0 0.85rem;
+}
+
+.beslock-legal p:last-child {
+  margin-bottom: 0;
+}
+
+.beslock-legal ul {
+  display: grid;
+  gap: 0.42rem;
+  margin: 0.85rem 0 1rem;
+  padding-left: 1.15rem;
+}
+
+.beslock-legal a {
+  color: var(--legal-green);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.16em;
+}
+
+.beslock-legal a:hover {
+  color: #003d22;
+}
+
+@media (max-width: 720px) {
+  .beslock-legal {
+    padding-top: clamp(6.5rem, 18vh, 8rem);
+  }
+
+  .beslock-legal h1 {
+    font-size: clamp(2rem, 13vw, 3.15rem);
+  }
+}

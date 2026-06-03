@@ -54,8 +54,8 @@
         <h2 class="site-footer__heading">Centro de ayuda</h2>
         <ul class="site-footer__list">
           <li><a href="<?php echo esc_url( home_url( '/consulta-pedido/' ) ); ?>">Consulta tu pedido</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Guías BESLOCK</a></li>
-          <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contacto</a></li>
+          <li><a href="<?php echo esc_url( add_query_arg( 'drawer', 'guides', home_url( '/' ) ) ); ?>">Guías BESLOCK</a></li>
+          <li><a href="<?php echo esc_url( add_query_arg( 'drawer', 'contact', home_url( '/' ) ) ); ?>">Contacto</a></li>
         </ul>
       </nav>
 
@@ -106,7 +106,7 @@
         <ul class="site-footer__list">
           <li><a href="<?php echo esc_url( home_url( '/carrito/' ) ); ?>">Carrito</a></li>
           <li><a href="<?php echo esc_url( home_url( '/terminos-y-condiciones/' ) ); ?>">Términos y condiciones</a></li>
-          <li><a href="<?php echo esc_url( get_privacy_policy_url() ?: home_url( '/politica-de-privacidad/' ) ); ?>">Política de privacidad</a></li>
+          <li><a href="<?php echo esc_url( home_url( '/politica-de-privacidad/' ) ); ?>">Política de privacidad</a></li>
         </ul>
       </nav>
     </div>

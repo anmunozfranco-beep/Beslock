@@ -290,6 +290,97 @@
     } catch (e) {}
   }
 
+  var drawerDeepLinkHandled = false;
+
+  function normalizeDeepLinkValue(value) {
+    return String(value || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  function getDrawerDeepLinkParam(name) {
+    try {
+      return new URLSearchParams(window.location.search || '').get(name);
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function clickControl(selector) {
+    var control = document.querySelector(selector);
+    if (!control || typeof control.click !== 'function') return false;
+    control.click();
+    return true;
+  }
+
+  function clickMatchedControl(selector, attr, wanted) {
+    var wantedValue = normalizeDeepLinkValue(wanted);
+    if (!wantedValue) return false;
+
+    var controls = document.querySelectorAll(selector);
+    for (var i = 0; i < controls.length; i++) {
+      if (normalizeDeepLinkValue(controls[i].getAttribute(attr)) === wantedValue) {
+        controls[i].click();
+        return true;
+      }
+    }
+    return false;
+  }
+
+  function resolveDrawerDeepLinkTarget(value) {
+    var target = normalizeDeepLinkValue(value);
+    if (!target) return '';
+    if (target === 'guides' || target === 'guide' || target === 'guias' || target === 'guia' || target === 'manuals' || target === 'manuales') return 'guides';
+    if (target === 'contact' || target === 'contacto' || target === 'support' || target === 'soporte' || target === 'ayuda') return 'contact';
+    if (target === 'products' || target === 'productos') return 'products';
+    if (target === 'order' || target === 'pedido' || target === 'consulta-pedido') return 'order';
+    return '';
+  }
+
+  function openDrawerDeepLink() {
+    if (drawerDeepLinkHandled) return;
+
+    var target = resolveDrawerDeepLinkTarget(getDrawerDeepLinkParam('drawer') || getDrawerDeepLinkParam('beslock_drawer'));
+    if (!target) return;
+
+    drawerDeepLinkHandled = true;
+    openDrawer();
+
+    window.setTimeout(function () {
+      var section = getDrawerDeepLinkParam('section') || getDrawerDeepLinkParam('target');
+
+      if (target === 'guides') {
+        if (clickControl('[data-js="drawer-manuals-toggle"]')) {
+          window.setTimeout(function () {
+            clickMatchedControl('[data-manual-section]', 'data-manual-section', section);
+          }, 140);
+        }
+        return;
+      }
+
+      if (target === 'contact') {
+        if (clickControl('[data-js="support-toggle"]')) {
+          window.setTimeout(function () {
+            clickMatchedControl('[data-support-target]', 'data-support-target', section);
+          }, 140);
+        }
+        return;
+      }
+
+      if (target === 'products') {
+        clickControl('#productsToggle, [data-js="drawer-products-toggle"]');
+        return;
+      }
+
+      if (target === 'order') {
+        clickControl('[data-js="order-lookup-toggle"]');
+      }
+    }, 160);
+  }
+
   function productsBackAction() {
     if (!productsPanel || !productsToggle) return;
     try {
@@ -699,6 +790,7 @@
       }
       initProductsToggle();
       setCloseMode('close');
+      openDrawerDeepLink();
     }, 60);
   }
 

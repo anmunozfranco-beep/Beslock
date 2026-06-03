@@ -33,6 +33,9 @@ add_action( 'wp_enqueue_scripts', 'beslock_enqueue_main_style', 1 );
 if ( file_exists( get_stylesheet_directory() . '/inc/core/enqueue.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/core/enqueue.php';
 }
+if ( file_exists( get_stylesheet_directory() . '/inc/legal-pages.php' ) ) {
+  require_once get_stylesheet_directory() . '/inc/legal-pages.php';
+}
 // Load WooCommerce logic modules (keep logic out of templates)
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/setup.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/setup.php';
