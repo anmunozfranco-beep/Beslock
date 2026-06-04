@@ -1,58 +1,50 @@
 <?php
 /**
- * Block: Discover Section
- * Mobile-first – BEM – Clean containers
+ * Block: Partner Banner
+ * Reuses the former Discover section slot for institutional partner messaging.
  */
 ?>
 
-<section class="discover section section--lined section-reveal">
+<section class="discover beslock-partner-banner section section--lined section-reveal is-active" aria-labelledby="zonas-smart-banner-title">
   <div class="u-container">
-    <div class="discover__block">
+    <div class="discover__block beslock-partner-banner__inner">
 
-      <div class="discover__text">
-        <h2 class="discover__title">
-          Descubre <span>Beslock®</span>
+      <div class="discover__text beslock-partner-banner__content">
+        <p class="beslock-partner-banner__eyebrow">
+          <?php esc_html_e( 'Comercializador autorizado', 'beslock' ); ?>
+        </p>
+
+        <h2 class="beslock-partner-banner__title" id="zonas-smart-banner-title">
+          <span><?php esc_html_e( 'BESLOCK', 'beslock' ); ?><sup class="beslock-partner-banner__registered">&reg;</sup> <?php esc_html_e( 'en Colombia', 'beslock' ); ?></span>
+          <span><?php esc_html_e( 'ZONAS SMART', 'beslock' ); ?></span>
         </h2>
 
-        <p class="discover__desc">
-          Diseñamos accesos inteligentes que combinan <strong>seguridad, respaldo y control</strong>
-          para proteger hogares, oficinas y exteriores con una experiencia simple, precisa y duradera.
-        </p>
+        <a class="beslock-partner-banner__cta" href="<?php echo esc_url( home_url( '/#productos' ) ); ?>">
+          <?php esc_html_e( 'Conocer productos', 'beslock' ); ?>
+        </a>
       </div>
 
-	      <div class="discover__image">
-	        <?php
-	          $discover_image_dir = get_stylesheet_directory() . '/assets/images/discover/';
-	          $discover_image_uri = get_stylesheet_directory_uri() . '/assets/images/discover/';
-	          $discover_images = [
-	            'discover-eshield-selected.webp',
-	            'discover-etouch-selected.webp',
-	            'discover-eflex-selected.webp',
-	            'discover-selected.webp',
-	          ];
-	        ?>
-	        <div class="discover__image-rotator" aria-label="<?php esc_attr_e( 'Galería visual de accesos inteligentes Beslock', 'beslock' ); ?>">
-	          <?php foreach ( $discover_images as $index => $discover_image ) : ?>
-	            <?php
-	              $discover_image_path = $discover_image_dir . $discover_image;
-	              if ( ! file_exists( $discover_image_path ) ) {
-	                continue;
-	              }
-	              $discover_image_url = $discover_image_uri . $discover_image . '?v=' . filemtime( $discover_image_path );
-	            ?>
-	            <img
-	              class="discover__image-frame"
-	              src="<?php echo esc_url( $discover_image_url ); ?>"
-	              alt="<?php esc_attr_e( 'Acceso inteligente Beslock en ambiente premium', 'beslock' ); ?>"
-	              width="1000"
-	              height="1000"
-	              loading="<?php echo 0 === $index ? 'eager' : 'lazy'; ?>"
-	              decoding="async"
-	              style="--discover-frame-index: <?php echo esc_attr( (string) $index ); ?>;"
-	            >
-	          <?php endforeach; ?>
-	        </div>
-	      </div>
+      <div class="discover__image beslock-partner-banner__logo">
+        <?php
+          $partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
+          $partner_logo_url  = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png';
+
+          if ( file_exists( $partner_logo_path ) ) :
+            $partner_logo_url = $partner_logo_url . '?v=' . filemtime( $partner_logo_path );
+        ?>
+          <div class="beslock-partner-banner__logo-surface">
+            <img
+              class="beslock-partner-banner__logo-img"
+              src="<?php echo esc_url( $partner_logo_url ); ?>"
+              alt="<?php esc_attr_e( 'ZONAS SMART', 'beslock' ); ?>"
+              width="1024"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+        <?php endif; ?>
+      </div>
 
     </div>
   </div>

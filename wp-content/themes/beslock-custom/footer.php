@@ -25,6 +25,27 @@
           Seguridad inteligente para hogares, oficinas y accesos exteriores.
         </p>
 
+        <?php
+          $footer_partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
+          $footer_partner_logo_url  = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png';
+
+          if ( file_exists( $footer_partner_logo_path ) ) :
+            $footer_partner_logo_url = $footer_partner_logo_url . '?v=' . filemtime( $footer_partner_logo_path );
+        ?>
+          <div class="site-footer__partner" aria-label="<?php echo esc_attr_x( 'Comercializador autorizado en Colombia', 'footer partner section', 'beslock' ); ?>">
+            <span class="site-footer__partner-kicker">Comercializador autorizado</span>
+            <img
+              class="site-footer__partner-logo"
+              src="<?php echo esc_url( $footer_partner_logo_url ); ?>"
+              alt="<?php echo esc_attr_x( 'ZONAS SMART', 'alt text', 'beslock' ); ?>"
+              width="1024"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        <?php endif; ?>
+
         <div class="site-footer__payments" aria-label="<?php echo esc_attr_x( 'Pagos seguros', 'footer payments label', 'beslock' ); ?>">
           <span class="site-footer__payments-label">Pagos seguros mediante</span>
           <div class="site-footer__payment-logos">
