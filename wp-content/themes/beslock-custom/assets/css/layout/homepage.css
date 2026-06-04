@@ -4,6 +4,15 @@
   margin-top: 24px;
 }
 
+.products-portfolio:focus,
+.products-portfolio:focus-visible,
+.products-portfolio:target,
+.products-portfolio__grid:focus,
+.products-portfolio__grid:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 @media (max-width: 768px) {
   .discover {
     margin-top: 16px;
