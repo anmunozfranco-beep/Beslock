@@ -130,6 +130,48 @@
           <li><a href="<?php echo esc_url( home_url( '/politica-de-privacidad/' ) ); ?>">Política de privacidad</a></li>
         </ul>
       </nav>
+
+      <?php
+        $footer_social_links = array(
+          array(
+            'label' => 'TikTok',
+            'icon'  => 'bi-tiktok',
+            'url'   => 'https://linktr.ee/beslock',
+          ),
+          array(
+            'label' => 'Instagram',
+            'icon'  => 'bi-instagram',
+            'url'   => 'https://instagram.com/beslock.fr',
+          ),
+          array(
+            'label' => 'Facebook',
+            'icon'  => 'bi-facebook',
+            'url'   => 'https://linktr.ee/beslock',
+          ),
+          array(
+            'label' => 'YouTube',
+            'icon'  => 'bi-youtube',
+            'url'   => 'https://linktr.ee/beslock',
+          ),
+        );
+      ?>
+      <nav class="site-footer__social" aria-label="<?php echo esc_attr_x( 'Redes sociales BESLOCK', 'footer social nav label', 'beslock' ); ?>">
+        <div class="site-footer__social-links">
+          <?php foreach ( $footer_social_links as $footer_social_link ) : ?>
+            <a
+              class="site-footer__social-link"
+              href="<?php echo esc_url( $footer_social_link['url'] ); ?>"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="<?php echo esc_attr( sprintf( 'BESLOCK en %s', $footer_social_link['label'] ) ); ?>"
+            >
+              <span class="site-footer__social-mark" aria-hidden="true">
+                <i class="site-footer__social-icon bi <?php echo esc_attr( $footer_social_link['icon'] ); ?>"></i>
+              </span>
+            </a>
+          <?php endforeach; ?>
+        </div>
+      </nav>
     </div>
 
     <div class="site-footer__bottom">

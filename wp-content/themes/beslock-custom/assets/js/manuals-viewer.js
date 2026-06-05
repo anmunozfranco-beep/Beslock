@@ -1078,8 +1078,15 @@
 
     els.manualsToggle.addEventListener('click', function (event) {
       event.preventDefault();
+      var willOpen = els.manualsToggle.getAttribute('aria-expanded') !== 'true';
+
+      if (!willOpen) {
+        resetManualsNavigation();
+        return;
+      }
+
       announceSectionChange('manuals');
-      toggleSections(true);
+      toggleSections(willOpen);
       openModels(GUIDE_SECTIONS[0]);
     });
 

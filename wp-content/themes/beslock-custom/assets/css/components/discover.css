@@ -92,8 +92,14 @@
   text-wrap: balance;
 }
 
-.beslock-partner-banner__title span {
+.beslock-partner-banner__title-line {
   display: block;
+}
+
+.beslock-partner-banner__title-line--brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
 }
 
 .beslock-partner-banner__registered {
@@ -102,6 +108,12 @@
   margin-left: 0.025em;
   font-size: 0.4em;
   font-weight: 700;
+  line-height: 1;
+}
+
+.beslock-partner-banner__country {
+  display: inline-block;
+  font-size: 0.68em;
   line-height: 1;
 }
 
@@ -252,7 +264,7 @@
     max-width: none;
   }
 
-  .beslock-partner-banner__title span {
+  .beslock-partner-banner__title-line {
     white-space: nowrap;
   }
 
@@ -280,6 +292,12 @@
 
   .beslock-partner-banner__logo-surface {
     width: min(20vw, 235px);
+  }
+}
+
+@media (max-width: 767px) {
+  .discover.beslock-partner-banner {
+    display: none;
   }
 }
 
