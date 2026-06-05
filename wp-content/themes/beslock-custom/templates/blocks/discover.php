@@ -15,8 +15,11 @@
         </p>
 
         <h2 class="beslock-partner-banner__title" id="zonas-smart-banner-title">
-          <span><?php esc_html_e( 'BESLOCK', 'beslock' ); ?><sup class="beslock-partner-banner__registered">&reg;</sup> <?php esc_html_e( 'en Colombia', 'beslock' ); ?></span>
-          <span><?php esc_html_e( 'ZONAS SMART', 'beslock' ); ?></span>
+          <span class="beslock-partner-banner__title-line beslock-partner-banner__title-line--brand">
+            <?php esc_html_e( 'BESLOCK', 'beslock' ); ?><sup class="beslock-partner-banner__registered">&reg;</sup>
+            <span class="beslock-partner-banner__country"><?php esc_html_e( 'en Colombia', 'beslock' ); ?></span>
+          </span>
+          <span class="beslock-partner-banner__title-line"><?php esc_html_e( 'ZONAS SMART', 'beslock' ); ?></span>
         </h2>
 
         <a class="beslock-partner-banner__cta" href="<?php echo esc_url( home_url( '/#productos' ) ); ?>">
