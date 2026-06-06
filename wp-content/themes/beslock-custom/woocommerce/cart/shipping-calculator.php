@@ -17,14 +17,15 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$shipping_address_1      = function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_address_1', WC()->customer->get_shipping_address_1() ) : WC()->customer->get_shipping_address_1();
-$shipping_locality       = function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_locality', WC()->customer->get_meta( 'beslock_shipping_locality' ) ) : WC()->customer->get_meta( 'beslock_shipping_locality' );
-$shipping_neighborhood   = function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_neighborhood', WC()->customer->get_meta( 'beslock_shipping_neighborhood' ) ) : WC()->customer->get_meta( 'beslock_shipping_neighborhood' );
+$has_confirmed_shipping  = function_exists( 'beslock_cart_has_confirmed_shipping_address' ) && beslock_cart_has_confirmed_shipping_address();
+$shipping_address_1      = $has_confirmed_shipping && function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_address_1', WC()->customer->get_shipping_address_1() ) : '';
+$shipping_locality       = $has_confirmed_shipping && function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_locality', WC()->customer->get_meta( 'beslock_shipping_locality' ) ) : '';
+$shipping_neighborhood   = $has_confirmed_shipping && function_exists( 'beslock_get_shipping_session_value' ) ? beslock_get_shipping_session_value( 'beslock_shipping_neighborhood', WC()->customer->get_meta( 'beslock_shipping_neighborhood' ) ) : '';
 $shipping_area_options   = function_exists( 'beslock_get_shipping_area_options' ) ? beslock_get_shipping_area_options() : array();
 $shipping_city_options   = function_exists( 'beslock_get_shipping_city_options' ) ? beslock_get_shipping_city_options() : array();
 $colombia_states         = WC()->countries->get_states( 'CO' );
 $shipping_neighborhood_input = function_exists( 'beslock_clean_shipping_destination_part' ) ? beslock_clean_shipping_destination_part( $shipping_neighborhood ) : $shipping_neighborhood;
-$current_city            = WC()->customer->get_shipping_city();
+$current_city            = $has_confirmed_shipping ? WC()->customer->get_shipping_city() : '';
 $uses_locality           = function_exists( 'beslock_shipping_city_uses_locality' ) && beslock_shipping_city_uses_locality( $current_city );
 
 do_action( 'woocommerce_before_shipping_calculator' ); ?>
@@ -41,7 +42,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
             <p class="form-row form-row-wide" id="calc_shipping_state_field">
                 <?php
                 $current_cc = 'CO';
-                $current_r  = WC()->customer->get_shipping_state();
+                $current_r  = $has_confirmed_shipping ? WC()->customer->get_shipping_state() : '';
                 $states     = $colombia_states;
 
                 if ( is_array( $states ) && empty( $states ) ) {
@@ -180,7 +181,7 @@ do_action( 'woocommerce_before_shipping_calculator' ); ?>
             />
         </p>
 
-        <input type="hidden" name="calc_shipping_postcode" id="calc_shipping_postcode" value="<?php echo esc_attr( WC()->customer->get_shipping_postcode() ); ?>" />
+        <input type="hidden" name="calc_shipping_postcode" id="calc_shipping_postcode" value="<?php echo esc_attr( $has_confirmed_shipping ? WC()->customer->get_shipping_postcode() : '' ); ?>" />
 
         <p><button type="submit" name="calc_shipping" value="1" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>"><?php esc_html_e( 'Actualizar dirección', 'beslock-custom' ); ?></button></p>
         <?php wp_nonce_field( 'woocommerce-shipping-calculator', 'woocommerce-shipping-calculator-nonce' ); ?>

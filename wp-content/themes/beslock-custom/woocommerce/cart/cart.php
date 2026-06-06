@@ -111,6 +111,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                             foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
                                 $_product   = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
                                 $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
+                                $is_installation_cart_item = $_product instanceof WC_Product && 0 === strpos( (string) $_product->get_sku(), 'BESLOCK-INST-' );
                                 /**
                                  * Filter the product name.
                                  *
@@ -124,7 +125,7 @@ do_action( 'woocommerce_before_cart' ); ?>
                                 if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
                                     $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
                                     ?>
-                                    <tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+                                    <tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?><?php echo $is_installation_cart_item ? ' beslock-cart-item--installation' : ''; ?>">
 
                                         <td class="product-remove">
                                             <?php
@@ -143,35 +144,63 @@ do_action( 'woocommerce_before_cart' ); ?>
                                             ?>
                                         </td>
 
-                                        <td class="product-thumbnail">
-                                        <?php
-                                        /**
-                                         * Filter the product thumbnail displayed in the WooCommerce cart.
-                                         *
-                                         * This filter allows developers to customize the HTML output of the product
-                                         * thumbnail. It passes the product image along with cart item data
-                                         * for potential modifications before being displayed in the cart.
-                                         *
-                                         * @param string $thumbnail     The HTML for the product image.
-                                         * @param array  $cart_item     The cart item data.
-                                         * @param string $cart_item_key Unique key for the cart item.
-                                         *
-                                         * @since 2.1.0
-                                         */
-                                        $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', beslock_cart_get_product_thumbnail_html( $_product ), $cart_item, $cart_item_key );
+                                        <?php if ( ! $is_installation_cart_item ) : ?>
+                                            <td class="product-thumbnail">
+                                            <?php
+                                            /**
+                                             * Filter the product thumbnail displayed in the WooCommerce cart.
+                                             *
+                                             * This filter allows developers to customize the HTML output of the product
+                                             * thumbnail. It passes the product image along with cart item data
+                                             * for potential modifications before being displayed in the cart.
+                                             *
+                                             * @param string $thumbnail     The HTML for the product image.
+                                             * @param array  $cart_item     The cart item data.
+                                             * @param string $cart_item_key Unique key for the cart item.
+                                             *
+                                             * @since 2.1.0
+                                             */
+                                            $thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', beslock_cart_get_product_thumbnail_html( $_product ), $cart_item, $cart_item_key );
 
-                                        if ( ! $product_permalink ) {
-                                            echo $thumbnail; // PHPCS: XSS ok.
-                                        } else {
-                                            printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
-                                        }
-                                        ?>
-                                        </td>
+                                            if ( ! $product_permalink ) {
+                                                echo $thumbnail; // PHPCS: XSS ok.
+                                            } else {
+                                                printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), $thumbnail ); // PHPCS: XSS ok.
+                                            }
+                                            ?>
+                                            </td>
+                                        <?php endif; ?>
 
-                                        <td scope="row" role="rowheader" class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>">
+                                        <td scope="row" role="rowheader" class="product-name" data-title="<?php esc_attr_e( 'Product', 'woocommerce' ); ?>"<?php echo $is_installation_cart_item ? ' colspan="2"' : ''; ?>>
                                             <div class="beslock-cart-product__copy">
                                             <?php
-                                            if ( ! $product_permalink ) {
+                                            if ( $is_installation_cart_item ) {
+                                                $installation_order_number = ! empty( $cart_item['beslock_installation_parent_order_number'] ) ? sanitize_text_field( $cart_item['beslock_installation_parent_order_number'] ) : '';
+                                                $installation_city         = ! empty( $cart_item['beslock_installation_city'] ) ? sanitize_text_field( $cart_item['beslock_installation_city'] ) : '';
+                                                ?>
+                                                <div class="beslock-cart-installation-line">
+                                                    <span class="beslock-cart-installation-line__title"><?php esc_html_e( 'Servicio de instalación', 'beslock-custom' ); ?></span>
+
+                                                    <?php if ( '' !== $installation_order_number || '' !== $installation_city ) : ?>
+                                                        <span class="beslock-cart-installation-line__meta">
+                                                            <?php if ( '' !== $installation_order_number ) : ?>
+                                                                <span class="beslock-cart-installation-line__meta-item">
+                                                                    <span class="beslock-cart-installation-line__meta-label"><?php esc_html_e( 'Pedido asociado', 'beslock-custom' ); ?></span>
+                                                                    <span class="beslock-cart-installation-line__meta-value"><?php echo esc_html( $installation_order_number ); ?></span>
+                                                                </span>
+                                                            <?php endif; ?>
+
+                                                            <?php if ( '' !== $installation_city ) : ?>
+                                                                <span class="beslock-cart-installation-line__meta-item">
+                                                                    <span class="beslock-cart-installation-line__meta-label"><?php esc_html_e( 'Ciudad de instalación', 'beslock-custom' ); ?></span>
+                                                                    <span class="beslock-cart-installation-line__meta-value"><?php echo esc_html( $installation_city ); ?></span>
+                                                                </span>
+                                                            <?php endif; ?>
+                                                        </span>
+                                                    <?php endif; ?>
+                                                </div>
+                                                <?php
+                                            } elseif ( ! $product_permalink ) {
                                                 echo wp_kses_post( $product_name . '&nbsp;' );
                                             } else {
                                                 /**
@@ -185,7 +214,9 @@ do_action( 'woocommerce_before_cart' ); ?>
                                             do_action( 'woocommerce_after_cart_item_name', $cart_item, $cart_item_key );
 
                                             // Meta data.
-                                            echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+                                            if ( ! $is_installation_cart_item ) {
+                                                echo wc_get_formatted_cart_item_data( $cart_item ); // PHPCS: XSS ok.
+                                            }
 
                                             // Backorder notification.
                                             if ( $_product->backorders_require_notification() && $_product->is_on_backorder( $cart_item['quantity'] ) ) {

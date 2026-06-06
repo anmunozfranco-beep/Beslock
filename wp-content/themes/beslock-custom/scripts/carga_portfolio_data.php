@@ -16,10 +16,10 @@ if ( ! function_exists( 'beslock_get_portfolio_installation_policy' ) ) {
   function beslock_get_portfolio_installation_policy() {
     $policy = array(
       'available_cities' => array( 'Bogotá', 'Medellín', 'Cali', 'Barranquilla' ),
-      'consult_target' => 'support-drawer:consult-installation',
-      'unavailable_city_message' => 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.',
+      'consult_target' => 'support-drawer:schedule-installation',
+      'unavailable_city_message' => 'Consulta la disponibilidad del servicio para tu ubicación en Programar instalación',
       'available_city_behavior' => 'La instalación se puede seleccionar como servicio opcional en la finalización del producto.',
-      'unavailable_city_behavior' => 'Mostrar el precio de instalación, bloquear selección inmediata y llevar a Consultar instalación.',
+      'unavailable_city_behavior' => 'Mostrar el precio de instalación, bloquear selección inmediata y llevar a Programar instalación.',
     );
 
     $source_file = get_stylesheet_directory() . '/data/product-pricing-source.json';
@@ -97,7 +97,7 @@ if ( ! function_exists( 'beslock_sync_portfolio_pricing_meta' ) ) {
       '_beslock_installation_sku' => isset( $prod['installation_product_sku'] ) ? sanitize_text_field( $prod['installation_product_sku'] ) : '',
       '_beslock_installation_price' => $installation_price,
       '_beslock_installation_available_cities' => implode( '|', array_map( 'sanitize_text_field', (array) ( $policy['available_cities'] ?? array() ) ) ),
-      '_beslock_installation_consult_target' => sanitize_text_field( $policy['consult_target'] ?? 'support-drawer:consult-installation' ),
+      '_beslock_installation_consult_target' => sanitize_text_field( $policy['consult_target'] ?? 'support-drawer:schedule-installation' ),
       '_beslock_installation_unavailable_city_message' => sanitize_textarea_field( $policy['unavailable_city_message'] ?? '' ),
       '_beslock_installation_available_city_behavior' => sanitize_textarea_field( $policy['available_city_behavior'] ?? '' ),
       '_beslock_installation_unavailable_city_behavior' => sanitize_textarea_field( $policy['unavailable_city_behavior'] ?? '' ),

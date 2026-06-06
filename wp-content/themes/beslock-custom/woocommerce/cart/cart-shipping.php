@@ -22,10 +22,13 @@ defined( 'ABSPATH' ) || exit;
 $formatted_destination    = isset( $formatted_destination ) ? $formatted_destination : WC()->countries->get_formatted_address( $package['destination'], ', ' );
 $beslock_destination      = function_exists( 'beslock_format_cart_shipping_destination' ) ? beslock_format_cart_shipping_destination( isset( $package['destination'] ) ? $package['destination'] : array() ) : '';
 $has_calculated_shipping  = ! empty( $has_calculated_shipping );
+$has_confirmed_shipping   = function_exists( 'beslock_cart_has_confirmed_shipping_address' ) && beslock_cart_has_confirmed_shipping_address();
 $show_shipping_calculator = ! empty( $show_shipping_calculator );
 $calculator_text          = '';
 
-if ( '' !== $beslock_destination ) {
+if ( ! $has_confirmed_shipping ) {
+    $formatted_destination = '';
+} elseif ( '' !== $beslock_destination ) {
     $formatted_destination = $beslock_destination;
 }
 ?>
@@ -58,12 +61,13 @@ if ( '' !== $beslock_destination ) {
             <?php if ( is_cart() ) : ?>
                 <p class="woocommerce-shipping-destination">
                     <?php
-                    if ( $formatted_destination ) {
+                    if ( $has_confirmed_shipping && $formatted_destination ) {
                         // Translators: $s shipping destination.
                         printf( esc_html__( 'Enviar a %s.', 'beslock-custom' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
                         $calculator_text = esc_html__( 'Cambiar dirección', 'beslock-custom' );
                     } else {
-                        echo wp_kses_post( apply_filters( 'woocommerce_shipping_estimate_html', __( 'Las opciones de envío se actualizarán durante el pago.', 'beslock-custom' ) ) );
+                        esc_html_e( 'Actualiza tu dirección para confirmar la entrega.', 'beslock-custom' );
+                        $calculator_text = esc_html__( 'Ir a cambiar dirección', 'beslock-custom' );
                     }
                     ?>
                 </p>
@@ -73,6 +77,7 @@ if ( '' !== $beslock_destination ) {
             if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
                 echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Los costos de envío se calculan durante el pago.', 'beslock-custom' ) ) );
             } else {
+                $calculator_text = esc_html__( 'Ir a cambiar dirección', 'beslock-custom' );
                 echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Ingresa tu dirección para ver las opciones de envío.', 'beslock-custom' ) ) );
             }
         elseif ( ! is_cart() ) :

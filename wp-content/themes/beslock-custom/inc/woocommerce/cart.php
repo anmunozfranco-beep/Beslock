@@ -48,6 +48,19 @@ add_filter( 'woocommerce_add_to_cart_fragments', function( $fragments ) {
 
 add_filter( 'wc_add_to_cart_message_html', '__return_empty_string', 10 );
 
+add_action( 'template_redirect', function() {
+  if ( ! function_exists( 'is_cart' ) || ! is_cart() ) {
+    return;
+  }
+
+  if ( empty( $_GET['remove_item'] ) || ! function_exists( 'WC' ) || ! WC()->cart || ! WC()->cart->is_empty() ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+    return;
+  }
+
+  wp_safe_redirect( wc_get_cart_url() );
+  exit;
+}, 20 );
+
 function beslock_normalize_location_label( $value ) {
   $value = trim( wp_strip_all_tags( (string) $value ) );
   $value = function_exists( 'remove_accents' ) ? remove_accents( $value ) : $value;
@@ -449,6 +462,25 @@ function beslock_get_shipping_session_value( $key, $fallback = '' ) {
   return $fallback;
 }
 
+function beslock_cart_has_confirmed_shipping_address() {
+  if ( ! function_exists( 'WC' ) || ! WC()->customer ) {
+    return false;
+  }
+
+  if ( WC()->session ) {
+    if ( 'yes' === WC()->session->get( 'beslock_shipping_address_confirmed' ) ) {
+      return true;
+    }
+
+    $session_address = WC()->session->get( 'beslock_shipping_address_1' );
+    if ( is_string( $session_address ) && '' !== trim( $session_address ) ) {
+      return true;
+    }
+  }
+
+  return '' !== trim( (string) WC()->customer->get_shipping_address_1() );
+}
+
 function beslock_get_shipping_placeholder_values() {
   return apply_filters(
     'beslock_shipping_placeholder_values',
@@ -510,6 +542,10 @@ function beslock_format_cart_shipping_destination( $destination = array() ) {
     return '';
   }
 
+  if ( function_exists( 'beslock_cart_has_confirmed_shipping_address' ) && ! beslock_cart_has_confirmed_shipping_address() ) {
+    return '';
+  }
+
   $destination = is_array( $destination ) ? $destination : array();
   $country     = ! empty( $destination['country'] ) ? $destination['country'] : WC()->customer->get_shipping_country();
   $state       = ! empty( $destination['state'] ) ? $destination['state'] : WC()->customer->get_shipping_state();
@@ -561,8 +597,8 @@ function beslock_get_cart_installation_policy() {
 
   $policy = array(
     'available_cities' => array( 'Bogotá', 'Medellín', 'Cali', 'Barranquilla' ),
-    'consult_target' => 'support-drawer:consult-installation',
-    'unavailable_city_message' => __( 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.', 'beslock-custom' ),
+    'consult_target' => 'support-drawer:schedule-installation',
+    'unavailable_city_message' => __( 'Consulta la disponibilidad del servicio para tu ubicación en Programar instalación', 'beslock-custom' ),
   );
 
   $source_file = trailingslashit( get_stylesheet_directory() ) . 'data/product-pricing-source.json';
@@ -630,6 +666,10 @@ function beslock_is_cart_installation_city_available( $city ) {
 
 function beslock_get_cart_installation_city() {
   if ( ! function_exists( 'WC' ) || ! WC()->customer ) {
+    return '';
+  }
+
+  if ( function_exists( 'beslock_cart_has_confirmed_shipping_address' ) && ! beslock_cart_has_confirmed_shipping_address() ) {
     return '';
   }
 
@@ -776,12 +816,8 @@ add_action( 'wp_loaded', function() {
   $quote    = beslock_get_cart_installation_quote();
   $selected = ! empty( $_POST['beslock_include_installation'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing
 
-  if ( $selected && ! $quote['is_city_available'] ) {
+  if ( $selected && ( empty( $quote['has_installable_items'] ) || empty( $quote['is_city_available'] ) || $quote['total'] <= 0 || ! beslock_cart_has_confirmed_shipping_address() ) ) {
     beslock_set_cart_installation_selected( false );
-
-    if ( function_exists( 'wc_add_notice' ) ) {
-      wc_add_notice( __( 'La instalación no se puede adicionar directamente para esta ciudad. Al finalizar la compra podrás consultar disponibilidad con el número de pedido.', 'beslock-custom' ), 'notice' );
-    }
   } else {
     beslock_set_cart_installation_selected( $selected );
   }
@@ -805,7 +841,7 @@ add_action( 'woocommerce_cart_calculate_fees', function( $cart ) {
 
   $quote = beslock_get_cart_installation_quote();
 
-  if ( empty( $quote['has_installable_items'] ) || empty( $quote['is_city_available'] ) || $quote['total'] <= 0 ) {
+  if ( empty( $quote['has_installable_items'] ) || empty( $quote['is_city_available'] ) || $quote['total'] <= 0 || ! beslock_cart_has_confirmed_shipping_address() ) {
     beslock_set_cart_installation_selected( false );
     return;
   }
@@ -820,12 +856,13 @@ function beslock_render_cart_installation_option() {
     return;
   }
 
+  if ( ! beslock_cart_has_confirmed_shipping_address() ) {
+    return;
+  }
+
   $is_available = ! empty( $quote['is_city_available'] );
   $is_selected  = $is_available && beslock_cart_installation_is_selected();
-  $city         = trim( (string) $quote['city'] );
-  $city_label   = '' !== $city ? $city : __( 'tu ciudad', 'beslock-custom' );
-  $policy       = beslock_get_cart_installation_policy();
-  $cities_label = implode( ', ', (array) $quote['available_cities'] );
+  $message_html = '';
 
   if ( ! $is_available && beslock_cart_installation_is_selected() ) {
     beslock_set_cart_installation_selected( false );
@@ -833,40 +870,81 @@ function beslock_render_cart_installation_option() {
   }
 
   if ( $is_available ) {
-    $message = $is_selected
-      ? __( 'Incluida en el total.', 'beslock-custom' )
-      : sprintf( __( 'Disponible en %s.', 'beslock-custom' ), $city_label );
-  } elseif ( '' === $city ) {
-    $message = sprintf( __( 'Actualiza la dirección para validar instalación. Disponible directamente en %s.', 'beslock-custom' ), $cities_label );
+    $title        = __( 'Instalación disponible', 'beslock-custom' );
+    $message_html = esc_html__( 'Instalación disponible para tu ubicación.', 'beslock-custom' );
   } else {
-    $message = ! empty( $policy['unavailable_city_message'] )
-      ? $policy['unavailable_city_message']
-      : __( 'Una vez finalizada la compra, podrás consultar si la instalación está disponible con el número de pedido.', 'beslock-custom' );
+    $schedule_installation_link = sprintf(
+      '<a class="beslock-cart-installation__message-link" href="%1$s" target="_self">%2$s</a>',
+      esc_url(
+        add_query_arg(
+          array(
+            'drawer'  => 'contact',
+            'section' => 'schedule-installation',
+          ),
+          home_url( '/' )
+        )
+      ),
+      esc_html__( 'Programar instalación', 'beslock-custom' )
+    );
+    $message_html       = sprintf(
+      esc_html__( 'Consulta la disponibilidad del servicio para tu ubicación en %s', 'beslock-custom' ),
+      $schedule_installation_link
+    );
   }
 
   ?>
   <tr class="beslock-cart-installation <?php echo $is_available ? 'is-available' : 'is-unavailable'; ?>">
-    <th><?php esc_html_e( 'Instalación', 'beslock-custom' ); ?></th>
+    <th>
+      <span><?php esc_html_e( 'Instalación', 'beslock-custom' ); ?></span>
+      <?php if ( ! $is_available ) : ?>
+        <strong class="beslock-cart-installation__price beslock-cart-installation__price--heading"><?php echo wp_kses_post( wc_price( $quote['total'] ) ); ?></strong>
+      <?php endif; ?>
+    </th>
     <td data-title="<?php esc_attr_e( 'Instalación', 'beslock-custom' ); ?>">
       <form class="beslock-cart-installation__form" method="post" action="<?php echo esc_url( wc_get_cart_url() ); ?>">
         <input type="hidden" name="beslock_cart_installation_action" value="1">
         <?php wp_nonce_field( 'beslock-cart-installation', 'beslock_cart_installation_nonce' ); ?>
-        <label class="beslock-cart-installation__choice">
-          <input
-            type="checkbox"
-            name="beslock_include_installation"
-            value="1"
-            <?php checked( $is_selected ); ?>
-            <?php disabled( ! $is_available ); ?>
-          >
-          <span class="beslock-cart-installation__copy">
-            <span class="beslock-cart-installation__title">
-              <?php echo esc_html( $is_available ? __( 'Agregar instalación BESLOCK', 'beslock-custom' ) : __( 'Instalación bajo consulta', 'beslock-custom' ) ); ?>
+        <?php if ( $is_available ) : ?>
+          <label class="beslock-cart-installation__choice">
+            <input
+              type="checkbox"
+              name="beslock_include_installation"
+              value="1"
+              <?php checked( $is_selected ); ?>
+            >
+            <span class="beslock-cart-installation__copy">
+              <span class="beslock-cart-installation__title">
+                <?php echo esc_html( $title ); ?>
+              </span>
+              <span class="beslock-cart-installation__message">
+                <?php echo esc_html( $message_html ); ?>
+              </span>
             </span>
-            <span class="beslock-cart-installation__message"><?php echo esc_html( $message ); ?></span>
-          </span>
-          <strong class="beslock-cart-installation__price"><?php echo wp_kses_post( wc_price( $quote['total'] ) ); ?></strong>
-        </label>
+            <strong class="beslock-cart-installation__price"><?php echo wp_kses_post( wc_price( $quote['total'] ) ); ?></strong>
+          </label>
+        <?php else : ?>
+          <div class="beslock-cart-installation__choice beslock-cart-installation__choice--readonly">
+            <span class="beslock-cart-installation__copy">
+              <span class="beslock-cart-installation__message beslock-cart-installation__message--headline">
+                <?php
+                echo wp_kses(
+                  $message_html,
+                  array(
+                    'a' => array(
+                      'class'  => true,
+                      'href'   => true,
+                      'target' => true,
+                    ),
+                  )
+                );
+                ?>
+              </span>
+            </span>
+          </div>
+        <?php endif; ?>
+        <?php if ( $is_available ) : ?>
+          <button type="submit" class="beslock-cart-installation__submit"><?php esc_html_e( 'Actualizar instalación', 'beslock-custom' ); ?></button>
+        <?php endif; ?>
         <?php if ( count( (array) $quote['items'] ) > 1 ) : ?>
           <ul class="beslock-cart-installation__items">
             <?php foreach ( $quote['items'] as $item ) : ?>
@@ -876,9 +954,6 @@ function beslock_render_cart_installation_option() {
               </li>
             <?php endforeach; ?>
           </ul>
-        <?php endif; ?>
-        <?php if ( $is_available ) : ?>
-          <button type="submit" class="beslock-cart-installation__submit"><?php esc_html_e( 'Actualizar instalación', 'beslock-custom' ); ?></button>
         <?php endif; ?>
       </form>
     </td>
@@ -1037,6 +1112,7 @@ add_action( 'woocommerce_calculated_shipping', function() {
   }
 
   if ( WC()->session ) {
+    WC()->session->set( 'beslock_shipping_address_confirmed', 'yes' );
     WC()->session->set( 'beslock_shipping_address_1', $address_1 );
     WC()->session->set( 'beslock_shipping_area', $area );
     WC()->session->set( 'beslock_shipping_locality', $locality );

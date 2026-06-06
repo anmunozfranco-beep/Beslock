@@ -428,6 +428,7 @@ nav#mobileDrawer,
   --drawer-menu-top-space: clamp(1.25rem, 5vh, 3rem);
   --drawer-menu-gap: clamp(1.75rem, 7vh, 4.5rem);
   --drawer-menu-bottom-space: max(var(--drawer-bottom-safe), clamp(1.25rem, 4vh, 3rem));
+  --drawer-partner-space: clamp(5.75rem, 13vh, 7rem);
 }
 
 @supports (height: 100dvh) {
@@ -506,8 +507,8 @@ nav#mobileDrawer .mobile-menu__item,
 nav#mobileDrawer .mobile-drawer__panel .mobile-menu,
 [data-js="mobile-drawer"] [data-js="mobile-drawer-menu"] {
   height: auto !important;
-  min-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height) - var(--drawer-bottom-safe)) !important;
-  max-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height)) !important;
+  min-height: 0 !important;
+  max-height: calc(var(--drawer-viewport-height) - var(--drawer-header-height) - var(--drawer-bottom-safe) - var(--drawer-partner-space)) !important;
   overflow-x: hidden !important;
   overflow-y: auto !important;
   justify-content: flex-start !important;
