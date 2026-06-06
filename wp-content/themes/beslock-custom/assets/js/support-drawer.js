@@ -979,8 +979,15 @@
 
     els.toggle.addEventListener('click', function (event) {
       event.preventDefault();
+      var willOpen = els.toggle.getAttribute('aria-expanded') !== 'true';
+
+      if (!willOpen) {
+        resetSupportNavigation();
+        return;
+      }
+
       announceSectionChange('support');
-      toggleSupportMenu();
+      toggleSupportMenu(true);
     });
 
     if (manualsToggle) {

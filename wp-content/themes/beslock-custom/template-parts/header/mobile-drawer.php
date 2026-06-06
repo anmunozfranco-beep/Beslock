@@ -414,7 +414,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                       </select>
                     </label>
 
-                    <label class="support-form__field">
+                    <label class="support-form__field support-form__field--quantity">
                       <span>Cantidad</span>
                       <span class="support-project-qty" data-js="support-project-qty">
                         <button type="button" class="support-project-qty__button" data-js="support-project-qty-minus" aria-label="Disminuir cantidad">−</button>
