@@ -1428,6 +1428,89 @@ body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summ
   display: contents;
 }
 
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-product.beslock-classic-summary-product--installation {
+  display: inline-grid;
+  justify-items: center;
+  gap: 1.95rem;
+  width: max-content;
+  max-width: 100%;
+  text-align: center;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .beslock-classic-summary-product--installation,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation {
+  width: max-content;
+  max-width: 100%;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation {
+  display: grid;
+  justify-items: center;
+  gap: 0.82rem;
+  margin: 1.95rem 0 0 !important;
+  padding: 0 !important;
+  text-align: center;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta li,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation dt,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation dd {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta li {
+  display: grid;
+  justify-items: center;
+  gap: 0.52rem;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta-label,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation dt {
+  color: var(--checkout-ink);
+  font-weight: 500;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-installation-meta {
+  display: grid;
+  justify-items: center;
+  gap: 1.05rem;
+  min-width: 0;
+  max-width: 100%;
+  color: var(--checkout-ink);
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-installation-meta__item {
+  display: grid;
+  justify-items: center;
+  gap: 0.52rem;
+  min-width: 0;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-installation-meta__label,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-installation-meta__value {
+  display: block;
+  min-width: 0;
+}
+
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .wc-item-meta p,
+body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-order-card .woocommerce-checkout-review-order-table tr.beslock-checkout-item--installation td.product-name .variation dd p {
+  margin: 0 !important;
+  color: var(--checkout-ink);
+  font-weight: 500;
+}
+
 body.woocommerce-checkout:not(.woocommerce-order-received) .beslock-classic-summary-product__media {
   display: flex;
   align-items: center;

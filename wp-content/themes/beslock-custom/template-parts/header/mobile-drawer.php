@@ -86,13 +86,44 @@ if ( ! defined( 'ABSPATH' ) ) {
         </button>
 
         <div id="supportOptionsPanel" class="support-options-panel" data-js="support-options" role="region" aria-hidden="true" hidden>
-          <button type="button" class="support-option-button" data-support-target="consult-installation">Consultar instalación</button>
-          <button type="button" class="support-option-button" data-support-target="schedule-installation">Programar instalación</button>
+          <button type="button" class="support-option-button" data-support-target="schedule-installation">
+            <span class="support-option-button__label">
+              <span>Consultar y Programar</span>
+              <span>instalación</span>
+            </span>
+          </button>
           <button type="button" class="support-option-button" data-support-target="project-purchases">Compras para proyectos</button>
         </div>
       </li>
 
     </ul>
+
+    <?php
+      $drawer_partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
+      $drawer_partner_logo_url  = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png';
+
+      if ( file_exists( $drawer_partner_logo_path ) ) :
+        $drawer_partner_logo_url = $drawer_partner_logo_url . '?v=' . filemtime( $drawer_partner_logo_path );
+    ?>
+      <a
+        class="mobile-drawer__partner"
+        href="https://zonassmart.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="<?php echo esc_attr_x( 'ZONAS SMART, comercializador autorizado', 'drawer partner link label', 'beslock' ); ?>"
+      >
+        <span class="mobile-drawer__partner-kicker">Comercializador autorizado</span>
+        <img
+          class="mobile-drawer__partner-logo"
+          src="<?php echo esc_url( $drawer_partner_logo_url ); ?>"
+          alt="<?php echo esc_attr_x( 'ZONAS SMART', 'alt text', 'beslock' ); ?>"
+          width="1024"
+          height="1024"
+          loading="lazy"
+          decoding="async"
+        />
+      </a>
+    <?php endif; ?>
   </div>
 
   <aside id="manualsDrawer" class="manuals-drawer" data-js="manuals-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'Guías BESLOCK', 'beslock' ); ?>">
@@ -159,55 +190,160 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
         </section>
 
-        <section id="supportPanelScheduleInstallation" class="support-drawer__panel" data-js="support-panel" data-support-panel="schedule-installation" data-support-title="Programar instalación" hidden>
+        <section id="supportPanelScheduleInstallation" class="support-drawer__panel" data-js="support-panel" data-support-panel="schedule-installation" data-support-title="Consultar y Programar instalación" hidden>
           <div class="support-drawer__content">
-            <p class="support-drawer__intro">Si tu pedido incluye instalación, completa la información para coordinar la visita con nuestro equipo de soporte.</p>
+            <p class="support-drawer__intro" data-js="support-schedule-intro">Programa una instalación con tu número de pedido o solicita validación para un modelo BESLOCK.</p>
 
-            <form class="support-form support-form--grid" data-js="support-schedule-form" novalidate>
-              <label class="support-form__field">
-                <span>Número de pedido</span>
-                <input type="text" name="order_number" inputmode="numeric" autocomplete="off" required>
-              </label>
+            <form class="support-form support-form--grid" data-js="support-schedule-form" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" novalidate>
+              <input type="hidden" name="action" value="beslock_support_installation_request">
+              <input type="hidden" name="nonce" value="<?php echo esc_attr( wp_create_nonce( 'beslock_support_installation' ) ); ?>">
 
-              <label class="support-form__field">
-                <span>Ciudad</span>
-                <select name="city" required>
-                  <option value="">Selecciona una ciudad</option>
-                  <option value="bogota">Bogotá</option>
-                  <option value="medellin">Medellín</option>
-                  <option value="cali">Cali</option>
-                  <option value="barranquilla">Barranquilla</option>
-                </select>
-              </label>
+              <fieldset class="support-installation-tabs support-form__field--full" data-js="support-installation-mode">
+                <legend class="support-installation-tabs__legend">Tipo de solicitud</legend>
+                <input type="hidden" name="beslock_installation_request_type" value="order" data-js="support-schedule-mode">
+                <div class="support-installation-tabs__nav" role="tablist" aria-label="Tipo de solicitud de instalación">
+                  <button
+                    id="supportScheduleTabOrder"
+                    class="support-installation-tabs__tab is-active"
+                    type="button"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="supportSchedulePanelOrder"
+                    data-support-schedule-mode="order"
+                  >Ya tengo número de pedido</button>
+                  <button
+                    id="supportScheduleTabNoOrder"
+                    class="support-installation-tabs__tab"
+                    type="button"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="supportSchedulePanelNoOrder"
+                    tabindex="-1"
+                    data-support-schedule-mode="no_order"
+                  >No tengo número de pedido</button>
+                </div>
+              </fieldset>
 
-              <label class="support-form__field">
-                <span>Nombre de contacto</span>
-                <input type="text" name="contact_name" autocomplete="name" required>
-              </label>
+              <div id="supportSchedulePanelOrder" class="support-schedule-fields support-schedule-fields--order support-form__field--full" data-js="support-schedule-fields" data-support-schedule-panel="order" role="tabpanel" aria-labelledby="supportScheduleTabOrder">
+                <label class="support-form__field">
+                  <span>Número de pedido</span>
+                  <input type="text" name="order_number" inputmode="numeric" autocomplete="off" required>
+                </label>
 
-              <label class="support-form__field">
-                <span>Teléfono</span>
-                <input type="tel" name="phone" autocomplete="tel" required>
-              </label>
+                <label class="support-form__field">
+                  <span>Correo electrónico</span>
+                  <input type="email" name="order_email" autocomplete="email" required>
+                </label>
 
-              <label class="support-form__field">
-                <span>Correo electrónico</span>
-                <input type="email" name="email" autocomplete="email" required>
-              </label>
+                <div class="support-order-confirm-action support-form__field--full" data-js="support-order-confirm-action">
+                  <button type="button" class="support-button support-button--secondary" data-js="support-order-confirm">Confirmar</button>
+                </div>
 
-              <label class="support-form__field support-form__field--full">
-                <span>Dirección de instalación</span>
-                <input type="text" name="installation_address" autocomplete="street-address" required>
-              </label>
+                <div class="support-order-details support-form__field--full" data-js="support-order-details" hidden>
+                  <div class="support-order-details__grid" aria-live="polite">
+                    <p class="support-order-details__item">
+                      <span>Nombre</span>
+                      <strong data-js="support-order-name">-</strong>
+                    </p>
+                    <p class="support-order-details__item">
+                      <span>Teléfono</span>
+                      <strong data-js="support-order-phone">-</strong>
+                    </p>
+                    <p class="support-order-details__item">
+                      <span>Ciudad</span>
+                      <strong data-js="support-order-city">-</strong>
+                    </p>
+                  </div>
 
-              <label class="support-form__field support-form__field--full">
-                <span>Observaciones</span>
-                <textarea name="notes" rows="4"></textarea>
-              </label>
+                  <div class="support-order-status" data-js="support-order-status" hidden>
+                    <strong data-js="support-order-status-title">-</strong>
+                    <p data-js="support-order-status-text">-</p>
+                  </div>
 
-              <p class="support-note support-form__field--full">La instalación está disponible inicialmente en Bogotá, Medellín, Cali y Barranquilla. Para otras ciudades, nuestro equipo validará cobertura antes de confirmar el servicio.</p>
+                  <div class="support-order-purchase" data-js="support-order-purchase" hidden>
+                    <ul class="support-order-purchase__items" data-js="support-order-purchase-items"></ul>
+                    <button type="button" class="support-button support-button--primary" data-js="support-order-purchase-button">Comprar instalación</button>
+                  </div>
 
-              <button type="submit" class="support-button support-button--primary">Solicitar programación</button>
+                  <div class="support-order-schedule" data-js="support-order-schedule" hidden>
+                    <p class="support-order-observations" data-js="support-order-observations-wrap" hidden>
+                      <span>Observaciones</span>
+                      <strong data-js="support-order-observations">-</strong>
+                    </p>
+
+                    <label class="support-form__field support-form__field--full">
+                      <span>Dirección de instalación</span>
+                      <input type="text" name="installation_address" autocomplete="street-address" required disabled data-js="support-order-address">
+                    </label>
+
+                    <div class="support-order-schedule__grid">
+                      <label class="support-form__field">
+                        <span>Fecha</span>
+                        <input type="date" name="installation_requested_date" required disabled data-js="support-order-schedule-field">
+                      </label>
+
+                      <label class="support-form__field">
+                        <span>Hora</span>
+                        <input type="time" name="installation_requested_time" required disabled data-js="support-order-schedule-field">
+                      </label>
+                    </div>
+
+                    <p class="support-note">Ingresa una fecha y hora tentativa para la visita. Puedes editar la dirección de instalación, pero no puedes cambiar la ciudad indicada inicialmente al momento de la compra.</p>
+                  </div>
+
+                  <div class="support-order-info-request" data-js="support-order-info-request" hidden>
+                    <label class="support-form__field support-form__field--full">
+                      <span>Observaciones o solicitudes</span>
+                      <textarea name="installation_info_message" rows="4" placeholder="Quisiera saber si pueden prestar el servicio de instalación según la ciudad indicada" required disabled data-js="support-order-info-request-field"></textarea>
+                    </label>
+                    <button type="button" class="support-button support-button--primary" data-js="support-order-info-request-button">Solicitar información</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="supportSchedulePanelNoOrder" class="support-schedule-fields support-schedule-fields--no-order support-form__field--full" data-js="support-schedule-fields" data-support-schedule-panel="no_order" role="tabpanel" aria-labelledby="supportScheduleTabNoOrder" hidden>
+                <label class="support-form__field">
+                  <span>Nombre</span>
+                  <input type="text" name="contact_name" autocomplete="name" required disabled>
+                </label>
+
+                <label class="support-form__field">
+                  <span>Correo electrónico</span>
+                  <input type="email" name="email" autocomplete="email" required disabled>
+                </label>
+
+                <label class="support-form__field">
+                  <span>Ciudad</span>
+                  <input type="text" name="city" autocomplete="address-level2" required disabled>
+                </label>
+
+                <label class="support-form__field">
+                  <span>Dirección de instalación</span>
+                  <input type="text" name="installation_address" autocomplete="street-address" required disabled>
+                </label>
+
+                <label class="support-form__field support-form__field--full">
+                  <span>Modelo</span>
+                  <select name="product_model" required disabled>
+                    <option value="">Selecciona un modelo</option>
+                    <?php
+                    $support_installation_products = function_exists( 'beslock_get_support_installation_product_options' ) ? beslock_get_support_installation_product_options() : array();
+                    foreach ( $support_installation_products as $support_installation_product ) :
+                      ?>
+                      <option value="<?php echo esc_attr( $support_installation_product['slug'] ); ?>"><?php echo esc_html( $support_installation_product['title'] ); ?></option>
+                    <?php endforeach; ?>
+                  </select>
+                </label>
+
+                <label class="support-form__field support-form__field--full">
+                  <span>Comentarios, observaciones y solicitudes</span>
+                  <textarea name="installation_message" rows="4" placeholder="Quisiera saber si pueden prestar el servicio de instalación según la ciudad indicada" required disabled></textarea>
+                </label>
+
+                <p class="support-note support-form__field--full">Esta solicitud se guardará como consulta pendiente del modelo seleccionado y será revisada antes de publicarse en el histórico de consultas.</p>
+              </div>
+
+              <button type="submit" class="support-button support-button--primary is-hidden" data-js="support-schedule-submit" hidden disabled>Programar instalación</button>
               <p class="support-form__message support-form__field--full" data-js="support-schedule-message" hidden></p>
             </form>
           </div>
@@ -260,8 +396,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
               <div class="support-project-products support-form__field--full" data-js="support-project-products">
                 <div class="support-project-products__header">
-                  <span>Referencias</span>
-                  <button type="button" class="support-button support-button--ghost" data-js="support-add-product-row">Agregar referencia</button>
+                  <span>Modelos</span>
                 </div>
 
                 <div class="support-project-products__rows" data-js="support-project-rows">
@@ -281,7 +416,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <label class="support-form__field">
                       <span>Cantidad</span>
-                      <input type="number" name="quantity[]" min="1" inputmode="numeric" required>
+                      <span class="support-project-qty" data-js="support-project-qty">
+                        <button type="button" class="support-project-qty__button" data-js="support-project-qty-minus" aria-label="Disminuir cantidad">−</button>
+                        <input class="support-project-qty__input" type="number" name="quantity[]" min="1" step="1" inputmode="numeric" value="1" required aria-label="Cantidad">
+                        <button type="button" class="support-project-qty__button" data-js="support-project-qty-plus" aria-label="Aumentar cantidad">+</button>
+                      </span>
                     </label>
 
                     <label class="support-form__field">
@@ -303,6 +442,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                       <i class="bi bi-x-lg" aria-hidden="true"></i>
                     </button>
                   </div>
+                </div>
+
+                <div class="support-project-products__actions">
+                  <button type="button" class="support-button support-button--ghost" data-js="support-add-product-row">Agregar otro modelo</button>
                 </div>
               </div>
 

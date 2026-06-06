@@ -46,6 +46,9 @@ if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/product-feature
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/product-interactions.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/product-interactions.php';
 }
+if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/support-installation.php' ) ) {
+  require_once get_stylesheet_directory() . '/inc/woocommerce/support-installation.php';
+}
 if ( file_exists( get_stylesheet_directory() . '/inc/woocommerce/product-hooks.php' ) ) {
   require_once get_stylesheet_directory() . '/inc/woocommerce/product-hooks.php';
 }

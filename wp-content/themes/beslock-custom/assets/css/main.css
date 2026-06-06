@@ -1614,14 +1614,24 @@ body.single-product a.single_add_to_cart_button .bi {
 }
 
 .site-footer__partner {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   justify-content: center;
   gap: 0.74rem;
   width: min(100%, 18.5rem);
   padding: 0.94rem 0 0.22rem;
   border-top: 1px solid rgba(16, 32, 24, 0.1);
+  color: inherit;
+  visibility: visible;
+  opacity: 1;
   text-align: center;
+  text-decoration: none;
+}
+
+.site-footer__partner:hover,
+.site-footer__partner:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 .site-footer__partner-kicker {
@@ -1635,7 +1645,7 @@ body.single-product a.single_add_to_cart_button .bi {
 }
 
 .site-footer__partner-logo {
-  display: block;
+  display: block !important;
   width: 3.35rem;
   flex: 0 0 auto;
   height: auto;

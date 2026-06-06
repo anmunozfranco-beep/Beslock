@@ -165,6 +165,27 @@ function beslock_get_order_payment_status( WC_Order $order ) {
   }
 }
 
+function beslock_get_order_installation_timeline_event( WC_Order $order ) {
+  if ( ! function_exists( 'beslock_get_support_installation_order_installation_state' ) ) {
+    return null;
+  }
+
+  $installation = beslock_get_support_installation_order_installation_state( $order );
+  if ( empty( $installation['purchased'] ) ) {
+    return null;
+  }
+
+  $scheduled = 'yes' === (string) $order->get_meta( '_beslock_installation_schedule_requested', true );
+
+  return array(
+    'title'  => __( 'Instalación', 'beslock-custom' ),
+    'detail' => $scheduled
+      ? __( 'Instalación programada', 'beslock-custom' )
+      : __( 'Pendiente de programación', 'beslock-custom' ),
+    'state'  => $scheduled ? 'complete' : 'current',
+  );
+}
+
 function beslock_get_order_timeline_events( WC_Order $order, $order_date, array $tracking ) {
   $status   = $order->get_status();
   $is_paid  = $order->is_paid();
@@ -213,7 +234,7 @@ function beslock_get_order_timeline_events( WC_Order $order, $order_date, array 
     $shipping_state = 'complete';
   }
 
-  return array(
+  $events = array(
     array(
       'title'  => __( 'Pedido recibido', 'beslock-custom' ),
       'detail' => $order_date,
@@ -235,6 +256,13 @@ function beslock_get_order_timeline_events( WC_Order $order, $order_date, array 
       'state'  => $shipping_state,
     ),
   );
+
+  $installation_event = beslock_get_order_installation_timeline_event( $order );
+  if ( $installation_event ) {
+    $events[] = $installation_event;
+  }
+
+  return $events;
 }
 
 function beslock_get_order_timeline_progress( array $events ) {
@@ -337,6 +365,9 @@ function beslock_render_order_lookup_result( WC_Order $order ) {
   $items        = $order->get_items();
   $events       = beslock_get_order_timeline_events( $order, $order_date, $tracking );
   $progress     = beslock_get_order_timeline_progress( $events );
+  $event_count  = max( 1, count( $events ) );
+  $line_start   = 50 / $event_count;
+  $line_width   = ( ( $event_count - 1 ) / $event_count ) * 100;
   ?>
   <section class="beslock-order-lookup__result" aria-label="<?php esc_attr_e( 'Estado del pedido', 'beslock-custom' ); ?>">
     <div class="beslock-order-lookup__result-header">
@@ -344,7 +375,7 @@ function beslock_render_order_lookup_result( WC_Order $order ) {
       <h2>Estado de tu compra</h2>
     </div>
 
-    <ol class="beslock-order-lookup__timeline" style="--timeline-progress: <?php echo esc_attr( number_format( $progress, 3, '.', '' ) ); ?>;">
+    <ol class="beslock-order-lookup__timeline" style="--timeline-progress: <?php echo esc_attr( number_format( $progress, 3, '.', '' ) ); ?>; --timeline-count: <?php echo esc_attr( (string) $event_count ); ?>; --timeline-line-start: <?php echo esc_attr( number_format( $line_start, 3, '.', '' ) ); ?>%; --timeline-line-width: <?php echo esc_attr( number_format( $line_width, 3, '.', '' ) ); ?>%;">
       <?php foreach ( $events as $event ) : ?>
         <li class="beslock-order-lookup__timeline-item beslock-order-lookup__timeline-item--<?php echo esc_attr( sanitize_html_class( $event['state'] ) ); ?>">
           <span class="beslock-order-lookup__timeline-node" aria-hidden="true"></span>

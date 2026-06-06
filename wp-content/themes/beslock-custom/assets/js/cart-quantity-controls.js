@@ -376,6 +376,43 @@
     return url.href;
   }
 
+  function getCleanRemovalUrl(removeUrl) {
+    var url = new URL(removeUrl, window.location.origin);
+    url.searchParams.set('beslock_empty_cart', '1');
+    return url.href;
+  }
+
+  function markHeaderCartAsEmpty() {
+    document.querySelectorAll('.header__cart-count').forEach(function (count) {
+      count.textContent = '0';
+      count.classList.add('is-empty');
+    });
+  }
+
+  function getCartRows(form) {
+    if (!form) return [];
+
+    return Array.prototype.slice.call(form.querySelectorAll('.cart_item'));
+  }
+
+  function handleLastCartItemRemoval(event) {
+    var target = event.target;
+    var removeLink = target && target.closest ? target.closest('.woocommerce-cart-form a.remove') : null;
+
+    if (!removeLink || !removeLink.href) return;
+
+    var form = removeLink.closest('.woocommerce-cart-form');
+    if (getCartRows(form).length !== 1) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+
+    markHeaderCartAsEmpty();
+    document.body.classList.add('beslock-cart--refreshing-empty');
+    window.location.assign(getCleanRemovalUrl(removeLink.href));
+  }
+
   function removeCleanEmptyCartParam() {
     var url = new URL(window.location.href);
 
@@ -482,6 +519,8 @@
   } else {
     refreshCartEnhancements();
   }
+
+  document.addEventListener('click', handleLastCartItemRemoval, true);
 
   if (window.jQuery && window.jQuery.fn) {
     window.jQuery(document.body).on(

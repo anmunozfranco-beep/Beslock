@@ -32,7 +32,13 @@
           if ( file_exists( $footer_partner_logo_path ) ) :
             $footer_partner_logo_url = $footer_partner_logo_url . '?v=' . filemtime( $footer_partner_logo_path );
         ?>
-          <div class="site-footer__partner" aria-label="<?php echo esc_attr_x( 'Comercializador autorizado en Colombia', 'footer partner section', 'beslock' ); ?>">
+          <a
+            class="site-footer__partner"
+            href="https://zonassmart.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="<?php echo esc_attr_x( 'ZONAS SMART, comercializador autorizado', 'footer partner link label', 'beslock' ); ?>"
+          >
             <span class="site-footer__partner-kicker">Comercializador autorizado</span>
             <img
               class="site-footer__partner-logo"
@@ -43,7 +49,7 @@
               loading="lazy"
               decoding="async"
             />
-          </div>
+          </a>
         <?php endif; ?>
 
         <div class="site-footer__payments" aria-label="<?php echo esc_attr_x( 'Pagos seguros', 'footer payments label', 'beslock' ); ?>">
@@ -136,26 +142,31 @@
           array(
             'label' => 'TikTok',
             'icon'  => 'bi-tiktok',
-            'url'   => 'https://linktr.ee/beslock',
+            'url'   => 'https://www.tiktok.com/@zonassmart',
           ),
           array(
             'label' => 'Instagram',
             'icon'  => 'bi-instagram',
-            'url'   => 'https://instagram.com/beslock.fr',
+            'url'   => 'https://www.instagram.com/zonassmart/',
           ),
           array(
             'label' => 'Facebook',
             'icon'  => 'bi-facebook',
-            'url'   => 'https://linktr.ee/beslock',
+            'url'   => 'https://www.facebook.com/zonassmart/about',
           ),
           array(
             'label' => 'YouTube',
             'icon'  => 'bi-youtube',
-            'url'   => 'https://linktr.ee/beslock',
+            'url'   => 'https://www.youtube.com/@ZonasSmart',
+          ),
+          array(
+            'label' => 'WhatsApp',
+            'icon'  => 'bi-whatsapp',
+            'url'   => 'https://wa.me/573332799430',
           ),
         );
       ?>
-      <nav class="site-footer__social" aria-label="<?php echo esc_attr_x( 'Redes sociales BESLOCK', 'footer social nav label', 'beslock' ); ?>">
+      <nav class="site-footer__social" aria-label="<?php echo esc_attr_x( 'Redes sociales ZONAS SMART', 'footer social nav label', 'beslock' ); ?>">
         <div class="site-footer__social-links">
           <?php foreach ( $footer_social_links as $footer_social_link ) : ?>
             <a
@@ -163,7 +174,7 @@
               href="<?php echo esc_url( $footer_social_link['url'] ); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="<?php echo esc_attr( sprintf( 'BESLOCK en %s', $footer_social_link['label'] ) ); ?>"
+              aria-label="<?php echo esc_attr( sprintf( 'ZONAS SMART en %s', $footer_social_link['label'] ) ); ?>"
             >
               <span class="site-footer__social-mark" aria-hidden="true">
                 <i class="site-footer__social-icon bi <?php echo esc_attr( $footer_social_link['icon'] ); ?>"></i>

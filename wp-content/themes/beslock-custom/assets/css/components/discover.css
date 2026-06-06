@@ -1,7 +1,11 @@
 /* Institutional partner banner, reusing the former Discover homepage slot. */
 
 .discover.beslock-partner-banner {
+  display: block;
   position: relative;
+  visibility: visible;
+  opacity: 1;
+  transform: none;
   overflow: hidden;
   margin-top: clamp(3rem, 6vw, 5rem);
   margin-bottom: clamp(2.75rem, 5vw, 4.75rem);
@@ -11,6 +15,12 @@
   box-shadow:
     inset 0 1px 0 rgba(3, 69, 38, 0.1),
     inset 0 -1px 0 rgba(3, 69, 38, 0.08);
+}
+
+body.beslock-frontpage-motion .discover.beslock-partner-banner .discover__text,
+body.beslock-frontpage-motion .discover.beslock-partner-banner .discover__image {
+  opacity: 1;
+  transform: none;
 }
 
 .discover.beslock-partner-banner::before {
@@ -99,13 +109,14 @@
 .beslock-partner-banner__title-line--brand {
   display: inline-flex;
   align-items: baseline;
-  gap: 0.28em;
+  gap: 0;
 }
 
 .beslock-partner-banner__registered {
   position: relative;
-  top: -0.6em;
-  margin-left: 0.025em;
+  top: -0.95em;
+  margin-left: 0.035em;
+  margin-right: 0.34em;
   font-size: 0.4em;
   font-weight: 700;
   line-height: 1;

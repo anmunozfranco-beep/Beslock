@@ -150,11 +150,34 @@ function beslock_checkout_default_field_value( $value, $input ) {
     return $value;
   }
 
+  if (
+    'country' !== $field_map[ $input ] &&
+    function_exists( 'beslock_cart_has_confirmed_shipping_address' ) &&
+    ! beslock_cart_has_confirmed_shipping_address()
+  ) {
+    return '';
+  }
+
   $shipping_value = beslock_checkout_get_shipping_value( $field_map[ $input ] );
 
   return '' !== trim( (string) $shipping_value ) ? $shipping_value : $value;
 }
 add_filter( 'woocommerce_checkout_get_value', 'beslock_checkout_default_field_value', 20, 2 );
+
+function beslock_checkout_cart_item_class( $class, $cart_item, $cart_item_key ) {
+  if ( ! beslock_is_checkout_form_page() || empty( $cart_item['data'] ) || ! is_a( $cart_item['data'], 'WC_Product' ) ) {
+    return $class;
+  }
+
+  $sku = (string) $cart_item['data']->get_sku();
+
+  if ( 0 === strpos( $sku, 'BESLOCK-INST-' ) ) {
+    $class .= ' beslock-checkout-item--installation';
+  }
+
+  return $class;
+}
+add_filter( 'woocommerce_cart_item_class', 'beslock_checkout_cart_item_class', 20, 3 );
 
 function beslock_checkout_cart_item_name( $name, $cart_item, $cart_item_key ) {
   if ( ! beslock_is_checkout_form_page() || empty( $cart_item['data'] ) || ! is_a( $cart_item['data'], 'WC_Product' ) ) {
@@ -162,6 +185,42 @@ function beslock_checkout_cart_item_name( $name, $cart_item, $cart_item_key ) {
   }
 
   $product   = $cart_item['data'];
+  $sku       = (string) $product->get_sku();
+
+  if ( 0 === strpos( $sku, 'BESLOCK-INST-' ) ) {
+    $installation_order_number = ! empty( $cart_item['beslock_installation_parent_order_number'] ) ? sanitize_text_field( $cart_item['beslock_installation_parent_order_number'] ) : '';
+    $installation_city         = ! empty( $cart_item['beslock_installation_city'] ) ? sanitize_text_field( $cart_item['beslock_installation_city'] ) : '';
+    $installation_meta         = '';
+
+    if ( '' !== $installation_order_number || '' !== $installation_city ) {
+      ob_start();
+      ?>
+      <span class="beslock-classic-summary-installation-meta">
+        <?php if ( '' !== $installation_order_number ) : ?>
+          <span class="beslock-classic-summary-installation-meta__item">
+            <span class="beslock-classic-summary-installation-meta__label"><?php esc_html_e( 'Pedido asociado:', 'beslock-custom' ); ?></span>
+            <span class="beslock-classic-summary-installation-meta__value"><?php echo esc_html( $installation_order_number ); ?></span>
+          </span>
+        <?php endif; ?>
+
+        <?php if ( '' !== $installation_city ) : ?>
+          <span class="beslock-classic-summary-installation-meta__item">
+            <span class="beslock-classic-summary-installation-meta__label"><?php esc_html_e( 'Ciudad de instalación:', 'beslock-custom' ); ?></span>
+            <span class="beslock-classic-summary-installation-meta__value"><?php echo esc_html( $installation_city ); ?></span>
+          </span>
+        <?php endif; ?>
+      </span>
+      <?php
+      $installation_meta = ob_get_clean();
+    }
+
+    return sprintf(
+      '<span class="beslock-classic-summary-product beslock-classic-summary-product--installation"><span class="beslock-classic-summary-product__name">%1$s</span>%2$s</span>',
+      esc_html__( 'Servicio de instalación', 'beslock-custom' ),
+      $installation_meta
+    );
+  }
+
   $thumbnail = $product->get_image(
     'woocommerce_thumbnail',
     array(
@@ -183,6 +242,29 @@ function beslock_checkout_cart_item_quantity( $quantity_html, $cart_item, $cart_
     return $quantity_html;
   }
 
+  if ( ! empty( $cart_item['data'] ) && is_a( $cart_item['data'], 'WC_Product' ) ) {
+    $sku = (string) $cart_item['data']->get_sku();
+
+    if ( 0 === strpos( $sku, 'BESLOCK-INST-' ) ) {
+      return '';
+    }
+  }
+
   return '<span class="beslock-classic-summary-qty">' . esc_html( (string) $cart_item['quantity'] ) . '</span>';
 }
 add_filter( 'woocommerce_checkout_cart_item_quantity', 'beslock_checkout_cart_item_quantity', 20, 3 );
+
+function beslock_checkout_hide_installation_cart_item_data( $item_data, $cart_item ) {
+  if ( ! beslock_is_checkout_form_page() || empty( $cart_item['data'] ) || ! is_a( $cart_item['data'], 'WC_Product' ) ) {
+    return $item_data;
+  }
+
+  $sku = (string) $cart_item['data']->get_sku();
+
+  if ( 0 === strpos( $sku, 'BESLOCK-INST-' ) ) {
+    return array();
+  }
+
+  return $item_data;
+}
+add_filter( 'woocommerce_get_item_data', 'beslock_checkout_hide_installation_cart_item_data', 20, 2 );
