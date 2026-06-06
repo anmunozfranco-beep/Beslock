@@ -118,17 +118,14 @@ nav#mobileDrawer .support-option-button__label span {
 nav#mobileDrawer.support-menu-open .mobile-menu {
   display: flex !important;
   flex-direction: column !important;
-  height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
-  min-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
-  max-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom))) - 1.25rem) !important;
-  justify-content: space-between !important;
-  gap: clamp(1.05rem, 2.35vh, 1.75rem) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: calc(var(--drawer-viewport-height, 100vh) - var(--drawer-header-height, var(--drawer-header-cover-height, 66px)) - var(--drawer-bottom-safe, max(1rem, env(safe-area-inset-bottom)))) !important;
+  justify-content: flex-start !important;
+  gap: var(--drawer-menu-gap) !important;
   overflow-y: auto !important;
   overflow-x: hidden !important;
-  padding:
-    clamp(0.85rem, 2vh, 1.35rem)
-    0
-    max(0.75rem, env(safe-area-inset-bottom)) !important;
+  padding: var(--drawer-menu-top-space) 0 var(--drawer-menu-bottom-space) !important;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -141,7 +138,7 @@ nav#mobileDrawer.support-menu-open .mobile-menu::-webkit-scrollbar {
 
 nav#mobileDrawer.support-menu-open .mobile-menu__item {
   flex: 0 0 auto !important;
-  padding: 0 !important;
+  padding: clamp(0.25rem, 1.4vh, 0.9rem) 0 !important;
   margin: 0 !important;
 }
 
@@ -149,6 +146,7 @@ nav#mobileDrawer.support-menu-open .mobile-menu__item--support {
   display: flex !important;
   flex-direction: column !important;
   min-height: 0 !important;
+  padding: 0.75rem 0 !important;
 }
 
 nav#mobileDrawer.support-menu-open .support-options-panel {
@@ -780,6 +778,15 @@ nav#mobileDrawer.support-menu-open .support-options-panel {
   border-radius: 8px;
   background: transparent;
   transition: border-color 180ms ease, background-color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.support-project-row .support-form__field--quantity {
+  justify-items: center;
+}
+
+.support-project-row .support-form__field--quantity > span:first-child {
+  width: 100%;
+  text-align: center;
 }
 
 .support-project-row:hover,
