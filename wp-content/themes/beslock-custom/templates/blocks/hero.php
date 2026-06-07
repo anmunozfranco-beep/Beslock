@@ -3,18 +3,72 @@
   Hero implemented as template-part. Uses theme-relative asset paths under
   `images/Clips_hero` and `images/Hero_develp/images_hero`.
 */
-  $startup_overlay = 'e-flex_hero.png';
-  $startup_overlay_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/' . $startup_overlay;
-  $startup_overlay_url = get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/' . $startup_overlay;
-  if ( file_exists( $startup_overlay_fs ) ) {
-    $startup_overlay_url .= '?v=' . filemtime( $startup_overlay_fs );
-  }
+  $hero_overlay_base_path = '/assets/images/Hero_develp/images_hero/';
+  $hero_overlay_new_path  = $hero_overlay_base_path . 'overlays_hero_new/';
+  $hero_overlay_d_path    = $hero_overlay_base_path . 'images_hero_d/';
+  $hero_overlay_new_files = array(
+    'e-flex_hero.png'    => 'e-flex_hero.png',
+    'e-nova_hero.png'    => 'e-nova_hero.png',
+    'e-prime_hero.png'   => 'e-prime_hero.png',
+    'e-shield_hero.png'  => 'e-shield-hero.png',
+    'e-touch_hero.png'   => 'e-touch_hero.png',
+    'e-orbit_hero.png'   => 'e-orbit_hero_e.png',
+    'e-orbit_2_hero.png' => 'e-orbit_hero_i.png',
+  );
 
-  $startup_overlay_d_file = 'e-flex_d.png';
-  $startup_overlay_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file;
-	  $startup_overlay_d_url = file_exists( $startup_overlay_d_fs )
-	    ? ( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $startup_overlay_d_file )
-	    : '';
+  $hero_asset = static function ( $relative_path ) {
+    $asset_fs = get_stylesheet_directory() . $relative_path;
+    $asset_url = get_stylesheet_directory_uri() . $relative_path;
+    $asset_exists = file_exists( $asset_fs );
+
+    if ( $asset_exists ) {
+      $asset_url .= '?v=' . filemtime( $asset_fs );
+    }
+
+    return array(
+      'exists' => $asset_exists,
+      'fs'     => $asset_fs,
+      'url'    => $asset_url,
+    );
+  };
+
+  $resolve_hero_overlay = static function ( $overlay_file ) use ( $hero_asset, $hero_overlay_base_path, $hero_overlay_new_files, $hero_overlay_new_path ) {
+    $new_overlay_file = isset( $hero_overlay_new_files[ $overlay_file ] ) ? $hero_overlay_new_files[ $overlay_file ] : $overlay_file;
+    $new_overlay = $hero_asset( $hero_overlay_new_path . $new_overlay_file );
+
+    if ( ! empty( $new_overlay['exists'] ) ) {
+      $new_overlay['file'] = $new_overlay_file;
+      $new_overlay['uses_new'] = true;
+      return $new_overlay;
+    }
+
+    $legacy_overlay = $hero_asset( $hero_overlay_base_path . $overlay_file );
+    $legacy_overlay['file'] = $overlay_file;
+    $legacy_overlay['uses_new'] = false;
+    return $legacy_overlay;
+  };
+
+  $resolve_hero_overlay_desktop = static function ( $overlay_file, $resolved_overlay ) use ( $hero_asset, $hero_overlay_d_path ) {
+    if ( ! empty( $resolved_overlay['uses_new'] ) ) {
+      return $resolved_overlay;
+    }
+
+    $overlay_base = pathinfo( $overlay_file, PATHINFO_FILENAME );
+    if ( preg_match( '/^(.*)_2_hero$/i', $overlay_base, $matches ) ) {
+      $overlay_d_file = $matches[1] . '_d_2.png';
+    } else {
+      $overlay_d_file = preg_replace( '/_hero$/i', '_d', $overlay_base ) . '.png';
+    }
+
+    $desktop_overlay = $hero_asset( $hero_overlay_d_path . $overlay_d_file );
+    return ! empty( $desktop_overlay['exists'] ) ? $desktop_overlay : array( 'url' => '' );
+  };
+
+  $startup_overlay = 'e-flex_hero.png';
+  $startup_overlay_asset = $resolve_hero_overlay( $startup_overlay );
+  $startup_overlay_url = $startup_overlay_asset['url'];
+  $startup_overlay_d_asset = $resolve_hero_overlay_desktop( $startup_overlay, $startup_overlay_asset );
+	  $startup_overlay_d_url = ! empty( $startup_overlay_d_asset['url'] ) ? $startup_overlay_d_asset['url'] : '';
 	  $transparent_pixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 	?>
 <section class="beslock-hero" id="beslockHero" aria-roledescription="carousel" aria-label="Hero carousel" data-startup-state="booting">
@@ -92,15 +146,9 @@
           if ( file_exists( $poster_fs ) ) {
             $poster_url = get_stylesheet_directory_uri() . $poster_relative_path . '?v=' . filemtime( $poster_fs );
           }
-          // Map overlay filename to high-res variant in images_hero/images_hero_d if present
-          $ov_base = pathinfo($ov, PATHINFO_FILENAME);
-          if (preg_match('/^(.*)_2_hero$/i', $ov_base, $m)) {
-            $ov_d_file = $m[1] . '_d_2.png';
-          } else {
-            $ov_d_file = preg_replace('/_hero$/i', '_d', $ov_base) . '.png';
-          }
-          $ov_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov_d_file;
-          $ov_d_url = file_exists($ov_d_fs) ? (get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov_d_file) : '';
+          $ov_asset = $resolve_hero_overlay( $ov );
+          $ov_d_asset = $resolve_hero_overlay_desktop( $ov, $ov_asset );
+          $ov_d_url = ! empty( $ov_d_asset['url'] ) ? $ov_d_asset['url'] : '';
       ?>
       <article class="hero-slide" data-index="<?php echo $i; ?>" aria-roledescription="slide" aria-label="Slide <?php echo $i+1; ?>">
         <div class="slide-inner">
@@ -123,32 +171,22 @@
               }
             ?>
             <?php
-              // Resolve filesystem path for the overlay and append filemtime as cache-buster
-              $ov_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/' . $ov;
-              $ov_url = get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/' . $ov;
-              if ( file_exists( $ov_fs ) ) {
-                $ov_url .= '?v=' . filemtime( $ov_fs );
-              }
+              $ov_url = $ov_asset['url'];
             ?>
 	            <img class="slide-overlay" src="<?php echo $is_first_slide ? esc_url( $ov_url ) : esc_attr( $transparent_pixel ); ?>"<?php echo $is_first_slide ? '' : ' data-src="' . esc_url( $ov_url ) . '" data-defer-until="hero-slide"'; ?><?php echo $data_offset_attr; ?> alt="" aria-hidden="true" decoding="async" loading="<?php echo $is_first_slide ? 'eager' : 'lazy'; ?>" fetchpriority="<?php echo $is_first_slide ? 'high' : 'low'; ?>" />
 	          </picture>
-          <?php if ($i === 5): // Add second orbit overlay image that enters at 3.55s ?>
+          <?php if ($i === 5): // Add second orbit overlay image that enters at 4s ?>
             <?php
               $ov2 = 'e-orbit_2_hero.png';
-              $ov2_base = pathinfo($ov2, PATHINFO_FILENAME);
-              if (preg_match('/^(.*)_2_hero$/i', $ov2_base, $mm)) {
-                $ov2_d_file = $mm[1] . '_d_2.png';
-              } else {
-                $ov2_d_file = preg_replace('/_hero$/i', '_d', $ov2_base) . '.png';
-              }
-              $ov2_d_fs = get_stylesheet_directory() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file;
-              $ov2_d_url = file_exists($ov2_d_fs) ? (get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/images_hero_d/' . $ov2_d_file) : '';
+              $ov2_asset = $resolve_hero_overlay( $ov2 );
+              $ov2_d_asset = $resolve_hero_overlay_desktop( $ov2, $ov2_asset );
+              $ov2_d_url = ! empty( $ov2_d_asset['url'] ) ? $ov2_d_asset['url'] : '';
             ?>
 	              <picture class="slide-overlay-frame" aria-hidden="true">
 	              <?php if ($ov2_d_url): ?>
 	                <source media="(min-width:600px)" data-srcset="<?php echo esc_url( $ov2_d_url ); ?>">
 	              <?php endif; ?>
-	              <img class="slide-overlay" src="<?php echo esc_attr( $transparent_pixel ); ?>" data-src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/Hero_develp/images_hero/e-orbit_2_hero.png' ); ?>" data-defer-until="hero-slide" data-start="3.55" data-offset="27" alt="" aria-hidden="true" decoding="async" loading="lazy" fetchpriority="low" />
+	              <img class="slide-overlay" src="<?php echo esc_attr( $transparent_pixel ); ?>" data-src="<?php echo esc_url( $ov2_asset['url'] ); ?>" data-defer-until="hero-slide" data-start="4" data-offset="27" alt="" aria-hidden="true" decoding="async" loading="lazy" fetchpriority="low" />
 	            </picture>
           <?php endif; ?>
           <div class="slide-content">

@@ -623,6 +623,18 @@
     var mobileVideoFocusTimelines = {
       'e-Orbit.mp4': [
         { at: 4, x: 42.5, y: 50 }
+      ],
+      'e-Orbit-mobile.mp4': [
+        { at: 4, x: 47, y: 82 }
+      ]
+    };
+    var videoSceneTimelines = {
+      'e-Orbit.mp4': [
+        { at: 0, fit: 'cover', x: 0, y: 82 },
+        { at: 4, fit: 'contain', x: 0, y: 82 }
+      ],
+      'e-Orbit-mobile.mp4': [
+        { at: 4, fit: 'cover', x: 47, y: 82 }
       ]
     };
 
@@ -727,6 +739,11 @@
       return baseName && mobileVideoFocusTimelines[baseName] ? mobileVideoFocusTimelines[baseName] : null;
     }
 
+    function getVideoSceneTimeline(video) {
+      var baseName = getVideoBaseName(video);
+      return baseName && videoSceneTimelines[baseName] ? videoSceneTimelines[baseName] : null;
+    }
+
     function mapFocusToObjectPosition(focusRatio, visibleRatio) {
       if (!(visibleRatio > 0 && visibleRatio < 0.999)) return 50;
       var position = (focusRatio - (visibleRatio / 2)) / (1 - visibleRatio);
@@ -829,6 +846,75 @@
         x: focusXPercent,
         y: focusYPercent
       };
+    }
+
+    function resetVideoSceneState(slide, video) {
+      if (!video) return;
+
+      try { video.style.removeProperty('--hero-video-fit'); } catch (e) {}
+      try { video.style.removeProperty('--hero-video-focus-x'); } catch (e) {}
+      try { video.style.removeProperty('--hero-video-focus-y'); } catch (e) {}
+      try {
+        if (slide) {
+          slide.removeAttribute('data-video-fit');
+          slide.removeAttribute('data-video-focus-x');
+          slide.removeAttribute('data-video-focus-y');
+        }
+      } catch (e) {}
+    }
+
+    function applyVideoScenePoint(slide, video, point) {
+      if (!slide || !video || !point) return;
+
+      var fit = point.fit || 'cover';
+      try { video.style.setProperty('--hero-video-fit', fit); } catch (e) {}
+      try { slide.setAttribute('data-video-fit', fit); } catch (e) {}
+
+      if (typeof point.x === 'number' || typeof point.y === 'number') {
+        commitVideoFocus(
+          slide,
+          video,
+          typeof point.x === 'number' ? point.x : 50,
+          typeof point.y === 'number' ? point.y : 50
+        );
+      }
+    }
+
+    function bindVideoSceneTimeline(slide, video) {
+      var timeline = getVideoSceneTimeline(video);
+      if (!slide || !video) return;
+
+      if (video._videoSceneTimelineHandler) {
+        try { video.removeEventListener('timeupdate', video._videoSceneTimelineHandler); } catch (e) {}
+      }
+
+      resetVideoSceneState(slide, video);
+      if (!timeline || !timeline.length) return;
+
+      var state = {
+        nextIndex: 0,
+        lastCurrentTime: typeof video.currentTime === 'number' ? video.currentTime : 0
+      };
+
+      var handler = function() {
+        var currentTime = typeof video.currentTime === 'number' ? video.currentTime : 0;
+
+        if (currentTime + 0.35 < state.lastCurrentTime) {
+          state.nextIndex = 0;
+          resetVideoSceneState(slide, video);
+        }
+
+        state.lastCurrentTime = currentTime;
+
+        while (state.nextIndex < timeline.length && currentTime >= timeline[state.nextIndex].at) {
+          applyVideoScenePoint(slide, video, timeline[state.nextIndex]);
+          state.nextIndex += 1;
+        }
+      };
+
+      video._videoSceneTimelineHandler = handler;
+      video.addEventListener('timeupdate', handler, { passive: true });
+      handler();
     }
 
     function computeAndApplyVideoFocus(slide, video) {
@@ -1023,6 +1109,7 @@
       if (!video) return;
       hydrateVideoSource(video, { preload: 'auto' });
       bindVideoActivityTracking(video);
+      try { resetVideoSceneState(video.closest ? video.closest('.hero-slide') : null, video); } catch (e) {}
       try{
         var src = getVideoSource(video).toString();
         var SKIP_EPS = 0.06;
@@ -1178,6 +1265,7 @@
         s.querySelectorAll('.slide-overlay').forEach(function(o){ try{ if (o._ontime) { pv.removeEventListener('timeupdate', o._ontime); delete o._ontime; } }catch(e){} });
         try{ if (pv._loopWatcher) { pv.removeEventListener('timeupdate', pv._loopWatcher); delete pv._loopWatcher; delete pv._lastCurrent; } }catch(e){}
         try{ if (pv._mobileFocusTimelineHandler) { pv.removeEventListener('timeupdate', pv._mobileFocusTimelineHandler); delete pv._mobileFocusTimelineHandler; } }catch(e){}
+        try{ if (pv._videoSceneTimelineHandler) { pv.removeEventListener('timeupdate', pv._videoSceneTimelineHandler); delete pv._videoSceneTimelineHandler; } resetVideoSceneState(s, pv); }catch(e){}
       });
 
       var oldIndex = current;
@@ -1193,6 +1281,7 @@
         // play new video, pause others
         slides.forEach(function(s,i){ var v=s.querySelector('.slide-video'); if (!v) return; if (s===newSlide){ playVideoForSlide(v); } else { try{ v.pause(); v.currentTime=0; }catch(e){} } });
         try { scheduleMobileVideoFocus(newSlide, newSlide && newSlide.querySelector('.slide-video'), { delay: 120, attempts: 4 }); } catch (e) {}
+        try { bindVideoSceneTimeline(newSlide, newSlide && newSlide.querySelector('.slide-video')); } catch (e) {}
         try { bindMobileVideoFocusTimeline(newSlide, newSlide && newSlide.querySelector('.slide-video')); } catch (e) {}
         // schedule overlays for new slide below (same logic as before)
         slideStartTs = Date.now();
@@ -1223,6 +1312,7 @@
             try{ var nv = newSlide.querySelector('.slide-video'); if (nv){
                 playVideoForSlide(nv);
                 scheduleMobileVideoFocus(newSlide, nv, { delay: 140, attempts: 4 });
+                bindVideoSceneTimeline(newSlide, nv);
                 bindMobileVideoFocusTimeline(newSlide, nv);
               } }catch(e){}
           }
