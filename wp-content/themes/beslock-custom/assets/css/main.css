@@ -2116,8 +2116,8 @@ body.single-product a.single_add_to_cart_button .bi {
   background:linear-gradient(90deg, rgba(6, 9, 6, 0.66) 0%, rgba(6, 9, 6, 0.34) 38%, rgba(6, 9, 6, 0.12) 100%);
 }
 .hero-startup-fallback .slide-overlay{
-  --overlay-content-left-ratio: 0.695;
-  --overlay-content-width-ratio: 0.305;
+  --overlay-content-left-ratio: 0.3733;
+  --overlay-content-width-ratio: 0.6267;
   --overlay-focus-scale-base: 0.92;
   --overlay-focus-scale-active: 0.92;
   --overlay-inline-shift: 2.8vw;
@@ -2267,7 +2267,7 @@ body.single-product a.single_add_to_cart_button .bi {
 .hero-slide{ position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity 1000ms cubic-bezier(.22,.9,.41,1); pointer-events:none; will-change:opacity; display:flex; align-items:center; justify-content:center; }
 .hero-slide.is-active{ opacity:1; pointer-events:auto; z-index:2; }
 .slide-inner{ position:relative; width:100%; height:100%; touch-action:pan-y; overflow:hidden; display:flex; align-items:stretch; justify-content:center; }
-.slide-video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; background:#000; display:block; z-index:0 }
+.slide-video{ position:absolute; inset:0; width:100%; height:100%; object-fit:var(--hero-video-fit, cover); object-position:var(--hero-video-focus-x, 50%) var(--hero-video-focus-y, 50%); background:#000; display:block; z-index:0; transition:object-position 460ms cubic-bezier(.22,.9,.41,1); }
 .slide-overlay-frame{
   position:absolute;
   right:0;
@@ -2306,38 +2306,38 @@ body.single-product a.single_add_to_cart_button .bi {
 }
 
 .hero-slides > .hero-slide:nth-child(1) .slide-overlay {
-  --overlay-content-left-ratio: 0.695;
-  --overlay-content-width-ratio: 0.305;
+  --overlay-content-left-ratio: 0.3733;
+  --overlay-content-width-ratio: 0.6267;
 }
 
 .hero-slides > .hero-slide:nth-child(2) .slide-overlay {
-  --overlay-content-left-ratio: 0.687;
-  --overlay-content-width-ratio: 0.313;
+  --overlay-content-left-ratio: 0.3241;
+  --overlay-content-width-ratio: 0.6759;
 }
 
 .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
-  --overlay-content-left-ratio: 0.68;
-  --overlay-content-width-ratio: 0.32;
+  --overlay-content-left-ratio: 0.3557;
+  --overlay-content-width-ratio: 0.6443;
 }
 
 .hero-slides > .hero-slide:nth-child(4) .slide-overlay {
-  --overlay-content-left-ratio: 0.66;
-  --overlay-content-width-ratio: 0.34;
+  --overlay-content-left-ratio: 0.5791;
+  --overlay-content-width-ratio: 0.4209;
 }
 
 .hero-slides > .hero-slide:nth-child(5) .slide-overlay {
-  --overlay-content-left-ratio: 0.697;
-  --overlay-content-width-ratio: 0.303;
+  --overlay-content-left-ratio: 0.3517;
+  --overlay-content-width-ratio: 0.6483;
 }
 
 .hero-slides > .hero-slide:nth-child(6) .slide-overlay {
-  --overlay-content-left-ratio: 0.695;
-  --overlay-content-width-ratio: 0.305;
+  --overlay-content-left-ratio: 0.1456;
+  --overlay-content-width-ratio: 0.8544;
 }
 
 .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
-  --overlay-content-left-ratio: 0.691;
-  --overlay-content-width-ratio: 0.309;
+  --overlay-content-left-ratio: 0.1456;
+  --overlay-content-width-ratio: 0.8544;
 }
 
 /* Dim layer placed over the video but beneath overlay images and content
@@ -2452,12 +2452,12 @@ body.single-product a.single_add_to_cart_button .bi {
   }
 
   .hero-startup-fallback .slide-overlay {
-    --overlay-content-left-ratio: 0.4244;
-    --overlay-content-width-ratio: 0.5756;
-    --overlay-focus-scale-base: 0.88;
-    --overlay-focus-scale-active: 0.88;
+    --overlay-content-left-ratio: 0.3733;
+    --overlay-content-width-ratio: 0.6267;
+    --overlay-focus-scale-base: 1.04;
+    --overlay-focus-scale-active: 1.04;
     --overlay-offset: 0px !important;
-    left: calc(-100% * (var(--overlay-content-left-ratio, 0.695) / var(--overlay-content-width-ratio, 0.305))) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.3733) / var(--overlay-content-width-ratio, 0.6267))) !important;
   }
 }
 
@@ -2535,10 +2535,41 @@ body.single-product a.single_add_to_cart_button .bi {
     max-width: none !important;
   }
 
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay-frame {
+    left: calc(100% - clamp(20rem, 43vw, 34rem)) !important;
+    right: auto !important;
+    width: clamp(24rem, 48vw, 38rem) !important;
+  }
+
   .hero-slide .slide-overlay {
     --overlay-image-bleed: clamp(0.45rem, 0.9vw, 0.85rem);
     --overlay-focus-scale-base: 1.28;
     --overlay-focus-scale-active: 1.33;
+  }
+
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay,
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
+    --overlay-content-left-ratio: 0.1456;
+    --overlay-content-width-ratio: 0.8544;
+    --overlay-focus-scale-base: 1.38;
+    --overlay-focus-scale-active: 1.38;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 14px !important;
+    top: calc(50% + var(--overlay-offset, 0px)) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.1456) / var(--overlay-content-width-ratio, 0.8544))) !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.8544)) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.1456) * 100%) center !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay.overlay--visible,
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start].overlay--visible {
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1)) !important;
   }
 
   .hero-slide .slide-content {
@@ -2561,6 +2592,12 @@ body.single-product a.single_add_to_cart_button .bi {
   .hero-slide .slide-overlay-frame {
     width: 35vw !important;
     max-width: none !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay-frame {
+    left: 65vw !important;
+    right: auto !important;
+    width: 42vw !important;
   }
 
   .hero-slide .slide-overlay {
@@ -2589,6 +2626,7 @@ body.single-product a.single_add_to_cart_button .bi {
   .hero-slides > .hero-slide:nth-child(2) .slide-overlay {
     --overlay-focus-scale-base: 1.1;
     --overlay-focus-scale-active: 1.1;
+    --overlay-offset: clamp(10rem, 14vw, 17rem) !important;
   }
 
   .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
@@ -2598,14 +2636,17 @@ body.single-product a.single_add_to_cart_button .bi {
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay {
-    --overlay-focus-scale-base: 1.01;
-    --overlay-focus-scale-active: 1.01;
-    --overlay-offset: 0px !important;
+    --overlay-focus-scale-base: 1.22;
+    --overlay-focus-scale-active: 1.22;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 16px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
-    --overlay-focus-scale-base: 1.01;
-    --overlay-focus-scale-active: 1.01;
+    --overlay-focus-scale-base: 1.22;
+    --overlay-focus-scale-active: 1.22;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 16px !important;
   }
 
   .hero-slide .slide-overlay.overlay--visible {
@@ -3311,35 +3352,65 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 
   .hero-slides > .hero-slide:nth-child(1) .slide-overlay {
-    --overlay-content-left-ratio: 0.4244;
-    --overlay-content-width-ratio: 0.5756;
+    --overlay-content-left-ratio: 0.3733;
+    --overlay-content-width-ratio: 0.6267;
     top: 50% !important;
-    left: calc(-100% * (var(--overlay-content-left-ratio, 0.695) / var(--overlay-content-width-ratio, 0.305))) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.3733) / var(--overlay-content-width-ratio, 0.6267))) !important;
     right: auto !important;
     bottom: auto !important;
-    width: calc(100% / var(--overlay-content-width-ratio, 0.305)) !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.6267)) !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: left center !important;
-    --overlay-focus-scale-base: 0.88;
-    --overlay-focus-scale-active: 0.88;
+    --overlay-focus-scale-base: 1.04;
+    --overlay-focus-scale-active: 1.04;
     --overlay-offset: 0px !important;
     transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
-    transform-origin: calc(var(--overlay-content-left-ratio, 0.695) * 100%) center !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.3733) * 100%) center !important;
   }
 
   .hero-slides > .hero-slide:nth-child(1) .slide-overlay.overlay--visible {
     transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1)) !important;
   }
 
-  .hero-slides > .hero-slide:nth-child(4) .slide-overlay {
-    --overlay-content-left-ratio: 0.3089;
-    --overlay-content-width-ratio: 0.6911;
+  .hero-slides > .hero-slide:nth-child(2) .slide-overlay {
+    --overlay-image-bleed: 0px;
+    --overlay-content-left-ratio: 0.3241;
+    --overlay-content-width-ratio: 0.6759;
+    --overlay-focus-scale-base: 1.02;
+    --overlay-focus-scale-active: 1.02;
     top: 50% !important;
-    left: calc(-100% * (var(--overlay-content-left-ratio, 0.3089) / var(--overlay-content-width-ratio, 0.6911))) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.3241) / var(--overlay-content-width-ratio, 0.6759))) !important;
     right: auto !important;
     bottom: auto !important;
-    width: calc(100% / var(--overlay-content-width-ratio, 0.6911)) !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.6759)) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.3241) * 100%) center !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(2) .slide-overlay.overlay--visible {
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1)) !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
+    --overlay-focus-scale-base: 1.6;
+    --overlay-focus-scale-active: 1.6;
+    left: 0 !important;
+    right: auto !important;
+    transform-origin: left center !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(4) .slide-overlay {
+    --overlay-content-left-ratio: 0.5791;
+    --overlay-content-width-ratio: 0.4209;
+    top: 50% !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.5791) / var(--overlay-content-width-ratio, 0.4209))) !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.4209)) !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: left center !important;
@@ -3347,7 +3418,7 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
     --overlay-focus-scale-active: 1.08;
     --overlay-offset: 0px !important;
     transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
-    transform-origin: calc(var(--overlay-content-left-ratio, 0.3089) * 100%) center !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.5791) * 100%) center !important;
   }
 
   .hero-slides > .hero-slide:nth-child(4) .slide-overlay.overlay--visible {
@@ -3355,13 +3426,13 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 
   .hero-slides > .hero-slide:nth-child(5) .slide-overlay {
-    --overlay-content-left-ratio: 0.34;
-    --overlay-content-width-ratio: 0.66;
+    --overlay-content-left-ratio: 0.3517;
+    --overlay-content-width-ratio: 0.6483;
     top: 50% !important;
-    left: calc(-100% * (var(--overlay-content-left-ratio, 0.34) / var(--overlay-content-width-ratio, 0.66))) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.3517) / var(--overlay-content-width-ratio, 0.6483))) !important;
     right: auto !important;
     bottom: auto !important;
-    width: calc(100% / var(--overlay-content-width-ratio, 0.66)) !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.6483)) !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: left center !important;
@@ -3369,30 +3440,37 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
     --overlay-focus-scale-active: 1;
     --overlay-offset: 0px !important;
     transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
-    transform-origin: calc(var(--overlay-content-left-ratio, 0.34) * 100%) center !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.3517) * 100%) center !important;
   }
 
   .hero-slides > .hero-slide:nth-child(5) .slide-overlay.overlay--visible {
     transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1)) !important;
   }
 
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay-frame {
+    left: 55vw !important;
+    right: auto !important;
+    width: 88vw !important;
+  }
+
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay,
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
-    --overlay-content-left-ratio: 0.4089;
-    --overlay-content-width-ratio: 0.5911;
+    --overlay-content-left-ratio: 0.1456;
+    --overlay-content-width-ratio: 0.8544;
     top: 50% !important;
-    left: calc(-100% * (var(--overlay-content-left-ratio, 0.4089) / var(--overlay-content-width-ratio, 0.5911))) !important;
+    left: calc((-100% * (var(--overlay-content-left-ratio, 0.1456) / var(--overlay-content-width-ratio, 0.8544))) + var(--overlay-inline-shift, 0px)) !important;
     right: auto !important;
     bottom: auto !important;
-    width: calc(100% / var(--overlay-content-width-ratio, 0.5911)) !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.8544)) !important;
     height: auto !important;
     object-fit: contain !important;
     object-position: left center !important;
-    --overlay-focus-scale-base: 1;
-    --overlay-focus-scale-active: 1;
-    --overlay-offset: 0px !important;
+    --overlay-focus-scale-base: 1.65;
+    --overlay-focus-scale-active: 1.65;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 12px !important;
     transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
-    transform-origin: calc(var(--overlay-content-left-ratio, 0.4089) * 100%) center !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.1456) * 100%) center !important;
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay.overlay--visible,
