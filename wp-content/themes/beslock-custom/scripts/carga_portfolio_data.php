@@ -134,6 +134,293 @@ if ( ! function_exists( 'beslock_sync_portfolio_pricing_meta' ) ) {
   }
 }
 
+if ( ! function_exists( 'beslock_dist_manuals_normalize_label' ) ) {
+  function beslock_dist_manuals_normalize_label( $value ) {
+    $value = trim( wp_strip_all_tags( (string) $value ) );
+
+    if ( function_exists( 'remove_accents' ) ) {
+      $value = remove_accents( $value );
+    }
+
+    $value = strtolower( $value );
+    $value = preg_replace( '/[^a-z0-9]+/', ' ', $value );
+
+    return trim( preg_replace( '/\s+/', ' ', $value ) );
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_collect_rows' ) ) {
+  function beslock_dist_manuals_collect_rows( $node, &$rows ) {
+    if ( ! is_array( $node ) ) {
+      return;
+    }
+
+    if ( isset( $node['label'], $node['value'] ) && is_scalar( $node['label'] ) && is_scalar( $node['value'] ) ) {
+      $label = trim( wp_strip_all_tags( (string) $node['label'] ) );
+      $value = trim( wp_strip_all_tags( (string) $node['value'] ) );
+
+      if ( '' !== $label && '' !== $value ) {
+        $rows[] = array(
+          'label' => $label,
+          'value' => $value,
+        );
+      }
+    }
+
+    foreach ( $node as $child ) {
+      if ( is_array( $child ) ) {
+        beslock_dist_manuals_collect_rows( $child, $rows );
+      }
+    }
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_collect_strings' ) ) {
+  function beslock_dist_manuals_collect_strings( $node, &$strings ) {
+    if ( is_scalar( $node ) ) {
+      $text = trim( wp_strip_all_tags( (string) $node ) );
+      if ( '' !== $text ) {
+        $strings[] = $text;
+      }
+      return;
+    }
+
+    if ( ! is_array( $node ) ) {
+      return;
+    }
+
+    foreach ( $node as $child ) {
+      beslock_dist_manuals_collect_strings( $child, $strings );
+    }
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_unique_terms' ) ) {
+  function beslock_dist_manuals_unique_terms( $terms ) {
+    $unique = array();
+    $seen = array();
+
+    foreach ( (array) $terms as $term ) {
+      $term = trim( wp_strip_all_tags( (string) $term ) );
+      if ( '' === $term ) {
+        continue;
+      }
+
+      $key = beslock_dist_manuals_normalize_label( $term );
+      if ( '' === $key || isset( $seen[ $key ] ) ) {
+        continue;
+      }
+
+      $seen[ $key ] = true;
+      $unique[] = $term;
+    }
+
+    return $unique;
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_clean_app_value' ) ) {
+  function beslock_dist_manuals_clean_app_value( $value ) {
+    $value = trim( wp_strip_all_tags( (string) $value ) );
+    $value = preg_replace( '/\s+compatible\b.*$/iu', '', $value );
+    $value = preg_replace( '/,\s*seg[uú]n\b.*$/iu', '', $value );
+
+    return trim( $value, " \t\n\r\0\x0B.;," );
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_get_prioritized_app_value' ) ) {
+  function beslock_dist_manuals_get_prioritized_app_value( $rows ) {
+    $app_label_priority = array(
+      'apps observadas en videos',
+      'app observada',
+      'app documentada en manual',
+      'app documentada',
+    );
+
+    foreach ( $app_label_priority as $app_label ) {
+      $app_rows = array();
+      foreach ( (array) $rows as $row ) {
+        if ( isset( $row['label'], $row['value'] ) && $app_label === beslock_dist_manuals_normalize_label( $row['label'] ) ) {
+          $app_rows[] = beslock_dist_manuals_clean_app_value( $row['value'] );
+        }
+      }
+
+      $app_rows = beslock_dist_manuals_unique_terms( $app_rows );
+      if ( ! empty( $app_rows ) ) {
+        return implode( '; ', $app_rows );
+      }
+    }
+
+    return '';
+  }
+}
+
+if ( ! function_exists( 'beslock_dist_manuals_value_uses_source_qualification' ) ) {
+  function beslock_dist_manuals_value_uses_source_qualification( $value ) {
+    $value = beslock_dist_manuals_normalize_label( $value );
+
+    foreach ( array( 'opcional', 'sujeto', 'pendiente', 'segun video', 'segun manual', 'por confirmar' ) as $term ) {
+      if ( false !== strpos( $value, $term ) ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+}
+
+if ( ! function_exists( 'beslock_get_dist_manuals_connectivity_value' ) ) {
+  function beslock_get_dist_manuals_connectivity_value( $slug ) {
+    $slug = sanitize_title( $slug );
+    if ( '' === $slug ) {
+      return '';
+    }
+
+    $source_file = trailingslashit( get_stylesheet_directory() ) . 'dist/manuals/products/' . $slug . '.json';
+    if ( ! file_exists( $source_file ) || ! is_readable( $source_file ) ) {
+      return '';
+    }
+
+    $source = json_decode( file_get_contents( $source_file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+    if ( ! is_array( $source ) ) {
+      return '';
+    }
+
+    $rows = array();
+    beslock_dist_manuals_collect_rows( $source, $rows );
+    $prioritized_app_value = beslock_dist_manuals_get_prioritized_app_value( $rows );
+
+    $preferred_labels = array(
+      'conectividad',
+      'conectividad documentada',
+      'conectividad observada',
+    );
+
+    foreach ( $preferred_labels as $preferred_label ) {
+      foreach ( $rows as $row ) {
+        if ( $preferred_label === beslock_dist_manuals_normalize_label( $row['label'] ) ) {
+          if ( '' !== $prioritized_app_value && beslock_dist_manuals_value_uses_source_qualification( $row['value'] ) ) {
+            return $prioritized_app_value;
+          }
+
+          return $row['value'];
+        }
+      }
+    }
+
+    if ( '' !== $prioritized_app_value ) {
+      return $prioritized_app_value;
+    }
+
+    $connectivity_section = $source['product']['profile']['app_connectivity'] ?? array();
+    if ( empty( $connectivity_section ) && ! empty( $source['product']['profile']['source_sections']['app-y-conectividad'] ) ) {
+      $connectivity_section = $source['product']['profile']['source_sections']['app-y-conectividad'];
+    }
+
+    $strings = array();
+    beslock_dist_manuals_collect_strings( $connectivity_section, $strings );
+
+    $terms = array();
+    $patterns = array(
+      '/Tuya\s*WiFi/i' => 'Tuya WiFi',
+      '/Tuya\s*Smart/i' => 'Tuya Smart',
+      '/Smart\s*Life/i' => 'Smart Life',
+      '/TTLock\s*\/\s*Tongtong\s*Lock/i' => 'TTLock / Tongtong Lock',
+      '/Tongtong\s*Lock/i' => 'Tongtong Lock',
+      '/TTLock/i' => 'TTLock',
+      '/TTlock\s*Unlock/i' => 'TTlock Unlock',
+      '/App\s*Unlock/i' => 'App Unlock',
+      '/Remote\s*Control/i' => 'Remote Control',
+      '/Wi-?Fi/i' => 'WiFi',
+      '/Bluetooth/i' => 'Bluetooth',
+    );
+
+    foreach ( $strings as $string ) {
+      foreach ( $patterns as $pattern => $term ) {
+        if ( preg_match( $pattern, $string ) ) {
+          $terms[] = $term;
+        }
+      }
+    }
+
+    $terms = beslock_dist_manuals_unique_terms( $terms );
+    if ( in_array( 'TTLock / Tongtong Lock', $terms, true ) ) {
+      $terms = array_values(
+        array_filter(
+          $terms,
+          static function( $term ) {
+            return ! in_array( $term, array( 'TTLock', 'Tongtong Lock', 'TTlock Unlock' ), true );
+          }
+        )
+      );
+    }
+    if ( in_array( 'Tuya WiFi', $terms, true ) ) {
+      $terms = array_values(
+        array_filter(
+          $terms,
+          static function( $term ) {
+            return 'WiFi' !== $term;
+          }
+        )
+      );
+    }
+
+    return implode( '; ', $terms );
+  }
+}
+
+if ( ! function_exists( 'beslock_merge_dist_connectivity_feature_row' ) ) {
+  function beslock_merge_dist_connectivity_feature_row( $feature_rows, $slug, &$log = null ) {
+    $feature_rows = is_array( $feature_rows ) ? array_values( $feature_rows ) : array();
+    $connectivity_value = beslock_get_dist_manuals_connectivity_value( $slug );
+
+    if ( '' === $connectivity_value ) {
+      if ( is_array( $log ) ) {
+        $log[] = "No dist connectivity value found for {$slug}";
+      }
+      return $feature_rows;
+    }
+
+    $connectivity_row = array(
+      'label' => 'Conectividad',
+      'value' => $connectivity_value,
+    );
+
+    foreach ( $feature_rows as $index => $feature_row ) {
+      $label = isset( $feature_row['label'] ) ? beslock_dist_manuals_normalize_label( $feature_row['label'] ) : '';
+      if ( in_array( $label, array( 'conectividad', 'conectividad documentada', 'conectividad observada' ), true ) ) {
+        $feature_rows[ $index ] = $connectivity_row;
+        if ( is_array( $log ) ) {
+          $log[] = "Updated Conectividad from dist for {$slug}: {$connectivity_value}";
+        }
+        return $feature_rows;
+      }
+    }
+
+    $insert_after = -1;
+    foreach ( $feature_rows as $index => $feature_row ) {
+      $label = isset( $feature_row['label'] ) ? beslock_dist_manuals_normalize_label( $feature_row['label'] ) : '';
+      if ( in_array( $label, array( 'accesos', 'metodos de apertura', 'metodos de acceso' ), true ) ) {
+        $insert_after = $index;
+        break;
+      }
+    }
+
+    if ( $insert_after >= 0 ) {
+      array_splice( $feature_rows, $insert_after + 1, 0, array( $connectivity_row ) );
+    } else {
+      $feature_rows[] = $connectivity_row;
+    }
+
+    if ( is_array( $log ) ) {
+      $log[] = "Added Conectividad from dist for {$slug}: {$connectivity_value}";
+    }
+
+    return $feature_rows;
+  }
+}
+
 if ( ! function_exists( 'beslock_import_images_from_assets' ) ) {
   /**
    * Import images from theme assets into uploads and assign featured/gallery to products.
@@ -769,6 +1056,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         $feature_rows = function_exists( 'beslock_normalize_product_feature_rows' )
           ? beslock_normalize_product_feature_rows( $prod['features'] )
           : array();
+        $feature_rows = beslock_merge_dist_connectivity_feature_row( $feature_rows, $slug, $log );
 
         if ( ! $is_dry && $pid ) {
           update_post_meta( $pid, 'beslock_features', $feature_rows );
@@ -921,6 +1209,7 @@ if ( ! function_exists( 'beslock_sync_portfolio_features_to_wc_attributes' ) ) {
       $feature_rows = function_exists( 'beslock_normalize_product_feature_rows' )
         ? beslock_normalize_product_feature_rows( $prod['features'] )
         : array();
+      $feature_rows = beslock_merge_dist_connectivity_feature_row( $feature_rows, $slug, $log );
 
       if ( empty( $feature_rows ) ) {
         $skipped[] = $slug;
