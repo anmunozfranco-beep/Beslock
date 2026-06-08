@@ -624,12 +624,19 @@
       'e-Orbit.mp4': [
         { at: 4, x: 42.5, y: 50 }
       ],
+      'e-Orbit.webm': [
+        { at: 4, x: 42.5, y: 50 }
+      ],
       'e-Orbit-mobile.mp4': [
         { at: 4, x: 47, y: 82 }
       ]
     };
     var videoSceneTimelines = {
       'e-Orbit.mp4': [
+        { at: 0, fit: 'cover', x: 0, y: 82 },
+        { at: 4, fit: 'contain', x: 0, y: 82 }
+      ],
+      'e-Orbit.webm': [
         { at: 0, fit: 'cover', x: 0, y: 82 },
         { at: 4, fit: 'contain', x: 0, y: 82 }
       ],
@@ -651,11 +658,41 @@
       return video.currentSrc || video.getAttribute('src') || getDeferredVideoSource(video);
     }
 
+    var canPlayWebmVp9Cache = null;
+    function canPlayWebmVp9() {
+      if (canPlayWebmVp9Cache !== null) return canPlayWebmVp9Cache;
+
+      try {
+        var testVideo = document.createElement('video');
+        canPlayWebmVp9Cache = !!(
+          testVideo.canPlayType &&
+          testVideo.canPlayType('video/webm; codecs="vp9"').replace(/^no$/, '')
+        );
+      } catch (e) {
+        canPlayWebmVp9Cache = false;
+      }
+
+      return canPlayWebmVp9Cache;
+    }
+
+    function selectModernVideoSource(video, mp4Attr, webmAttr) {
+      if (!video) return '';
+
+      var mp4Source = video.getAttribute(mp4Attr) || '';
+      var webmSource = video.getAttribute(webmAttr) || '';
+
+      if (webmSource && canPlayWebmVp9()) {
+        return webmSource;
+      }
+
+      return mp4Source || webmSource;
+    }
+
     function getDeferredVideoSource(video) {
       if (!video) return '';
 
-      var desktopSource = video.getAttribute('data-src') || '';
-      var mobileSource = video.getAttribute('data-src-mobile') || '';
+      var desktopSource = selectModernVideoSource(video, 'data-src', 'data-src-webm');
+      var mobileSource = selectModernVideoSource(video, 'data-src-mobile', 'data-src-mobile-webm');
 
       if (mobileSource && mobileVideoSourceQuery && mobileVideoSourceQuery.matches) {
         return mobileSource;

@@ -64,11 +64,24 @@
     return ! empty( $desktop_overlay['exists'] ) ? $desktop_overlay : array( 'url' => '' );
   };
 
+  $resolve_hero_webp_asset = static function ( $asset ) use ( $hero_asset ) {
+    if ( empty( $asset['fs'] ) ) {
+      return array( 'url' => '' );
+    }
+
+    $webp_relative_path = str_replace( get_stylesheet_directory(), '', preg_replace( '/\.[^.]+$/', '.webp', $asset['fs'] ) );
+    $webp_asset = $hero_asset( $webp_relative_path );
+
+    return ! empty( $webp_asset['exists'] ) ? $webp_asset : array( 'url' => '' );
+  };
+
   $startup_overlay = 'e-flex_hero.png';
   $startup_overlay_asset = $resolve_hero_overlay( $startup_overlay );
   $startup_overlay_url = $startup_overlay_asset['url'];
   $startup_overlay_d_asset = $resolve_hero_overlay_desktop( $startup_overlay, $startup_overlay_asset );
 	  $startup_overlay_d_url = ! empty( $startup_overlay_d_asset['url'] ) ? $startup_overlay_d_asset['url'] : '';
+	  $startup_overlay_webp_asset = $resolve_hero_webp_asset( $startup_overlay_asset );
+	  $startup_overlay_webp_url = ! empty( $startup_overlay_webp_asset['url'] ) ? $startup_overlay_webp_asset['url'] : '';
 	  $transparent_pixel = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
 	?>
 <section class="beslock-hero" id="beslockHero" aria-roledescription="carousel" aria-label="Hero carousel" data-startup-state="booting">
@@ -88,6 +101,9 @@
       <div class="hero-startup-fallback__media" aria-hidden="true"></div>
       <div class="slide-dim" aria-hidden="true"></div>
       <picture class="slide-overlay-frame" aria-hidden="true">
+        <?php if ( $startup_overlay_webp_url ): ?>
+          <source type="image/webp" srcset="<?php echo esc_url( $startup_overlay_webp_url ); ?>">
+        <?php endif; ?>
         <?php if ( $startup_overlay_d_url ): ?>
           <source media="(min-width:600px)" srcset="<?php echo esc_url( $startup_overlay_d_url ); ?>">
         <?php endif; ?>
@@ -134,6 +150,11 @@
           if ( file_exists( $video_fs ) ) {
             $video_url .= '?v=' . filemtime( $video_fs );
           }
+          $video_webm_fs = preg_replace( '/\.mp4$/i', '.webm', $video_fs );
+          $video_webm_url = '';
+          if ( file_exists( $video_webm_fs ) ) {
+            $video_webm_url = get_stylesheet_directory_uri() . $video_base_path . rawurlencode( pathinfo( $vid, PATHINFO_FILENAME ) . '.webm' ) . '?v=' . filemtime( $video_webm_fs );
+          }
           $mobile_video_path = '/assets/images/Clips_hero/mobile/' . pathinfo( $vid, PATHINFO_FILENAME ) . '-mobile.mp4';
           $mobile_video_fs = get_stylesheet_directory() . $mobile_video_path;
           $mobile_video_url = '';
@@ -149,13 +170,18 @@
           $ov_asset = $resolve_hero_overlay( $ov );
           $ov_d_asset = $resolve_hero_overlay_desktop( $ov, $ov_asset );
           $ov_d_url = ! empty( $ov_d_asset['url'] ) ? $ov_d_asset['url'] : '';
+          $ov_webp_asset = $resolve_hero_webp_asset( $ov_asset );
+          $ov_webp_url = ! empty( $ov_webp_asset['url'] ) ? $ov_webp_asset['url'] : '';
       ?>
       <article class="hero-slide" data-index="<?php echo $i; ?>" aria-roledescription="slide" aria-label="Slide <?php echo $i+1; ?>">
         <div class="slide-inner">
-          <video class="slide-video" muted playsinline preload="<?php echo $is_first_slide ? 'metadata' : 'none'; ?>" loop<?php echo $poster_url ? ( $is_first_slide ? ' poster="' . esc_url( $poster_url ) . '"' : ' data-poster="' . esc_url( $poster_url ) . '"' ) : ''; ?> data-src="<?php echo esc_url( $video_url ); ?>"<?php echo $mobile_video_url ? ' data-src-mobile="' . esc_url( $mobile_video_url ) . '"' : ''; ?>></video>
+          <video class="slide-video" muted playsinline preload="<?php echo $is_first_slide ? 'metadata' : 'none'; ?>" loop<?php echo $poster_url ? ( $is_first_slide ? ' poster="' . esc_url( $poster_url ) . '"' : ' data-poster="' . esc_url( $poster_url ) . '"' ) : ''; ?> data-src="<?php echo esc_url( $video_url ); ?>"<?php echo $video_webm_url ? ' data-src-webm="' . esc_url( $video_webm_url ) . '"' : ''; ?><?php echo $mobile_video_url ? ' data-src-mobile="' . esc_url( $mobile_video_url ) . '"' : ''; ?>></video>
 	          <!-- Dim layer strictly over the clip to improve white text contrast; overlays remain above -->
 	          <div class="slide-dim" aria-hidden="true"></div>
 	          <picture class="slide-overlay-frame" aria-hidden="true">
+	            <?php if ($ov_webp_url): ?>
+	              <source type="image/webp" <?php echo $is_first_slide ? 'srcset="' . esc_url( $ov_webp_url ) . '"' : 'data-srcset="' . esc_url( $ov_webp_url ) . '"'; ?>>
+	            <?php endif; ?>
 	            <?php if ($ov_d_url): ?>
 	              <source media="(min-width:600px)" <?php echo $is_first_slide ? 'srcset="' . esc_url( $ov_d_url ) . '"' : 'data-srcset="' . esc_url( $ov_d_url ) . '"'; ?>>
 	            <?php endif; ?>
@@ -181,8 +207,13 @@
               $ov2_asset = $resolve_hero_overlay( $ov2 );
               $ov2_d_asset = $resolve_hero_overlay_desktop( $ov2, $ov2_asset );
               $ov2_d_url = ! empty( $ov2_d_asset['url'] ) ? $ov2_d_asset['url'] : '';
+              $ov2_webp_asset = $resolve_hero_webp_asset( $ov2_asset );
+              $ov2_webp_url = ! empty( $ov2_webp_asset['url'] ) ? $ov2_webp_asset['url'] : '';
             ?>
 	              <picture class="slide-overlay-frame" aria-hidden="true">
+	              <?php if ($ov2_webp_url): ?>
+	                <source type="image/webp" data-srcset="<?php echo esc_url( $ov2_webp_url ); ?>">
+	              <?php endif; ?>
 	              <?php if ($ov2_d_url): ?>
 	                <source media="(min-width:600px)" data-srcset="<?php echo esc_url( $ov2_d_url ); ?>">
 	              <?php endif; ?>
