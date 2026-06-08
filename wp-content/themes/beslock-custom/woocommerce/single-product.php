@@ -18,6 +18,29 @@ get_header();
     $reviews_tab_id = 'product-tab-reviews-' . get_the_ID();
     $features_panel_id = 'product-panel-features-' . get_the_ID();
     $reviews_panel_id = 'product-panel-reviews-' . get_the_ID();
+    $product_navigation_item_is_public = static function( $product_id ) {
+      if ( ! function_exists( 'wc_get_product' ) ) {
+        return true;
+      }
+
+      $navigation_product = wc_get_product( $product_id );
+
+      if ( ! $navigation_product || ! is_a( $navigation_product, 'WC_Product' ) ) {
+        return false;
+      }
+
+      if ( 'hidden' === $navigation_product->get_catalog_visibility() ) {
+        return false;
+      }
+
+      if ( function_exists( 'beslock_is_installation_service_product' ) && beslock_is_installation_service_product( $navigation_product ) ) {
+        return false;
+      }
+
+      $navigation_product_sku = (string) $navigation_product->get_sku();
+
+      return 0 !== strpos( $navigation_product_sku, 'BESLOCK-INST-' );
+    };
 
     foreach ( $product_reviews as $product_review ) {
       $product_review_rating = isset( $product_review['rating'] ) ? min( 5, max( 0, intval( $product_review['rating'] ) ) ) : 0;
@@ -43,7 +66,7 @@ get_header();
     ) );
 
     if ( is_array( $product_navigation_ids ) ) {
-      $product_navigation_ids = array_values( array_map( 'intval', $product_navigation_ids ) );
+      $product_navigation_ids = array_values( array_filter( array_map( 'intval', $product_navigation_ids ), $product_navigation_item_is_public ) );
       $current_product_index = array_search( get_the_ID(), $product_navigation_ids, true );
 
       if ( false !== $current_product_index && count( $product_navigation_ids ) > 1 ) {
