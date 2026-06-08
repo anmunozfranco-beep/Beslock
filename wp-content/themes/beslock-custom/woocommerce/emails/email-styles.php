@@ -55,6 +55,21 @@ body {
 	width: auto;
 }
 
+.beslock-email-logo-frame {
+	border: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	max-width: 250px;
+	padding: 0;
+	width: 250px;
+}
+
+.beslock-email-logo-frame-cell {
+	padding: 0;
+	text-align: center;
+}
+
 .beslock-logo-image-cell {
 	border: 0;
 	line-height: 0;
@@ -69,7 +84,7 @@ body {
 	vertical-align: top;
 }
 
-#template_header_image img {
+#template_header_image .beslock-logo-image-cell img {
 	display: inline-block;
 	height: auto;
 	margin: 0;
@@ -108,6 +123,50 @@ h1 .beslock-registered-mark {
 	margin-left: 0;
 	position: static;
 	vertical-align: top;
+}
+
+.beslock-email-authorized {
+	border-bottom: 1px solid #dbe3dd;
+	border-top: 1px solid #dbe3dd;
+	margin: 12px 0 0;
+	max-width: 250px;
+	width: 250px;
+}
+
+.beslock-email-authorized td {
+	padding: 10px 0;
+}
+
+.beslock-email-authorized-label {
+	color: #034526;
+	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 130%;
+	text-align: <?php echo esc_attr( $text_align ); ?>;
+	text-transform: uppercase;
+}
+
+.beslock-email-authorized-logo-cell {
+	line-height: 0;
+	text-align: <?php echo esc_attr( $opposite_align ); ?>;
+	width: 44px;
+}
+
+.beslock-email-authorized-logo-cell a {
+	display: inline-block;
+	line-height: 0;
+	text-decoration: none;
+}
+
+.beslock-email-authorized-logo-cell img {
+	display: inline-block;
+	height: auto;
+	margin: 0;
+	max-width: 46px;
+	opacity: 0.86;
+	width: 46px;
 }
 
 .beslock-email-kicker {
@@ -534,12 +593,63 @@ img {
 	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
 	font-size: 13px;
 	line-height: 160%;
-	padding: 18px 0 0;
+	padding: 0;
 	text-align: <?php echo esc_attr( $text_align ); ?>;
 }
 
 .beslock-footer-support strong {
 	color: #034526;
+}
+
+.beslock-footer-support-cell {
+	padding: 18px 0 0 !important;
+}
+
+.beslock-footer-operator-table {
+	width: 100%;
+}
+
+.beslock-footer-operator-copy {
+	padding: 0 20px 0 0 !important;
+}
+
+.beslock-footer-operator-title {
+	color: #034526;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0;
+	line-height: 150%;
+}
+
+.beslock-footer-operator-kicker {
+	color: #102018;
+	font-weight: 700;
+}
+
+.beslock-footer-operator-detail {
+	color: #667266;
+	font-size: 12px;
+}
+
+.beslock-footer-operator-logo-cell {
+	padding: 0 !important;
+	text-align: <?php echo esc_attr( $opposite_align ); ?>;
+	width: 92px;
+}
+
+.beslock-footer-operator-logo {
+	display: inline-block;
+	line-height: 0;
+	text-decoration: none;
+}
+
+.beslock-footer-operator-logo img {
+	display: inline-block;
+	height: auto;
+	margin: 0;
+	max-width: 76px;
+	opacity: 0.84;
+	width: 76px;
 }
 
 #template_footer td {
@@ -574,8 +684,32 @@ img {
 		display: none !important;
 	}
 
-	#template_header_image img {
+	#template_header_image .beslock-logo-image-cell img {
 		width: 176px !important;
+	}
+
+	.beslock-email-authorized {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 232px !important;
+	}
+
+	.beslock-email-logo-frame {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		width: 232px !important;
+	}
+
+	.beslock-email-authorized-label {
+		font-size: 10px !important;
+	}
+
+	.beslock-email-authorized-logo-cell {
+		width: 48px !important;
+	}
+
+	.beslock-email-authorized-logo-cell img {
+		width: 40px !important;
 	}
 
 	.beslock-logo-mark {
@@ -617,6 +751,22 @@ img {
 		display: block !important;
 		width: auto !important;
 		padding: 0 0 12px !important;
+	}
+
+	.beslock-footer-operator-copy,
+	.beslock-footer-operator-logo-cell {
+		display: block !important;
+		padding: 0 !important;
+		text-align: center !important;
+		width: auto !important;
+	}
+
+	.beslock-footer-operator-logo-cell {
+		padding-top: 14px !important;
+	}
+
+	.beslock-footer-operator-logo img {
+		width: 64px !important;
 	}
 }
 <?php

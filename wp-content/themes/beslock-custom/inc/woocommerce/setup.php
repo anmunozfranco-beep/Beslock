@@ -19,6 +19,75 @@ if ( class_exists( 'WooCommerce' ) && WC() ) {
     }
   }, 20 );
 
+  if ( ! function_exists( 'beslock_email_commercial_sender_name' ) ) {
+    function beslock_email_commercial_sender_name() {
+      return 'BESLOCK® | ZONAS SMART';
+    }
+  }
+
+  if ( ! function_exists( 'beslock_email_use_commercial_sender_name' ) ) {
+    function beslock_email_use_commercial_sender_name( $from_name ) {
+      return beslock_email_commercial_sender_name();
+    }
+  }
+
+  add_filter( 'woocommerce_email_from_name', 'beslock_email_use_commercial_sender_name', 20 );
+  add_filter( 'wp_mail_from_name', 'beslock_email_use_commercial_sender_name', 20 );
+
+  if ( ! function_exists( 'beslock_email_order_subject' ) ) {
+    function beslock_email_order_subject( $subject, $order = null, $email = null ) {
+      if ( ! $order instanceof WC_Order ) {
+        return $subject;
+      }
+
+      $email_id     = is_object( $email ) && ! empty( $email->id ) ? (string) $email->id : '';
+      $order_number = $order->get_order_number();
+
+      $subject_formats = array(
+        'customer_processing_order'    => __( 'BESLOCK® | Confirmación de pedido #%s', 'beslock-custom' ),
+        'customer_on_hold_order'       => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_completed_order'     => __( 'BESLOCK® | Tu pedido #%s ha sido despachado', 'beslock-custom' ),
+        'customer_note'                => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_refunded_order'      => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_cancelled_order'     => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_failed_order'        => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_invoice'             => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+        'customer_pos_completed_order' => __( 'BESLOCK® | Confirmación de pedido #%s', 'beslock-custom' ),
+        'customer_pos_refunded_order'  => __( 'BESLOCK® | Actualización de tu pedido #%s', 'beslock-custom' ),
+      );
+
+      if ( ! isset( $subject_formats[ $email_id ] ) ) {
+        return $subject;
+      }
+
+      return sprintf( $subject_formats[ $email_id ], $order_number );
+    }
+  }
+
+  add_filter( 'woocommerce_email_subject_customer_processing_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_on_hold_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_completed_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_note', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_refunded_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_cancelled_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_failed_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_invoice', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_pos_completed_order', 'beslock_email_order_subject', 20, 3 );
+  add_filter( 'woocommerce_email_subject_customer_pos_refunded_order', 'beslock_email_order_subject', 20, 3 );
+
+  if ( ! function_exists( 'beslock_email_account_subject' ) ) {
+    function beslock_email_account_subject( $subject ) {
+      if ( 'woocommerce_email_subject_customer_reset_password' === current_filter() ) {
+        return __( 'BESLOCK® | Restablece tu contraseña', 'beslock-custom' );
+      }
+
+      return __( 'BESLOCK® | Tu cuenta BESLOCK', 'beslock-custom' );
+    }
+  }
+
+  add_filter( 'woocommerce_email_subject_customer_new_account', 'beslock_email_account_subject', 20 );
+  add_filter( 'woocommerce_email_subject_customer_reset_password', 'beslock_email_account_subject', 20 );
+
   // Remove default WooCommerce empty cart message to avoid duplication
   add_action( 'init', function() {
     if ( function_exists( 'remove_action' ) ) {
