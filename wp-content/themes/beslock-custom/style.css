@@ -377,8 +377,8 @@ body { padding-top: var(--header-height); }
 .single-product .product-card__image img, .single-product img.wp-post-image { max-width: 100% !important; height: auto !important; object-fit: contain !important; }
 
 /* Additional single product resets to ensure gallery sizing */
-.single-product img,
-.single-product .wp-post-image {
+.single-product .product-page img,
+.single-product .product-page .wp-post-image {
 	width: auto !important;
 	height: auto !important;
 	max-width: 100% !important;
