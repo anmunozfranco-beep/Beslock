@@ -142,7 +142,6 @@ add_action( 'wp_enqueue_scripts', function() {
           'cartUrl'            => function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/carrito/' ),
           'wcAjaxUrl'          => class_exists( 'WC_AJAX' ) ? WC_AJAX::get_endpoint( '%%endpoint%%' ) : '',
           'isCart'             => function_exists( 'is_cart' ) && is_cart(),
-          'defaultProductName' => __( 'Producto', 'beslock-custom' ),
         )
       ) . ';',
       'before'

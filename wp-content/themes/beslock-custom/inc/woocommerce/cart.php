@@ -481,6 +481,18 @@ function beslock_cart_has_confirmed_shipping_address() {
   return '' !== trim( (string) WC()->customer->get_shipping_address_1() );
 }
 
+function beslock_cart_requires_shipping_address_confirmation() {
+  if ( ! function_exists( 'WC' ) || ! WC()->cart || WC()->cart->is_empty() ) {
+    return false;
+  }
+
+  if ( method_exists( WC()->cart, 'needs_shipping' ) && ! WC()->cart->needs_shipping() ) {
+    return false;
+  }
+
+  return ! beslock_cart_has_confirmed_shipping_address();
+}
+
 function beslock_get_shipping_placeholder_values() {
   return apply_filters(
     'beslock_shipping_placeholder_values',

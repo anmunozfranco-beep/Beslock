@@ -25,6 +25,8 @@ wp-content/themes/beslock-custom/User manuals.zip
 # Local test/render artifacts
 .tmp/
 test-results/
+node_modules/
+playwright-report/
 
 # Local WordPress/WooCommerce runtime logs
 wp-content/uploads/wc-logs/*.log
