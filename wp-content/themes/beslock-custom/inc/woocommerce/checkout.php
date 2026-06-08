@@ -50,6 +50,55 @@ function beslock_is_checkout_form_page() {
   return true;
 }
 
+function beslock_checkout_is_missing_shipping_confirmation() {
+  if ( is_admin() || ! function_exists( 'WC' ) || ! WC()->cart ) {
+    return false;
+  }
+
+  if ( WC()->cart->is_empty() ) {
+    return false;
+  }
+
+  if ( function_exists( 'is_order_received_page' ) && is_order_received_page() ) {
+    return false;
+  }
+
+  if ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'order-pay' ) ) {
+    return false;
+  }
+
+  return function_exists( 'beslock_cart_requires_shipping_address_confirmation' ) && beslock_cart_requires_shipping_address_confirmation();
+}
+
+function beslock_checkout_shipping_confirmation_notice() {
+  return __( 'Actualiza y confirma la dirección de envío en el carrito antes de continuar con el pago.', 'beslock-custom' );
+}
+
+function beslock_redirect_checkout_without_confirmed_shipping() {
+  if ( ! function_exists( 'is_checkout' ) || ! is_checkout() || ! beslock_checkout_is_missing_shipping_confirmation() ) {
+    return;
+  }
+
+  $has_notice = function_exists( 'wc_has_notice' ) && wc_has_notice( beslock_checkout_shipping_confirmation_notice(), 'error' );
+
+  if ( function_exists( 'wc_add_notice' ) && ! $has_notice ) {
+    wc_add_notice( beslock_checkout_shipping_confirmation_notice(), 'error' );
+  }
+
+  wp_safe_redirect( wc_get_cart_url() );
+  exit;
+}
+add_action( 'template_redirect', 'beslock_redirect_checkout_without_confirmed_shipping', 8 );
+
+function beslock_validate_checkout_shipping_confirmation() {
+  if ( ! beslock_checkout_is_missing_shipping_confirmation() || ! function_exists( 'wc_add_notice' ) ) {
+    return;
+  }
+
+  wc_add_notice( beslock_checkout_shipping_confirmation_notice(), 'error' );
+}
+add_action( 'woocommerce_checkout_process', 'beslock_validate_checkout_shipping_confirmation', 8 );
+
 function beslock_classic_checkout_hooks() {
   if ( ! beslock_is_checkout_form_page() ) {
     return;

@@ -104,15 +104,12 @@
       }
 
       button.classList.remove('is-adding');
-      document.body.classList.remove('frontpage-cart-pulse');
       void button.offsetWidth;
 
       button.classList.add('is-adding');
-      document.body.classList.add('frontpage-cart-pulse');
 
       feedbackTimer = window.setTimeout(function () {
         button.classList.remove('is-adding');
-        document.body.classList.remove('frontpage-cart-pulse');
       }, 620);
     }
 

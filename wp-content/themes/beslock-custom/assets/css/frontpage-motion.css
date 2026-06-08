@@ -133,10 +133,6 @@ body.beslock-frontpage-motion .product-card .product-card__actions a:last-child.
   animation: frontpage-cart-icon-pop 420ms cubic-bezier(.16, .84, .29, 1) both;
 }
 
-body.frontpage-cart-pulse .header__icon--cart {
-  animation: frontpage-header-cart-pulse 560ms cubic-bezier(.16, .84, .29, 1) both;
-}
-
 @keyframes frontpage-cart-button-pop {
   0% { transform: translateY(-2px) scale(1); }
   45% { transform: translateY(-3px) scale(1.08); }
@@ -147,12 +143,6 @@ body.frontpage-cart-pulse .header__icon--cart {
   0% { transform: scale(1); }
   45% { transform: scale(0.86) rotate(-5deg); }
   100% { transform: scale(1.08) rotate(0deg); }
-}
-
-@keyframes frontpage-header-cart-pulse {
-  0% { transform: translate3d(0, 0, 0) scale(1); }
-  45% { transform: translate3d(0, -2px, 0) scale(1.13); }
-  100% { transform: translate3d(0, 0, 0) scale(1); }
 }
 
 @media (max-width: 599px) {

@@ -1,0 +1,12 @@
+{
+  "name": "beslock",
+  "private": true,
+  "scripts": {
+    "test:pw": "playwright test",
+    "test:pw:cart": "playwright test tests/playwright/cart-viewport.spec.mjs",
+    "test:pw:feedback": "playwright test tests/playwright/add-to-cart-feedback.spec.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
