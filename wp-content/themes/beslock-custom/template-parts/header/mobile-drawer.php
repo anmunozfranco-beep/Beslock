@@ -194,7 +194,7 @@ if ( ! defined( 'ABSPATH' ) ) {
           <div class="support-drawer__content">
             <p class="support-drawer__intro" data-js="support-schedule-intro">Programa una instalación con tu número de pedido o solicita validación para un modelo BESLOCK.</p>
 
-            <form class="support-form support-form--grid" data-js="support-schedule-form" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" novalidate>
+            <form class="support-form support-form--grid is-mode-order is-order-pending" data-js="support-schedule-form" action="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>" method="post" novalidate>
               <input type="hidden" name="action" value="beslock_support_installation_request">
               <input type="hidden" name="nonce" value="<?php echo esc_attr( wp_create_nonce( 'beslock_support_installation' ) ); ?>">
 

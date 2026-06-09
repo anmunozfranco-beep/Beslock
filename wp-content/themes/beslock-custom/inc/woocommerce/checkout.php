@@ -71,7 +71,7 @@ function beslock_checkout_is_missing_shipping_confirmation() {
 }
 
 function beslock_checkout_shipping_confirmation_notice() {
-  return __( 'Actualiza y confirma la dirección de envío en el carrito antes de continuar con el pago.', 'beslock-custom' );
+  return __( 'Ingresa la dirección de envío antes de continuar.', 'beslock-custom' );
 }
 
 function beslock_redirect_checkout_without_confirmed_shipping() {
