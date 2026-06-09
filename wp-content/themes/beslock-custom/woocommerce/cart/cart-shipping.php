@@ -64,10 +64,10 @@ if ( ! $has_confirmed_shipping ) {
                     if ( $has_confirmed_shipping && $formatted_destination ) {
                         // Translators: $s shipping destination.
                         printf( esc_html__( 'Enviar a %s.', 'beslock-custom' ) . ' ', '<strong>' . esc_html( $formatted_destination ) . '</strong>' );
-                        $calculator_text = esc_html__( 'Cambiar dirección', 'beslock-custom' );
+                        $calculator_text = esc_html__( 'Editar dirección de envío', 'beslock-custom' );
                     } else {
                         esc_html_e( 'Actualiza tu dirección para confirmar la entrega.', 'beslock-custom' );
-                        $calculator_text = esc_html__( 'Ir a cambiar dirección', 'beslock-custom' );
+                        $calculator_text = esc_html__( 'Ingresar dirección de envío', 'beslock-custom' );
                     }
                     ?>
                 </p>
@@ -77,7 +77,7 @@ if ( ! $has_confirmed_shipping ) {
             if ( is_cart() && 'no' === get_option( 'woocommerce_enable_shipping_calc' ) ) {
                 echo wp_kses_post( apply_filters( 'woocommerce_shipping_not_enabled_on_cart_html', __( 'Los costos de envío se calculan durante el pago.', 'beslock-custom' ) ) );
             } else {
-                $calculator_text = esc_html__( 'Ir a cambiar dirección', 'beslock-custom' );
+                $calculator_text = esc_html__( 'Ingresar dirección de envío', 'beslock-custom' );
                 echo wp_kses_post( apply_filters( 'woocommerce_shipping_may_be_available_html', __( 'Ingresa tu dirección para ver las opciones de envío.', 'beslock-custom' ) ) );
             }
         elseif ( ! is_cart() ) :
@@ -99,7 +99,7 @@ if ( ! $has_confirmed_shipping ) {
                     $formatted_destination
                 )
             );
-            $calculator_text = esc_html__( 'Ingresar otra dirección', 'beslock-custom' );
+            $calculator_text = esc_html__( 'Editar dirección de envío', 'beslock-custom' );
         endif;
         ?>
 

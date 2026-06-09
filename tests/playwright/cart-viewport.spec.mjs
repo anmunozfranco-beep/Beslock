@@ -75,13 +75,12 @@ test.describe('Cart viewport', () => {
     await page.goto('/carrito/', { waitUntil: 'networkidle' });
 
     const blockedCheckout = page.locator('.beslock-cart__summary .beslock-checkout-button--disabled');
-    await expect(blockedCheckout).toBeVisible();
-    await expect(blockedCheckout).toHaveAttribute('aria-disabled', 'true');
-    await expect(blockedCheckout).toContainText('Actualiza tu dirección');
+    await expect(blockedCheckout).toHaveCount(0);
+    await expect(page.locator('.beslock-cart__summary .beslock-checkout-blocked-note')).toContainText('Ingresa la dirección de envío antes de continuar.');
     await expect(page.locator('.beslock-cart__summary .wc-proceed-to-checkout a.checkout-button')).toHaveCount(0);
 
     await page.goto('/finalizar-compra/', { waitUntil: 'domcontentloaded' });
     await expect(page).toHaveURL(/\/carrito\/?$/);
-    await expect(page.locator('.woocommerce-error, .woocommerce-message, .woocommerce-info')).toContainText('Actualiza y confirma la dirección de envío');
+    await expect(page.locator('.woocommerce-error, .woocommerce-message, .woocommerce-info')).toContainText('Ingresa la dirección de envío antes de continuar.');
   });
 });

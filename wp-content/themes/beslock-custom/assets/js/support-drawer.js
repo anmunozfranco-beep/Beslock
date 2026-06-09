@@ -327,6 +327,16 @@
       button.style.display = visible ? '' : 'none';
     }
 
+    function updateScheduleFormClasses(mode, hasVisibleOrderSchedule) {
+      if (!form || !form.classList) return;
+
+      var isOrderMode = mode === 'order';
+      form.classList.toggle('is-mode-order', isOrderMode);
+      form.classList.toggle('is-mode-no-order', mode === 'no_order');
+      form.classList.toggle('is-order-pending', isOrderMode && !orderConfirmed);
+      form.classList.toggle('is-order-schedule-ready', isOrderMode && orderConfirmed && !!hasVisibleOrderSchedule);
+    }
+
     function setNodeVisible(node, visible) {
       if (!node) return;
       node.hidden = !visible;
@@ -548,8 +558,9 @@
 
       var mode = getMode();
       var hasVisibleOrderSchedule = !!(orderSchedule && orderScheduleReady && !orderSchedule.hidden);
-      var shouldShow = mode === 'no_order' || hasVisibleOrderSchedule;
+      var shouldShow = mode === 'no_order' || (orderConfirmed && hasVisibleOrderSchedule);
 
+      updateScheduleFormClasses(mode, hasVisibleOrderSchedule);
       submit.textContent = mode === 'no_order' ? 'Enviar consulta' : 'Programar instalación';
       submit.disabled = !shouldShow;
       setButtonVisible(submit, shouldShow);

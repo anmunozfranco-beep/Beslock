@@ -25,10 +25,7 @@ $requires_shipping_confirmation = function_exists( 'beslock_cart_requires_shippi
 ?>
 
 <?php if ( $requires_shipping_confirmation ) : ?>
-<span class="checkout-button button alt wc-forward beslock-checkout-button--disabled<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" role="button" aria-disabled="true">
-    <?php esc_html_e( 'Actualiza tu dirección para continuar', 'beslock-custom' ); ?>
-</span>
-<p class="beslock-checkout-blocked-note"><?php esc_html_e( 'Confirma la dirección de envío antes de continuar con el pago.', 'beslock-custom' ); ?></p>
+<p class="beslock-checkout-blocked-note"><?php esc_html_e( 'Ingresa la dirección de envío antes de continuar.', 'beslock-custom' ); ?></p>
 <?php else : ?>
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="checkout-button button alt wc-forward<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>">
     <?php esc_html_e( 'Continuar con el pago', 'beslock-custom' ); ?>
