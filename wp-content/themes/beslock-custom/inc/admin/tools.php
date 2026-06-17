@@ -4,6 +4,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Admin menu pages and wiring. Importer helper functions live in importer.php
+if ( ! function_exists( 'beslock_project_tool_path' ) ) {
+  function beslock_project_tool_path( $relative_path ) {
+    $relative_path = ltrim( $relative_path, '/' );
+    $root_path     = defined( 'ABSPATH' ) ? ABSPATH : trailingslashit( dirname( get_stylesheet_directory(), 3 ) );
+    $candidate     = trailingslashit( $root_path ) . $relative_path;
+
+    return file_exists( $candidate ) ? $candidate : '';
+  }
+}
+
 if ( ! function_exists( 'beslock_admin_tools_menu' ) ) {
   function beslock_admin_tools_menu() {
     add_management_page(
@@ -51,32 +61,72 @@ if ( ! function_exists( 'beslock_import_portfolio_page' ) ) {
 
     echo '<div class="wrap"><h1>' . esc_html__( 'Import Portfolio Images', 'beslock' ) . '</h1>';
 
-    if ( isset( $_POST['beslock_import_images'] ) ) {
+    if (
+      isset( $_POST['beslock_import_images'] )
+      || isset( $_POST['beslock_assign_images'] )
+      || isset( $_POST['beslock_import_and_assign'] )
+      || isset( $_POST['beslock_set_all_price'] )
+    ) {
       check_admin_referer( 'beslock_import_images_nonce' );
-      $result = beslock_import_portfolio_images();
-      if ( is_wp_error( $result ) ) {
-        echo '<div class="notice notice-error"><p>' . esc_html( $result->get_error_message() ) . '</p></div>';
-      } else {
-        printf( '<div class="notice notice-success"><p>%s</p></div>', esc_html( sprintf( _n( 'Imported %d image.', 'Imported %d images.', $result['count'], 'beslock' ), $result['count'] ) ) );
-        if ( ! empty( $result['ids'] ) ) {
-          echo '<p>' . esc_html__( 'Attachment IDs:', 'beslock' ) . ' ' . esc_html( implode( ', ', $result['ids'] ) ) . '</p>';
-        }
-      }
 
       if ( isset( $_POST['beslock_assign_images'] ) ) {
-        check_admin_referer( 'beslock_assign_images_nonce' );
         $assign = beslock_assign_images_to_products();
+
         if ( is_wp_error( $assign ) ) {
           echo '<div class="notice notice-error"><p>' . esc_html( $assign->get_error_message() ) . '</p></div>';
         } else {
           printf( '<div class="notice notice-success"><p>%s</p></div>', esc_html( sprintf( _n( 'Assigned images for %d product.', 'Assigned images for %d products.', $assign['assigned'], 'beslock' ), $assign['assigned'] ) ) );
+
           if ( ! empty( $assign['skipped'] ) ) {
             echo '<p>' . esc_html__( 'Skipped products (no matching images):', 'beslock' ) . ' ' . esc_html( implode( ', ', $assign['skipped'] ) ) . '</p>';
           }
         }
+      } elseif ( isset( $_POST['beslock_import_and_assign'] ) ) {
+        $result = beslock_import_and_assign_portfolio_images();
+
+        if ( is_wp_error( $result ) ) {
+          echo '<div class="notice notice-error"><p>' . esc_html( $result->get_error_message() ) . '</p></div>';
+        } else {
+          printf( '<div class="notice notice-success"><p>%s</p></div>', esc_html( sprintf( _n( 'Imported and assigned for %d image/product.', 'Imported and assigned for %d images/products.', $result['import_count'], 'beslock' ), $result['import_count'] ) ) );
+
+          if ( ! empty( $result['import_ids'] ) ) {
+            echo '<p>' . esc_html__( 'Attachment IDs:', 'beslock' ) . ' ' . esc_html( implode( ', ', $result['import_ids'] ) ) . '</p>';
+          }
+
+          if ( isset( $result['assigned'] ) ) {
+            printf( '<p>' . esc_html__( 'Assigned images for %d products.', 'beslock' ) . '</p>', intval( $result['assigned'] ) );
+          }
+
+          if ( ! empty( $result['skipped'] ) ) {
+            echo '<p>' . esc_html__( 'Skipped products (no matching images):', 'beslock' ) . ' ' . esc_html( implode( ', ', $result['skipped'] ) ) . '</p>';
+          }
+        }
+      } elseif ( isset( $_POST['beslock_set_all_price'] ) ) {
+        $amount = '500000';
+        $result = beslock_set_all_products_price( $amount );
+
+        if ( is_wp_error( $result ) ) {
+          echo '<div class="notice notice-error"><p>' . esc_html( $result->get_error_message() ) . '</p></div>';
+        } else {
+          printf( '<div class="notice notice-success"><p>%s</p></div>', esc_html( sprintf( __( 'Updated price for %d products to %s', 'beslock' ), intval( $result['updated'] ), $amount ) ) );
+        }
+      } else {
+        $result = beslock_import_portfolio_images();
+
+        if ( is_wp_error( $result ) ) {
+          echo '<div class="notice notice-error"><p>' . esc_html( $result->get_error_message() ) . '</p></div>';
+        } else {
+          printf( '<div class="notice notice-success"><p>%s</p></div>', esc_html( sprintf( _n( 'Imported %d image.', 'Imported %d images.', $result['count'], 'beslock' ), $result['count'] ) ) );
+
+          if ( ! empty( $result['ids'] ) ) {
+            echo '<p>' . esc_html__( 'Attachment IDs:', 'beslock' ) . ' ' . esc_html( implode( ', ', $result['ids'] ) ) . '</p>';
+          }
+        }
       }
     }
-    echo '<form method="post">' . wp_nonce_field( 'beslock_import_images_nonce' );
+
+    echo '<form method="post">';
+    echo wp_nonce_field( 'beslock_import_images_nonce', '_wpnonce', true, false );
     echo '<p>' . esc_html__( 'This will import all images from the theme folder', 'beslock' ) . ': <code>wp-content/themes/beslock-custom/assets/images/</code></p>';
     echo '<p><button type="submit" name="beslock_import_images" class="button button-primary">' . esc_html__( 'Import images', 'beslock' ) . '</button></p>';
     echo '<p><button type="submit" name="beslock_assign_images" class="button">' . esc_html__( 'Assign images to products', 'beslock' ) . '</button></p>';
@@ -92,10 +142,10 @@ if ( ! function_exists( 'beslock_fix_placeholders_page' ) ) {
       wp_die( __( 'Insufficient permissions', 'beslock' ) );
     }
 
-    $script = get_stylesheet_directory() . '/scripts/fix-placeholder-images.php';
+    $script = beslock_project_tool_path( 'tools/theme/portfolio/fix-placeholder-images.php' );
     if ( ! file_exists( $script ) ) {
       echo '<div class="wrap"><h1>' . esc_html__( 'Fix Placeholder Images', 'beslock' ) . '</h1>';
-      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: scripts/fix-placeholder-images.php', 'beslock' ) . '</p></div>';
+      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/theme/portfolio/fix-placeholder-images.php', 'beslock' ) . '</p></div>';
       echo '</div>';
       return;
     }
@@ -156,10 +206,10 @@ if ( ! function_exists( 'beslock_carga_portfolio_page' ) ) {
       wp_die( __( 'Insufficient permissions', 'beslock' ) );
     }
 
-    $script = get_stylesheet_directory() . '/scripts/carga_portfolio_data.php';
+    $script = get_stylesheet_directory() . '/inc/admin/portfolio-data.php';
     if ( ! file_exists( $script ) ) {
       echo '<div class="wrap"><h1>' . esc_html__( 'Cargar Portfolio Data', 'beslock' ) . '</h1>';
-      echo '<div class="notice notice-error"><p>' . esc_html__( 'Importer script not found: scripts/carga_portfolio_data.php', 'beslock' ) . '</p></div>';
+      echo '<div class="notice notice-error"><p>' . esc_html__( 'Importer script not found: inc/admin/portfolio-data.php', 'beslock' ) . '</p></div>';
       echo '</div>';
       return;
     }
@@ -183,10 +233,10 @@ if ( ! function_exists( 'beslock_csv_generator_page' ) ) {
       wp_die( __( 'Insufficient permissions', 'beslock' ) );
     }
 
-    $script = get_stylesheet_directory() . '/scripts/CSV_portfolio_generator.php';
+    $script = beslock_project_tool_path( 'tools/theme/portfolio/CSV_portfolio_generator.php' );
     if ( ! file_exists( $script ) ) {
       echo '<div class="wrap"><h1>' . esc_html__( 'CSV Generator', 'beslock' ) . '</h1>';
-      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: scripts/CSV_portfolio_generator.php', 'beslock' ) . '</p></div>';
+      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/theme/portfolio/CSV_portfolio_generator.php', 'beslock' ) . '</p></div>';
       echo '</div>';
       return;
     }

@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "currency": "COP",
   "source": {
-    "document": "Zonas_Smart_Manual_Cerrajero_Aliado (1).docx",
+    "document": "BESLOCK_Manual_Cerrajero_Aliado.docx",
     "section": "3. Estructura de comisiones por SKU",
     "rule": "precio_producto = pvp_con_instalacion - precio_instalacion",
     "variation_policy": "Por ahora no se consideran variaciones. Para e-Nova y e-Touch se toma la primera referencia que aparece en la tabla. Para e-Shield se conserva la referencia principal NX5-L."

@@ -87,7 +87,7 @@ function beslock_portfolio_exporter_page() {
 
 function beslock_run_export() {
     $theme_dir = WP_CONTENT_DIR . '/themes/beslock-custom';
-    $repo_dir = $theme_dir . '/repo_portfolio';
+    $repo_dir = $theme_dir . '/data/portfolio';
 
     if ( ! is_dir( $repo_dir ) ) {
         if ( ! wp_mkdir_p( $repo_dir ) ) {
@@ -208,7 +208,7 @@ function beslock_run_import() {
     }
 
     $theme_dir = WP_CONTENT_DIR . '/themes/beslock-custom';
-    $repo_dir = $theme_dir . '/repo_portfolio';
+    $repo_dir = $theme_dir . '/data/portfolio';
     // Primary canonical source: project data/products.json at repo root when available
     $root_data_path = ABSPATH ? ABSPATH . 'data/products.json' : dirname( dirname( dirname( __FILE__ ) ) ) . '/data/products.json';
     $json_path = '';
@@ -351,7 +351,8 @@ function beslock_run_import() {
     @file_put_contents( $backup_path, wp_json_encode( $backup_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE ) );
 
     // prepare logging
-    $log_dir = WP_CONTENT_DIR . '/themes/beslock-custom/import_logs';
+    $upload_dir = wp_upload_dir();
+    $log_dir = trailingslashit( $upload_dir['basedir'] ) . 'beslock_import_logs';
     if ( ! is_dir( $log_dir ) ) wp_mkdir_p( $log_dir );
     $log_file = $log_dir . '/import_' . gmdate( 'Ymd_His' ) . '.log';
     $log_lines = array();
@@ -660,7 +661,7 @@ function beslock_run_import() {
 function beslock_run_undo() {
     if ( ! current_user_can( 'manage_options' ) ) return false;
     $theme_dir = WP_CONTENT_DIR . '/themes/beslock-custom';
-    $repo_dir = $theme_dir . '/repo_portfolio';
+    $repo_dir = $theme_dir . '/data/portfolio';
     if ( ! is_dir( $repo_dir ) ) return false;
     $backup_path = $repo_dir . '/products_backup_latest.json';
     if ( ! file_exists( $backup_path ) ) return false;

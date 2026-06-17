@@ -120,7 +120,6 @@ $show_description = (bool) $args['show_description'];
 $card_classes = array(
   'product-card',
   'bes-product-card',
-  'pc-card',
   'section-reveal',
 );
 
@@ -151,27 +150,24 @@ $price_classes = array(
 $actions_classes = array(
   'product-card__actions',
   'bes-product-card__actions',
-  'pc-actions',
 );
 
 $primary_action_classes = array(
   'bes-product-card__button',
   'bes-product-card__button--primary',
-  'pc-btn-main',
 );
 
 $cart_action_classes = array(
   'bes-product-card__button',
   'bes-product-card__button--cart',
-  'pc-btn-cart',
 );
 
 $show_badge = function_exists( 'beslock_product_card_has_install_badge' )
   ? beslock_product_card_has_install_badge( $product )
   : false;
 
-$badge_src = get_template_directory_uri() . '/assets/images/instal.png';
-$badge_path = get_template_directory() . '/assets/images/instal.png';
+$badge_src = get_stylesheet_directory_uri() . '/assets/images/instal.png';
+$badge_path = get_stylesheet_directory() . '/assets/images/instal.png';
 $permalink = get_permalink( $product->get_id() );
 $add_to_cart_url = $product->add_to_cart_url();
 $product_sku = $product->get_sku();

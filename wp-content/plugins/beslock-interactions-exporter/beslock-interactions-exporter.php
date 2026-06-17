@@ -359,5 +359,5 @@ function beslock_interactions_exporter_format_mysql_gmt_to_iso( $mysql_gmt, $mys
 }
 
 function beslock_interactions_exporter_get_snapshot_path() {
-  return trailingslashit( get_stylesheet_directory() ) . 'interactions/interactions.json';
+  return trailingslashit( get_stylesheet_directory() ) . 'data/interactions/interactions.json';
 }

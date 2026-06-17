@@ -15,7 +15,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn, .beslock-btn, .discover__btn {
+.btn, .beslock-btn {
   display: inline-block;
       font-size: calc(1.2rem + 2px); /* title increased 2px */
   color: var(--beslock-green);
@@ -34,10 +34,8 @@
 .btn:hover,
 .beslock-btn:hover,
 .beslock-btn:active,
-.discover__btn:active,
 .btn:focus,
-.beslock-btn:focus,
-.discover__btn:focus {
+.beslock-btn:focus {
   background: var(--beslock-bg-2);
   color: var(--beslock-green-lite);
   border: 2px solid var(--beslock-green-lite);
@@ -49,7 +47,6 @@
 :where(
   .btn,
   .beslock-btn,
-  .discover__btn,
   .hero__cta,
   .wp-block-button__link,
   .button,
@@ -94,7 +91,6 @@
 :where(
   .btn,
   .beslock-btn,
-  .discover__btn,
   .hero__cta,
   .wp-block-button__link,
   .button,
@@ -118,7 +114,6 @@
   :where(
     .btn,
     .beslock-btn,
-    .discover__btn,
     .hero__cta,
     .wp-block-button__link,
     .button,
@@ -140,7 +135,6 @@
   :where(
     .btn,
     .beslock-btn,
-    .discover__btn,
     .hero__cta,
     .wp-block-button__link,
     .button,
@@ -157,7 +151,6 @@
 :where(
   .btn,
   .beslock-btn,
-  .discover__btn,
   .hero__cta,
   .wp-block-button__link,
   .button,
@@ -175,7 +168,6 @@
 :where(
   .btn,
   .beslock-btn,
-  .discover__btn,
   .hero__cta,
   .wp-block-button__link,
   .button,

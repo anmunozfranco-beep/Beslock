@@ -165,9 +165,9 @@ if ( ! function_exists( 'beslock_get_product_url_from_base' ) ) {
           />
         </picture>
 
-        <div class="models__item-media__shade" aria-hidden="true"></div>
+        <div class="models__media-shade" aria-hidden="true"></div>
 
-        <div class="models__item-media__overlay" aria-hidden="false">
+        <div class="models__media-overlay" aria-hidden="false">
           <h3 id="<?php echo esc_attr( $id_safe ); ?>" class="models__item-title" tabindex="-1" aria-hidden="false"><?php echo esc_html( $title ); ?></h3>
 
           <div class="models__item-badges" aria-hidden="false">

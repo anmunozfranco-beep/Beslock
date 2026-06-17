@@ -17,16 +17,6 @@ if ( ! function_exists( 'beslock_is_installation_service_product' ) ) {
   }
 }
 
-// Product-specific WooCommerce filters and hooks
-if ( class_exists( 'WooCommerce' ) && WC() ) {
-  // Change single product add-to-cart button text to Spanish
-  if ( ! has_filter( 'woocommerce_product_single_add_to_cart_text' ) ) {
-    add_filter( 'woocommerce_product_single_add_to_cart_text', function( $text ) {
-      return 'Agregar al carrito';
-    } );
-  }
-}
-
 add_action( 'template_redirect', function() {
   if ( is_admin() || wp_doing_ajax() || ! function_exists( 'is_product' ) || ! is_product() || ! function_exists( 'wc_get_product' ) ) {
     return;

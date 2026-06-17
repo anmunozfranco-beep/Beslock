@@ -24,7 +24,7 @@ $show_description = null !== $args['show_description']
 
 $card_classes = array(
   'product-card',
-  'pc-card',
+  'bes-product-card',
   'section-reveal',
 );
 
@@ -48,11 +48,11 @@ if ( $show_description ) {
     }
 
     if ( $show_badge ) :
-      $badge_path = get_template_directory() . '/assets/images/instal.png';
+      $badge_path = get_stylesheet_directory() . '/assets/images/instal.png';
       if ( file_exists( $badge_path ) ) : ?>
         <img
-          class="product-card__badge"
-          src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/instal.png' ); ?>"
+          class="product-card__badge bes-product-card__badge"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/instal.png' ); ?>"
           alt="<?php echo esc_attr_x( 'Instalación incluida', 'badge alt', 'beslock' ); ?>"
           aria-hidden="true"
         >
@@ -70,13 +70,13 @@ if ( $show_description ) {
     </p>
   <?php endif; ?>
 
-  <div class="pc-actions">
+  <div class="product-card__actions bes-product-card__actions">
 
-    <a href="<?php echo esc_url( get_permalink( $product->get_id() ) ); ?>" class="pc-btn-main">
+    <a href="<?php echo esc_url( get_permalink( $product->get_id() ) ); ?>" class="bes-product-card__button bes-product-card__button--primary">
       Ver Producto
     </a>
 
-    <a href="?add-to-cart=<?php echo $product->get_id(); ?>" class="pc-btn-cart" aria-label="Add to cart">
+    <a href="?add-to-cart=<?php echo $product->get_id(); ?>" class="bes-product-card__button bes-product-card__button--cart" aria-label="Add to cart">
       <i class="bi bi-cart"></i>
     </a>
 

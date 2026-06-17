@@ -33,5 +33,9 @@ wp-content/uploads/wc-logs/*.log
 wp-content/themes/beslock-custom/debug/
 wp-content/themes/beslock-custom/import_logs/*.log
 
+# Local design sources and transient media exports
+*.psd
+*.bak
+
 # Local backup archives
 *.zip

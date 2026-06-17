@@ -125,50 +125,6 @@ h1 .beslock-registered-mark {
 	vertical-align: top;
 }
 
-.beslock-email-authorized {
-	border-bottom: 1px solid #dbe3dd;
-	border-top: 1px solid #dbe3dd;
-	margin: 12px 0 0;
-	max-width: 250px;
-	width: 250px;
-}
-
-.beslock-email-authorized td {
-	padding: 10px 0;
-}
-
-.beslock-email-authorized-label {
-	color: #034526;
-	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
-	font-size: 11px;
-	font-weight: 700;
-	letter-spacing: 0;
-	line-height: 130%;
-	text-align: <?php echo esc_attr( $text_align ); ?>;
-	text-transform: uppercase;
-}
-
-.beslock-email-authorized-logo-cell {
-	line-height: 0;
-	text-align: <?php echo esc_attr( $opposite_align ); ?>;
-	width: 44px;
-}
-
-.beslock-email-authorized-logo-cell a {
-	display: inline-block;
-	line-height: 0;
-	text-decoration: none;
-}
-
-.beslock-email-authorized-logo-cell img {
-	display: inline-block;
-	height: auto;
-	margin: 0;
-	max-width: 46px;
-	opacity: 0.86;
-	width: 46px;
-}
-
 .beslock-email-kicker {
 	color: #667266;
 	font-family: <?php echo $font_family; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>;
@@ -631,27 +587,6 @@ img {
 	font-size: 12px;
 }
 
-.beslock-footer-operator-logo-cell {
-	padding: 0 !important;
-	text-align: <?php echo esc_attr( $opposite_align ); ?>;
-	width: 92px;
-}
-
-.beslock-footer-operator-logo {
-	display: inline-block;
-	line-height: 0;
-	text-decoration: none;
-}
-
-.beslock-footer-operator-logo img {
-	display: inline-block;
-	height: auto;
-	margin: 0;
-	max-width: 76px;
-	opacity: 0.84;
-	width: 76px;
-}
-
 #template_footer td {
 	padding: 0;
 }
@@ -688,28 +623,10 @@ img {
 		width: 176px !important;
 	}
 
-	.beslock-email-authorized {
-		margin-left: auto !important;
-		margin-right: auto !important;
-		width: 232px !important;
-	}
-
 	.beslock-email-logo-frame {
 		margin-left: auto !important;
 		margin-right: auto !important;
 		width: 232px !important;
-	}
-
-	.beslock-email-authorized-label {
-		font-size: 10px !important;
-	}
-
-	.beslock-email-authorized-logo-cell {
-		width: 48px !important;
-	}
-
-	.beslock-email-authorized-logo-cell img {
-		width: 40px !important;
 	}
 
 	.beslock-logo-mark {
@@ -753,20 +670,11 @@ img {
 		padding: 0 0 12px !important;
 	}
 
-	.beslock-footer-operator-copy,
-	.beslock-footer-operator-logo-cell {
+	.beslock-footer-operator-copy {
 		display: block !important;
 		padding: 0 !important;
 		text-align: center !important;
 		width: auto !important;
-	}
-
-	.beslock-footer-operator-logo-cell {
-		padding-top: 14px !important;
-	}
-
-	.beslock-footer-operator-logo img {
-		width: 64px !important;
 	}
 }
 <?php
