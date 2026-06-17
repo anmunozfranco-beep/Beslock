@@ -7,6 +7,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'beslock_project_tool_path' ) ) {
   function beslock_project_tool_path( $relative_path ) {
     $relative_path = ltrim( $relative_path, '/' );
+    $theme_tool_relative = preg_replace( '#^tools/theme/#', 'tools/recovery/', $relative_path );
+    $theme_candidate = trailingslashit( get_stylesheet_directory() ) . $theme_tool_relative;
+
+    if ( file_exists( $theme_candidate ) ) {
+      return $theme_candidate;
+    }
+
     $root_path     = defined( 'ABSPATH' ) ? ABSPATH : trailingslashit( dirname( get_stylesheet_directory(), 3 ) );
     $candidate     = trailingslashit( $root_path ) . $relative_path;
 
@@ -145,7 +152,7 @@ if ( ! function_exists( 'beslock_fix_placeholders_page' ) ) {
     $script = beslock_project_tool_path( 'tools/theme/portfolio/fix-placeholder-images.php' );
     if ( ! file_exists( $script ) ) {
       echo '<div class="wrap"><h1>' . esc_html__( 'Fix Placeholder Images', 'beslock' ) . '</h1>';
-      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/theme/portfolio/fix-placeholder-images.php', 'beslock' ) . '</p></div>';
+      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/recovery/portfolio/fix-placeholder-images.php', 'beslock' ) . '</p></div>';
       echo '</div>';
       return;
     }
@@ -236,7 +243,7 @@ if ( ! function_exists( 'beslock_csv_generator_page' ) ) {
     $script = beslock_project_tool_path( 'tools/theme/portfolio/CSV_portfolio_generator.php' );
     if ( ! file_exists( $script ) ) {
       echo '<div class="wrap"><h1>' . esc_html__( 'CSV Generator', 'beslock' ) . '</h1>';
-      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/theme/portfolio/CSV_portfolio_generator.php', 'beslock' ) . '</p></div>';
+      echo '<div class="notice notice-error"><p>' . esc_html__( 'Script not found: tools/recovery/portfolio/CSV_portfolio_generator.php', 'beslock' ) . '</p></div>';
       echo '</div>';
       return;
     }

@@ -97,6 +97,10 @@ function runStructureAudit() {
     'data/worldcities.csv',
     'data/interactions/interactions.json',
     'data/portfolio/products.json',
+    'tools/recovery/README.md',
+    'tools/recovery/portfolio/CSV_portfolio_generator.php',
+    'tools/recovery/portfolio/fix-placeholder-images.php',
+    'tools/recovery/plugins/beslock-portfolio-exporter/beslock-portfolio-exporter.php',
   ];
 
   for (const legacyPath of legacyThemePaths) {

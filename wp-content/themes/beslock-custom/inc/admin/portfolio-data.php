@@ -1383,6 +1383,121 @@ if ( ! function_exists( 'beslock_generate_products_csv' ) ) {
   }
 }
 
+if ( ! function_exists( 'beslock_get_portfolio_recovery_status' ) ) {
+  function beslock_get_portfolio_recovery_status() {
+    $theme_dir = get_stylesheet_directory();
+    $products_file = $theme_dir . '/data/products.json';
+    $products_count = 0;
+    $products_valid = false;
+
+    if ( file_exists( $products_file ) && is_readable( $products_file ) ) {
+      $products = json_decode( file_get_contents( $products_file ), true );
+      $products_valid = json_last_error() === JSON_ERROR_NONE && is_array( $products );
+      $products_count = $products_valid ? count( $products ) : 0;
+    }
+
+    $theme_csv_helper = $theme_dir . '/tools/recovery/portfolio/CSV_portfolio_generator.php';
+    $theme_placeholder_helper = $theme_dir . '/tools/recovery/portfolio/fix-placeholder-images.php';
+    $bundled_exporter = $theme_dir . '/tools/recovery/plugins/beslock-portfolio-exporter/beslock-portfolio-exporter.php';
+    $portfolio_backup = $theme_dir . '/data/portfolio/products_backup_latest.json';
+    $portfolio_backup_restored = $theme_dir . '/data/portfolio/products_backup_latest.json.restored';
+    $portfolio_snapshot = $theme_dir . '/data/portfolio/products.json';
+
+    return array(
+      array(
+        'label' => __( 'WooCommerce disponible', 'beslock' ),
+        'ok' => class_exists( 'WooCommerce' ) || function_exists( 'wc_get_product' ),
+        'detail' => class_exists( 'WooCommerce' ) || function_exists( 'wc_get_product' )
+          ? __( 'API de productos disponible para crear y actualizar catalogo.', 'beslock' )
+          : __( 'WooCommerce no esta cargado; no se puede restaurar catalogo.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'data/products.json', 'beslock' ),
+        'ok' => $products_valid && $products_count > 0,
+        'detail' => $products_valid
+          ? sprintf( __( '%d productos leidos desde el JSON canonico del tema.', 'beslock' ), $products_count )
+          : sprintf( __( 'No disponible o invalido: %s', 'beslock' ), $products_file ),
+      ),
+      array(
+        'label' => __( 'Importador del tema', 'beslock' ),
+        'ok' => function_exists( 'beslock_carga_portfolio_process' ) && function_exists( 'beslock_import_images_from_assets' ),
+        'detail' => __( 'Carga productos, imagenes, precios, metadatos y atributos desde el tema.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Generador CSV integrado', 'beslock' ),
+        'ok' => function_exists( 'beslock_generate_products_csv' ) && file_exists( $theme_csv_helper ),
+        'detail' => file_exists( $theme_csv_helper )
+          ? $theme_csv_helper
+          : __( 'Falta el helper CSV dentro del kit de recuperacion del tema.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Fix placeholders integrado', 'beslock' ),
+        'ok' => file_exists( $theme_placeholder_helper ),
+        'detail' => file_exists( $theme_placeholder_helper )
+          ? $theme_placeholder_helper
+          : __( 'Falta el helper de placeholders dentro del kit de recuperacion del tema.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Copia del plugin export/import', 'beslock' ),
+        'ok' => file_exists( $bundled_exporter ),
+        'detail' => file_exists( $bundled_exporter )
+          ? $bundled_exporter
+          : __( 'Falta la copia de Beslock Portfolio Exporter dentro del tema.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Fallback export/import activo', 'beslock' ),
+        'ok' => function_exists( 'beslock_run_export' ) && function_exists( 'beslock_run_import' ) && function_exists( 'beslock_run_undo' ),
+        'detail' => function_exists( 'beslock_run_export' ) && function_exists( 'beslock_run_import' ) && function_exists( 'beslock_run_undo' )
+          ? __( 'Exportar JSON/SQLite, cargar productos y deshacer cambios estan disponibles en admin.', 'beslock' )
+          : __( 'Las funciones del exportador no estan cargadas en esta solicitud.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Snapshot portfolio', 'beslock' ),
+        'ok' => file_exists( $portfolio_snapshot ),
+        'detail' => file_exists( $portfolio_snapshot )
+          ? $portfolio_snapshot
+          : __( 'No existe data/portfolio/products.json.', 'beslock' ),
+      ),
+      array(
+        'label' => __( 'Backup portfolio', 'beslock' ),
+        'ok' => file_exists( $portfolio_backup ) || file_exists( $portfolio_backup_restored ),
+        'detail' => file_exists( $portfolio_backup )
+          ? $portfolio_backup
+          : ( file_exists( $portfolio_backup_restored ) ? $portfolio_backup_restored : __( 'No hay backup de portfolio detectado.', 'beslock' ) ),
+      ),
+    );
+  }
+}
+
+if ( ! function_exists( 'beslock_render_portfolio_recovery_status' ) ) {
+  function beslock_render_portfolio_recovery_status() {
+    $status_rows = beslock_get_portfolio_recovery_status();
+    $all_ok = true;
+    foreach ( $status_rows as $status_row ) {
+      if ( empty( $status_row['ok'] ) ) {
+        $all_ok = false;
+        break;
+      }
+    }
+
+    $notice_class = $all_ok ? 'notice notice-success' : 'notice notice-warning';
+
+    echo '<h2>' . esc_html__( 'Estado del kit de recuperacion', 'beslock' ) . '</h2>';
+    printf( '<div class="%s"><p>', esc_attr( $notice_class ) );
+    echo esc_html( $all_ok ? __( 'Kit critico disponible dentro del tema.', 'beslock' ) : __( 'Revisa los elementos marcados antes de usar la recuperacion.', 'beslock' ) );
+    echo '</p></div>';
+    echo '<table class="widefat striped" style="max-width:1100px;margin-bottom:16px;"><tbody>';
+    foreach ( $status_rows as $status_row ) {
+      echo '<tr>';
+      echo '<th scope="row" style="width:240px;">' . esc_html( $status_row['label'] ) . '</th>';
+      echo '<td style="width:90px;">' . ( ! empty( $status_row['ok'] ) ? '<strong style="color:#008a20;">OK</strong>' : '<strong style="color:#b32d2e;">ERROR</strong>' ) . '</td>';
+      echo '<td><code style="white-space:normal;">' . esc_html( $status_row['detail'] ) . '</code></td>';
+      echo '</tr>';
+    }
+    echo '</tbody></table>';
+  }
+}
+
 // Admin helper: render a small summary (used when included from an admin page)
 if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
   function beslock_carga_portfolio_admin_ui() {
@@ -1391,6 +1506,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
     }
 
     echo '<div class="wrap"><h1>' . esc_html__( 'Cargar Portfolio Data', 'beslock' ) . '</h1>';
+    beslock_render_portfolio_recovery_status();
 
     // show last persisted log from options (if any)
     $last_log = get_option( 'beslock_last_import_log', '' );
@@ -1484,11 +1600,9 @@ if ( ! function_exists( 'beslock_carga_portfolio_admin_ui' ) ) {
         try { update_option( 'beslock_last_import_log', $e->getMessage() . "\n" . $e->getTraceAsString() ); } catch ( Exception $ex ) { }
       }
     }
-    // show CSV generator checkbox
-    echo '<p><label><input type="checkbox" name="beslock_generate_csv" value="1"> ' . esc_html__( 'Generate CSV from products (try DOM render then JSON fallback)', 'beslock' ) . '</label></p>';
-
     echo '<form method="post">' . wp_nonce_field( 'beslock_carga_portfolio_nonce' );
     echo '<p>' . esc_html__( 'This will read data/products.json and create/update WooCommerce products accordingly.', 'beslock' ) . '</p>';
+    echo '<p><label><input type="checkbox" name="beslock_generate_csv" value="1"> ' . esc_html__( 'Generate CSV from products (try DOM render then JSON fallback)', 'beslock' ) . '</label></p>';
     echo '<p><label><input type="checkbox" name="beslock_carga_dryrun" value="1" checked> ' . esc_html__( 'Dry run (no changes, just report)', 'beslock' ) . '</label></p>';
     echo '<p><label><input type="checkbox" name="beslock_import_images" value="1"> ' . esc_html__( 'Only import images from theme assets and assign to products', 'beslock' ) . '</label></p>';
     echo '<p><label><input type="checkbox" name="beslock_sync_features" value="1"> ' . esc_html__( 'Only sync product characteristics to WooCommerce attributes', 'beslock' ) . '</label></p>';
