@@ -404,10 +404,22 @@
     rememberAddOrigin($button, event);
 
     var quantity = $form.find('input.qty').first().val() || 1;
+    var variationId = $form.find('[name="variation_id"]').val();
     var data = {
-      product_id: productId,
+      product_id: variationId && variationId !== '0' ? variationId : productId,
       quantity: quantity,
     };
+
+    if (variationId && variationId !== '0') {
+      data.variation_id = variationId;
+
+      $form.find('[name^="attribute_"]').each(function () {
+        var field = this;
+        if (field.name && field.value) {
+          data[field.name] = field.value;
+        }
+      });
+    }
 
     $button.removeClass('added').addClass('loading');
     $(document.body).trigger('adding_to_cart', [$button, data]);
@@ -431,8 +443,15 @@
     var $button = $(link);
     var endpoint = wcAjaxUrl('add_to_cart');
     var productId = $button.attr('data-product_id') || $button.attr('data-product-id');
+    var variationId = $button.attr('data-variation_id');
+    var variationAttributes = {};
 
     if (!endpoint || !productId) {
+      return;
+    }
+
+    if ($button.attr('aria-disabled') === 'true' || $button.hasClass('is-disabled')) {
+      event.preventDefault();
       return;
     }
 
@@ -440,9 +459,21 @@
     rememberAddOrigin($button, event);
 
     var data = {
-      product_id: productId,
+      product_id: variationId ? variationId : productId,
       quantity: $button.attr('data-quantity') || 1,
     };
+
+    if (variationId) {
+      data.variation_id = variationId;
+
+      try {
+        variationAttributes = JSON.parse($button.attr('data-variation_attributes') || '{}');
+      } catch (error) {
+        variationAttributes = {};
+      }
+
+      $.extend(data, variationAttributes);
+    }
 
     $button.removeClass('added').addClass('loading');
     $(document.body).trigger('adding_to_cart', [$button, data]);

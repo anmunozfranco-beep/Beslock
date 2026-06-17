@@ -558,6 +558,280 @@ if ( ! function_exists( 'beslock_import_images_from_assets' ) ) {
   }
 }
 
+if ( ! function_exists( 'beslock_portfolio_product_has_variations' ) ) {
+  function beslock_portfolio_product_has_variations( $prod ) {
+    return ! empty( $prod['variations'] ) && is_array( $prod['variations'] );
+  }
+}
+
+if ( ! function_exists( 'beslock_portfolio_variation_attribute_slug' ) ) {
+  function beslock_portfolio_variation_attribute_slug( $attribute_name ) {
+    $slug = sanitize_title( (string) $attribute_name );
+    return '' !== $slug ? $slug : sanitize_key( (string) $attribute_name );
+  }
+}
+
+if ( ! function_exists( 'beslock_portfolio_normalize_variation_attributes' ) ) {
+  function beslock_portfolio_normalize_variation_attributes( $attributes ) {
+    $normalized = array();
+
+    foreach ( (array) $attributes as $name => $value ) {
+      $name = preg_replace( '/^attribute_/', '', (string) $name );
+      $slug = beslock_portfolio_variation_attribute_slug( $name );
+      $value = trim( wp_strip_all_tags( (string) $value ) );
+
+      if ( '' === $slug || '' === $value ) {
+        continue;
+      }
+
+      $normalized[ $slug ] = $value;
+    }
+
+    ksort( $normalized );
+    return $normalized;
+  }
+}
+
+if ( ! function_exists( 'beslock_portfolio_get_variation_attribute_definitions' ) ) {
+  function beslock_portfolio_get_variation_attribute_definitions( $prod ) {
+    $definitions = array();
+
+    if ( ! empty( $prod['variation_attributes'] ) && is_array( $prod['variation_attributes'] ) ) {
+      foreach ( $prod['variation_attributes'] as $position => $attribute ) {
+        $name = isset( $attribute['name'] ) ? trim( wp_strip_all_tags( (string) $attribute['name'] ) ) : '';
+        $slug = ! empty( $attribute['slug'] )
+          ? beslock_portfolio_variation_attribute_slug( $attribute['slug'] )
+          : beslock_portfolio_variation_attribute_slug( $name );
+
+        if ( '' === $name || '' === $slug ) {
+          continue;
+        }
+
+        $options = array();
+        foreach ( (array) ( $attribute['options'] ?? array() ) as $option ) {
+          $option = trim( wp_strip_all_tags( (string) $option ) );
+          if ( '' !== $option && ! in_array( $option, $options, true ) ) {
+            $options[] = $option;
+          }
+        }
+
+        $definitions[ $slug ] = array(
+          'name' => $name,
+          'slug' => $slug,
+          'options' => $options,
+          'position' => absint( $position ),
+        );
+      }
+    }
+
+    foreach ( (array) ( $prod['variations'] ?? array() ) as $variation ) {
+      $variation_attributes = beslock_portfolio_normalize_variation_attributes( $variation['attributes'] ?? array() );
+      foreach ( $variation_attributes as $slug => $value ) {
+        if ( empty( $definitions[ $slug ] ) ) {
+          $definitions[ $slug ] = array(
+            'name' => ucwords( str_replace( '-', ' ', $slug ) ),
+            'slug' => $slug,
+            'options' => array(),
+            'position' => count( $definitions ),
+          );
+        }
+
+        if ( ! in_array( $value, $definitions[ $slug ]['options'], true ) ) {
+          $definitions[ $slug ]['options'][] = $value;
+        }
+      }
+    }
+
+    uasort(
+      $definitions,
+      static function( $a, $b ) {
+        return ( $a['position'] ?? 0 ) <=> ( $b['position'] ?? 0 );
+      }
+    );
+
+    return $definitions;
+  }
+}
+
+if ( ! function_exists( 'beslock_sync_portfolio_product_variations' ) ) {
+  function beslock_sync_portfolio_product_variations( $pid, $prod, $is_dry, $import_theme_image, &$log ) {
+    if ( ! $pid || ! beslock_portfolio_product_has_variations( $prod ) ) {
+      return;
+    }
+
+    if ( ! class_exists( 'WC_Product_Variable' ) || ! class_exists( 'WC_Product_Variation' ) ) {
+      $log[] = 'WooCommerce variable product classes unavailable; skipped variation sync';
+      return;
+    }
+
+    $attribute_definitions = beslock_portfolio_get_variation_attribute_definitions( $prod );
+
+    if ( empty( $attribute_definitions ) ) {
+      $log[] = 'No valid variation attributes found; skipped variation sync';
+      return;
+    }
+
+    if ( $is_dry ) {
+      $log[] = sprintf(
+        '(dry-run) Would configure %d variation attributes and %d variations for product ID %d',
+        count( $attribute_definitions ),
+        count( $prod['variations'] ),
+        $pid
+      );
+      return;
+    }
+
+    wp_set_object_terms( $pid, 'variable', 'product_type' );
+    $variable_product = new WC_Product_Variable( $pid );
+    $product_attributes = array();
+
+    foreach ( array_values( $attribute_definitions ) as $position => $definition ) {
+      $attribute = new WC_Product_Attribute();
+      $attribute->set_id( 0 );
+      $attribute->set_name( $definition['name'] );
+      $attribute->set_options( array_values( $definition['options'] ) );
+      $attribute->set_position( $position );
+      $attribute->set_visible( true );
+      $attribute->set_variation( true );
+      $product_attributes[ $definition['slug'] ] = $attribute;
+    }
+
+    $variable_product->set_attributes( $product_attributes );
+    $variable_product->save();
+
+    $existing_children = $variable_product->get_children();
+    $created = 0;
+    $updated = 0;
+    $pruned = 0;
+    $synced_variation_ids = array();
+    $default_attributes = array();
+
+    foreach ( (array) $prod['variations'] as $index => $variation_data ) {
+      $variation_attributes = beslock_portfolio_normalize_variation_attributes( $variation_data['attributes'] ?? array() );
+
+      if ( empty( $variation_attributes ) ) {
+        $log[] = "Skipped variation {$index} for product ID {$pid}: missing attributes";
+        continue;
+      }
+
+      $variation_id = 0;
+      $variation_sku = isset( $variation_data['sku'] ) ? sanitize_text_field( $variation_data['sku'] ) : '';
+
+      if ( '' !== $variation_sku && function_exists( 'wc_get_product_id_by_sku' ) ) {
+        $sku_owner_id = wc_get_product_id_by_sku( $variation_sku );
+        if ( $sku_owner_id && in_array( absint( $sku_owner_id ), array_map( 'absint', $existing_children ), true ) ) {
+          $variation_id = absint( $sku_owner_id );
+        }
+      }
+
+      if ( ! $variation_id ) {
+        foreach ( $existing_children as $child_id ) {
+          $child = wc_get_product( $child_id );
+          if ( ! $child || ! is_a( $child, 'WC_Product_Variation' ) ) {
+            continue;
+          }
+
+          $child_attributes = beslock_portfolio_normalize_variation_attributes( $child->get_attributes() );
+          if ( $child_attributes === $variation_attributes ) {
+            $variation_id = absint( $child_id );
+            break;
+          }
+        }
+      }
+
+      $variation = $variation_id ? new WC_Product_Variation( $variation_id ) : new WC_Product_Variation();
+      $is_new_variation = ! $variation_id;
+      $variation->set_parent_id( $pid );
+      $variation->set_status( 'publish' );
+      $variation->set_attributes( $variation_attributes );
+
+      $variation_price = isset( $variation_data['price'] )
+        ? beslock_format_portfolio_price_meta( $variation_data['price'] )
+        : beslock_format_portfolio_price_meta( $prod['price'] ?? '' );
+
+      if ( '' !== $variation_price ) {
+        $variation->set_regular_price( $variation_price );
+        $variation->set_price( $variation_price );
+        if ( method_exists( $variation, 'set_sale_price' ) ) {
+          $variation->set_sale_price( '' );
+        }
+      }
+
+      if ( '' !== $variation_sku ) {
+        try {
+          $variation->set_sku( $variation_sku );
+        } catch ( Exception $e ) {
+          $log[] = "Could not set variation SKU {$variation_sku}: " . $e->getMessage();
+        }
+      }
+
+      if ( isset( $variation_data['manage_stock'] ) ) {
+        $variation->set_manage_stock( $variation_data['manage_stock'] ? true : false );
+      }
+      if ( isset( $variation_data['stock'] ) ) {
+        $variation->set_stock_quantity( intval( $variation_data['stock'] ) );
+      }
+      $variation->set_stock_status( isset( $variation_data['stock_status'] ) ? sanitize_text_field( $variation_data['stock_status'] ) : 'instock' );
+
+      if ( ! empty( $variation_data['image'] ) ) {
+        $image_basename = wp_basename( (string) $variation_data['image'] );
+        $image_base = pathinfo( $image_basename, PATHINFO_FILENAME );
+        $image_id = $import_theme_image( $image_base, $log );
+        if ( $image_id ) {
+          $variation->set_image_id( $image_id );
+        } else {
+          $log[] = "Missing variation image for product ID {$pid}: {$image_basename}";
+        }
+      }
+
+      $saved_id = $variation->save();
+      if ( $saved_id ) {
+        $synced_variation_ids[] = absint( $saved_id );
+        if ( $is_new_variation ) {
+          $created++;
+          $existing_children[] = $saved_id;
+        } else {
+          $updated++;
+        }
+      }
+
+      if ( ! empty( $variation_data['default'] ) || empty( $default_attributes ) ) {
+        $default_attributes = $variation_attributes;
+      }
+    }
+
+    $synced_variation_ids = array_values( array_unique( array_map( 'absint', $synced_variation_ids ) ) );
+    foreach ( array_unique( array_map( 'absint', $existing_children ) ) as $child_id ) {
+      if ( ! $child_id || in_array( $child_id, $synced_variation_ids, true ) ) {
+        continue;
+      }
+
+      $child = wc_get_product( $child_id );
+      if ( ! $child || ! is_a( $child, 'WC_Product_Variation' ) || absint( $child->get_parent_id() ) !== absint( $pid ) ) {
+        continue;
+      }
+
+      $child->delete( true );
+      $pruned++;
+    }
+
+    $variable_product = new WC_Product_Variable( $pid );
+    if ( ! empty( $default_attributes ) ) {
+      $variable_product->set_default_attributes( $default_attributes );
+    }
+    $variable_product->save();
+
+    if ( method_exists( 'WC_Product_Variable', 'sync' ) ) {
+      WC_Product_Variable::sync( $pid );
+    }
+    if ( function_exists( 'wc_delete_product_transients' ) ) {
+      wc_delete_product_transients( $pid );
+    }
+
+    $log[] = sprintf( 'Synced variations for product ID %d: created=%d updated=%d pruned=%d', $pid, $created, $updated, $pruned );
+  }
+}
+
 if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
   function beslock_carga_portfolio_process( $dry_run = false ) {
     $log = array();
@@ -748,6 +1022,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         continue;
       }
       $seen_slugs[ $slug ] = true;
+      $has_variations = beslock_portfolio_product_has_variations( $prod );
 
       // find existing product by slug; fall back to matching by title (useful when a dummy product exists)
       $existing = get_page_by_path( $slug, OBJECT, 'product' );
@@ -768,6 +1043,12 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         if ( function_exists( 'wc_get_product' ) ) {
           $product = wc_get_product( $pid );
         }
+        if ( $has_variations && class_exists( 'WC_Product_Variable' ) ) {
+          if ( ! $is_dry ) {
+            wp_set_object_terms( $pid, 'variable', 'product_type' );
+          }
+          $product = new WC_Product_Variable( $pid );
+        }
         if ( ! $product && class_exists( 'WC_Product_Simple' ) ) {
           // attempt to hydrate a WC object from existing post id
           $product = new WC_Product_Simple( $pid );
@@ -778,12 +1059,13 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         if ( $is_dry ) {
           $log[] = "(dry-run) Would create product {$slug}";
         } else {
-          if ( ! class_exists( 'WC_Product_Simple' ) ) {
-            $log[] = "WooCommerce WC_Product_Simple not available; skipping product {$slug}";
+          $required_product_class = $has_variations ? 'WC_Product_Variable' : 'WC_Product_Simple';
+          if ( ! class_exists( $required_product_class ) ) {
+            $log[] = "WooCommerce {$required_product_class} not available; skipping product {$slug}";
             $skipped[] = $slug;
             continue;
           }
-          $product = new WC_Product_Simple();
+          $product = $has_variations ? new WC_Product_Variable() : new WC_Product_Simple();
         }
       }
 
@@ -807,7 +1089,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
           }
           $product->set_short_description( $short );
           $product->set_description( $desc );
-          if ( $price !== '' && method_exists( $product, 'set_regular_price' ) ) {
+          if ( ! $has_variations && $price !== '' && method_exists( $product, 'set_regular_price' ) ) {
             $product->set_regular_price( $price );
           }
           if ( $sku !== '' && method_exists( $product, 'set_sku' ) ) {
@@ -839,7 +1121,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
           if ( $new_id ) {
             $pid = $new_id;
             // ensure product_type term set
-            if ( function_exists( 'wp_set_object_terms' ) ) wp_set_object_terms( $pid, 'simple', 'product_type' );
+            if ( function_exists( 'wp_set_object_terms' ) ) wp_set_object_terms( $pid, $has_variations ? 'variable' : 'simple', 'product_type' );
             // ensure basic metas for compatibility
             update_post_meta( $pid, '_stock_status', get_post_meta( $pid, '_stock_status', true ) ?: 'instock' );
             update_post_meta( $pid, '_visibility', get_post_meta( $pid, '_visibility', true ) ?: 'visible' );
@@ -946,7 +1228,7 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
 
       // set price
       $price = isset( $prod['price'] ) ? trim( (string) $prod['price'] ) : '';
-      if ( $price !== '' ) {
+      if ( $price !== '' && ! $has_variations ) {
         if ( $is_dry ) {
           $log[] = "(dry-run) Would set price {$price} for {$slug}";
           $persist_log();
@@ -972,6 +1254,8 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
             delete_post_meta( $pid, '_sale_price' );
           }
         }
+      } elseif ( $price !== '' && $has_variations ) {
+        $log[] = ( $is_dry ? "(dry-run) Would leave parent price managed by variations for {$slug}" : "Parent price for {$slug} is managed by variations" );
       }
 
       beslock_sync_portfolio_pricing_meta( $pid, $prod, $installation_policy, $is_dry, $slug, $log );
@@ -1054,6 +1338,11 @@ if ( ! function_exists( 'beslock_carga_portfolio_process' ) ) {
         } else {
           $log[] = "(dry-run) Would set product gallery for {$slug}: " . implode( ',', $gallery_ids );
         }
+      }
+
+      if ( $has_variations && $pid ) {
+        beslock_sync_portfolio_product_variations( $pid, $prod, $is_dry, $import_theme_image, $log );
+        $persist_log();
       }
 
       // features and badge metadata
