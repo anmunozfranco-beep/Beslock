@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "pw:install": "playwright install chromium",
+    "deploy:build": "bash scripts/build-deploy.sh",
     "validate": "npm run validate:theme && npm run test:pw",
     "validate:theme": "node scripts/validate-theme.mjs",
     "validate:structure": "node scripts/validate-theme.mjs structure",
