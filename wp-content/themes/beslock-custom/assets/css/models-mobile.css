@@ -149,7 +149,7 @@
 }
 
 /* Shade layer sits above the image but below overlay content */
-.models__item-media__shade {
+.models__media-shade {
   position: absolute;
   inset: 0;
   background: var(--beslock-shade);
@@ -159,7 +159,7 @@
 }
 
 /* Overlay for texts sits above the shade */
-.models__item-media__overlay {
+.models__media-overlay {
   position: absolute;
   inset: 0;
   z-index: 3; /* ensure overlay above shade */
@@ -230,8 +230,8 @@
     transform: scale(1.035);
   }
 
-  .models__item:hover .models__item-media__shade,
-  .models__item-link:focus-visible .models__item-media__shade {
+  .models__item:hover .models__media-shade,
+  .models__item-link:focus-visible .models__media-shade {
     background: rgba(3,69,38,0.18);
   }
 

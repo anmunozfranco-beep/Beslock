@@ -1,6 +1,6 @@
 /**
  * BESLOCK manuals viewer.
- * Reads only dist/manuals/index.json, products/*.json, and dist/manuals/assets.
+ * Reads only assets/manuals/index.json, products/*.json, and assets/manuals/assets.
  */
 (function () {
   'use strict';
@@ -13,7 +13,7 @@
   if (!baseUrl) {
     var currentScript = document.currentScript && document.currentScript.src ? document.currentScript.src : '';
     if (currentScript.indexOf('/assets/js/') !== -1) {
-      baseUrl = currentScript.split('/assets/js/')[0] + '/dist/manuals';
+      baseUrl = currentScript.split('/assets/js/')[0] + '/assets/manuals';
     }
   }
 

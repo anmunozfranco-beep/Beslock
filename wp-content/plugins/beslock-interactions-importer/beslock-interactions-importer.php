@@ -507,5 +507,5 @@ function beslock_interactions_importer_refresh_product_rating_meta( $product_id 
 }
 
 function beslock_interactions_importer_get_snapshot_path() {
-  return trailingslashit( get_stylesheet_directory() ) . 'interactions/interactions.json';
+  return trailingslashit( get_stylesheet_directory() ) . 'data/interactions/interactions.json';
 }

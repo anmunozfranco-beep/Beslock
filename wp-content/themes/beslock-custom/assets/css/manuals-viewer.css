@@ -1,4 +1,4 @@
-/* BESLOCK manuals viewer. Consumes only the static dist/manuals package. */
+/* BESLOCK manuals viewer. Consumes only the static assets/manuals package. */
 
 nav#mobileDrawer {
   --drawer-main-inset: clamp(1rem, 4.4vw, 2.25rem);

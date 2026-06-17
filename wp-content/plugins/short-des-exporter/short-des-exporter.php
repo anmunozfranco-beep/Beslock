@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Short Des Exporter
-Description: Sincroniza el campo "excerpt" desde repo_portfolio/products.json hacia wp_posts.post_excerpt mediante SQL directo.
+Description: Sincroniza el campo "excerpt" desde data/portfolio/products.json hacia wp_posts.post_excerpt mediante SQL directo.
 Version: 1.0
 Author: Automated
 */
@@ -20,7 +20,7 @@ function sde_tools_page() {
         wp_die( 'Acceso denegado' );
     }
 
-    $json_path = WP_CONTENT_DIR . '/themes/beslock-custom/repo_portfolio/products.json';
+    $json_path = WP_CONTENT_DIR . '/themes/beslock-custom/data/portfolio/products.json';
     $exists = file_exists( $json_path );
     $products_count = 0;
     $products_preview = '';
@@ -77,7 +77,7 @@ function sde_run_sync() {
         $wc_active = true;
     }
 
-    $json_path = WP_CONTENT_DIR . '/themes/beslock-custom/repo_portfolio/products.json';
+    $json_path = WP_CONTENT_DIR . '/themes/beslock-custom/data/portfolio/products.json';
     if ( ! file_exists( $json_path ) ) {
         sde_log( "INVALID_JSON\tfile_missing:{$json_path}" );
         return array( 'updated' => 0, 'skipped' => 0, 'not_found' => 0, 'invalid' => 1, 'log' => sde_log_file() );

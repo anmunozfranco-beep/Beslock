@@ -66,13 +66,6 @@ if ( ! $img ) {
 	$img = get_stylesheet_directory_uri() . '/assets/images/logo-green.png';
 }
 
-$partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
-$partner_logo_url  = '';
-
-if ( file_exists( $partner_logo_path ) ) {
-	$partner_logo_url = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png?v=' . filemtime( $partner_logo_path );
-}
-
 $beslock_order = null;
 if ( isset( $GLOBALS['beslock_email_order'] ) && $GLOBALS['beslock_email_order'] instanceof WC_Order ) {
 	$beslock_order = $GLOBALS['beslock_email_order'];
@@ -115,20 +108,6 @@ $date_created       = $beslock_order ? $beslock_order->get_date_created() : null
 												$image_html = '<table border="0" cellpadding="0" cellspacing="0" class="beslock-email-logo-frame" role="presentation"><tr><td class="beslock-email-logo-frame-cell" align="center" valign="top">' . $logo_table . '</td></tr></table>';
 												echo wp_kses_post( $image_html );
 												?>
-												<?php if ( $partner_logo_url ) : ?>
-													<table border="0" cellpadding="0" cellspacing="0" class="beslock-email-authorized" role="presentation">
-														<tr>
-															<td class="beslock-email-authorized-label" valign="middle">
-																<?php esc_html_e( 'Comercializador autorizado', 'beslock-custom' ); ?>
-															</td>
-															<td class="beslock-email-authorized-logo-cell" valign="middle">
-																<a href="https://zonassmart.com/" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr_x( 'ZONAS SMART, comercializador autorizado', 'email header partner link label', 'beslock-custom' ); ?>">
-																	<img src="<?php echo esc_url( $partner_logo_url ); ?>" alt="<?php echo esc_attr_x( 'ZONAS SMART', 'email header partner logo alt text', 'beslock-custom' ); ?>" width="46" height="46" />
-																</a>
-															</td>
-														</tr>
-													</table>
-												<?php endif; ?>
 											</td>
 											<td class="beslock-email-kicker" valign="middle">
 												<span><?php esc_html_e( 'Seguridad premium', 'beslock-custom' ); ?></span><br>

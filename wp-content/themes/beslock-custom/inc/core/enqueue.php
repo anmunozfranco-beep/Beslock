@@ -82,7 +82,6 @@ add_action( 'wp_enqueue_scripts', function() {
   $enqueue_optional_theme_style( 'beslock-header-component', '/assets/css/components/header.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile' ] );
   $enqueue_optional_theme_style( 'beslock-manuals-viewer', '/assets/css/manuals-viewer.css', [ 'beslock-extra-style', 'beslock-menu-products-mobile', 'beslock-header-component' ] );
   $enqueue_optional_theme_style( 'beslock-support-drawer', '/assets/css/support-drawer.css', [ 'beslock-manuals-viewer' ] );
-  $enqueue_optional_theme_style( 'beslock-discover-component', '/assets/css/components/discover.css' );
   $enqueue_optional_theme_style( 'beslock-homepage-layout', '/assets/css/layout/homepage.css' );
   $enqueue_optional_theme_style( 'beslock-recommendations-layout', '/assets/css/layout/recommendations.css' );
   $enqueue_optional_theme_style( 'beslock-storefront-layout', '/assets/css/layout/storefront.css' );
@@ -219,7 +218,7 @@ add_action( 'wp_enqueue_scripts', function() {
     );
 
     $manuals_cache_bust = filemtime( $manuals_viewer_js );
-    $manuals_dist_dir = $theme_dir_path . '/dist/manuals';
+    $manuals_dist_dir = $theme_dir_path . '/assets/manuals';
     $manuals_manifest_candidates = array(
       $manuals_dist_dir . '/index.json',
       $manuals_dist_dir . '/export_summary.json',
@@ -241,7 +240,7 @@ add_action( 'wp_enqueue_scripts', function() {
     }
 
     $manuals_config = array(
-      'baseUrl'    => esc_url_raw( $theme_dir_uri . '/dist/manuals' ),
+      'baseUrl'    => esc_url_raw( $theme_dir_uri . '/assets/manuals' ),
       'cacheBust' => (string) $manuals_cache_bust,
     );
 

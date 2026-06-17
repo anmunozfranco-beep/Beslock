@@ -1,0 +1,3241 @@
+{
+  "product": {
+    "slug": "e-orbit",
+    "display_name": "e-Orbit",
+    "profile": {
+      "identity": {
+        "display_name": "e-Orbit",
+        "beslock_name": "e-Orbit",
+        "oem_model": "NF14",
+        "oem_related_names": "",
+        "product_type": "Cerradura inteligente",
+        "lock_architecture": "mortise_lock",
+        "main_image": "e-Orbit/e-Orbit.png",
+        "variants": [],
+        "primary_use": "",
+        "source_file": "perfil_producto_e-orbit_NF14.md"
+      },
+      "commercial": {
+        "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+        "commercial_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos. Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+        "key_value_proposition": "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos. Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+        "value_bullets": [
+          "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+          "Reconocimiento facial con cámara frontal y detección de presencia.",
+          "Video/intercom desde la app cuando alguien toca el timbre.",
+          "Desbloqueo remoto desde el teléfono.",
+          "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+          "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+          "Administración local de usuarios, administradores y registros.",
+          "Respaldo por llave mecánica y alimentación externa de emergencia.",
+          "Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14."
+        ],
+        "commercial_positioning": "Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior. La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva.",
+        "emotional_angle": "comodidad, control"
+      },
+      "positioning": {
+        "summary": "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa. Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica. Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior. La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva. - Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. - Reconocimiento facial con cámara frontal y detección de presencia. - Video/intercom desde la app cuando alguien toca el timbre. - Desbloqueo remoto desde el teléfono. - Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos. - Contraseña virtual para ocultar la clave real al abrir frente a otras personas. - Administración local de usuarios, administradores y registros. - Respaldo por llave mecánica y alimentación externa de emergencia. - Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14. - El manual visible debe tomar como fuente funcional principal el PDF NF14 Smart Lock Manual Spanish Version-.pdf. - La imagen fija la identidad visual del producto para el manual. - Los videos son útiles para confirmar demostraciones reales: reconocimiento facial, huella, app, desbloqueo remoto, consulta de registros, instalación y prueba de agua. - Existe inconsistencia entre las apps mencionadas: el manual documenta Smart Life; algunos videos mencionan Tuya WiFi o TTLock. Para el manual visible, conviene usar una redacción conservadora hasta confirmar la app comercial final. - El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional. - La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
+        "differentiators": [
+          "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+          "Reconocimiento facial con cámara frontal y detección de presencia.",
+          "Video/intercom desde la app cuando alguien toca el timbre.",
+          "Desbloqueo remoto desde el teléfono.",
+          "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+          "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+          "Administración local de usuarios, administradores y registros.",
+          "Respaldo por llave mecánica y alimentación externa de emergencia.",
+          "Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14.",
+          "Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior."
+        ],
+        "commercial_promise": [
+          "Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica."
+        ]
+      },
+      "use_intent": {
+        "product_intent": "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa. Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica.",
+        "primary_problem_solved": "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+        "target_user": "hogares",
+        "target_environment": [],
+        "commercial_positioning": "Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior. La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva.",
+        "emotional_angle": "comodidad, control",
+        "practical_value": [
+          "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+          "Reconocimiento facial con cámara frontal y detección de presencia.",
+          "Video/intercom desde la app cuando alguien toca el timbre.",
+          "Desbloqueo remoto desde el teléfono.",
+          "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+          "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+          "Administración local de usuarios, administradores y registros.",
+          "Respaldo por llave mecánica y alimentación externa de emergencia.",
+          "Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14.",
+          "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa.",
+          "Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica.",
+          "La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva."
+        ]
+      },
+      "target_context": {
+        "environments": [],
+        "use_cases": [],
+        "installation_context": "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos."
+      },
+      "features": {
+        "access_methods": [
+          {
+            "name": "Reconocimiento facial",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Contraseña / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta M1 / IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App móvil",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Desbloqueo remoto",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Apertura interior",
+            "status": "Confirmado"
+          }
+        ],
+        "security_features": [],
+        "comfort_features": [
+          "Para abrir con rostro, colocarse frente al módulo de reconocimiento dentro de la distancia configurada y esperar la validación.",
+          "Para abrir con huella, colocar un dedo registrado sobre el lector ubicado en la zona superior de la manija.",
+          "Para abrir con contraseña/PIN, despertar el teclado, ingresar la clave registrada y confirmar según la indicación de la cerradura.",
+          "Para abrir con tarjeta M1, acercar la tarjeta registrada al área de lectura.",
+          "Para abrir desde app, usar la app documentada o comercialmente definida; el manual tecnico documenta Smart Life y los videos muestran también variantes Tuya/TTLock, por lo que el manual visible debe decir app móvil si la decisión comercial final no está cerrada.",
+          "El botón de timbre puede iniciar la interacción con visitante; el material tecnico confirma video/intercom desde app cuando alguien toca el timbre.",
+          "Desde el interior, usar los controles interiores de bloqueo/desbloqueo y la manija interior, sin depender de credenciales exteriores.",
+          "La llave mecánica se accede desde el compartimento circular inferior del panel/manija exterior; no debe confundirse con sensor, reset ni tapa de batería.",
+          "Si la batería está agotada, usar alimentación externa 5 V / 1 A por Micro USB; el manual indica que el desbloqueo con alimentación USB puede tardar cerca de 30 segundos.",
+          "Cambiar o recargar batería cuando aparezca aviso de baja energía; el manual indica alrededor de 50 aperturas restantes, pero se debe recomendar actuar de inmediato.",
+          "Seleccionar Cámara & bloqueo.",
+          "Elegir Bloqueo de vídeo (Wi-Fi).",
+          "Configurar WiFi.",
+          "Mostrar el código QR del teléfono a la cámara de la cerradura.",
+          "Confirmar cuando la cerradura emita el aviso.",
+          "Seleccionar Camera & lock.",
+          "Elegir Lock (Wi-Fi).",
+          "Seleccionar WiFi e ingresar contraseña.",
+          "Usar modo EZ o modo hotspot si falla la vinculación.",
+          "Agregar dispositivo.",
+          "Desbloqueo remoto.",
+          "Conversación con visitante después de tocar el timbre.",
+          "Consulta de registros.",
+          "Gestión de miembros."
+        ]
+      },
+      "access_systems": {
+        "methods": [
+          {
+            "name": "Reconocimiento facial",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Huella",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Contraseña / PIN",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Tarjeta M1 / IC",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Llave mecánica",
+            "status": "Confirmado"
+          },
+          {
+            "name": "App móvil",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Desbloqueo remoto",
+            "status": "Confirmado"
+          },
+          {
+            "name": "Apertura interior",
+            "status": "Confirmado"
+          }
+        ],
+        "source": {
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Reconocimiento facial",
+                "value": "Confirmado por manual, producto e imágenes/videos"
+              },
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual, producto y videos"
+              },
+              {
+                "label": "Contraseña / PIN",
+                "value": "Confirmado por manual y panel exterior"
+              },
+              {
+                "label": "Tarjeta M1 / IC",
+                "value": "Confirmado por manual y panel exterior"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por videos y zona de llave oculta"
+              },
+              {
+                "label": "App móvil",
+                "value": "Confirmado por manual y videos"
+              },
+              {
+                "label": "Desbloqueo remoto",
+                "value": "Confirmado en videos y apéndice de app"
+              },
+              {
+                "label": "Apertura interior",
+                "value": "Confirmada visualmente por panel interior y control de desbloqueo"
+              }
+            ]
+          ]
+        }
+      },
+      "security": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Contraseña virtual",
+              "value": "Confirmada; permite agregar números antes y después de la contraseña real"
+            },
+            {
+              "label": "Límite de contraseña virtual",
+              "value": "El sistema reconoce los primeros 16 dígitos"
+            },
+            {
+              "label": "Bloqueo por intentos",
+              "value": "Confirmado; tras el quinto intento incorrecto se bloquea 90 segundos"
+            },
+            {
+              "label": "Alarma de usuario ilegal",
+              "value": "Confirmada por voz: usuario ilegal / intrusión ilegal / propietario avisado"
+            },
+            {
+              "label": "Autenticación dual",
+              "value": "Confirmada para usuarios ordinarios"
+            },
+            {
+              "label": "Detección humana",
+              "value": "Confirmada con modos desactivado, inteligente y abierto"
+            },
+            {
+              "label": "Alerta de permanencia",
+              "value": "Confirmada como Dwell Alert, por defecto 20 segundos"
+            },
+            {
+              "label": "Consulta de registros",
+              "value": "Confirmada para timbre, usuario ilegal, batería baja y desbloqueo"
+            },
+            {
+              "label": "Llave mecánica",
+              "value": "Confirmada en video"
+            },
+            {
+              "label": "Alimentación de emergencia",
+              "value": "Confirmada en manual y video"
+            },
+            {
+              "label": "IP68",
+              "value": "Evidencia incluida en certificado y video de prueba de agua, pendiente de confirmar como claim directo NF14"
+            }
+          ]
+        ],
+        "features": []
+      },
+      "installation": {
+        "summary": "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos.",
+        "paragraphs": [
+          "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos.",
+          "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+          "El perfil visual del cuerpo de cerradura muestra una cerradura multipunto con varios bulones rectangulares, pestillo/latch y cuerpo metálico amplio. Este mecanismo debe conservarse de forma consistente en cualquier imagen generada para e-Orbit."
+        ],
+        "bullets": [
+          "Panel exterior.",
+          "Panel interior.",
+          "Cuerpo de cerradura multipunto.",
+          "Pestillo/latch.",
+          "Varios bulones o pasadores rectangulares.",
+          "Cilindro o zona mecánica de llave.",
+          "Tornillos de fijación.",
+          "Eje/manija abatible.",
+          "Cableado interno, observado en videos y material visual.",
+          "Dirección de apertura.",
+          "Bloqueo retardado.",
+          "Ajustes de bloqueo.",
+          "Ajuste de par motor / torque, según la traducción tecnico.",
+          "Alerta de permanencia o Dwell Alert."
+        ],
+        "tables": [],
+        "installation_type": "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+        "door_type": "",
+        "door_thickness": "",
+        "opening_direction": "",
+        "compatibility": []
+      },
+      "daily_use": {
+        "summary": "La sección de uso diario debe presentar e-Orbit como cerradura motorizada de acceso avanzado, separando apertura exterior, visita/intercom, apertura interior y respaldo de emergencia.",
+        "paragraphs": [
+          "La sección de uso diario debe presentar e-Orbit como cerradura motorizada de acceso avanzado, separando apertura exterior, visita/intercom, apertura interior y respaldo de emergencia.",
+          "Nota de fuente: este bloque concilia el manual español NF14, videos de reconocimiento/llave/app/timbre, y la regla visual 2026-05-28 sobre el compartimento circular inferior."
+        ],
+        "bullets": [
+          "Para abrir con rostro, colocarse frente al módulo de reconocimiento dentro de la distancia configurada y esperar la validación.",
+          "Para abrir con huella, colocar un dedo registrado sobre el lector ubicado en la zona superior de la manija.",
+          "Para abrir con contraseña/PIN, despertar el teclado, ingresar la clave registrada y confirmar según la indicación de la cerradura.",
+          "Para abrir con tarjeta M1, acercar la tarjeta registrada al área de lectura.",
+          "Para abrir desde app, usar la app documentada o comercialmente definida; el manual tecnico documenta Smart Life y los videos muestran también variantes Tuya/TTLock, por lo que el manual visible debe decir app móvil si la decisión comercial final no está cerrada.",
+          "El botón de timbre puede iniciar la interacción con visitante; el material tecnico confirma video/intercom desde app cuando alguien toca el timbre.",
+          "Desde el interior, usar los controles interiores de bloqueo/desbloqueo y la manija interior, sin depender de credenciales exteriores.",
+          "La llave mecánica se accede desde el compartimento circular inferior del panel/manija exterior; no debe confundirse con sensor, reset ni tapa de batería.",
+          "Si la batería está agotada, usar alimentación externa 5 V / 1 A por Micro USB; el manual indica que el desbloqueo con alimentación USB puede tardar cerca de 30 segundos.",
+          "Cambiar o recargar batería cuando aparezca aviso de baja energía; el manual indica alrededor de 50 aperturas restantes, pero se debe recomendar actuar de inmediato."
+        ],
+        "tables": []
+      },
+      "configuration": {
+        "summary": "Dentro de 3. Configuración del sistema, el manual documenta:",
+        "paragraphs": [
+          "Dentro de 3. Configuración del sistema, el manual documenta:",
+          "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos.",
+          "La autenticación dual aplica al desbloqueo de usuarios ordinarios: se requieren dos accesos ordinarios diferentes para abrir. Los administradores pueden abrir directamente."
+        ],
+        "bullets": [
+          "Ajuste de fecha y hora.",
+          "Configuración de instalación.",
+          "Configuración de funciones.",
+          "Búsqueda de información.",
+          "Dirección de apertura.",
+          "Bloqueo retardado.",
+          "Ajustes de bloqueo.",
+          "Ajuste de par motor / torque, según la traducción tecnico.",
+          "Alerta de permanencia o Dwell Alert.",
+          "Detección de cuerpo humano desactivada.",
+          "Detección inteligente: no activa la detección cuando la puerta está abierta.",
+          "Detección abierta: activa detección en cualquier estado.",
+          "Distancia de detección:",
+          "Cerca: 30 a 50 cm.",
+          "Media: 50 a 70 cm.",
+          "Lejos: 70 a 80 cm.",
+          "Aviso de reconocimiento: cuando está activo, el sistema puede indicar que el usuario capture un rostro frontal.",
+          "Si hay 10 activaciones consecutivas sin reconocimiento facial, la detección humana se desactiva por 5 minutos.",
+          "Configuración de red.",
+          "Volumen.",
+          "Autenticación dual.",
+          "Restauración de fábrica."
+        ],
+        "tables": [
+          [
+            {
+              "label": "Administradores",
+              "value": "IDs 000 a 009, total 10"
+            },
+            {
+              "label": "Usuarios ordinarios",
+              "value": "IDs 010 a 249, total 240"
+            },
+            {
+              "label": "Total de registros",
+              "value": "250"
+            },
+            {
+              "label": "Huellas",
+              "value": "Hasta 100"
+            },
+            {
+              "label": "Contraseñas",
+              "value": "Hasta 100"
+            },
+            {
+              "label": "Rostros",
+              "value": "Hasta 50"
+            },
+            {
+              "label": "Tarjetas",
+              "value": "Confirmadas como método M1, pero capacidad exacta no queda clara en el texto extraído"
+            },
+            {
+              "label": "Historial",
+              "value": "600 registros"
+            }
+          ],
+          [
+            {
+              "label": "Inicializar / restaurar",
+              "value": "Mantener presionado el botón de configuración durante 5 segundos; el sistema pregunta \"NO (*) SÍ (#)\"; presionar # para confirmar"
+            },
+            {
+              "label": "Estado inicial",
+              "value": "Cualquier rostro, huella, contraseña o tarjeta puede desbloquear mientras no haya usuarios configurados"
+            },
+            {
+              "label": "Acceso inicial al sistema",
+              "value": "Activar panel táctil y presionar * + #"
+            },
+            {
+              "label": "Primera contraseña de administrador",
+              "value": "Ingresar una contraseña de 6 a 8 dígitos"
+            },
+            {
+              "label": "Agregar usuario",
+              "value": "Entrar a 1. Añadir usuario y elegir administrador o usuario"
+            },
+            {
+              "label": "Registrar rostro",
+              "value": "Colocar el rostro paralelo a la cámara, a 30-80 cm, y seguir las indicaciones"
+            },
+            {
+              "label": "Registrar huella",
+              "value": "Colocar el dedo en el sensor y repetir cuando el sistema lo indique"
+            },
+            {
+              "label": "Registrar contraseña",
+              "value": "Ingresar contraseña de 6 a 8 dígitos y confirmar con #"
+            },
+            {
+              "label": "Registrar tarjeta",
+              "value": "Acercar tarjeta M1/IC al área de lectura"
+            },
+            {
+              "label": "Eliminar usuario",
+              "value": "Eliminar por verificación directa o por ID"
+            },
+            {
+              "label": "Consultar versión",
+              "value": "Ingresar 999 #"
+            },
+            {
+              "label": "Consultar usuarios",
+              "value": "Menú de búsqueda de información, recuento de usuarios"
+            },
+            {
+              "label": "Leer registros",
+              "value": "Consulta por orden o por fecha"
+            }
+          ]
+        ]
+      },
+      "energy": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [
+          "El sistema trabaja entre 7,0 V y 8,4 V.",
+          "Los videos mencionan batería de litio de 7,2 V.",
+          "El manual indica alarma de baja batería cuando el sistema está por debajo de 25%.",
+          "Después del aviso de baja batería, el equipo aún puede abrir aproximadamente 50 veces.",
+          "El puerto de emergencia es 5 V / 1 A Micro USB.",
+          "El manual indica que, al usar alimentación USB externa, el desbloqueo puede tardar aproximadamente 30 segundos.",
+          "La batería debe cargarse o reemplazarse cuando aparezca el aviso de baja energía."
+        ],
+        "tables": [],
+        "battery_type": "Sistema 7,0 V a 8,4 V",
+        "emergency_power": ""
+      },
+      "app_connectivity": {
+        "summary": "El manual documenta Smart Life como app principal: buscar Smart Life en App Store, descargar e iniciar sesión.",
+        "paragraphs": [
+          "El manual documenta Smart Life como app principal: buscar Smart Life en App Store, descargar e iniciar sesión.",
+          "El apéndice describe dos flujos:",
+          "Funciones de app documentadas o demostradas:",
+          "Nota de conciliación: videos del paquete muestran también referencias a Tuya WiFi y TTLock. Antes de construir el manual visible, se debe confirmar cuál app se entregará comercialmente para e-Orbit."
+        ],
+        "bullets": [
+          "Seleccionar Cámara & bloqueo.",
+          "Elegir Bloqueo de vídeo (Wi-Fi).",
+          "Configurar WiFi.",
+          "Mostrar el código QR del teléfono a la cámara de la cerradura.",
+          "Confirmar cuando la cerradura emita el aviso.",
+          "Seleccionar Camera & lock.",
+          "Elegir Lock (Wi-Fi).",
+          "Seleccionar WiFi e ingresar contraseña.",
+          "Usar modo EZ o modo hotspot si falla la vinculación.",
+          "Agregar dispositivo.",
+          "Desbloqueo remoto.",
+          "Conversación con visitante después de tocar el timbre.",
+          "Consulta de registros.",
+          "Gestión de miembros.",
+          "Vinculación de usuario local con miembro de app.",
+          "Contraseña temporal de un solo uso.",
+          "Contraseña temporal ilimitada con periodo efectivo."
+        ],
+        "tables": [],
+        "app_status": "Smart Life",
+        "pending_app_decision": true
+      },
+      "technical_specs": {
+        "summary": "",
+        "paragraphs": [],
+        "bullets": [],
+        "tables": [
+          [
+            {
+              "label": "Modo de comparación",
+              "value": "1:N"
+            },
+            {
+              "label": "Tipo de sensor de huella",
+              "value": "Cabezal capacitivo de autoaprendizaje"
+            },
+            {
+              "label": "Resolución de huella",
+              "value": "508 dpi"
+            },
+            {
+              "label": "Tasa de rechazo",
+              "value": "< 0,1%"
+            },
+            {
+              "label": "Tasa de falsa aceptación",
+              "value": "< 0,001%"
+            },
+            {
+              "label": "Rango de captura de huella",
+              "value": "±180°"
+            },
+            {
+              "label": "Tipo de tarjeta",
+              "value": "M1"
+            },
+            {
+              "label": "Capacidad total",
+              "value": "250 registros"
+            },
+            {
+              "label": "Capacidad por tipo",
+              "value": "Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua"
+            },
+            {
+              "label": "Registros de operación",
+              "value": "600"
+            },
+            {
+              "label": "Duración de batería",
+              "value": "Mayor o igual a 3000 aperturas"
+            },
+            {
+              "label": "Tensión de trabajo",
+              "value": "7,0 V a 8,4 V"
+            },
+            {
+              "label": "Alarma de baja tensión",
+              "value": "6,8 V ± 0,2 V"
+            },
+            {
+              "label": "Consumo dinámico",
+              "value": "≤ 1 A, sin acción motora ni reproducción de sonido"
+            },
+            {
+              "label": "Consumo estático",
+              "value": "≤ 200 uA"
+            },
+            {
+              "label": "Tiempo de verificación",
+              "value": "≤ 3 segundos"
+            },
+            {
+              "label": "Teclado",
+              "value": "Detección táctil"
+            },
+            {
+              "label": "Pantalla",
+              "value": "OLED 0,96 pulgadas"
+            },
+            {
+              "label": "Alimentación externa",
+              "value": "5 V / 1 A Micro USB"
+            },
+            {
+              "label": "Capacidad antiestática",
+              "value": "≥ 8 kV contacto / ≥ 15 kV sin contacto"
+            },
+            {
+              "label": "Temperatura de almacenamiento",
+              "value": "-25 °C a 80 °C"
+            },
+            {
+              "label": "Temperatura de funcionamiento",
+              "value": "-25 °C a 70 °C"
+            },
+            {
+              "label": "Humedad ambiente",
+              "value": "15% RH a 93% RH"
+            }
+          ]
+        ],
+        "highlights": [
+          {
+            "label": "Modo de comparación",
+            "value": "1:N"
+          },
+          {
+            "label": "Tipo de sensor de huella",
+            "value": "Cabezal capacitivo de autoaprendizaje"
+          },
+          {
+            "label": "Resolución de huella",
+            "value": "508 dpi"
+          },
+          {
+            "label": "Tasa de rechazo",
+            "value": "< 0,1%"
+          },
+          {
+            "label": "Tasa de falsa aceptación",
+            "value": "< 0,001%"
+          },
+          {
+            "label": "Rango de captura de huella",
+            "value": "±180°"
+          },
+          {
+            "label": "Tipo de tarjeta",
+            "value": "M1"
+          },
+          {
+            "label": "Capacidad total",
+            "value": "250 registros"
+          },
+          {
+            "label": "Capacidad por tipo",
+            "value": "Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua"
+          },
+          {
+            "label": "Registros de operación",
+            "value": "600"
+          },
+          {
+            "label": "Duración de batería",
+            "value": "Mayor o igual a 3000 aperturas"
+          },
+          {
+            "label": "Tensión de trabajo",
+            "value": "7,0 V a 8,4 V"
+          },
+          {
+            "label": "Alarma de baja tensión",
+            "value": "6,8 V ± 0,2 V"
+          },
+          {
+            "label": "Consumo dinámico",
+            "value": "≤ 1 A, sin acción motora ni reproducción de sonido"
+          },
+          {
+            "label": "Consumo estático",
+            "value": "≤ 200 uA"
+          },
+          {
+            "label": "Tiempo de verificación",
+            "value": "≤ 3 segundos"
+          },
+          {
+            "label": "Teclado",
+            "value": "Detección táctil"
+          },
+          {
+            "label": "Pantalla",
+            "value": "OLED 0,96 pulgadas"
+          },
+          {
+            "label": "Alimentación externa",
+            "value": "5 V / 1 A Micro USB"
+          },
+          {
+            "label": "Capacidad antiestática",
+            "value": "≥ 8 kV contacto / ≥ 15 kV sin contacto"
+          }
+        ],
+        "materials": [],
+        "finish": "",
+        "capacity_notes": [
+          "El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos.",
+          "## Identificación | Campo | Información consolidada | |---|---| | Producto | Cerradura inteligente | | Modelo tecnico | NF14 | | Nombre de proyecto | e-Orbit | | Tipo de operación | Motorizada / automática, con manija abatible | | Imagen principal | | | Alimentación principal | Sistema 7,0 V a 8,4 V | | Batería observada en video | Batería de litio 7,2 V | | Alarma de baja tensión | 6,8 V ± 0,2 V / menor a 25% de batería | | Alimentación de emergencia | 5 V / 1 A Micro USB | | App documentada en manual | Smart Life | | Apps observadas en videos | Smart Life, Tuya / WiFi, TTLock | | Tipo de tarjeta | M1 | | Pantalla | OLED de 0,96 pulgadas | | Capacidad total indicada | 250 registros | | Historial de operaciones | 600 registros | | Certificación incluida | Reporte IEC 60529 con grado IP68, asociado a modelo HP-1 y serie HP | ## Criterio de conciliación - El manual visible debe tomar como fuente funcional principal el PDF NF14 Smart Lock Manual Spanish Version-.pdf.",
+          "- El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10.",
+          "- Administración local de usuarios, administradores y registros.",
+          "- Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14.",
+          "## Especificaciones técnicas documentadas | Campo | Información tecnico | |---|---| | Modo de comparación | 1:N | | Tipo de sensor de huella | Cabezal capacitivo de autoaprendizaje | | Resolución de huella | 508 dpi | | Tasa de rechazo | < 0,1% | | Tasa de falsa aceptación | < 0,001% | | Rango de captura de huella | ±180° | | Tipo de tarjeta | M1 | | Capacidad total | 250 registros | | Capacidad por tipo | Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua | | Registros de operación | 600 | | Duración de batería | Mayor o igual a 3000 aperturas | | Tensión de trabajo | 7,0 V a 8,4 V | | Alarma de baja tensión | 6,8 V ± 0,2 V | | Consumo dinámico | ≤ 1 A, sin acción motora ni reproducción de sonido | | Consumo estático | ≤ 200 uA | | Tiempo de verificación | ≤ 3 segundos | | Teclado | Detección táctil | | Pantalla | OLED 0,96 pulgadas | | Alimentación externa | 5 V / 1 A Micro USB | | Capacidad antiestática | ≥ 8 kV contacto / ≥ 15 kV sin contacto | | Temperatura de almacenamiento | -25 °C a 80 °C | | Temperatura de funcionamiento | -25 °C a 70 °C | | Humedad ambiente | 15% RH a 93% RH | ## Energía - El sistema trabaja entre 7,0 V y 8,4 V.",
+          "## Capacidades de usuarios | Perfil / tipo | Capacidad documentada | |---|---| | Administradores | IDs 000 a 009, total 10 | | Usuarios ordinarios | IDs 010 a 249, total 240 | | Total de registros | 250 | | Huellas | Hasta 100 | | Contraseñas | Hasta 100 | | Rostros | Hasta 50 | | Tarjetas | Confirmadas como método M1, pero capacidad exacta no queda clara en el texto extraído | | Historial | 600 registros | ## Configuración local | Acción | Procedimiento tecnico consolidado | |---|---| | Inicializar / restaurar | Mantener presionado el botón de configuración durante 5 segundos; el sistema pregunta \"NO (*) SÍ (#)\"; presionar # para confirmar | | Estado inicial | Cualquier rostro, huella, contraseña o tarjeta puede desbloquear mientras no haya usuarios configurados | | Acceso inicial al sistema | Activar panel táctil y presionar * + # | | Primera contraseña de administrador | Ingresar una contraseña de 6 a 8 dígitos | | Agregar usuario | Entrar a 1.",
+          "Añadir usuario y elegir administrador o usuario | | Registrar rostro | Colocar el rostro paralelo a la cámara, a 30-80 cm, y seguir las indicaciones | | Registrar huella | Colocar el dedo en el sensor y repetir cuando el sistema lo indique | | Registrar contraseña | Ingresar contraseña de 6 a 8 dígitos y confirmar con # | | Registrar tarjeta | Acercar tarjeta M1/IC al área de lectura | | Eliminar usuario | Eliminar por verificación directa o por ID | | Consultar versión | Ingresar 999 # | | Consultar usuarios | Menú de búsqueda de información, recuento de usuarios | | Leer registros | Consulta por orden o por fecha | ## Ajustes del sistema Dentro de 3.",
+          "La autenticación dual aplica al desbloqueo de usuarios ordinarios: se requieren dos accesos ordinarios diferentes para abrir.",
+          "Los administradores pueden abrir directamente.",
+          "## Seguridad | Función | Estado | |---|---| | Contraseña virtual | Confirmada; permite agregar números antes y después de la contraseña real | | Límite de contraseña virtual | El sistema reconoce los primeros 16 dígitos | | Bloqueo por intentos | Confirmado; tras el quinto intento incorrecto se bloquea 90 segundos | | Alarma de usuario ilegal | Confirmada por voz: usuario ilegal / intrusión ilegal / propietario avisado | | Autenticación dual | Confirmada para usuarios ordinarios | | Detección humana | Confirmada con modos desactivado, inteligente y abierto | | Alerta de permanencia | Confirmada como Dwell Alert, por defecto 20 segundos | | Consulta de registros | Confirmada para timbre, usuario ilegal, batería baja y desbloqueo | | Llave mecánica | Confirmada en video | | Alimentación de emergencia | Confirmada en manual y video | | IP68 | Evidencia incluida en certificado y video de prueba de agua, pendiente de confirmar como claim directo NF14 | ## Instalación El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran: 1.",
+          "## Certificación IP68 El paquete incluye un reporte IEC 60529: - Reporte: CTB24122602502Q01.",
+          "- Grado IP: IP68.",
+          "- Ensayo de polvo: IP6X, sin ingreso de polvo.",
+          "Nota de uso editorial: puede mencionarse como evidencia interna de resistencia, pero no conviene afirmar \"NF14 certificado IP68\" en el manual visible sin confirmar equivalencia comercial entre NF14/e-Orbit y la serie HP del reporte.",
+          "- Certificado IP: e-Orbit/NF14/Relevant documents/智能锁NF14（英文版本）-IEC-IP68证书.pdf."
+        ]
+      },
+      "visual_guidelines": {
+        "summary": "- Cámara / módulo superior de reconocimiento facial. - Sensor o luz auxiliar central junto a las cámaras. - Pantalla OLED de estado. - Teclado táctil numérico. - Área de lectura de tarjeta. - Botón de timbre. - Indicador de bloqueo. - Manija abatible exterior. - Lector de huella en la zona superior de la manija. - Compartimento circular inferior en la manija exterior: cubierta de acceso para llave mecánica de emergencia (secret key hole / key unlock en video tecnico). - Puerto de alimentación de emergencia Micro USB en la misma zona inferior de servicio o inmediatamente contiguo a ese compartimento, según el video tecnico. - Pantalla interior o superficie de visualización. - Tres botones físicos bajo la pantalla. - Manija interior. - Perilla/control interior superior. - Perilla/control interior inferior con iconos de bloqueo y desbloqueo. - Zona inferior de llave/puerto visible en algunas imágenes. Nota editorial: el manual tecnico confirma un \"botón de configuración\" para inicializar/restaurar, pero las imágenes tecnico disponibles no muestran una tapa ni un botón oculto independiente. Visualmente, el único conjunto de controles compatible son los tres botones físicos bajo la pantalla del panel interior. No representar el botón como una pieza separada dentro de un compartimento si no aparece en material tecnico adicional. - Panel exterior. - Panel interior. - Cuerpo de cerradura multipunto. - Pestillo/latch. - Varios bulones o pasadores rectangulares. - Cilindro o zona mecánica de llave. - Tornillos de fijación. - Eje/manija abatible. - Cableado interno, observado en videos y material visual. Para mantener consistencia en Comfy: 1. como referencia principal de identidad. 2. Una imagen renderizada frontal/trasera del paquete 6068, preferiblemente 0, 0 o, según color y encuadre requerido. 3. Lock para escenas de instalación y mecanismo multipunto. El enriquecimiento visual debe respetar el verde #034526, como en los demás manuales BESLOCK.",
+        "maintain": [
+          "Cámara / módulo superior de reconocimiento facial.",
+          "Sensor o luz auxiliar central junto a las cámaras.",
+          "Pantalla OLED de estado.",
+          "Teclado táctil numérico.",
+          "Área de lectura de tarjeta.",
+          "Botón de timbre.",
+          "Indicador de bloqueo.",
+          "Manija abatible exterior.",
+          "Lector de huella en la zona superior de la manija.",
+          "Compartimento circular inferior en la manija exterior: cubierta de acceso para llave mecánica de emergencia (secret key hole / key unlock en video tecnico).",
+          "Puerto de alimentación de emergencia Micro USB en la misma zona inferior de servicio o inmediatamente contiguo a ese compartimento, según el video tecnico.",
+          "Pantalla interior o superficie de visualización.",
+          "Tres botones físicos bajo la pantalla.",
+          "Manija interior.",
+          "Perilla/control interior superior.",
+          "Perilla/control interior inferior con iconos de bloqueo y desbloqueo.",
+          "Zona inferior de llave/puerto visible en algunas imágenes.",
+          "Panel exterior."
+        ],
+        "avoid": [],
+        "main_visual_reference": "",
+        "rules": [
+          "Cámara / módulo superior de reconocimiento facial.",
+          "Sensor o luz auxiliar central junto a las cámaras.",
+          "Pantalla OLED de estado.",
+          "Teclado táctil numérico.",
+          "Área de lectura de tarjeta.",
+          "Botón de timbre.",
+          "Indicador de bloqueo.",
+          "Manija abatible exterior.",
+          "Lector de huella en la zona superior de la manija.",
+          "Compartimento circular inferior en la manija exterior: cubierta de acceso para llave mecánica de emergencia (secret key hole / key unlock en video tecnico).",
+          "Puerto de alimentación de emergencia Micro USB en la misma zona inferior de servicio o inmediatamente contiguo a ese compartimento, según el video tecnico.",
+          "Pantalla interior o superficie de visualización.",
+          "Tres botones físicos bajo la pantalla.",
+          "Manija interior.",
+          "Perilla/control interior superior.",
+          "Perilla/control interior inferior con iconos de bloqueo y desbloqueo.",
+          "Zona inferior de llave/puerto visible en algunas imágenes.",
+          "Panel exterior.",
+          "Panel interior.",
+          "Cuerpo de cerradura multipunto.",
+          "Pestillo/latch.",
+          "Varios bulones o pasadores rectangulares.",
+          "Cilindro o zona mecánica de llave.",
+          "Tornillos de fijación.",
+          "Eje/manija abatible.",
+          "Cableado interno, observado en videos y material visual."
+        ]
+      },
+      "editorial_guidelines": {
+        "summary": "No incluir sin confirmación adicional:",
+        "paragraphs": [
+          "No incluir sin confirmación adicional:"
+        ],
+        "bullets": [
+          "Compatibilidad simultánea con Smart Life, Tuya y TTLock como si fueran equivalentes.",
+          "Claim directo \"NF14 certificado IP68\" sin validar la relación con el reporte HP-1.",
+          "Capacidad exacta de tarjetas, porque el texto extraído confirma tarjeta M1 pero deja incompleta la distribución de capacidad.",
+          "Instalación completa si no se valida con material de montaje suficiente.",
+          "Claims de reconocimiento facial con mascarilla como garantía universal; puede tratarse como función demostrada en video, no como promesa técnica absoluta."
+        ],
+        "tables": [],
+        "recommended_language": [],
+        "avoid_terms": [],
+        "priority_callouts": []
+      },
+      "warnings": {
+        "items": [
+          "No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
+          "- La llave mecánica se accede desde el compartimento circular inferior del panel/manija exterior; no debe confundirse con sensor, reset ni tapa de batería.",
+          "- En la imagen del mecanismo, evitar texto, iconos redundantes y pictogramas."
+        ]
+      },
+      "pending_validation": [
+        "App comercial final: Smart Life, Tuya, TTLock o variante regional.",
+        "Si e-Orbit NF14 debe publicar IP68 como especificación principal.",
+        "Capacidad exacta de tarjetas dentro de los 250 registros.",
+        "Tipo exacto de batería suministrada y método de carga/reemplazo.",
+        "Ubicación física final del puerto Micro USB dentro de la zona inferior de servicio.",
+        "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video tecnico.",
+        "Espesor de puerta compatible.",
+        "Dimensiones físicas de paneles y cuerpo de cerradura.",
+        "Flujo de instalación completo y orden exacto de montaje.",
+        "Si la ficha xls contiene datos comerciales adicionales no extraídos localmente.",
+        "- Los videos son útiles para confirmar demostraciones reales: reconocimiento facial, huella, app, desbloqueo remoto, consulta de registros, instalación y prueba de agua.",
+        "Para el manual visible, conviene usar una redacción conservadora hasta confirmar la app comercial final.",
+        "No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
+        "- La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
+        "- Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14.",
+        "- Para abrir con rostro, colocarse frente al módulo de reconocimiento dentro de la distancia configurada y esperar la validación.",
+        "- Para abrir con contraseña/PIN, despertar el teclado, ingresar la clave registrada y confirmar según la indicación de la cerradura.",
+        "Nota editorial: el manual tecnico confirma un \"botón de configuración\" para inicializar/restaurar, pero las imágenes tecnico disponibles no muestran una tapa ni un botón oculto independiente.",
+        "## Capacidades de usuarios | Perfil / tipo | Capacidad documentada | |---|---| | Administradores | IDs 000 a 009, total 10 | | Usuarios ordinarios | IDs 010 a 249, total 240 | | Total de registros | 250 | | Huellas | Hasta 100 | | Contraseñas | Hasta 100 | | Rostros | Hasta 50 | | Tarjetas | Confirmadas como método M1, pero capacidad exacta no queda clara en el texto extraído | | Historial | 600 registros | ## Configuración local | Acción | Procedimiento tecnico consolidado | |---|---| | Inicializar / restaurar | Mantener presionado el botón de configuración durante 5 segundos; el sistema pregunta \"NO (*) SÍ (#)\"; presionar # para confirmar | | Estado inicial | Cualquier rostro, huella, contraseña o tarjeta puede desbloquear mientras no haya usuarios configurados | | Acceso inicial al sistema | Activar panel táctil y presionar * + # | | Primera contraseña de administrador | Ingresar una contraseña de 6 a 8 dígitos | | Agregar usuario | Entrar a 1.",
+        "Añadir usuario y elegir administrador o usuario | | Registrar rostro | Colocar el rostro paralelo a la cámara, a 30-80 cm, y seguir las indicaciones | | Registrar huella | Colocar el dedo en el sensor y repetir cuando el sistema lo indique | | Registrar contraseña | Ingresar contraseña de 6 a 8 dígitos y confirmar con # | | Registrar tarjeta | Acercar tarjeta M1/IC al área de lectura | | Eliminar usuario | Eliminar por verificación directa o por ID | | Consultar versión | Ingresar 999 # | | Consultar usuarios | Menú de búsqueda de información, recuento de usuarios | | Leer registros | Consulta por orden o por fecha | ## Ajustes del sistema Dentro de 3.",
+        "- Confirmar cuando la cerradura emita el aviso.",
+        "Antes de construir el manual visible, se debe confirmar cuál app se entregará comercialmente para e-Orbit.",
+        "## Seguridad | Función | Estado | |---|---| | Contraseña virtual | Confirmada; permite agregar números antes y después de la contraseña real | | Límite de contraseña virtual | El sistema reconoce los primeros 16 dígitos | | Bloqueo por intentos | Confirmado; tras el quinto intento incorrecto se bloquea 90 segundos | | Alarma de usuario ilegal | Confirmada por voz: usuario ilegal / intrusión ilegal / propietario avisado | | Autenticación dual | Confirmada para usuarios ordinarios | | Detección humana | Confirmada con modos desactivado, inteligente y abierto | | Alerta de permanencia | Confirmada como Dwell Alert, por defecto 20 segundos | | Consulta de registros | Confirmada para timbre, usuario ilegal, batería baja y desbloqueo | | Llave mecánica | Confirmada en video | | Alimentación de emergencia | Confirmada en manual y video | | IP68 | Evidencia incluida en certificado y video de prueba de agua, pendiente de confirmar como claim directo NF14 | ## Instalación El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran: 1.",
+        "Nota de uso editorial: puede mencionarse como evidencia interna de resistencia, pero no conviene afirmar \"NF14 certificado IP68\" en el manual visible sin confirmar equivalencia comercial entre NF14/e-Orbit y la serie HP del reporte.",
+        "- Claim directo \"NF14 certificado IP68\" sin validar la relación con el reporte HP-1.",
+        "## Puntos pendientes por confirmar - App comercial final: Smart Life, Tuya, TTLock o variante regional.",
+        "- e-Orbit/NF14/Relevant documents/NF14 (E-Orbit) Smart Lock.xls: ficha presente, pendiente de revisión manual por extracción local incompleta."
+      ],
+      "seo": {
+        "keywords": [
+          "e-Orbit",
+          "BESLOCK e-Orbit",
+          "cerradura inteligente",
+          "Cerradura inteligente",
+          "Reconocimiento facial",
+          "Huella",
+          "Contraseña / PIN",
+          "Tarjeta M1 / IC",
+          "Llave mecánica",
+          "App móvil",
+          "Desbloqueo remoto",
+          "Apertura interior"
+        ],
+        "use_cases": [],
+        "target_environment": [],
+        "positioning_terms": [
+          "cerradura inteligente",
+          "exterior",
+          "huella",
+          "PIN",
+          "tarjeta",
+          "app",
+          "seguridad"
+        ]
+      },
+      "source_sections": {
+        "perfil-de-producto-e-orbit-nf14": {
+          "title": "Perfil de producto: e-Orbit NF14",
+          "level": 1,
+          "order": 1,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "resumen-ejecutivo": {
+          "title": "Resumen ejecutivo",
+          "level": 2,
+          "order": 2,
+          "summary": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. El material tecnico la presenta como una cerradura de gama alta para accesos donde se requiere apertura sin llave, control remoto desde app, video/intercom y métodos de respaldo.",
+          "paragraphs": [
+            "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. El material tecnico la presenta como una cerradura de gama alta para accesos donde se requiere apertura sin llave, control remoto desde app, video/intercom y métodos de respaldo.",
+            "La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos.",
+            "Este perfil se construye únicamente con material tecnico de la carpeta e-Orbit. La imagen principal del producto es."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "identificacion": {
+          "title": "Identificación",
+          "level": 2,
+          "order": 3,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Producto",
+                "value": "Cerradura inteligente"
+              },
+              {
+                "label": "Modelo tecnico",
+                "value": "NF14"
+              },
+              {
+                "label": "Nombre de proyecto",
+                "value": "e-Orbit"
+              },
+              {
+                "label": "Tipo de operación",
+                "value": "Motorizada / automática, con manija abatible"
+              },
+              {
+                "label": "Imagen principal",
+                "value": ""
+              },
+              {
+                "label": "Alimentación principal",
+                "value": "Sistema 7,0 V a 8,4 V"
+              },
+              {
+                "label": "Batería observada en video",
+                "value": "Batería de litio 7,2 V"
+              },
+              {
+                "label": "Alarma de baja tensión",
+                "value": "6,8 V ± 0,2 V / menor a 25% de batería"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "5 V / 1 A Micro USB"
+              },
+              {
+                "label": "App documentada en manual",
+                "value": "Smart Life"
+              },
+              {
+                "label": "Apps observadas en videos",
+                "value": "Smart Life, Tuya / WiFi, TTLock"
+              },
+              {
+                "label": "Tipo de tarjeta",
+                "value": "M1"
+              },
+              {
+                "label": "Pantalla",
+                "value": "OLED de 0,96 pulgadas"
+              },
+              {
+                "label": "Capacidad total indicada",
+                "value": "250 registros"
+              },
+              {
+                "label": "Historial de operaciones",
+                "value": "600 registros"
+              },
+              {
+                "label": "Certificación incluida",
+                "value": "Reporte IEC 60529 con grado IP68, asociado a modelo HP-1 y serie HP"
+              }
+            ]
+          ]
+        },
+        "criterio-de-conciliacion": {
+          "title": "Criterio de conciliación",
+          "level": 2,
+          "order": 4,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El manual visible debe tomar como fuente funcional principal el PDF NF14 Smart Lock Manual Spanish Version-.pdf.",
+            "La imagen fija la identidad visual del producto para el manual.",
+            "Los videos son útiles para confirmar demostraciones reales: reconocimiento facial, huella, app, desbloqueo remoto, consulta de registros, instalación y prueba de agua.",
+            "Existe inconsistencia entre las apps mencionadas: el manual documenta Smart Life; algunos videos mencionan Tuya WiFi o TTLock. Para el manual visible, conviene usar una redacción conservadora hasta confirmar la app comercial final.",
+            "El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
+            "La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales."
+          ],
+          "tables": []
+        },
+        "propuesta-de-valor": {
+          "title": "Propuesta de valor",
+          "level": 2,
+          "order": 5,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+            "Reconocimiento facial con cámara frontal y detección de presencia.",
+            "Video/intercom desde la app cuando alguien toca el timbre.",
+            "Desbloqueo remoto desde el teléfono.",
+            "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+            "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+            "Administración local de usuarios, administradores y registros.",
+            "Respaldo por llave mecánica y alimentación externa de emergencia.",
+            "Evidencia tecnico de resistencia al agua/IP68, pendiente de conciliación exacta con el modelo comercial NF14."
+          ],
+          "tables": []
+        },
+        "intencion-de-uso": {
+          "title": "Intención de uso",
+          "level": 2,
+          "order": 6,
+          "summary": "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa. Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica.",
+          "paragraphs": [
+            "e-Orbit se posiciona como una cerradura avanzada para hogares que necesitan controlar y monitorear el acceso con mayor comodidad, incluso cuando el usuario no está en casa. Su reconocimiento facial, timbre con video/intercom, apertura desde app, registros y detección de presencia permiten atender visitas, revisar eventos y gestionar accesos con una experiencia más tecnológica.",
+            "Es especialmente coherente para viviendas donde importa no perder entregas o visitas y donde se valora saber qué ocurre en el exterior. La intención debe mantener cautela sobre la app comercial final y sobre certificaciones de resistencia, usando redacción conservadora hasta cerrar la variante BESLOCK definitiva."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "metodos-de-apertura": {
+          "title": "Métodos de apertura",
+          "level": 2,
+          "order": 7,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Reconocimiento facial",
+                "value": "Confirmado por manual, producto e imágenes/videos"
+              },
+              {
+                "label": "Huella",
+                "value": "Confirmado por manual, producto y videos"
+              },
+              {
+                "label": "Contraseña / PIN",
+                "value": "Confirmado por manual y panel exterior"
+              },
+              {
+                "label": "Tarjeta M1 / IC",
+                "value": "Confirmado por manual y panel exterior"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmado por videos y zona de llave oculta"
+              },
+              {
+                "label": "App móvil",
+                "value": "Confirmado por manual y videos"
+              },
+              {
+                "label": "Desbloqueo remoto",
+                "value": "Confirmado en videos y apéndice de app"
+              },
+              {
+                "label": "Apertura interior",
+                "value": "Confirmada visualmente por panel interior y control de desbloqueo"
+              }
+            ]
+          ]
+        },
+        "uso-diario": {
+          "title": "Uso diario",
+          "level": 2,
+          "order": 8,
+          "summary": "La sección de uso diario debe presentar e-Orbit como cerradura motorizada de acceso avanzado, separando apertura exterior, visita/intercom, apertura interior y respaldo de emergencia.",
+          "paragraphs": [
+            "La sección de uso diario debe presentar e-Orbit como cerradura motorizada de acceso avanzado, separando apertura exterior, visita/intercom, apertura interior y respaldo de emergencia.",
+            "Nota de fuente: este bloque concilia el manual español NF14, videos de reconocimiento/llave/app/timbre, y la regla visual 2026-05-28 sobre el compartimento circular inferior."
+          ],
+          "bullets": [
+            "Para abrir con rostro, colocarse frente al módulo de reconocimiento dentro de la distancia configurada y esperar la validación.",
+            "Para abrir con huella, colocar un dedo registrado sobre el lector ubicado en la zona superior de la manija.",
+            "Para abrir con contraseña/PIN, despertar el teclado, ingresar la clave registrada y confirmar según la indicación de la cerradura.",
+            "Para abrir con tarjeta M1, acercar la tarjeta registrada al área de lectura.",
+            "Para abrir desde app, usar la app documentada o comercialmente definida; el manual tecnico documenta Smart Life y los videos muestran también variantes Tuya/TTLock, por lo que el manual visible debe decir app móvil si la decisión comercial final no está cerrada.",
+            "El botón de timbre puede iniciar la interacción con visitante; el material tecnico confirma video/intercom desde app cuando alguien toca el timbre.",
+            "Desde el interior, usar los controles interiores de bloqueo/desbloqueo y la manija interior, sin depender de credenciales exteriores.",
+            "La llave mecánica se accede desde el compartimento circular inferior del panel/manija exterior; no debe confundirse con sensor, reset ni tapa de batería.",
+            "Si la batería está agotada, usar alimentación externa 5 V / 1 A por Micro USB; el manual indica que el desbloqueo con alimentación USB puede tardar cerca de 30 segundos.",
+            "Cambiar o recargar batería cuando aparezca aviso de baja energía; el manual indica alrededor de 50 aperturas restantes, pero se debe recomendar actuar de inmediato."
+          ],
+          "tables": []
+        },
+        "componentes-visibles": {
+          "title": "Componentes visibles",
+          "level": 2,
+          "order": 9,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        },
+        "panel-exterior": {
+          "title": "Panel exterior",
+          "level": 3,
+          "order": 10,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Cámara / módulo superior de reconocimiento facial.",
+            "Sensor o luz auxiliar central junto a las cámaras.",
+            "Pantalla OLED de estado.",
+            "Teclado táctil numérico.",
+            "Área de lectura de tarjeta.",
+            "Botón de timbre.",
+            "Indicador de bloqueo.",
+            "Manija abatible exterior.",
+            "Lector de huella en la zona superior de la manija.",
+            "Compartimento circular inferior en la manija exterior: cubierta de acceso para llave mecánica de emergencia (secret key hole / key unlock en video tecnico).",
+            "Puerto de alimentación de emergencia Micro USB en la misma zona inferior de servicio o inmediatamente contiguo a ese compartimento, según el video tecnico."
+          ],
+          "tables": []
+        },
+        "panel-interior": {
+          "title": "Panel interior",
+          "level": 3,
+          "order": 11,
+          "summary": "Nota editorial: el manual tecnico confirma un \"botón de configuración\" para inicializar/restaurar, pero las imágenes tecnico disponibles no muestran una tapa ni un botón oculto independiente. Visualmente, el único conjunto de controles compatible son los tres botones físicos bajo la pantalla del panel interior. No representar el botón como una pieza separada dentro de un compartimento si no aparece en material tecnico adicional.",
+          "paragraphs": [
+            "Nota editorial: el manual tecnico confirma un \"botón de configuración\" para inicializar/restaurar, pero las imágenes tecnico disponibles no muestran una tapa ni un botón oculto independiente. Visualmente, el único conjunto de controles compatible son los tres botones físicos bajo la pantalla del panel interior. No representar el botón como una pieza separada dentro de un compartimento si no aparece en material tecnico adicional."
+          ],
+          "bullets": [
+            "Pantalla interior o superficie de visualización.",
+            "Tres botones físicos bajo la pantalla.",
+            "Manija interior.",
+            "Perilla/control interior superior.",
+            "Perilla/control interior inferior con iconos de bloqueo y desbloqueo.",
+            "Zona inferior de llave/puerto visible en algunas imágenes."
+          ],
+          "tables": []
+        },
+        "componentes-de-instalacion": {
+          "title": "Componentes de instalación",
+          "level": 3,
+          "order": 12,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Panel exterior.",
+            "Panel interior.",
+            "Cuerpo de cerradura multipunto.",
+            "Pestillo/latch.",
+            "Varios bulones o pasadores rectangulares.",
+            "Cilindro o zona mecánica de llave.",
+            "Tornillos de fijación.",
+            "Eje/manija abatible.",
+            "Cableado interno, observado en videos y material visual."
+          ],
+          "tables": []
+        },
+        "especificaciones-tecnicas-documentadas": {
+          "title": "Especificaciones técnicas documentadas",
+          "level": 2,
+          "order": 13,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Modo de comparación",
+                "value": "1:N"
+              },
+              {
+                "label": "Tipo de sensor de huella",
+                "value": "Cabezal capacitivo de autoaprendizaje"
+              },
+              {
+                "label": "Resolución de huella",
+                "value": "508 dpi"
+              },
+              {
+                "label": "Tasa de rechazo",
+                "value": "< 0,1%"
+              },
+              {
+                "label": "Tasa de falsa aceptación",
+                "value": "< 0,001%"
+              },
+              {
+                "label": "Rango de captura de huella",
+                "value": "±180°"
+              },
+              {
+                "label": "Tipo de tarjeta",
+                "value": "M1"
+              },
+              {
+                "label": "Capacidad total",
+                "value": "250 registros"
+              },
+              {
+                "label": "Capacidad por tipo",
+                "value": "Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua"
+              },
+              {
+                "label": "Registros de operación",
+                "value": "600"
+              },
+              {
+                "label": "Duración de batería",
+                "value": "Mayor o igual a 3000 aperturas"
+              },
+              {
+                "label": "Tensión de trabajo",
+                "value": "7,0 V a 8,4 V"
+              },
+              {
+                "label": "Alarma de baja tensión",
+                "value": "6,8 V ± 0,2 V"
+              },
+              {
+                "label": "Consumo dinámico",
+                "value": "≤ 1 A, sin acción motora ni reproducción de sonido"
+              },
+              {
+                "label": "Consumo estático",
+                "value": "≤ 200 uA"
+              },
+              {
+                "label": "Tiempo de verificación",
+                "value": "≤ 3 segundos"
+              },
+              {
+                "label": "Teclado",
+                "value": "Detección táctil"
+              },
+              {
+                "label": "Pantalla",
+                "value": "OLED 0,96 pulgadas"
+              },
+              {
+                "label": "Alimentación externa",
+                "value": "5 V / 1 A Micro USB"
+              },
+              {
+                "label": "Capacidad antiestática",
+                "value": "≥ 8 kV contacto / ≥ 15 kV sin contacto"
+              },
+              {
+                "label": "Temperatura de almacenamiento",
+                "value": "-25 °C a 80 °C"
+              },
+              {
+                "label": "Temperatura de funcionamiento",
+                "value": "-25 °C a 70 °C"
+              },
+              {
+                "label": "Humedad ambiente",
+                "value": "15% RH a 93% RH"
+              }
+            ]
+          ]
+        },
+        "energia": {
+          "title": "Energía",
+          "level": 2,
+          "order": 14,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "El sistema trabaja entre 7,0 V y 8,4 V.",
+            "Los videos mencionan batería de litio de 7,2 V.",
+            "El manual indica alarma de baja batería cuando el sistema está por debajo de 25%.",
+            "Después del aviso de baja batería, el equipo aún puede abrir aproximadamente 50 veces.",
+            "El puerto de emergencia es 5 V / 1 A Micro USB.",
+            "El manual indica que, al usar alimentación USB externa, el desbloqueo puede tardar aproximadamente 30 segundos.",
+            "La batería debe cargarse o reemplazarse cuando aparezca el aviso de baja energía."
+          ],
+          "tables": []
+        },
+        "capacidades-de-usuarios": {
+          "title": "Capacidades de usuarios",
+          "level": 2,
+          "order": 15,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Administradores",
+                "value": "IDs 000 a 009, total 10"
+              },
+              {
+                "label": "Usuarios ordinarios",
+                "value": "IDs 010 a 249, total 240"
+              },
+              {
+                "label": "Total de registros",
+                "value": "250"
+              },
+              {
+                "label": "Huellas",
+                "value": "Hasta 100"
+              },
+              {
+                "label": "Contraseñas",
+                "value": "Hasta 100"
+              },
+              {
+                "label": "Rostros",
+                "value": "Hasta 50"
+              },
+              {
+                "label": "Tarjetas",
+                "value": "Confirmadas como método M1, pero capacidad exacta no queda clara en el texto extraído"
+              },
+              {
+                "label": "Historial",
+                "value": "600 registros"
+              }
+            ]
+          ]
+        },
+        "configuracion-local": {
+          "title": "Configuración local",
+          "level": 2,
+          "order": 16,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Inicializar / restaurar",
+                "value": "Mantener presionado el botón de configuración durante 5 segundos; el sistema pregunta \"NO (*) SÍ (#)\"; presionar # para confirmar"
+              },
+              {
+                "label": "Estado inicial",
+                "value": "Cualquier rostro, huella, contraseña o tarjeta puede desbloquear mientras no haya usuarios configurados"
+              },
+              {
+                "label": "Acceso inicial al sistema",
+                "value": "Activar panel táctil y presionar * + #"
+              },
+              {
+                "label": "Primera contraseña de administrador",
+                "value": "Ingresar una contraseña de 6 a 8 dígitos"
+              },
+              {
+                "label": "Agregar usuario",
+                "value": "Entrar a 1. Añadir usuario y elegir administrador o usuario"
+              },
+              {
+                "label": "Registrar rostro",
+                "value": "Colocar el rostro paralelo a la cámara, a 30-80 cm, y seguir las indicaciones"
+              },
+              {
+                "label": "Registrar huella",
+                "value": "Colocar el dedo en el sensor y repetir cuando el sistema lo indique"
+              },
+              {
+                "label": "Registrar contraseña",
+                "value": "Ingresar contraseña de 6 a 8 dígitos y confirmar con #"
+              },
+              {
+                "label": "Registrar tarjeta",
+                "value": "Acercar tarjeta M1/IC al área de lectura"
+              },
+              {
+                "label": "Eliminar usuario",
+                "value": "Eliminar por verificación directa o por ID"
+              },
+              {
+                "label": "Consultar versión",
+                "value": "Ingresar 999 #"
+              },
+              {
+                "label": "Consultar usuarios",
+                "value": "Menú de búsqueda de información, recuento de usuarios"
+              },
+              {
+                "label": "Leer registros",
+                "value": "Consulta por orden o por fecha"
+              }
+            ]
+          ]
+        },
+        "ajustes-del-sistema": {
+          "title": "Ajustes del sistema",
+          "level": 2,
+          "order": 17,
+          "summary": "Dentro de 3. Configuración del sistema, el manual documenta:",
+          "paragraphs": [
+            "Dentro de 3. Configuración del sistema, el manual documenta:"
+          ],
+          "bullets": [
+            "Ajuste de fecha y hora.",
+            "Configuración de instalación.",
+            "Configuración de funciones.",
+            "Búsqueda de información."
+          ],
+          "tables": []
+        },
+        "configuracion-de-instalacion": {
+          "title": "Configuración de instalación",
+          "level": 3,
+          "order": 18,
+          "summary": "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos.",
+          "paragraphs": [
+            "El bloqueo retardado permite seleccionar tiempos de 10, 15, 20, 30, 60 o 120 segundos."
+          ],
+          "bullets": [
+            "Dirección de apertura.",
+            "Bloqueo retardado.",
+            "Ajustes de bloqueo.",
+            "Ajuste de par motor / torque, según la traducción tecnico.",
+            "Alerta de permanencia o Dwell Alert."
+          ],
+          "tables": []
+        },
+        "reconocimiento-y-deteccion": {
+          "title": "Reconocimiento y detección",
+          "level": 3,
+          "order": 19,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Detección de cuerpo humano desactivada.",
+            "Detección inteligente: no activa la detección cuando la puerta está abierta.",
+            "Detección abierta: activa detección en cualquier estado.",
+            "Distancia de detección:",
+            "Cerca: 30 a 50 cm.",
+            "Media: 50 a 70 cm.",
+            "Lejos: 70 a 80 cm.",
+            "Aviso de reconocimiento: cuando está activo, el sistema puede indicar que el usuario capture un rostro frontal.",
+            "Si hay 10 activaciones consecutivas sin reconocimiento facial, la detección humana se desactiva por 5 minutos."
+          ],
+          "tables": []
+        },
+        "funciones": {
+          "title": "Funciones",
+          "level": 3,
+          "order": 20,
+          "summary": "La autenticación dual aplica al desbloqueo de usuarios ordinarios: se requieren dos accesos ordinarios diferentes para abrir. Los administradores pueden abrir directamente.",
+          "paragraphs": [
+            "La autenticación dual aplica al desbloqueo de usuarios ordinarios: se requieren dos accesos ordinarios diferentes para abrir. Los administradores pueden abrir directamente."
+          ],
+          "bullets": [
+            "Configuración de red.",
+            "Volumen.",
+            "Autenticación dual.",
+            "Restauración de fábrica."
+          ],
+          "tables": []
+        },
+        "app-y-conectividad": {
+          "title": "App y conectividad",
+          "level": 2,
+          "order": 21,
+          "summary": "El manual documenta Smart Life como app principal: buscar Smart Life en App Store, descargar e iniciar sesión.",
+          "paragraphs": [
+            "El manual documenta Smart Life como app principal: buscar Smart Life en App Store, descargar e iniciar sesión.",
+            "El apéndice describe dos flujos:",
+            "Funciones de app documentadas o demostradas:",
+            "Nota de conciliación: videos del paquete muestran también referencias a Tuya WiFi y TTLock. Antes de construir el manual visible, se debe confirmar cuál app se entregará comercialmente para e-Orbit."
+          ],
+          "bullets": [
+            "Seleccionar Cámara & bloqueo.",
+            "Elegir Bloqueo de vídeo (Wi-Fi).",
+            "Configurar WiFi.",
+            "Mostrar el código QR del teléfono a la cámara de la cerradura.",
+            "Confirmar cuando la cerradura emita el aviso.",
+            "Seleccionar Camera & lock.",
+            "Elegir Lock (Wi-Fi).",
+            "Seleccionar WiFi e ingresar contraseña.",
+            "Usar modo EZ o modo hotspot si falla la vinculación.",
+            "Agregar dispositivo.",
+            "Desbloqueo remoto.",
+            "Conversación con visitante después de tocar el timbre.",
+            "Consulta de registros.",
+            "Gestión de miembros.",
+            "Vinculación de usuario local con miembro de app.",
+            "Contraseña temporal de un solo uso.",
+            "Contraseña temporal ilimitada con periodo efectivo."
+          ],
+          "tables": []
+        },
+        "seguridad": {
+          "title": "Seguridad",
+          "level": 2,
+          "order": 22,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": [
+            [
+              {
+                "label": "Contraseña virtual",
+                "value": "Confirmada; permite agregar números antes y después de la contraseña real"
+              },
+              {
+                "label": "Límite de contraseña virtual",
+                "value": "El sistema reconoce los primeros 16 dígitos"
+              },
+              {
+                "label": "Bloqueo por intentos",
+                "value": "Confirmado; tras el quinto intento incorrecto se bloquea 90 segundos"
+              },
+              {
+                "label": "Alarma de usuario ilegal",
+                "value": "Confirmada por voz: usuario ilegal / intrusión ilegal / propietario avisado"
+              },
+              {
+                "label": "Autenticación dual",
+                "value": "Confirmada para usuarios ordinarios"
+              },
+              {
+                "label": "Detección humana",
+                "value": "Confirmada con modos desactivado, inteligente y abierto"
+              },
+              {
+                "label": "Alerta de permanencia",
+                "value": "Confirmada como Dwell Alert, por defecto 20 segundos"
+              },
+              {
+                "label": "Consulta de registros",
+                "value": "Confirmada para timbre, usuario ilegal, batería baja y desbloqueo"
+              },
+              {
+                "label": "Llave mecánica",
+                "value": "Confirmada en video"
+              },
+              {
+                "label": "Alimentación de emergencia",
+                "value": "Confirmada en manual y video"
+              },
+              {
+                "label": "IP68",
+                "value": "Evidencia incluida en certificado y video de prueba de agua, pendiente de confirmar como claim directo NF14"
+              }
+            ]
+          ]
+        },
+        "instalacion": {
+          "title": "Instalación",
+          "level": 2,
+          "order": 23,
+          "summary": "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+          "paragraphs": [
+            "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+            "El perfil visual del cuerpo de cerradura muestra una cerradura multipunto con varios bulones rectangulares, pestillo/latch y cuerpo metálico amplio. Este mecanismo debe conservarse de forma consistente en cualquier imagen generada para e-Orbit."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "certificacion-ip68": {
+          "title": "Certificación IP68",
+          "level": 2,
+          "order": 24,
+          "summary": "El paquete incluye un reporte IEC 60529:",
+          "paragraphs": [
+            "El paquete incluye un reporte IEC 60529:",
+            "Nota de uso editorial: puede mencionarse como evidencia interna de resistencia, pero no conviene afirmar \"NF14 certificado IP68\" en el manual visible sin confirmar equivalencia comercial entre NF14/e-Orbit y la serie HP del reporte."
+          ],
+          "bullets": [
+            "Reporte: CTB24122602502Q01.",
+            "Fecha de emisión: 29 de marzo de 2025.",
+            "Objeto probado: Smart Lock.",
+            "Modelo probado: HP-1.",
+            "Otros modelos: HP-2 a HP-10.",
+            "Grado IP: IP68.",
+            "Ensayo de polvo: IP6X, sin ingreso de polvo.",
+            "Ensayo de agua: IPX8, sin ingreso de agua.",
+            "Condiciones de inmersión indicadas: agua a 30 °C, 40 minutos, 1 m."
+          ],
+          "tables": []
+        },
+        "funciones-demostradas-en-video": {
+          "title": "Funciones demostradas en video",
+          "level": 2,
+          "order": 25,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Apertura por huella.",
+            "Apertura remota desde app.",
+            "Apertura con llave mecánica.",
+            "Reconocimiento facial sin mascarilla.",
+            "Reconocimiento facial con mascarilla bajo la nariz.",
+            "Video/intercom con visitante.",
+            "Consulta de registro operativo desde app.",
+            "Vista o vigilancia de video desde app.",
+            "Configuración de red.",
+            "App con pantalla de control remoto.",
+            "Prueba de agua sobre el panel exterior.",
+            "Puerto de carga de emergencia.",
+            "Orificio / acceso de llave oculta.",
+            "Instalación del cuerpo de cerradura y fijación con tornillos."
+          ],
+          "tables": []
+        },
+        "material-visual-disponible": {
+          "title": "Material visual disponible",
+          "level": 2,
+          "order": 26,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "Imagen principal del producto:.",
+            "Imágenes renderizadas en.",
+            "Fotos reales en.",
+            "Cuerpo de cerradura:",
+            "e-Orbit/NF14/6068/Lock",
+            "e-Orbit/NF14/6068/Lock",
+            "Manual de producto visual en una página: e-Orbit/NF14/6068/NF14.pdf.",
+            "Manual operativo: e-Orbit/NF14/Relevant documents/NF14 Smart Lock Manual Spanish Version-.pdf.",
+            "Certificado IP: e-Orbit/NF14/Relevant documents/智能锁NF14（英文版本）-IEC-IP68证书.pdf.",
+            "Videos tecnico en e-Orbit/NF14/Product video files.zip.",
+            "Paquete de imágenes y empaque en e-Orbit/NF14/PIC FOR online store & Packing.zip."
+          ],
+          "tables": []
+        },
+        "referencias-recomendadas-para-generacion-visual": {
+          "title": "Referencias recomendadas para generación visual",
+          "level": 2,
+          "order": 27,
+          "summary": "Para mantener consistencia en Comfy:",
+          "paragraphs": [
+            "Para mantener consistencia en Comfy:",
+            "El enriquecimiento visual debe respetar el verde #034526, como en los demás manuales BESLOCK."
+          ],
+          "bullets": [],
+          "tables": []
+        },
+        "actualizaciones-oem-y-revision-visual-2026-05-28": {
+          "title": "Actualizaciones OEM y revisión visual 2026-05-28",
+          "level": 2,
+          "order": 28,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "el compartimento circular inferior del panel/manija exterior es el acceso oculto de llave mecánica de emergencia (Secret key hole / Key unlock).",
+            "La alimentación externa de emergencia debe representarse como puerto Micro USB de 5 V / 1 A en la misma zona inferior de servicio o inmediatamente contigua al compartimento de llave, sin asignar esa cubierta completa a la función de energía.",
+            "No identificar el compartimento circular inferior como tapa de batería, sensor, reset, pieza decorativa, botón genérico ni puerto de energía.",
+            "Si la vista frontal no muestra el orificio interno, usar un zoom del mismo compartimento abierto, conectado con una guía al componente real. No inventar un segundo keyhole en la base ni duplicar compartimentos.",
+            "En la imagen del mecanismo, evitar texto, iconos redundantes y pictogramas. Deben verse solo el cuerpo multipunto, latch, bulones rectangulares, zona de cilindro/llave y recibidor.",
+            "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo multipunto, montaje de panel exterior con cableado, y conexión/fijación del panel interior con prueba de manija, latch y bulones.",
+            "En escenas operativas aprobadas, retirar numerales aislados que no estén conectados a una acción, componente o estado real."
+          ],
+          "tables": []
+        },
+        "exclusiones-para-el-manual-visible": {
+          "title": "Exclusiones para el manual visible",
+          "level": 2,
+          "order": 29,
+          "summary": "No incluir sin confirmación adicional:",
+          "paragraphs": [
+            "No incluir sin confirmación adicional:"
+          ],
+          "bullets": [
+            "Compatibilidad simultánea con Smart Life, Tuya y TTLock como si fueran equivalentes.",
+            "Claim directo \"NF14 certificado IP68\" sin validar la relación con el reporte HP-1.",
+            "Capacidad exacta de tarjetas, porque el texto extraído confirma tarjeta M1 pero deja incompleta la distribución de capacidad.",
+            "Instalación completa si no se valida con material de montaje suficiente.",
+            "Claims de reconocimiento facial con mascarilla como garantía universal; puede tratarse como función demostrada en video, no como promesa técnica absoluta."
+          ],
+          "tables": []
+        },
+        "puntos-pendientes-por-confirmar": {
+          "title": "Puntos pendientes por confirmar",
+          "level": 2,
+          "order": 30,
+          "summary": "",
+          "paragraphs": [],
+          "bullets": [
+            "App comercial final: Smart Life, Tuya, TTLock o variante regional.",
+            "Si e-Orbit NF14 debe publicar IP68 como especificación principal.",
+            "Capacidad exacta de tarjetas dentro de los 250 registros.",
+            "Tipo exacto de batería suministrada y método de carga/reemplazo.",
+            "Ubicación física final del puerto Micro USB dentro de la zona inferior de servicio.",
+            "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video tecnico.",
+            "Espesor de puerta compatible.",
+            "Dimensiones físicas de paneles y cuerpo de cerradura.",
+            "Flujo de instalación completo y orden exacto de montaje.",
+            "Si la ficha xls contiene datos comerciales adicionales no extraídos localmente."
+          ],
+          "tables": []
+        },
+        "fuentes-revisadas": {
+          "title": "Fuentes revisadas",
+          "level": 2,
+          "order": 31,
+          "summary": "Fuentes internas revisadas durante la consolidación; rutas locales omitidas del export público.",
+          "paragraphs": [],
+          "bullets": [],
+          "tables": []
+        }
+      }
+    },
+    "profile_public": {
+      "short_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible.",
+      "commercial_description": "e-Orbit NF14 es una cerradura inteligente de reconocimiento facial, con panel exterior con cámara, teclado táctil, lector de tarjeta, timbre, lector de huella y manija abatible. La información consolidada confirma apertura por rostro, huella, contraseña, tarjeta M1, llave mecánica y app. El manual operativo documenta pantalla OLED de 0,96 pulgadas, capacidad total de 250 registros, historial de 600 eventos, alimentación de trabajo entre 7,0 V y 8,4 V, aviso de baja batería, alimentación externa de emergencia 5 V / 1 A por Micro USB y bloqueo temporal por intentos incorrectos. Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app. Reconocimiento facial con cámara frontal y detección de presencia. Video/intercom desde la app cuando alguien toca el timbre. Desbloqueo remoto desde el teléfono. Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+      "product_type": "Cerradura inteligente",
+      "lock_architecture": "mortise_lock",
+      "access_systems": [
+        {
+          "name": "Reconocimiento facial",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Huella",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Contraseña / PIN",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Tarjeta M1 / IC",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Llave mecánica",
+          "status": "Confirmado"
+        },
+        {
+          "name": "App móvil",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Desbloqueo remoto",
+          "status": "Confirmado"
+        },
+        {
+          "name": "Apertura interior",
+          "status": "Confirmado"
+        }
+      ],
+      "materials": [],
+      "finish": "",
+      "visual_language": [
+        "el compartimento circular inferior del panel/manija exterior es el acceso oculto de llave mecánica de emergencia (Secret key hole / Key unlock).",
+        "La alimentación externa de emergencia debe representarse como puerto Micro USB de 5 V / 1 A en la misma zona inferior de servicio o inmediatamente contigua al compartimento de llave, sin asignar esa cubierta completa a la función de energía.",
+        "No identificar el compartimento circular inferior como tapa de batería, sensor, reset, pieza decorativa, botón genérico ni puerto de energía.",
+        "Si la vista frontal no muestra el orificio interno, usar un zoom del mismo compartimento abierto, conectado con una guía al componente real. No inventar un segundo keyhole en la base ni duplicar compartimentos.",
+        "En la imagen del mecanismo, evitar texto, iconos redundantes y pictogramas. Deben verse solo el cuerpo multipunto, latch, bulones rectangulares, zona de cilindro/llave y recibidor.",
+        "Para la imagen H2 de instalación, usar tres mini-escenas grandes: preparación/cuerpo multipunto, montaje de panel exterior con cableado, y conexión/fijación del panel interior con prueba de manija, latch y bulones.",
+        "En escenas operativas aprobadas, retirar numerales aislados que no estén conectados a una acción, componente o estado real."
+      ],
+      "key_features": [
+        "Apertura sin llave mediante rostro, huella, contraseña, tarjeta M1, llave mecánica o app.",
+        "Reconocimiento facial con cámara frontal y detección de presencia.",
+        "Video/intercom desde la app cuando alguien toca el timbre.",
+        "Desbloqueo remoto desde el teléfono.",
+        "Historial de eventos: timbre, batería baja, usuario ilegal y desbloqueos.",
+        "Contraseña virtual para ocultar la clave real al abrir frente a otras personas.",
+        "Administración local de usuarios, administradores y registros.",
+        "Respaldo por llave mecánica y alimentación externa de emergencia."
+      ],
+      "use_cases": [],
+      "installation_type": "El manual español disponible no desarrolla una instalación completa paso a paso, pero los videos muestran:",
+      "technical_highlights": [
+        {
+          "label": "Modo de comparación",
+          "value": "1:N"
+        },
+        {
+          "label": "Tipo de sensor de huella",
+          "value": "Cabezal capacitivo de autoaprendizaje"
+        },
+        {
+          "label": "Resolución de huella",
+          "value": "508 dpi"
+        },
+        {
+          "label": "Tasa de rechazo",
+          "value": "< 0,1%"
+        },
+        {
+          "label": "Tasa de falsa aceptación",
+          "value": "< 0,001%"
+        },
+        {
+          "label": "Rango de captura de huella",
+          "value": "±180°"
+        },
+        {
+          "label": "Tipo de tarjeta",
+          "value": "M1"
+        },
+        {
+          "label": "Capacidad total",
+          "value": "250 registros"
+        },
+        {
+          "label": "Capacidad por tipo",
+          "value": "Hasta 100 huellas, 100 contraseñas y 50 rostros; la capacidad exacta para tarjetas queda ambigua"
+        },
+        {
+          "label": "Registros de operación",
+          "value": "600"
+        },
+        {
+          "label": "Duración de batería",
+          "value": "Mayor o igual a 3000 aperturas"
+        },
+        {
+          "label": "Tensión de trabajo",
+          "value": "7,0 V a 8,4 V"
+        },
+        {
+          "label": "Alarma de baja tensión",
+          "value": "6,8 V ± 0,2 V"
+        },
+        {
+          "label": "Consumo dinámico",
+          "value": "≤ 1 A, sin acción motora ni reproducción de sonido"
+        },
+        {
+          "label": "Consumo estático",
+          "value": "≤ 200 uA"
+        },
+        {
+          "label": "Tiempo de verificación",
+          "value": "≤ 3 segundos"
+        },
+        {
+          "label": "Teclado",
+          "value": "Detección táctil"
+        },
+        {
+          "label": "Pantalla",
+          "value": "OLED 0,96 pulgadas"
+        },
+        {
+          "label": "Alimentación externa",
+          "value": "5 V / 1 A Micro USB"
+        },
+        {
+          "label": "Capacidad antiestática",
+          "value": "≥ 8 kV contacto / ≥ 15 kV sin contacto"
+        }
+      ],
+      "seo_keywords": [
+        "e-Orbit",
+        "BESLOCK e-Orbit",
+        "cerradura inteligente",
+        "Cerradura inteligente",
+        "Reconocimiento facial",
+        "Huella",
+        "Contraseña / PIN",
+        "Tarjeta M1 / IC",
+        "Llave mecánica",
+        "App móvil",
+        "Desbloqueo remoto",
+        "Apertura interior"
+      ],
+      "warnings_or_pending_validation": [
+        "Los videos son útiles para confirmar demostraciones reales: reconocimiento facial, huella, app, desbloqueo remoto, consulta de registros, instalación y prueba de agua.",
+        "Existe inconsistencia entre las apps mencionadas: el manual documenta Smart Life; algunos videos mencionan Tuya WiFi o TTLock. Para el manual visible, conviene usar una redacción conservadora hasta confirmar la app comercial final.",
+        "El certificado IP68 está dentro del material de e-Orbit, pero el reporte identifica el modelo probado como HP-1 y otros modelos HP-2 a HP-10. No debe afirmarse como certificación exclusiva de NF14 sin validación comercial adicional.",
+        "La ficha NF14 (E-Orbit) Smart Lock.xls está presente, pero no entregó contenido legible con las herramientas locales disponibles; conviene revisarla manualmente en Excel/WPS si se necesita confirmar datos comerciales.",
+        "Confirmación comercial de que la cubierta inferior circular del SKU final conserva la función de llave mecánica mostrada en video OEM."
+      ]
+    },
+    "manual": {
+      "available": true,
+      "title": "BESLOCK e-Orbit",
+      "summary": "Cerradura inteligente motorizada con reconocimiento facial, huella, clave, tarjeta, llave mecánica y app móvil.",
+      "navigation": [
+        {
+          "order": 1,
+          "title": "Presentación del producto",
+          "anchor": "presentacion-producto"
+        },
+        {
+          "order": 2,
+          "title": "Perfiles de administradores y usuarios",
+          "anchor": "perfiles"
+        },
+        {
+          "order": 3,
+          "title": "Instalación",
+          "anchor": "instalacion"
+        },
+        {
+          "order": 4,
+          "title": "Creación del primer administrador",
+          "anchor": "crear-primer-administrador"
+        },
+        {
+          "order": 5,
+          "title": "Entrar al menú modo administrador",
+          "anchor": "entrar-menu-administrador"
+        },
+        {
+          "order": 6,
+          "title": "Ajustes generales",
+          "anchor": "ajustes-generales"
+        },
+        {
+          "order": 7,
+          "title": "Creación de otros administradores",
+          "anchor": "crear-administradores"
+        },
+        {
+          "order": 8,
+          "title": "Creación perfil usuario",
+          "anchor": "crear-usuario"
+        },
+        {
+          "order": 9,
+          "title": "Eliminar un perfil",
+          "anchor": "eliminar-perfil"
+        },
+        {
+          "order": 10,
+          "title": "Uso diario",
+          "anchor": "uso-diario"
+        },
+        {
+          "order": 11,
+          "title": "Otras configuraciones",
+          "anchor": "otras-configuraciones"
+        }
+      ],
+      "sections": [
+        {
+          "order": 1,
+          "id": "presentacion-producto",
+          "title": "Presentación del producto",
+          "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "referencia",
+          "images": [
+            {
+              "section_id": "panel-exterior",
+              "image_review_keys": [
+                "IMG-EORBIT-001"
+              ],
+              "heading": "Panel exterior",
+              "image": "assets/e-orbit/manual/panel-exterior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "panel-interior",
+              "image_review_keys": [
+                "IMG-EORBIT-002"
+              ],
+              "heading": "Panel interior",
+              "image": "assets/e-orbit/manual/panel-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "mecanismo-de-bloqueo",
+              "image_review_keys": [
+                "IMG-EORBIT-003"
+              ],
+              "heading": "Mecanismo de bloqueo",
+              "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Orbit es una cerradura inteligente de panel vertical con reconocimiento facial, manija abatible y cuerpo de cerradura multipunto."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel exterior",
+              "anchor": "img-e-orbit-001",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "related_manual_image_key": "IMG-EORBIT-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-001",
+              "image_id": "eorbit-01a-panel-exterior",
+              "title": "Panel exterior",
+              "caption": "Panel exterior.",
+              "alt": "Panel exterior de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "image": "assets/e-orbit/manual/panel-exterior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Módulo superior de reconocimiento facial.",
+                "Cámara o sensores frontales.",
+                "Pantalla OLED de estado.",
+                "Teclado táctil.",
+                "Área de lectura de tarjeta.",
+                "Botón de timbre.",
+                "Manija exterior abatible.",
+                "Lector de huella en la zona superior de la manija.",
+                "Compartimento inferior de acceso para llave mecánica de emergencia.",
+                "Puerto de energía externa de emergencia en la zona inferior de servicio."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Panel interior",
+              "anchor": "img-e-orbit-002",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "related_manual_image_key": "IMG-EORBIT-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-002",
+              "image_id": "eorbit-01b-panel-interior",
+              "title": "Panel interior",
+              "caption": "Panel interior.",
+              "alt": "Panel interior de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "image": "assets/e-orbit/manual/panel-interior.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Pantalla o superficie de visualización interior.",
+                "Botones físicos bajo la pantalla.",
+                "Manija interior.",
+                "Controles interiores de bloqueo y desbloqueo."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Mecanismo de bloqueo",
+              "anchor": "img-e-orbit-003",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "related_manual_image_key": "IMG-EORBIT-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-003",
+              "image_id": "eorbit-01c-mecanismo-bloqueo",
+              "title": "Mecanismo de bloqueo",
+              "caption": "Mecanismo de bloqueo.",
+              "alt": "Mecanismo de bloqueo de la cerradura e-Orbit con partes numeradas.",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "referencia",
+              "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Cuerpo de cerradura multipunto.",
+                "Pestillo.",
+                "Bulones o pasadores rectangulares.",
+                "Cilindro o zona mecánica de llave.",
+                "Recibidor del marco."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "id": "perfiles",
+          "title": "Perfiles de administradores y usuarios",
+          "manual_image_key": null,
+          "manual_group": "conoce-tu-cerradura",
+          "content_kind": "concepto",
+          "images": [
+            {
+              "section_id": "primer-administrador",
+              "image_review_keys": [
+                "IMG-EORBIT-004"
+              ],
+              "heading": "Primer administrador",
+              "image": "assets/e-orbit/manual/primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "administradores-adicionales",
+              "image_review_keys": [
+                "IMG-EORBIT-005"
+              ],
+              "heading": "Administradores adicionales",
+              "image": "assets/e-orbit/manual/administradores-adicionales.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "usuario-regular",
+              "image_review_keys": [
+                "IMG-EORBIT-006"
+              ],
+              "heading": "Usuario regular",
+              "image": "assets/e-orbit/manual/usuario-regular.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Primer administrador",
+              "anchor": "img-e-orbit-004",
+              "manual_image_key": "IMG-EORBIT-004",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
+              "image": "assets/e-orbit/manual/primer-administrador.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Es el primer perfil que protege la configuración de la cerradura. Debe crearse antes de usar la e-Orbit como acceso principal."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Administradores adicionales",
+              "anchor": "img-e-orbit-005",
+              "manual_image_key": "IMG-EORBIT-005",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
+              "image": "assets/e-orbit/manual/administradores-adicionales.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "Los administradores pueden abrir, entrar al menú, crear usuarios, borrar perfiles, cambiar ajustes y consultar información."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Usuario regular",
+              "anchor": "img-e-orbit-006",
+              "manual_image_key": "IMG-EORBIT-006",
+              "manual_group": "conoce-tu-cerradura",
+              "content_kind": "concepto",
+              "image": "assets/e-orbit/manual/usuario-regular.webp"
+            },
+            {
+              "type": "paragraph",
+              "text": "El usuario regular puede abrir con los accesos registrados. Si la verificación dual está activa, puede necesitar combinar dos accesos ordinarios."
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "id": "instalacion",
+          "title": "Instalación",
+          "manual_image_key": "H2-EORBIT-001",
+          "manual_group": "instalacion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-instalacion",
+              "image_review_keys": [
+                "H2-EORBIT-001"
+              ],
+              "heading": "Instalación",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Instalación",
+              "anchor": "instalacion",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-001"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-001",
+              "image_id": "eorbit-02-instalacion",
+              "title": "Instalación",
+              "caption": "Instalación.",
+              "alt": "Secuencia de instalación de la cerradura e-Orbit.",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-instalacion.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Confirma que la puerta sea compatible con la plantilla de instalación.",
+                "Revisa el sentido de apertura antes de perforar o fijar piezas.",
+                "Instala el cuerpo de cerradura multipunto dentro de la puerta.",
+                "Fija el cuerpo con sus tornillos.",
+                "Pasa el cableado del panel exterior hacia el lado interior.",
+                "Coloca el panel exterior alineado con el cuerpo de cerradura.",
+                "Conecta el cableado al panel interior.",
+                "Coloca el panel interior y fija los tornillos.",
+                "Instala la batería o alimentación principal.",
+                "Acciona la manija y confirma que pestillo y pasadores se muevan sin fricción."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "id": "crear-primer-administrador",
+          "title": "Creación del primer administrador",
+          "manual_image_key": "H2-EORBIT-002",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-crear-primer-administrador",
+              "image_review_keys": [
+                "H2-EORBIT-002"
+              ],
+              "heading": "Creación del primer administrador",
+              "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación del primer administrador",
+              "anchor": "crear-primer-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-002"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-002",
+              "image_id": "eorbit-04-crear-primer-administrador",
+              "title": "Creación del primer administrador",
+              "caption": "Creación del primer administrador.",
+              "alt": "Creación del primer administrador en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Activa el panel táctil.",
+                "Presiona * y luego #.",
+                "Ingresa una clave de administrador de 6 a 8 dígitos.",
+                "Confirma con #.",
+                "Registra el método principal del administrador: rostro, huella, clave o tarjeta.",
+                "Espera la confirmación.",
+                "Prueba la apertura con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "id": "entrar-menu-administrador",
+          "title": "Entrar al menú modo administrador",
+          "manual_image_key": "H2-EORBIT-003",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-entrar-menu-administrador",
+              "image_review_keys": [
+                "H2-EORBIT-003"
+              ],
+              "heading": "Entrar al menú modo administrador",
+              "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Entrar al menú modo administrador",
+              "anchor": "entrar-menu-administrador",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-003"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-003",
+              "image_id": "eorbit-05-menu-administrador",
+              "title": "Entrar al menú modo administrador",
+              "caption": "Entrar al menú modo administrador.",
+              "alt": "Acceso al menú modo administrador en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Activa el panel táctil.",
+                "Presiona * y luego #.",
+                "Verifica con un administrador registrado.",
+                "Selecciona la opción del menú.",
+                "Usa * para volver y # para confirmar."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "id": "ajustes-generales",
+          "title": "Ajustes generales",
+          "manual_image_key": null,
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "fecha-y-hora",
+              "image_review_keys": [
+                "IMG-EORBIT-007"
+              ],
+              "heading": "Fecha y hora",
+              "image": "assets/e-orbit/manual/fecha-y-hora.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "configuracion-de-instalacion",
+              "image_review_keys": [
+                "IMG-EORBIT-008"
+              ],
+              "heading": "Configuración de instalación",
+              "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "volumen",
+              "image_review_keys": [
+                "IMG-EORBIT-009"
+              ],
+              "heading": "Volumen",
+              "image": "assets/e-orbit/manual/volumen.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "informacion-y-registros",
+              "image_review_keys": [
+                "IMG-EORBIT-010"
+              ],
+              "heading": "Información y registros",
+              "image": "assets/e-orbit/manual/informacion-y-registros.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Para cambiar cualquier ajuste, primero entra al menú modo administrador."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Fecha y hora",
+              "anchor": "img-e-orbit-007",
+              "manual_image_key": "IMG-EORBIT-007",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/fecha-y-hora.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración del sistema.",
+                "Elige fecha y hora.",
+                "Ingresa la información solicitada.",
+                "Confirma con #."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Configuración de instalación",
+              "anchor": "img-e-orbit-008",
+              "manual_image_key": "IMG-EORBIT-008",
+              "manual_group": "instalacion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona configuración de instalación.",
+                "Ajusta sentido de apertura, bloqueo retardado o parámetros de cierre según la puerta instalada.",
+                "Confirma los cambios."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Volumen",
+              "anchor": "img-e-orbit-009",
+              "manual_image_key": "IMG-EORBIT-009",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/volumen.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona funciones del sistema.",
+                "Elige volumen.",
+                "Ajusta y confirma."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Información y registros",
+              "anchor": "img-e-orbit-010",
+              "manual_image_key": "IMG-EORBIT-010",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/informacion-y-registros.webp"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona búsqueda de información.",
+                "Consulta usuarios, versión o registros disponibles."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "id": "crear-administradores",
+          "title": "Creación de otros administradores",
+          "manual_image_key": "H2-EORBIT-004",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-crear-administradores",
+              "image_review_keys": [
+                "H2-EORBIT-004"
+              ],
+              "heading": "Creación de otros administradores",
+              "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación de otros administradores",
+              "anchor": "crear-administradores",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-004"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-004",
+              "image_id": "eorbit-07-crear-administradores",
+              "title": "Creación de otros administradores",
+              "caption": "Creación de otros administradores.",
+              "alt": "Creación de otros administradores en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige perfil administrador.",
+                "Selecciona rostro, huella, clave o tarjeta.",
+                "Registra el acceso siguiendo las instrucciones del sistema.",
+                "Espera la confirmación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "id": "crear-usuario",
+          "title": "Creación perfil usuario",
+          "manual_image_key": "H2-EORBIT-005",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-crear-usuario",
+              "image_review_keys": [
+                "H2-EORBIT-005"
+              ],
+              "heading": "Creación perfil usuario",
+              "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Creación perfil usuario",
+              "anchor": "crear-usuario",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-005"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-005",
+              "image_id": "eorbit-08-crear-usuario",
+              "title": "Creación perfil usuario",
+              "caption": "Creación perfil usuario.",
+              "alt": "Creación de perfil usuario en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona agregar usuario.",
+                "Elige perfil usuario.",
+                "Selecciona rostro, huella, clave o tarjeta.",
+                "Completa el registro.",
+                "Prueba el acceso con la puerta abierta."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 9,
+          "id": "eliminar-perfil",
+          "title": "Eliminar un perfil",
+          "manual_image_key": "H2-EORBIT-006",
+          "manual_group": "configuracion-administracion",
+          "content_kind": "procedimiento",
+          "images": [
+            {
+              "section_id": "h2-eliminar-perfil",
+              "image_review_keys": [
+                "H2-EORBIT-006"
+              ],
+              "heading": "Eliminar un perfil",
+              "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 2,
+              "title": "Eliminar un perfil",
+              "anchor": "eliminar-perfil",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "related_manual_image_key": "H2-EORBIT-006"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "H2-EORBIT-006",
+              "image_id": "eorbit-09-eliminar-perfil",
+              "title": "Eliminar un perfil",
+              "caption": "Eliminar un perfil.",
+              "alt": "Eliminación de un perfil en e-Orbit.",
+              "manual_group": "configuracion-administracion",
+              "content_kind": "procedimiento",
+              "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "Entra al menú modo administrador.",
+                "Selecciona eliminar usuario.",
+                "Elige eliminación por verificación directa o por ID.",
+                "Presenta el acceso o ingresa el ID correspondiente.",
+                "Confirma la eliminación."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 10,
+          "id": "uso-diario",
+          "title": "Uso diario",
+          "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "operacion",
+          "images": [
+            {
+              "section_id": "apertura-diaria",
+              "image_review_keys": [
+                "IMG-EORBIT-016"
+              ],
+              "heading": "Apertura diaria",
+              "image": "assets/e-orbit/manual/apertura-diaria.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "timbre-video-e-intercom",
+              "image_review_keys": [
+                "IMG-EORBIT-017"
+              ],
+              "heading": "Timbre, video e intercom",
+              "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "operacion-interior",
+              "image_review_keys": [
+                "IMG-EORBIT-018"
+              ],
+              "heading": "Operación interior",
+              "image": "assets/e-orbit/manual/operacion-interior.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "respaldo-mecanico-y-energia",
+              "image_review_keys": [
+                "IMG-EORBIT-019"
+              ],
+              "heading": "Respaldo mecánico y energía",
+              "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "La e-Orbit permite abrir sin entrar al menú usando los accesos registrados, la app móvil o los controles interiores."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Apertura diaria",
+              "anchor": "img-e-orbit-016",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-016"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-016",
+              "image_id": "eorbit-11a-apertura-diaria",
+              "title": "Apertura diaria",
+              "caption": "Apertura diaria.",
+              "alt": "Apertura diaria de e-Orbit con rostro, huella, PIN, tarjeta y app móvil.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/apertura-diaria.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Rostro: colócate frente al módulo de reconocimiento y espera la validación.",
+                "Huella: coloca el dedo registrado sobre el lector de la manija.",
+                "Clave: ingresa la clave registrada en el teclado y confirma según la indicación.",
+                "Tarjeta: acerca la tarjeta M1 registrada al área de lectura.",
+                "App móvil: abre desde el teléfono vinculado cuando la función esté configurada."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Timbre, video e intercom",
+              "anchor": "img-e-orbit-017",
+              "manual_group": "uso-diario",
+              "content_kind": "operacion",
+              "related_manual_image_key": "IMG-EORBIT-017"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-017",
+              "image_id": "eorbit-11b-timbre-video-intercom",
+              "title": "Timbre, video e intercom",
+              "caption": "Timbre, video e intercom.",
+              "alt": "Uso del timbre, video e intercom en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "operacion",
+              "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "items": [
+                "La visita toca el botón de timbre del panel exterior.",
+                "La app puede mostrar la interacción de video o intercom según la configuración.",
+                "Si corresponde, autoriza la apertura desde la app."
+              ]
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Operación interior",
+              "anchor": "img-e-orbit-018",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-018"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-018",
+              "image_id": "eorbit-11c-operacion-interior",
+              "title": "Operación interior",
+              "caption": "Operación interior.",
+              "alt": "Operación interior de e-Orbit con controles internos de bloqueo y desbloqueo.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/operacion-interior.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Desde el interior, usa la manija y los controles internos de bloqueo o desbloqueo para salir o asegurar la puerta sin usar credenciales exteriores."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Respaldo mecánico y energía",
+              "anchor": "img-e-orbit-019",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-019"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-019",
+              "image_id": "eorbit-11d-respaldo-mecanico-energia",
+              "title": "Respaldo mecánico y energía",
+              "caption": "Respaldo mecánico y energía.",
+              "alt": "Respaldo mecánico y alimentación Micro USB de emergencia en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+              "available": true
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "items": [
+                "Usa la llave mecánica desde el compartimento circular inferior cuando no puedas usar accesos electrónicos.",
+                "Si la batería está agotada, alimenta temporalmente por Micro USB 5 V / 1 A.",
+                "El desbloqueo con alimentación USB puede tardar cerca de 30 segundos.",
+                "Recarga o reemplaza la batería al primer aviso de baja energía."
+              ]
+            }
+          ]
+        },
+        {
+          "order": 11,
+          "id": "otras-configuraciones",
+          "title": "Otras configuraciones",
+          "manual_image_key": null,
+          "manual_group": "uso-diario",
+          "content_kind": "mixto",
+          "images": [
+            {
+              "section_id": "distancia-de-deteccion-facial",
+              "image_review_keys": [
+                "IMG-EORBIT-011"
+              ],
+              "heading": "Distancia de detección facial",
+              "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "deteccion-humana",
+              "image_review_keys": [
+                "IMG-EORBIT-012"
+              ],
+              "heading": "Detección humana",
+              "image": "assets/e-orbit/manual/deteccion-humana.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "verificacion-dual",
+              "image_review_keys": [
+                "IMG-EORBIT-013"
+              ],
+              "heading": "Verificación dual",
+              "image": "assets/e-orbit/manual/verificacion-dual.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "bloqueo-retardado",
+              "image_review_keys": [
+                "IMG-EORBIT-014"
+              ],
+              "heading": "Bloqueo retardado",
+              "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+              "format": "webp",
+              "available": true
+            },
+            {
+              "section_id": "app-movil",
+              "image_review_keys": [
+                "IMG-EORBIT-015"
+              ],
+              "heading": "App móvil",
+              "image": "assets/e-orbit/manual/app-movil.webp",
+              "format": "webp",
+              "available": true
+            }
+          ],
+          "blocks": [
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Distancia de detección facial",
+              "anchor": "img-e-orbit-011",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-011"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-011",
+              "image_id": "eorbit-10a-distancia-deteccion-facial",
+              "title": "Distancia de detección facial",
+              "caption": "Distancia de detección facial.",
+              "alt": "Distancia de detección facial en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite ajustar la distancia en la que la cerradura detecta presencia frente al panel."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Detección humana",
+              "anchor": "img-e-orbit-012",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-012"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-012",
+              "image_id": "eorbit-10b-deteccion-humana",
+              "title": "Detección humana",
+              "caption": "Detección humana.",
+              "alt": "Detección humana en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/deteccion-humana.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Puede configurarse para quedar desactivada, inteligente o activa según el comportamiento deseado."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Verificación dual",
+              "anchor": "img-e-orbit-013",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-013"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-013",
+              "image_id": "eorbit-10c-verificacion-dual",
+              "title": "Verificación dual",
+              "caption": "Verificación dual.",
+              "alt": "Verificación dual en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/verificacion-dual.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Requiere dos accesos válidos para usuarios ordinarios. Los administradores pueden abrir directamente."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "Bloqueo retardado",
+              "anchor": "img-e-orbit-014",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-014"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-014",
+              "image_id": "eorbit-10d-bloqueo-retardado",
+              "title": "Bloqueo retardado",
+              "caption": "Bloqueo retardado.",
+              "alt": "Bloqueo retardado en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "Permite definir un tiempo antes de completar el cierre automático."
+            },
+            {
+              "type": "heading",
+              "level": 3,
+              "title": "App móvil",
+              "anchor": "img-e-orbit-015",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "related_manual_image_key": "IMG-EORBIT-015"
+            },
+            {
+              "type": "figure",
+              "manual_image_key": "IMG-EORBIT-015",
+              "image_id": "eorbit-10e-app-movil",
+              "title": "App móvil",
+              "caption": "App móvil.",
+              "alt": "Uso de app móvil en e-Orbit.",
+              "manual_group": "uso-diario",
+              "content_kind": "concepto-operativo",
+              "image": "assets/e-orbit/manual/app-movil.webp",
+              "available": true
+            },
+            {
+              "type": "paragraph",
+              "text": "La app permite vinculación, registros, apertura desde el teléfono, comunicación con visitante y gestión de miembros, según la configuración comercial del producto."
+            }
+          ]
+        }
+      ]
+    },
+    "visual_assets": {
+      "manual_images": [
+        {
+          "section_id": "administradores-adicionales",
+          "image_review_keys": [
+            "IMG-EORBIT-005"
+          ],
+          "heading": "Administradores adicionales",
+          "image": "assets/e-orbit/manual/administradores-adicionales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "apertura-diaria",
+          "image_review_keys": [
+            "IMG-EORBIT-016"
+          ],
+          "heading": "Apertura diaria",
+          "image": "assets/e-orbit/manual/apertura-diaria.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "app-movil",
+          "image_review_keys": [
+            "IMG-EORBIT-015"
+          ],
+          "heading": "App móvil",
+          "image": "assets/e-orbit/manual/app-movil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "bloqueo-retardado",
+          "image_review_keys": [
+            "IMG-EORBIT-014"
+          ],
+          "heading": "Bloqueo retardado",
+          "image": "assets/e-orbit/manual/bloqueo-retardado.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "configuracion-de-instalacion",
+          "image_review_keys": [
+            "IMG-EORBIT-008"
+          ],
+          "heading": "Configuración de instalación",
+          "image": "assets/e-orbit/manual/configuracion-de-instalacion.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "deteccion-humana",
+          "image_review_keys": [
+            "IMG-EORBIT-012"
+          ],
+          "heading": "Detección humana",
+          "image": "assets/e-orbit/manual/deteccion-humana.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "distancia-de-deteccion-facial",
+          "image_review_keys": [
+            "IMG-EORBIT-011"
+          ],
+          "heading": "Distancia de detección facial",
+          "image": "assets/e-orbit/manual/distancia-de-deteccion-facial.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "fecha-y-hora",
+          "image_review_keys": [
+            "IMG-EORBIT-007"
+          ],
+          "heading": "Fecha y hora",
+          "image": "assets/e-orbit/manual/fecha-y-hora.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "informacion-y-registros",
+          "image_review_keys": [
+            "IMG-EORBIT-010"
+          ],
+          "heading": "Información y registros",
+          "image": "assets/e-orbit/manual/informacion-y-registros.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "mecanismo-de-bloqueo",
+          "image_review_keys": [
+            "IMG-EORBIT-003"
+          ],
+          "heading": "Mecanismo de bloqueo",
+          "image": "assets/e-orbit/manual/mecanismo-de-bloqueo.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "operacion-interior",
+          "image_review_keys": [
+            "IMG-EORBIT-018"
+          ],
+          "heading": "Operación interior",
+          "image": "assets/e-orbit/manual/operacion-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-exterior",
+          "image_review_keys": [
+            "IMG-EORBIT-001"
+          ],
+          "heading": "Panel exterior",
+          "image": "assets/e-orbit/manual/panel-exterior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "panel-interior",
+          "image_review_keys": [
+            "IMG-EORBIT-002"
+          ],
+          "heading": "Panel interior",
+          "image": "assets/e-orbit/manual/panel-interior.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "partes-de-la-cerradura",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-orbit/manual/partes-de-la-cerradura.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "piezas-principales",
+          "image_review_keys": [],
+          "heading": "",
+          "image": "assets/e-orbit/manual/piezas-principales.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "primer-administrador",
+          "image_review_keys": [
+            "IMG-EORBIT-004"
+          ],
+          "heading": "Primer administrador",
+          "image": "assets/e-orbit/manual/primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "respaldo-mecanico-y-energia",
+          "image_review_keys": [
+            "IMG-EORBIT-019"
+          ],
+          "heading": "Respaldo mecánico y energía",
+          "image": "assets/e-orbit/manual/respaldo-mecanico-y-energia.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "timbre-video-e-intercom",
+          "image_review_keys": [
+            "IMG-EORBIT-017"
+          ],
+          "heading": "Timbre, video e intercom",
+          "image": "assets/e-orbit/manual/timbre-video-e-intercom.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "usuario-regular",
+          "image_review_keys": [
+            "IMG-EORBIT-006"
+          ],
+          "heading": "Usuario regular",
+          "image": "assets/e-orbit/manual/usuario-regular.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "verificacion-dual",
+          "image_review_keys": [
+            "IMG-EORBIT-013"
+          ],
+          "heading": "Verificación dual",
+          "image": "assets/e-orbit/manual/verificacion-dual.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "volumen",
+          "image_review_keys": [
+            "IMG-EORBIT-009"
+          ],
+          "heading": "Volumen",
+          "image": "assets/e-orbit/manual/volumen.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-administradores",
+          "image_review_keys": [
+            "H2-EORBIT-004"
+          ],
+          "heading": "Creación de otros administradores",
+          "image": "assets/e-orbit/manual/select-crear-administradores.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-primer-administrador",
+          "image_review_keys": [
+            "H2-EORBIT-002"
+          ],
+          "heading": "Creación del primer administrador",
+          "image": "assets/e-orbit/manual/select-crear-primer-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-crear-usuario",
+          "image_review_keys": [
+            "H2-EORBIT-005"
+          ],
+          "heading": "Creación perfil usuario",
+          "image": "assets/e-orbit/manual/select-crear-usuario.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-eliminar-perfil",
+          "image_review_keys": [
+            "H2-EORBIT-006"
+          ],
+          "heading": "Eliminar un perfil",
+          "image": "assets/e-orbit/manual/select-eliminar-perfil.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-entrar-menu-administrador",
+          "image_review_keys": [
+            "H2-EORBIT-003"
+          ],
+          "heading": "Entrar al menú modo administrador",
+          "image": "assets/e-orbit/manual/select-entrar-menu-administrador.webp",
+          "format": "webp",
+          "available": true
+        },
+        {
+          "section_id": "h2-instalacion",
+          "image_review_keys": [
+            "H2-EORBIT-001"
+          ],
+          "heading": "Instalación",
+          "image": "assets/e-orbit/manual/select-instalacion.webp",
+          "format": "webp",
+          "available": true
+        }
+      ],
+      "true_sources": [
+        {
+          "category": "exterior-panel",
+          "label": "Panel exterior",
+          "image": "assets/e-orbit/ts/e-orbit-ts-exterior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "interior-panel",
+          "label": "Panel interior",
+          "image": "assets/e-orbit/ts/e-orbit-ts-interior-panel.webp",
+          "available": true
+        },
+        {
+          "category": "lock-body-set",
+          "label": "Mecanismo de bloqueo",
+          "image": "assets/e-orbit/ts/e-orbit-ts-lock-body-set.webp",
+          "available": true
+        }
+      ],
+      "hero_images": [
+        {
+          "label": "Panel exterior",
+          "image": "assets/e-orbit/hero/e-orbit-hero.webp",
+          "available": true,
+          "source": "manual.panel-exterior",
+          "format": "webp"
+        }
+      ]
+    }
+  }
+}

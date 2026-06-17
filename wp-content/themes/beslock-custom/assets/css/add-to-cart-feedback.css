@@ -10,6 +10,7 @@
 }
 
 [data-js="product-card-add-to-cart"],
+.bes-product-card__button--cart,
 .pc-btn-cart,
 .product-card__cart-btn,
 .single_add_to_cart_button {
@@ -56,6 +57,7 @@
 }
 
 [data-js="product-card-add-to-cart"].is-cart-added::after,
+.bes-product-card__button--cart.is-cart-added::after,
 .pc-btn-cart.is-cart-added::after,
 .product-card__cart-btn.is-cart-added::after,
 .single_add_to_cart_button.is-cart-added::after {
@@ -245,6 +247,7 @@
   }
 
   [data-js="product-card-add-to-cart"].is-cart-added::after,
+  .bes-product-card__button--cart.is-cart-added::after,
   .pc-btn-cart.is-cart-added::after,
   .product-card__cart-btn.is-cart-added::after,
   .single_add_to_cart_button.is-cart-added::after,

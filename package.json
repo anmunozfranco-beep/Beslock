@@ -2,6 +2,13 @@
   "name": "beslock",
   "private": true,
   "scripts": {
+    "pw:install": "playwright install chromium",
+    "validate": "npm run validate:theme && npm run test:pw",
+    "validate:theme": "node scripts/validate-theme.mjs",
+    "validate:structure": "node scripts/validate-theme.mjs structure",
+    "validate:php": "node scripts/validate-theme.mjs php",
+    "validate:media": "node scripts/validate-theme.mjs media",
+    "validate:bem": "node scripts/validate-theme.mjs bem",
     "test:pw": "playwright test",
     "test:pw:cart": "playwright test tests/playwright/cart-viewport.spec.mjs",
     "test:pw:feedback": "playwright test tests/playwright/add-to-cart-feedback.spec.mjs"

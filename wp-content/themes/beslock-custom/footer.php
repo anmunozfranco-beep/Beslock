@@ -25,33 +25,6 @@
           Seguridad inteligente para hogares, oficinas y accesos exteriores.
         </p>
 
-        <?php
-          $footer_partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
-          $footer_partner_logo_url  = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png';
-
-          if ( file_exists( $footer_partner_logo_path ) ) :
-            $footer_partner_logo_url = $footer_partner_logo_url . '?v=' . filemtime( $footer_partner_logo_path );
-        ?>
-          <a
-            class="site-footer__partner"
-            href="https://zonassmart.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="<?php echo esc_attr_x( 'ZONAS SMART, comercializador autorizado', 'footer partner link label', 'beslock' ); ?>"
-          >
-            <span class="site-footer__partner-kicker">Comercializador autorizado</span>
-            <img
-              class="site-footer__partner-logo"
-              src="<?php echo esc_url( $footer_partner_logo_url ); ?>"
-              alt="<?php echo esc_attr_x( 'ZONAS SMART', 'alt text', 'beslock' ); ?>"
-              width="1024"
-              height="1024"
-              loading="lazy"
-              decoding="async"
-            />
-          </a>
-        <?php endif; ?>
-
         <div class="site-footer__payments" aria-label="<?php echo esc_attr_x( 'Pagos seguros', 'footer payments label', 'beslock' ); ?>">
           <span class="site-footer__payments-label">Pagos seguros mediante</span>
           <div class="site-footer__payment-logos">
@@ -142,44 +115,37 @@
           array(
             'label' => 'TikTok',
             'icon'  => 'bi-tiktok',
-            'url'   => 'https://www.tiktok.com/@zonassmart',
           ),
           array(
             'label' => 'Instagram',
             'icon'  => 'bi-instagram',
-            'url'   => 'https://www.instagram.com/zonassmart/',
           ),
           array(
             'label' => 'Facebook',
             'icon'  => 'bi-facebook',
-            'url'   => 'https://www.facebook.com/zonassmart/about',
           ),
           array(
             'label' => 'YouTube',
             'icon'  => 'bi-youtube',
-            'url'   => 'https://www.youtube.com/@ZonasSmart',
           ),
           array(
             'label' => 'WhatsApp',
             'icon'  => 'bi-whatsapp',
-            'url'   => 'https://wa.me/573332799430',
           ),
         );
       ?>
-      <nav class="site-footer__social" aria-label="<?php echo esc_attr_x( 'Redes sociales ZONAS SMART', 'footer social nav label', 'beslock' ); ?>">
+      <nav class="site-footer__social" aria-label="<?php echo esc_attr_x( 'Redes sociales', 'footer social nav label', 'beslock' ); ?>">
         <div class="site-footer__social-links">
           <?php foreach ( $footer_social_links as $footer_social_link ) : ?>
-            <a
+            <span
               class="site-footer__social-link"
-              href="<?php echo esc_url( $footer_social_link['url'] ); ?>"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="<?php echo esc_attr( sprintf( 'ZONAS SMART en %s', $footer_social_link['label'] ) ); ?>"
+              role="img"
+              aria-label="<?php echo esc_attr( $footer_social_link['label'] ); ?>"
             >
               <span class="site-footer__social-mark" aria-hidden="true">
                 <i class="site-footer__social-icon bi <?php echo esc_attr( $footer_social_link['icon'] ); ?>"></i>
               </span>
-            </a>
+            </span>
           <?php endforeach; ?>
         </div>
       </nav>

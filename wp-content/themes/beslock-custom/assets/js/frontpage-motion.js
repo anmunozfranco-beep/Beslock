@@ -92,7 +92,7 @@
 
     function getCartButton(event) {
       return event.target && event.target.closest
-        ? event.target.closest('#main-content .product-card [data-js="product-card-add-to-cart"], #main-content .product-card .pc-btn-cart')
+        ? event.target.closest('#main-content .product-card [data-js="product-card-add-to-cart"], #main-content .product-card .bes-product-card__button--cart, #main-content .product-card .pc-btn-cart')
         : null;
     }
 

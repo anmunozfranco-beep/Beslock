@@ -3,21 +3,17 @@ if ( ! defined( 'ABSPATH' ) ) {
   exit;
 }
 
-// WooCommerce cart/shop related logic
-if ( class_exists( 'WooCommerce' ) && WC() ) {
-  // Redirect the WooCommerce Shop page to the front-page products portfolio section.
-  add_action( 'template_redirect', function() {
-    if ( function_exists( 'is_shop' ) && is_shop() ) {
-      wp_safe_redirect( home_url( '/' ) . '#productos', 301 );
-      exit;
-    }
-  }, 5 );
+// Redirect the WooCommerce shop archive to the front-page product portfolio.
+add_action( 'template_redirect', function() {
+  if ( function_exists( 'is_shop' ) && is_shop() ) {
+    wp_safe_redirect( home_url( '/' ) . '#productos', 301 );
+    exit;
+  }
+}, 5 );
 
-  // Ensure WooCommerce canonical URLs that expect a shop page don't break.
-  add_filter( 'woocommerce_get_shop_page_id', function( $page_id ) {
-    return 0;
-  } );
-}
+add_filter( 'woocommerce_get_shop_page_id', function( $page_id ) {
+  return 0;
+} );
 
 function beslock_render_header_cart_count( $count = null ) {
   if ( null === $count ) {
@@ -222,7 +218,7 @@ function beslock_get_shipping_city_options() {
   }
 
   $city_options  = array();
-  $csv_path      = trailingslashit( get_stylesheet_directory() ) . 'worldcities.csv';
+  $csv_path      = trailingslashit( get_stylesheet_directory() ) . 'data/worldcities.csv';
   $csv_is_ready  = is_readable( $csv_path );
   $cache_key     = $csv_is_ready ? 'beslock_shipping_city_options_' . filemtime( $csv_path ) : '';
 

@@ -98,32 +98,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     </ul>
 
-    <?php
-      $drawer_partner_logo_path = get_stylesheet_directory() . '/assets/images/partners/zonas-smart-logo.png';
-      $drawer_partner_logo_url  = get_stylesheet_directory_uri() . '/assets/images/partners/zonas-smart-logo.png';
-
-      if ( file_exists( $drawer_partner_logo_path ) ) :
-        $drawer_partner_logo_url = $drawer_partner_logo_url . '?v=' . filemtime( $drawer_partner_logo_path );
-    ?>
-      <a
-        class="mobile-drawer__partner"
-        href="https://zonassmart.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="<?php echo esc_attr_x( 'ZONAS SMART, comercializador autorizado', 'drawer partner link label', 'beslock' ); ?>"
-      >
-        <span class="mobile-drawer__partner-kicker">Comercializador autorizado</span>
-        <img
-          class="mobile-drawer__partner-logo"
-          src="<?php echo esc_url( $drawer_partner_logo_url ); ?>"
-          alt="<?php echo esc_attr_x( 'ZONAS SMART', 'alt text', 'beslock' ); ?>"
-          width="1024"
-          height="1024"
-          loading="lazy"
-          decoding="async"
-        />
-      </a>
-    <?php endif; ?>
   </div>
 
   <aside id="manualsDrawer" class="manuals-drawer" data-js="manuals-drawer" aria-hidden="true" aria-label="<?php esc_attr_e( 'Guías BESLOCK', 'beslock' ); ?>">
