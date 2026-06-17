@@ -57,7 +57,56 @@
       "e-nova_.webp"
     ],
     "gallery": [
+      "e-nova_p.webp",
       "e-nova_s.webp"
+    ],
+    "variation_attributes": [
+      {
+        "name": "Color",
+        "slug": "color",
+        "options": [
+          "Negro",
+          "INOX"
+        ]
+      },
+      {
+        "name": "Geometría",
+        "slug": "geometria",
+        "options": [
+          "Slim",
+          "Pomo"
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "sku": "NK21-NEGRO-SLIM",
+        "price": "332000",
+        "attributes": {
+          "Color": "Negro",
+          "Geometría": "Slim"
+        },
+        "image": "e-nova_.webp",
+        "default": true
+      },
+      {
+        "sku": "NK21-INOX-SLIM",
+        "price": "332000",
+        "attributes": {
+          "Color": "INOX",
+          "Geometría": "Slim"
+        },
+        "image": "e-nova_p.webp"
+      },
+      {
+        "sku": "NK21-NEGRO-POMO",
+        "price": "332000",
+        "attributes": {
+          "Color": "Negro",
+          "Geometría": "Pomo"
+        },
+        "image": "e-nova_s.webp"
+      }
     ]
   },
   {

@@ -162,6 +162,248 @@
     initAltImage(card, cardIndex);
   }
 
+  function parseVariationPayload(card) {
+    var node = card.querySelector('[data-js="product-card-variations"]');
+
+    if (!node) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(node.textContent || '{}');
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function findVariation(payload, color, geometry) {
+    if (!payload || !Array.isArray(payload.variations)) {
+      return null;
+    }
+
+    return payload.variations.find(function (variation) {
+      return variation.color === color && variation.geometry === geometry;
+    }) || null;
+  }
+
+  function findFallbackVariation(payload, color, geometry) {
+    var variation = findVariation(payload, color, geometry);
+
+    if (variation) {
+      return variation;
+    }
+
+    variation = payload.variations.find(function (candidate) {
+      return candidate.geometry === geometry;
+    });
+
+    if (variation) {
+      return variation;
+    }
+
+    variation = payload.variations.find(function (candidate) {
+      return candidate.color === color;
+    });
+
+    return variation || payload.variations[0] || null;
+  }
+
+  function getDefaultVariation(payload) {
+    if (!payload || !Array.isArray(payload.variations) || !payload.variations.length) {
+      return null;
+    }
+
+    return payload.variations.find(function (variation) {
+      return String(variation.id) === String(payload.defaultVariationId);
+    }) || payload.variations[0];
+  }
+
+  function buildVariationUrl(card, variation) {
+    var productUrl = card.querySelector('.bes-product-card__button--primary, .product-card__actions a:first-child');
+    var url = productUrl ? productUrl.href : window.location.href;
+
+    try {
+      var nextUrl = new URL(url, window.location.origin);
+      nextUrl.searchParams.set('add-to-cart', card.getAttribute('data-product-id') || '');
+      nextUrl.searchParams.set('variation_id', variation.id);
+      nextUrl.searchParams.set('quantity', '1');
+
+      Object.keys(variation.attributes || {}).forEach(function (key) {
+        nextUrl.searchParams.set(key, variation.attributes[key]);
+      });
+
+      return nextUrl.toString();
+    } catch (error) {
+      return url;
+    }
+  }
+
+  function updateVariationImage(card, variation) {
+    var image = card.querySelector('[data-js="product-card-image"]');
+
+    if (!image || !variation || !variation.image || !variation.image.src) {
+      return;
+    }
+
+    image.src = variation.image.src;
+
+    if (variation.image.srcset) {
+      image.srcset = variation.image.srcset;
+    } else {
+      image.removeAttribute('srcset');
+    }
+
+    if (variation.image.sizes) {
+      image.sizes = variation.image.sizes;
+    } else {
+      image.removeAttribute('sizes');
+    }
+
+    if (variation.image.alt) {
+      image.alt = variation.image.alt;
+    }
+  }
+
+  function updateVariationCartButton(card, variation) {
+    var button = card.querySelector('[data-js="product-card-add-to-cart"]');
+
+    if (!button || !variation) {
+      return;
+    }
+
+    button.setAttribute('href', buildVariationUrl(card, variation));
+    button.setAttribute('data-variation_id', variation.id);
+    button.setAttribute('data-variation_attributes', JSON.stringify(variation.attributes || {}));
+    button.classList.toggle('is-disabled', !variation.isPurchasable || !variation.isInStock);
+    button.setAttribute('aria-disabled', (!variation.isPurchasable || !variation.isInStock) ? 'true' : 'false');
+  }
+
+  function updateVariationControls(card, payload, selected) {
+    var colorButtons = Array.prototype.slice.call(card.querySelectorAll('[data-js="product-card-color-option"]'));
+    var colorTray = card.querySelector('.bes-product-card__variation-colors');
+    var geometryLabel = card.querySelector('[data-js="product-card-geometry-label"]');
+    var availableColors = colorButtons.filter(function (button) {
+      var color = button.getAttribute('data-variation-color') || '';
+      return Boolean(findVariation(payload, color, selected.geometry));
+    });
+    var showColorSelector = availableColors.length > 1;
+
+    if (colorTray) {
+      colorTray.classList.toggle('is-hidden', !showColorSelector);
+      colorTray.setAttribute('aria-hidden', showColorSelector ? 'false' : 'true');
+    }
+
+    colorButtons.forEach(function (button) {
+      var color = button.getAttribute('data-variation-color') || '';
+      var optionVariation = findVariation(payload, color, selected.geometry);
+      var isAvailable = Boolean(optionVariation);
+
+      button.setAttribute('aria-pressed', color === selected.color ? 'true' : 'false');
+      button.disabled = !isAvailable || !showColorSelector;
+      button.tabIndex = showColorSelector ? 0 : -1;
+      button.classList.toggle('is-disabled', !isAvailable);
+    });
+
+    if (geometryLabel) {
+      geometryLabel.textContent = selected.geometry || '';
+    }
+  }
+
+  function cueVariationTransition(card) {
+    if (prefersReducedMotion()) {
+      return;
+    }
+
+    card.classList.remove('is-variation-transitioning');
+    card.offsetWidth;
+    card.classList.add('is-variation-transitioning');
+
+    window.clearTimeout(card.besProductCardVariationTimer);
+    card.besProductCardVariationTimer = window.setTimeout(function () {
+      card.classList.remove('is-variation-transitioning');
+    }, 380);
+  }
+
+  function applyVariation(card, payload, variation) {
+    var price = card.querySelector('[data-js="product-card-price"]');
+    var previousVariationId = card.dataset.selectedVariationId || '';
+
+    if (!variation) {
+      return;
+    }
+
+    if (previousVariationId && String(previousVariationId) !== String(variation.id)) {
+      cueVariationTransition(card);
+    }
+
+    card.dataset.selectedVariationId = variation.id;
+    card.dataset.selectedVariationColor = variation.color || '';
+    card.dataset.selectedVariationGeometry = variation.geometry || '';
+
+    if (price && variation.priceHtml) {
+      price.innerHTML = variation.priceHtml;
+    }
+
+    updateVariationImage(card, variation);
+    updateVariationCartButton(card, variation);
+    updateVariationControls(card, payload, variation);
+  }
+
+  function initVariationControls(card) {
+    if (card.dataset.besProductCardVariationsReady === 'true') {
+      return;
+    }
+
+    var payload = parseVariationPayload(card);
+    var defaultVariation = getDefaultVariation(payload);
+
+    if (!payload || !defaultVariation) {
+      return;
+    }
+
+    card.dataset.besProductCardVariationsReady = 'true';
+    applyVariation(card, payload, defaultVariation);
+
+    card.querySelectorAll('[data-js="product-card-color-option"]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        if (button.disabled) {
+          return;
+        }
+
+        var color = button.getAttribute('data-variation-color') || '';
+        var geometry = card.dataset.selectedVariationGeometry || defaultVariation.geometry;
+        var nextVariation = findFallbackVariation(payload, color, geometry);
+        applyVariation(card, payload, nextVariation);
+      });
+    });
+
+    ['prev', 'next'].forEach(function (direction) {
+      var button = card.querySelector('[data-js="product-card-geometry-' + direction + '"]');
+
+      if (!button || !Array.isArray(payload.geometries) || payload.geometries.length < 2) {
+        return;
+      }
+
+      button.addEventListener('click', function () {
+        var currentGeometry = card.dataset.selectedVariationGeometry || defaultVariation.geometry;
+        var currentColor = card.dataset.selectedVariationColor || defaultVariation.color;
+        var currentIndex = payload.geometries.findIndex(function (geometry) {
+          return geometry.label === currentGeometry;
+        });
+
+        if (currentIndex < 0) {
+          currentIndex = 0;
+        }
+
+        var offset = direction === 'next' ? 1 : -1;
+        var nextIndex = (currentIndex + offset + payload.geometries.length) % payload.geometries.length;
+        var nextGeometry = payload.geometries[nextIndex].label;
+        var nextVariation = findFallbackVariation(payload, currentColor, nextGeometry);
+        applyVariation(card, payload, nextVariation);
+      });
+    });
+  }
+
   function initProductCards(context) {
     var root = context || document;
     var cards = root.querySelectorAll('[data-js="product-card"]');
@@ -179,6 +421,7 @@
       card.classList.add('bes-product-card--ready');
       initHoverState(card);
       initMedia(card, index);
+      initVariationControls(card);
 
       var action = card.querySelector('[data-js="product-card-add-to-cart"]');
       if (action) {
