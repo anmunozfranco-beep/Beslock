@@ -58,4 +58,8 @@ foreach ( $beslock_public_modules as $beslock_module ) {
 if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
   beslock_require_theme_file( 'inc/admin/importer.php' );
   beslock_require_theme_file( 'inc/admin/tools.php' );
+
+  if ( ! function_exists( 'beslock_run_export' ) ) {
+    beslock_require_theme_file( 'tools/recovery/plugins/beslock-portfolio-exporter/beslock-portfolio-exporter.php' );
+  }
 }
