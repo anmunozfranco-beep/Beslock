@@ -28,6 +28,7 @@ if ( ! function_exists( 'beslock_get_product_interactions_feedback' ) ) {
         'email'   => isset( $_POST['beslock_interaction_email'] ) ? sanitize_email( wp_unslash( $_POST['beslock_interaction_email'] ) ) : '',
         'content' => isset( $_POST['beslock_interaction_content'] ) ? sanitize_textarea_field( wp_unslash( $_POST['beslock_interaction_content'] ) ) : '',
         'rating'  => isset( $_POST['beslock_interaction_rating'] ) ? absint( wp_unslash( $_POST['beslock_interaction_rating'] ) ) : 0,
+        'website' => isset( $_POST['beslock_interaction_website'] ) ? sanitize_text_field( wp_unslash( $_POST['beslock_interaction_website'] ) ) : '',
       ),
     );
   }
@@ -41,6 +42,11 @@ if ( ! function_exists( 'beslock_validate_product_interaction_submission' ) ) {
     $email   = trim( (string) ( $values['email'] ?? '' ) );
     $content = trim( (string) ( $values['content'] ?? '' ) );
     $rating  = absint( $values['rating'] ?? 0 );
+    $website = trim( (string) ( $values['website'] ?? '' ) );
+
+    if ( '' !== $website ) {
+      $errors[] = __( 'No se pudo enviar tu mensaje. Verifica los datos e inténtalo de nuevo.', 'beslock' );
+    }
 
     if ( '' === $content ) {
       if ( 'question' === $mode ) {
@@ -99,6 +105,31 @@ if ( ! function_exists( 'beslock_resolve_product_interaction_parent_comment_id' 
   }
 }
 
+if ( ! function_exists( 'beslock_create_comment_without_external_captcha_filter' ) ) {
+  function beslock_create_comment_without_external_captcha_filter( $commentdata ) {
+    $captcha_filter          = null;
+    $captcha_filter_priority = false;
+
+    // Captcha Code validates every wp_new_comment() call, but this custom form is not rendered through comment_form().
+    if ( class_exists( 'WP_Captcha_Code' ) && is_callable( array( 'WP_Captcha_Code', 'captcha_comment_post' ) ) ) {
+      $captcha_filter          = array( 'WP_Captcha_Code', 'captcha_comment_post' );
+      $captcha_filter_priority = has_filter( 'preprocess_comment', $captcha_filter );
+
+      if ( false !== $captcha_filter_priority ) {
+        remove_filter( 'preprocess_comment', $captcha_filter, $captcha_filter_priority );
+      }
+    }
+
+    try {
+      return wp_new_comment( wp_slash( $commentdata ), true );
+    } finally {
+      if ( false !== $captcha_filter_priority && null !== $captcha_filter ) {
+        add_filter( 'preprocess_comment', $captcha_filter, $captcha_filter_priority );
+      }
+    }
+  }
+}
+
 if ( ! function_exists( 'beslock_create_product_interaction' ) ) {
   function beslock_create_product_interaction( $product_id, $mode, $values, $parent_comment_id = 0 ) {
     $commentdata = array(
@@ -106,12 +137,13 @@ if ( ! function_exists( 'beslock_create_product_interaction' ) ) {
       'comment_content'      => (string) ( $values['content'] ?? '' ),
       'comment_author'       => (string) ( $values['name'] ?? '' ),
       'comment_author_email' => (string) ( $values['email'] ?? '' ),
+      'comment_author_url'   => '',
       'comment_parent'       => 'reply' === $mode ? absint( $parent_comment_id ) : 0,
       'comment_type'         => '',
       'comment_approved'     => 0,
     );
 
-    $comment_id = wp_new_comment( wp_slash( $commentdata ), true );
+    $comment_id = beslock_create_comment_without_external_captcha_filter( $commentdata );
 
     if ( is_wp_error( $comment_id ) ) {
       return $comment_id;
@@ -177,6 +209,7 @@ if ( ! function_exists( 'beslock_handle_product_interaction_submission' ) ) {
           'email'   => '',
           'content' => '',
           'rating'  => 0,
+          'website' => '',
         );
         $feedback['parent_comment_id'] = 0;
       }

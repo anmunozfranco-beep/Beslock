@@ -122,6 +122,11 @@ $interaction_heading = sprintf(
 
       <p class="product-interactions__hint"><?php echo esc_html__( 'Ingresa al menos tu nombre o tu correo.', 'beslock' ); ?></p>
 
+      <div class="product-interactions__honeypot" aria-hidden="true">
+        <label for="beslock-interaction-website-<?php echo esc_attr( $product_id ); ?>"><?php echo esc_html__( 'Sitio web', 'beslock' ); ?></label>
+        <input id="beslock-interaction-website-<?php echo esc_attr( $product_id ); ?>" type="text" name="beslock_interaction_website" value="" tabindex="-1" autocomplete="off">
+      </div>
+
       <?php wp_nonce_field( 'beslock_product_interaction_submit', 'beslock_product_interaction_nonce' ); ?>
       <input type="hidden" name="beslock_product_id" value="<?php echo esc_attr( $product_id ); ?>">
       <button class="product-interactions__submit" type="submit" name="beslock_product_interaction_submit" value="1"><?php echo esc_html__( 'Enviar', 'beslock' ); ?></button>
@@ -230,6 +235,11 @@ $interaction_heading = sprintf(
                       </div>
 
                       <p class="product-interactions__hint product-interactions__hint--reply"><?php echo esc_html__( 'Para responder, ingresa tu nombre, tu correo o ambos.', 'beslock' ); ?></p>
+
+                      <div class="product-interactions__honeypot" aria-hidden="true">
+                        <label for="beslock-interaction-reply-website-<?php echo esc_attr( $question_comment_id ); ?>"><?php echo esc_html__( 'Sitio web', 'beslock' ); ?></label>
+                        <input id="beslock-interaction-reply-website-<?php echo esc_attr( $question_comment_id ); ?>" type="text" name="beslock_interaction_website" value="" tabindex="-1" autocomplete="off">
+                      </div>
 
                       <?php wp_nonce_field( 'beslock_product_interaction_submit', 'beslock_product_interaction_nonce' ); ?>
                       <input type="hidden" name="beslock_product_id" value="<?php echo esc_attr( $product_id ); ?>">
