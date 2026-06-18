@@ -233,20 +233,23 @@
 
   function buildControls(form, state) {
     var colorOptions = getOptions(state.colorSelect);
+    var geometryOptions = getOptions(state.geometrySelect);
     var controls = document.createElement('div');
     var colorButtons = colorOptions.map(buildColorButton);
+    var showGeometryRow = geometryOptions.length > 1;
+    var showColorRow = colorOptions.length > 1;
 
     controls.className = 'bes-single-variations';
     controls.setAttribute('data-js', 'single-variation-controls');
     controls.innerHTML = [
-      '<div class="bes-single-variations__row bes-single-variations__row--geometry" data-js="single-variation-geometry-row">',
+      '<div class="bes-single-variations__row bes-single-variations__row--geometry' + (showGeometryRow ? '' : ' is-hidden') + '" data-js="single-variation-geometry-row" aria-hidden="' + (showGeometryRow ? 'false' : 'true') + '">',
       '<div class="bes-single-variations__geometry" aria-label="Geometría">',
       '<button type="button" class="bes-single-variations__arrow bes-single-variations__arrow--prev" data-js="single-variation-geometry-prev" aria-label="Geometría anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>',
       '<span class="bes-single-variations__geometry-label" data-js="single-variation-geometry-label"></span>',
       '<button type="button" class="bes-single-variations__arrow bes-single-variations__arrow--next" data-js="single-variation-geometry-next" aria-label="Geometría siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>',
       '</div>',
       '</div>',
-      '<div class="bes-single-variations__row bes-single-variations__row--color" data-js="single-variation-color-row">',
+      '<div class="bes-single-variations__row bes-single-variations__row--color' + (showColorRow ? '' : ' is-hidden') + '" data-js="single-variation-color-row" aria-hidden="' + (showColorRow ? 'false' : 'true') + '">',
       '<div class="bes-single-variations__colors" role="radiogroup" aria-label="Color" data-js="single-variation-colors"></div>',
       '</div>',
     ].join('');
@@ -268,11 +271,14 @@
   function updateControls(form, state, variation) {
     var controls = form.querySelector('[data-js="single-variation-controls"]');
     var colorRow = controls ? controls.querySelector('[data-js="single-variation-color-row"]') : null;
+    var geometryRow = controls ? controls.querySelector('[data-js="single-variation-geometry-row"]') : null;
     var geometryLabel = controls ? controls.querySelector('[data-js="single-variation-geometry-label"]') : null;
     var selectedColor = getVariationAttribute(variation, ATTRIBUTE_COLOR);
     var selectedGeometry = getVariationAttribute(variation, ATTRIBUTE_GEOMETRY);
     var availableColors = uniqueValues(state.variations, ATTRIBUTE_COLOR, ATTRIBUTE_GEOMETRY, selectedGeometry);
+    var availableGeometries = uniqueValues(state.variations, ATTRIBUTE_GEOMETRY);
     var showColorSelector = availableColors.length > 1;
+    var showGeometrySelector = availableGeometries.length > 1;
 
     if (!controls || !variation) {
       return;
@@ -280,6 +286,11 @@
 
     if (geometryLabel) {
       geometryLabel.textContent = selectedGeometry;
+    }
+
+    if (geometryRow) {
+      geometryRow.classList.toggle('is-hidden', !showGeometrySelector);
+      geometryRow.setAttribute('aria-hidden', showGeometrySelector ? 'false' : 'true');
     }
 
     if (colorRow) {
@@ -309,7 +320,7 @@
       variations: getVariations(form),
     };
 
-    if (!state.colorSelect || !state.geometrySelect || !state.variations.length) {
+    if ((!state.colorSelect && !state.geometrySelect) || !state.variations.length) {
       return;
     }
 
@@ -334,8 +345,18 @@
 
     ['prev', 'next'].forEach(function (direction) {
       var button = controls.querySelector('[data-js="single-variation-geometry-' + direction + '"]');
+
+      if (!button || !state.geometrySelect) {
+        return;
+      }
+
       button.addEventListener('click', function () {
         var geometries = uniqueValues(state.variations, ATTRIBUTE_GEOMETRY);
+
+        if (geometries.length < 2) {
+          return;
+        }
+
         var currentVariation = getCurrentVariation(form, state);
         var currentGeometry = getVariationAttribute(currentVariation, ATTRIBUTE_GEOMETRY);
         var currentColor = getVariationAttribute(currentVariation, ATTRIBUTE_COLOR);
