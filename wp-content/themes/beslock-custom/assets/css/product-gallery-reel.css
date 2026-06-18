@@ -72,6 +72,12 @@ body.single-product .product-page__gallery-slide img[src*="e-nova_s"] {
   --beslock-gallery-image-y: -0.45rem;
 }
 
+body.single-product .product-page__gallery-slide img[src*="e-touch_"],
+body.single-product .product-page__gallery-slide img[src*="e-touch_c"] {
+  --beslock-gallery-image-scale: 1;
+  --beslock-gallery-image-y: -0.35rem;
+}
+
 body.single-product .product-page__gallery.is-variation-transitioning .product-page__gallery-reel {
   opacity: 0.72;
   filter: blur(1.5px) saturate(1.08);
@@ -132,5 +138,11 @@ body.single-product .product-gallery__counter {
 
   body.single-product .product-page__gallery-slide img[src*="e-nova_s"] {
     --beslock-gallery-image-y: clamp(-2.1rem, -2.4vw, -1.45rem);
+  }
+
+  body.single-product .product-page__gallery-slide img[src*="e-touch_"],
+  body.single-product .product-page__gallery-slide img[src*="e-touch_c"] {
+    --beslock-gallery-image-scale: 1;
+    --beslock-gallery-image-y: clamp(-1rem, -1.25vw, -0.6rem);
   }
 }

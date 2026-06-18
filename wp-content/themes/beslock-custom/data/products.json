@@ -229,6 +229,35 @@
     ],
     "gallery": [
       "e-touch_c.webp"
+    ],
+    "variation_attributes": [
+      {
+        "name": "Geometría",
+        "slug": "geometria",
+        "options": [
+          "Redonda",
+          "Cuadrada"
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "sku": "N191A-REDONDA",
+        "price": "355000",
+        "attributes": {
+          "Geometría": "Redonda"
+        },
+        "image": "e-touch_.webp",
+        "default": true
+      },
+      {
+        "sku": "N191A-CUADRADA",
+        "price": "355000",
+        "attributes": {
+          "Geometría": "Cuadrada"
+        },
+        "image": "e-touch_c.webp"
+      }
     ]
   }
 ]
