@@ -29,10 +29,12 @@ body.single-product .product-page__gallery-slide {
   width: 100% !important;
   min-width: 100% !important;
   height: 100%;
+  box-sizing: border-box !important;
   display: grid !important;
   place-items: center;
+  padding: clamp(0.3rem, 0.9vw, 0.75rem) clamp(0.55rem, 1.35vw, 1rem) clamp(0.95rem, 1.8vw, 1.35rem) !important;
   scroll-snap-align: center !important;
-  overflow: visible;
+  overflow: hidden;
 }
 
 body.single-product .product-page__gallery-slide a {
@@ -61,13 +63,13 @@ body.single-product .woocommerce-product-gallery__image img {
 body.single-product .product-page__gallery-slide img[src*="e-nova_"],
 body.single-product .product-page__gallery-slide img[src*="e-nova_p"],
 body.single-product .product-page__gallery-slide img[src*="e-nova_s"] {
-  --beslock-gallery-image-scale: 1.04;
-  --beslock-gallery-image-y: -1.25rem;
+  --beslock-gallery-image-scale: 1.025;
+  --beslock-gallery-image-y: -0.85rem;
 }
 
 body.single-product .product-page__gallery-slide img[src*="e-nova_s"] {
-  --beslock-gallery-image-scale: 1;
-  --beslock-gallery-image-y: -0.75rem;
+  --beslock-gallery-image-scale: 0.98;
+  --beslock-gallery-image-y: -0.45rem;
 }
 
 body.single-product .product-page__gallery.is-variation-transitioning .product-page__gallery-reel {
@@ -125,10 +127,10 @@ body.single-product .product-gallery__counter {
 @media (min-width: 768px) {
   body.single-product .product-page__gallery-slide img[src*="e-nova_"],
   body.single-product .product-page__gallery-slide img[src*="e-nova_p"] {
-    --beslock-gallery-image-y: clamp(-4.75rem, -5vw, -3.25rem);
+    --beslock-gallery-image-y: clamp(-3.2rem, -3.4vw, -2.35rem);
   }
 
   body.single-product .product-page__gallery-slide img[src*="e-nova_s"] {
-    --beslock-gallery-image-y: clamp(-3rem, -3.4vw, -2rem);
+    --beslock-gallery-image-y: clamp(-2.1rem, -2.4vw, -1.45rem);
   }
 }
