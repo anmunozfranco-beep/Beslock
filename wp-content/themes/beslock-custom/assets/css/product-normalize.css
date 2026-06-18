@@ -577,6 +577,7 @@ body.single-product main.product-page {
   --product-hero-pad-start: clamp(1rem, 2.6vh, 2.1rem);
   --product-hero-pad-end: clamp(1.25rem, 3.4vh, 2.7rem);
   --product-gallery-size: clamp(18rem, min(36vw, 52vh), 33rem);
+  --product-info-lift: clamp(-4.25rem, -6.2vh, -3rem);
   --product-copy-width: min(100%, 42ch);
   width: 100%;
   max-width: none;
@@ -704,6 +705,7 @@ body.single-product .summary .woocommerce-product-details__short-description p {
 
   body.single-product .product-page__info {
     justify-self: center;
+    transform: translateY(var(--product-info-lift));
   }
 }
 
