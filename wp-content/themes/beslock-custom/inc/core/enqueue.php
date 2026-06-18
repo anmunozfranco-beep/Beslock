@@ -276,6 +276,12 @@ add_action( 'wp_enqueue_scripts', function() {
   if ( $is_product_page && file_exists( $product_tabs_css ) ) {
     wp_enqueue_style( 'beslock-product-tabs', $theme_dir_uri . '/assets/css/product-tabs.css', [ 'beslock-product-page' ], filemtime( $product_tabs_css ) );
   }
+
+  $product_single_variations_css = $theme_dir_path . '/assets/css/product-single-variations.css';
+  if ( $is_product_page && file_exists( $product_single_variations_css ) ) {
+    wp_enqueue_style( 'beslock-product-single-variations', $theme_dir_uri . '/assets/css/product-single-variations.css', [ 'beslock-product-page' ], filemtime( $product_single_variations_css ) );
+  }
+
   $product_tabs_js = $theme_dir_path . '/assets/js/product-tabs.js';
   if ( $is_product_page && file_exists( $product_tabs_js ) ) {
     wp_enqueue_script( 'beslock-product-tabs-js', $theme_dir_uri . '/assets/js/product-tabs.js', [ 'beslock-main-js' ], filemtime( $product_tabs_js ), true );
@@ -284,6 +290,15 @@ add_action( 'wp_enqueue_scripts', function() {
   $qty_js = $theme_dir_path . '/assets/js/product-quantity-controls.js';
   if ( $is_product_page && file_exists( $qty_js ) ) {
     wp_enqueue_script( 'beslock-product-qty-js', $theme_dir_uri . '/assets/js/product-quantity-controls.js', [ 'beslock-main-js' ], filemtime( $qty_js ), true );
+  }
+
+  $single_variations_js = $theme_dir_path . '/assets/js/product-single-variations.js';
+  if ( $is_product_page && file_exists( $single_variations_js ) ) {
+    $single_variations_deps = [ 'jquery', 'beslock-main-js' ];
+    if ( wp_script_is( 'wc-add-to-cart-variation', 'registered' ) || wp_script_is( 'wc-add-to-cart-variation', 'enqueued' ) ) {
+      $single_variations_deps[] = 'wc-add-to-cart-variation';
+    }
+    wp_enqueue_script( 'beslock-product-single-variations-js', $theme_dir_uri . '/assets/js/product-single-variations.js', $single_variations_deps, filemtime( $single_variations_js ), true );
   }
 
   $product_pager_reel_js = $theme_dir_path . '/assets/js/product-pager-reel.js';
@@ -320,7 +335,7 @@ add_action( 'wp_enqueue_scripts', function() {
 
   $reel_css = $theme_dir_path . '/assets/css/product-gallery-reel.css';
   if ( $is_product_page && file_exists( $reel_css ) ) {
-    wp_enqueue_style( 'beslock-product-gallery-reel', $theme_dir_uri . '/assets/css/product-gallery-reel.css', [ 'beslock-main-style' ], filemtime( $reel_css ) );
+    wp_enqueue_style( 'beslock-product-gallery-reel', $theme_dir_uri . '/assets/css/product-gallery-reel.css', [ 'beslock-product-normalize' ], filemtime( $reel_css ) );
   }
   $reel_js = $theme_dir_path . '/assets/js/product-gallery-reel.js';
   if ( $is_product_page && file_exists( $reel_js ) ) {
