@@ -596,6 +596,115 @@ function beslock_format_cart_shipping_destination( $destination = array() ) {
   return implode( ', ', array_values( $unique_parts ) );
 }
 
+function beslock_get_installation_coverage_option_name() {
+  return 'beslock_installation_available_city_keys';
+}
+
+function beslock_get_installation_city_key( $city ) {
+  if ( function_exists( 'beslock_normalize_installation_city_key' ) ) {
+    return beslock_normalize_installation_city_key( $city );
+  }
+
+  return function_exists( 'beslock_normalize_location_label' )
+    ? beslock_normalize_location_label( $city )
+    : strtolower( trim( (string) $city ) );
+}
+
+function beslock_get_installation_city_catalog() {
+  static $catalog = null;
+
+  if ( null !== $catalog ) {
+    return apply_filters( 'beslock_installation_city_catalog', $catalog );
+  }
+
+  $catalog      = array();
+  $city_options = function_exists( 'beslock_get_shipping_city_options' ) ? beslock_get_shipping_city_options() : array();
+  $states       = array();
+
+  if ( function_exists( 'WC' ) && WC()->countries ) {
+    $wc_states = WC()->countries->get_states( 'CO' );
+    $states    = is_array( $wc_states ) ? $wc_states : array();
+  }
+
+  foreach ( $city_options as $department_code => $cities ) {
+    if ( ! is_array( $cities ) ) {
+      continue;
+    }
+
+    $department_label = isset( $states[ $department_code ] ) ? $states[ $department_code ] : $department_code;
+
+    foreach ( $cities as $city_label ) {
+      $city_label = trim( (string) $city_label );
+      $city_key   = beslock_get_installation_city_key( $city_label );
+
+      if ( '' === $city_label || '' === $city_key || isset( $catalog[ $city_key ] ) ) {
+        continue;
+      }
+
+      $catalog[ $city_key ] = array(
+        'key'              => $city_key,
+        'label'            => $city_label,
+        'department_code'  => (string) $department_code,
+        'department_label' => (string) $department_label,
+      );
+    }
+  }
+
+  uasort(
+    $catalog,
+    static function( $first, $second ) {
+      $department_compare = strnatcasecmp( $first['department_label'], $second['department_label'] );
+
+      if ( 0 !== $department_compare ) {
+        return $department_compare;
+      }
+
+      return strnatcasecmp( $first['label'], $second['label'] );
+    }
+  );
+
+  return apply_filters( 'beslock_installation_city_catalog', $catalog );
+}
+
+function beslock_get_saved_installation_available_city_keys() {
+  $saved_keys = get_option( beslock_get_installation_coverage_option_name(), null );
+
+  if ( ! is_array( $saved_keys ) ) {
+    return null;
+  }
+
+  $clean_keys = array();
+
+  foreach ( $saved_keys as $saved_key ) {
+    $city_key = beslock_get_installation_city_key( sanitize_text_field( (string) $saved_key ) );
+
+    if ( '' !== $city_key ) {
+      $clean_keys[] = $city_key;
+    }
+  }
+
+  return array_values( array_unique( $clean_keys ) );
+}
+
+function beslock_get_saved_installation_available_cities() {
+  $saved_keys = beslock_get_saved_installation_available_city_keys();
+
+  if ( null === $saved_keys ) {
+    return null;
+  }
+
+  $catalog = beslock_get_installation_city_catalog();
+  $cities  = array();
+
+  foreach ( $saved_keys as $city_key ) {
+    if ( isset( $catalog[ $city_key ]['label'] ) ) {
+      $cities[] = $catalog[ $city_key ]['label'];
+    }
+  }
+
+  return array_values( array_unique( $cities ) );
+}
+
 function beslock_get_cart_installation_policy() {
   static $policy = null;
 
@@ -640,6 +749,12 @@ function beslock_get_cart_installation_policy() {
         $policy['unavailable_city_message'] = sanitize_textarea_field( $source_policy['unavailable_city_message'] );
       }
     }
+  }
+
+  $saved_cities = beslock_get_saved_installation_available_cities();
+
+  if ( null !== $saved_cities ) {
+    $policy['available_cities'] = $saved_cities;
   }
 
   return apply_filters( 'beslock_cart_installation_policy', $policy );
