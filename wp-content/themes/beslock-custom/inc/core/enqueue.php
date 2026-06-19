@@ -558,7 +558,7 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_enqueue_script(
       'beslock-cart-quantity-controls',
       $theme_dir_uri . '/assets/js/cart-quantity-controls.js',
-      [],
+      [ 'beslock-product-card-component' ],
       filemtime( $cart_js ),
       true
     );
