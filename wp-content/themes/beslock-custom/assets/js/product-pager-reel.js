@@ -4,6 +4,8 @@
   var STORAGE_KEY = 'beslockProductPagerDirection';
   var EXIT_MS = 360;
   var ENTER_MS = 620;
+  var PAGER_ENTER_COMPACT = 96;
+  var PAGER_EXIT_COMPACT = 36;
 
   function ready(fn) {
     if (document.readyState === 'loading') {
@@ -70,16 +72,30 @@
     if (!pager) return;
 
     var frame = 0;
+    var isCompact = false;
+
+    function setCompact(nextCompact) {
+      if (nextCompact === isCompact) return;
+      isCompact = nextCompact;
+      pager.classList.toggle('product-page__pager--compact', isCompact);
+    }
 
     function update() {
       frame = 0;
       var headerBottom = 0;
+      var y = window.scrollY || window.pageYOffset || 0;
 
       if (header && header.getBoundingClientRect) {
         headerBottom = Math.max(0, header.getBoundingClientRect().bottom);
       }
 
       document.documentElement.style.setProperty('--product-pager-sticky-top', Math.round(headerBottom) + 'px');
+
+      if (!isCompact && y > PAGER_ENTER_COMPACT) {
+        setCompact(true);
+      } else if (isCompact && y < PAGER_EXIT_COMPACT) {
+        setCompact(false);
+      }
     }
 
     function requestUpdate() {
@@ -97,6 +113,9 @@
       } catch (error) {}
     }
 
+    var initialY = window.scrollY || window.pageYOffset || 0;
+    isCompact = initialY > PAGER_ENTER_COMPACT;
+    pager.classList.toggle('product-page__pager--compact', isCompact);
     requestUpdate();
   }
 

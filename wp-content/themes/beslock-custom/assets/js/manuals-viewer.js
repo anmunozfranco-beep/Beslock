@@ -164,7 +164,16 @@
   function bindPagerCompaction(pager) {
     if (!els.body || !pager) return;
 
+    var ENTER_COMPACT = 72;
+    var EXIT_COMPACT = 10;
     var frame = 0;
+    var isCompact = false;
+
+    function setCompact(nextCompact) {
+      if (nextCompact === isCompact) return;
+      isCompact = nextCompact;
+      pager.classList.toggle('manuals-pager--compact', isCompact);
+    }
 
     function updatePagerMetrics() {
       var content = pager.closest ? pager.closest('.manuals-content') : null;
@@ -187,7 +196,13 @@
     function update() {
       frame = 0;
       updatePagerMetrics();
-      pager.classList.toggle('manuals-pager--compact', els.body.scrollTop > 18);
+
+      var scrollTop = els.body.scrollTop || 0;
+      if (!isCompact && scrollTop > ENTER_COMPACT) {
+        setCompact(true);
+      } else if (isCompact && scrollTop < EXIT_COMPACT) {
+        setCompact(false);
+      }
     }
 
     function requestUpdate() {
@@ -209,6 +224,8 @@
       frame = 0;
     };
 
+    isCompact = (els.body.scrollTop || 0) > ENTER_COMPACT;
+    pager.classList.toggle('manuals-pager--compact', isCompact);
     update();
   }
 
