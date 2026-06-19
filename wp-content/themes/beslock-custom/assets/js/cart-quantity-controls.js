@@ -511,6 +511,9 @@
     init(document);
     initShippingAddressValidation(document);
     initInstallationOption(document);
+    if (typeof window.__beslock_product_card_init === 'function') {
+      window.__beslock_product_card_init(document);
+    }
     recoverEmptyCartViewIfBlank();
   }
 
