@@ -165,8 +165,8 @@ class Beslock_SEO_Config {
 		echo '<form method="post" style="margin-top:12px;padding:16px;border:1px solid #dcdcde;background:#fff;max-width:900px">';
 		wp_nonce_field( 'beslock_siteseo_rebuild_action', 'beslock_siteseo_rebuild_nonce' );
 		echo '<h3 style="margin-top:0">' . esc_html__( 'Reconstruccion limpia de SITESEO Free', 'beslock' ) . '</h3>';
-		echo '<p>' . esc_html__( 'Crea un snapshot JSON en uploads, desactiva SITESEO Free y SITESEO PRO si estuvieran activos, limpia residuos heredados de opciones y metadatos, activa SITESEO Free y vuelve a sembrar la configuracion SEO desde las fuentes internas.', 'beslock' ) . '</p>';
-		echo '<p><button type="submit" name="beslock_siteseo_rebuild_now" class="button button-primary">' . esc_html__( 'Ejecutar limpieza + activar SITESEO Free', 'beslock' ) . '</button></p>';
+		echo '<p>' . esc_html__( 'Crea un snapshot JSON en uploads, desactiva SITESEO Free y SITESEO PRO si estuvieran activos, limpia residuos heredados de opciones y metadatos, instala SITESEO Free desde WordPress.org si no estuviera presente, lo activa y vuelve a sembrar la configuracion SEO desde las fuentes internas.', 'beslock' ) . '</p>';
+		echo '<p><button type="submit" name="beslock_siteseo_rebuild_now" class="button button-primary">' . esc_html__( 'Ejecutar limpieza + instalar/activar SITESEO Free', 'beslock' ) . '</button></p>';
 		echo '</form>';
 
 		echo '<form method="post" style="margin-top:24px">';
@@ -232,7 +232,11 @@ class Beslock_SEO_Config {
 		);
 
 		if ( ! empty( $summary['siteseo_free_activated'] ) ) {
-			$parts[] = __( 'SITESEO Free quedo activo.', 'beslock' );
+			if ( ! empty( $summary['siteseo_free_installed'] ) ) {
+				$parts[] = __( 'SITESEO Free se instaló desde WordPress.org y quedó activo.', 'beslock' );
+			} else {
+				$parts[] = __( 'SITESEO Free quedo activo.', 'beslock' );
+			}
 		}
 
 		if ( ! empty( $summary['sync_summary']['products_synced'] ) || ! empty( $summary['sync_summary']['pages_synced'] ) ) {
@@ -333,6 +337,7 @@ class Beslock_SEO_Config {
 			'options_deleted'          => intval( $summary['options_deleted'] ),
 			'postmeta_deleted'         => intval( $summary['postmeta_deleted'] ),
 			'termmeta_deleted'         => intval( $summary['termmeta_deleted'] ),
+			'siteseo_free_installed'   => ! empty( $summary['siteseo_free_installed'] ) ? 'Si' : 'No',
 			'siteseo_free_activated'   => ! empty( $summary['siteseo_free_activated'] ) ? 'Si' : 'No',
 			'products_resynced'        => ! empty( $summary['sync_summary']['products_synced'] ) ? intval( $summary['sync_summary']['products_synced'] ) : 0,
 			'pages_resynced'           => ! empty( $summary['sync_summary']['pages_synced'] ) ? intval( $summary['sync_summary']['pages_synced'] ) : 0,
@@ -355,6 +360,7 @@ class Beslock_SEO_Config {
 			'options_deleted'        => 0,
 			'postmeta_deleted'       => 0,
 			'termmeta_deleted'       => 0,
+			'siteseo_free_installed' => false,
 			'siteseo_free_activated' => false,
 			'plugin_status_before'   => self::get_plugin_statuses(),
 			'plugin_status_after'    => array(),
@@ -382,6 +388,7 @@ class Beslock_SEO_Config {
 		}
 
 		$activation = self::activate_siteseo_free();
+		$summary['siteseo_free_installed'] = ! empty( $activation['installed'] );
 		$summary['siteseo_free_activated'] = ! empty( $activation['activated'] );
 		if ( ! empty( $activation['errors'] ) ) {
 			$summary['errors'] = array_merge( $summary['errors'], $activation['errors'] );
@@ -518,13 +525,18 @@ class Beslock_SEO_Config {
 
 		$summary = array(
 			'activated' => false,
+			'installed' => false,
 			'errors'    => array(),
 		);
 
 		$plugin_path = trailingslashit( WP_PLUGIN_DIR ) . self::PLUGIN_SITESEO_FREE;
 		if ( ! file_exists( $plugin_path ) ) {
-			$summary['errors'][] = 'SITESEO Free no esta instalado en wp-content/plugins.';
-			return $summary;
+			$install_summary = self::install_siteseo_free();
+			$summary['installed'] = ! empty( $install_summary['installed'] );
+			if ( ! empty( $install_summary['errors'] ) ) {
+				$summary['errors'] = array_merge( $summary['errors'], $install_summary['errors'] );
+				return $summary;
+			}
 		}
 
 		if ( function_exists( 'is_plugin_active' ) && is_plugin_active( self::PLUGIN_SITESEO_FREE ) ) {
@@ -543,10 +555,107 @@ class Beslock_SEO_Config {
 		return $summary;
 	}
 
+	private static function install_siteseo_free() {
+		self::load_plugin_install_api();
+
+		$summary = array(
+			'installed' => false,
+			'errors'    => array(),
+		);
+
+		if ( ! current_user_can( 'install_plugins' ) ) {
+			$summary['errors'][] = 'El usuario actual no tiene permisos para instalar plugins.';
+			return $summary;
+		}
+
+		$plugin_path = trailingslashit( WP_PLUGIN_DIR ) . self::PLUGIN_SITESEO_FREE;
+		if ( file_exists( $plugin_path ) ) {
+			$summary['installed'] = true;
+			return $summary;
+		}
+
+		$api = plugins_api(
+			'plugin_information',
+			array(
+				'slug'   => 'siteseo',
+				'fields' => array(
+					'sections' => false,
+				),
+			)
+		);
+
+		if ( is_wp_error( $api ) ) {
+			$summary['errors'] = array_merge( $summary['errors'], self::extract_wp_error_messages( $api ) );
+			return $summary;
+		}
+
+		if ( empty( $api->download_link ) ) {
+			$summary['errors'][] = 'No se pudo obtener el paquete oficial de SITESEO Free.';
+			return $summary;
+		}
+
+		$skin     = new Automatic_Upgrader_Skin();
+		$upgrader = new Plugin_Upgrader( $skin );
+		$result   = $upgrader->install( $api->download_link );
+
+		if ( is_wp_error( $result ) ) {
+			$summary['errors'] = array_merge( $summary['errors'], self::extract_wp_error_messages( $result ) );
+		}
+
+		if ( method_exists( $skin, 'get_errors' ) ) {
+			$skin_errors = $skin->get_errors();
+			if ( is_wp_error( $skin_errors ) && $skin_errors->has_errors() ) {
+				$summary['errors'] = array_merge( $summary['errors'], self::extract_wp_error_messages( $skin_errors ) );
+			}
+		}
+
+		if ( ! $result || ! file_exists( $plugin_path ) ) {
+			if ( empty( $summary['errors'] ) ) {
+				$summary['errors'][] = 'La instalacion automatica de SITESEO Free no dejó el plugin disponible en wp-content/plugins.';
+			}
+			return $summary;
+		}
+
+		wp_clean_plugins_cache( true );
+		$summary['installed'] = true;
+
+		return $summary;
+	}
+
 	private static function load_plugin_api() {
 		if ( ! function_exists( 'is_plugin_active' ) || ! function_exists( 'activate_plugin' ) ) {
 			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
+	}
+
+	private static function load_plugin_install_api() {
+		self::load_plugin_api();
+
+		if ( ! function_exists( 'plugins_api' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin-install.php';
+		}
+		if ( ! class_exists( 'Plugin_Upgrader' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+		}
+		if ( ! function_exists( 'request_filesystem_credentials' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/file.php';
+		}
+	}
+
+	private static function extract_wp_error_messages( $error ) {
+		if ( ! is_wp_error( $error ) ) {
+			return array();
+		}
+
+		$messages = array();
+		foreach ( $error->get_error_messages() as $message ) {
+			$message = sanitize_text_field( $message );
+			if ( '' !== $message ) {
+				$messages[] = $message;
+			}
+		}
+
+		return array_values( array_unique( $messages ) );
 	}
 
 	private static function get_plugin_statuses() {

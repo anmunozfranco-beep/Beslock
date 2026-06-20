@@ -669,3 +669,23 @@ Verificado en `http://localhost:8080`:
 - Decidir tratamiento final del blog indexable heredado.
 - Migrar el plugin a producción por archivos y ejecutar el mismo flujo desde `Herramientas > BESLOCK SEO`.
 - Validar respaldo, ventana de mantenimiento y checklist final antes de repetir la limpieza en producción.
+
+### 13.6. Paquete de migracion por FileZilla
+
+Para que la reproduccion en produccion no dependa solo de mover el theme, queda definido este paquete minimo:
+
+- `wp-content/plugins/beslock-seo-config/`
+- `wp-content/themes/beslock-custom/data/products.json`
+- `wp-content/themes/beslock-custom/data/woocommerce-pricing-import.csv`
+- `wp-content/themes/beslock-custom/assets/manuals/`
+
+Artefactos operativos:
+
+- Generador local: `npm run deploy:seo`
+- Salida: `deploy/seo-filezilla/`
+- Guia operativa: `docs/SEO_FILEZILLA_PRODUCTION_MIGRATION.md`
+
+Actualizacion del flujo:
+
+- `Herramientas > BESLOCK SEO` ahora intenta instalar `SITESEO Free` desde WordPress.org si el plugin no existe todavia en `wp-content/plugins/`.
+- Si el hosting bloquea la instalacion automatica, el fallback es subir manualmente `siteseo/` y repetir la accion desde `Herramientas`.
