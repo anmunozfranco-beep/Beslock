@@ -672,18 +672,18 @@ Verificado en `http://localhost:8080`:
 
 ### 13.6. Paquete de migracion por FileZilla
 
-Para que la reproduccion en produccion no dependa solo de mover el theme, queda definido este paquete minimo:
+Para no romper el flujo operativo habitual, la migracion queda unificada en el mismo deploy de siempre:
 
-- `wp-content/plugins/beslock-seo-config/`
-- `wp-content/themes/beslock-custom/data/products.json`
-- `wp-content/themes/beslock-custom/data/woocommerce-pricing-import.csv`
-- `wp-content/themes/beslock-custom/assets/manuals/`
-
-Artefactos operativos:
-
-- Generador local: `npm run deploy:seo`
-- Salida: `deploy/seo-filezilla/`
+- Generador local: `npm run deploy:build`
+- Salida: `deploy/current/`
 - Guia operativa: `docs/SEO_FILEZILLA_PRODUCTION_MIGRATION.md`
+
+Rutas a subir por FileZilla:
+
+- Siempre: `deploy/current/wp-content/themes/beslock-custom/`
+- Adicional solo para replicar SEO backstage: `deploy/current/wp-content/plugins/beslock-seo-config/`
+
+Nota operativa: `products.json`, `woocommerce-pricing-import.csv` y `assets/manuals/` ya viven dentro del theme, asi que no hace falta seleccionarlos por separado.
 
 Actualizacion del flujo:
 
