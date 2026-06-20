@@ -29,6 +29,22 @@ git archive --format=tar --worktree-attributes HEAD | tar -x -C "$tmp_dir"
 find "$tmp_dir" -mindepth 1 -depth -type d -empty -exec rmdir {} +
 rsync -a --delete "$tmp_dir"/ "$output_dir"/
 
+cat > "$output_dir/FTP_DEPLOY_NOTES.txt" <<'EOF'
+BESLOCK FileZilla deploy
+
+Usa este mismo deploy unificado.
+
+1. Sube siempre:
+   wp-content/themes/beslock-custom/
+
+2. Solo si vas a replicar la capa SEO backstage:
+   wp-content/plugins/beslock-seo-config/
+
+Nota:
+- Los datos y manuales que usa el SEO ya viajan dentro del theme.
+- No necesitas un segundo paquete paralelo dentro de deploy/.
+EOF
+
 file_count="$(find "$output_dir" -type f | wc -l | tr -d ' ')"
 deploy_head="$(git rev-parse --short HEAD)"
 

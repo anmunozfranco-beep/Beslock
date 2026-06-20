@@ -22,21 +22,17 @@ Si solo vas a actualizar el tema, usa esta ruta como origen en FileZilla:
 deploy/current/wp-content/themes/beslock-custom/
 ```
 
-Si vas a replicar la implementacion SEO backstage, genera ademas el paquete minimo:
+Si vas a replicar la implementacion SEO backstage, no necesitas un segundo paquete ni otra carpeta paralela en `deploy/`.
+
+Sigue usando el mismo deploy unificado:
 
 ```bash
-npm run deploy:seo
+npm run deploy:build
 ```
 
-La salida queda en:
+Y sube desde `deploy/current/` estas rutas:
 
-```text
-deploy/seo-filezilla/
-```
+- Siempre: `deploy/current/wp-content/themes/beslock-custom/`
+- Solo si vas a activar o replicar la capa SEO backstage: `deploy/current/wp-content/plugins/beslock-seo-config/`
 
-Usa ese paquete cuando necesites subir no solo el theme sino tambien:
-
-- `wp-content/plugins/beslock-seo-config/`
-- `wp-content/themes/beslock-custom/data/products.json`
-- `wp-content/themes/beslock-custom/data/woocommerce-pricing-import.csv`
-- `wp-content/themes/beslock-custom/assets/manuals/`
+Importante: los archivos de datos y manuales que necesita el SEO ya viven dentro del theme, así que no tienes que ir seleccionando subcarpetas sueltas adicionales del tema.

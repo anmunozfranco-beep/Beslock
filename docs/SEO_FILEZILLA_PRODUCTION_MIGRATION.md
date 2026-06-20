@@ -26,36 +26,29 @@ La reproduccion SEO no depende solo del theme. La implementacion actual usa dos 
 
 Sin esas fuentes, el plugin no puede reconstruir correctamente titles, meta descriptions, social meta, keywords, exclusiones de sitemap y señales de producto.
 
-## Paquete recomendado
+## Flujo recomendado
 
-Generar el paquete mínimo con:
+Sigue usando el deploy unificado de siempre:
 
 ```bash
-npm run deploy:seo
+npm run deploy:build
 ```
 
 Salida:
 
 ```text
-deploy/seo-filezilla/
+deploy/current/
 ```
 
-El paquete incluye:
-
-- estructura lista para subir por FTP
-- `README.md` con el orden operativo
-- `checksums.sha256` para verificar integridad
-- `packages/beslock-seo-config.zip` si `zip` está disponible en la máquina local
+No necesitas un segundo paquete paralelo dentro de `deploy/`.
 
 ## Orden de migracion
 
 1. Respaldar base de datos y `wp-content/` en produccion.
 2. Subir con FileZilla:
-   - `deploy/seo-filezilla/wp-content/plugins/beslock-seo-config/`
-   - `deploy/seo-filezilla/wp-content/themes/beslock-custom/data/products.json`
-   - `deploy/seo-filezilla/wp-content/themes/beslock-custom/data/woocommerce-pricing-import.csv`
-   - `deploy/seo-filezilla/wp-content/themes/beslock-custom/assets/manuals/`
-3. Si produccion no tiene la misma base del theme local, subir ademas `deploy/current/wp-content/themes/beslock-custom/`.
+   - siempre `deploy/current/wp-content/themes/beslock-custom/`
+   - ademas `deploy/current/wp-content/plugins/beslock-seo-config/` si vas a replicar o activar la capa SEO backstage
+3. No hace falta seleccionar manualmente `products.json`, `woocommerce-pricing-import.csv` ni `assets/manuals/` por separado, porque ya viajan dentro del theme.
 4. Entrar a WordPress Admin y activar `BESLOCK SEO Config`.
 5. Ir a `Herramientas > BESLOCK SEO`.
 6. Ejecutar `Ejecutar limpieza + instalar/activar SITESEO Free`.
