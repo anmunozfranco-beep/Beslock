@@ -3369,6 +3369,111 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 }
 
+/* Tablet portrait: the generic 600-1279 overlay treatment is too aggressive for
+   tall viewports and crops some hero products awkwardly. Switch to a more
+   deliberate contain-based composition between 768px and 1023px. */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-slide {
+    --tablet-portrait-overlay-width: clamp(16rem, 34vw, 18.75rem);
+  }
+
+  .hero-slide .slide-overlay-frame {
+    right: 0 !important;
+    left: auto !important;
+    width: var(--tablet-portrait-overlay-width) !important;
+    max-width: none !important;
+    top: calc(-1 * var(--overlay-frame-bleed, clamp(0.9rem, 3.4vh, 1.6rem))) !important;
+    bottom: calc(-1 * var(--overlay-frame-bleed, clamp(0.9rem, 3.4vh, 1.6rem))) !important;
+  }
+
+  .hero-slide .slide-overlay {
+    top: calc(50% + var(--overlay-offset, 0px)) !important;
+    left: calc((-100% * (var(--overlay-content-left-ratio, 0.5) / var(--overlay-content-width-ratio, 0.5))) + var(--overlay-inline-shift, 0px)) !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: calc(100% / var(--overlay-content-width-ratio, 0.5)) !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    opacity: 0 !important;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
+    transform-origin: calc(var(--overlay-content-left-ratio, 0.5) * 100%) center !important;
+  }
+
+  .hero-slide .slide-overlay.overlay--visible {
+    opacity: 0.86 !important;
+    transform: translateY(-50%) scale(var(--overlay-focus-scale-active, 1)) !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(1) .slide-overlay {
+    --overlay-focus-scale-base: 0.94;
+    --overlay-focus-scale-active: 0.96;
+    --overlay-inline-shift: 0.8vw;
+  }
+
+  .hero-slides > .hero-slide:nth-child(2) .slide-overlay {
+    --overlay-focus-scale-base: 0.9;
+    --overlay-focus-scale-active: 0.93;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 4px !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
+    --overlay-focus-scale-base: 1.04;
+    --overlay-focus-scale-active: 1.06;
+    --overlay-inline-shift: 0.5vw;
+  }
+
+  .hero-slides > .hero-slide:nth-child(4) .slide-overlay {
+    --overlay-focus-scale-base: 1.02;
+    --overlay-focus-scale-active: 1.04;
+    --overlay-inline-shift: 0px;
+  }
+
+  .hero-slides > .hero-slide:nth-child(5) .slide-overlay {
+    --overlay-focus-scale-base: 0.98;
+    --overlay-focus-scale-active: 1;
+    --overlay-inline-shift: 0px;
+  }
+
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay-frame {
+    left: calc(100% - clamp(18rem, 41vw, 21rem)) !important;
+    right: auto !important;
+    width: clamp(18rem, 41vw, 21rem) !important;
+  }
+
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay,
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
+    --overlay-focus-scale-base: 1.08;
+    --overlay-focus-scale-active: 1.1;
+    --overlay-inline-shift: 0px;
+    --overlay-offset: 16px !important;
+  }
+
+  .hero-slide .slide-content {
+    left: clamp(1.5rem, 3vw, 2rem) !important;
+    right: calc(var(--tablet-portrait-overlay-width) + clamp(0.9rem, 2vw, 1.35rem)) !important;
+    width: auto !important;
+    padding: 0 !important;
+    text-align: left !important;
+    bottom: clamp(3.25rem, 9vh, 4.75rem) !important;
+    transform: none !important;
+  }
+
+  .hero-slide .hero__title {
+    font-size: clamp(3rem, 7.2vw, 4rem) !important;
+    line-height: 0.98 !important;
+    text-align: left !important;
+  }
+
+  .hero-slide .hero__subtitle {
+    font-size: clamp(1.2rem, 2.8vw, 1.65rem) !important;
+    line-height: 1.08 !important;
+    text-align: left !important;
+    max-width: 13ch;
+  }
+}
+
 /* =========================
    PRODUCT CARD VARIATIONS
    Woo-driven color selector + geometry carousel for variable products.
