@@ -30,6 +30,8 @@ playwright-report/
 
 # Local WordPress/WooCommerce runtime logs
 wp-content/uploads/wc-logs/*.log
+wp-content/uploads/beslock-seo-config/
+wp-content/uploads/beslock_import_logs/
 wp-content/themes/beslock-custom/debug/
 wp-content/themes/beslock-custom/import_logs/*.log
 

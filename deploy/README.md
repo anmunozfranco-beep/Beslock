@@ -21,3 +21,22 @@ Si solo vas a actualizar el tema, usa esta ruta como origen en FileZilla:
 ```text
 deploy/current/wp-content/themes/beslock-custom/
 ```
+
+Si vas a replicar la implementacion SEO backstage, genera ademas el paquete minimo:
+
+```bash
+npm run deploy:seo
+```
+
+La salida queda en:
+
+```text
+deploy/seo-filezilla/
+```
+
+Usa ese paquete cuando necesites subir no solo el theme sino tambien:
+
+- `wp-content/plugins/beslock-seo-config/`
+- `wp-content/themes/beslock-custom/data/products.json`
+- `wp-content/themes/beslock-custom/data/woocommerce-pricing-import.csv`
+- `wp-content/themes/beslock-custom/assets/manuals/`
