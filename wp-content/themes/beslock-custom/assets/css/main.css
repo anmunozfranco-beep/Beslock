@@ -3369,33 +3369,62 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 }
 
-/* Tablet portrait: the generic 600-1279 overlay treatment is too aggressive for
-   tall viewports and crops some hero products awkwardly. Switch to a more
-   deliberate contain-based composition between 768px and 1023px. */
+/* Tablet portrait inspection mode: expose the right-side guide as a visible
+   black column over the clip, then mount every product overlay above it so we
+   can tune each slide visually against the same reference frame. */
 @media (min-width: 768px) and (max-width: 1023px) {
+  .beslock-hero,
+  .hero-slides,
+  .slide-inner {
+    overflow: visible !important;
+  }
+
   .hero-slide {
-    --tablet-portrait-overlay-width: clamp(16rem, 34vw, 18.75rem);
+    --tablet-portrait-guide-left: 50vw;
+    --tablet-portrait-guide-right-bleed: 0px;
+    --tablet-portrait-guide-height-bleed: clamp(0.9rem, 3.4vh, 1.6rem);
+  }
+
+  .hero-slide .slide-inner::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: calc(-1 * var(--tablet-portrait-guide-right-bleed)) !important;
+    bottom: 0 !important;
+    left: var(--tablet-portrait-guide-left) !important;
+    background: #000 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
   }
 
   .hero-slide .slide-overlay-frame {
-    right: 0 !important;
-    left: auto !important;
-    width: var(--tablet-portrait-overlay-width) !important;
+    left: var(--tablet-portrait-guide-left) !important;
+    right: calc(-1 * var(--tablet-portrait-guide-right-bleed)) !important;
+    width: auto !important;
     max-width: none !important;
-    top: calc(-1 * var(--overlay-frame-bleed, clamp(0.9rem, 3.4vh, 1.6rem))) !important;
-    bottom: calc(-1 * var(--overlay-frame-bleed, clamp(0.9rem, 3.4vh, 1.6rem))) !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    z-index: 3 !important;
+  }
+
+  .hero-slide .slide-overlay-frame::before {
+    content: none !important;
   }
 
   .hero-slide .slide-overlay {
     top: calc(50% + var(--overlay-offset, 0px)) !important;
-    left: calc((-100% * (var(--overlay-content-left-ratio, 0.5) / var(--overlay-content-width-ratio, 0.5))) + var(--overlay-inline-shift, 0px)) !important;
+    left: calc(-100% * (var(--overlay-content-left-ratio, 0.5) / var(--overlay-content-width-ratio, 0.5))) !important;
     right: auto !important;
     bottom: auto !important;
     width: calc(100% / var(--overlay-content-width-ratio, 0.5)) !important;
     height: auto !important;
+    min-height: calc(100% + (var(--tablet-portrait-guide-height-bleed) * 2)) !important;
     object-fit: contain !important;
     object-position: left center !important;
     opacity: 0 !important;
+    z-index: 1 !important;
     transform: translateY(-50%) scale(var(--overlay-focus-scale-base, 1)) !important;
     transform-origin: calc(var(--overlay-content-left-ratio, 0.5) * 100%) center !important;
   }
@@ -3406,58 +3435,65 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 
   .hero-slides > .hero-slide:nth-child(1) .slide-overlay {
-    --overlay-focus-scale-base: 0.94;
-    --overlay-focus-scale-active: 0.96;
-    --overlay-inline-shift: 0.8vw;
+    --overlay-focus-scale-base: 1.02;
+    --overlay-focus-scale-active: 1.05;
+    --overlay-offset: -48px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(2) .slide-overlay {
-    --overlay-focus-scale-base: 0.9;
-    --overlay-focus-scale-active: 0.93;
-    --overlay-inline-shift: 0px;
-    --overlay-offset: 4px !important;
+    --overlay-focus-scale-base: 1.03;
+    --overlay-focus-scale-active: 1.06;
+    --overlay-offset: 160px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(3) .slide-overlay {
-    --overlay-focus-scale-base: 1.04;
-    --overlay-focus-scale-active: 1.06;
-    --overlay-inline-shift: 0.5vw;
+    --overlay-focus-scale-base: 1.5;
+    --overlay-focus-scale-active: 1.5;
+    --overlay-offset: -22px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(4) .slide-overlay {
-    --overlay-focus-scale-base: 1.02;
-    --overlay-focus-scale-active: 1.04;
-    --overlay-inline-shift: 0px;
+    --overlay-focus-scale-base: 1.14;
+    --overlay-focus-scale-active: 1.17;
   }
 
   .hero-slides > .hero-slide:nth-child(5) .slide-overlay {
-    --overlay-focus-scale-base: 0.98;
+    --overlay-focus-scale-base: 1;
     --overlay-focus-scale-active: 1;
-    --overlay-inline-shift: 0px;
+    --overlay-offset: 0px !important;
   }
 
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay-frame {
-    left: calc(100% - clamp(18rem, 41vw, 21rem)) !important;
-    right: auto !important;
-    width: clamp(18rem, 41vw, 21rem) !important;
+    left: var(--tablet-portrait-guide-left) !important;
+    right: calc(-1 * var(--tablet-portrait-guide-right-bleed)) !important;
+    width: auto !important;
   }
 
-  .hero-slides > .hero-slide:nth-child(6) .slide-overlay,
+  .hero-slides > .hero-slide:nth-child(6) .slide-overlay:not([data-start]) {
+    --overlay-content-left-ratio: 0.145 !important;
+    --overlay-content-width-ratio: 0.5 !important;
+    --overlay-focus-scale-base: 1.2;
+    --overlay-focus-scale-active: 1.2;
+    --overlay-offset: -4px !important;
+  }
+
   .hero-slides > .hero-slide:nth-child(6) .slide-overlay[data-start] {
-    --overlay-focus-scale-base: 1.08;
-    --overlay-focus-scale-active: 1.1;
-    --overlay-inline-shift: 0px;
-    --overlay-offset: 16px !important;
+    --overlay-content-left-ratio: 0.14 !important;
+    --overlay-content-width-ratio: 0.48 !important;
+    --overlay-focus-scale-base: 1.2;
+    --overlay-focus-scale-active: 1.2;
+    --overlay-offset: -4px !important;
   }
 
   .hero-slide .slide-content {
     left: clamp(1.5rem, 3vw, 2rem) !important;
-    right: calc(var(--tablet-portrait-overlay-width) + clamp(0.9rem, 2vw, 1.35rem)) !important;
+    right: calc((100% - var(--tablet-portrait-guide-left)) + clamp(0.9rem, 2vw, 1.35rem)) !important;
     width: auto !important;
     padding: 0 !important;
     text-align: left !important;
     bottom: clamp(3.25rem, 9vh, 4.75rem) !important;
     transform: none !important;
+    z-index: 4 !important;
   }
 
   .hero-slide .hero__title {
