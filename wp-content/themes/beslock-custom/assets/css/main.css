@@ -3369,9 +3369,8 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 }
 
-/* Tablet portrait inspection mode: expose the right-side guide as a visible
-   black column over the clip, then mount every product overlay above it so we
-   can tune each slide visually against the same reference frame. */
+/* Tablet portrait hero alignment: keep a shared right-side overlay boundary
+   for all products without rendering the temporary black guide column. */
 @media (min-width: 768px) and (max-width: 1023px) {
   .beslock-hero,
   .hero-slides,
@@ -3383,18 +3382,6 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
     --tablet-portrait-guide-left: 50vw;
     --tablet-portrait-guide-right-bleed: 0px;
     --tablet-portrait-guide-height-bleed: clamp(0.9rem, 3.4vh, 1.6rem);
-  }
-
-  .hero-slide .slide-inner::after {
-    content: "" !important;
-    position: absolute !important;
-    top: 0 !important;
-    right: calc(-1 * var(--tablet-portrait-guide-right-bleed)) !important;
-    bottom: 0 !important;
-    left: var(--tablet-portrait-guide-left) !important;
-    background: #000 !important;
-    z-index: 2 !important;
-    pointer-events: none !important;
   }
 
   .hero-slide .slide-overlay-frame {
