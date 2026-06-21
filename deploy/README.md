@@ -2,6 +2,9 @@
 
 Esta carpeta existe para separar el despliegue FTP de la carpeta de trabajo de Git.
 
+`deploy/current/` es la unica fuente de verdad para despliegues por FileZilla.
+No se deben mantener carpetas paralelas, snapshots alternos ni paquetes duplicados dentro de `deploy/`.
+
 Genera una copia limpia con:
 
 ```bash
