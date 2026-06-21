@@ -2287,7 +2287,7 @@ body.single-product .site-footer img.footer-logo {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .hero-startup-fallback .slide-overlay-frame {
     right: -5.4vw !important;
   }
@@ -2514,7 +2514,7 @@ body.single-product .site-footer img.footer-logo {
 /* Mobile <=600px: ensure slide-content sits lower to avoid header overlap
    This block replaces the earlier inline rule and is placed after the
    900px centering block so it takes precedence for narrow viewports. */
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .slide-content {
     left: 1rem !important;
     right: 1rem !important;
@@ -2991,7 +2991,7 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
    a minimal, clear, and ordered set of rules to avoid conflicts.
  ------------------------------------------------------------------ */
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
   .hero-slide .features-wrapper .features-list {
     display: flex;
     flex-direction: column;
@@ -3171,8 +3171,8 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 }
 
-/* Mobile overrides placed at EOF so they take precedence for <=600px. */
-@media (max-width: 600px) {
+/* Mobile overrides placed at EOF so they take precedence for <=599px. */
+@media (max-width: 599px) {
   .beslock-hero {
     height: min(147vw, calc(100svh - 3.5rem)) !important;
     max-height: calc(100svh - 3.5rem) !important;
@@ -3369,9 +3369,10 @@ body .products-portfolio .product-card .product-card__image > img:not(.product-c
   }
 }
 
-/* Tablet portrait hero alignment: keep a shared right-side overlay boundary
-   for all products without rendering the temporary black guide column. */
-@media (min-width: 768px) and (max-width: 1023px) {
+/* Tablet portrait hero alignment: extend the shared right-side overlay
+   boundary down to 600px CSS width so Android tablets with denser displays
+   still enter the tuned tablet layout instead of inheriting the mobile one. */
+@media (min-width: 600px) and (max-width: 1023px) and (orientation: portrait) {
   .beslock-hero,
   .hero-slides,
   .slide-inner {
