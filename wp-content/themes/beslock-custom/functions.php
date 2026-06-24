@@ -35,6 +35,7 @@ add_action( 'wp_enqueue_scripts', 'beslock_enqueue_main_style', 1 );
 $beslock_public_modules = array(
   'inc/performance/public-cache.php',
   'inc/core/setup.php',
+  'inc/core/seo-homepage.php',
   'inc/core/enqueue.php',
   'inc/features/hero-telemetry.php',
   'inc/legal-pages.php',

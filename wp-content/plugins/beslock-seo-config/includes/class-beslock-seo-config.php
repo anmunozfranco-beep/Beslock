@@ -1111,16 +1111,22 @@ class Beslock_SEO_Config {
 
 		$front_page_id = intval( get_option( 'page_on_front' ) );
 		if ( $front_page_id > 0 ) {
-			$image_context = self::resolve_post_image_context( $front_page_id );
+			$image_context = array(
+				'url'           => 'https://beslock.com.co/wp-content/uploads/2026/06/beslock-og-linkedin-1200x627-1.png',
+				'alt'           => 'BESLOCK® Smart Security Solutions',
+				'attachment_id' => 0,
+				'width'         => 1200,
+				'height'        => 627,
+			);
 			$meta = array(
-				'title'               => 'Cerraduras inteligentes en Colombia | BESLOCK',
-				'description'         => 'Descubre cerraduras inteligentes BESLOCK en Colombia. Soluciones de acceso digital para hogar, oficinas y alquileres con instalación y soporte.',
-				'og_title'            => 'Cerraduras inteligentes en Colombia | BESLOCK',
-				'og_description'      => 'Descubre cerraduras inteligentes BESLOCK en Colombia. Soluciones de acceso digital para hogar, oficinas y alquileres con instalación y soporte.',
-				'twitter_title'       => 'Cerraduras inteligentes en Colombia | BESLOCK',
-				'twitter_description' => 'Descubre cerraduras inteligentes BESLOCK en Colombia. Soluciones de acceso digital para hogar, oficinas y alquileres con instalación y soporte.',
+				'title'               => 'BESLOCK® Smart Security Solutions',
+				'description'         => 'Seguridad inteligente para hogares, oficinas y accesos exteriores.',
+				'og_title'            => 'BESLOCK® Smart Security Solutions',
+				'og_description'      => 'Seguridad inteligente para hogares, oficinas y accesos exteriores.',
+				'twitter_title'       => 'BESLOCK® Smart Security Solutions',
+				'twitter_description' => 'Seguridad inteligente para hogares, oficinas y accesos exteriores.',
 				'image'               => $image_context,
-				'focus_keywords'      => 'cerraduras inteligentes, cerraduras inteligentes en Colombia, BESLOCK',
+				'focus_keywords'      => 'BESLOCK, smart security, cerraduras inteligentes',
 				'payload'             => array( 'context' => 'home' ),
 				'force_noindex'       => false,
 			);
