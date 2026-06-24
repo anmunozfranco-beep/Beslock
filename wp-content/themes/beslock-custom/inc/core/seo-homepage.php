@@ -44,6 +44,8 @@ function beslock_homepage_prepare_metadata_hooks() {
     return;
   }
 
+  remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+  remove_action( 'wp_head', 'wp_oembed_add_host_js' );
   remove_action( 'wp_head', '\SiteSEO\TitlesMetas::add_meta_description', 1 );
   remove_action( 'wp_head', '\SiteSEO\SocialMetas::fb_graph', 1 );
   remove_action( 'wp_head', '\SiteSEO\SocialMetas::twitter_card', 1 );
@@ -63,6 +65,34 @@ function beslock_homepage_output_meta_description() {
   echo '<meta name="description" content="' . esc_attr( beslock_homepage_meta_description() ) . '">' . "\n";
 }
 add_action( 'wp_head', 'beslock_homepage_output_meta_description', 1 );
+
+function beslock_homepage_is_front_page_post( $post ) {
+  if ( ! $post instanceof WP_Post ) {
+    return false;
+  }
+
+  $front_page_id = (int) get_option( 'page_on_front' );
+
+  return $front_page_id > 0 && (int) $post->ID === $front_page_id;
+}
+
+function beslock_homepage_oembed_response_data( $data, $post, $width, $height ) {
+  if ( ! beslock_homepage_is_front_page_post( $post ) ) {
+    return $data;
+  }
+
+  $home_url = trailingslashit( home_url( '/' ) );
+
+  $data['title']            = beslock_homepage_meta_title();
+  $data['provider_name']    = 'BESLOCK';
+  $data['provider_url']     = $home_url;
+  $data['thumbnail_url']    = beslock_homepage_meta_image();
+  $data['thumbnail_width']  = 1200;
+  $data['thumbnail_height'] = 627;
+
+  return $data;
+}
+add_filter( 'oembed_response_data', 'beslock_homepage_oembed_response_data', PHP_INT_MAX, 4 );
 
 function beslock_homepage_has_wpcode_og_snippet() {
   static $has_snippet = null;
